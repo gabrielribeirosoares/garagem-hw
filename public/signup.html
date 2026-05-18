@@ -1,25 +1,57 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Hot Wheels Collection | Cadastro</title>
-  <link rel="stylesheet" href="assets/css/styles.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Criar Conta</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body class="auth-body">
-  <main class="auth-card">
+  <section class="auth-card">
     <h1>Criar Conta</h1>
-    <p>Registe-se para começar a sua coleção.</p>
-    <form id="signup-form" autocomplete="off">
-      <label>E-mail<input id="email" type="email" required /></label>
-      <label>Senha<input id="password" type="password" minlength="8" required /></label>
-      <label>Confirmar Senha<input id="confirm-password" type="password" minlength="8" required /></label>
+    <p>Registre-se para começar a sua coleção.</p>
+
+    <form id="signup-form">
+      <label for="name">Nome
+        <input id="name" type="text" placeholder="Seu nome" autocomplete="name" required>
+      </label>
+
+      <label for="email">E-mail
+        <input id="email" type="email" placeholder="seuemail@exemplo.com" autocomplete="email" required>
+      </label>
+
+      <label for="password">Senha
+        <input id="password" type="password" placeholder="Digite sua senha" autocomplete="new-password" required>
+      </label>
+
+      <label for="confirm-password">Confirmar Senha
+        <input id="confirm-password" type="password" placeholder="Confirme sua senha" autocomplete="new-password" required>
+      </label>
+
+      <div class="terms-box">
+        <label class="check-inline">
+          <input id="accept-terms" type="checkbox" required>
+          <span>Li e aceito os <a href="termos-de-uso.html" target="_blank" rel="noopener noreferrer">Termos de Uso</a>.</span>
+        </label>
+
+        <label class="check-inline">
+          <input id="accept-privacy" type="checkbox" required>
+          <span>Li a <a href="politica-de-privacidade.html" target="_blank" rel="noopener noreferrer">Política de Privacidade</a> e concordo com o tratamento dos meus dados para criação e manutenção da conta.</span>
+        </label>
+
+        <label class="check-inline">
+          <input id="accept-marketing" type="checkbox">
+          <span>Quero receber novidades e comunicações por e-mail.</span>
+        </label>
+      </div>
+
       <button type="submit">Cadastrar</button>
     </form>
-    <p style="text-align:center; margin-top:10px;">
-      Já tem uma conta? <a href="index.html" style="color:var(--accent);">Faça login</a>
-    </p>
-  </main>
-  <script type="module" src="assets/js/signup.js"></script>
+
+    <p class="privacy-note">Ao criar sua conta, você concorda com o uso dos dados necessários para autenticação e funcionamento da plataforma, conforme a LGPD.</p>
+    <p class="footer-link">Já tem uma conta? <a href="index.html">Faça login</a></p>
+  </section>
+
+  <script type="module" src="signup.js"></script>
 </body>
 </html>
