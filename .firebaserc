@@ -1,0 +1,15 @@
+{
+  "projects": {
+    "default": "hotwheels-colletcion"
+  },
+  "targets": {
+    "hotwheels-colletcion": {
+      "hosting": {
+        "main": [
+          "garagemhw"
+        ]
+      }
+    }
+  },
+  "etags": {}
+}

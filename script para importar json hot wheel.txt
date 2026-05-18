@@ -1,0 +1,129 @@
+script para importar json hot wheels
+
+(function extractHotWheels() {
+  const results = [];
+
+  const titleEl = document.querySelector('h1.page-header__title') 
+               || document.querySelector('h1#firstHeading') 
+               || document.querySelector('h1');
+  const titleText = titleEl ? titleEl.innerText : document.title;
+  const yearMatch = titleText.match(/\d{4}/);
+  const year = yearMatch ? parseInt(yearMatch[0]) : null; // ✅ número, não string
+
+  console.log(`📅 Ano detectado: ${year}`);
+
+  async function resolveImageUrl(imageKey) {
+    if (!imageKey) return '';
+    try {
+      const wikiApi = `https://hotwheels.fandom.com/api.php?action=query&titles=File:${encodeURIComponent(imageKey)}&prop=imageinfo&iiprop=url&format=json&origin=*`;
+      const res = await fetch(wikiApi);
+      const data = await res.json();
+      const pages = data?.query?.pages;
+      const page = pages[Object.keys(pages)[0]];
+      return page?.imageinfo?.[0]?.url || '';
+    } catch { return ''; }
+  }
+
+  async function getImageUrl(imgEl) {
+    if (!imgEl) return '';
+    const src = imgEl.dataset.src || imgEl.dataset.lazySrc || imgEl.src || '';
+    const imageKey = imgEl.dataset.imageKey || imgEl.getAttribute('data-image-key') || '';
+    if (src && !src.startsWith('data:')) {
+      return src.replace(/\/revision\/latest\/scale-to-width-down\/\d+/, '/revision/latest');
+    } else if (imageKey) {
+      return await resolveImageUrl(imageKey);
+    }
+    return '';
+  }
+
+  document.querySelectorAll('img[data-src]').forEach(img => img.src = img.dataset.src);
+  document.querySelectorAll('img[data-lazy-src]').forEach(img => img.src = img.dataset.lazySrc);
+
+  setTimeout(async () => {
+    const promises = [];
+
+    const tables = Array.from(document.querySelectorAll('table')).filter(table => {
+      const firstHeader = table.querySelector('th, td')?.innerText?.trim() || '';
+      return !firstHeader.includes('Yearly Lists');
+    });
+
+    tables.forEach(table => {
+      const rows = Array.from(table.querySelectorAll('tr'));
+      if (rows.length < 2) return;
+
+      const headerCells = Array.from(rows[0].querySelectorAll('th, td'));
+      const headers = headerCells.map(cell =>
+        cell.innerText.trim().toLowerCase()
+          .replace(/\s+/g, '_')
+          .replace(/[^a-z0-9_]/g, '')
+      );
+
+      if (!headers.some(h => h.includes('model') || h.includes('toy'))) return;
+
+      const colPart  = headers.findIndex(h => h.includes('toy'));
+      const colHw    = headers.findIndex(h => h.includes('col'));     // ✅ hw = Col. #
+      const colName  = headers.findIndex(h => h.includes('model') || h.includes('car'));
+      const colPhoto = headers.findIndex(h => h.includes('photo'));
+
+      // ✅ Pega todas as colunas "series" para concatenar "Series (Series #)"
+      const seriesIdxs = headers.reduce((acc, h, i) => h.includes('series') ? [...acc, i] : acc, []);
+      const colSeries   = seriesIdxs[0] ?? -1;
+      const colSeriesNo = seriesIdxs[1] ?? -1;
+
+      const get = (cells, i) => (i >= 0 && i < cells.length)
+        ? cells[i].innerText.trim().replace(/\n/g, ' ')
+        : '';
+
+      rows.slice(1).forEach(row => {
+        const cells = Array.from(row.querySelectorAll('td'));
+        if (cells.length < 2) return;
+
+        const name = get(cells, colName);
+        const part = get(cells, colPart);
+        if (!name && !part) return;
+
+        const seriesName = get(cells, colSeries);
+        const seriesNo   = get(cells, colSeriesNo);
+
+        // ✅ Concatena "Series (Series #)" se series_no existir, senão só "Series"
+        const seriesFull = seriesName && seriesNo
+          ? `${seriesName} (${seriesNo})`
+          : seriesName;
+
+        const entry = {
+          year,                    // ✅ número inteiro
+          name,
+          series: seriesFull,
+          color:  '',              // não disponível neste formato de tabela
+          part,
+          hw:     get(cells, colHw),  // ✅ Col. #
+          cas:    '',              // não disponível neste formato de tabela
+          image:  ''
+        };
+
+        const photoCell = colPhoto >= 0 ? cells[colPhoto] : null;
+        const imgEl = photoCell?.querySelector('img') || row.querySelector('img');
+
+        const promise = (async () => {
+          entry.image = await getImageUrl(imgEl);
+          results.push(entry);
+        })();
+        promises.push(promise);
+      });
+    });
+
+    await Promise.all(promises);
+
+    console.log(`✅ ${results.length} registros extraídos`);
+    console.log(JSON.stringify(results, null, 2));
+
+    if (results.length > 0) {
+      const blob = new Blob([JSON.stringify(results, null, 2)], { type: 'application/json' });
+      const a = document.createElement('a');
+      a.href = URL.createObjectURL(blob);
+      a.download = `hot_wheels_${year}.json`;
+      a.click();
+    }
+
+  }, 1500);
+})();
