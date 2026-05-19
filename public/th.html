@@ -23,7 +23,16 @@
     <ul class="sidebar-menu">
       <li><a href="app.html" class="menu-item" id="menu-all">Mostrar Tudo</a></li>
       <li><a href="sth.html" class="menu-item" id="menu-sth">Super Treasure Hunt (STH)</a></li>
-      <!-- <li><a href="th.html" class="menu-item" id="menu-th">Treasure Hunt (TH)</a></li> -->
+
+      <li><a href="minha-colecao.html" class="menu-item" id="menu-my-collection"
+          style="color: #ef4444; font-weight: bold;">Minha Coleção</a></li>
+
+      <li style="margin-top: 15px; border-top: 1px solid #333; padding-top: 15px;">
+        <a href="perfil.html" class="menu-item" id="menu-profile">Ajustar Perfil</a>
+      </li>
+      <li>
+        <a href="#" id="logout-menu" class="menu-item" style="cursor: pointer;">Sair da Conta</a>
+      </li>
     </ul>
   </div>
 
@@ -32,7 +41,6 @@
       style="position: absolute; top: 16px; right: 24px; display: flex; align-items: center; gap: 12px; z-index: 10;">
       <span id="user-email"
         style="font-family: 'Barlow Condensed', sans-serif; font-size: 13px; color: var(--muted); letter-spacing: 1px;"></span>
-      <button id="logout" class="btn-clear" style="padding: 4px 10px; font-size: 11px;">Sair</button>
     </div>
 
     <div class="header-top" style="display: flex; align-items: center; gap: 16px;">
@@ -107,7 +115,7 @@
 
   <div class="count-bar">
     <span>Exibindo <b id="visible-count">0</b> de <b id="all-count">0</b> carros</span>
-    
+
   </div>
 
   <div class="table-wrapper">

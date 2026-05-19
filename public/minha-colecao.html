@@ -23,10 +23,9 @@
     <ul class="sidebar-menu">
       <li><a href="app.html" class="menu-item" id="menu-all">Mostrar Tudo</a></li>
       <li><a href="sth.html" class="menu-item" id="menu-sth">Super Treasure Hunt (STH)</a></li>
-
-      <li><a href="minha-colecao.html" class="menu-item" id="menu-my-collection"
-          style="color: #ef4444; font-weight: bold;">Minha Coleção</a></li>
-
+      
+      <li><a href="minha-colecao.html" class="menu-item" id="menu-my-collection" style="color: #ef4444; font-weight: bold;">Minha Coleção</a></li>
+      
       <li style="margin-top: 15px; border-top: 1px solid #333; padding-top: 15px;">
         <a href="perfil.html" class="menu-item" id="menu-profile">Ajustar Perfil</a>
       </li>
@@ -34,6 +33,8 @@
         <a href="#" id="logout-menu" class="menu-item" style="cursor: pointer;">Sair da Conta</a>
       </li>
     </ul>
+
+   
   </div>
 
   <header>
@@ -41,16 +42,15 @@
       style="position: absolute; top: 16px; right: 24px; display: flex; align-items: center; gap: 12px; z-index: 10;">
       <span id="user-email"
         style="font-family: 'Barlow Condensed', sans-serif; font-size: 13px; color: var(--muted); letter-spacing: 1px;"></span>
-    </div>
+      </div>
 
     <div class="header-top" style="display: flex; align-items: center; gap: 16px;">
 
       <button id="menu-toggle" class="btn-clear" style="font-size: 28px; padding: 0; line-height: 1;">☰</button>
 
-      <div class="th-badge">$TH</div>
+      <div class="th-badge"></div>
       <div>
-        <h1>Hot Wheels <span>Super Treasure Hunts</span></h1>
-
+        <h1>Hot Wheels <span>Collection</span></h1>
       </div>
 
     </div>
@@ -74,11 +74,7 @@
         <div class="stat-label">Repetidos</div>
       </div>
 
-      <!-- <div class="stat">
-        <div class="stat-num">3</div>
-        <div class="stat-label">Eras distintas</div>
-      </div> -->
-    </div>
+      </div>
   </header>
 
   <div class="controls">
@@ -88,7 +84,7 @@
         <option value="">Todos</option>
       </select>
     </div>
-    <div class="filter-group">
+    <div class="filter-group" style="display: none;">
       <span class="filter-label">Era</span>
       <select id="filter-era">
         <option value="">Todas</option>
@@ -129,9 +125,9 @@
           <th data-col="series">Coleção / Série <span class="sort-icon">↕</span></th>
           <th data-col="color">Cor</th>
           <th data-col="part">Código</th>
-          <!-- <th data-col="hw">#HW</th>
-          <th data-col="cas">Case</th> -->
-          <th style="cursor:default">Qtd.</th>
+          <th style="cursor:default; min-width: 100px;">Qtd. <span
+              style="font-size: 10px; background: #ffedd5; color: #ea580c; padding: 2px 4px; border-radius: 4px; margin-left: 4px; font-weight: 600; border: 1px solid #fdba74;">+
+              Repetidos</span></th>
         </tr>
       </thead>
       <tbody id="table-body"></tbody>
@@ -139,12 +135,34 @@
     <div class="empty" id="empty-msg" style="display:none;">Nenhum carro encontrado com esses filtros.</div>
   </div>
 
-  <div class="legend">
+  <div class="pagination-container"
+    style="display: flex; justify-content: space-between; align-items: center; padding: 15px 0; font-family: 'Barlow', sans-serif;">
+    <div class="items-per-page">
+      <label for="per-page-select" style="font-size: 13px; color: #555;">Mostrar: </label>
+      <select id="per-page-select" style="padding: 4px 8px; border-radius: 4px; border: 1px solid #ccc;">
+        <option value="25">25</option>
+        <option value="50" selected>50</option>
+        <option value="100">100</option>
+        <option value="all">Todos</option>
+      </select>
+    </div>
+
+    <div class="pagination-controls" style="display: flex; gap: 10px; align-items: center;">
+      <button id="btn-prev-page" class="btn-clear"
+        style="padding: 6px 12px; border: 1px solid #ccc; border-radius: 4px; background: #f9f9f9; cursor: pointer;">←
+        Anterior</button>
+      <span id="page-indicator" style="font-size: 14px; font-weight: 500;">Página 1 de 1</span>
+      <button id="btn-next-page" class="btn-clear"
+        style="padding: 6px 12px; border: 1px solid #ccc; border-radius: 4px; background: #f9f9f9; cursor: pointer;">Próximo
+        →</button>
+    </div>
+  </div>
+
+  <div class="legend" style="display: none;">
     <div class="legend-item"><span class="era-badge era-classic">Clássica</span> 2007–2011</div>
     <div class="legend-item"><span class="era-badge era-secret">Super Secret</span> 2012</div>
     <div class="legend-item"><span class="era-badge era-hidden">Hidden</span> 2013–2026</div>
-    <div class="legend-item" style="margin-left:auto;color:#555;font-size:11px;">Clique na miniatura para expandir
-    </div>
+    <div class="legend-item" style="margin-left:auto;color:#555;font-size:11px;">Clique na miniatura para expandir</div>
   </div>
 
   <div id="lightbox">
