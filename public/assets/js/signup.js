@@ -7,6 +7,8 @@ document.getElementById('signup-form').addEventListener('submit', async (e) => {
   e.preventDefault();
 
   const name = document.getElementById('name').value.trim();
+  const birthdate = document.getElementById('birthdate').value; // Captura a data de nascimento
+  const phone = document.getElementById('phone').value.trim(); // Captura o telefone
   const email = document.getElementById('email').value.trim().toLowerCase();
   const password = document.getElementById('password').value;
   const confirmPassword = document.getElementById('confirm-password').value;
@@ -14,7 +16,8 @@ document.getElementById('signup-form').addEventListener('submit', async (e) => {
   const privacy = document.getElementById('accept-privacy').checked;
   const marketing = document.getElementById('accept-marketing')?.checked || false;
 
-  if (!name || !email || !password || !confirmPassword) {
+  // Atualizamos a validação para incluir os novos campos
+  if (!name || !email || !password || !confirmPassword || !birthdate || !phone) {
     alert('Preencha todos os campos obrigatórios.');
     return;
   }
@@ -30,13 +33,18 @@ document.getElementById('signup-form').addEventListener('submit', async (e) => {
   }
 
   try {
+    // 1. Cria o usuário na Autenticação do Firebase
     const cred = await createUserWithEmailAndPassword(auth, email, password);
 
+    // 2. Atualiza o perfil com o nome
     await updateProfile(cred.user, { displayName: name });
 
+    // 3. Salva os dados extras no Firestore (incluindo phone e birthdate)
     await setDoc(doc(db, 'users', cred.user.uid), {
       uid: cred.user.uid,
       name,
+      birthdate, // Salva no banco
+      phone,     // Salva no banco
       email,
       marketing,
       acceptedTerms: true,
@@ -45,7 +53,10 @@ document.getElementById('signup-form').addEventListener('submit', async (e) => {
     }, { merge: true });
 
     alert('Conta criada com sucesso!');
-    location.href = 'app.html';
+    
+    // 4. Redireciona para a tela de login (index.html)
+    window.location.href = 'index.html';
+
   } catch (error) {
     console.error("Erro ao cadastrar:", error.code, error.message);
 
@@ -60,6 +71,10 @@ document.getElementById('signup-form').addEventListener('submit', async (e) => {
     }
   }
 });
+
+// =========================================
+// MÁSCARA DO TELEFONE / WHATSAPP
+// =========================================
 
 // Seleciona o campo de telefone pelo ID
 const phoneInput = document.getElementById('phone');

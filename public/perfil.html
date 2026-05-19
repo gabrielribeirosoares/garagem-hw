@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Garagem HW | Ajustar Perfil</title>
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="assets/css/signup-style.css">
+</head>
+
+<body class="auth-body">
+    <section class="auth-card">
+        <h1>Ajustar Perfil</h1>
+        <p>Atualize seus dados pessoais abaixo.</p>
+
+        <div id="messageBox" style="margin-bottom: 15px; font-weight: bold; text-align: center;"></div>
+
+        <form id="profile-form">
+            <label for="name">Nome
+                <input id="name" type="text" autocomplete="name" required>
+            </label>
+
+            <label for="birthdate">Data de Nascimento
+                <input id="birthdate" type="date" required>
+            </label>
+
+            <label for="phone">Telefone / WhatsApp
+                <input id="phone" type="tel" maxlength="15" required>
+            </label>
+
+            <label for="email">E-mail (Apenas leitura)
+                <input id="email" type="email" disabled style="background-color: #f0f0f0; cursor: not-allowed;">
+            </label>
+
+            <hr style="margin: 20px 0; border: none; border-top: 1px solid #444;">
+            <p style="font-size: 13px; margin-bottom: 15px; color: #aaa;">Deixe em branco se não quiser alterar a senha.
+            </p>
+
+            <label for="new-password">Nova Senha
+                <input id="new-password" type="password" placeholder="Digite a nova senha">
+            </label>
+
+            <label for="confirm-password">Confirmar Nova Senha
+                <input id="confirm-password" type="password" placeholder="Confirme a nova senha">
+            </label>
+
+            <button type="submit">Salvar Alterações</button>
+        </form>
+
+        <p class="footer-link"><a href="app.html">← Voltar para a Coleção</a></p>
+    </section>
+
+    <script type="module" src="assets/js/perfil.js"></script>
+</body>
+
+</html>
