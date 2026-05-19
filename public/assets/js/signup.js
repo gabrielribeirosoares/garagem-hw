@@ -60,3 +60,34 @@ document.getElementById('signup-form').addEventListener('submit', async (e) => {
     }
   }
 });
+
+// Seleciona o campo de telefone pelo ID
+const phoneInput = document.getElementById('phone');
+
+// Adiciona um ouvinte de evento que dispara toda vez que o usuário digita algo
+if (phoneInput) {
+  phoneInput.addEventListener('input', (e) => {
+    e.target.value = maskPhone(e.target.value);
+  });
+}
+
+// Função responsável por aplicar a máscara brasileira
+const maskPhone = (value) => {
+  if (!value) return "";
+
+  // Remove tudo que não for número
+  value = value.replace(/\D/g, '');
+
+  // Limita a quantidade máxima a 11 números (celular com DDD)
+  if (value.length > 11) {
+    value = value.slice(0, 11);
+  }
+
+  // Coloca os parênteses em volta dos 2 primeiros dígitos (DDD)
+  value = value.replace(/(\d{2})(\d)/, "($1) $2");
+
+  // Coloca o hífen antes dos últimos 4 dígitos
+  value = value.replace(/(\d)(\d{4})$/, "$1-$2");
+
+  return value;
+};

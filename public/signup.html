@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,6 +8,7 @@
   <link rel="stylesheet" href="assets/css/styles.css">
   <link rel="stylesheet" href="assets/css/signup-style.css">
 </head>
+
 <body class="auth-body">
   <section class="auth-card">
     <h1>Criar Conta</h1>
@@ -16,7 +18,15 @@
 
     <form id="signup-form">
       <label for="name">Nome
-        <input id="name" type="text" placeholder="Seu nome" autocomplete="name" required>
+        <input id="name" type="text" placeholder="Seu nome completo" autocomplete="name" required>
+      </label>
+
+      <label for="birthdate">Data de Nascimento
+        <input id="birthdate" type="date" required>
+      </label>
+
+      <label for="phone">Telefone / WhatsApp
+        <input id="phone" type="tel" placeholder="(11) 99999-9999" autocomplete="tel" maxlength="15" required>
       </label>
 
       <label for="email">E-mail
@@ -28,18 +38,21 @@
       </label>
 
       <label for="confirm-password">Confirmar Senha
-        <input id="confirm-password" type="password" placeholder="Confirme sua senha" autocomplete="new-password" required>
+        <input id="confirm-password" type="password" placeholder="Confirme sua senha" autocomplete="new-password"
+          required>
       </label>
 
       <div class="terms-box">
         <label class="check-inline">
           <input id="accept-terms" type="checkbox" required>
-          <span>Li e aceito os <a href="termos-de-uso.html" target="_blank" rel="noopener noreferrer">Termos de Uso</a>.</span>
+          <span>Li e aceito os <a href="termos-de-uso.html" target="_blank" rel="noopener noreferrer">Termos de
+              Uso</a>.</span>
         </label>
 
         <label class="check-inline">
           <input id="accept-privacy" type="checkbox" required>
-          <span>Li a <a href="politica-de-privacidade.html" target="_blank" rel="noopener noreferrer">Política de Privacidade</a> e concordo com o tratamento dos meus dados para criação e manutenção da conta.</span>
+          <span>Li a <a href="politica-de-privacidade.html" target="_blank" rel="noopener noreferrer">Política de
+              Privacidade</a> e concordo com o tratamento dos meus dados para criação e manutenção da conta.</span>
         </label>
 
         <label class="check-inline">
@@ -51,10 +64,12 @@
       <button type="submit">Cadastrar</button>
     </form>
 
-    <p class="privacy-note">Ao criar sua conta, você concorda com o uso dos dados necessários para autenticação e funcionamento da plataforma, conforme a LGPD.</p>
+    <p class="privacy-note">Ao criar sua conta, você concorda com o uso dos dados necessários para autenticação e
+      funcionamento da plataforma, conforme a LGPD.</p>
     <p class="footer-link">Já tem uma conta? <a href="index.html">Faça login</a></p>
   </section>
 
   <script type="module" src="signup.js"></script>
 </body>
+
 </html>
