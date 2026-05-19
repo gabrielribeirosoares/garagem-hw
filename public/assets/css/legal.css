@@ -1,0 +1,240 @@
+
+
+:root {
+  --red: #e8001e;
+  --yellow: #ffd900;
+  --darker: #080808;
+  --surface: #161616;
+  --surface2: #1e1e1e;
+  --border: #2a2a2a;
+  --text: #f0f0f0;
+  --muted: #888;
+}
+
+/* Base */
+body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--darker);
+  color: var(--text);
+  font-family: 'Inter', sans-serif; /* Fonte importada no HTML */
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.container {
+  max-width: 800px; /* Largura ideal para leitura de textos longos */
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* =========================================
+   HERO SECTION (Cabeçalho do Documento)
+========================================= */
+.hero {
+  padding: 60px 0 40px;
+}
+
+.hero-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 40px;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+}
+
+/* Efeito de brilho vermelho (Identity Garagem HW) */
+.hero-card::before {
+  content: '';
+  position: absolute;
+  top: -50px;
+  right: -50px;
+  width: 250px;
+  height: 250px;
+  background: radial-gradient(circle, rgba(232, 0, 30, 0.15), transparent 70%);
+  pointer-events: none;
+}
+
+.badge {
+  display: inline-block;
+  background: rgba(232, 0, 30, 0.12);
+  color: #ff6a7a;
+  border: 1px solid rgba(232, 0, 30, 0.3);
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  padding: 4px 10px;
+  border-radius: 4px;
+  margin-bottom: 16px;
+}
+
+.hero-card h1 {
+  font-size: 38px;
+  font-weight: 800;
+  margin: 0 0 16px 0;
+  line-height: 1.2;
+  letter-spacing: -0.5px;
+  color: #fff;
+}
+
+.lead {
+  font-size: 18px;
+  color: var(--text);
+  margin: 0 0 24px 0;
+}
+
+.meta {
+  font-size: 13px;
+  color: var(--muted);
+  margin-bottom: 32px;
+  font-weight: 500;
+}
+
+/* Navegação por âncoras */
+.section-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  border-top: 1px solid var(--border);
+  padding-top: 24px;
+}
+
+.section-nav a {
+  color: var(--text);
+  text-decoration: none;
+  font-size: 13px;
+  font-weight: 500;
+  background: var(--surface2);
+  border: 1px solid var(--border);
+  padding: 8px 16px;
+  border-radius: 6px;
+  transition: all 0.2s ease;
+}
+
+.section-nav a:hover {
+  border-color: var(--red);
+  color: var(--red);
+  background: rgba(232, 0, 30, 0.05);
+}
+
+/* =========================================
+   CONTEÚDO PRINCIPAL (Seções / Cards)
+========================================= */
+main.container {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  padding-bottom: 60px;
+}
+
+.card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 32px;
+  scroll-margin-top: 30px; /* Evita que o título cole no topo ao usar os links da navegação */
+}
+
+.card h2 {
+  font-size: 20px;
+  font-weight: 700;
+  margin: 0 0 20px 0;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+/* Detalhe visual (Linha vermelha) ao lado do H2 */
+.card h2::before {
+  content: '';
+  display: block;
+  width: 4px;
+  height: 20px;
+  background: var(--red);
+  border-radius: 2px;
+}
+
+.card p {
+  margin: 0 0 16px 0;
+  color: #d1d1d1;
+}
+
+.card p:last-child {
+  margin-bottom: 0;
+}
+
+.card ul {
+  margin: 0 0 16px 0;
+  padding-left: 24px;
+  color: #d1d1d1;
+}
+
+.card ul li {
+  margin-bottom: 10px;
+}
+
+/* Customização dos bullets da lista */
+.card ul li::marker {
+  color: var(--red);
+}
+
+/* Avisos / Notificações nos textos */
+.notice {
+  background: rgba(255, 217, 0, 0.08);
+  border: 1px solid rgba(255, 217, 0, 0.2);
+  border-left: 4px solid var(--yellow);
+  color: #e5c300;
+  padding: 16px;
+  border-radius: 6px;
+  font-size: 14px;
+  margin-top: 24px;
+  font-weight: 500;
+}
+
+/* =========================================
+   FOOTER
+========================================= */
+.footer {
+  text-align: center;
+  padding: 30px 20px 40px;
+  color: var(--muted);
+  font-size: 14px;
+  border-top: 1px solid var(--border);
+}
+
+/* =========================================
+   MOBILE RESPONSIVO
+========================================= */
+@media (max-width: 600px) {
+  .hero { 
+    padding: 30px 0 20px; 
+  }
+  
+  .hero-card { 
+    padding: 24px; 
+  }
+  
+  .hero-card h1 { 
+    font-size: 28px; 
+  }
+  
+  .lead { 
+    font-size: 16px; 
+  }
+  
+  .card { 
+    padding: 24px; 
+  }
+  
+  .section-nav {
+    justify-content: center;
+  }
+}
