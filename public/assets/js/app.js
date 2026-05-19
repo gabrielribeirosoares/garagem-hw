@@ -1,4 +1,3 @@
-
 import { auth, db } from './firebase-config.js';
 import { onAuthStateChanged, signOut } from "https://www.gstatic.com/firebasejs/12.13.0/firebase-auth.js";
 import { doc, getDoc, setDoc } from "https://www.gstatic.com/firebasejs/12.13.0/firebase-firestore.js";
@@ -354,16 +353,29 @@ function updateCounts() {
 onAuthStateChanged(auth, async (user) => {
   if (user) {
     sessionUid = user.uid;
-    document.getElementById('user-email').textContent = user.email;
+    // O span #user-email ainda existe na interface
+    if(document.getElementById('user-email')) {
+      document.getElementById('user-email').textContent = user.email;
+    }
     await loadCollection();
   } else {
     window.location.href = 'index.html';
   }
 });
 
-document.getElementById('logout').addEventListener('click', () => {
-  signOut(auth);
-});
+// Atualizado: Novo botão de Sair no Menu Hambúrguer
+const btnLogoutMenu = document.getElementById('logout-menu');
+if (btnLogoutMenu) {
+  btnLogoutMenu.addEventListener('click', async () => {
+    try {
+      await signOut(auth);
+      window.location.href = "index.html";
+    } catch (error) {
+      console.error("Erro ao sair da conta:", error);
+      alert("Erro ao sair da conta. Tente novamente.");
+    }
+  });
+}
 
 async function loadCollection() {
   if (!sessionUid) return;
