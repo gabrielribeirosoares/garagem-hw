@@ -1,5 +1,6 @@
 <!doctype html>
 <html lang="pt-BR">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -7,7 +8,9 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow+Condensed:wght@400;600;700&family=Barlow:wght@400;500&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow+Condensed:wght@400;600;700&family=Barlow:wght@400;500&display=swap"
+    rel="stylesheet">
   <link rel="shortcut icon" href="/public/assets/img/logo.png" type="image/x-icon">
 
   <link rel="stylesheet" href="assets/css/styles.css" />
@@ -20,17 +23,28 @@
     }
 
     .welcome-overlay {
-      position: fixed; top: 0; left: 0; width: 100%; height: 100%;
-      background: rgba(15, 23, 42, 0.98); /* Fundo um pouco mais escuro e sólido */
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(15, 23, 42, 0.98);
+      /* Fundo um pouco mais escuro e sólido */
       backdrop-filter: blur(8px);
-      display: flex; justify-content: center; align-items: center;
-      z-index: 9999; opacity: 0; pointer-events: none;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: 9999;
+      opacity: 0;
+      pointer-events: none;
       transition: opacity 0.4s ease;
-      overflow: hidden; /* Impede a barra de rolagem quando o carro sair da tela */
+      overflow: hidden;
+      /* Impede a barra de rolagem quando o carro sair da tela */
     }
-    
+
     .welcome-overlay.active {
-      opacity: 1; pointer-events: all;
+      opacity: 1;
+      pointer-events: all;
     }
 
     /* O Carro */
@@ -38,10 +52,13 @@
       position: absolute;
       top: 50%;
       left: 50%;
-      width: 700px; /* Tamanho do carro - ajuste se precisar */
-      transform: translate(-150vw, -50%); /* Começa muito à esquerda, fora da tela */
+      width: 700px;
+      /* Tamanho do carro - ajuste se precisar */
+      transform: translate(-150vw, -50%);
+      /* Começa muito à esquerda, fora da tela */
       z-index: 2;
-      filter: drop-shadow(0px 10px 15px rgba(0,0,0,0.5)); /* Sombra para dar profundidade */
+      filter: drop-shadow(0px 10px 15px rgba(0, 0, 0, 0.5));
+      /* Sombra para dar profundidade */
     }
 
     /* A Animação de atravessar a tela */
@@ -65,19 +82,36 @@
     /* A Animação do texto (só começa DEPOIS que o carro passa) */
     .welcome-overlay.active .welcome-text {
       /* O 1.5s no final é o "delay" para esperar o carro sair */
-      animation: textFadeIn 0.6s ease-out forwards 1.5s; 
+      animation: textFadeIn 0.6s ease-out forwards 1.5s;
     }
 
     /* Keyframes (O roteiro da animação) */
     @keyframes driveAcross {
-      0%   { transform: translate(-150vw, -50%); }
-      40%  { transform: translate(-20vw, -50%); } /* Dá uma leve desacelerada no meio */
-      60%  { transform: translate(20vw, -50%); }
-      100% { transform: translate(150vw, -50%); } /* Some na direita */
+      0% {
+        transform: translate(-150vw, -50%);
+      }
+
+      40% {
+        transform: translate(-20vw, -50%);
+      }
+
+      /* Dá uma leve desacelerada no meio */
+      60% {
+        transform: translate(20vw, -50%);
+      }
+
+      100% {
+        transform: translate(150vw, -50%);
+      }
+
+      /* Some na direita */
     }
 
     @keyframes textFadeIn {
-      to { opacity: 1; transform: translateY(0) scale(1); }
+      to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+      }
     }
   </style>
 </head>
@@ -86,7 +120,7 @@
 
   <div id="welcome-overlay" class="welcome-overlay">
     <img src="assets/img/impala.png" alt="Impala 69" class="impala-car" onerror="this.style.display='none'">
-    
+
     <h2 id="welcome-message" class="welcome-text">Olá, seja muito bem-vindo(a) à sua Garagem.</h2>
   </div>
 
@@ -104,6 +138,11 @@
       <label>Senha<input id="password" type="password" minlength="8" required /></label>
       <button type="submit">Entrar</button>
     </form>
+
+    <button id="btn-google"
+      style="margin-top: 15px; width: 100%; padding: 10px; background: #fff; color: #333; border: 1px solid #ccc; cursor: pointer; border-radius: 4px; font-weight: bold; font-family: sans-serif;">
+      Entrar com Google
+    </button>
     <p style="text-align:center; margin-top:10px;">
       Não tem uma conta? <a href="signup.html" style="color:var(--accent);">Registre-se aqui</a>
     </p>
@@ -112,4 +151,5 @@
   <script type="module" src="assets/js/firebase-config.js"></script>
   <script type="module" src="assets/js/auth.js"></script>
 </body>
+
 </html>
