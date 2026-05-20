@@ -1,6 +1,6 @@
 import { auth, db } from './firebase-config.js';
 import { onAuthStateChanged } from "https://www.gstatic.com/firebasejs/12.13.0/firebase-auth.js";
-import { doc, getDoc, collection, getDocs, setDoc } from "https://www.gstatic.com/firebasejs/12.13.0/firebase-firestore.js";
+import { doc, getDoc, collection, getDocs, setDoc, deleteDoc, updateDoc, increment } from "https://www.gstatic.com/firebasejs/12.13.0/firebase-firestore.js";
 
 const usersTbody = document.getElementById('users-tbody');
 const editModal = document.getElementById('edit-modal');
@@ -54,7 +54,10 @@ async function loadUsersList() {
         <td data-label="Telefone">${userData.phone || 'Sem Telefone'}</td>
         <td data-label="Nascimento">${userData.birthdate || 'Não informada'}</td>
         <td data-label="Cargo"><strong style="color: ${userData.role === 'admin' ? '#f59e0b' : '#64748b'}">${userData.role === 'admin' ? 'Admin' : 'Usuário'}</strong></td>
-        <td data-label="Ações"><button class="btn-edit" data-id="${userData.uid}">Editar</button></td>
+        <td data-label="Ações">
+          <button class="btn-edit" data-id="${userData.uid}">Editar</button>
+          <button class="btn-delete" data-id="${userData.uid}" data-name="${userData.name || 'Este usuário'}">Excluir</button>
+        </td>
       `;
       usersTbody.appendChild(tr);
     });
@@ -68,12 +71,53 @@ async function loadUsersList() {
 // =========================================
 // DELEGAÇÃO DE EVENTOS: Fica FORA da função de carregamento
 // =========================================
+// =========================================
+// DELEGAÇÃO DE EVENTOS: Cliques de Editar e Excluir
+// =========================================
 if (usersTbody) {
-  usersTbody.addEventListener('click', (e) => {
-    // Verifica se o elemento clicado tem a classe 'btn-edit'
+  usersTbody.addEventListener('click', async (e) => {
+    // AÇÃO: EDITAR
     if (e.target.classList.contains('btn-edit')) {
       const uidToEdit = e.target.getAttribute('data-id');
       openEditModal(uidToEdit);
+    }
+    
+    // AÇÃO: EXCLUIR (Novo)
+    if (e.target.classList.contains('btn-delete')) {
+      const uidToDelete = e.target.getAttribute('data-id');
+      const userName = e.target.getAttribute('data-name');
+      
+      const confirmacao = confirm(`ATENÇÃO: Tem certeza absoluta que deseja excluir permanentemente o usuário "${userName}"? \n\nIsso apagará o perfil dele e TODOS os carrinhos da coleção dele do banco de dados!`);
+      
+      if (confirmacao) {
+        // Guarda o texto original do botão para efeitos visuais
+        const botaoOriginalText = e.target.textContent;
+        e.target.textContent = "Excluindo...";
+        e.target.disabled = true;
+
+        try {
+          // 1. Reduz -1 no contador global de usuários ativos
+          const configRef = doc(db, 'config', 'app');
+          await updateDoc(configRef, {
+            cadastrados: increment(-1)
+          });
+
+          // 2. Apaga o documento da coleção de carrinhos do usuário
+          await deleteDoc(doc(db, 'collections', uidToDelete));
+
+          // 3. Apaga o documento de perfil do usuário
+          await deleteDoc(doc(db, 'users', uidToDelete));
+
+          alert('Usuário e dados de coleção deletados com sucesso!');
+          loadUsersList(); // Recarrega a tabela na hora
+
+        } catch (error) {
+          console.error("Erro ao deletar usuário:", error);
+          alert('Erro ao excluir usuário das tabelas: ' + error.message);
+          e.target.textContent = botaoOriginalText;
+          e.target.disabled = false;
+        }
+      }
     }
   });
 }
