@@ -2,7 +2,7 @@
 import { auth, db } from './firebase-config.js';
 // ATENÇÃO: Adicionamos o updatePassword na importação abaixo
 import { onAuthStateChanged, updatePassword } from "https://www.gstatic.com/firebasejs/12.13.0/firebase-auth.js";
-import { doc, getDoc, updateDoc } from "https://www.gstatic.com/firebasejs/12.13.0/firebase-firestore.js";
+import { doc, getDoc, setDoc } from "https://www.gstatic.com/firebasejs/12.13.0/firebase-firestore.js";
 
 const profileForm = document.getElementById('profile-form');
 const nameInput = document.getElementById('name');
@@ -68,13 +68,13 @@ profileForm.addEventListener('submit', async (e) => {
       await updatePassword(currentUser, newPassword);
     }
 
-    // B. Atualiza os dados no Firestore
+   // B. Atualiza os dados no Firestore usando setDoc com merge!
     const docRef = doc(db, 'users', currentUser.uid);
-    await updateDoc(docRef, {
+    await setDoc(docRef, {
       name: nameInput.value.trim(),
       birthdate: birthdateInput.value,
       phone: phoneInput.value.trim()
-    });
+    }, { merge: true }); // O merge é a chave do sucesso aqui
 
     showMessage("Perfil atualizado com sucesso!", "green");
     
