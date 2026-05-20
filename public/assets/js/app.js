@@ -24,29 +24,10 @@ RAW.forEach((r) => {
 });
 
 // ==========================================
-// 1. IDENTIFICAÇÃO DA PÁGINA ATUAL
+// 1. ESTADO GLOBAL E ROTEAMENTO
 // ==========================================
-const currentPath = window.location.pathname;
-let pageType = 'all';
-
-if (currentPath.includes('sth.html')) {
-  pageType = 'sth';
-} else if (currentPath.includes('th.html')) {
-  pageType = 'th';
-} else if (currentPath.includes('minha-colecao.html')) {
-  pageType = 'owned'; // Identifica a nova página do menu
-}
-
-const PAGE_DATA = RAW.filter(r => {
-  if (pageType === 'all' || pageType === 'owned') return true;
-  if (pageType === 'sth' && r.series && r.series.toLowerCase().includes('super')) return true;
-  if (pageType === 'th' && r.series && !r.series.toLowerCase().includes('super')) return true;
-  return false;
-});
-
-// ==========================================
-// 2. ESTADO GLOBAL
-// ==========================================
+let pageType = 'all'; // Inicia mostrando tudo
+let PAGE_DATA = []; // Vai receber os dados baseados na página
 let sessionUid = null;
 let userCollection = {};
 let sortCol = 'year';
@@ -57,6 +38,49 @@ let itemsPerPage = 50;
 let lbIndex = 0;
 
 // ==========================================
+// 2. FUNÇÕES DE ROTEAMENTO (SPA)
+// ==========================================
+function updatePageData() {
+  // Filtra os dados brutos com base no menu selecionado
+  PAGE_DATA = RAW.filter(r => {
+    if (pageType === 'all' || pageType === 'owned') return true;
+    if (pageType === 'sth' && r.series && r.series.toLowerCase().includes('super')) return true;
+    if (pageType === 'th' && r.series && !r.series.toLowerCase().includes('super')) return true;
+    return false;
+  });
+}
+
+function updatePageUI() {
+  const titleEl = document.getElementById('dynamic-title');
+  const badgeEl = document.getElementById('dynamic-badge');
+
+  if (pageType === 'all') {
+    titleEl.innerHTML = 'Hot Wheels <span>Collection</span>';
+    badgeEl.style.display = 'none';
+  } else if (pageType === 'sth') {
+    titleEl.innerHTML = 'Hot Wheels <span>Super Treasure Hunts</span>';
+    badgeEl.style.display = 'block';
+    badgeEl.textContent = '$TH';
+  } else if (pageType === 'owned') {
+    titleEl.innerHTML = 'Minha <span>Coleção</span>';
+    badgeEl.style.display = 'none';
+  }
+  
+  // Limpa a busca e volta pra página 1 sempre que trocar de aba
+  document.getElementById('filter-search').value = '';
+  currentPage = 1;
+}
+
+function changePage(newPageType) {
+  pageType = newPageType;
+  updatePageData();
+  updatePageUI();
+  populateFilters(); // Recalcula anos e coleções
+  updateCounts();    // Recalcula o cabeçalho
+  render();          // Desenha a tabela
+}
+
+// ==========================================
 // 3. UTILITÁRIOS
 // ==========================================
 function getEra(year) {
@@ -65,13 +89,6 @@ function getEra(year) {
   if (year >= 2013) return 'hidden';
   return 'other';
 }
-
-const eraMap = {
-  'classic': 'Clássica',
-  'secret': 'Super Secret',
-  'hidden': 'Hidden',
-  'other': 'Outra'
-};
 
 function getColor(c) {
   if (!c) return 'transparent';
@@ -101,6 +118,7 @@ function populateFilters() {
   const years = [...new Set(PAGE_DATA.map(r => r.year))].sort((a, b) => b - a);
   const selYear = document.getElementById('filter-year');
   if (selYear) {
+    selYear.innerHTML = '<option value="">Todos</option>'; // Limpa opções anteriores
     years.forEach(y => {
       if (!y) return;
       const opt = document.createElement('option');
@@ -112,6 +130,7 @@ function populateFilters() {
   const series = [...new Set(PAGE_DATA.map(r => r.series))].filter(Boolean).sort();
   const selSeries = document.getElementById('filter-series');
   if (selSeries) {
+    selSeries.innerHTML = '<option value="">Todas</option>';
     series.forEach(s => {
       const opt = document.createElement('option');
       opt.value = s; opt.textContent = s;
@@ -135,7 +154,6 @@ function getFilteredData() {
   const se = eraInput ? eraInput.value : '';
   const ss = seriesInput ? seriesInput.value : '';
   
-  // A coleção é mostrada se estiver na página "Minha Coleção" OU se a checkbox estiver ativa
   const isCheckboxChecked = filterOwnedCheckbox ? filterOwnedCheckbox.checked : false;
   const so = (pageType === 'owned') || isCheckboxChecked;
 
@@ -150,7 +168,7 @@ function getFilteredData() {
     if (sy) match = match && String(r.year) === sy;
     if (se) match = match && getEra(r.year) === se;
     if (ss) match = match && r.series === ss;
-    if (so) match = match && isOwned(r); // Aplica o filtro de posse
+    if (so) match = match && isOwned(r);
     return match;
   });
 
@@ -228,7 +246,10 @@ function render() {
     if (emptyMsg) {
       emptyMsg.style.display = 'block';
       if (pageType === 'owned') {
-          emptyMsg.innerHTML = 'A sua coleção está vazia ou os filtros não encontraram nada.<br><a href="app.html" style="color:var(--accent)">Ir para Mostrar Tudo</a> para adicionar carros.';
+          emptyMsg.innerHTML = 'A sua coleção está vazia ou os filtros não encontraram nada.<br><a href="#" data-page="all" class="menu-item" style="color:var(--accent)">Ir para Mostrar Tudo</a> para adicionar carros.';
+          // Adiciona funcionalidade ao link criado dinamicamente
+          const emptyLink = emptyMsg.querySelector('a');
+          if(emptyLink) emptyLink.addEventListener('click', (e) => { e.preventDefault(); changePage('all'); document.getElementById('sidebar').classList.remove('open'); document.getElementById('sidebar-overlay').classList.remove('open'); });
       } else {
           emptyMsg.textContent = 'Nenhum carro encontrado com esses filtros.';
       }
@@ -309,7 +330,6 @@ function render() {
       saveBtn.style.display = 'none';
       updateCounts();
       
-      // Se a caixa de verificação estiver ativa ou estiver na página "Minha Coleção" e o utilizador colocar 0, refaz a tabela
       const filterOwnedCheckbox = document.getElementById('filter-owned-only');
       if ((pageType === 'owned' || (filterOwnedCheckbox && filterOwnedCheckbox.checked)) && newVal === 0) {
          render();
@@ -395,10 +415,12 @@ async function loadCollection() {
     } else {
       userCollection = {};
     }
-    init();
+    
+    // Inicia a aplicação na aba padrão
+    changePage('all');
   } catch (err) {
     console.error("Erro load:", err);
-    init();
+    changePage('all');
   }
 }
 
@@ -459,95 +481,105 @@ document.addEventListener('keydown', (e) => {
 });
 
 // ==========================================
-// 10. INICIALIZAÇÃO
+// 10. INICIALIZAÇÃO E EVENTOS
 // ==========================================
-function init() {
-  populateFilters();
-  updateCounts();
-  render();
-
-  const menuBtn = document.getElementById('menu-toggle');
-  const sidebar = document.getElementById('sidebar');
-  const overlay = document.getElementById('sidebar-overlay');
-  const closeBtn = document.getElementById('close-sidebar');
-
-  function openMenu() { if(sidebar) sidebar.classList.add('open'); if(overlay) overlay.classList.add('open'); }
-  function closeMenu() { if(sidebar) sidebar.classList.remove('open'); if(overlay) overlay.classList.remove('open'); }
-
-  if(menuBtn) menuBtn.addEventListener('click', openMenu);
-  if(closeBtn) closeBtn.addEventListener('click', closeMenu);
-  if(overlay) overlay.addEventListener('click', closeMenu);
-
-  document.querySelectorAll('th[data-col]').forEach(th => {
-    th.addEventListener('click', () => {
-      const col = th.getAttribute('data-col');
-      if (sortCol === col) {
-        sortDesc = !sortDesc;
-      } else {
-        sortCol = col;
-        sortDesc = false;
-      }
-      document.querySelectorAll('th').forEach(t => t.classList.remove('sorted'));
-      th.classList.add('sorted');
-      document.querySelectorAll('.sort-icon').forEach(icon => icon.textContent = '↕');
-      th.querySelector('.sort-icon').textContent = sortDesc ? '↓' : '↑';
-      currentPage = 1;
-      render();
-    });
+  
+// Eventos do Menu SPA
+document.querySelectorAll('.sidebar-menu a[data-page]').forEach(link => {
+  link.addEventListener('click', (e) => {
+    e.preventDefault();
+    const targetPage = e.target.getAttribute('data-page');
+    changePage(targetPage);
+    
+    // Fecha o menu no celular
+    const sidebar = document.getElementById('sidebar');
+    const overlay = document.getElementById('sidebar-overlay');
+    if(sidebar) sidebar.classList.remove('open'); 
+    if(overlay) overlay.classList.remove('open');
   });
+});
 
-  const searchInput = document.getElementById('filter-search');
-  const yearInput = document.getElementById('filter-year');
-  const eraInput = document.getElementById('filter-era');
-  const seriesInput = document.getElementById('filter-series');
-  const filterOwnedCheckbox = document.getElementById('filter-owned-only');
+const menuBtn = document.getElementById('menu-toggle');
+const sidebar = document.getElementById('sidebar');
+const overlay = document.getElementById('sidebar-overlay');
+const closeBtn = document.getElementById('close-sidebar');
 
-  if(searchInput) searchInput.addEventListener('input', () => { currentPage = 1; render(); });
-  if(yearInput) yearInput.addEventListener('change', () => { currentPage = 1; render(); });
-  if(eraInput) eraInput.addEventListener('change', () => { currentPage = 1; render(); });
-  if(seriesInput) seriesInput.addEventListener('change', () => { currentPage = 1; render(); });
-  if(filterOwnedCheckbox) filterOwnedCheckbox.addEventListener('change', () => { currentPage = 1; render(); });
+function openMenu() { if(sidebar) sidebar.classList.add('open'); if(overlay) overlay.classList.add('open'); }
+function closeMenu() { if(sidebar) sidebar.classList.remove('open'); if(overlay) overlay.classList.remove('open'); }
 
-  const btnClear = document.getElementById('btn-clear');
-  if(btnClear) {
-    btnClear.addEventListener('click', () => {
-      currentPage = 1;
-      if(searchInput) searchInput.value = '';
-      if(yearInput) yearInput.value = '';
-      if(eraInput) eraInput.value = '';
-      if(seriesInput) seriesInput.value = '';
-      if(filterOwnedCheckbox) filterOwnedCheckbox.checked = false;
+if(menuBtn) menuBtn.addEventListener('click', openMenu);
+if(closeBtn) closeBtn.addEventListener('click', closeMenu);
+if(overlay) overlay.addEventListener('click', closeMenu);
+
+document.querySelectorAll('th[data-col]').forEach(th => {
+  th.addEventListener('click', () => {
+    const col = th.getAttribute('data-col');
+    if (sortCol === col) {
+      sortDesc = !sortDesc;
+    } else {
+      sortCol = col;
+      sortDesc = false;
+    }
+    document.querySelectorAll('th').forEach(t => t.classList.remove('sorted'));
+    th.classList.add('sorted');
+    document.querySelectorAll('.sort-icon').forEach(icon => icon.textContent = '↕');
+    th.querySelector('.sort-icon').textContent = sortDesc ? '↓' : '↑';
+    currentPage = 1;
+    render();
+  });
+});
+
+const searchInput = document.getElementById('filter-search');
+const yearInput = document.getElementById('filter-year');
+const eraInput = document.getElementById('filter-era');
+const seriesInput = document.getElementById('filter-series');
+const filterOwnedCheckbox = document.getElementById('filter-owned-only');
+
+if(searchInput) searchInput.addEventListener('input', () => { currentPage = 1; render(); });
+if(yearInput) yearInput.addEventListener('change', () => { currentPage = 1; render(); });
+if(eraInput) eraInput.addEventListener('change', () => { currentPage = 1; render(); });
+if(seriesInput) seriesInput.addEventListener('change', () => { currentPage = 1; render(); });
+if(filterOwnedCheckbox) filterOwnedCheckbox.addEventListener('change', () => { currentPage = 1; render(); });
+
+const btnClear = document.getElementById('btn-clear');
+if(btnClear) {
+  btnClear.addEventListener('click', () => {
+    currentPage = 1;
+    if(searchInput) searchInput.value = '';
+    if(yearInput) yearInput.value = '';
+    if(eraInput) eraInput.value = '';
+    if(seriesInput) seriesInput.value = '';
+    if(filterOwnedCheckbox) filterOwnedCheckbox.checked = false;
+    render();
+  });
+}
+
+const perPageSelect = document.getElementById('per-page-select');
+if (perPageSelect) {
+  perPageSelect.addEventListener('change', (e) => {
+    itemsPerPage = e.target.value === 'all' ? 'all' : parseInt(e.target.value);
+    currentPage = 1;
+    render();
+  });
+}
+
+const btnPrev = document.getElementById('btn-prev-page');
+if (btnPrev) {
+  btnPrev.addEventListener('click', () => {
+    if (currentPage > 1) {
+      currentPage--;
       render();
-    });
-  }
+    }
+  });
+}
 
-  const perPageSelect = document.getElementById('per-page-select');
-  if (perPageSelect) {
-    perPageSelect.addEventListener('change', (e) => {
-      itemsPerPage = e.target.value === 'all' ? 'all' : parseInt(e.target.value);
-      currentPage = 1;
+const btnNext = document.getElementById('btn-next-page');
+if (btnNext) {
+  btnNext.addEventListener('click', () => {
+    const maxPages = itemsPerPage === 'all' ? 1 : Math.ceil((window.currentFilteredData || []).length / itemsPerPage);
+    if (currentPage < maxPages) {
+      currentPage++;
       render();
-    });
-  }
-
-  const btnPrev = document.getElementById('btn-prev-page');
-  if (btnPrev) {
-    btnPrev.addEventListener('click', () => {
-      if (currentPage > 1) {
-        currentPage--;
-        render();
-      }
-    });
-  }
-
-  const btnNext = document.getElementById('btn-next-page');
-  if (btnNext) {
-    btnNext.addEventListener('click', () => {
-      const maxPages = itemsPerPage === 'all' ? 1 : Math.ceil((window.currentFilteredData || []).length / itemsPerPage);
-      if (currentPage < maxPages) {
-        currentPage++;
-        render();
-      }
-    });
-  }
+    }
+  });
 }

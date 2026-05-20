@@ -21,11 +21,11 @@
       <button id="close-sidebar" class="btn-clear" style="font-size: 16px;">✕</button>
     </div>
     <ul class="sidebar-menu">
-      <li><a href="app.html" class="menu-item" id="menu-all">Mostrar Tudo</a></li>
-      <li><a href="sth.html" class="menu-item" id="menu-sth">Super Treasure Hunt (STH)</a></li>
-      
-      <li><a href="minha-colecao.html" class="menu-item" id="menu-my-collection" style="color: #ef4444; font-weight: bold;">Minha Coleção</a></li>
-      
+      <li><a href="#" class="menu-item" data-page="all">Mostrar Tudo</a></li>
+      <li><a href="#" class="menu-item" data-page="sth">Super Treasure Hunt (STH)</a></li>
+      <li><a href="#" class="menu-item" data-page="owned" style="color: #ef4444; font-weight: bold;">Minha Coleção</a>
+      </li>
+
       <li style="margin-top: 15px; border-top: 1px solid #333; padding-top: 15px;">
         <a href="perfil.html" class="menu-item" id="menu-profile">Ajustar Perfil</a>
       </li>
@@ -33,7 +33,6 @@
         <a href="#" id="logout-menu" class="menu-item" style="cursor: pointer;">Sair da Conta</a>
       </li>
     </ul>
-
   </div>
 
   <header>
@@ -41,17 +40,15 @@
       style="position: absolute; top: 16px; right: 24px; display: flex; align-items: center; gap: 12px; z-index: 10;">
       <span id="user-email"
         style="font-family: 'Barlow Condensed', sans-serif; font-size: 13px; color: var(--muted); letter-spacing: 1px;"></span>
-      </div>
+    </div>
 
     <div class="header-top" style="display: flex; align-items: center; gap: 16px;">
-
       <button id="menu-toggle" class="btn-clear" style="font-size: 28px; padding: 0; line-height: 1;">☰</button>
 
-      <div class="th-badge"></div>
+      <div class="th-badge" id="dynamic-badge" style="display: none;"></div>
       <div>
-        <h1>Hot Wheels <span>Collection</span></h1>
+        <h1 id="dynamic-title">Hot Wheels <span>Collection</span></h1>
       </div>
-
     </div>
 
     <div class="stats-row">
@@ -67,13 +64,11 @@
         <div class="stat-num" id="missing-count">0</div>
         <div class="stat-label">Faltando</div>
       </div>
-
       <div class="stat">
         <div class="stat-num" id="dup-count">0</div>
         <div class="stat-label">Repetidos</div>
       </div>
-
-      </div>
+    </div>
   </header>
 
   <div class="controls">
