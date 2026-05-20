@@ -2,23 +2,29 @@ rules_version = '2';
 service cloud.firestore {
   match /databases/{database}/documents {
     
-    // 1. Permite que o sistema leia o limite de usuários antes do login
-    // e permite que um usuário logado atualize o contador
+    // ======================================================
+    // FUNÇÃO AUXILIAR: Verifica se o usuário logado é Admin
+    // ======================================================
+    function isAdmin() {
+      return request.auth != null && 
+        get(/databases/$(database)/documents/users/$(request.auth.uid)).data.role == 'admin';
+    }
+
+    // 1. Permite ler o contador e atualizar se estiver logado
     match /config/{document=**} {
       allow read: if true;
       allow write: if request.auth != null;
     }
     
-    // 2. Permite buscar telefones duplicados antes do login (read)
-    // e permite que o usuário crie/edite apenas o seu próprio perfil (write)
+    // 2. Perfis: O próprio usuário edita o seu, OU o Admin edita qualquer um
     match /users/{userId} {
       allow read: if true;
-      allow write: if request.auth != null && request.auth.uid == userId;
+      allow write: if request.auth != null && (request.auth.uid == userId || isAdmin());
     }
     
-    // 3. Garante que cada usuário só veja e edite a sua própria coleção de carrinhos
+    // 3. Coleções: O dono gerencia a sua, OU o Admin gerencia
     match /collections/{userId} {
-      allow read, write: if request.auth != null && request.auth.uid == userId;
+      allow read, write: if request.auth != null && (request.auth.uid == userId || isAdmin());
     }
   }
 }
