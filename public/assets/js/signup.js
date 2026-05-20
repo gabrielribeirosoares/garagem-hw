@@ -10,7 +10,7 @@ function showMessage(text, type) {
   if (!messageBox) return;
   messageBox.textContent = text;
   messageBox.style.display = 'block';
-  
+
   if (type === 'success') {
     messageBox.style.color = '#15803d'; // Verde escuro
     messageBox.style.backgroundColor = '#dcfce7'; // Fundo verde claro
@@ -29,8 +29,8 @@ document.getElementById('signup-form').addEventListener('submit', async (e) => {
   if (messageBox) messageBox.style.display = 'none';
 
   const name = document.getElementById('name').value.trim();
-  const birthdate = document.getElementById('birthdate').value; 
-  const phone = document.getElementById('phone').value.trim(); 
+  const birthdate = document.getElementById('birthdate').value;
+  const phone = document.getElementById('phone').value.trim();
   const email = document.getElementById('email').value.trim().toLowerCase();
   const password = document.getElementById('password').value;
   const confirmPassword = document.getElementById('confirm-password').value;
@@ -47,6 +47,15 @@ document.getElementById('signup-form').addEventListener('submit', async (e) => {
     showMessage('As senhas não coincidem!', 'error');
     return;
   }
+
+  const temLetraOuNumero = /[a-zA-Z0-9]/.test(password);
+  const temCaractereEspecial = /[!@#$%^&*(),.?":{}|<>_+\-=\[\]\\\/]/.test(password);
+
+  if (!temLetraOuNumero || !temCaractereEspecial) {
+    showMessage('A senha precisa conter pelo menos 1 letra/número e pelo menos 1 caractere especial (ex: @, #, $, !).', 'error');
+    return; // Bloqueia o registo se não cumprir o requisito
+  }
+
 
   if (!terms || !privacy) {
     showMessage('Você precisa aceitar os Termos de Uso e a Política de Privacidade.', 'error');
@@ -74,7 +83,7 @@ document.getElementById('signup-form').addEventListener('submit', async (e) => {
         showMessage('As vagas para se cadastrar na Garagem HW estão esgotadas no momento!', 'error');
         btnSubmit.textContent = originalBtnText;
         btnSubmit.disabled = false;
-        return; 
+        return;
       }
     }
 
@@ -89,7 +98,7 @@ document.getElementById('signup-form').addEventListener('submit', async (e) => {
       showMessage('Este número de telefone/WhatsApp já está cadastrado em outra conta.', 'error');
       btnSubmit.textContent = originalBtnText;
       btnSubmit.disabled = false;
-      return; 
+      return;
     }
 
     // 1. Cria o usuário na Autenticação do Firebase
@@ -102,8 +111,8 @@ document.getElementById('signup-form').addEventListener('submit', async (e) => {
     await setDoc(doc(db, 'users', cred.user.uid), {
       uid: cred.user.uid,
       name,
-      birthdate, 
-      phone,     
+      birthdate,
+      phone,
       email,
       marketing,
       acceptedTerms: true,
@@ -120,14 +129,14 @@ document.getElementById('signup-form').addEventListener('submit', async (e) => {
 
     // Sucesso! Mostra a mensagem e redireciona após 2 segundos
     showMessage('Conta criada com sucesso! Redirecionando...', 'success');
-    
+
     setTimeout(() => {
       window.location.href = 'index.html';
     }, 2000);
 
   } catch (error) {
     console.error("Erro ao cadastrar:", error.code, error.message);
-    
+
     btnSubmit.textContent = originalBtnText;
     btnSubmit.disabled = false;
 
