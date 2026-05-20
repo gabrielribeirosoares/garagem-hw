@@ -2,7 +2,8 @@ import { auth, db } from './firebase-config.js';
 import { 
   signInWithEmailAndPassword, 
   signInWithPopup, 
-  GoogleAuthProvider 
+  GoogleAuthProvider,
+  sendPasswordResetEmail 
 } from "https://www.gstatic.com/firebasejs/12.13.0/firebase-auth.js";
 import { doc, getDoc, setDoc } from "https://www.gstatic.com/firebasejs/12.13.0/firebase-firestore.js";
 
@@ -93,4 +94,82 @@ if (btnGoogle) {
       alert("Erro ao logar com Google: " + error.message);
     }
   });
+}
+
+// ==========================================
+// RECUPERAÇÃO DE SENHA (ESQUECI A SENHA)
+// ==========================================
+const forgotPasswordLink = document.getElementById('forgot-password-link');
+const forgotPasswordModal = document.getElementById('forgot-password-modal');
+const btnCloseReset = document.getElementById('btn-close-reset');
+const btnSendReset = document.getElementById('btn-send-reset');
+const resetEmailInput = document.getElementById('reset-email');
+const resetMessage = document.getElementById('reset-message');
+
+if (forgotPasswordLink && forgotPasswordModal) {
+  // Abrir o modal
+  forgotPasswordLink.addEventListener('click', (e) => {
+    e.preventDefault();
+    // Pega o e-mail que o usuário já tenha digitado no login e joga pro modal
+    resetEmailInput.value = document.getElementById('email').value;
+    resetMessage.style.display = 'none';
+    forgotPasswordModal.classList.add('active');
+  });
+
+  // Fechar o modal
+  btnCloseReset.addEventListener('click', () => {
+    forgotPasswordModal.classList.remove('active');
+  });
+
+  // Enviar o e-mail de redefinição
+  btnSendReset.addEventListener('click', async () => {
+    const email = resetEmailInput.value.trim();
+    
+    if (!email) {
+      showResetMessage('Por favor, digite um e-mail válido.', 'error');
+      return;
+    }
+
+    const originalText = btnSendReset.textContent;
+    btnSendReset.textContent = 'Enviando...';
+    btnSendReset.disabled = true;
+
+    try {
+      await sendPasswordResetEmail(auth, email);
+      showResetMessage('Link enviado! Verifique sua caixa de entrada (e spam).', 'success');
+      
+      // Fecha o modal sozinho depois de 4 segundos
+      setTimeout(() => {
+        forgotPasswordModal.classList.remove('active');
+        btnSendReset.textContent = originalText;
+        btnSendReset.disabled = false;
+      }, 4000);
+
+    } catch (error) {
+      console.error("Erro ao enviar reset de senha:", error);
+      btnSendReset.textContent = originalText;
+      btnSendReset.disabled = false;
+
+      if (error.code === 'auth/user-not-found' || error.code === 'auth/invalid-email') {
+        showResetMessage('E-mail não encontrado ou inválido.', 'error');
+      } else {
+        showResetMessage('Erro ao enviar o link. Tente novamente mais tarde.', 'error');
+      }
+    }
+  });
+}
+
+// Função auxiliar para pintar a caixinha de mensagem de verde ou vermelho no modal
+function showResetMessage(text, type) {
+  resetMessage.textContent = text;
+  resetMessage.style.display = 'block';
+  if (type === 'success') {
+    resetMessage.style.color = '#15803d';
+    resetMessage.style.backgroundColor = '#dcfce7';
+    resetMessage.style.border = '1px solid #bbf7d0';
+  } else {
+    resetMessage.style.color = '#b91c1c';
+    resetMessage.style.backgroundColor = '#fee2e2';
+    resetMessage.style.border = '1px solid #fecaca';
+  }
 }
