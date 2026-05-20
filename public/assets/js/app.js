@@ -377,15 +377,30 @@ function updateCounts() {
   if(dupCountEl) dupCountEl.textContent = dups;
 }
 
-// ==========================================
-// 8. FIREBASE
-// ==========================================
 onAuthStateChanged(auth, async (user) => {
   if (user) {
     sessionUid = user.uid;
+    
+    // 1. Preenche o e-mail no painel
     const emailEl = document.getElementById('user-email');
     if(emailEl) emailEl.textContent = user.email;
+
+    // 2. VERIFICAÇÃO DE ADMINISTRADOR (Novo)
+    try {
+      const userDoc = await getDoc(doc(db, 'users', user.uid));
+      const menuAdminItem = document.getElementById('menu-admin-item');
+      
+      // Se o usuário existir e tiver o cargo de admin, exibe o botão
+      if (userDoc.exists() && userDoc.data().role === 'admin') {
+        if (menuAdminItem) menuAdminItem.style.display = 'block';
+      }
+    } catch (error) {
+      console.error("Erro ao verificar nível de acesso:", error);
+    }
+
+    // 3. Carrega a coleção de carrinhos
     await loadCollection();
+    
   } else {
     window.location.href = 'index.html';
   }

@@ -1,0 +1,366 @@
+<!doctype html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Painel Administrativo - Garagem HW</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow:wght@400;500;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/styles.css" />
+    <style>
+        /* =========================================
+       BASE / MOBILE FIRST (Ecrãs pequenos)
+       ========================================= */
+        body {
+            font-family: 'Barlow', sans-serif;
+            background: #0f172a;
+            color: #f8fafc;
+            padding: 15px;
+            margin: 0;
+        }
+
+        .admin-container {
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        .header-admin {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            margin-bottom: 25px;
+            border-bottom: 2px solid #334155;
+            padding-bottom: 15px;
+        }
+
+        .header-admin h1 {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 2.2rem;
+            color: #f59e0b;
+            margin: 0;
+            line-height: 1;
+        }
+
+        .btn-back {
+            background: #334155;
+            color: white;
+            padding: 10px 16px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            text-decoration: none;
+            font-weight: 600;
+            text-align: center;
+            display: block;
+            width: fit-content;
+        }
+
+        /* Transformando a Tabela em Cartões para Mobile */
+        table,
+        thead,
+        tbody,
+        th,
+        td,
+        tr {
+            display: block;
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        /* Esconde o cabeçalho original da tabela no mobile */
+        thead tr {
+            position: absolute;
+            top: -9999px;
+            left: -9999px;
+        }
+
+        tr {
+            background: #1e293b;
+            border-radius: 8px;
+            margin-bottom: 15px;
+            padding: 15px;
+            border: 1px solid #334155;
+        }
+
+        td {
+            position: relative;
+            padding: 8px 0 8px 45%;
+            text-align: right;
+            border-bottom: 1px solid #334155;
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            min-height: 40px;
+            word-break: break-all;
+        }
+
+        td:last-child {
+            border-bottom: none;
+        }
+
+        /* O "data-label" será injetado pelo JS para mostrar o título da coluna */
+        td::before {
+            content: attr(data-label);
+            position: absolute;
+            left: 0;
+            top: 8px;
+            width: 40%;
+            text-align: left;
+            font-weight: 600;
+            color: #94a3b8;
+            font-size: 14px;
+        }
+
+        .btn-edit {
+            background: #2563eb;
+            color: white;
+            padding: 6px 12px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 14px;
+            font-weight: 500;
+            width: 100%;
+        }
+
+        .btn-edit:hover {
+            background: #1d4ed8;
+        }
+
+        /* Modal Responsivo */
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.8);
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+            padding: 15px;
+            box-sizing: border-box;
+        }
+
+        .modal-content {
+            background: #1e293b;
+            padding: 20px;
+            border-radius: 8px;
+            width: 100%;
+            max-width: 450px;
+            border: 1px solid #475569;
+            max-height: 90vh;
+            overflow-y: auto;
+        }
+
+        .modal-content h3 {
+            margin-top: 0;
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 1.8rem;
+            color: #f59e0b;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            font-size: 14px;
+            color: #cbd5e1;
+        }
+
+        .form-group input,
+        .form-group select {
+            width: 100%;
+            padding: 10px;
+            background: #0f172a;
+            border: 1px solid #475569;
+            color: white;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        .modal-actions {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            margin-top: 25px;
+        }
+
+        .modal-actions button {
+            width: 100%;
+            padding: 12px;
+            font-size: 16px;
+        }
+
+        .btn-save {
+            background: #16a34a;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-weight: 600;
+        }
+
+        .btn-cancel {
+            background: #64748b;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-weight: 600;
+        }
+
+        /* =========================================
+       DESKTOP / TABLETS (A partir de 768px)
+       ========================================= */
+        @media (min-width: 768px) {
+            body {
+                padding: 30px;
+            }
+
+            .header-admin {
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: center;
+            }
+
+            .header-admin h1 {
+                font-size: 2.5rem;
+            }
+
+            .btn-back {
+                display: inline-block;
+            }
+
+            /* Restaura o formato original da Tabela */
+            table {
+                display: table;
+                background: #1e293b;
+                border-radius: 8px;
+                overflow: hidden;
+            }
+
+            thead {
+                display: table-header-group;
+            }
+
+            tbody {
+                display: table-row-group;
+            }
+
+            tr {
+                display: table-row;
+                background: transparent;
+                padding: 0;
+                border: none;
+                margin: 0;
+            }
+
+            tr:hover {
+                filter: brightness(1.15);
+            }
+
+            th,
+            td {
+                display: table-cell;
+                padding: 12px 15px;
+                text-align: left;
+                border-bottom: 1px solid #334155;
+                min-height: auto;
+                word-break: normal;
+            }
+
+            th {
+                background: #475569;
+                color: #f8fafc;
+                font-weight: 600;
+            }
+
+            td::before {
+                display: none;
+            }
+
+            /* Esconde as labels geradas no mobile */
+
+            .btn-edit {
+                width: auto;
+            }
+
+            .modal-actions {
+                flex-direction: row;
+                justify-content: flex-end;
+            }
+
+            .modal-actions button {
+                width: auto;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="admin-container">
+        <div class="header-admin">
+            <h1>Painel de Controle de Usuários</h1>
+            <a href="app.html" class="btn-back">← Voltar à Garagem</a>
+        </div>
+
+        <table id="users-table">
+            <thead>
+                <tr>
+                    <th>Nome</th>
+                    <th>E-mail</th>
+                    <th>Telefone</th>
+                    <th>Nascimento</th>
+                    <th>Cargo/Função</th>
+                    <th>Ações</th>
+                </tr>
+            </thead>
+            <tbody id="users-tbody">
+                <tr>
+                    <td colspan="6" style="text-align:center;">Carregando usuários...</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div id="edit-modal" class="modal">
+        <div class="modal-content">
+            <h3>Editar Perfil do Usuário</h3>
+            <form id="edit-user-form">
+                <input type="hidden" id="edit-uid">
+                <div class="form-group">
+                    <label>Nome Completo</label>
+                    <input type="text" id="edit-name" required>
+                </div>
+                <div class="form-group">
+                    <label>Telefone / WhatsApp</label>
+                    <input type="text" id="edit-phone" required>
+                </div>
+                <div class="form-group">
+                    <label>Nível de Acesso (Cargo)</label>
+                    <select id="edit-role">
+                        <option value="user">Usuário Comum</option>
+                        <option value="admin">Administrador</option>
+                    </select>
+                </div>
+                <div class="modal-actions">
+                    <button type="button" class="btn-cancel" id="btn-close-modal">Cancelar</button>
+                    <button type="submit" class="btn-save">Salvar Alterações</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script type="module" src="assets/js/admin.js"></script>
+</body>
+
+</html>
