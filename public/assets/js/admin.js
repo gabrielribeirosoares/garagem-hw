@@ -59,12 +59,20 @@ async function loadUsersList() {
       usersTbody.appendChild(tr);
     });
     // Adiciona evento de clique para cada botão de Editar gerado
-    document.querySelectorAll('.btn-edit').forEach(button => {
-      button.addEventListener('click', (e) => {
-        const uidToEdit = e.target.getAttribute('data-id');
-        openEditModal(uidToEdit);
+    // =========================================
+    // DELEGAÇÃO DE EVENTOS: Ouve os cliques na tabela inteira
+    // =========================================
+    const usersTableBody = document.getElementById('users-tbody');
+
+    if (usersTableBody) {
+      usersTableBody.addEventListener('click', (e) => {
+        // Verifica se o elemento clicado (ou o pai dele) tem a classe 'btn-edit'
+        if (e.target.classList.contains('btn-edit')) {
+          const uidToEdit = e.target.getAttribute('data-id');
+          openEditModal(uidToEdit);
+        }
       });
-    });
+    }
 
   } catch (error) {
     console.error("Erro ao listar usuários:", error);
