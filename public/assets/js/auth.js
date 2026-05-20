@@ -21,7 +21,7 @@ if (loginForm) {
     // Muda o estado do botão para dar feedback visual
     const btnSubmit = loginForm.querySelector('button[type="submit"]');
     const originalBtnText = btnSubmit.textContent;
-    btnSubmit.textContent = "A autenticar...";
+    btnSubmit.textContent = "Acessando...";
     btnSubmit.disabled = true;
 
     try {
