@@ -1,6 +1,7 @@
 import { auth, db } from './firebase-config.js';
 import { onAuthStateChanged } from "https://www.gstatic.com/firebasejs/12.13.0/firebase-auth.js";
-import { doc, getDoc, collection, getDocs, setDoc } from "https://www.gstatic.com/firebasejs/12.13.0/firebase-firestore.js";
+// Importação corrigida com deleteDoc, updateDoc e increment
+import { doc, getDoc, collection, getDocs, setDoc, deleteDoc, updateDoc, increment } from "https://www.gstatic.com/firebasejs/12.13.0/firebase-firestore.js";
 
 const usersTbody = document.getElementById('users-tbody');
 const editModal = document.getElementById('edit-modal');
@@ -13,11 +14,6 @@ const editRole = document.getElementById('edit-role');
 const btnCloseModal = document.getElementById('btn-close-modal');
 
 let allUsersCache = [];
-
-// Diagnóstico inicial no Console
-console.log("=== DIAGNÓSTICO DO PAINEL ADMIN ===");
-console.log("Tabela encontrada?", !!usersTbody);
-console.log("Modal encontrado?", !!editModal);
 
 // 1. SEGURANÇA: Verifica se o usuário é realmente Admin
 onAuthStateChanged(auth, async (user) => {
@@ -60,11 +56,11 @@ async function loadUsersList() {
         <td data-label="Cargo"><strong style="color: ${userData.role === 'admin' ? '#f59e0b' : '#64748b'}">${userData.role === 'admin' ? 'Admin' : 'Usuário'}</strong></td>
         <td data-label="Ações">
           <button class="btn-edit" data-id="${userData.uid}">Editar</button>
+          <button class="btn-delete" data-id="${userData.uid}" data-name="${userData.name || 'Este usuário'}">Excluir</button>
         </td>
       `;
       usersTbody.appendChild(tr);
     });
-    console.log("Usuários renderizados com sucesso. Total:", allUsersCache.length);
 
   } catch (error) {
     console.error("Erro ao listar usuários:", error);
@@ -73,16 +69,47 @@ async function loadUsersList() {
 }
 
 // =========================================
-// DELEGAÇÃO DE EVENTOS (À prova de falhas)
+// DELEGAÇÃO DE EVENTOS: Editar e Excluir
 // =========================================
 if (usersTbody) {
-  usersTbody.addEventListener('click', (e) => {
-    console.log("Elemento clicado na tabela:", e.target);
+  usersTbody.addEventListener('click', async (e) => {
     
+    // AÇÃO: EDITAR
     if (e.target.classList.contains('btn-edit')) {
       const uidToEdit = e.target.getAttribute('data-id');
-      console.log("Botão Editar detetado! UID do Alvo:", uidToEdit);
       openEditModal(uidToEdit);
+    }
+    
+    // AÇÃO: EXCLUIR
+    if (e.target.classList.contains('btn-delete')) {
+      const uidToDelete = e.target.getAttribute('data-id');
+      const userName = e.target.getAttribute('data-name');
+      
+      const confirmacao = confirm(`ATENÇÃO: Tem certeza absoluta que deseja excluir permanentemente o usuário "${userName}"? \n\nIsso apagará o perfil dele e TODOS os carrinhos da coleção dele do banco de dados!`);
+      
+      if (confirmacao) {
+        const botaoOriginalText = e.target.textContent;
+        e.target.textContent = "Excluindo...";
+        e.target.disabled = true;
+
+        try {
+          // 1. Reduz -1 no contador global
+          const configRef = doc(db, 'config', 'app');
+          await updateDoc(configRef, { cadastrados: increment(-1) });
+
+          // 2. Apaga a coleção e o perfil
+          await deleteDoc(doc(db, 'collections', uidToDelete));
+          await deleteDoc(doc(db, 'users', uidToDelete));
+
+          alert('Usuário e dados de coleção deletados com sucesso!');
+          loadUsersList(); // Recarrega a tabela na hora
+        } catch (error) {
+          console.error("Erro ao deletar usuário:", error);
+          alert('Erro ao excluir usuário: ' + error.message);
+          e.target.textContent = botaoOriginalText;
+          e.target.disabled = false;
+        }
+      }
     }
   });
 }
@@ -90,23 +117,16 @@ if (usersTbody) {
 // 3. FUNÇÃO: Abrir modal preenchido com dados atuais
 function openEditModal(uid) {
   const userSelected = allUsersCache.find(u => u.uid === uid);
-  if (!userSelected) {
-    console.warn("Utilizador não encontrado no cache para o UID:", uid);
-    return;
+  if (!userSelected) return;
+
+  if (editUid && editName && editPhone && editRole) {
+    editUid.value = userSelected.uid;
+    editName.value = userSelected.name || '';
+    editPhone.value = userSelected.phone || '';
+    editRole.value = userSelected.role || 'user';
   }
 
-  if (!editModal || !editUid || !editName || !editPhone || !editRole) {
-    console.error("Erro grave: Algum elemento interno do modal não foi encontrado no HTML!");
-    return;
-  }
-
-  editUid.value = userSelected.uid;
-  editName.value = userSelected.name || '';
-  editPhone.value = userSelected.phone || '';
-  editRole.value = userSelected.role || 'user';
-
-  editModal.style.display = 'flex';
-  console.log("Modal aberto com sucesso para:", userSelected.name);
+  if (editModal) editModal.style.display = 'flex';
 }
 
 // Fechar Modal
