@@ -95,10 +95,18 @@
             align-items: center;
             min-height: 40px;
             word-break: break-all;
+            flex-wrap: wrap; /* NOVO: Permite quebra de linha para botões */
         }
 
         td:last-child {
             border-bottom: none;
+        }
+        
+        /* NOVO: Ajuste específico para a célula de Ações no celular */
+        td[data-label="Ações"] {
+            justify-content: space-between; 
+            gap: 8px;
+            padding-left: 0; 
         }
 
         /* O "data-label" será injetado pelo JS para mostrar o título da coluna */
@@ -114,38 +122,26 @@
             font-size: 14px;
         }
 
-        .btn-edit {
-            background: #2563eb;
-            color: white;
-            padding: 6px 12px;
-            border: none;
-            border-radius: 4px;
-            cursor: pointer;
-            font-size: 14px;
-            font-weight: 500;
-            width: 100%;
+        /* NOVO: Botões alinhados lado a lado no celular */
+        .btn-edit, .btn-delete { 
+            flex: 1; 
+            min-width: 80px; 
+            padding: 8px 12px; 
+            border: none; 
+            border-radius: 4px; 
+            cursor: pointer; 
+            font-size: 14px; 
+            font-weight: 500; 
+            text-align: center;
+            margin: 0 !important; 
         }
 
-        .btn-edit:hover {
-            background: #1d4ed8;
-        }
+        .btn-edit { background: #2563eb; color: white; }
+        .btn-edit:hover { background: #1d4ed8; }
+        
+        .btn-delete { background: #dc2626; color: white; }
+        .btn-delete:hover { background: #b91c1c; }
 
-        .btn-delete {
-            background: #dc2626;
-            color: white;
-            padding: 6px 12px;
-            border: none;
-            border-radius: 4px;
-            cursor: pointer;
-            font-size: 14px;
-            font-weight: 500;
-            width: 100%;
-            margin-top: 5px;
-        }
-
-        .btn-delete:hover {
-            background: #b91c1c;
-        }
 
         /* Modal Responsivo */
         .modal {
@@ -304,10 +300,9 @@
                 display: none;
             }
 
-            /* Esconde as labels geradas no mobile */
-
-            .btn-edit {
-                width: auto;
+            /* NOVO: Restaura o comportamento de célula para a coluna de ações no Desktop */
+            td[data-label="Ações"] {
+                display: table-cell; 
             }
 
             .modal-actions {
@@ -319,17 +314,15 @@
                 width: auto;
             }
 
-            .btn-edit {
-                width: auto;
+            /* NOVO: Retorna os botões ao tamanho compacto no PC */
+            .btn-edit, .btn-delete { 
+                flex: none; 
+                width: auto; 
+                display: inline-block;
             }
-
             .btn-delete {
-                width: auto;
-                margin-top: 0;
-                margin-left: 5px;
+                margin-left: 8px !important; 
             }
-
-            /* Ajuste para desktop */
         }
     </style>
 </head>
@@ -389,7 +382,7 @@
         </div>
     </div>
 
-    <script type="module" src="assets/js/admin.js?v=3"></script>
+    <script type="module" src="assets/js/admin.js?v=4"></script>
 </body>
 
 </html>
