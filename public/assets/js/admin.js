@@ -45,6 +45,7 @@ async function loadUsersList() {
 
     querySnapshot.forEach((docSnap) => {
       const userData = docSnap.data();
+      userData.uid = docSnap.id;
       allUsersCache.push(userData);
 
       const tr = document.createElement('tr');
