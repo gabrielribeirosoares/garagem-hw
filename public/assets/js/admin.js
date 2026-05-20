@@ -47,7 +47,7 @@ async function loadUsersList() {
       allUsersCache.push(userData);
 
       const tr = document.createElement('tr');
-      // ADICIONADO OS DATA-LABELS EM CADA TD
+      // ADICIONADO OS DATA-LABELS EM CADA TD PARA O MODO MOBILE
       tr.innerHTML = `
         <td data-label="Nome">${userData.name || 'Sem Nome'}</td>
         <td data-label="E-mail">${userData.email || 'Sem E-mail'}</td>
@@ -58,26 +58,24 @@ async function loadUsersList() {
       `;
       usersTbody.appendChild(tr);
     });
-    // Adiciona evento de clique para cada botão de Editar gerado
-    // =========================================
-    // DELEGAÇÃO DE EVENTOS: Ouve os cliques na tabela inteira
-    // =========================================
-    const usersTableBody = document.getElementById('users-tbody');
-
-    if (usersTableBody) {
-      usersTableBody.addEventListener('click', (e) => {
-        // Verifica se o elemento clicado (ou o pai dele) tem a classe 'btn-edit'
-        if (e.target.classList.contains('btn-edit')) {
-          const uidToEdit = e.target.getAttribute('data-id');
-          openEditModal(uidToEdit);
-        }
-      });
-    }
 
   } catch (error) {
     console.error("Erro ao listar usuários:", error);
-    usersTbody.innerHTML = `<tr><td colspan="6" style="color:red; text-align:center;">Erro ao carregar lista de permissões.</td></tr>`;
+    usersTbody.innerHTML = `<tr><td colspan="6" style="color:red; text-align:center;">Erro ao carregar lista de usuários.</td></tr>`;
   }
+}
+
+// =========================================
+// DELEGAÇÃO DE EVENTOS: Fica FORA da função de carregamento
+// =========================================
+if (usersTbody) {
+  usersTbody.addEventListener('click', (e) => {
+    // Verifica se o elemento clicado tem a classe 'btn-edit'
+    if (e.target.classList.contains('btn-edit')) {
+      const uidToEdit = e.target.getAttribute('data-id');
+      openEditModal(uidToEdit);
+    }
+  });
 }
 
 // 3. FUNÇÃO: Abrir modal preenchido com dados atuais do usuário selecionado
@@ -112,7 +110,7 @@ if (editForm) {
       await setDoc(doc(db, 'users', uid), updatedData, { merge: true });
       editModal.style.display = 'none';
       alert('Usuário atualizado com sucesso!');
-      loadUsersList(); // Atualiza a tabela dinamicamente
+      loadUsersList(); // Atualiza a tabela dinamicamente com os dados novos
     } catch (error) {
       console.error("Erro ao atualizar usuário:", error);
       alert('Erro ao salvar as modificações: ' + error.message);
