@@ -343,6 +343,8 @@ if (usersTbody) {
   });
 }
 
+const PONTOS_POR_CARRO = 100;
+
 // Botão de Salvar a Injeção
 const btnSaveCar = document.getElementById('btn-save-car');
 if (btnSaveCar) {
@@ -363,24 +365,50 @@ if (btnSaveCar) {
     btnSaveCar.textContent = "Salvando...";
 
     try {
-      // 1. Busca a coleção atual do cliente no banco
+      // 1. Busca os dados atuais da coleção do cliente (itens e pontos antigos)
       const dRef = doc(db, 'collections', currentTargetUid);
       const snap = await getDoc(dRef);
 
       let userColData = snap.exists() ? snap.data().items || {} : {};
+      let pontosAtuais = snap.exists() ? snap.data().points || 0 : 0;
 
-      // 2. Atualiza a quantidade do carro específico
+      // Guarda a quantidade antiga para saber se aumentou
+      const qtdAntiga = userColData[carId] || 0;
+
+      // 2. Busca o perfil do usuário para verificar o Cargo/Role
+      const uRef = doc(db, 'users', currentTargetUid);
+      const uSnap = await getDoc(uRef);
+      const userRole = uSnap.exists() ? uSnap.data().role : 'user';
+
+      // 3. Atualiza a quantidade do carro específico
       userColData[carId] = qtyInput;
 
-      // 3. Salva de volta no banco de dados mantendo os pontos e missões intactos (merge:true)
-      await setDoc(dRef, { items: userColData }, { merge: true });
+      // 4. LÓGICA HÍBRIDA DE PONTUAÇÃO: Só soma pontos se for Cargo "cliente" e a quantidade aumentou
+      let novosPontos = pontosAtuais;
+      if (userRole === 'cliente' && qtyInput > qtdAntiga) {
+        const diferenca = qtyInput - qtdAntiga;
+        novosPontos += (diferenca * PONTOS_POR_CARRO);
+      }
 
-      alert("✅ Carro injetado com sucesso na garagem do cliente!");
-      document.getElementById('car-search-input').value = ''; // Limpa para o próximo carro
+      // 5. Salva tudo de volta no banco de dados (items + pontos atualizados)
+      await setDoc(dRef, {
+        items: userColData,
+        points: novosPontos
+      }, { merge: true });
+
+      // Mensagem personalizada avisando se o cliente ganhou pontos ou não
+      if (userRole === 'cliente' && qtyInput > qtdAntiga) {
+        const ptsGanhos = (qtyInput - qtdAntiga) * PONTOS_POR_CARRO;
+        alert(`✅ Sucesso! Carro injetado e +${ptsGanhos} RPMs creditados na conta do Cliente VIP!`);
+      } else {
+        alert("✅ Garagem atualizada com sucesso! (Nenhum ponto foi gerado pois o perfil é Usuário Comum).");
+      }
+
+      document.getElementById('car-search-input').value = ''; // Limpa o campo
       btnSaveCar.textContent = "➕ Injetar";
 
     } catch (error) {
-      console.error("Erro ao salvar carro:", error);
+      console.error("Erro ao salvar carro no painel admin:", error);
       alert("Erro ao injetar o carro. Verifique sua conexão.");
       btnSaveCar.textContent = "➕ Injetar";
     }

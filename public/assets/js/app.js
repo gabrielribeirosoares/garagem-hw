@@ -442,6 +442,8 @@ function updateCounts() {
 }
 
 onAuthStateChanged(auth, async (user) => {
+
+  
   if (user) {
     sessionUid = user.uid;
 
@@ -490,6 +492,20 @@ onAuthStateChanged(auth, async (user) => {
   } else {
     window.location.href = 'index.html';
   }
+
+  // Adicione isto após definir o targetRole no loadCollection ou no estado de login
+  const isVip = (targetRole === 'cliente' || targetRole === 'admin');
+  const pointsContainer = document.getElementById('points-container');
+
+  if (pointsContainer) {
+    pointsContainer.style.display = isVip ? 'flex' : 'none';
+  }
+
+  // Oculta/Mostra itens do menu VIP
+  document.querySelectorAll('[data-page="missions"], [data-page="rewards"]').forEach(el => {
+    el.parentElement.style.display = isVip ? 'block' : 'none';
+
+  });
 });
 
 const btnLogoutMenu = document.getElementById('logout-menu');
@@ -545,17 +561,39 @@ async function loadCollection() {
 }
 
 let saveTimeout = null;
+
+const PONTOS_POR_CARRO = 10;
+
 async function saveData(carId, qty) {
+  const oldQty = userCollection[carId] || 0;
   userCollection[carId] = qty;
 
   if (saveTimeout) clearTimeout(saveTimeout);
+
   saveTimeout = setTimeout(async () => {
     const uidToSave = targetUid || sessionUid;
     if (!uidToSave) return;
 
     try {
       const dRef = doc(db, 'collections', uidToSave);
-      await setDoc(dRef, { items: userCollection }, { merge: true });
+
+      // LÓGICA DE PONTOS: Se for Cliente VIP, calcula a diferença de carros adicionados
+      let novosPontos = userPoints;
+      if (targetRole === 'cliente' && qty > oldQty) {
+        const diff = qty - oldQty;
+        novosPontos += (diff * PONTOS_POR_CARRO);
+      }
+
+      await setDoc(dRef, {
+        items: userCollection,
+        points: novosPontos // Salva os pontos atualizados
+      }, { merge: true });
+
+      // Atualiza na tela do admin/cliente
+      userPoints = novosPontos;
+      const pointsEl = document.getElementById('user-points');
+      if (pointsEl) pointsEl.textContent = userPoints;
+
     } catch (e) {
       console.error("Erro save:", e);
     }
