@@ -47,7 +47,7 @@
 
   <header>
     <div
-      style="position: absolute; top: 16px; right: 24px; display: flex; align-items: center; gap: 12px; z-index: 10;">
+      style="position: absolute; top: 16px; right: 24px; display: flex; align-items: center; justify-content: flex-end; gap: 12px; z-index: 10; flex-wrap: wrap; max-width: 75%;">
 
       <div id="admin-client-selector"
         style="display: none; align-items: center; gap: 8px; background: rgba(37, 99, 235, 0.15); padding: 4px 12px; border-radius: 6px; border: 1px solid #3b82f6;">
@@ -55,8 +55,12 @@
           Vendedor:</span>
         <select id="client-select"
           style="background: var(--surface2); color: #fff; border: 1px solid #3b82f6; padding: 4px 8px; border-radius: 4px; font-family: 'Barlow', sans-serif; font-size: 13px; outline: none; cursor: pointer; max-width: 180px;">
-          <option value="ME">Minha Conta (Admin)</option>
+          <option value="ME">Minha Conta</option>
         </select>
+
+        <button id="btn-open-rifa"
+          style="display: none; background: rgba(250, 204, 21, 0.15); color: var(--yellow); border: 1px solid var(--yellow); padding: 4px 10px; border-radius: 4px; cursor: pointer; font-family: 'Bebas Neue', sans-serif; font-size: 16px; letter-spacing: 1px; transition: 0.2s;">🎟️
+          Rifas</button>
       </div>
 
       <span id="user-email"
@@ -203,10 +207,45 @@
 
   <div id="missions-view" style="display: none; padding: 24px; max-width: 1200px; margin: 0 auto;"></div>
   <div id="rewards-view" style="display: none; padding: 24px; max-width: 1200px; margin: 0 auto;"></div>
+  <div id="rifa-modal" class="custom-modal-overlay" style="display: none; z-index: 10001;">
+    <div class="custom-modal-box" style="max-width: 450px; text-align: left;">
+      <h2 style="font-family: 'Bebas Neue', sans-serif; color: var(--yellow); font-size: 28px; margin-bottom: 5px;">🎟️
+        Lançar Pontos de Rifa</h2>
+      <p style="color: var(--muted); font-size: 14px; margin-bottom: 20px;">Creditando pontos para a conta selecionada.
+      </p>
+
+      <div class="form-group" style="margin-bottom: 20px;">
+        <label
+          style="color: var(--muted); font-size: 13px; text-transform: uppercase; font-family: 'Barlow Condensed', sans-serif; display:block; margin-bottom: 6px;">Quantidade
+          de Números Comprados:</label>
+        <input type="number" id="rifa-qty-input" min="1" value="1"
+          style="width: 100%; padding: 12px; background: var(--surface2); border: 1px solid var(--border); color: #fff; border-radius: 6px; outline: none; font-family: 'Barlow', sans-serif; font-size: 16px;">
+      </div>
+
+      <div class="form-group" style="margin-bottom: 25px;">
+        <label
+          style="color: var(--muted); font-size: 13px; text-transform: uppercase; font-family: 'Barlow Condensed', sans-serif; display:block; margin-bottom: 6px;">Pontos
+          por cada Número:</label>
+        <input type="number" id="rifa-points-per-num" min="1" value="50"
+          style="width: 100%; padding: 12px; background: var(--surface2); border: 1px solid var(--border); color: var(--yellow); font-weight: bold; border-radius: 6px; outline: none; font-family: 'Barlow', sans-serif; font-size: 16px;">
+        <small style="color: var(--muted); font-size: 11px; display: block; margin-top: 6px;">Ex: Se cada número dá 50
+          pontos e o cliente comprou 2, ele receberá 100 RPMs.</small>
+      </div>
+
+      <button id="btn-save-rifa"
+        style="width: 100%; background: var(--green); color: #000; font-family: 'Bebas Neue', sans-serif; font-size: 20px; padding: 12px; border: none; border-radius: 6px; cursor: pointer; transition: 0.2s; font-weight: bold;">🪙
+        Creditar Pontos</button>
+
+      <div style="text-align: center; border-top: 1px solid var(--border); padding-top: 20px; margin-top: 20px;">
+        <button class="btn-clear" onclick="document.getElementById('rifa-modal').style.display = 'none'"
+          style="font-size: 16px;">Cancelar</button>
+      </div>
+    </div>
+  </div>
 
   <script type="module" src="assets/js/firebase-config.js"></script>
-  <script type="module" src="assets/js/app.js?v=5"></script>
-  <script type="module" src="assets/js/auth.js?v=5"></script>
+  <script type="module" src="assets/js/app.js?v=6"></script>
+  <script type="module" src="assets/js/auth.js?v=6"></script>
 </body>
 
 </html>

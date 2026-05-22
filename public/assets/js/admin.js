@@ -75,13 +75,15 @@ async function loadUsersList() {
 
       if (userData.role === 'admin') {
         roleName = 'Admin';
-        roleColor = '#f59e0b';
+        roleColor = '#f59e0b'; // Amarelo
+      } else if (userData.role === 'gerente') {
+        roleName = 'Gerente';
+        roleColor = '#10b981'; // Verde
       } else if (userData.role === 'cliente') {
         roleName = 'Cliente VIP';
-        roleColor = '#3b82f6';
+        roleColor = '#3b82f6'; // Azul
       }
 
-      // Declare o 'tr' apenas uma vez
       const tr = document.createElement('tr');
       tr.innerHTML = `
         <td data-label="Nome">${userData.name || 'Sem Nome'}</td>
@@ -170,22 +172,19 @@ if (btnCloseModal) {
 if (editForm) {
   editForm.addEventListener('submit', async (e) => {
     e.preventDefault();
-
     const uid = editUid.value;
     const updatedData = {
       name: editName.value.trim(),
       phone: editPhone.value.trim(),
       role: editRole.value
     };
-
     try {
       await setDoc(doc(db, 'users', uid), updatedData, { merge: true });
       if (editModal) editModal.style.display = 'none';
       alert('Usuário atualizado com sucesso!');
       loadUsersList();
     } catch (error) {
-      console.error("Erro ao atualizar usuário:", error);
-      alert('Erro ao salvar as modificações: ' + error.message);
+      alert('Erro ao salvar: ' + error.message);
     }
   });
 }

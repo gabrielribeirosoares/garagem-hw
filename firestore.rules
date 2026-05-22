@@ -3,11 +3,11 @@ service cloud.firestore {
   match /databases/{database}/documents {
     
     // ======================================================
-    // FUNÇÃO AUXILIAR: Verifica se o usuário logado é Admin
+    // FUNÇÃO AUXILIAR: Verifica se o usuário é Admin ou Gerente
     // ======================================================
-    function isAdmin() {
-      return request.auth != null && 
-        get(/databases/$(database)/documents/users/$(request.auth.uid)).data.role == 'admin';
+    function hasElevatedPrivileges() {
+      let userData = get(/databases/$(database)/documents/users/$(request.auth.uid)).data;
+      return request.auth != null && (userData.role == 'admin' || userData.role == 'gerente');
     }
 
     // 1. Permite ler o contador e atualizar se estiver logado
@@ -16,15 +16,16 @@ service cloud.firestore {
       allow write: if request.auth != null;
     }
     
-    // 2. Perfis: O próprio usuário edita o seu, OU o Admin edita qualquer um
+    // 2. Perfis: O dono edita o seu, OU o Admin/Gerente edita qualquer um
     match /users/{userId} {
-      allow read: if true;
-      allow write: if request.auth != null && (request.auth.uid == userId || isAdmin());
+      allow read: if request.auth != null;
+      allow write: if request.auth != null && (request.auth.uid == userId || hasElevatedPrivileges());
     }
     
-    // 3. Coleções: O dono gerencia a sua, OU o Admin gerencia
+    // 3. Coleções: O dono gerencia a sua, OU o Admin/Gerente gerencia (para injeção e rifas)
     match /collections/{userId} {
-      allow read, write: if request.auth != null && (request.auth.uid == userId || isAdmin());
+      allow read: if request.auth != null;
+      allow write: if request.auth != null && (request.auth.uid == userId || hasElevatedPrivileges());
     }
   }
 }

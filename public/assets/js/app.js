@@ -44,6 +44,7 @@ let userAccountType = 'standalone';
 let isAdmin = false;
 let targetUid = null;
 let targetRole = 'user';
+let isManager = false;
 
 // ==========================================
 // 2. FUNÇÕES DE ROTEAMENTO (SPA)
@@ -322,7 +323,7 @@ function render() {
     const repetidos = qty > 1 ? qty - 1 : 0;
 
     // LÓGICA HÍBRIDA + MODO VENDEDOR: A edição é permitida se for conta "standalone" OU se você (Admin) estiver visualizando
-    const isEditingAllowed = isAdmin || targetRole !== 'cliente';
+    const isEditingAllowed = isAdmin || isManager || targetRole !== 'cliente';
     let controlesHTML = '';
 
     if (isEditingAllowed) {
@@ -442,8 +443,6 @@ function updateCounts() {
 }
 
 onAuthStateChanged(auth, async (user) => {
-
-  
   if (user) {
     sessionUid = user.uid;
 
@@ -454,31 +453,49 @@ onAuthStateChanged(auth, async (user) => {
       const userDoc = await getDoc(doc(db, 'users', user.uid));
       const menuAdminItem = document.getElementById('menu-admin-item');
 
-      if (userDoc.exists() && userDoc.data().role === 'admin') {
-        isAdmin = true;
-        if (menuAdminItem) menuAdminItem.style.display = 'block';
+      if (userDoc.exists()) {
+        const userRole = userDoc.data().role;
 
-        // LÓGICA DO MODO VENDEDOR (ADMIN): Popula o seletor visual no cabeçalho
+        // Define as flags com base no cargo
+        if (userRole === 'admin') isAdmin = true;
+        if (userRole === 'gerente') isManager = true;
+
+        // 1. TRAVA DO MENU ADMIN: Exibe apenas se for estritamente 'admin'
+        if (isAdmin && menuAdminItem) {
+          menuAdminItem.style.display = 'block';
+        } else if (menuAdminItem) {
+          menuAdminItem.style.display = 'none'; // Força a ocultação para gerentes e clientes
+        }
+
+        // 2. MODO VENDEDOR: Liberado para Admin E Gerente
         const adminSelector = document.getElementById('admin-client-selector');
         const clientSelect = document.getElementById('client-select');
 
-        if (adminSelector && clientSelect) {
+        if ((isAdmin || isManager) && adminSelector && clientSelect) {
           adminSelector.style.display = 'flex';
 
           const usersSnap = await getDocs(collection(db, 'users'));
           usersSnap.forEach(docSnap => {
-            if (docSnap.id !== user.uid) {
+            const uData = docSnap.data();
+
+            // O Modo Vendedor só lista os clientes VIP
+            if (docSnap.id !== user.uid && uData.role === 'cliente') {
               const opt = document.createElement('option');
               opt.value = docSnap.id;
-              const uData = docSnap.data();
               opt.textContent = `🛒 ${uData.name || uData.email}`;
               clientSelect.appendChild(opt);
             }
           });
 
-          // Quando muda o cliente no dropdown, carrega a coleção daquela pessoa
+          // Quando muda o cliente no dropdown
           clientSelect.addEventListener('change', async (e) => {
             targetUid = e.target.value === 'ME' ? null : e.target.value;
+
+            const btnRifa = document.getElementById('btn-open-rifa');
+            if (btnRifa) {
+              btnRifa.style.display = targetUid ? 'block' : 'none';
+            }
+
             await loadCollection();
           });
         }
@@ -493,18 +510,21 @@ onAuthStateChanged(auth, async (user) => {
     window.location.href = 'index.html';
   }
 
-  // Adicione isto após definir o targetRole no loadCollection ou no estado de login
-  const isVip = (targetRole === 'cliente' || targetRole === 'admin');
+
+  const isVip = (targetRole === 'cliente' || targetRole === 'admin' || isManager);
   const pointsContainer = document.getElementById('points-container');
 
   if (pointsContainer) {
     pointsContainer.style.display = isVip ? 'flex' : 'none';
   }
 
-  // Oculta/Mostra itens do menu VIP
   document.querySelectorAll('[data-page="missions"], [data-page="rewards"]').forEach(el => {
-    el.parentElement.style.display = isVip ? 'block' : 'none';
-
+    // Se for o menu lateral, exibimos para quem tem acesso ao sistema
+    if (isAdmin || isManager || targetRole === 'cliente') {
+      el.parentElement.style.display = 'block';
+    } else {
+      el.parentElement.style.display = 'none';
+    }
   });
 });
 
@@ -541,7 +561,6 @@ async function loadCollection() {
       userRewards = [];
     }
 
-    // NOVO: Vai à tabela de "users" descobrir qual é o cargo da conta que estamos a carregar
     const uRef = doc(db, 'users', uidToLoad);
     const uSnap = await getDoc(uRef);
     if (uSnap.exists()) {
@@ -1098,6 +1117,74 @@ window.redeemReward = function (rewardId, cost, title) {
         if (pointsEl) pointsEl.textContent = userPoints;
         renderRewards();
       }
+    }
+  });
+}
+
+// ==========================================
+// SISTEMA DE RIFAS (MODO VENDEDOR)
+// ==========================================
+const btnOpenRifa = document.getElementById('btn-open-rifa');
+const btnSaveRifa = document.getElementById('btn-save-rifa');
+const rifaModal = document.getElementById('rifa-modal');
+
+if (btnOpenRifa) {
+  btnOpenRifa.addEventListener('click', () => {
+    if (targetRole !== 'cliente' && !isAdmin && !isManager) {
+      alert("Esta conta ainda é um 'Usuário' comum e não permite acúmulo de pontos. Mude o cargo no Painel Admin se desejar.");
+      return;
+    }
+
+    document.getElementById('rifa-qty-input').value = 1;
+    document.getElementById('rifa-points-per-num').value = 50;
+    rifaModal.style.display = 'flex';
+  });
+}
+
+if (btnSaveRifa) {
+  btnSaveRifa.addEventListener('click', async () => {
+    if (!targetUid) return;
+
+    const qtyInput = parseInt(document.getElementById('rifa-qty-input').value) || 0;
+    const pointsPerNum = parseInt(document.getElementById('rifa-points-per-num').value) || 0;
+
+    if (qtyInput <= 0 || pointsPerNum <= 0) {
+      alert("Por favor, preencha valores maiores que zero.");
+      return;
+    }
+
+    btnSaveRifa.textContent = "Creditando...";
+    btnSaveRifa.disabled = true;
+
+    try {
+      const pontosGanhos = qtyInput * pointsPerNum;
+
+      // Atualiza a variável de pontos localmente (que já reflete a conta do cliente)
+      userPoints += pontosGanhos;
+
+      // Salva a nova soma no banco do cliente que você selecionou no dropdown
+      await setDoc(doc(db, 'collections', targetUid), {
+        points: userPoints
+      }, { merge: true });
+
+      // Atualiza o contador de RPMs no cabeçalho na mesma hora
+      const pointsEl = document.getElementById('user-points');
+      if (pointsEl) pointsEl.textContent = userPoints;
+
+      // Se você estiver com a página da loja aberta, recarrega para liberar os botões de prêmio
+      if (pageType === 'rewards') renderRewards();
+
+      alert(`🎉 SUCESSO!\n\nForam creditados +${pontosGanhos} RPMs na conta do cliente!`);
+
+      rifaModal.style.display = 'none';
+      btnSaveRifa.textContent = "🪙 Creditar Pontos";
+      btnSaveRifa.disabled = false;
+
+    } catch (error) {
+      console.error("Erro ao creditar pontos da rifa:", error);
+      alert("Houve uma falha de conexão ao salvar os pontos.");
+      btnSaveRifa.textContent = "🪙 Creditar Pontos";
+      btnSaveRifa.disabled = false;
     }
   });
 }
