@@ -45,6 +45,7 @@ let isAdmin = false;
 let targetUid = null;
 let targetRole = 'user';
 let isManager = false;
+let userHistory = [];
 
 // ==========================================
 // 2. FUNÇÕES DE ROTEAMENTO (SPA)
@@ -554,6 +555,7 @@ async function loadCollection() {
       userPoints = snap.data().points || 0;
       userMissions = snap.data().missions || {};
       userRewards = snap.data().rewards || [];
+      userHistory = snap.data().history || [];
     } else {
       userCollection = {};
       userPoints = 0;
@@ -598,9 +600,11 @@ async function saveData(carId, qty) {
 
       // LÓGICA DE PONTOS: Se for Cliente VIP, calcula a diferença de carros adicionados
       let novosPontos = userPoints;
+      // Onde você calcula 'novosPontos' e salva:
       if (targetRole === 'cliente' && qty > oldQty) {
         const diff = qty - oldQty;
-        novosPontos += (diff * PONTOS_POR_CARRO);
+        const pontosGanhos = (diff * PONTOS_POR_CARRO);
+        await addHistoryEntry(uidToSave, `Injeção de Carros`, pontosGanhos, 'earning');
       }
 
       await setDoc(dRef, {
@@ -932,12 +936,11 @@ const LISTA_RECOMPENSAS = [
   }
 ];
 
-function renderRewards() {
+async function renderRewards() {
   const container = document.getElementById('rewards-view');
   if (!container) return;
 
   let cardsHTML = '';
-
   LISTA_RECOMPENSAS.forEach(item => {
     const canAfford = userPoints >= item.custo;
     cardsHTML += `
@@ -953,39 +956,53 @@ function renderRewards() {
     `;
   });
 
-  let historicoHTML = '';
+  // --- TABELA DE CUPONS (EXISTENTE) ---
+  let cuponsHTML = '';
   if (userRewards && userRewards.length > 0) {
-    let linhasTabela = '';
+    let linhasCupons = userRewards.map(resgate => `
+      <tr style="border-bottom: 1px solid var(--border);">
+        <td style="padding: 12px; font-family: 'Barlow Condensed', sans-serif; font-weight: 600; color: #fff;">${resgate.data}</td>
+        <td style="padding: 12px; color: var(--yellow); font-weight: 500; font-size: 14px;">${resgate.titulo}</td>
+        <td style="padding: 12px;"><span style="font-family: monospace; background: var(--surface2); padding: 4px 8px; border-radius: 4px; border: 1px solid var(--border); color: #fff; font-size: 13px; letter-spacing: 1px;">${resgate.codigo}</span></td>
+        <td style="padding: 12px;"><span style="background: rgba(34, 197, 94, 0.15); color: var(--green); border: 1px solid rgba(34, 197, 94, 0.3); padding: 3px 8px; border-radius: 4px; font-size: 11px; font-weight: 700; text-transform: uppercase;">${resgate.status}</span></td>
+      </tr>
+    `).join('');
 
-    userRewards.forEach(resgate => {
-      linhasTabela += `
-        <tr style="border-bottom: 1px solid var(--border);">
-          <td style="padding: 12px; font-family: 'Barlow Condensed', sans-serif; font-weight: 600; color: #fff;">${resgate.data}</td>
-          <td style="padding: 12px; color: var(--yellow); font-weight: 500; font-size: 14px;">${resgate.titulo}</td>
-          <td style="padding: 12px;"><span style="font-family: monospace; background: var(--surface2); padding: 4px 8px; border-radius: 4px; border: 1px solid var(--border); color: #fff; font-size: 13px; letter-spacing: 1px;">${resgate.codigo}</span></td>
-          <td style="padding: 12px;"><span style="background: rgba(34, 197, 94, 0.15); color: var(--green); border: 1px solid rgba(34, 197, 94, 0.3); padding: 3px 8px; border-radius: 4px; font-size: 11px; font-weight: 700; text-transform: uppercase;">${resgate.status}</span></td>
-        </tr>
-      `;
-    });
+    cuponsHTML = `
+      <div style="margin-top: 40px; background: var(--surface); border: 1px solid var(--border); border-radius: 12px; padding: 24px;">
+        <h3 style="font-family: 'Bebas Neue', sans-serif; font-size: 26px; color: #fff; margin-bottom: 16px;">🎟️ Meus Cupons</h3>
+        <table style="width: 100%; border-collapse: collapse;">
+            <thead><tr style="border-bottom: 2px solid var(--border); color: var(--muted); font-size: 11px;">
+                <th style="padding: 12px; text-transform: uppercase;">Data</th>
+                <th style="padding: 12px; text-transform: uppercase;">Prêmio</th>
+                <th style="padding: 12px; text-transform: uppercase;">Código</th>
+                <th style="padding: 12px; text-transform: uppercase;">Status</th>
+            </tr></thead>
+            <tbody>${linhasCupons}</tbody>
+        </table>
+      </div>
+    `;
+  }
 
-    historicoHTML = `
-      <div style="margin-top: 40px; background: var(--surface); border: 1px solid var(--border); border-radius: 12px; padding: 24px; box-shadow: 0 4px 15px rgba(0,0,0,0.3);">
-        <h3 style="font-family: 'Bebas Neue', sans-serif; font-size: 26px; color: #fff; letter-spacing: 1px; margin-bottom: 16px; display: flex; align-items: center; gap: 8px;">🎟️ Meus Cupons Ativos</h3>
-        <div style="overflow-x: auto;">
-          <table style="width: 100%; border-collapse: collapse; text-align: left; font-size: 13px;">
-            <thead>
-              <tr style="border-bottom: 2px solid var(--border);">
-                <th style="padding: 12px; color: var(--muted); font-size: 11px; letter-spacing: 1px; text-transform: uppercase; cursor: default;">Data</th>
-                <th style="padding: 12px; color: var(--muted); font-size: 11px; letter-spacing: 1px; text-transform: uppercase; cursor: default;">Prêmio</th>
-                <th style="padding: 12px; color: var(--muted); font-size: 11px; letter-spacing: 1px; text-transform: uppercase; cursor: default;">Código do Cupom</th>
-                <th style="padding: 12px; color: var(--muted); font-size: 11px; letter-spacing: 1px; text-transform: uppercase; cursor: default;">Status</th>
-              </tr>
-            </thead>
-            <tbody>
-              ${linhasTabela}
-            </tbody>
-          </table>
-        </div>
+  // --- TABELA DE EXTRATO (NOVO) ---
+  let extratoHTML = '';
+  if (userHistory && userHistory.length > 0) {
+    let linhasExtrato = userHistory.map(item => `
+      <tr style="border-bottom: 1px solid var(--border);">
+        <td style="padding: 10px; color: var(--muted); font-size: 13px;">${item.date}</td>
+        <td style="padding: 10px; color: #fff; font-size: 14px;">${item.desc}</td>
+        <td style="padding: 10px; font-weight: bold; color: ${item.type === 'earning' ? 'var(--green)' : 'var(--red)'}; text-align: right; font-family: 'Barlow Condensed', sans-serif;">
+            ${item.type === 'earning' ? '+' : '-'}${item.amount}
+        </td>
+      </tr>
+    `).join('');
+
+    extratoHTML = `
+      <div style="margin-top: 40px; background: var(--surface); border: 1px solid var(--border); border-radius: 12px; padding: 24px;">
+        <h3 style="font-family: 'Bebas Neue', sans-serif; font-size: 26px; color: #fff; margin-bottom: 16px;">📊 Extrato de RPMs</h3>
+        <table style="width: 100%; border-collapse: collapse;">
+            <tbody>${linhasExtrato}</tbody>
+        </table>
       </div>
     `;
   }
@@ -993,12 +1010,13 @@ function renderRewards() {
   container.innerHTML = `
     <div class="mission-header">
         <h2>Troque seus Pontos</h2>
-        <p>Use seus RPMs acumulados nas missões para resgatar prêmios exclusivos. <br>Seu saldo atual é de <strong style="color: var(--yellow); font-size: 18px;">🪙 ${userPoints} RPMs</strong>.</p>
+        <p>Seu saldo atual é de <strong style="color: var(--yellow); font-size: 18px;">🪙 ${userPoints} RPMs</strong>.</p>
     </div>
     <div class="reward-grid">
         ${cardsHTML}
     </div>
-    ${historicoHTML}
+    ${cuponsHTML}
+    ${extratoHTML}
   `;
 }
 
@@ -1106,6 +1124,8 @@ window.redeemReward = function (rewardId, cost, title) {
           rewards: userRewards
         }, { merge: true });
 
+        await addHistoryEntry(sessionUid, `Resgate: ${title}`, cost, 'spending');
+
         showModal('success', { title: title, code: couponCode });
 
       } catch (e) {
@@ -1167,6 +1187,9 @@ if (btnSaveRifa) {
         points: userPoints
       }, { merge: true });
 
+      // Após await setDoc(...) no btnSaveRifa:
+      await addHistoryEntry(targetUid, `Lançamento de Rifa`, pontosGanhos, 'earning');
+
       // Atualiza o contador de RPMs no cabeçalho na mesma hora
       const pointsEl = document.getElementById('user-points');
       if (pointsEl) pointsEl.textContent = userPoints;
@@ -1188,3 +1211,29 @@ if (btnSaveRifa) {
     }
   });
 }
+
+// Função para registrar histórico de pontos
+async function addHistoryEntry(uid, desc, amount, type) {
+  try {
+    const ref = doc(db, 'collections', uid);
+    const snap = await getDoc(ref);
+    const currentData = snap.exists() ? snap.data() : { history: [] };
+    const history = currentData.history || [];
+
+    history.unshift({
+      date: new Date().toLocaleDateString('pt-BR'),
+      desc: desc,
+      amount: amount,
+      type: type 
+    });
+
+    await setDoc(ref, { history: history }, { merge: true });
+    
+    // Opcional: Atualizar a variável local para o extrato aparecer na hora
+    userHistory = history;
+    renderRewards(); 
+  } catch (e) {
+    console.error("Erro ao registrar histórico:", e);
+  }
+}
+// NÃO ADICIONE NENHUMA CHAVE EXTRA APÓS ESTA LINHA
