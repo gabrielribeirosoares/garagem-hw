@@ -86,7 +86,7 @@ async function loadUsersList() {
       tr.innerHTML = `
         <td data-label="Nome">${userData.name || 'Sem Nome'}</td>
         <td data-label="E-mail">${userData.email || 'Sem E-mail'}</td>
-        <td data-label="Telefone">${userData.phone || 'Sem Telefone'}</td>
+        <td data-label="Telefone">${(userData.phone && userData.phone !== '(00) 00000-0000') ? userData.phone : 'Sem Telefone'}</td>
         <td data-label="Nascimento">${userData.birthdate || 'Não informada'}</td>
         <td data-label="Cargo"><strong style="color: ${roleColor}">${roleName}</strong></td>
         <td data-label="Ações">
@@ -153,7 +153,8 @@ function openEditModal(uid) {
   if (editUid && editName && editPhone && editRole) {
     editUid.value = userSelected.uid;
     editName.value = userSelected.name || '';
-    editPhone.value = userSelected.phone || '';
+    // Se o telefone for o padrão de zeros ou inválido, deixa o campo em branco para digitação
+    editPhone.value = (userSelected.phone && userSelected.phone !== '(00) 00000-0000') ? userSelected.phone : '';
     editRole.value = userSelected.role || 'user';
   }
 
@@ -189,13 +190,26 @@ if (editForm) {
   });
 }
 
+// Máscara do Telefone corrigida para o Modal (admin.js)
 if (editPhone) {
   editPhone.addEventListener('input', (e) => {
-    let value = e.target.value.replace(/\D/g, '');
+    let value = e.target.value.replace(/\D/g, ''); // Remove tudo o que não for número
+
+    if (value.length === 0) {
+      e.target.value = '';
+      return;
+    }
+
     if (value.length > 11) value = value.slice(0, 11);
-    value = value.replace(/(\d{2})(\d)/, "($1) $2");
-    value = value.replace(/(\d)(\d{4})$/, "$1-$2");
-    e.target.value = value;
+
+    // Aplica a máscara dinamicamente conforme o usuário digita
+    if (value.length > 6) {
+      e.target.value = `(${value.slice(0, 2)}) ${value.slice(2, 7)}-${value.slice(7)}`;
+    } else if (value.length > 2) {
+      e.target.value = `(${value.slice(0, 2)}) ${value.slice(2)}`;
+    } else {
+      e.target.value = value;
+    }
   });
 }
 
