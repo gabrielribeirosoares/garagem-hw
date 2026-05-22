@@ -95,18 +95,19 @@
             align-items: center;
             min-height: 40px;
             word-break: break-all;
-            flex-wrap: wrap; /* NOVO: Permite quebra de linha para botões */
+            flex-wrap: wrap;
+            /* NOVO: Permite quebra de linha para botões */
         }
 
         td:last-child {
             border-bottom: none;
         }
-        
+
         /* NOVO: Ajuste específico para a célula de Ações no celular */
         td[data-label="Ações"] {
-            justify-content: space-between; 
+            justify-content: space-between;
             gap: 8px;
-            padding-left: 0; 
+            padding-left: 0;
         }
 
         /* O "data-label" será injetado pelo JS para mostrar o título da coluna */
@@ -123,24 +124,37 @@
         }
 
         /* NOVO: Botões alinhados lado a lado no celular */
-        .btn-edit, .btn-delete { 
-            flex: 1; 
-            min-width: 80px; 
-            padding: 8px 12px; 
-            border: none; 
-            border-radius: 4px; 
-            cursor: pointer; 
-            font-size: 14px; 
-            font-weight: 500; 
+        .btn-edit,
+        .btn-delete {
+            flex: 1;
+            min-width: 80px;
+            padding: 8px 12px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 14px;
+            font-weight: 500;
             text-align: center;
-            margin: 0 !important; 
+            margin: 0 !important;
         }
 
-        .btn-edit { background: #2563eb; color: white; }
-        .btn-edit:hover { background: #1d4ed8; }
-        
-        .btn-delete { background: #dc2626; color: white; }
-        .btn-delete:hover { background: #b91c1c; }
+        .btn-edit {
+            background: #2563eb;
+            color: white;
+        }
+
+        .btn-edit:hover {
+            background: #1d4ed8;
+        }
+
+        .btn-delete {
+            background: #dc2626;
+            color: white;
+        }
+
+        .btn-delete:hover {
+            background: #b91c1c;
+        }
 
 
         /* Modal Responsivo */
@@ -302,7 +316,7 @@
 
             /* NOVO: Restaura o comportamento de célula para a coluna de ações no Desktop */
             td[data-label="Ações"] {
-                display: table-cell; 
+                display: table-cell;
             }
 
             .modal-actions {
@@ -315,13 +329,15 @@
             }
 
             /* NOVO: Retorna os botões ao tamanho compacto no PC */
-            .btn-edit, .btn-delete { 
-                flex: none; 
-                width: auto; 
+            .btn-edit,
+            .btn-delete {
+                flex: none;
+                width: auto;
                 display: inline-block;
             }
+
             .btn-delete {
-                margin-left: 8px !important; 
+                margin-left: 8px !important;
             }
         }
     </style>
@@ -370,7 +386,8 @@
                 <div class="form-group">
                     <label>Nível de Acesso (Cargo)</label>
                     <select id="edit-role">
-                        <option value="user">Usuário Comum</option>
+                        <option value="user">Usuário</option>
+                        <option value="cliente">Cliente da Loja</option>
                         <option value="admin">Administrador</option>
                     </select>
                 </div>
@@ -381,8 +398,63 @@
             </form>
         </div>
     </div>
+    <div id="cars-modal" class="custom-modal-overlay" style="display: none;">
+        <div class="custom-modal-box" style="max-width: 600px; text-align: left;">
+            <h2
+                style="font-family: 'Bebas Neue', sans-serif; color: var(--yellow); font-size: 28px; margin-bottom: 5px;">
+                🚗 Injetar na Garagem</h2>
+            <p style="color: var(--muted); font-size: 14px; margin-bottom: 20px;">Adicionando miniaturas para: <b
+                    id="manage-user-name" style="color: #fff;"></b></p>
 
-    <script type="module" src="assets/js/admin.js?v=4"></script>
+            <div style="margin-bottom: 20px;">
+                <label
+                    style="color: var(--muted); font-size: 13px; text-transform: uppercase; font-family: 'Barlow Condensed', sans-serif;">1.
+                    Buscar Carrinho na Base (RAW):</label>
+                <input type="text" id="car-search-input" list="car-datalist"
+                    placeholder="Digite ano, nome ou série para buscar..."
+                    style="width: 100%; padding: 12px; background: var(--surface2); border: 1px solid var(--border); color: #fff; border-radius: 6px; margin-top: 5px; font-family: 'Barlow', sans-serif; outline: none;">
+                <datalist id="car-datalist"></datalist>
+            </div>
+
+            <div style="display: flex; gap: 15px; align-items: flex-end; margin-bottom: 30px;">
+                <div style="flex: 1;">
+                    <label
+                        style="color: var(--muted); font-size: 13px; text-transform: uppercase; font-family: 'Barlow Condensed', sans-serif;">2.
+                        Quantidade Final na Coleção:</label>
+                    <input type="number" id="car-qty-input" min="0" value="1"
+                        style="width: 100%; padding: 12px; background: var(--surface2); border: 1px solid var(--border); color: var(--yellow); font-weight: bold; font-size: 18px; border-radius: 6px; margin-top: 5px; text-align: center; outline: none;">
+                </div>
+                <button id="btn-save-car"
+                    style="background: var(--green); color: #000; font-family: 'Bebas Neue', sans-serif; font-size: 20px; padding: 12px 24px; border: none; border-radius: 6px; cursor: pointer; transition: 0.2s;">➕
+                    Injetar</button>
+            </div>
+
+            <div style="text-align: center; border-top: 1px solid var(--border); padding-top: 20px;">
+                <button class="btn-clear" onclick="document.getElementById('cars-modal').style.display = 'none'"
+                    style="font-size: 16px;">Fechar Painel</button>
+            </div>
+        </div>
+    </div>
+
+    <div
+        style="background: var(--surface); border: 1px solid var(--border); border-radius: 12px; padding: 24px; max-width: 500px; margin: 20px auto; color: white; font-family: 'Barlow', sans-serif;">
+        <h2
+            style="font-family: 'Bebas Neue', sans-serif; font-size: 32px; color: var(--yellow); letter-spacing: 1px; margin-bottom: 10px;">
+            🔍 Validar Cupom VIP</h2>
+        <p style="color: var(--muted); font-size: 14px; margin-bottom: 20px;">Digite o código enviado pelo cliente para
+            verificar a autenticidade e dar baixa no prêmio.</p>
+
+        <div style="display: flex; gap: 10px; margin-bottom: 20px;">
+            <input type="text" id="cupom-input" placeholder="Ex: HW-82F3A"
+                style="flex: 1; background: var(--surface2); border: 1px solid var(--border); color: var(--yellow); font-family: monospace; font-size: 18px; padding: 12px; border-radius: 6px; text-transform: uppercase; outline: none;">
+            <button onclick="validarCupom()"
+                style="background: var(--yellow); color: black; font-family: 'Bebas Neue', sans-serif; font-size: 20px; padding: 0 24px; border: none; border-radius: 6px; cursor: pointer;">Buscar</button>
+        </div>
+
+        <div id="cupom-result"></div>
+    </div>
+
+    <script type="module" src="assets/js/admin.js?v=5"></script>
 </body>
 
 </html>

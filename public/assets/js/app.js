@@ -1,6 +1,6 @@
 import { auth, db } from './firebase-config.js';
 import { onAuthStateChanged, signOut } from "https://www.gstatic.com/firebasejs/12.13.0/firebase-auth.js";
-import { doc, getDoc, setDoc } from "https://www.gstatic.com/firebasejs/12.13.0/firebase-firestore.js";
+import { doc, getDoc, setDoc, collection, getDocs } from "https://www.gstatic.com/firebasejs/12.13.0/firebase-firestore.js";
 import { RAW } from './data.js';
 
 const idsGerados = new Set();
@@ -26,22 +26,29 @@ RAW.forEach((r) => {
 // ==========================================
 // 1. ESTADO GLOBAL E ROTEAMENTO
 // ==========================================
-let pageType = 'all'; // Inicia mostrando tudo
-let PAGE_DATA = []; // Vai receber os dados baseados na página
+let pageType = 'all';
+let PAGE_DATA = [];
 let sessionUid = null;
 let userCollection = {};
 let sortCol = 'year';
 let sortDesc = true;
+let userPoints = 0;
+let userMissions = {};
+let userRewards = [];
 
 let currentPage = 1;
 let itemsPerPage = 50;
 let lbIndex = 0;
 
+let userAccountType = 'standalone';
+let isAdmin = false;
+let targetUid = null;
+let targetRole = 'user';
+
 // ==========================================
 // 2. FUNÇÕES DE ROTEAMENTO (SPA)
 // ==========================================
 function updatePageData() {
-  // Filtra os dados brutos com base no menu selecionado
   PAGE_DATA = RAW.filter(r => {
     if (pageType === 'all' || pageType === 'owned') return true;
     if (pageType === 'sth' && r.series && r.series.toLowerCase().includes('super')) return true;
@@ -65,19 +72,59 @@ function updatePageUI() {
     titleEl.innerHTML = 'Minha <span>Coleção</span>';
     badgeEl.style.display = 'none';
   }
-  
-  // Limpa a busca e volta pra página 1 sempre que trocar de aba
+
   document.getElementById('filter-search').value = '';
   currentPage = 1;
 }
 
 function changePage(newPageType) {
   pageType = newPageType;
+
+  const tableArea = document.querySelector('.table-wrapper');
+  const controlsArea = document.querySelector('.controls');
+  const countArea = document.querySelector('.count-bar');
+  const pagArea = document.querySelector('.pagination-container');
+  const missionsArea = document.getElementById('missions-view');
+  const rewardsArea = document.getElementById('rewards-view');
+
+  if (pageType === 'missions') {
+    tableArea.style.display = 'none';
+    if (controlsArea) controlsArea.style.display = 'none';
+    if (countArea) countArea.style.display = 'none';
+    if (pagArea) pagArea.style.display = 'none';
+    if (rewardsArea) rewardsArea.style.display = 'none';
+    if (missionsArea) missionsArea.style.display = 'block';
+
+    document.getElementById('dynamic-title').innerHTML = 'Garagem <span>VIP</span>';
+    document.getElementById('dynamic-badge').style.display = 'none';
+    renderMissions();
+    return;
+  } else if (pageType === 'rewards') {
+    tableArea.style.display = 'none';
+    if (controlsArea) controlsArea.style.display = 'none';
+    if (countArea) countArea.style.display = 'none';
+    if (pagArea) pagArea.style.display = 'none';
+    if (missionsArea) missionsArea.style.display = 'none';
+    if (rewardsArea) rewardsArea.style.display = 'block';
+
+    document.getElementById('dynamic-title').innerHTML = 'Loja de <span>RPMs</span>';
+    document.getElementById('dynamic-badge').style.display = 'none';
+    renderRewards();
+    return;
+  } else {
+    tableArea.style.display = 'block';
+    if (controlsArea) controlsArea.style.display = 'flex';
+    if (countArea) countArea.style.display = 'flex';
+    if (pagArea) pagArea.style.display = 'flex';
+    if (missionsArea) missionsArea.style.display = 'none';
+    if (rewardsArea) rewardsArea.style.display = 'none';
+  }
+
   updatePageData();
   updatePageUI();
-  populateFilters(); // Recalcula anos e coleções
-  updateCounts();    // Recalcula o cabeçalho
-  render();          // Desenha a tabela
+  populateFilters();
+  updateCounts();
+  render();
 }
 
 // ==========================================
@@ -118,7 +165,7 @@ function populateFilters() {
   const years = [...new Set(PAGE_DATA.map(r => r.year))].sort((a, b) => b - a);
   const selYear = document.getElementById('filter-year');
   if (selYear) {
-    selYear.innerHTML = '<option value="">Todos</option>'; // Limpa opções anteriores
+    selYear.innerHTML = '<option value="">Todos</option>';
     years.forEach(y => {
       if (!y) return;
       const opt = document.createElement('option');
@@ -139,9 +186,6 @@ function populateFilters() {
   }
 }
 
-// ==========================================
-// 5. OBTENÇÃO DE DADOS FILTRADOS
-// ==========================================
 function getFilteredData() {
   const searchInput = document.getElementById('filter-search');
   const yearInput = document.getElementById('filter-year');
@@ -153,7 +197,7 @@ function getFilteredData() {
   const sy = yearInput ? yearInput.value : '';
   const se = eraInput ? eraInput.value : '';
   const ss = seriesInput ? seriesInput.value : '';
-  
+
   const isCheckboxChecked = filterOwnedCheckbox ? filterOwnedCheckbox.checked : false;
   const so = (pageType === 'owned') || isCheckboxChecked;
 
@@ -162,7 +206,8 @@ function getFilteredData() {
     if (sq) {
       match = match && (
         (r.name && r.name.toLowerCase().includes(sq)) ||
-        (r.part && r.part.toLowerCase().includes(sq))
+        (r.part && r.part.toLowerCase().includes(sq)) ||
+        (r.series && r.series.toLowerCase().includes(sq))
       );
     }
     if (sy) match = match && String(r.year) === sy;
@@ -190,7 +235,7 @@ function getFilteredData() {
 }
 
 // ==========================================
-// 6. RENDERIZAÇÃO DA TABELA
+// 6. RENDERIZAÇÃO DA TABELA (HÍBRIDA E ADMIN)
 // ==========================================
 function render() {
   const fullData = getFilteredData();
@@ -246,12 +291,11 @@ function render() {
     if (emptyMsg) {
       emptyMsg.style.display = 'block';
       if (pageType === 'owned') {
-          emptyMsg.innerHTML = 'A sua coleção está vazia ou os filtros não encontraram nada.<br><a href="#" data-page="all" class="menu-item" style="color:var(--accent)">Ir para Mostrar Tudo</a> para adicionar carros.';
-          // Adiciona funcionalidade ao link criado dinamicamente
-          const emptyLink = emptyMsg.querySelector('a');
-          if(emptyLink) emptyLink.addEventListener('click', (e) => { e.preventDefault(); changePage('all'); document.getElementById('sidebar').classList.remove('open'); document.getElementById('sidebar-overlay').classList.remove('open'); });
+        emptyMsg.innerHTML = 'A sua coleção está vazia ou os filtros não encontraram nada.<br><a href="#" data-page="all" class="menu-item" style="color:var(--accent)">Ir para Mostrar Tudo</a> para adicionar carros.';
+        const emptyLink = emptyMsg.querySelector('a');
+        if (emptyLink) emptyLink.addEventListener('click', (e) => { e.preventDefault(); changePage('all'); document.getElementById('sidebar').classList.remove('open'); document.getElementById('sidebar-overlay').classList.remove('open'); });
       } else {
-          emptyMsg.textContent = 'Nenhum carro encontrado com esses filtros.';
+        emptyMsg.textContent = 'Nenhum carro encontrado com esses filtros.';
       }
     }
     return;
@@ -277,6 +321,31 @@ function render() {
     const qty = getQty(r);
     const repetidos = qty > 1 ? qty - 1 : 0;
 
+    // LÓGICA HÍBRIDA + MODO VENDEDOR: A edição é permitida se for conta "standalone" OU se você (Admin) estiver visualizando
+    const isEditingAllowed = isAdmin || targetRole !== 'cliente';
+    let controlesHTML = '';
+
+    if (isEditingAllowed) {
+      controlesHTML = `
+          <div style="display: flex; align-items: center; gap: 8px;">
+            <input class="qty-input" type="number" min="0" max="999" value="${qty}" style="width: 50px;">
+            <button class="btn-save" style="display: none; font-size: 11px; padding: 4px 8px; background: #3b82f6; color: white; border: none; border-radius: 4px; cursor: pointer; font-weight: 600;">Salvar</button>
+            <span class="rep-badge" style="font-size: 11px; color: ${repetidos > 0 ? '#ea580c' : '#9ca3af'}; font-weight: 600; background: ${repetidos > 0 ? '#ffedd5' : '#f3f4f6'}; padding: 3px 6px; border-radius: 4px; min-width: 22px; text-align: center; border: 1px solid ${repetidos > 0 ? '#fdba74' : '#e5e7eb'};">
+              +${repetidos}
+            </span>
+          </div>
+        `;
+    } else {
+      controlesHTML = `
+          <div style="display: flex; align-items: center; justify-content: center; gap: 8px;">
+            <span style="font-family: 'Bebas Neue', sans-serif; font-size: 22px; color: ${qty > 0 ? 'var(--yellow)' : 'var(--muted)'}; width: 30px; text-align: center;">${qty}</span>
+            <span class="rep-badge" style="font-size: 11px; color: ${repetidos > 0 ? '#ea580c' : '#9ca3af'}; font-weight: 600; background: ${repetidos > 0 ? '#ffedd5' : '#f3f4f6'}; padding: 3px 6px; border-radius: 4px; min-width: 22px; text-align: center; border: 1px solid ${repetidos > 0 ? '#fdba74' : '#e5e7eb'};">
+              +${repetidos}
+            </span>
+          </div>
+        `;
+    }
+
     row.innerHTML = `
       <td>${isNewYear ? `<span class="year-pill">${r.year}</span>` : ''}</td>
       <td style="padding:8px 12px">${imgCell}</td>
@@ -284,57 +353,8 @@ function render() {
       <td><span class="series-tag">${r.series}</span></td>
       <td><div class="color-dot"><span class="dot" style="background:${dot};box-shadow:0 0 0 1px rgba(255,255,255,0.15)"></span>${r.color}</div></td>
       <td><span class="part-code">${r.part}</span></td>
-      <td>
-        <div style="display: flex; align-items: center; gap: 8px;">
-          <input class="qty-input" type="number" min="0" max="999" value="${qty}" style="width: 50px;">
-          <button class="btn-save" style="display: none; font-size: 11px; padding: 4px 8px; background: #3b82f6; color: white; border: none; border-radius: 4px; cursor: pointer; font-weight: 600; box-shadow: 0 1px 2px rgba(0,0,0,0.1);">Salvar</button>
-          <span class="rep-badge" title="Carros Repetidos" style="font-size: 11px; color: ${repetidos > 0 ? '#ea580c' : '#9ca3af'}; font-weight: 600; background: ${repetidos > 0 ? '#ffedd5' : '#f3f4f6'}; padding: 3px 6px; border-radius: 4px; min-width: 22px; text-align: center; border: 1px solid ${repetidos > 0 ? '#fdba74' : '#e5e7eb'}; transition: all 0.2s;">
-            +${repetidos}
-          </span>
-        </div>
-      </td>
+      <td>${controlesHTML}</td>
     `;
-
-    const inputElement = row.querySelector('.qty-input');
-    const saveBtn = row.querySelector('.btn-save');
-    const repBadge = row.querySelector('.rep-badge');
-
-    inputElement.addEventListener('input', (e) => {
-      let newVal = parseInt(e.target.value) || 0;
-      if (newVal < 0) { newVal = 0; e.target.value = 0; }
-      if (newVal !== getQty(r)) {
-        saveBtn.style.display = 'block';
-      } else {
-        saveBtn.style.display = 'none';
-      }
-    });
-
-    saveBtn.addEventListener('click', () => {
-      let newVal = parseInt(inputElement.value) || 0;
-      saveData(r.id, newVal);
-
-      if (newVal > 0) row.classList.add('owned-row');
-      else row.classList.remove('owned-row');
-
-      const repCount = newVal > 1 ? newVal - 1 : 0;
-      repBadge.textContent = `+${repCount}`;
-      if (repCount > 0) {
-        repBadge.style.color = '#ea580c';
-        repBadge.style.background = '#ffedd5';
-        repBadge.style.borderColor = '#fdba74';
-      } else {
-        repBadge.style.color = '#9ca3af';
-        repBadge.style.background = '#f3f4f6';
-        repBadge.style.borderColor = '#e5e7eb';
-      }
-      saveBtn.style.display = 'none';
-      updateCounts();
-      
-      const filterOwnedCheckbox = document.getElementById('filter-owned-only');
-      if ((pageType === 'owned' || (filterOwnedCheckbox && filterOwnedCheckbox.checked)) && newVal === 0) {
-         render();
-      }
-    });
 
     const wrap = row.querySelector('.img-thumb-wrap');
     if (wrap && r.image) {
@@ -342,6 +362,50 @@ function render() {
     }
 
     tbody.appendChild(row);
+
+    // Ativa as funções de alteração na garagem apenas se for permitido (standalone ou Admin editando o cliente)
+    if (isEditingAllowed) {
+      const inputElement = row.querySelector('.qty-input');
+      const saveBtn = row.querySelector('.btn-save');
+      const repBadge = row.querySelector('.rep-badge');
+
+      inputElement.addEventListener('input', (e) => {
+        let newVal = parseInt(e.target.value) || 0;
+        if (newVal < 0) { newVal = 0; e.target.value = 0; }
+        if (newVal !== getQty(r)) {
+          saveBtn.style.display = 'block';
+        } else {
+          saveBtn.style.display = 'none';
+        }
+      });
+
+      saveBtn.addEventListener('click', () => {
+        let newVal = parseInt(inputElement.value) || 0;
+        saveData(r.id, newVal);
+
+        if (newVal > 0) row.classList.add('owned-row');
+        else row.classList.remove('owned-row');
+
+        const repCount = newVal > 1 ? newVal - 1 : 0;
+        repBadge.textContent = `+${repCount}`;
+        if (repCount > 0) {
+          repBadge.style.color = '#ea580c';
+          repBadge.style.background = '#ffedd5';
+          repBadge.style.borderColor = '#fdba74';
+        } else {
+          repBadge.style.color = '#9ca3af';
+          repBadge.style.background = '#f3f4f6';
+          repBadge.style.borderColor = '#e5e7eb';
+        }
+        saveBtn.style.display = 'none';
+        updateCounts();
+
+        const filterOwnedCheckbox = document.getElementById('filter-owned-only');
+        if ((pageType === 'owned' || (filterOwnedCheckbox && filterOwnedCheckbox.checked)) && newVal === 0) {
+          render();
+        }
+      });
+    }
   });
 
   window.currentFilteredData = fullData;
@@ -371,36 +435,58 @@ function updateCounts() {
   const misCountEl = document.getElementById('missing-count');
   const dupCountEl = document.getElementById('dup-count');
 
-  if(totCountEl) totCountEl.textContent = total;
-  if(ownCountEl) ownCountEl.textContent = owned;
-  if(misCountEl) misCountEl.textContent = missing;
-  if(dupCountEl) dupCountEl.textContent = dups;
+  if (totCountEl) totCountEl.textContent = total;
+  if (ownCountEl) ownCountEl.textContent = owned;
+  if (misCountEl) misCountEl.textContent = missing;
+  if (dupCountEl) dupCountEl.textContent = dups;
 }
 
 onAuthStateChanged(auth, async (user) => {
   if (user) {
     sessionUid = user.uid;
-    
-    // 1. Preenche o e-mail no painel
-    const emailEl = document.getElementById('user-email');
-    if(emailEl) emailEl.textContent = user.email;
 
-    // 2. VERIFICAÇÃO DE ADMINISTRADOR (Novo)
+    const emailEl = document.getElementById('user-email');
+    if (emailEl) emailEl.textContent = user.email;
+
     try {
       const userDoc = await getDoc(doc(db, 'users', user.uid));
       const menuAdminItem = document.getElementById('menu-admin-item');
-      
-      // Se o usuário existir e tiver o cargo de admin, exibe o botão
+
       if (userDoc.exists() && userDoc.data().role === 'admin') {
+        isAdmin = true;
         if (menuAdminItem) menuAdminItem.style.display = 'block';
+
+        // LÓGICA DO MODO VENDEDOR (ADMIN): Popula o seletor visual no cabeçalho
+        const adminSelector = document.getElementById('admin-client-selector');
+        const clientSelect = document.getElementById('client-select');
+
+        if (adminSelector && clientSelect) {
+          adminSelector.style.display = 'flex';
+
+          const usersSnap = await getDocs(collection(db, 'users'));
+          usersSnap.forEach(docSnap => {
+            if (docSnap.id !== user.uid) {
+              const opt = document.createElement('option');
+              opt.value = docSnap.id;
+              const uData = docSnap.data();
+              opt.textContent = `🛒 ${uData.name || uData.email}`;
+              clientSelect.appendChild(opt);
+            }
+          });
+
+          // Quando muda o cliente no dropdown, carrega a coleção daquela pessoa
+          clientSelect.addEventListener('change', async (e) => {
+            targetUid = e.target.value === 'ME' ? null : e.target.value;
+            await loadCollection();
+          });
+        }
       }
     } catch (error) {
       console.error("Erro ao verificar nível de acesso:", error);
     }
 
-    // 3. Carrega a coleção de carrinhos
     await loadCollection();
-    
+
   } else {
     window.location.href = 'index.html';
   }
@@ -421,17 +507,36 @@ if (btnLogoutMenu) {
 }
 
 async function loadCollection() {
-  if (!sessionUid) return;
+  const uidToLoad = targetUid || sessionUid;
+  if (!uidToLoad) return;
+
   try {
-    const dRef = doc(db, 'collections', sessionUid);
+    const dRef = doc(db, 'collections', uidToLoad);
     const snap = await getDoc(dRef);
     if (snap.exists()) {
       userCollection = snap.data().items || {};
+      userPoints = snap.data().points || 0;
+      userMissions = snap.data().missions || {};
+      userRewards = snap.data().rewards || [];
     } else {
       userCollection = {};
+      userPoints = 0;
+      userMissions = {};
+      userRewards = [];
     }
-    
-    // Inicia a aplicação na aba padrão
+
+    // NOVO: Vai à tabela de "users" descobrir qual é o cargo da conta que estamos a carregar
+    const uRef = doc(db, 'users', uidToLoad);
+    const uSnap = await getDoc(uRef);
+    if (uSnap.exists()) {
+      targetRole = uSnap.data().role || 'user';
+    } else {
+      targetRole = 'user';
+    }
+
+    const pointsEl = document.getElementById('user-points');
+    if (pointsEl) pointsEl.textContent = userPoints;
+
     changePage('all');
   } catch (err) {
     console.error("Erro load:", err);
@@ -445,9 +550,11 @@ async function saveData(carId, qty) {
 
   if (saveTimeout) clearTimeout(saveTimeout);
   saveTimeout = setTimeout(async () => {
-    if (!sessionUid) return;
+    const uidToSave = targetUid || sessionUid;
+    if (!uidToSave) return;
+
     try {
-      const dRef = doc(db, 'collections', sessionUid);
+      const dRef = doc(db, 'collections', uidToSave);
       await setDoc(dRef, { items: userCollection }, { merge: true });
     } catch (e) {
       console.error("Erro save:", e);
@@ -474,15 +581,15 @@ function closeLb() {
 }
 
 const lbCloseBtn = document.getElementById('lb-close-btn');
-if(lbCloseBtn) lbCloseBtn.addEventListener('click', closeLb);
+if (lbCloseBtn) lbCloseBtn.addEventListener('click', closeLb);
 
 const lbPrevBtn = document.getElementById('lb-prev');
-if(lbPrevBtn) {
+if (lbPrevBtn) {
   lbPrevBtn.addEventListener('click', () => { if (lbIndex > 0) openLb(lbIndex - 1); });
 }
 
 const lbNextBtn = document.getElementById('lb-next');
-if(lbNextBtn) {
+if (lbNextBtn) {
   lbNextBtn.addEventListener('click', () => { if (lbIndex < PAGE_DATA.length - 1) openLb(lbIndex + 1); });
 }
 
@@ -498,19 +605,17 @@ document.addEventListener('keydown', (e) => {
 // ==========================================
 // 10. INICIALIZAÇÃO E EVENTOS
 // ==========================================
-  
-// Eventos do Menu SPA
+
 document.querySelectorAll('.sidebar-menu a[data-page]').forEach(link => {
   link.addEventListener('click', (e) => {
     e.preventDefault();
     const targetPage = e.target.getAttribute('data-page');
     changePage(targetPage);
-    
-    // Fecha o menu no celular
+
     const sidebar = document.getElementById('sidebar');
     const overlay = document.getElementById('sidebar-overlay');
-    if(sidebar) sidebar.classList.remove('open'); 
-    if(overlay) overlay.classList.remove('open');
+    if (sidebar) sidebar.classList.remove('open');
+    if (overlay) overlay.classList.remove('open');
   });
 });
 
@@ -519,12 +624,12 @@ const sidebar = document.getElementById('sidebar');
 const overlay = document.getElementById('sidebar-overlay');
 const closeBtn = document.getElementById('close-sidebar');
 
-function openMenu() { if(sidebar) sidebar.classList.add('open'); if(overlay) overlay.classList.add('open'); }
-function closeMenu() { if(sidebar) sidebar.classList.remove('open'); if(overlay) overlay.classList.remove('open'); }
+function openMenu() { if (sidebar) sidebar.classList.add('open'); if (overlay) overlay.classList.add('open'); }
+function closeMenu() { if (sidebar) sidebar.classList.remove('open'); if (overlay) overlay.classList.remove('open'); }
 
-if(menuBtn) menuBtn.addEventListener('click', openMenu);
-if(closeBtn) closeBtn.addEventListener('click', closeMenu);
-if(overlay) overlay.addEventListener('click', closeMenu);
+if (menuBtn) menuBtn.addEventListener('click', openMenu);
+if (closeBtn) closeBtn.addEventListener('click', closeMenu);
+if (overlay) overlay.addEventListener('click', closeMenu);
 
 document.querySelectorAll('th[data-col]').forEach(th => {
   th.addEventListener('click', () => {
@@ -550,21 +655,21 @@ const eraInput = document.getElementById('filter-era');
 const seriesInput = document.getElementById('filter-series');
 const filterOwnedCheckbox = document.getElementById('filter-owned-only');
 
-if(searchInput) searchInput.addEventListener('input', () => { currentPage = 1; render(); });
-if(yearInput) yearInput.addEventListener('change', () => { currentPage = 1; render(); });
-if(eraInput) eraInput.addEventListener('change', () => { currentPage = 1; render(); });
-if(seriesInput) seriesInput.addEventListener('change', () => { currentPage = 1; render(); });
-if(filterOwnedCheckbox) filterOwnedCheckbox.addEventListener('change', () => { currentPage = 1; render(); });
+if (searchInput) searchInput.addEventListener('input', () => { currentPage = 1; render(); });
+if (yearInput) yearInput.addEventListener('change', () => { currentPage = 1; render(); });
+if (eraInput) eraInput.addEventListener('change', () => { currentPage = 1; render(); });
+if (seriesInput) seriesInput.addEventListener('change', () => { currentPage = 1; render(); });
+if (filterOwnedCheckbox) filterOwnedCheckbox.addEventListener('change', () => { currentPage = 1; render(); });
 
 const btnClear = document.getElementById('btn-clear');
-if(btnClear) {
+if (btnClear) {
   btnClear.addEventListener('click', () => {
     currentPage = 1;
-    if(searchInput) searchInput.value = '';
-    if(yearInput) yearInput.value = '';
-    if(eraInput) eraInput.value = '';
-    if(seriesInput) seriesInput.value = '';
-    if(filterOwnedCheckbox) filterOwnedCheckbox.checked = false;
+    if (searchInput) searchInput.value = '';
+    if (yearInput) yearInput.value = '';
+    if (eraInput) eraInput.value = '';
+    if (seriesInput) seriesInput.value = '';
+    if (filterOwnedCheckbox) filterOwnedCheckbox.checked = false;
     render();
   });
 }
@@ -595,6 +700,366 @@ if (btnNext) {
     if (currentPage < maxPages) {
       currentPage++;
       render();
+    }
+  });
+}
+
+// ==========================================
+// MOTOR DE MISSÕES E GAMIFICAÇÃO
+// ==========================================
+const LISTA_MISSOES = [
+  {
+    id: 'j-imports_2026',
+    ano: 2026,
+    serie: 'j-imports',
+    badge: 'Mestre Japonês 2026',
+    titulo: 'Série HW J-Imports (2026)',
+    descricao: 'Complete a coleção de miniaturas da série HW J-Imports lançados no ano de 2026.',
+    recompensa: 500,
+    fallbackTotal: 10
+  },
+  {
+    id: 'batman_2026',
+    ano: 2026,
+    serie: 'batman',
+    badge: 'Cavaleiro de Gotham',
+    titulo: 'Série Batman (2026)',
+    descricao: 'Complete a coleção de miniaturas do Batman lançadas no ano de 2026.',
+    recompensa: 300,
+    fallbackTotal: 5
+  },
+  {
+    id: 'exoticars',
+    ano: 2026,
+    serie: 'exoticars',
+    badge: 'Magnata do Asfalto',
+    titulo: 'Série Exoticars (2026)',
+    descricao: 'Reúna os hipercarros e supercarros mais exclusivos do mundo lançados em 2026.',
+    recompensa: 500,
+    fallbackTotal: 5
+  }
+];
+
+function renderMissions() {
+  const container = document.getElementById('missions-view');
+  if (!container) return;
+
+  let cardsHTML = '';
+
+  LISTA_MISSOES.forEach(missao => {
+    const carrosDaMissao = RAW.filter(r =>
+      r.series && r.series.toLowerCase().includes(missao.serie.toLowerCase()) &&
+      r.year === parseInt(missao.ano)
+    );
+
+    const totalTarget = carrosDaMissao.length > 0 ? carrosDaMissao.length : missao.fallbackTotal;
+    const carrosOwned = carrosDaMissao.filter(r => isOwned(r)).length;
+
+    const pct = Math.min(100, Math.round((carrosOwned / totalTarget) * 100));
+    const isComplete = carrosOwned >= totalTarget;
+    const isClaimed = userMissions[missao.id];
+
+    let btnHTML = '';
+    if (isClaimed) {
+      btnHTML = `<button disabled class="btn-mission claimed">✅ Recompensa Resgatada</button>`;
+    } else if (isComplete) {
+      btnHTML = `<button class="btn-mission claim" onclick="window.claimMission('${missao.id}', ${missao.recompensa})">🎁 Resgatar ${missao.recompensa} RPMs</button>`;
+    } else {
+      btnHTML = `<button class="btn-mission search" onclick="
+        document.querySelector('[data-page=\\'all\\']').click(); 
+        setTimeout(() => { 
+          const searchInput = document.getElementById('filter-search');
+          const yearInput = document.getElementById('filter-year');
+          
+          if (searchInput) {
+              searchInput.value = '${missao.serie}';
+              searchInput.dispatchEvent(new Event('input')); 
+          }
+          if (yearInput) {
+              const opt = Array.from(yearInput.options).find(o => o.value == '${missao.ano}');
+              if (opt) {
+                  yearInput.value = '${missao.ano}';
+                  yearInput.dispatchEvent(new Event('change'));
+              }
+          }
+        }, 150);
+      ">Procurar Modelos ${missao.ano}</button>`;
+    }
+
+    cardsHTML += `
+      <div class="mission-card">
+          <div class="mission-badge">${missao.badge}</div>
+          <h3>${missao.titulo}</h3>
+          <p>${missao.descricao}</p>
+          
+          <div class="progress-wrap" style="margin-top: auto;">
+              <div class="progress-stats">
+                  <span>Seu Progresso</span> 
+                  <span style="color: ${isComplete ? 'var(--green)' : 'var(--yellow)'}">${carrosOwned} / ${totalTarget}</span>
+              </div>
+              <div class="progress-bg"><div class="progress-fill" style="width: ${pct}%"></div></div>
+          </div>
+          
+          <div style="margin-top: 16px;">
+            ${btnHTML}
+          </div>
+      </div>
+    `;
+  });
+
+  container.innerHTML = `
+    <div class="mission-header">
+        <h2>Desafios da Coleção</h2>
+        <p>Complete as séries listadas abaixo comprando pela loja e ganhe RPMs para trocar por frete grátis, protetores e miniaturas soltas.</p>
+    </div>
+    <div class="mission-grid">
+        ${cardsHTML}
+    </div>
+  `;
+}
+
+window.claimMission = async function (missionId, rewardPoints) {
+  if (!sessionUid) return;
+
+  userPoints += rewardPoints;
+  userMissions[missionId] = true;
+
+  const pointsEl = document.getElementById('user-points');
+  if (pointsEl) pointsEl.textContent = userPoints;
+
+  renderMissions();
+
+  try {
+    await setDoc(doc(db, 'collections', sessionUid), {
+      points: userPoints,
+      missions: userMissions
+    }, { merge: true });
+    showModal('success', { title: "Missão Concluída!", code: `+${rewardPoints} RPMs` });
+  } catch (e) {
+    console.error("Erro ao resgatar missão:", e);
+    showModal('error', { text: "Erro ao validar pontos com o servidor." });
+  }
+}
+
+// ==========================================
+// LOJA DE RESGATE (REWARDS)
+// ==========================================
+const LISTA_RECOMPENSAS = [
+  {
+    id: 'frete_gratis',
+    titulo: 'Frete Grátis',
+    desc: 'Cupom de frete grátis para sua próxima compra enviada via PAC.',
+    custo: 1000,
+    icone: '📦'
+  },
+  {
+    id: 'protetor_blister',
+    titulo: 'Kit 5 Protetores',
+    desc: 'Kit com 5 protetores de blister em acrílico transparente para proteger sua coleção.',
+    custo: 800,
+    icone: '🛡️'
+  },
+  {
+    id: 'mainline_surpresa',
+    titulo: 'Mainline Loose Surpresa',
+    desc: 'Ganhe um carro Mainline surpresa sem cartela (loose) no seu próximo pedido.',
+    custo: 500,
+    icone: '🚗'
+  },
+  {
+    id: 'desconto_10',
+    titulo: '10% de Desconto',
+    desc: 'Desconto de 10% aplicado em qualquer miniatura da linha Premium.',
+    custo: 1500,
+    icone: '🎟️'
+  }
+];
+
+function renderRewards() {
+  const container = document.getElementById('rewards-view');
+  if (!container) return;
+
+  let cardsHTML = '';
+
+  LISTA_RECOMPENSAS.forEach(item => {
+    const canAfford = userPoints >= item.custo;
+    cardsHTML += `
+      <div class="reward-card">
+          <div class="reward-icon">${item.icone}</div>
+          <h3>${item.titulo}</h3>
+          <p>${item.desc}</p>
+          <div class="reward-cost">🪙 ${item.custo} RPMs</div>
+          <button class="btn-redeem" ${!canAfford ? 'disabled' : ''} onclick="window.redeemReward('${item.id}', ${item.custo}, '${item.titulo}')">
+            ${canAfford ? 'Resgatar Prêmio' : 'Pontos Insuficientes'}
+          </button>
+      </div>
+    `;
+  });
+
+  let historicoHTML = '';
+  if (userRewards && userRewards.length > 0) {
+    let linhasTabela = '';
+
+    userRewards.forEach(resgate => {
+      linhasTabela += `
+        <tr style="border-bottom: 1px solid var(--border);">
+          <td style="padding: 12px; font-family: 'Barlow Condensed', sans-serif; font-weight: 600; color: #fff;">${resgate.data}</td>
+          <td style="padding: 12px; color: var(--yellow); font-weight: 500; font-size: 14px;">${resgate.titulo}</td>
+          <td style="padding: 12px;"><span style="font-family: monospace; background: var(--surface2); padding: 4px 8px; border-radius: 4px; border: 1px solid var(--border); color: #fff; font-size: 13px; letter-spacing: 1px;">${resgate.codigo}</span></td>
+          <td style="padding: 12px;"><span style="background: rgba(34, 197, 94, 0.15); color: var(--green); border: 1px solid rgba(34, 197, 94, 0.3); padding: 3px 8px; border-radius: 4px; font-size: 11px; font-weight: 700; text-transform: uppercase;">${resgate.status}</span></td>
+        </tr>
+      `;
+    });
+
+    historicoHTML = `
+      <div style="margin-top: 40px; background: var(--surface); border: 1px solid var(--border); border-radius: 12px; padding: 24px; box-shadow: 0 4px 15px rgba(0,0,0,0.3);">
+        <h3 style="font-family: 'Bebas Neue', sans-serif; font-size: 26px; color: #fff; letter-spacing: 1px; margin-bottom: 16px; display: flex; align-items: center; gap: 8px;">🎟️ Meus Cupons Ativos</h3>
+        <div style="overflow-x: auto;">
+          <table style="width: 100%; border-collapse: collapse; text-align: left; font-size: 13px;">
+            <thead>
+              <tr style="border-bottom: 2px solid var(--border);">
+                <th style="padding: 12px; color: var(--muted); font-size: 11px; letter-spacing: 1px; text-transform: uppercase; cursor: default;">Data</th>
+                <th style="padding: 12px; color: var(--muted); font-size: 11px; letter-spacing: 1px; text-transform: uppercase; cursor: default;">Prêmio</th>
+                <th style="padding: 12px; color: var(--muted); font-size: 11px; letter-spacing: 1px; text-transform: uppercase; cursor: default;">Código do Cupom</th>
+                <th style="padding: 12px; color: var(--muted); font-size: 11px; letter-spacing: 1px; text-transform: uppercase; cursor: default;">Status</th>
+              </tr>
+            </thead>
+            <tbody>
+              ${linhasTabela}
+            </tbody>
+          </table>
+        </div>
+      </div>
+    `;
+  }
+
+  container.innerHTML = `
+    <div class="mission-header">
+        <h2>Troque seus Pontos</h2>
+        <p>Use seus RPMs acumulados nas missões para resgatar prêmios exclusivos. <br>Seu saldo atual é de <strong style="color: var(--yellow); font-size: 18px;">🪙 ${userPoints} RPMs</strong>.</p>
+    </div>
+    <div class="reward-grid">
+        ${cardsHTML}
+    </div>
+    ${historicoHTML}
+  `;
+}
+
+// ==========================================
+// SISTEMA DE MODAIS (POP-UPS)
+// ==========================================
+function showModal(type, options) {
+  const existingModal = document.getElementById('hw-custom-modal');
+  if (existingModal) existingModal.remove();
+
+  const modal = document.createElement('div');
+  modal.id = 'hw-custom-modal';
+  modal.className = 'custom-modal-overlay';
+
+  let innerHTML = '';
+
+  if (type === 'error') {
+    innerHTML = `
+      <div class="custom-modal-box">
+        <div class="custom-modal-icon">⚠️</div>
+        <div class="custom-modal-title" style="color: var(--red);">Oops!</div>
+        <div class="custom-modal-text">${options.text}</div>
+        <div class="custom-modal-actions">
+          <button class="btn-modal cancel" onclick="document.getElementById('hw-custom-modal').remove()">Fechar</button>
+        </div>
+      </div>
+    `;
+  }
+  else if (type === 'confirm') {
+    innerHTML = `
+      <div class="custom-modal-box">
+        <div class="custom-modal-icon">❓</div>
+        <div class="custom-modal-title">Confirmar Resgate</div>
+        <div class="custom-modal-text">Deseja gastar <b>${options.cost} RPMs</b> para resgatar o prêmio "<b style="color:#fff">${options.title}</b>"?</div>
+        <div class="custom-modal-actions">
+          <button class="btn-modal cancel" onclick="document.getElementById('hw-custom-modal').remove()">Cancelar</button>
+          <button class="btn-modal confirm" id="btn-modal-confirm">Sim, Resgatar</button>
+        </div>
+      </div>
+    `;
+  }
+  else if (type === 'success') {
+    const msgWpp = encodeURIComponent(`Fala mestre! Acabei de resgatar o prêmio "${options.title}" lá no site. Meu cupom é: ${options.code}`);
+
+    innerHTML = `
+      <div class="custom-modal-box">
+        <div class="custom-modal-icon">🎉</div>
+        <div class="custom-modal-title" style="color: var(--green);">SUCESSO!</div>
+        <div class="custom-modal-text">O prêmio "<b>${options.title}</b>" é seu! Salve o código abaixo:</div>
+        <div class="custom-modal-code">${options.code}</div>
+        <div class="custom-modal-actions">
+          <a href="https://wa.me/5548991348421?text=${msgWpp}" target="_blank" class="btn-modal whatsapp">📱 Enviar no Whats</a>
+          <button class="btn-modal cancel" onclick="document.getElementById('hw-custom-modal').remove()">Fechar</button>
+        </div>
+      </div>
+    `;
+  }
+
+  modal.innerHTML = innerHTML;
+  document.body.appendChild(modal);
+
+  if (type === 'confirm') {
+    document.getElementById('btn-modal-confirm').addEventListener('click', () => {
+      modal.remove();
+      if (options.onConfirm) options.onConfirm();
+    });
+  }
+}
+
+window.redeemReward = function (rewardId, cost, title) {
+  if (!sessionUid) return;
+
+  if (userPoints < cost) {
+    showModal('error', { text: "Você não tem RPMs suficientes na garagem para resgatar este item." });
+    return;
+  }
+
+  showModal('confirm', {
+    cost: cost,
+    title: title,
+    onConfirm: async () => {
+
+      userPoints -= cost;
+
+      const randomCode = Math.random().toString(36).substring(2, 7).toUpperCase();
+      const couponCode = `HW-${randomCode}`;
+
+      const novoCupom = {
+        id: rewardId,
+        titulo: title,
+        data: new Date().toLocaleDateString('pt-BR'),
+        codigo: couponCode,
+        status: 'Disponível'
+      };
+
+      userRewards.unshift(novoCupom);
+
+      const pointsEl = document.getElementById('user-points');
+      if (pointsEl) pointsEl.textContent = userPoints;
+      renderRewards();
+
+      try {
+        await setDoc(doc(db, 'collections', sessionUid), {
+          points: userPoints,
+          rewards: userRewards
+        }, { merge: true });
+
+        showModal('success', { title: title, code: couponCode });
+
+      } catch (e) {
+        console.error("Erro ao salvar resgate:", e);
+        showModal('error', { text: "Houve uma falha de conexão com o servidor. Seus pontos foram devolvidos." });
+
+        userPoints += cost;
+        userRewards.shift();
+        if (pointsEl) pointsEl.textContent = userPoints;
+        renderRewards();
+      }
     }
   });
 }
