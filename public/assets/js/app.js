@@ -456,6 +456,7 @@ onAuthStateChanged(auth, async (user) => {
 
       if (userDoc.exists()) {
         const userRole = userDoc.data().role;
+        const myLojaId = userDoc.data().lojaId || ''; // Puxa a loja logada
 
         // Define as flags com base no cargo
         if (userRole === 'admin') isAdmin = true;
@@ -465,7 +466,7 @@ onAuthStateChanged(auth, async (user) => {
         if (isAdmin && menuAdminItem) {
           menuAdminItem.style.display = 'block';
         } else if (menuAdminItem) {
-          menuAdminItem.style.display = 'none'; // Força a ocultação para gerentes e clientes
+          menuAdminItem.style.display = 'none'; // Força a ocultação
         }
 
         // 2. MODO VENDEDOR: Liberado para Admin E Gerente
@@ -479,8 +480,11 @@ onAuthStateChanged(auth, async (user) => {
           usersSnap.forEach(docSnap => {
             const uData = docSnap.data();
 
-            // O Modo Vendedor só lista os clientes VIP
-            if (docSnap.id !== user.uid && uData.role === 'cliente') {
+            // REGRA MULTI-LOJA: Admin vê todos. Gerente só vê sua loja.
+            const isMyClient = isAdmin || (isManager && uData.lojaId === myLojaId);
+
+            // O Modo Vendedor só lista os clientes VIP daquela loja
+            if (docSnap.id !== user.uid && uData.role === 'cliente' && isMyClient) {
               const opt = document.createElement('option');
               opt.value = docSnap.id;
               opt.textContent = `🛒 ${uData.name || uData.email}`;
@@ -827,14 +831,14 @@ function renderMissions() {
       btnHTML = `<button class="btn-mission claim" onclick="window.claimMission('${missao.id}', ${missao.recompensa})">🎁 Resgatar ${missao.recompensa} RPMs</button>`;
     } else {
       btnHTML = `<button class="btn-mission search" onclick="
-        document.querySelector('[data-page=\\'all\\']').click(); 
-        setTimeout(() => { 
+        document.querySelector('[data-page=\\'all\\']').click();
+        setTimeout(() => {
           const searchInput = document.getElementById('filter-search');
           const yearInput = document.getElementById('filter-year');
-          
+
           if (searchInput) {
               searchInput.value = '${missao.serie}';
-              searchInput.dispatchEvent(new Event('input')); 
+              searchInput.dispatchEvent(new Event('input'));
           }
           if (yearInput) {
               const opt = Array.from(yearInput.options).find(o => o.value == '${missao.ano}');
@@ -852,15 +856,15 @@ function renderMissions() {
           <div class="mission-badge">${missao.badge}</div>
           <h3>${missao.titulo}</h3>
           <p>${missao.descricao}</p>
-          
+
           <div class="progress-wrap" style="margin-top: auto;">
               <div class="progress-stats">
-                  <span>Seu Progresso</span> 
+                  <span>Seu Progresso</span>
                   <span style="color: ${isComplete ? 'var(--green)' : 'var(--yellow)'}">${carrosOwned} / ${totalTarget}</span>
               </div>
               <div class="progress-bg"><div class="progress-fill" style="width: ${pct}%"></div></div>
           </div>
-          
+
           <div style="margin-top: 16px;">
             ${btnHTML}
           </div>
@@ -1224,14 +1228,13 @@ async function addHistoryEntry(uid, desc, amount, type) {
       date: new Date().toLocaleDateString('pt-BR'),
       desc: desc,
       amount: amount,
-      type: type 
+      type: type
     });
 
     await setDoc(ref, { history: history }, { merge: true });
-    
-    // Opcional: Atualizar a variável local para o extrato aparecer na hora
+
     userHistory = history;
-    renderRewards(); 
+    if (pageType === 'rewards') renderRewards();
   } catch (e) {
     console.error("Erro ao registrar histórico:", e);
   }

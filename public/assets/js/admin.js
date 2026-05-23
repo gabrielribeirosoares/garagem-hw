@@ -13,9 +13,8 @@ const editPhone = document.getElementById('edit-phone');
 const editRole = document.getElementById('edit-role');
 const btnCloseModal = document.getElementById('btn-close-modal');
 
-
-
 let allUsersCache = [];
+let currentTargetUid = null;
 
 const idsGerados = new Set();
 RAW.forEach((r) => {
@@ -33,19 +32,21 @@ RAW.forEach((r) => {
 });
 
 // =========================================
-// 1. SEGURANÇA: Verifica se o usuário é realmente Admin
+// 1. SEGURANÇA E ACESSO
 // =========================================
 onAuthStateChanged(auth, async (user) => {
   if (user) {
     try {
       const userDoc = await getDoc(doc(db, 'users', user.uid));
-      if (userDoc.exists() && userDoc.data().role === 'admin') {
+      const role = userDoc.exists() ? userDoc.data().role : 'user';
+      // Permite Admin e Gerente acessarem a tela
+      if (role === 'admin' || role === 'gerente') {
         loadUsersList();
       } else {
         window.location.href = 'app.html';
       }
     } catch (err) {
-      console.error("Erro na validação de Admin:", err);
+      console.error("Erro na validação de acesso:", err);
       window.location.href = 'app.html';
     }
   } else {
@@ -58,8 +59,15 @@ onAuthStateChanged(auth, async (user) => {
 // =========================================
 async function loadUsersList() {
   try {
-    const querySnapshot = await getDocs(collection(db, 'users'));
     if (!usersTbody) return;
+
+    // Busca dados de quem está logado para o filtro Multi-lojas
+    const myUid = auth.currentUser.uid;
+    const myDoc = await getDoc(doc(db, 'users', myUid));
+    const myRole = myDoc.exists() ? myDoc.data().role : 'user';
+    const myLojaId = myDoc.exists() ? (myDoc.data().lojaId || '') : '';
+
+    const querySnapshot = await getDocs(collection(db, 'users'));
 
     usersTbody.innerHTML = '';
     allUsersCache = [];
@@ -67,6 +75,12 @@ async function loadUsersList() {
     querySnapshot.forEach((docSnap) => {
       const userData = docSnap.data();
       userData.uid = docSnap.id;
+
+      // FILTRO DE MULTI-LOJAS: Esconde clientes de outras lojas se for Gerente
+      if (myRole === 'gerente' && userData.lojaId !== myLojaId) {
+        return;
+      }
+
       allUsersCache.push(userData);
 
       // Define o nome e a cor do cargo na tabela
@@ -84,16 +98,21 @@ async function loadUsersList() {
         roleColor = '#3b82f6'; // Azul
       }
 
+      // CORREÇÃO DO TELEFONE (Ignora os zeros antigos)
+      const phoneTxt = (userData.phone && userData.phone !== '(00) 00000-0000') ? userData.phone : 'Sem Telefone';
+
       const tr = document.createElement('tr');
       tr.innerHTML = `
         <td data-label="Nome">${userData.name || 'Sem Nome'}</td>
         <td data-label="E-mail">${userData.email || 'Sem E-mail'}</td>
-        <td data-label="Telefone">${(userData.phone && userData.phone !== '(00) 00000-0000') ? userData.phone : 'Sem Telefone'}</td>
+        <td data-label="Telefone">${phoneTxt}</td>
         <td data-label="Nascimento">${userData.birthdate || 'Não informada'}</td>
         <td data-label="Cargo"><strong style="color: ${roleColor}">${roleName}</strong></td>
         <td data-label="Ações">
+          <button class="btn-manage-rifa" data-id="${userData.uid}" data-name="${userData.name || 'Usuário'}" style="background: rgba(250, 204, 21, 0.15); color: var(--yellow); border: 1px solid var(--yellow); padding: 5px 10px; border-radius: 4px; cursor: pointer; margin-right: 8px;">🎟️ Rifas</button>
+
           <button class="btn-manage-cars" data-id="${userData.uid}" data-name="${userData.name || 'Usuário'}" style="background: rgba(34, 197, 94, 0.2); color: var(--green); border: 1px solid var(--green); padding: 5px 10px; border-radius: 4px; cursor: pointer; margin-right: 8px;">🚗 Garagem</button>
-          
+
           <button class="btn-edit" data-id="${userData.uid}">Editar</button>
           <button class="btn-delete" data-id="${userData.uid}" data-name="${userData.name || 'Este usuário'}">Excluir</button>
         </td>
@@ -155,9 +174,12 @@ function openEditModal(uid) {
   if (editUid && editName && editPhone && editRole) {
     editUid.value = userSelected.uid;
     editName.value = userSelected.name || '';
-    // Se o telefone for o padrão de zeros ou inválido, deixa o campo em branco para digitação
     editPhone.value = (userSelected.phone && userSelected.phone !== '(00) 00000-0000') ? userSelected.phone : '';
     editRole.value = userSelected.role || 'user';
+
+    // Preenche o ID da loja se o campo existir no HTML
+    const editLojaId = document.getElementById('edit-lojaId');
+    if (editLojaId) editLojaId.value = userSelected.lojaId || '';
   }
 
   if (editModal) editModal.style.display = 'flex';
@@ -173,11 +195,15 @@ if (editForm) {
   editForm.addEventListener('submit', async (e) => {
     e.preventDefault();
     const uid = editUid.value;
+    const editLojaId = document.getElementById('edit-lojaId');
+
     const updatedData = {
       name: editName.value.trim(),
       phone: editPhone.value.trim(),
-      role: editRole.value
+      role: editRole.value,
+      lojaId: editLojaId ? editLojaId.value.trim() : ''
     };
+
     try {
       await setDoc(doc(db, 'users', uid), updatedData, { merge: true });
       if (editModal) editModal.style.display = 'none';
@@ -189,10 +215,10 @@ if (editForm) {
   });
 }
 
-// Máscara do Telefone corrigida para o Modal (admin.js)
+// Máscara do Telefone corrigida para o Modal
 if (editPhone) {
   editPhone.addEventListener('input', (e) => {
-    let value = e.target.value.replace(/\D/g, ''); // Remove tudo o que não for número
+    let value = e.target.value.replace(/\D/g, '');
 
     if (value.length === 0) {
       e.target.value = '';
@@ -201,7 +227,6 @@ if (editPhone) {
 
     if (value.length > 11) value = value.slice(0, 11);
 
-    // Aplica a máscara dinamicamente conforme o usuário digita
     if (value.length > 6) {
       e.target.value = `(${value.slice(0, 2)}) ${value.slice(2, 7)}-${value.slice(7)}`;
     } else if (value.length > 2) {
@@ -213,16 +238,13 @@ if (editPhone) {
 }
 
 // =========================================
-// 3. VALIDADOR DE CUPONS VIP (Novo)
+// 3. VALIDADOR DE CUPONS VIP
 // =========================================
-
 window.validarCupom = async function () {
   const inputElement = document.getElementById('cupom-input');
   const resultDiv = document.getElementById('cupom-result');
 
-  // Trava de segurança caso o HTML do validador não esteja na tela
   if (!inputElement || !resultDiv) return;
-
   const codigoInput = inputElement.value.toUpperCase().trim();
 
   if (!codigoInput) {
@@ -233,16 +255,13 @@ window.validarCupom = async function () {
   resultDiv.innerHTML = '<p style="color: var(--muted);">⏳ Buscando no banco de dados...</p>';
 
   try {
-    // Varre a coleção inteira de usuários
     const querySnapshot = await getDocs(collection(db, "collections"));
-
     let foundDocId = null;
     let foundData = null;
     let couponIndex = -1;
 
     querySnapshot.forEach((documento) => {
       const data = documento.data();
-      // Se o usuário tiver um histórico de resgates, procura o código lá dentro
       if (data.rewards) {
         const idx = data.rewards.findIndex(r => r.codigo === codigoInput);
         if (idx !== -1) {
@@ -253,48 +272,40 @@ window.validarCupom = async function () {
       }
     });
 
-    // Caso 1: Cupom não existe
     if (!foundDocId) {
       resultDiv.innerHTML = `
-                <div style="background: rgba(232, 0, 30, 0.1); border: 1px solid var(--red); padding: 16px; border-radius: 8px; margin-top: 20px;">
-                    <h3 style="color: var(--red); margin-bottom: 4px; font-family: 'Bebas Neue', sans-serif; font-size: 24px; letter-spacing: 1px;">❌ Cupom Inválido</h3>
-                    <p style="font-size: 14px; color: #ccc;">Este código não foi encontrado no sistema.</p>
-                </div>
-            `;
+        <div style="background: rgba(232, 0, 30, 0.1); border: 1px solid var(--red); padding: 16px; border-radius: 8px; margin-top: 20px;">
+            <h3 style="color: var(--red); margin-bottom: 4px; font-family: 'Bebas Neue', sans-serif; font-size: 24px; letter-spacing: 1px;">❌ Cupom Inválido</h3>
+            <p style="font-size: 14px; color: #ccc;">Este código não foi encontrado no sistema.</p>
+        </div>
+      `;
       return;
     }
 
     const cupom = foundData.rewards[couponIndex];
 
-    // Caso 2: Cupom já foi utilizado
     if (cupom.status === 'Utilizado') {
       resultDiv.innerHTML = `
-                <div style="background: rgba(255, 255, 255, 0.05); border: 1px solid #555; padding: 16px; border-radius: 8px; margin-top: 20px;">
-                    <h3 style="color: #ccc; margin-bottom: 4px; font-family: 'Bebas Neue', sans-serif; font-size: 24px; letter-spacing: 1px;">⚠️ Cupom já utilizado</h3>
-                    <p style="font-size: 14px; color: #aaa;">Prêmio: <b>${cupom.titulo}</b></p>
-                    <p style="font-size: 14px; color: #aaa;">Data do resgate: ${cupom.data}</p>
-                    <p style="font-size: 12px; color: var(--red); margin-top: 10px;">Atenção: Não libere o prêmio. Este código já teve baixa no sistema.</p>
-                </div>
-            `;
-    }
-    // Caso 3: Cupom Válido e pronto para uso
-    else {
+        <div style="background: rgba(255, 255, 255, 0.05); border: 1px solid #555; padding: 16px; border-radius: 8px; margin-top: 20px;">
+            <h3 style="color: #ccc; margin-bottom: 4px; font-family: 'Bebas Neue', sans-serif; font-size: 24px; letter-spacing: 1px;">⚠️ Cupom já utilizado</h3>
+            <p style="font-size: 14px; color: #aaa;">Prêmio: <b>${cupom.titulo}</b></p>
+            <p style="font-size: 14px; color: #aaa;">Data do resgate: ${cupom.data}</p>
+            <p style="font-size: 12px; color: var(--red); margin-top: 10px;">Atenção: Não libere o prêmio. Este código já teve baixa no sistema.</p>
+        </div>
+      `;
+    } else {
       resultDiv.innerHTML = `
-                <div style="background: rgba(34, 197, 94, 0.1); border: 1px solid var(--green); padding: 16px; border-radius: 8px; margin-top: 20px;">
-                    <h3 style="color: var(--green); margin-bottom: 4px; font-family: 'Bebas Neue', sans-serif; font-size: 24px; letter-spacing: 1px;">✅ Cupom Válido e Disponível!</h3>
-                    <p style="font-size: 14px; color: #fff;">Prêmio: <b>${cupom.titulo}</b></p>
-                    <p style="font-size: 14px; color: #ccc; margin-bottom: 15px;">Data do resgate: ${cupom.data}</p>
-                    
-                    <button onclick="marcarComoUtilizado('${foundDocId}', ${couponIndex})" style="background: var(--green); color: black; font-family: 'Bebas Neue', sans-serif; font-size: 20px; padding: 8px 16px; border: none; border-radius: 4px; cursor: pointer; width: 100%;">
-                        Dar Baixa (Marcar como Utilizado)
-                    </button>
-                </div>
-            `;
-
-      // Salva os dados temporariamente para a próxima função
+        <div style="background: rgba(34, 197, 94, 0.1); border: 1px solid var(--green); padding: 16px; border-radius: 8px; margin-top: 20px;">
+            <h3 style="color: var(--green); margin-bottom: 4px; font-family: 'Bebas Neue', sans-serif; font-size: 24px; letter-spacing: 1px;">✅ Cupom Válido e Disponível!</h3>
+            <p style="font-size: 14px; color: #fff;">Prêmio: <b>${cupom.titulo}</b></p>
+            <p style="font-size: 14px; color: #ccc; margin-bottom: 15px;">Data do resgate: ${cupom.data}</p>
+            <button onclick="marcarComoUtilizado('${foundDocId}', ${couponIndex})" style="background: var(--green); color: black; font-family: 'Bebas Neue', sans-serif; font-size: 20px; padding: 8px 16px; border: none; border-radius: 4px; cursor: pointer; width: 100%;">
+                Dar Baixa (Marcar como Utilizado)
+            </button>
+        </div>
+      `;
       window.currentAdminData = foundData;
     }
-
   } catch (error) {
     console.error("Erro ao validar:", error);
     resultDiv.innerHTML = '<p style="color: var(--red);">Erro de conexão com o Firebase.</p>';
@@ -303,24 +314,17 @@ window.validarCupom = async function () {
 
 window.marcarComoUtilizado = async function (docId, index) {
   const data = window.currentAdminData;
-
-  // Altera o status localmente
   data.rewards[index].status = 'Utilizado';
 
   try {
-    // Envia a lista atualizada de volta para o Firebase
-    await setDoc(doc(db, 'collections', docId), {
-      rewards: data.rewards
-    }, { merge: true });
-
+    await setDoc(doc(db, 'collections', docId), { rewards: data.rewards }, { merge: true });
     document.getElementById('cupom-result').innerHTML = `
-            <div style="background: rgba(255, 255, 255, 0.05); border: 1px solid #555; padding: 16px; border-radius: 8px; text-align: center; margin-top: 20px;">
-                <h3 style="color: #fff; font-family: 'Bebas Neue', sans-serif; font-size: 22px; letter-spacing: 1px;">BAIXA CONCLUÍDA!</h3>
-                <p style="font-size: 14px; color: var(--green);">O cupom foi invalidado com sucesso. Pode enviar o prêmio!</p>
-            </div>
-        `;
+        <div style="background: rgba(255, 255, 255, 0.05); border: 1px solid #555; padding: 16px; border-radius: 8px; text-align: center; margin-top: 20px;">
+            <h3 style="color: #fff; font-family: 'Bebas Neue', sans-serif; font-size: 22px; letter-spacing: 1px;">BAIXA CONCLUÍDA!</h3>
+            <p style="font-size: 14px; color: var(--green);">O cupom foi invalidado com sucesso. Pode enviar o prêmio!</p>
+        </div>
+    `;
     document.getElementById('cupom-input').value = '';
-
   } catch (e) {
     console.error("Erro ao atualizar o cupom:", e);
     alert('Erro ao comunicar com o servidor. Tente novamente.');
@@ -328,22 +332,79 @@ window.marcarComoUtilizado = async function (docId, index) {
 };
 
 // =========================================
-// SISTEMA DE INJEÇÃO DE CARROS (GARAGEM DO CLIENTE)
+// SISTEMA DE RIFAS (VIA PAINEL)
 // =========================================
-let currentTargetUid = null;
+if (usersTbody) {
+  usersTbody.addEventListener('click', (e) => {
+    if (e.target.classList.contains('btn-manage-rifa')) {
+      currentTargetUid = e.target.getAttribute('data-id');
+      const nameEl = document.getElementById('rifa-user-name');
+      if (nameEl) nameEl.textContent = e.target.getAttribute('data-name');
 
-// Preenche o Datalist com todos os carros da base RAW
+      const qtyInput = document.getElementById('rifa-qty-input');
+      if (qtyInput) qtyInput.value = 1;
+
+      const modal = document.getElementById('rifa-modal');
+      if (modal) modal.style.display = 'flex';
+    }
+  });
+}
+
+const btnSaveRifa = document.getElementById('btn-save-rifa');
+if (btnSaveRifa) {
+  btnSaveRifa.addEventListener('click', async () => {
+    if (!currentTargetUid) return;
+    const qty = parseInt(document.getElementById('rifa-qty-input').value) || 0;
+    const pts = parseInt(document.getElementById('rifa-points-per-num').value) || 0;
+
+    if (qty <= 0 || pts <= 0) return;
+
+    btnSaveRifa.textContent = "Salvando...";
+    btnSaveRifa.disabled = true;
+
+    try {
+      const uRef = doc(db, 'collections', currentTargetUid);
+      const snap = await getDoc(uRef);
+      const currentData = snap.exists() ? snap.data() : { history: [] };
+      const currentPts = currentData.points || 0;
+      const history = currentData.history || [];
+
+      const ganhou = qty * pts;
+      const newTotal = currentPts + ganhou;
+
+      history.unshift({
+        date: new Date().toLocaleDateString('pt-BR'),
+        desc: "Lançamento de Rifa (Painel)",
+        amount: ganhou,
+        type: "earning"
+      });
+
+      await setDoc(uRef, { points: newTotal, history: history }, { merge: true });
+      alert(`+${ganhou} RPMs creditados na conta!`);
+
+      document.getElementById('rifa-modal').style.display = 'none';
+      btnSaveRifa.textContent = "🪙 Creditar Pontos";
+      btnSaveRifa.disabled = false;
+    } catch (error) {
+      alert("Erro ao creditar pontos.");
+      btnSaveRifa.textContent = "🪙 Creditar Pontos";
+      btnSaveRifa.disabled = false;
+    }
+  });
+}
+
+// =========================================
+// SISTEMA DE INJEÇÃO DE CARROS
+// =========================================
 const carDatalist = document.getElementById('car-datalist');
 if (carDatalist) {
   let options = '';
   RAW.forEach(car => {
-    // Formato visual amigável, mas esconde o ID no final para o script resgatar
     options += `<option value="${car.year} | ${car.name} | ${car.series} | ${car.color} [ID:${car.id}]"></option>`;
   });
   carDatalist.innerHTML = options;
 }
 
-// Ouvinte de clique no botão "🚗 Garagem" da tabela
 if (usersTbody) {
   usersTbody.addEventListener('click', async (e) => {
     if (e.target.classList.contains('btn-manage-cars')) {
@@ -358,7 +419,6 @@ if (usersTbody) {
 
 const PONTOS_POR_CARRO = 100;
 
-// Botão de Salvar a Injeção
 const btnSaveCar = document.getElementById('btn-save-car');
 if (btnSaveCar) {
   btnSaveCar.addEventListener('click', async () => {
@@ -367,7 +427,6 @@ if (btnSaveCar) {
     const searchInput = document.getElementById('car-search-input').value;
     const qtyInput = parseInt(document.getElementById('car-qty-input').value) || 0;
 
-    // Extrai o ID do carrinho que está entre colchetes [ID:hw_...]
     const match = searchInput.match(/\[ID:(.*?)\]/);
     if (!match) {
       alert("Por favor, selecione um carro válido da lista.");
@@ -378,50 +437,46 @@ if (btnSaveCar) {
     btnSaveCar.textContent = "Salvando...";
 
     try {
-      // 1. Busca os dados atuais da coleção do cliente (itens e pontos antigos)
       const dRef = doc(db, 'collections', currentTargetUid);
       const snap = await getDoc(dRef);
 
       let userColData = snap.exists() ? snap.data().items || {} : {};
       let pontosAtuais = snap.exists() ? snap.data().points || 0 : 0;
+      let history = snap.exists() ? snap.data().history || [] : [];
 
-      // Guarda a quantidade antiga para saber se aumentou
       const qtdAntiga = userColData[carId] || 0;
-
-      // 2. Busca o perfil do usuário para verificar o Cargo/Role
       const uRef = doc(db, 'users', currentTargetUid);
       const uSnap = await getDoc(uRef);
       const userRole = uSnap.exists() ? uSnap.data().role : 'user';
 
-      // 3. Atualiza a quantidade do carro específico
       userColData[carId] = qtyInput;
-
-      // 4. LÓGICA HÍBRIDA DE PONTUAÇÃO: Só soma pontos se for Cargo "cliente" e a quantidade aumentou
       let novosPontos = pontosAtuais;
+
+      // Soma pontos e registra no extrato se for cliente e quantidade aumentou
       if (userRole === 'cliente' && qtyInput > qtdAntiga) {
         const diferenca = qtyInput - qtdAntiga;
-        novosPontos += (diferenca * PONTOS_POR_CARRO);
-      }
+        const ptsGanhos = diferenca * PONTOS_POR_CARRO;
+        novosPontos += ptsGanhos;
 
-      // 5. Salva tudo de volta no banco de dados (items + pontos atualizados)
-      await setDoc(dRef, {
-        items: userColData,
-        points: novosPontos
-      }, { merge: true });
+        history.unshift({
+          date: new Date().toLocaleDateString('pt-BR'),
+          desc: "Injeção de Carros (Painel)",
+          amount: ptsGanhos,
+          type: "earning"
+        });
 
-      // Mensagem personalizada avisando se o cliente ganhou pontos ou não
-      if (userRole === 'cliente' && qtyInput > qtdAntiga) {
-        const ptsGanhos = (qtyInput - qtdAntiga) * PONTOS_POR_CARRO;
+        await setDoc(dRef, { items: userColData, points: novosPontos, history: history }, { merge: true });
         alert(`✅ Sucesso! Carro injetado e +${ptsGanhos} RPMs creditados na conta do Cliente VIP!`);
       } else {
-        alert("✅ Garagem atualizada com sucesso! (Nenhum ponto foi gerado pois o perfil é Usuário Comum).");
+        await setDoc(dRef, { items: userColData, points: novosPontos }, { merge: true });
+        alert("✅ Garagem atualizada com sucesso! (Nenhum ponto foi gerado pois o perfil é Usuário Comum ou Qtd não aumentou).");
       }
 
-      document.getElementById('car-search-input').value = ''; // Limpa o campo
+      document.getElementById('car-search-input').value = '';
       btnSaveCar.textContent = "➕ Injetar";
 
     } catch (error) {
-      console.error("Erro ao salvar carro no painel admin:", error);
+      console.error("Erro ao salvar carro:", error);
       alert("Erro ao injetar o carro. Verifique sua conexão.");
       btnSaveCar.textContent = "➕ Injetar";
     }

@@ -384,13 +384,21 @@
                     <input type="text" id="edit-phone" required>
                 </div>
                 <div class="form-group">
-                    <label>Nível de Acesso (Cargo)</label>
+                    <label>Nível de Acesso</label>
                     <select id="edit-role">
                         <option value="user">Usuário</option>
-                        <option value="cliente">Cliente da Loja</option>
-                        <option value="admin">Administrador</option>
+                        <option value="cliente">Cliente da Loja (VIP)</option>
                         <option value="gerente">Gerente</option>
+                        <option value="admin">Administrador</option>
                     </select>
+                </div>
+
+                <div class="form-group">
+                    <label>ID da Loja</label>
+                    <input type="text" id="edit-lojaId" placeholder="Ex: garagem_do_pedro">
+                    <!-- <small style="color: var(--muted); font-size: 11px;">Se for um Gerente, ele só verá clientes com o
+                        mesmo ID de loja
+                        que o dele. Se for Admin, deixe em branco.</small> -->
                 </div>
                 <div class="modal-actions">
                     <button type="button" class="btn-cancel" id="btn-close-modal">Cancelar</button>

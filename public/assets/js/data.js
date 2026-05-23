@@ -3258,7 +3258,7 @@ export const RAW = [
     "part": "JJM24",
     "hw": "208",
     "cas": "",
-    "image": "https://static.wikia.nocookie.net/hotwheels/images/b/b5/Image_Not_Available.jpg/revision/latest?cb=20151025125428"
+    "image": "assets/img/26-STH-Porsche-911-Carrera-RS-27-1.jpg"
   },
   {
     "year": 2026,
@@ -3288,7 +3288,7 @@ export const RAW = [
     "part": "JJM25",
     "hw": "222",
     "cas": "",
-    "image": "https://static.wikia.nocookie.net/hotwheels/images/b/b5/Image_Not_Available.jpg/revision/latest?cb=20151025125428"
+    "image": "assets/img/2026-STH-94-Toyota-Supra-2.jpg"
   },
   {
     "year": 2026,
@@ -3318,7 +3318,7 @@ export const RAW = [
     "part": "JJM26",
     "hw": "225",
     "cas": "",
-    "image": "https://static.wikia.nocookie.net/hotwheels/images/b/b5/Image_Not_Available.jpg/revision/latest?cb=20151025125428"
+    "image": "assets/img/2026-STH-Nissan-Maxima-Drift-Car-1.jpg"
   },
   {
     "year": 2026,
