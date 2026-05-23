@@ -565,15 +565,36 @@ async function loadCollection() {
       userPoints = 0;
       userMissions = {};
       userRewards = [];
+      userHistory = [];
     }
 
     const uRef = doc(db, 'users', uidToLoad);
     const uSnap = await getDoc(uRef);
+
+    // Variável para descobrir a qual loja este usuário pertence
+    let currentLojaId = 'default';
+
     if (uSnap.exists()) {
       targetRole = uSnap.data().role || 'user';
+      currentLojaId = uSnap.data().lojaId || 'default'; // Puxa a etiqueta da loja
     } else {
       targetRole = 'user';
     }
+
+    // --- NOVO: BUSCA OS PRÊMIOS EXCLUSIVOS DA LOJA ---
+    try {
+      const lojaRef = doc(db, 'lojas', currentLojaId);
+      const lojaSnap = await getDoc(lojaRef);
+      if (lojaSnap.exists() && lojaSnap.data().recompensas) {
+        LISTA_RECOMPENSAS = lojaSnap.data().recompensas;
+      } else {
+        LISTA_RECOMPENSAS = []; // Fica vazio se a loja não tiver prêmios cadastrados
+      }
+    } catch (e) {
+      console.error("Erro ao carregar prêmios da loja:", e);
+      LISTA_RECOMPENSAS = [];
+    }
+    // --------------------------------------------------
 
     const pointsEl = document.getElementById('user-points');
     if (pointsEl) pointsEl.textContent = userPoints;
@@ -906,36 +927,7 @@ window.claimMission = async function (missionId, rewardPoints) {
 // ==========================================
 // LOJA DE RESGATE (REWARDS)
 // ==========================================
-const LISTA_RECOMPENSAS = [
-  {
-    id: 'frete_gratis',
-    titulo: 'Frete Grátis',
-    desc: 'Cupom de frete grátis para sua próxima compra enviada via PAC.',
-    custo: 1000,
-    icone: '📦'
-  },
-  {
-    id: 'protetor_blister',
-    titulo: 'Kit 5 Protetores',
-    desc: 'Kit com 5 protetores de blister em acrílico transparente para proteger sua coleção.',
-    custo: 800,
-    icone: '🛡️'
-  },
-  {
-    id: 'mainline_surpresa',
-    titulo: 'Mainline Loose Surpresa',
-    desc: 'Ganhe um carro Mainline surpresa sem cartela (loose) no seu próximo pedido.',
-    custo: 500,
-    icone: '🚗'
-  },
-  {
-    id: 'desconto_10',
-    titulo: '10% de Desconto',
-    desc: 'Desconto de 10% aplicado em qualquer miniatura da linha Premium.',
-    custo: 1500,
-    icone: '🎟️'
-  }
-];
+let LISTA_RECOMPENSAS = [];
 
 async function renderRewards() {
   const container = document.getElementById('rewards-view');

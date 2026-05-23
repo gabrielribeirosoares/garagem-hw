@@ -347,8 +347,11 @@
 
     <div class="admin-container">
         <div class="header-admin">
-            <h1>Painel de Controle de Usuários</h1>
-            <a href="app.html" class="btn-back">← Voltar à Garagem</a>
+            <h1>Painel de Controle</h1>
+            <div style="display: flex; gap: 10px;">
+                <a href="app.html" class="btn-back">← Voltar à Garagem</a>
+            </div>
+        </div>
         </div>
 
         <table id="users-table">
@@ -461,6 +464,36 @@
         </div>
 
         <div id="cupom-result"></div>
+    </div>
+
+    <div id="loja-modal" class="modal">
+        <div class="modal-content" style="max-width: 500px;">
+            <h3 style="font-family: 'Bebas Neue'; font-size: 28px; color: #f59e0b; margin-top: 0;">🎁 Vitrine de Prêmios
+            </h3>
+            <p style="color: var(--muted); font-size: 13px; margin-bottom: 15px;">Editando prêmios para a loja: <b
+                    id="loja-alvo-nome" style="color: #fff; text-transform: uppercase;"></b></p>
+
+            <div id="recompensas-list"
+                style="margin-bottom: 20px; max-height: 200px; overflow-y: auto; background: #0f172a; border-radius: 6px; padding: 10px;">
+            </div>
+
+            <div style="background: #0f172a; padding: 15px; border-radius: 8px; border: 1px solid #334155;">
+                <h4 style="margin-top: 0; color: #fff;">Adicionar Novo Prêmio</h4>
+                <div class="form-group"><input type="text" id="rew-icone" placeholder="Ícone (Ex: 📦, 🎟️, 🚗)"></div>
+                <div class="form-group"><input type="text" id="rew-titulo" placeholder="Título (Ex: Frete Grátis)">
+                </div>
+                <div class="form-group"><input type="text" id="rew-desc" placeholder="Descrição curta..."></div>
+                <div class="form-group"><input type="number" id="rew-custo" placeholder="Custo em RPMs (Ex: 1000)">
+                </div>
+                <button id="btn-add-rew"
+                    style="background: #16a34a; color: white; padding: 10px; border: none; border-radius: 4px; cursor: pointer; width: 100%; font-weight: bold;">➕
+                    Adicionar à Loja</button>
+            </div>
+
+            <button onclick="document.getElementById('loja-modal').style.display='none'"
+                style="margin-top: 15px; background: #64748b; color: white; padding: 10px; width: 100%; border: none; border-radius: 4px; cursor: pointer;">Fechar
+                Painel</button>
+        </div>
     </div>
 
     <script type="module" src="assets/js/admin.js?v=5"></script>

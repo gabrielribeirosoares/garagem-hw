@@ -85,7 +85,8 @@ async function loadUsersList() {
 
       // Define o nome e a cor do cargo na tabela
       let roleName = 'Usuário';
-      let roleColor = '#64748b'; // Cinza para utilizador comum
+      let roleColor = '#64748b'; // Cinza
+      let btnPremios = ''; // <-- Variável do novo botão
 
       if (userData.role === 'admin') {
         roleName = 'Admin';
@@ -93,6 +94,11 @@ async function loadUsersList() {
       } else if (userData.role === 'gerente') {
         roleName = 'Gerente';
         roleColor = '#10b981'; // Verde
+
+        // Se for gerente e tiver uma loja, mostra o botão de configurar prêmios
+        if (userData.lojaId) {
+          btnPremios = `<button class="btn-manage-rewards" data-lojaid="${userData.lojaId}" style="background: #8b5cf6; color: white; border: none; padding: 5px 10px; border-radius: 4px; cursor: pointer; margin-right: 8px;">🎁 Prêmios</button>`;
+        }
       } else if (userData.role === 'cliente') {
         roleName = 'Cliente VIP';
         roleColor = '#3b82f6'; // Azul
@@ -109,10 +115,8 @@ async function loadUsersList() {
         <td data-label="Nascimento">${userData.birthdate || 'Não informada'}</td>
         <td data-label="Cargo"><strong style="color: ${roleColor}">${roleName}</strong></td>
         <td data-label="Ações">
-          <button class="btn-manage-rifa" data-id="${userData.uid}" data-name="${userData.name || 'Usuário'}" style="background: rgba(250, 204, 21, 0.15); color: var(--yellow); border: 1px solid var(--yellow); padding: 5px 10px; border-radius: 4px; cursor: pointer; margin-right: 8px;">🎟️ Rifas</button>
-
+          ${btnPremios} <button class="btn-manage-rifa" data-id="${userData.uid}" data-name="${userData.name || 'Usuário'}" style="background: rgba(250, 204, 21, 0.15); color: var(--yellow); border: 1px solid var(--yellow); padding: 5px 10px; border-radius: 4px; cursor: pointer; margin-right: 8px;">🎟️ Rifas</button>
           <button class="btn-manage-cars" data-id="${userData.uid}" data-name="${userData.name || 'Usuário'}" style="background: rgba(34, 197, 94, 0.2); color: var(--green); border: 1px solid var(--green); padding: 5px 10px; border-radius: 4px; cursor: pointer; margin-right: 8px;">🚗 Garagem</button>
-
           <button class="btn-edit" data-id="${userData.uid}">Editar</button>
           <button class="btn-delete" data-id="${userData.uid}" data-name="${userData.name || 'Este usuário'}">Excluir</button>
         </td>
@@ -163,6 +167,20 @@ if (usersTbody) {
           e.target.disabled = false;
         }
       }
+
+
+    }
+    if (e.target.classList.contains('btn-manage-rewards')) {
+      // Pega o lojaId que salvamos no atributo data-lojaid do botão
+      lojaIdParaEditar = e.target.getAttribute('data-lojaid');
+
+      const nomeLojaEl = document.getElementById('loja-alvo-nome');
+      if (nomeLojaEl) nomeLojaEl.textContent = lojaIdParaEditar;
+
+      const modal = document.getElementById('loja-modal');
+      if (modal) modal.style.display = 'flex';
+
+      await renderAdminRewards(); // Carrega a lista de prêmios daquela loja
     }
   });
 }
@@ -482,3 +500,100 @@ if (btnSaveCar) {
     }
   });
 }
+
+// =========================================
+// GESTÃO MULTI-LOJAS: PRÊMIOS PERSONALIZADOS (SOMENTE ADMIN)
+// =========================================
+let lojaIdParaEditar = '';
+
+if (usersTbody) {
+  usersTbody.addEventListener('click', async (e) => {
+    // AÇÃO: ABRIR MODAL DE PRÊMIOS DO GERENTE
+    if (e.target.classList.contains('btn-manage-rewards')) {
+      lojaIdParaEditar = e.target.getAttribute('data-lojaid');
+      document.getElementById('loja-alvo-nome').textContent = lojaIdParaEditar;
+      document.getElementById('loja-modal').style.display = 'flex';
+      await renderAdminRewards();
+    }
+  });
+}
+
+async function renderAdminRewards() {
+  const listEl = document.getElementById('recompensas-list');
+  if (!listEl) return;
+
+  listEl.innerHTML = '<p style="color: #fff; text-align: center;">Carregando prêmios...</p>';
+
+  try {
+    // BUSCA NA COLEÇÃO 'lojas' PELO ID QUE CLICAMOS
+    const snap = await getDoc(doc(db, 'lojas', lojaIdParaEditar));
+    const recompensas = snap.exists() ? (snap.data().recompensas || []) : [];
+
+    if (recompensas.length === 0) {
+      listEl.innerHTML = '<p style="color: #9ca3af; text-align: center; font-size: 13px;">Nenhum prêmio nesta loja.</p>';
+      return;
+    }
+
+    listEl.innerHTML = recompensas.map((r, index) => `
+      <div style="display: flex; justify-content: space-between; align-items: center; background: #1e293b; padding: 10px; margin-bottom: 8px; border-radius: 4px; border: 1px solid #334155;">
+        <div>
+          <strong style="color: #fff;">${r.icone} ${r.titulo}</strong>
+          <div style="color: var(--yellow); font-size: 12px;">🪙 ${r.custo} RPMs</div>
+        </div>
+        <button onclick="deleteReward(${index})" style="background: #ef4444; color: white; border: none; border-radius: 4px; padding: 5px 10px; cursor: pointer; font-size: 11px;">Excluir</button>
+      </div>
+    `).join('');
+  } catch (e) {
+    console.error("Erro ao renderizar prêmios:", e);
+    listEl.innerHTML = '<p style="color: #ef4444;">Erro ao carregar.</p>';
+  }
+}
+
+document.getElementById('btn-add-rew')?.addEventListener('click', async () => {
+  const icone = document.getElementById('rew-icone').value || '🎁';
+  const titulo = document.getElementById('rew-titulo').value;
+  const desc = document.getElementById('rew-desc').value;
+  const custo = parseInt(document.getElementById('rew-custo').value);
+
+  if (!titulo || !custo) return alert('Preencha o título e o custo do prêmio!');
+
+  document.getElementById('btn-add-rew').textContent = 'Salvando...';
+
+  try {
+    const ref = doc(db, 'lojas', lojaIdParaEditar);
+    const snap = await getDoc(ref);
+    const recompensas = snap.exists() ? (snap.data().recompensas || []) : [];
+
+    recompensas.push({
+      id: 'rew_' + Date.now(),
+      icone, titulo, desc, custo
+    });
+
+    await setDoc(ref, { recompensas }, { merge: true });
+
+    // Limpa campos
+    document.getElementById('rew-icone').value = '';
+    document.getElementById('rew-titulo').value = '';
+    document.getElementById('rew-desc').value = '';
+    document.getElementById('rew-custo').value = '';
+
+    await renderAdminRewards();
+  } catch (e) {
+    alert('Erro ao salvar prêmio.');
+  }
+  document.getElementById('btn-add-rew').textContent = '➕ Adicionar à Loja';
+});
+
+window.deleteReward = async function (index) {
+  if (!confirm("Remover este prêmio desta loja?")) return;
+  try {
+    const ref = doc(db, 'lojas', lojaIdParaEditar);
+    const snap = await getDoc(ref);
+    let recompensas = snap.data().recompensas;
+    recompensas.splice(index, 1);
+    await setDoc(ref, { recompensas }, { merge: true });
+    await renderAdminRewards();
+  } catch (e) {
+    alert("Erro ao excluir.");
+  }
+};
