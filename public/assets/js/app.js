@@ -592,35 +592,32 @@ const PONTOS_POR_CARRO = 10;
 async function saveData(carId, qty) {
   const oldQty = userCollection[carId] || 0;
   userCollection[carId] = qty;
+  const uidToSave = targetUid || sessionUid;
 
+  // 1. CÁLCULO IMEDIATO (Atualiza a interface na mesma hora)
+  if (targetRole === 'cliente' && qty > oldQty) {
+    const diff = qty - oldQty;
+    const pontosGanhos = diff * PONTOS_POR_CARRO;
+
+    userPoints += pontosGanhos; // Soma na variável global
+
+    // Atualiza o contador de RPMs lá no topo instantaneamente
+    const pointsEl = document.getElementById('user-points');
+    if (pointsEl) pointsEl.textContent = userPoints;
+
+    // Lança no histórico em segundo plano
+    addHistoryEntry(uidToSave, `Injeção de Carros`, pontosGanhos, 'earning');
+  }
+
+  // 2. SALVAMENTO NO BANCO (Mantém o delay de 1 seg para não sobrecarregar o Firebase)
   if (saveTimeout) clearTimeout(saveTimeout);
 
   saveTimeout = setTimeout(async () => {
-    const uidToSave = targetUid || sessionUid;
     if (!uidToSave) return;
-
     try {
       const dRef = doc(db, 'collections', uidToSave);
-
-      // LÓGICA DE PONTOS: Se for Cliente VIP, calcula a diferença de carros adicionados
-      let novosPontos = userPoints;
-      // Onde você calcula 'novosPontos' e salva:
-      if (targetRole === 'cliente' && qty > oldQty) {
-        const diff = qty - oldQty;
-        const pontosGanhos = (diff * PONTOS_POR_CARRO);
-        await addHistoryEntry(uidToSave, `Injeção de Carros`, pontosGanhos, 'earning');
-      }
-
-      await setDoc(dRef, {
-        items: userCollection,
-        points: novosPontos // Salva os pontos atualizados
-      }, { merge: true });
-
-      // Atualiza na tela do admin/cliente
-      userPoints = novosPontos;
-      const pointsEl = document.getElementById('user-points');
-      if (pointsEl) pointsEl.textContent = userPoints;
-
+      // Salva os carros E o saldo final de pontos sincronizado
+      await setDoc(dRef, { items: userCollection, points: userPoints }, { merge: true });
     } catch (e) {
       console.error("Erro save:", e);
     }

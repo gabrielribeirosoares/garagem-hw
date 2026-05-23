@@ -460,25 +460,25 @@ if (btnSaveCar) {
 
         history.unshift({
           date: new Date().toLocaleDateString('pt-BR'),
-          desc: "Injeção de Carros (Painel)",
+          desc: "Adição de Carros (Painel)",
           amount: ptsGanhos,
           type: "earning"
         });
 
         await setDoc(dRef, { items: userColData, points: novosPontos, history: history }, { merge: true });
-        alert(`✅ Sucesso! Carro injetado e +${ptsGanhos} RPMs creditados na conta do Cliente VIP!`);
+        alert(`✅ Sucesso! Carro adicionado e +${ptsGanhos} RPMs creditados na conta do Cliente VIP!`);
       } else {
         await setDoc(dRef, { items: userColData, points: novosPontos }, { merge: true });
         alert("✅ Garagem atualizada com sucesso! (Nenhum ponto foi gerado pois o perfil é Usuário Comum ou Qtd não aumentou).");
       }
 
       document.getElementById('car-search-input').value = '';
-      btnSaveCar.textContent = "➕ Injetar";
+      btnSaveCar.textContent = "➕ Adicionar";
 
     } catch (error) {
       console.error("Erro ao salvar carro:", error);
-      alert("Erro ao injetar o carro. Verifique sua conexão.");
-      btnSaveCar.textContent = "➕ Injetar";
+      alert("Erro ao adicionar o carro. Verifique sua conexão.");
+      btnSaveCar.textContent = "➕ Adicionar";
     }
   });
 }
