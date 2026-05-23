@@ -606,7 +606,7 @@ async function saveData(carId, qty) {
     if (pointsEl) pointsEl.textContent = userPoints;
 
     // Lança no histórico em segundo plano
-    addHistoryEntry(uidToSave, `Injeção de Carros`, pontosGanhos, 'earning');
+    addHistoryEntry(uidToSave, `Compra de Carros`, pontosGanhos, 'earning');
   }
 
   // 2. SALVAMENTO NO BANCO (Mantém o delay de 1 seg para não sobrecarregar o Firebase)
