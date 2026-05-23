@@ -64,10 +64,10 @@ function updatePageUI() {
   const badgeEl = document.getElementById('dynamic-badge');
 
   if (pageType === 'all') {
-    titleEl.innerHTML = 'Hot Wheels <span>Collection</span>';
+    titleEl.innerHTML = 'Diecast<span>Manager</span>';
     badgeEl.style.display = 'none';
   } else if (pageType === 'sth') {
-    titleEl.innerHTML = 'Hot Wheels <span>Super Treasure Hunts</span>';
+    titleEl.innerHTML = 'Diecast<span>Manager</span>';
     badgeEl.style.display = 'block';
     badgeEl.textContent = '$TH';
   } else if (pageType === 'owned') {
