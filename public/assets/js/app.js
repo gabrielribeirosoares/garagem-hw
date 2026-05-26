@@ -82,7 +82,10 @@ function updatePageUI() {
 function changePage(newPageType) {
   pageType = newPageType;
 
-  const tableArea = document.querySelector('.table-wrapper');
+  // ATUALIZADO: Agora procuramos o ID correto da grelha de carros e o menu de ordenação
+  const tableArea = document.getElementById('table-body');
+  const sortHeader = document.getElementById('mobile-sort') ? document.getElementById('mobile-sort').parentElement : null;
+
   const controlsArea = document.querySelector('.controls');
   const countArea = document.querySelector('.count-bar');
   const pagArea = document.querySelector('.pagination-container');
@@ -90,7 +93,8 @@ function changePage(newPageType) {
   const rewardsArea = document.getElementById('rewards-view');
 
   if (pageType === 'missions') {
-    tableArea.style.display = 'none';
+    if (tableArea) tableArea.style.display = 'none';
+    if (sortHeader) sortHeader.style.display = 'none';
     if (controlsArea) controlsArea.style.display = 'none';
     if (countArea) countArea.style.display = 'none';
     if (pagArea) pagArea.style.display = 'none';
@@ -102,7 +106,8 @@ function changePage(newPageType) {
     renderMissions();
     return;
   } else if (pageType === 'rewards') {
-    tableArea.style.display = 'none';
+    if (tableArea) tableArea.style.display = 'none';
+    if (sortHeader) sortHeader.style.display = 'none';
     if (controlsArea) controlsArea.style.display = 'none';
     if (countArea) countArea.style.display = 'none';
     if (pagArea) pagArea.style.display = 'none';
@@ -114,7 +119,9 @@ function changePage(newPageType) {
     renderRewards();
     return;
   } else {
-    tableArea.style.display = 'block';
+    // ATUALIZADO: A Garagem agora volta como 'grid' em vez de 'block'
+    if (tableArea) tableArea.style.display = 'grid';
+    if (sortHeader) sortHeader.style.display = 'flex';
     if (controlsArea) controlsArea.style.display = 'flex';
     if (countArea) countArea.style.display = 'flex';
     if (pagArea) pagArea.style.display = 'flex';
@@ -188,6 +195,17 @@ function populateFilters() {
   }
 }
 
+// Ativa o novo menu de ordenação no mobile
+const mobileSort = document.getElementById('mobile-sort');
+if (mobileSort) {
+  mobileSort.addEventListener('change', (e) => {
+    sortCol = e.target.value;
+    sortDesc = (sortCol === 'year'); // Ano é decrescente (mais novos primeiro), o resto é crescente (A-Z)
+    currentPage = 1;
+    render();
+  });
+}
+
 function getFilteredData() {
   const searchInput = document.getElementById('filter-search');
   const yearInput = document.getElementById('filter-year');
@@ -241,7 +259,7 @@ function getFilteredData() {
 // ==========================================
 function render() {
   const fullData = getFilteredData();
-  const tbody = document.getElementById('table-body');
+  const tbody = document.getElementById('table-body'); // Agora é a nossa Grid
   if (!tbody) return;
 
   let totalPages = 1;
@@ -252,33 +270,17 @@ function render() {
   const btnPrev = document.getElementById('btn-prev-page');
   const btnNext = document.getElementById('btn-next-page');
 
-  if (perPageSelect) {
-    if (itemsPerPage !== 'all') {
-      totalPages = Math.ceil(fullData.length / itemsPerPage) || 1;
-      if (currentPage > totalPages) currentPage = totalPages;
-      if (currentPage < 1) currentPage = 1;
+  if (perPageSelect && itemsPerPage !== 'all') {
+    totalPages = Math.ceil(fullData.length / itemsPerPage) || 1;
+    if (currentPage > totalPages) currentPage = totalPages;
+    if (currentPage < 1) currentPage = 1;
+    const start = (currentPage - 1) * itemsPerPage;
+    dataToRender = fullData.slice(start, start + itemsPerPage);
 
-      const start = (currentPage - 1) * itemsPerPage;
-      const end = start + itemsPerPage;
-      dataToRender = fullData.slice(start, end);
-
-      if (pageIndicator) {
-        pageIndicator.textContent = `Página ${currentPage} de ${totalPages}`;
-        if (btnPrev) {
-          btnPrev.disabled = currentPage === 1;
-          btnPrev.style.opacity = btnPrev.disabled ? "0.5" : "1";
-        }
-        if (btnNext) {
-          btnNext.disabled = currentPage === totalPages;
-          btnNext.style.opacity = btnNext.disabled ? "0.5" : "1";
-        }
-      }
-    } else {
-      if (pageIndicator) {
-        pageIndicator.textContent = `Página 1 de 1`;
-        if (btnPrev) { btnPrev.disabled = true; btnPrev.style.opacity = "0.5"; }
-        if (btnNext) { btnNext.disabled = true; btnNext.style.opacity = "0.5"; }
-      }
+    if (pageIndicator) {
+      pageIndicator.textContent = `Página ${currentPage} de ${totalPages}`;
+      if (btnPrev) { btnPrev.disabled = currentPage === 1; btnPrev.style.opacity = btnPrev.disabled ? "0.5" : "1"; }
+      if (btnNext) { btnNext.disabled = currentPage === totalPages; btnNext.style.opacity = btnNext.disabled ? "0.5" : "1"; }
     }
   }
 
@@ -293,123 +295,95 @@ function render() {
     if (emptyMsg) {
       emptyMsg.style.display = 'block';
       if (pageType === 'owned') {
-        emptyMsg.innerHTML = 'A sua coleção está vazia ou os filtros não encontraram nada.<br><a href="#" data-page="all" class="menu-item" style="color:var(--accent)">Ir para Mostrar Tudo</a> para adicionar carros.';
+        emptyMsg.innerHTML = 'A sua coleção está vazia.<br><a href="#" data-page="all" class="menu-item" style="color:#3b82f6; text-decoration: underline;">Ir para Mostrar Tudo</a>';
         const emptyLink = emptyMsg.querySelector('a');
-        if (emptyLink) emptyLink.addEventListener('click', (e) => { e.preventDefault(); changePage('all'); document.getElementById('sidebar').classList.remove('open'); document.getElementById('sidebar-overlay').classList.remove('open'); });
-      } else {
-        emptyMsg.textContent = 'Nenhum carro encontrado com esses filtros.';
-      }
+        if (emptyLink) emptyLink.addEventListener('click', (e) => { e.preventDefault(); changePage('all'); });
+      } else { emptyMsg.textContent = 'Nenhum carro encontrado.'; }
     }
     return;
   }
   if (emptyMsg) emptyMsg.style.display = 'none';
 
-  let lastYear = null;
   dataToRender.forEach((r) => {
     const globalIdx = PAGE_DATA.indexOf(r);
     const dot = getColor(r.color);
-    const isNewYear = r.year !== lastYear;
-    lastYear = r.year;
-
     const has = isOwned(r);
-    const row = document.createElement('tr');
-    if (isNewYear) row.classList.add('year-start');
-    if (has) row.classList.add('owned-row');
+
+    // Cria o card em vez da linha de tabela
+    const card = document.createElement('div');
+    card.className = `car-card ${has ? 'owned-card' : ''}`;
 
     const imgCell = r.image
-      ? `<div class="img-thumb-wrap" title="Expandir imagem"><img src="${r.image}" alt="${r.name}" loading="lazy" onerror="this.parentElement.innerHTML='<div class=&quot;img-placeholder&quot;>🚗</div>'"></div>`
-      : `<div class="img-thumb-wrap" style="cursor:default" title="Imagem não disponível"><div class="img-placeholder">🚗</div></div>`;
+      ? `<img src="${r.image}" loading="lazy">`
+      : `<div style="font-size:40px; color: var(--muted);">🚗</div>`;
 
     const qty = getQty(r);
     const repetidos = qty > 1 ? qty - 1 : 0;
-
-    // LÓGICA HÍBRIDA + MODO VENDEDOR: A edição é permitida se for conta "standalone" OU se você (Admin) estiver visualizando
     const isEditingAllowed = isAdmin || isManager || targetRole !== 'cliente';
+    // Gera as opções da roda do celular (de 0 a 50 carros)
     let controlesHTML = '';
+    let optionsHTML = '';
+    for (let i = 0; i <= 50; i++) {
+      optionsHTML += `<option value="${i}" ${i === qty ? 'selected' : ''}>${i}</option>`;
+    }
 
     if (isEditingAllowed) {
       controlesHTML = `
-          <div style="display: flex; align-items: center; gap: 8px;">
-            <input class="qty-input" type="number" min="0" max="999" value="${qty}" style="width: 50px;">
-            <button class="btn-save" style="display: none; font-size: 11px; padding: 4px 8px; background: #3b82f6; color: white; border: none; border-radius: 4px; cursor: pointer; font-weight: 600;">Salvar</button>
-            <span class="rep-badge" style="font-size: 11px; color: ${repetidos > 0 ? '#ea580c' : '#9ca3af'}; font-weight: 600; background: ${repetidos > 0 ? '#ffedd5' : '#f3f4f6'}; padding: 3px 6px; border-radius: 4px; min-width: 22px; text-align: center; border: 1px solid ${repetidos > 0 ? '#fdba74' : '#e5e7eb'};">
-              +${repetidos}
-            </span>
-          </div>
-        `;
+        <div style="display: flex; gap: 8px; align-items: center; width: 100%;">
+          <select class="qty-input" style="width: 100%; max-width: 65px; padding: 8px; background: #0f172a; border: 1px solid #475569; color: var(--yellow); border-radius: 6px; font-weight: bold; font-size: 16px; outline: none; cursor: pointer; appearance: none; -webkit-appearance: none; text-align-last: center;">
+            ${optionsHTML}
+          </select>
+          <button class="btn-save" style="display: none; flex: 1; padding: 8px; background: #16a34a; color: white; border: none; border-radius: 6px; font-weight: bold; cursor: pointer;">Salvar</button>
+          ${repetidos > 0 ? `<span class="rep-badge" style="background: #ffedd5; color: #ea580c; padding: 4px 8px; border-radius: 6px; font-weight: bold; font-size: 11px;">+${repetidos}</span>` : ''}
+        </div>`;
     } else {
       controlesHTML = `
-          <div style="display: flex; align-items: center; justify-content: center; gap: 8px;">
-            <span style="font-family: 'Bebas Neue', sans-serif; font-size: 22px; color: ${qty > 0 ? 'var(--yellow)' : 'var(--muted)'}; width: 30px; text-align: center;">${qty}</span>
-            <span class="rep-badge" style="font-size: 11px; color: ${repetidos > 0 ? '#ea580c' : '#9ca3af'}; font-weight: 600; background: ${repetidos > 0 ? '#ffedd5' : '#f3f4f6'}; padding: 3px 6px; border-radius: 4px; min-width: 22px; text-align: center; border: 1px solid ${repetidos > 0 ? '#fdba74' : '#e5e7eb'};">
-              +${repetidos}
-            </span>
-          </div>
-        `;
+        <div style="display: flex; align-items: center; justify-content: space-between; width: 100%;">
+          <span style="font-size: 20px; font-family: 'Bebas Neue'; color: ${qty > 0 ? 'var(--yellow)' : 'var(--muted)'};">${qty} na Garagem</span>
+          ${repetidos > 0 ? `<span class="rep-badge" style="background: #ffedd5; color: #ea580c; padding: 4px 8px; border-radius: 6px; font-weight: bold; font-size: 11px;">+${repetidos}</span>` : ''}
+        </div>`;
     }
 
-    row.innerHTML = `
-      <td>${isNewYear ? `<span class="year-pill">${r.year}</span>` : ''}</td>
-      <td style="padding:8px 12px">${imgCell}</td>
-      <td><div class="car-name" title="${r.name}">${r.name}</div></td>
-      <td><span class="series-tag">${r.series}</span></td>
-      <td><div class="color-dot"><span class="dot" style="background:${dot};box-shadow:0 0 0 1px rgba(255,255,255,0.15)"></span>${r.color}</div></td>
-      <td><span class="part-code">${r.part}</span></td>
-      <td>${controlesHTML}</td>
+    card.innerHTML = `
+      <div class="car-image-container">
+        <span class="year-badge">${r.year}</span>
+        ${imgCell}
+      </div>
+      <div class="car-info">
+        <div class="car-title" title="${r.name}">${r.name}</div>
+        <div class="car-series">${r.series || 'Sem Série'}</div>
+        <div style="display:flex; align-items:center; gap:6px; margin-bottom: 12px; font-size: 11px; color: #cbd5e1;">
+            <span style="display:inline-block; width:10px; height:10px; border-radius:50%; background:${dot}; box-shadow:0 0 0 1px rgba(255,255,255,0.15)"></span> ${r.color || 'N/A'}
+        </div>
+        <div class="car-controls">
+            ${controlesHTML}
+        </div>
+      </div>
     `;
 
-    const wrap = row.querySelector('.img-thumb-wrap');
-    if (wrap && r.image) {
-      wrap.addEventListener('click', () => openLb(globalIdx));
+    // Ativa o clique na imagem para o Lightbox
+    if (card.querySelector('.car-image-container') && r.image) {
+      card.querySelector('.car-image-container').addEventListener('click', () => openLb(globalIdx));
     }
 
-    tbody.appendChild(row);
+    tbody.appendChild(card);
 
-    // Ativa as funções de alteração na garagem apenas se for permitido (standalone ou Admin editando o cliente)
+    // Lógica para os botões de alterar a quantidade
     if (isEditingAllowed) {
-      const inputElement = row.querySelector('.qty-input');
-      const saveBtn = row.querySelector('.btn-save');
-      const repBadge = row.querySelector('.rep-badge');
-
-      inputElement.addEventListener('input', (e) => {
+      const inputElement = card.querySelector('.qty-input');
+      const saveBtn = card.querySelector('.btn-save');
+      inputElement.addEventListener('change', (e) => {
         let newVal = parseInt(e.target.value) || 0;
-        if (newVal < 0) { newVal = 0; e.target.value = 0; }
-        if (newVal !== getQty(r)) {
-          saveBtn.style.display = 'block';
-        } else {
-          saveBtn.style.display = 'none';
-        }
+        saveBtn.style.display = newVal !== getQty(r) ? 'block' : 'none';
       });
-
       saveBtn.addEventListener('click', () => {
-        let newVal = parseInt(inputElement.value) || 0;
-        saveData(r.id, newVal);
-
-        if (newVal > 0) row.classList.add('owned-row');
-        else row.classList.remove('owned-row');
-
-        const repCount = newVal > 1 ? newVal - 1 : 0;
-        repBadge.textContent = `+${repCount}`;
-        if (repCount > 0) {
-          repBadge.style.color = '#ea580c';
-          repBadge.style.background = '#ffedd5';
-          repBadge.style.borderColor = '#fdba74';
-        } else {
-          repBadge.style.color = '#9ca3af';
-          repBadge.style.background = '#f3f4f6';
-          repBadge.style.borderColor = '#e5e7eb';
-        }
+        saveData(r.id, parseInt(inputElement.value) || 0);
         saveBtn.style.display = 'none';
         updateCounts();
-
-        const filterOwnedCheckbox = document.getElementById('filter-owned-only');
-        if ((pageType === 'owned' || (filterOwnedCheckbox && filterOwnedCheckbox.checked)) && newVal === 0) {
-          render();
-        }
+        if ((pageType === 'owned') && parseInt(inputElement.value) === 0) render();
       });
     }
   });
-
   window.currentFilteredData = fullData;
 }
 
