@@ -323,7 +323,7 @@ function render() {
 
     const qty = getQty(r);
     const repetidos = qty > 1 ? qty - 1 : 0;
-    const isEditingAllowed = isAdmin || isManager || targetRole !== 'cliente';
+    const isEditingAllowed = true;
     // Gera as opções da roda do celular (de 0 a 50 carros)
     let controlesHTML = '';
     let optionsHTML = '';
