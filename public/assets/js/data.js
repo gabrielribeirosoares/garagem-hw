@@ -1,10 +1,9 @@
 export const RAW = [
-
   {
     "year": 2026,
     "name": "Mazda MX-5 Miata",
     "series": "HW Dream Garage (1/5)",
-    "color": "",
+    "color": "Branco",
     "part": "JJJ02",
     "hw": "001",
     "cas": "",
@@ -14,7 +13,7 @@ export const RAW = [
     "year": 2026,
     "name": "Mazda MX-5 Miata (2nd Color)",
     "series": "HW Dream Garage (1/5)",
-    "color": "",
+    "color": "Azul",
     "part": "JJL03",
     "hw": "001",
     "cas": "",
@@ -24,7 +23,7 @@ export const RAW = [
     "year": 2026,
     "name": "'16 Lamborghini Centenario Roadster",
     "series": "Exoticars (1/10)",
-    "color": "",
+    "color": "Amarelo",
     "part": "JJH80",
     "hw": "002",
     "cas": "",
@@ -34,7 +33,7 @@ export const RAW = [
     "year": 2026,
     "name": "'16 Lamborghini Centenario Roadster (2nd Color)",
     "series": "Exoticars Kroger Exclusive (1/10)",
-    "color": "",
+    "color": "Cinza",
     "part": "JJM49",
     "hw": "002",
     "cas": "",
@@ -44,7 +43,7 @@ export const RAW = [
     "year": 2026,
     "name": "'16 Lamborghini Centenario Roadster (3rd Color)",
     "series": "Exoticars (1/10)",
-    "color": "",
+    "color": "Verde",
     "part": "JJK74",
     "hw": "002",
     "cas": "",
@@ -54,7 +53,7 @@ export const RAW = [
     "year": 2026,
     "name": "Gordon Murray Automotive T.33",
     "series": "Exoticars (2/10)",
-    "color": "",
+    "color": "Amarelo",
     "part": "JJJ62",
     "hw": "003",
     "cas": "",
@@ -114,7 +113,7 @@ export const RAW = [
     "year": 2026,
     "name": "RD-06",
     "series": "X-Raycers (1/5)",
-    "color": "",
+    "color": "Roxo",
     "part": "JJH84",
     "hw": "006",
     "cas": "",
@@ -124,7 +123,7 @@ export const RAW = [
     "year": 2026,
     "name": "RD-06 (2nd Color)",
     "series": "X-Raycers (1/5)",
-    "color": "",
+    "color": "Preto",
     "part": "JJK66",
     "hw": "006",
     "cas": "",
@@ -134,7 +133,7 @@ export const RAW = [
     "year": 2026,
     "name": "Solar Reflex",
     "series": "HW EV (1/10)",
-    "color": "",
+    "color": "Azul",
     "part": "JJH85",
     "hw": "007",
     "cas": "",
@@ -144,7 +143,7 @@ export const RAW = [
     "year": 2026,
     "name": "Solar Reflex (2nd Color)",
     "series": "HW EV (1/10)",
-    "color": "",
+    "color": "Azul",
     "part": "JJK67",
     "hw": "007",
     "cas": "",
@@ -3619,9 +3618,8 @@ export const RAW = [
     "hw": "",
     "cas": "",
     "image": "https://static.wikia.nocookie.net/hotwheels/images/b/b5/Image_Not_Available.jpg/revision/latest?cb=20151025125428"
-  }
-
- , {
+  },
+  {
     "year": 2025,
     "name": "Mazda MX-5 Miata",
     "series": "HW Dream Garage New for 2025! (2/5)",
@@ -8020,9 +8018,7 @@ export const RAW = [
     "hw": "250",
     "cas": "",
     "image": "https://static.wikia.nocookie.net/hotwheels/images/1/19/JJM42_1.jpg/revision/latest?cb=20260218152638"
-  }
-
-,
+  },
   {
     "year": 2024,
     "name": "Mazda Autozam",
@@ -12432,9 +12428,7 @@ export const RAW = [
     "hw": "250",
     "cas": "",
     "image": "https://static.wikia.nocookie.net/hotwheels/images/5/57/FordMustangDarkHorse.jpg/revision/latest?cb=20240825131057"
-  }
-
-  ,
+  },
   {
     "year": 2023,
     "name": "Volvo P1800 Gasser",
@@ -16884,9 +16878,7 @@ export const RAW = [
     "hw": "250",
     "cas": "",
     "image": "https://static.wikia.nocookie.net/hotwheels/images/8/88/McLarenSolusGT.jpg/revision/latest?cb=20230830102218"
-  }
-
-  ,
+  },
   {
     "year": 2022,
     "name": "1970 Pontiac Firebird",
@@ -21356,9 +21348,7 @@ export const RAW = [
     "hw": "250",
     "cas": "",
     "image": "https://static.wikia.nocookie.net/hotwheels/images/d/d6/2022TorinoMuscleMania.jpg/revision/latest?cb=20230209035706"
-  }
-
-  ,
+  },
   {
     "year": 2021,
     "name": "The Nash",
@@ -25908,9 +25898,7 @@ export const RAW = [
     "hw": "No #",
     "cas": "",
     "image": "https://static.wikia.nocookie.net/hotwheels/images/7/73/8of8_2021.jpg/revision/latest?cb=20211116165614"
-  }
-
-  ,
+  },
   {
     "year": 2020,
     "name": "2 Jet Z",
@@ -30460,9 +30448,7 @@ export const RAW = [
     "hw": "No #",
     "cas": "",
     "image": "https://static.wikia.nocookie.net/hotwheels/images/c/c3/2020IDChaseDodgeCharger.jpg/revision/latest?cb=20230218061417"
-  }
-
-  ,
+  },
   {
     "year": 2019,
     "name": "Nissan Skyline GT-R (BNR32)",
@@ -34952,9 +34938,7 @@ export const RAW = [
     "hw": "No #",
     "cas": "",
     "image": "https://static.wikia.nocookie.net/hotwheels/images/3/30/2019_Hot_Wheels_%2714_Corvette_Stingray_Barbie.jpg/revision/latest?cb=20190406102455"
-  }
-
-  ,
+  },
   {
     "year": 2018,
     "name": "Justice League Batmobile",
@@ -39644,9 +39628,7 @@ export const RAW = [
     "hw": "No #",
     "cas": "",
     "image": "https://static.wikia.nocookie.net/hotwheels/images/c/c5/Rally-cat-2018-gray.jpg/revision/latest?cb=20190311123744"
-  }
-
-  ,
+  },
   {
     "year": 2017,
     "name": "Aristo Rat",
@@ -44146,9 +44128,7 @@ export const RAW = [
     "hw": "No #",
     "cas": "",
     "image": "https://static.wikia.nocookie.net/hotwheels/images/7/7a/DSCN5112.jpg/revision/latest?cb=20170707162814"
-  }
-
-  ,
+  },
   {
     "year": 2016,
     "name": "Corvette C7.R",
@@ -48558,9 +48538,7 @@ export const RAW = [
     "hw": "No #",
     "cas": "",
     "image": "https://static.wikia.nocookie.net/hotwheels/images/6/67/Anthracite_Spring_Card.JPG/revision/latest?cb=20220302000827"
-  }
-
- ,
+  },
   {
     "year": 2015,
     "name": "Speed Dozer",
@@ -52930,9 +52908,7 @@ export const RAW = [
     "hw": "No #",
     "cas": "",
     "image": "https://static.wikia.nocookie.net/hotwheels/images/3/3d/GrowlerCFK13.jpg/revision/latest?cb=20150621183635"
-  }
-
-  ,
+  },
   {
     "year": 2014,
     "name": "Repo Duty",
@@ -57302,9 +57278,7 @@ export const RAW = [
     "hw": "No #",
     "cas": "",
     "image": "https://static.wikia.nocookie.net/hotwheels/images/3/35/Triumph_TR6-20454.jpg/revision/latest?cb=20141214191131"
-  }
-
-  ,
+  },
   {
     "year": 2013,
     "name": "'70 Toyota Celica",
@@ -61694,9 +61668,7 @@ export const RAW = [
     "hw": "No #",
     "cas": "",
     "image": "https://static.wikia.nocookie.net/hotwheels/images/5/54/Tesla_Roadster%2C_2013_HW_Showtoom.JPG/revision/latest?cb=20170227072748"
-  }
-
-  ,
+  },
   {
     "year": 2012,
     "name": "Troy Soldier",
@@ -65776,9 +65748,7 @@ export const RAW = [
     "hw": "No #",
     "cas": "",
     "image": "https://static.wikia.nocookie.net/hotwheels/images/a/ab/Rodzilla_year_of_the_dragon_2012.jpg/revision/latest?cb=20120802034212"
-  }
-
-  ,
+  },
   {
     "year": 2011,
     "name": "Danicar",
@@ -70268,9 +70238,7 @@ export const RAW = [
     "hw": "166",
     "cas": "",
     "image": "https://static.wikia.nocookie.net/hotwheels/images/5/5b/69_Charger_-_11MainSt-RL.JPG/revision/latest?cb=20110809051724"
-  }
-
-  ,
+  },
   {
     "year": 2010,
     "name": "'67 Shelby GT500",
@@ -74670,9 +74638,7 @@ export const RAW = [
     "hw": "209",
     "cas": "",
     "image": "https://static.wikia.nocookie.net/hotwheels/images/2/25/PhantomRacer_Volcano_purpleBFG.JPG/revision/latest?cb=20100404070130"
-  }
-
-  ,
+  },
   {
     "year": 2009,
     "name": "2009 Nissan GT-R",
@@ -78212,9 +78178,7 @@ export const RAW = [
     "hw": "121",
     "cas": "",
     "image": "https://static.wikia.nocookie.net/hotwheels/images/0/03/Custom_VW_Beetle_-_09_Heat_Fleet_GY5SP.jpg/revision/latest?cb=20100208052336"
-  }
-
-  ,
+  },
   {
     "year": 2008,
     "name": "'07 Shelby GT-500",
@@ -81794,9 +81758,7 @@ export const RAW = [
     "hw": "196",
     "cas": "",
     "image": "https://static.wikia.nocookie.net/hotwheels/images/1/17/Mystery_Car_Technetium_-_6513df.jpg/revision/latest?cb=20081127023730"
-  }
-,
-
+  },
   {
     "year": 2007,
     "name": "Dodge Challenger Concept",
@@ -84946,10 +84908,7 @@ export const RAW = [
     "hw": "180",
     "cas": "",
     "image": "https://static.wikia.nocookie.net/hotwheels/images/7/7b/Supercompdragster.jpg/revision/latest?cb=20090624163604"
-  }
-
-  ,
-
+  },
   {
     "year": 2006,
     "name": "'70 Plymouth Superbird",
@@ -88579,9 +88538,7 @@ export const RAW = [
     "hw": "223",
     "cas": "",
     "image": "https://static.wikia.nocookie.net/hotwheels/images/b/b8/VW_Bus_-_2006_Mystery.jpg/revision/latest?cb=20090607022549"
-  }
-
-  ,
+  },
   {
     "year": 2005,
     "name": "Ford Shelby Cobra Concept",
@@ -91461,8 +91418,7 @@ export const RAW = [
     "hw": "187",
     "cas": "",
     "image": "https://static.wikia.nocookie.net/hotwheels/images/3/39/Newbeetle.1.jpg/revision/latest?cb=20090601111900"
-  }
-  ,
+  },
   {
     "year": 2004,
     "name": "Batmobile",
@@ -94142,8 +94098,7 @@ export const RAW = [
     "hw": "210",
     "cas": "",
     "image": "https://static.wikia.nocookie.net/hotwheels/images/e/e3/IMG_20120308_110452.jpg/revision/latest?cb=20120323094925"
-  }
-  ,
+  },
   {
     "year": 2003,
     "name": "Hooligan",
@@ -96364,8 +96319,6 @@ export const RAW = [
     "cas": "",
     "image": "https://static.wikia.nocookie.net/hotwheels/images/a/ab/GM_Lean_Machine_FR.JPG/revision/latest?cb=20090104060903"
   },
-
-
   {
     "year": 2002,
     "name": "La Troca",
@@ -98796,9 +98749,6 @@ export const RAW = [
     "cas": "",
     "image": "https://static.wikia.nocookie.net/hotwheels/images/1/10/Firebird_Funny_Car_-_Final_Run.jpg/revision/latest?cb=20081203095752"
   },
-
-
-
   {
     "year": 2001,
     "name": "'65 Corvette",
@@ -101359,2460 +101309,2457 @@ export const RAW = [
     "cas": "",
     "image": "https://static.wikia.nocookie.net/hotwheels/images/f/fd/SheoBoxSamsClub.jpg/revision/latest?cb=20160615034432"
   },
-
-
-        {
-        "year": 2000,
-        "name": "Ford GT-90",
-        "series": "Future Fleet 2000 (1/4​)",
-        "color": "",
-        "part": "26004",
-        "hw": "001",
-        "cas": "",
-        "image": "https://static.wikia.nocookie.net/hotwheels/images/5/5a/Ford_GT-90_Blk.JPG/revision/latest"
-    },
-    {
-        "year": 2000,
-        "name": "Pontiac Rageous",
-        "series": "Future Fleet 2000 (2/4​)",
-        "color": "",
-        "part": "26005",
-        "hw": "002",
-        "cas": "",
-        "image": "https://static.wikia.nocookie.net/hotwheels/images/a/a2/Pontiac_Rageous_Blk.JPG/revision/latest"
-    },
-    {
-        "year": 2000,
-        "name": "Jeepster",
-        "series": "Future Fleet 2000 (3/4​)",
-        "color": "",
-        "part": "26006",
-        "hw": "003",
-        "cas": "",
-        "image": "https://static.wikia.nocookie.net/hotwheels/images/7/7f/Jeepster_Blk.JPG/revision/latest"
-    },
-    {
-        "year": 2000,
-        "name": "Chrysler Thunderbolt",
-        "series": "Future Fleet 2000 (4/4​)",
-        "color": "",
-        "part": "26007",
-        "hw": "004",
-        "cas": "",
-        "image": "https://static.wikia.nocookie.net/hotwheels/images/2/2e/Chrysler_Thunderbolt_CD.JPG/revision/latest"
-    },
-    {
-        "year": 2000,
-        "name": "Phaeton",
-        "series": "Hot Rod Magazine (1/4​)",
-        "color": "",
-        "part": "26016",
-        "hw": "005",
-        "cas": "",
-        "image": "https://static.wikia.nocookie.net/hotwheels/images/5/5a/Phaeton_Red.JPG/revision/latest"
-    },
-    {
-        "year": 2000,
-        "name": "Track T",
-        "series": "Hot Rod Magazine (2/4​)",
-        "color": "",
-        "part": "26017",
-        "hw": "006",
-        "cas": "",
-        "image": "https://static.wikia.nocookie.net/hotwheels/images/a/af/TrackT_YelSB.JPG/revision/latest"
-    },
-    {
-        "year": 2000,
-        "name": "Tail Dragger",
-        "series": "Hot Rod Magazine (3/4​)",
-        "color": "",
-        "part": "26018",
-        "hw": "007",
-        "cas": "",
-        "image": "https://static.wikia.nocookie.net/hotwheels/images/e/e4/Tail_Dragger_Wht.JPG/revision/latest"
-    },
-    {
-        "year": 2000,
-        "name": "'33 Ford Roadster",
-        "series": "Hot Rod Magazine\nNew In Mainline (4/4​)",
-        "color": "",
-        "part": "26019",
-        "hw": "008",
-        "cas": "",
-        "image": "https://static.wikia.nocookie.net/hotwheels/images/f/fe/33_Ford_Roadster_Grn.JPG/revision/latest"
-    },
-    {
-        "year": 2000,
-        "name": "Propper Chopper",
-        "series": "Seein' 3-D (1/4​)",
-        "color": "",
-        "part": "26008",
-        "hw": "009",
-        "cas": "",
-        "image": "https://static.wikia.nocookie.net/hotwheels/images/7/75/Propperchopper.jpg/revision/latest"
-    },
-    {
-        "year": 2000,
-        "name": "1970 Dodge Charger Daytona",
-        "series": "Seein' 3-D (2/4​)",
-        "color": "",
-        "part": "26009",
-        "hw": "010",
-        "cas": "",
-        "image": "https://static.wikia.nocookie.net/hotwheels/images/9/98/1970_Daytona_Blu5sp.JPG/revision/latest"
-    },
-    {
-        "year": 2000,
-        "name": "Lexus SC400",
-        "series": "Seein' 3-D (3/4​)",
-        "color": "",
-        "part": "26010",
-        "hw": "011",
-        "cas": "",
-        "image": "https://static.wikia.nocookie.net/hotwheels/images/0/04/Lexussc400.jpg/revision/latest"
-    },
-    {
-        "year": 2000,
-        "name": "Olds 442",
-        "series": "Seein' 3-D (4/4​)",
-        "color": "",
-        "part": "26011",
-        "hw": "012",
-        "cas": "",
-        "image": "https://static.wikia.nocookie.net/hotwheels/images/2/2f/Olds_442_W-30_MtGrn.JPG/revision/latest"
-    },
-    {
-        "year": 2000,
-        "name": "Callaway C7",
-        "series": "Snack Time (1/4​)",
-        "color": "",
-        "part": "26012",
-        "hw": "013",
-        "cas": "",
-        "image": "https://static.wikia.nocookie.net/hotwheels/images/3/31/Callaway_C7_MtGrn5SP.JPG/revision/latest"
-    },
-    {
-        "year": 2000,
-        "name": "Firebird",
-        "series": "Snack Time (2/4​)",
-        "color": "",
-        "part": "26013",
-        "hw": "014",
-        "cas": "",
-        "image": "https://static.wikia.nocookie.net/hotwheels/images/b/b2/IROC_Firebird_Org.JPG/revision/latest"
-    },
-    {
-        "year": 2000,
-        "name": "Monte Carlo Concept Car",
-        "series": "Snack Time (3/4​)",
-        "color": "",
-        "part": "26014",
-        "hw": "015",
-        "cas": "",
-        "image": "https://static.wikia.nocookie.net/hotwheels/images/b/bd/Monte_Carlo_Concept_Blu.JPG/revision/latest"
-    },
-    {
-        "year": 2000,
-        "name": "Dodge Sidewinder",
-        "series": "Snack Time (4/4​)",
-        "color": "",
-        "part": "26015",
-        "hw": "016",
-        "cas": "",
-        "image": "https://static.wikia.nocookie.net/hotwheels/images/f/f1/Dodge_Sidwinder_Yel.JPG/revision/latest"
-    },
-    {
-        "year": 2000,
-        "name": "Hot Wheels 500",
-        "series": "Mad Maniax (1/4​)",
-        "color": "",
-        "part": "26020",
-        "hw": "017",
-        "cas": "",
-        "image": "https://static.wikia.nocookie.net/hotwheels/images/0/02/No_Fear_Race_Car_Blu.JPG/revision/latest"
-    },
-    {
-        "year": 2000,
-        "name": "Camaro Z-28",
-        "series": "Mad Maniax (2/4​)",
-        "color": "",
-        "part": "26021",
-        "hw": "018",
-        "cas": "",
-        "image": "https://static.wikia.nocookie.net/hotwheels/images/8/8d/Camaro_Z28_Silv.JPG/revision/latest"
-    },
-    {
-        "year": 2000,
-        "name": "Slideout",
-        "series": "Mad Maniax (3/4​)",
-        "color": "",
-        "part": "26022",
-        "hw": "019",
-        "cas": "",
-        "image": "https://static.wikia.nocookie.net/hotwheels/images/c/ce/SlideOut_Blk.JPG/revision/latest"
-    },
-    {
-        "year": 2000,
-        "name": "Twin Mill II",
-        "series": "Mad Maniax (4/4​)",
-        "color": "",
-        "part": "26023",
-        "hw": "020",
-        "cas": "",
-        "image": "https://static.wikia.nocookie.net/hotwheels/images/c/c7/Twin_Mill_II_Org.JPG/revision/latest"
-    },
-    {
-        "year": 2000,
-        "name": "Nissan Truck",
-        "series": "Attack Pack (1/4​)",
-        "color": "",
-        "part": "26024",
-        "hw": "021",
-        "cas": "",
-        "image": "https://static.wikia.nocookie.net/hotwheels/images/3/31/Nissan_Hardbody_Brn.JPG/revision/latest"
-    },
-    {
-        "year": 2000,
-        "name": "Power Plower",
-        "series": "Attack Pack (2/4​)",
-        "color": "",
-        "part": "26025",
-        "hw": "022",
-        "cas": "",
-        "image": "https://static.wikia.nocookie.net/hotwheels/images/e/ef/Bywayman_Purpl.JPG/revision/latest"
-    },
-    {
-        "year": 2000,
-        "name": "'79 Ford F-150",
-        "series": "Attack Pack (3/4​)",
-        "color": "",
-        "part": "26026",
-        "hw": "023",
-        "cas": "",
-        "image": "https://static.wikia.nocookie.net/hotwheels/images/2/2a/Fordf150.jpg/revision/latest"
-    },
-    {
-        "year": 2000,
-        "name": "Dodge Ram 1500",
-        "series": "Attack Pack (4/4​)",
-        "color": "",
-        "part": "26027",
-        "hw": "024",
-        "cas": "",
-        "image": "https://static.wikia.nocookie.net/hotwheels/images/c/c3/Ford_F-150_MtDkRd.JPG/revision/latest"
-    },
-    {
-        "year": 2000,
-        "name": "'56 Flashsider",
-        "series": "Circus on Wheels Series (1/4​)",
-        "color": "",
-        "part": "26028",
-        "hw": "025",
-        "cas": "",
-        "image": "https://static.wikia.nocookie.net/hotwheels/images/1/16/56_Flashsider_MtRedL.JPG/revision/latest"
-    },
-    {
-        "year": 2000,
-        "name": "'32 Ford Delivery",
-        "series": "Circus on Wheels Series (2/4​)",
-        "color": "",
-        "part": "26029",
-        "hw": "026",
-        "cas": "",
-        "image": "https://static.wikia.nocookie.net/hotwheels/images/2/25/%2732_Ford_Delivery_Circus.jpg/revision/latest"
-    },
-    {
-        "year": 2000,
-        "name": "Fat Fendered '40",
-        "series": "Circus on Wheels Series (3/4​)",
-        "color": "",
-        "part": "26030",
-        "hw": "027",
-        "cas": "",
-        "image": "https://static.wikia.nocookie.net/hotwheels/images/7/71/%2740%27s_Ford_2-Door_Blu.JPG/revision/latest"
-    },
-    {
-        "year": 2000,
-        "name": "Dairy Delivery",
-        "series": "Circus on Wheels Series (4/4​)",
-        "color": "",
-        "part": "26031",
-        "hw": "028",
-        "cas": "",
-        "image": "https://static.wikia.nocookie.net/hotwheels/images/a/a6/Dairy_Delivery_Circus_2000_-_2820gf.jpg/revision/latest"
-    },
-    {
-        "year": 2000,
-        "name": "Chrysler Pronto",
-        "series": "CD Customs Series (1/4​)",
-        "color": "",
-        "part": "26032",
-        "hw": "029",
-        "cas": "",
-        "image": "https://static.wikia.nocookie.net/hotwheels/images/f/ff/Chrysler_Pronto_Grn.JPG/revision/latest"
-    },
-    {
-        "year": 2000,
-        "name": "Pikes Peak Tacoma",
-        "series": "CD Customs Series (2/4​)",
-        "color": "",
-        "part": "26033",
-        "hw": "030",
-        "cas": "",
-        "image": "https://static.wikia.nocookie.net/hotwheels/images/0/00/Pikes_Peak_Tacoma_Blk.JPG/revision/latest"
-    },
-    {
-        "year": 2000,
-        "name": "Shadow Mk IIa",
-        "series": "CD Customs Series (3/4​)",
-        "color": "",
-        "part": "26034",
-        "hw": "031",
-        "cas": "",
-        "image": "https://static.wikia.nocookie.net/hotwheels/images/b/bc/Shadow_Mk_II_Wht.JPG/revision/latest"
-    },
-    {
-        "year": 2000,
-        "name": "Pontiac Banshee",
-        "series": "CD Customs Series (4/4​)",
-        "color": "",
-        "part": "26035",
-        "hw": "032",
-        "cas": "",
-        "image": "https://static.wikia.nocookie.net/hotwheels/images/8/84/Pontiac_Banshee_CDL.JPG/revision/latest"
-    },
-    {
-        "year": 2000,
-        "name": "Toyota MR2",
-        "series": "Kung Fu Force series (1/4​)",
-        "color": "",
-        "part": "26036",
-        "hw": "033",
-        "cas": "",
-        "image": "https://static.wikia.nocookie.net/hotwheels/images/3/38/Toyota_Rally_Blk3sp.JPG/revision/latest"
-    },
-    {
-        "year": 2000,
-        "name": "'99 Mustang",
-        "series": "Kung Fu Force series (2/4​)",
-        "color": "",
-        "part": "26037",
-        "hw": "034",
-        "cas": "",
-        "image": "https://static.wikia.nocookie.net/hotwheels/images/c/c6/99_Mustang_Red.JPG/revision/latest"
-    },
-    {
-        "year": 2000,
-        "name": "Shadow Jet II",
-        "series": "Kung Fu Force series (3/4​)",
-        "color": "",
-        "part": "26038",
-        "hw": "035",
-        "cas": "",
-        "image": "https://static.wikia.nocookie.net/hotwheels/images/2/2b/Shadow_Jet_II_Blu.JPG/revision/latest"
-    },
-    {
-        "year": 2000,
-        "name": "Mini Truck",
-        "series": "Kung Fu Force series (4/4​)",
-        "color": "",
-        "part": "26039",
-        "hw": "036",
-        "cas": "",
-        "image": "https://static.wikia.nocookie.net/hotwheels/images/2/26/Minitruck_MtGrn.JPG/revision/latest"
-    },
-    {
-        "year": 2000,
-        "name": "Firebird Funny Car",
-        "series": "Speed Blaster Series (1/4​)",
-        "color": "",
-        "part": "26040",
-        "hw": "037",
-        "cas": "",
-        "image": "https://static.wikia.nocookie.net/hotwheels/images/2/2f/FireBird_Funny_1997_Org.JPG/revision/latest"
-    },
-    {
-        "year": 2000,
-        "name": "At-A-Tude",
-        "series": "Speed Blaster Series (2/4​)",
-        "color": "",
-        "part": "26041",
-        "hw": "038",
-        "cas": "",
-        "image": "https://static.wikia.nocookie.net/hotwheels/images/b/ba/At-A-Tude_Gry.JPG/revision/latest"
-    },
-    {
-        "year": 2000,
-        "name": "Mustang Cobra",
-        "series": "Speed Blaster Series (3/4​)",
-        "color": "",
-        "part": "26042",
-        "hw": "039",
-        "cas": "",
-        "image": "https://static.wikia.nocookie.net/hotwheels/images/3/3d/Mustang_Cobra_Blu.JPG/revision/latest"
-    },
-    {
-        "year": 2000,
-        "name": "Shelby Cobra 427 S/C",
-        "series": "Speed Blaster Series (4/4​)",
-        "color": "",
-        "part": "26043",
-        "hw": "040",
-        "cas": "",
-        "image": "https://static.wikia.nocookie.net/hotwheels/images/4/44/Shelbycobra.white.jpg/revision/latest"
-    },
-    {
-        "year": 2000,
-        "name": "Rigor Motor",
-        "series": "Tony Hawk Skate Series (1/4​)",
-        "color": "",
-        "part": "26044",
-        "hw": "041",
-        "cas": "",
-        "image": "https://static.wikia.nocookie.net/hotwheels/images/7/76/Rigor_Motor_Blu.JPG/revision/latest"
-    },
-    {
-        "year": 2000,
-        "name": "Sol-Aire CX4",
-        "series": "Tony Hawk Skate Series (2/4​)",
-        "color": "",
-        "part": "26045",
-        "hw": "042",
-        "cas": "",
-        "image": "https://static.wikia.nocookie.net/hotwheels/images/3/38/Sol-Aire_Wht3SP.JPG/revision/latest"
-    },
-    {
-        "year": 2000,
-        "name": "Speed Blaster",
-        "series": "Tony Hawk Skate Series (3/4​)",
-        "color": "",
-        "part": "26046",
-        "hw": "043",
-        "cas": "",
-        "image": "https://static.wikia.nocookie.net/hotwheels/images/1/10/Speed_Blaster_Org.JPG/revision/latest"
-    },
-    {
-        "year": 2000,
-        "name": "Combat Medic",
-        "series": "Tony Hawk Skate Series (4/4​)",
-        "color": "",
-        "part": "26047",
-        "hw": "044",
-        "cas": "",
-        "image": "https://static.wikia.nocookie.net/hotwheels/images/7/73/Tony_Hawk_Combat_Medic_-_6062df.jpg/revision/latest"
-    },
-    {
-        "year": 2000,
-        "name": "Fiat 500C",
-        "series": "Secret Code Series (1/4​)",
-        "color": "",
-        "part": "26048",
-        "hw": "045",
-        "cas": "",
-        "image": "https://static.wikia.nocookie.net/hotwheels/images/4/4b/Fiat_500_Red.JPG/revision/latest"
-    },
-    {
-        "year": 2000,
-        "name": "Baby Boomer",
-        "series": "Secret Code Series (2/4​)",
-        "color": "",
-        "part": "26049",
-        "hw": "046",
-        "cas": "",
-        "image": "https://static.wikia.nocookie.net/hotwheels/images/f/f8/Baby_Bommer_Blu.JPG/revision/latest"
-    },
-    {
-        "year": 2000,
-        "name": "Tee'd Off",
-        "series": "Secret Code Series (3/4​)",
-        "color": "",
-        "part": "26050",
-        "hw": "047",
-        "cas": "",
-        "image": "https://static.wikia.nocookie.net/hotwheels/images/a/a4/Teed_Off_-_00_Secret_Code.jpg/revision/latest"
-    },
-    {
-        "year": 2000,
-        "name": "Screamin' Hauler",
-        "series": "Secret Code Series (4/4​)",
-        "color": "",
-        "part": "26051",
-        "hw": "048",
-        "cas": "",
-        "image": "https://static.wikia.nocookie.net/hotwheels/images/9/9c/Screamin_Hauler_Yel.JPG/revision/latest"
-    },
-    {
-        "year": 2000,
-        "name": "Double Vision",
-        "series": "2000 Treasure Hunts (01/12​)",
-        "color": "",
-        "part": "26371",
-        "hw": "049",
-        "cas": "",
-        "image": "https://static.wikia.nocookie.net/hotwheels/images/a/ae/Double_Vision_-_00TH.jpg/revision/latest"
-    },
-    {
-        "year": 2000,
-        "name": "Tow Jam",
-        "series": "2000 Treasure Hunts (02/12​)",
-        "color": "",
-        "part": "26372",
-        "hw": "050",
-        "cas": "",
-        "image": "https://static.wikia.nocookie.net/hotwheels/images/0/03/Tow_Jam_-_00TH.jpg/revision/latest"
-    },
-    {
-        "year": 2000,
-        "name": "1936 Cord",
-        "series": "2000 Treasure Hunts (03/12​)",
-        "color": "",
-        "part": "26373",
-        "hw": "051",
-        "cas": "",
-        "image": "https://static.wikia.nocookie.net/hotwheels/images/d/d0/36_Cord_-_00TH_WW.jpg/revision/latest"
-    },
-    {
-        "year": 2000,
-        "name": "Sweet 16 II",
-        "series": "2000 Treasure Hunts (04/12​)",
-        "color": "",
-        "part": "26374",
-        "hw": "052",
-        "cas": "",
-        "image": "https://static.wikia.nocookie.net/hotwheels/images/b/ba/Sweet_16_II_-_00TH.jpg/revision/latest"
-    },
-    {
-        "year": 2000,
-        "name": "Lakester",
-        "series": "2000 Treasure Hunts (05/12​)",
-        "color": "",
-        "part": "26375",
-        "hw": "053",
-        "cas": "",
-        "image": "https://static.wikia.nocookie.net/hotwheels/images/d/db/Lakester_-_00TH.jpg/revision/latest"
-    },
-    {
-        "year": 2000,
-        "name": "Go Kart",
-        "series": "2000 Treasure Hunts (06/12​)",
-        "color": "",
-        "part": "26376",
-        "hw": "054",
-        "cas": "",
-        "image": "https://static.wikia.nocookie.net/hotwheels/images/3/38/Go_Kart_-_00TH.jpg/revision/latest"
-    },
-    {
-        "year": 2000,
-        "name": "Chaparral 2",
-        "series": "2000 Treasure Hunts (07/12​)",
-        "color": "",
-        "part": "26377",
-        "hw": "055",
-        "cas": "",
-        "image": "https://static.wikia.nocookie.net/hotwheels/images/4/4e/Chaparral_2_-_00TH.jpg/revision/latest"
-    },
-    {
-        "year": 2000,
-        "name": "'57 T-Bird",
-        "series": "2000 Treasure Hunts (08/12​)",
-        "color": "",
-        "part": "26378",
-        "hw": "056",
-        "cas": "",
-        "image": "https://static.wikia.nocookie.net/hotwheels/images/0/09/57_T-Bird_-_00TH.jpg/revision/latest"
-    },
-    {
-        "year": 2000,
-        "name": "Pikes Peak Celica",
-        "series": "2000 Treasure Hunts (09/12​)",
-        "color": "",
-        "part": "26379",
-        "hw": "057",
-        "cas": "",
-        "image": "https://static.wikia.nocookie.net/hotwheels/images/4/4a/Pikes_Peak_Celica_-_00TH.jpg/revision/latest"
-    },
-    {
-        "year": 2000,
-        "name": "'67 Pontiac GTO",
-        "series": "2000 Treasure Hunts (10/12​)",
-        "color": "",
-        "part": "26380",
-        "hw": "058",
-        "cas": "",
-        "image": "https://static.wikia.nocookie.net/hotwheels/images/8/8e/67_GTO_-_00TH.jpg/revision/latest"
-    },
-    {
-        "year": 2000,
-        "name": "Ford GT-40",
-        "series": "2000 Treasure Hunts (11/12​)",
-        "color": "",
-        "part": "26381",
-        "hw": "059",
-        "cas": "",
-        "image": "https://static.wikia.nocookie.net/hotwheels/images/d/d3/Ford_GT-40_-_00TH.jpg/revision/latest"
-    },
-    {
-        "year": 2000,
-        "name": "1970 Chevelle SS",
-        "series": "2000 Treasure Hunts (12/12​)",
-        "color": "",
-        "part": "26382",
-        "hw": "060",
-        "cas": "",
-        "image": "https://static.wikia.nocookie.net/hotwheels/images/e/ea/70_Chevelle_SS_-_00TH.jpg/revision/latest"
-    },
-    {
-        "year": 2000,
-        "name": "Ferrari 365 GTB/4",
-        "series": "2000 First Editions (01/36​)",
-        "color": "",
-        "part": "23928",
-        "hw": "061",
-        "cas": "",
-        "image": "https://static.wikia.nocookie.net/hotwheels/images/6/65/Ferrari_365_GTB.JPG/revision/latest"
-    },
-    {
-        "year": 2000,
-        "name": "Ferrari 550 Maranello",
-        "series": "2000 First Editions (02/36​)",
-        "color": "",
-        "part": "23929",
-        "hw": "062",
-        "cas": "",
-        "image": "https://static.wikia.nocookie.net/hotwheels/images/7/75/Ferrari550Maranello.jpg/revision/latest"
-    },
-    {
-        "year": 2000,
-        "name": "1964 Lincoln Continental",
-        "series": "2000 First Editions (03/36​)",
-        "color": "",
-        "part": "24366",
-        "hw": "063",
-        "cas": "",
-        "image": "https://static.wikia.nocookie.net/hotwheels/images/b/b8/64_Lincoln_Wht.JPG/revision/latest"
-    },
-    {
-        "year": 2000,
-        "name": "Pro Stock Firebird",
-        "series": "2000 First Editions (04/36​)",
-        "color": "",
-        "part": "24368",
-        "hw": "064",
-        "cas": "",
-        "image": "https://static.wikia.nocookie.net/hotwheels/images/5/50/Pro_Stock_Firebird_Yel.JPG/revision/latest"
-    },
-    {
-        "year": 2000,
-        "name": "Deora II",
-        "series": "2000 First Editions (05/36​)",
-        "color": "",
-        "part": "24369",
-        "hw": "065",
-        "cas": "",
-        "image": "https://static.wikia.nocookie.net/hotwheels/images/3/32/2000_First_Edition_Deora_II-BBB01.jpg/revision/latest"
-    },
-    {
-        "year": 2000,
-        "name": "Deuce Roadster",
-        "series": "2000 First Editions (06/36​)",
-        "color": "",
-        "part": "24389",
-        "hw": "066",
-        "cas": "",
-        "image": "https://static.wikia.nocookie.net/hotwheels/images/b/ba/Deuce_Roadster_UnP.JPG/revision/latest"
-    },
-    {
-        "year": 2000,
-        "name": "Chevy Pro Stock Truck",
-        "series": "2000 First Editions (07/36​)",
-        "color": "",
-        "part": "24370",
-        "hw": "067",
-        "cas": "",
-        "image": "https://static.wikia.nocookie.net/hotwheels/images/b/b4/Chevy_Pro_Stock_Truck_Org.JPG/revision/latest"
-    },
-    {
-        "year": 2000,
-        "name": "'68 El Camino",
-        "series": "2000 First Editions (08/36​)",
-        "color": "",
-        "part": "24371",
-        "hw": "068",
-        "cas": "",
-        "image": "https://static.wikia.nocookie.net/hotwheels/images/8/81/69_El_Camino_Wht.JPG/revision/latest"
-    },
-    {
-        "year": 2000,
-        "name": "Phantastique",
-        "series": "2000 First Editions (09/36​)",
-        "color": "",
-        "part": "24373",
-        "hw": "069",
-        "cas": "",
-        "image": "https://static.wikia.nocookie.net/hotwheels/images/4/4d/Phantastique_Blu.JPG/revision/latest"
-    },
-    {
-        "year": 2000,
-        "name": "Thomassima 3",
-        "series": "2000 First Editions (10/36​)",
-        "color": "",
-        "part": "24367",
-        "hw": "070",
-        "cas": "",
-        "image": "https://static.wikia.nocookie.net/hotwheels/images/6/62/Thomassima_3_LW.JPG/revision/latest"
-    },
-    {
-        "year": 2000,
-        "name": "Ferrari 333 SP",
-        "series": "2000 First Editions (11/36​)",
-        "color": "",
-        "part": "24374",
-        "hw": "071",
-        "cas": "",
-        "image": "https://static.wikia.nocookie.net/hotwheels/images/4/4e/Ferrari_333_SP_01.jpg/revision/latest"
-    },
-    {
-        "year": 2000,
-        "name": "Dodge Charger R/T",
-        "series": "2000 First Editions (12/36​)",
-        "color": "",
-        "part": "24377",
-        "hw": "072",
-        "cas": "",
-        "image": "https://static.wikia.nocookie.net/hotwheels/images/d/dd/Dodge_Charger_RT5sp.JPG/revision/latest"
-    },
-    {
-        "year": 2000,
-        "name": "Surf Crate",
-        "series": "2000 First Editions (13/36​)",
-        "color": "",
-        "part": "24378",
-        "hw": "073",
-        "cas": "",
-        "image": "https://static.wikia.nocookie.net/hotwheels/images/1/11/Surf_Crate_Prp.JPG/revision/latest"
-    },
-    {
-        "year": 2000,
-        "name": "'41 Willys",
-        "series": "2000 First Editions (14/36​)",
-        "color": "",
-        "part": "24383",
-        "hw": "074",
-        "cas": "",
-        "image": "https://static.wikia.nocookie.net/hotwheels/images/2/22/41willyscoupe.jpg/revision/latest"
-    },
-    {
-        "year": 2000,
-        "name": "Lotus Elise 340R",
-        "series": "2000 First Editions (15/36​)",
-        "color": "",
-        "part": "24388",
-        "hw": "075",
-        "cas": "",
-        "image": "https://static.wikia.nocookie.net/hotwheels/images/c/c1/Lotus_Elise_340R_Slv.JPG/revision/latest"
-    },
-    {
-        "year": 2000,
-        "name": "1999 Isuzu VehiCROSS",
-        "series": "2000 First Editions (16/36​)",
-        "color": "",
-        "part": "24392",
-        "hw": "076",
-        "cas": "",
-        "image": "https://static.wikia.nocookie.net/hotwheels/images/c/c7/Isuzu_VehiCross_Slv.JPG/revision/latest"
-    },
-    {
-        "year": 2000,
-        "name": "Anglia Panel Truck",
-        "series": "2000 First Editions (17/36​)",
-        "color": "",
-        "part": "24397",
-        "hw": "077",
-        "cas": "",
-        "image": "https://static.wikia.nocookie.net/hotwheels/images/b/ba/Anglia_Panel_Truck_Prp.JPG/revision/latest"
-    },
-    {
-        "year": 2000,
-        "name": "So Fine",
-        "series": "2000 First Editions (18/36​)",
-        "color": "",
-        "part": "24400",
-        "hw": "078",
-        "cas": "",
-        "image": "https://static.wikia.nocookie.net/hotwheels/images/d/dc/Sofine.jpg/revision/latest"
-    },
-    {
-        "year": 2000,
-        "name": "'65 Vette",
-        "series": "2000 First Editions (19/36​)",
-        "color": "",
-        "part": "24372",
-        "hw": "079",
-        "cas": "",
-        "image": "https://static.wikia.nocookie.net/hotwheels/images/4/49/65_Vette_AGENTAIR_1.jpg/revision/latest"
-    },
-    {
-        "year": 2000,
-        "name": "MX48 Turbo",
-        "series": "2000 First Editions (20/26​)",
-        "color": "",
-        "part": "24375",
-        "hw": "080",
-        "cas": "",
-        "image": "https://static.wikia.nocookie.net/hotwheels/images/1/1f/MX48_Turbo_Blu.JPG/revision/latest"
-    },
-    {
-        "year": 2000,
-        "name": "Holden",
-        "series": "2000 First Editions (21/36​)",
-        "color": "",
-        "part": "24376",
-        "hw": "081",
-        "cas": "",
-        "image": "https://static.wikia.nocookie.net/hotwheels/images/7/75/Holden_SS_Commodore_VT.JPG/revision/latest"
-    },
-    {
-        "year": 2000,
-        "name": "Cabbin' Fever",
-        "series": "2000 First Editions (22/36​)",
-        "color": "",
-        "part": "24379",
-        "hw": "082",
-        "cas": "",
-        "image": "https://static.wikia.nocookie.net/hotwheels/images/3/35/2000_Cabin_First_Edition.jpg/revision/latest"
-    },
-    {
-        "year": 2000,
-        "name": "Metrorail",
-        "series": "2000 First Editions (23/36​)",
-        "color": "",
-        "part": "24384",
-        "hw": "083",
-        "cas": "",
-        "image": "https://static.wikia.nocookie.net/hotwheels/images/9/98/FE_Metrorail.jpg/revision/latest"
-    },
-    {
-        "year": 2000,
-        "name": "Muscle Tone",
-        "series": "2000 First Editions (24/36​)",
-        "color": "",
-        "part": "24390",
-        "hw": "084",
-        "cas": "",
-        "image": "https://static.wikia.nocookie.net/hotwheels/images/9/9f/Muscle_Tone_00FE.jpg/revision/latest"
-    },
-    {
-        "year": 2000,
-        "name": "Dodge Power Wagon",
-        "series": "2000 First Editions (25/36​)",
-        "color": "",
-        "part": "24393",
-        "hw": "085",
-        "cas": "",
-        "image": "https://static.wikia.nocookie.net/hotwheels/images/d/db/Dodge_Power_Wagon.JPG/revision/latest"
-    },
-    {
-        "year": 2000,
-        "name": "Shoe Box",
-        "series": "2000 First Editions (26/36​)",
-        "color": "",
-        "part": "24395",
-        "hw": "086",
-        "cas": "",
-        "image": "https://static.wikia.nocookie.net/hotwheels/images/b/b5/ShoeBoxHiLBest.jpg/revision/latest"
-    },
-    {
-        "year": 2000,
-        "name": "Sho-Stopper",
-        "series": "2000 First Editions (27/36​)",
-        "color": "",
-        "part": "24396",
-        "hw": "087",
-        "cas": "",
-        "image": "https://static.wikia.nocookie.net/hotwheels/images/c/c7/Seared_Tuner_-_00FE_3SP.JPG/revision/latest"
-    },
-    {
-        "year": 2000,
-        "name": "'67 Dodge Charger",
-        "series": "2000 First Editions (28/36​)",
-        "color": "",
-        "part": "24381",
-        "hw": "088",
-        "cas": "",
-        "image": "https://static.wikia.nocookie.net/hotwheels/images/4/4c/%2767_Charger.JPG/revision/latest"
-    },
-    {
-        "year": 2000,
-        "name": "Vulture",
-        "series": "2000 First Editions (29/36​)",
-        "color": "",
-        "part": "24382",
-        "hw": "089",
-        "cas": "",
-        "image": "https://static.wikia.nocookie.net/hotwheels/images/c/ca/Vulture5sp.JPG/revision/latest"
-    },
-    {
-        "year": 2000,
-        "name": "Mini Cooper",
-        "series": "2000 First Editions (30/36​)",
-        "color": "",
-        "part": "24386",
-        "hw": "090",
-        "cas": "",
-        "image": "https://static.wikia.nocookie.net/hotwheels/images/d/d6/Mini_-_00_FE.jpg/revision/latest"
-    },
-    {
-        "year": 2000,
-        "name": "Roll Cage",
-        "series": "2000 First Editions (31/36​)",
-        "color": "",
-        "part": "24387",
-        "hw": "091",
-        "cas": "",
-        "image": "https://static.wikia.nocookie.net/hotwheels/images/4/4c/Roll_Cage_Yel.JPG/revision/latest"
-    },
-    {
-        "year": 2000,
-        "name": "Austin Healey",
-        "series": "2000 First Editions (32/36​)",
-        "color": "",
-        "part": "24391",
-        "hw": "092",
-        "cas": "",
-        "image": "https://static.wikia.nocookie.net/hotwheels/images/0/06/Austinhealy2000.jpg/revision/latest"
-    },
-    {
-        "year": 2000,
-        "name": "Hammered Coupe",
-        "series": "2000 First Editions (33/36​)",
-        "color": "",
-        "part": "24394",
-        "hw": "093",
-        "cas": "",
-        "image": "https://static.wikia.nocookie.net/hotwheels/images/5/5c/Hammered_Coupe_Prp.JPG/revision/latest"
-    },
-    {
-        "year": 2000,
-        "name": "Arachnorod",
-        "series": "2000 First Editions (34/36​)",
-        "color": "",
-        "part": "24398",
-        "hw": "094",
-        "cas": "",
-        "image": "https://static.wikia.nocookie.net/hotwheels/images/c/c1/Arachnorod.JPG/revision/latest"
-    },
-    {
-        "year": 2000,
-        "name": "Greased Lightnin'",
-        "series": "2000 First Editions (35/36​)",
-        "color": "",
-        "part": "24399",
-        "hw": "095",
-        "cas": "",
-        "image": "https://static.wikia.nocookie.net/hotwheels/images/4/4c/Greased_Lightning_5sp.JPG/revision/latest"
-    },
-    {
-        "year": 2000,
-        "name": "Blast Lane",
-        "series": "2000 First Editions (36/36​)",
-        "color": "",
-        "part": "27497",
-        "hw": "096",
-        "cas": "",
-        "image": "https://static.wikia.nocookie.net/hotwheels/images/6/67/BlastLProRor.jpg/revision/latest"
-    },
-    {
-        "year": 2000,
-        "name": "1936 Cord",
-        "series": "2000 Virtual Collection (LIV42DA)",
-        "color": "",
-        "part": "27064",
-        "hw": "097",
-        "cas": "",
-        "image": "https://static.wikia.nocookie.net/hotwheels/images/6/6c/1936_Cord_Grn.JPG/revision/latest"
-    },
-    {
-        "year": 2000,
-        "name": "Hot Seat",
-        "series": "2000 Virtual Collection (XLR82XS)",
-        "color": "",
-        "part": "27068",
-        "hw": "101",
-        "cas": "",
-        "image": "https://static.wikia.nocookie.net/hotwheels/images/4/4a/Th_HotSeat016.jpg/revision/latest"
-    },
-    {
-        "year": 2000,
-        "name": "Tractor",
-        "series": "2000 Virtual Collection (IW84NO1)",
-        "color": "",
-        "part": "27070",
-        "hw": "103",
-        "cas": "",
-        "image": "https://static.wikia.nocookie.net/hotwheels/images/f/fc/Tractor_GrnBlk.JPG/revision/latest"
-    },
-    {
-        "year": 2000,
-        "name": "Speed-A-Saurus",
-        "series": "2000 Virtual Collection (SPDGTKT)",
-        "color": "",
-        "part": "27071",
-        "hw": "104",
-        "cas": "",
-        "image": "https://static.wikia.nocookie.net/hotwheels/images/a/a4/Speed_A-Saurus_BrtGrn.JPG/revision/latest"
-    },
-    {
-        "year": 2000,
-        "name": "Monte Carlo Concept Car",
-        "series": "2000 Virtual Collection (2KUL4U)",
-        "color": "",
-        "part": "27076",
-        "hw": "109",
-        "cas": "",
-        "image": "https://static.wikia.nocookie.net/hotwheels/images/0/04/Monte_Carlo_Concept_Pnk.JPG/revision/latest"
-    },
-    {
-        "year": 2000,
-        "name": "Fork Lift",
-        "series": "2000 Virtual Collection (MVNONUP)",
-        "color": "",
-        "part": "27077",
-        "hw": "110",
-        "cas": "",
-        "image": "https://static.wikia.nocookie.net/hotwheels/images/5/53/CAT_Forklift_Org.JPG/revision/latest"
-    },
-    {
-        "year": 2000,
-        "name": "Wheel Loader",
-        "series": "2000 Virtual Collection (GSGZLR)",
-        "color": "",
-        "part": "27078",
-        "hw": "111",
-        "cas": "",
-        "image": "https://static.wikia.nocookie.net/hotwheels/images/e/ed/CAT_Whee_Loader_Wht.JPG/revision/latest"
-    },
-    {
-        "year": 2000,
-        "name": "Turbo Flame",
-        "series": "2000 Virtual Collection (SPLDRTN)",
-        "color": "",
-        "part": "27079",
-        "hw": "112",
-        "cas": "",
-        "image": "https://static.wikia.nocookie.net/hotwheels/images/0/0d/Turbo_Flame_Red.JPG/revision/latest"
-    },
-    {
-        "year": 2000,
-        "name": "Flame Stopper",
-        "series": "2000 Virtual Collection (HYPRDRV)",
-        "color": "",
-        "part": "27080",
-        "hw": "113",
-        "cas": "",
-        "image": "https://static.wikia.nocookie.net/hotwheels/images/c/c4/Flame_Stopper_Org.JPG/revision/latest"
-    },
-    {
-        "year": 2000,
-        "name": "Lamborghini Diablo",
-        "series": "2000 Virtual Collection (TPSPDR)",
-        "color": "",
-        "part": "27081",
-        "hw": "114",
-        "cas": "",
-        "image": "https://static.wikia.nocookie.net/hotwheels/images/f/f2/Lamborghini_Diablo_blu.JPG/revision/latest"
-    },
-    {
-        "year": 2000,
-        "name": "Way 2 Fast",
-        "series": "2000 Virtual Collection (WAY2KUL)",
-        "color": "",
-        "part": "27082",
-        "hw": "115",
-        "cas": "",
-        "image": "https://static.wikia.nocookie.net/hotwheels/images/a/ad/Way_2_Fast_DkRd.JPG/revision/latest"
-    },
-    {
-        "year": 2000,
-        "name": "Tee'd Off",
-        "series": "2000 Virtual Collection (NJYNLF)",
-        "color": "",
-        "part": "27084",
-        "hw": "117",
-        "cas": "",
-        "image": "https://static.wikia.nocookie.net/hotwheels/images/0/05/Teed_Off_-_00_Virtual_Collection.jpg/revision/latest"
-    },
-    {
-        "year": 2000,
-        "name": "Semi-Fast",
-        "series": "2000 Virtual Collection (MYLS2GO)",
-        "color": "",
-        "part": "27085",
-        "hw": "118",
-        "cas": "",
-        "image": "https://static.wikia.nocookie.net/hotwheels/images/8/85/Semi-Fast_Blu.JPG/revision/latest"
-    },
-    {
-        "year": 2000,
-        "name": "Oshkosh Cement Truck",
-        "series": "2000 Virtual Collection (FSTFWD)",
-        "color": "",
-        "part": "27090",
-        "hw": "123",
-        "cas": "",
-        "image": "https://static.wikia.nocookie.net/hotwheels/images/0/0b/Oshkosh_Cement_Mixer_Grn.JPG/revision/latest"
-    },
-    {
-        "year": 2000,
-        "name": "Rodzilla",
-        "series": "2000 Virtual Collection (UNSTPBL)",
-        "color": "",
-        "part": "27093",
-        "hw": "126",
-        "cas": "",
-        "image": "https://static.wikia.nocookie.net/hotwheels/images/1/16/Rodzilla_Grn3sp.JPG/revision/latest"
-    },
-    {
-        "year": 2000,
-        "name": "Track T",
-        "series": "2000 Virtual Collection (DRVNBY)",
-        "color": "",
-        "part": "27094",
-        "hw": "127",
-        "cas": "",
-        "image": "https://static.wikia.nocookie.net/hotwheels/images/3/33/TrackT_WhtSB.JPG/revision/latest"
-    },
-    {
-        "year": 2000,
-        "name": "Turbolence",
-        "series": "2000 Virtual Collection (FASTRNU)",
-        "color": "",
-        "part": "27096",
-        "hw": "129",
-        "cas": "",
-        "image": "https://static.wikia.nocookie.net/hotwheels/images/b/bd/Turbolence_Slv.JPG/revision/latest"
-    },
-    {
-        "year": 2000,
-        "name": "Mercedes-Benz Unimog",
-        "series": "2000 Virtual Collection (RDTRPZ)",
-        "color": "",
-        "part": "27100",
-        "hw": "133",
-        "cas": "",
-        "image": "https://static.wikia.nocookie.net/hotwheels/images/d/db/Mercedes_Benz_Unimog_MtRedSB.JPG/revision/latest"
-    },
-    {
-        "year": 2000,
-        "name": "Thunderstreak",
-        "series": "2000 Virtual Collection (CYAL8R)",
-        "color": "",
-        "part": "27102",
-        "hw": "135",
-        "cas": "",
-        "image": "https://static.wikia.nocookie.net/hotwheels/images/9/94/Thunderstreak_Prp.JPG/revision/latest"
-    },
-    {
-        "year": 2000,
-        "name": "Dogfighter",
-        "series": "2000 Virtual Collection (FLYNBYU)",
-        "color": "",
-        "part": "22413",
-        "hw": "137",
-        "cas": "",
-        "image": "https://static.wikia.nocookie.net/hotwheels/images/a/a1/Dofighter_Yel.JPG/revision/latest"
-    },
-    {
-        "year": 2000,
-        "name": "Skullrider",
-        "series": "2000 Virtual Collection (LKNKUL)",
-        "color": "",
-        "part": "22414",
-        "hw": "138",
-        "cas": "",
-        "image": "https://static.wikia.nocookie.net/hotwheels/images/e/e1/Skullrider_Red.JPG/revision/latest"
-    },
-    {
-        "year": 2000,
-        "name": "Blimp",
-        "series": "2000 Virtual Collection (FLYNAWY)",
-        "color": "",
-        "part": "27108",
-        "hw": "142",
-        "cas": "",
-        "image": "https://static.wikia.nocookie.net/hotwheels/images/5/53/Blimp_VC.JPG/revision/latest"
-    },
-    {
-        "year": 2000,
-        "name": "Recycling Truck",
-        "series": "2000 Virtual Collection (NVR2L8)",
-        "color": "",
-        "part": "27109",
-        "hw": "143",
-        "cas": "",
-        "image": "https://static.wikia.nocookie.net/hotwheels/images/6/62/Recycling_Truck_Blue.JPG/revision/latest"
-    },
-    {
-        "year": 2000,
-        "name": "Ice Cream Truck",
-        "series": "2000 Virtual Collection (COOLONE)",
-        "color": "",
-        "part": "27110",
-        "hw": "144",
-        "cas": "",
-        "image": "https://static.wikia.nocookie.net/hotwheels/images/3/30/Icecream2.jpg/revision/latest"
-    },
-    {
-        "year": 2000,
-        "name": "Fire-Eater",
-        "series": "2000 Virtual Collection (2DARESQ)",
-        "color": "",
-        "part": "27111",
-        "hw": "145",
-        "cas": "",
-        "image": "https://static.wikia.nocookie.net/hotwheels/images/7/72/Fire_Eater_Wht.JPG/revision/latest"
-    },
-    {
-        "year": 2000,
-        "name": "Go Kart",
-        "series": "2000 Virtual Collection (SPDBMP)",
-        "color": "",
-        "part": "27117",
-        "hw": "151",
-        "cas": "",
-        "image": "https://static.wikia.nocookie.net/hotwheels/images/3/32/Go_Kart_Prpl.JPG/revision/latest"
-    },
-    {
-        "year": 2000,
-        "name": "Fathom This",
-        "series": "2000 Virtual Collection (H2OSPDR)",
-        "color": "",
-        "part": "27118",
-        "hw": "152",
-        "cas": "",
-        "image": "https://static.wikia.nocookie.net/hotwheels/images/1/1f/Fathom_This_WhtOrg.JPG/revision/latest"
-    },
-    {
-        "year": 2000,
-        "name": "Shadow Jet II",
-        "series": "2000 Virtual Collection (2QWK4U)",
-        "color": "",
-        "part": "27119",
-        "hw": "153",
-        "cas": "",
-        "image": "https://static.wikia.nocookie.net/hotwheels/images/d/d0/153_Virtual_Collection_Shadow_Jet_II.jpg/revision/latest"
-    },
-    {
-        "year": 2000,
-        "name": "Splittin' Image II",
-        "series": "2000 Virtual Collection (DBLTBL)",
-        "color": "",
-        "part": "27121",
-        "hw": "155",
-        "cas": "",
-        "image": "https://static.wikia.nocookie.net/hotwheels/images/f/f6/Splittin%27_Image_II_Slv.JPG/revision/latest"
-    },
-    {
-        "year": 2000,
-        "name": "Screamin' Hauler",
-        "series": "2000 Virtual Collection (HAULINA)",
-        "color": "",
-        "part": "27122",
-        "hw": "156",
-        "cas": "",
-        "image": "https://static.wikia.nocookie.net/hotwheels/images/7/71/Screamin_Hauler_Red.JPG/revision/latest"
-    },
-    {
-        "year": 2000,
-        "name": "Popcycle",
-        "series": "2000 Virtual Collection (PDLPWR)",
-        "color": "",
-        "part": "27123",
-        "hw": "157",
-        "cas": "",
-        "image": "https://static.wikia.nocookie.net/hotwheels/images/4/4f/Popcycle_Grn.JPG/revision/latest"
-    },
-    {
-        "year": 2000,
-        "name": "Super Modified",
-        "series": "2000 Virtual Collection (SPDDMN)",
-        "color": "",
-        "part": "27124",
-        "hw": "158",
-        "cas": "",
-        "image": "https://static.wikia.nocookie.net/hotwheels/images/1/19/Super_Modified_Red.JPG/revision/latest"
-    },
-    {
-        "year": 2000,
-        "name": "Phaeton",
-        "series": "2000 Virtual Collection (CNTA4IT)",
-        "color": "",
-        "part": "27130",
-        "hw": "164",
-        "cas": "",
-        "image": "https://static.wikia.nocookie.net/hotwheels/images/8/89/Phaeton_Blk.JPG/revision/latest"
-    },
-    {
-        "year": 2000,
-        "name": "Lakester",
-        "series": "2000 Virtual Collection (LNDSPDR)",
-        "color": "",
-        "part": "27134",
-        "hw": "168",
-        "cas": "",
-        "image": "https://static.wikia.nocookie.net/hotwheels/images/b/be/Lakester_BlkLft.JPG/revision/latest"
-    },
-    {
-        "year": 2000,
-        "name": "Baby Boomer",
-        "series": "2000 Virtual Collection (FSTBUGE)",
-        "color": "",
-        "part": "27139",
-        "hw": "173",
-        "cas": "",
-        "image": "https://static.wikia.nocookie.net/hotwheels/images/4/46/Baby_Bommer_RedBt.JPG/revision/latest"
-    },
-    {
-        "year": 2000,
-        "name": "'99 Mustang",
-        "series": "2000 Hot Wheels",
-        "color": "",
-        "part": "27065",
-        "hw": "098",
-        "cas": "",
-        "image": ""
-    },
-    {
-        "year": 2000,
-        "name": "Phantom Corsair",
-        "series": "2000 Hot Wheels",
-        "color": "",
-        "part": "27066",
-        "hw": "099",
-        "cas": "",
-        "image": ""
-    },
-    {
-        "year": 2000,
-        "name": "BMW M Roadster",
-        "series": "2000 Hot Wheels",
-        "color": "",
-        "part": "27067",
-        "hw": "100",
-        "cas": "",
-        "image": ""
-    },
-    {
-        "year": 2000,
-        "name": "'90 T-Bird",
-        "series": "2000 Hot Wheels",
-        "color": "",
-        "part": "27069",
-        "hw": "102",
-        "cas": "",
-        "image": ""
-    },
-    {
-        "year": 2000,
-        "name": "'57 Chevy",
-        "series": "2000 Hot Wheels",
-        "color": "",
-        "part": "27072",
-        "hw": "105",
-        "cas": "",
-        "image": ""
-    },
-    {
-        "year": 2000,
-        "name": "Ferrari 348",
-        "series": "2000 Hot Wheels",
-        "color": "",
-        "part": "27073",
-        "hw": "106",
-        "cas": "",
-        "image": ""
-    },
-    {
-        "year": 2000,
-        "name": "'70 Chevelle",
-        "series": "2000 Hot Wheels",
-        "color": "",
-        "part": "27074",
-        "hw": "107",
-        "cas": "",
-        "image": ""
-    },
-    {
-        "year": 2000,
-        "name": "Olds Aurora",
-        "series": "2000 Hot Wheels",
-        "color": "",
-        "part": "27075",
-        "hw": "108",
-        "cas": "",
-        "image": ""
-    },
-    {
-        "year": 2000,
-        "name": "'59 Chevy",
-        "series": "2000 Hot Wheels",
-        "color": "",
-        "part": "27083",
-        "hw": "116",
-        "cas": "",
-        "image": ""
-    },
-    {
-        "year": 2000,
-        "name": "Pontiac Rageous",
-        "series": "2000 Hot Wheels",
-        "color": "",
-        "part": "27086",
-        "hw": "119",
-        "cas": "",
-        "image": ""
-    },
-    {
-        "year": 2000,
-        "name": "Mercedes SLK",
-        "series": "2000 Hot Wheels",
-        "color": "",
-        "part": "27087",
-        "hw": "120",
-        "cas": "",
-        "image": ""
-    },
-    {
-        "year": 2000,
-        "name": "Mustang Cobra",
-        "series": "2000 Hot Wheels",
-        "color": "",
-        "part": "27088",
-        "hw": "121",
-        "cas": "",
-        "image": ""
-    },
-    {
-        "year": 2000,
-        "name": "Ferrari F40",
-        "series": "2000 Hot Wheels",
-        "color": "",
-        "part": "27089",
-        "hw": "122",
-        "cas": "",
-        "image": ""
-    },
-    {
-        "year": 2000,
-        "name": "Camaro Z-28",
-        "series": "2000 Hot Wheels",
-        "color": "",
-        "part": "27091",
-        "hw": "124",
-        "cas": "",
-        "image": ""
-    },
-    {
-        "year": 2000,
-        "name": "Porsche 930",
-        "series": "2000 Hot Wheels",
-        "color": "",
-        "part": "27092",
-        "hw": "125",
-        "cas": "",
-        "image": ""
-    },
-    {
-        "year": 2000,
-        "name": "Porsche 911 GT3 Cup",
-        "series": "2000 Hot Wheels",
-        "color": "",
-        "part": "27095",
-        "hw": "128",
-        "cas": "",
-        "image": ""
-    },
-    {
-        "year": 2000,
-        "name": "'63 T-Bird",
-        "series": "2000 Hot Wheels",
-        "color": "",
-        "part": "27097",
-        "hw": "130",
-        "cas": "",
-        "image": ""
-    },
-    {
-        "year": 2000,
-        "name": "Mercedes C-Class",
-        "series": "2000 Hot Wheels",
-        "color": "",
-        "part": "27098",
-        "hw": "131",
-        "cas": "",
-        "image": ""
-    },
-    {
-        "year": 2000,
-        "name": "3-Window '34",
-        "series": "2000 Hot Wheels",
-        "color": "",
-        "part": "27099",
-        "hw": "132",
-        "cas": "",
-        "image": ""
-    },
-    {
-        "year": 2000,
-        "name": "Mercedes 500SL",
-        "series": "2000 Hot Wheels",
-        "color": "",
-        "part": "27101",
-        "hw": "134",
-        "cas": "",
-        "image": ""
-    },
-    {
-        "year": 2000,
-        "name": "Ferrari Testarossa",
-        "series": "2000 Hot Wheels",
-        "color": "",
-        "part": "27103",
-        "hw": "136",
-        "cas": "",
-        "image": ""
-    },
-    {
-        "year": 2000,
-        "name": "Ford GT-40",
-        "series": "2000 Hot Wheels",
-        "color": "",
-        "part": "27104",
-        "hw": "139",
-        "cas": "",
-        "image": ""
-    },
-    {
-        "year": 2000,
-        "name": "Jeepster",
-        "series": "2000 Hot Wheels",
-        "color": "",
-        "part": "27105",
-        "hw": "140",
-        "cas": "",
-        "image": ""
-    },
-    {
-        "year": 2000,
-        "name": "'95 Camaro Convertible",
-        "series": "2000 Hot Wheels",
-        "color": "",
-        "part": "27107",
-        "hw": "141",
-        "cas": "",
-        "image": ""
-    },
-    {
-        "year": 2000,
-        "name": "Porsche Carrera",
-        "series": "2000 Hot Wheels",
-        "color": "",
-        "part": "27112",
-        "hw": "146",
-        "cas": "",
-        "image": ""
-    },
-    {
-        "year": 2000,
-        "name": "Pikes Peak Tacoma",
-        "series": "2000 Hot Wheels",
-        "color": "",
-        "part": "27114",
-        "hw": "148",
-        "cas": "",
-        "image": ""
-    },
-    {
-        "year": 2000,
-        "name": "Shadow Mk IIa",
-        "series": "2000 Hot Wheels",
-        "color": "",
-        "part": "27115",
-        "hw": "149",
-        "cas": "",
-        "image": ""
-    },
-    {
-        "year": 2000,
-        "name": "Chrysler Pronto",
-        "series": "2000 Hot Wheels",
-        "color": "",
-        "part": "27116",
-        "hw": "150",
-        "cas": "",
-        "image": ""
-    },
-    {
-        "year": 2000,
-        "name": "Corvette Stingray",
-        "series": "2000 Hot Wheels",
-        "color": "",
-        "part": "27120",
-        "hw": "154",
-        "cas": "",
-        "image": ""
-    },
-    {
-        "year": 2000,
-        "name": "BMW 850i",
-        "series": "2000 Hot Wheels",
-        "color": "",
-        "part": "27125",
-        "hw": "159",
-        "cas": "",
-        "image": ""
-    },
-    {
-        "year": 2000,
-        "name": "Jaguar XJ220",
-        "series": "2000 Hot Wheels",
-        "color": "",
-        "part": "27126",
-        "hw": "160",
-        "cas": "",
-        "image": ""
-    },
-    {
-        "year": 2000,
-        "name": "Ferrari F50",
-        "series": "2000 Hot Wheels",
-        "color": "",
-        "part": "27127",
-        "hw": "161",
-        "cas": "",
-        "image": ""
-    },
-    {
-        "year": 2000,
-        "name": "Ferrari 355 Challenge",
-        "series": "2000 Hot Wheels",
-        "color": "",
-        "part": "27128",
-        "hw": "162",
-        "cas": "",
-        "image": ""
-    },
-    {
-        "year": 2000,
-        "name": "Mercedes CLK-LM",
-        "series": "2000 Hot Wheels",
-        "color": "",
-        "part": "27129",
-        "hw": "163",
-        "cas": "",
-        "image": ""
-    },
-    {
-        "year": 2000,
-        "name": "Jaguar XK8",
-        "series": "2000 Hot Wheels",
-        "color": "",
-        "part": "27131",
-        "hw": "165",
-        "cas": "",
-        "image": ""
-    },
-    {
-        "year": 2000,
-        "name": "Pikes Peak Celica",
-        "series": "2000 Hot Wheels",
-        "color": "",
-        "part": "27132",
-        "hw": "166",
-        "cas": "",
-        "image": ""
-    },
-    {
-        "year": 2000,
-        "name": "Dodge Concept Car",
-        "series": "2000 Hot Wheels",
-        "color": "",
-        "part": "27133",
-        "hw": "167",
-        "cas": "",
-        "image": ""
-    },
-    {
-        "year": 2000,
-        "name": "Panoz GTR-1",
-        "series": "2000 Hot Wheels",
-        "color": "",
-        "part": "27135",
-        "hw": "169",
-        "cas": "",
-        "image": ""
-    },
-    {
-        "year": 2000,
-        "name": "'56 Ford Truck",
-        "series": "2000 Hot Wheels",
-        "color": "",
-        "part": "27137",
-        "hw": "171",
-        "cas": "",
-        "image": ""
-    },
-    {
-        "year": 2000,
-        "name": "Porsche 911 GT1-98",
-        "series": "2000 Hot Wheels",
-        "color": "",
-        "part": "27138",
-        "hw": "172",
-        "cas": "",
-        "image": ""
-    },
-    {
-        "year": 2000,
-        "name": "'63 Vette",
-        "series": "2000 Hot Wheels",
-        "color": "",
-        "part": "27140",
-        "hw": "174",
-        "cas": "",
-        "image": ""
-    },
-    {
-        "year": 2000,
-        "name": "Olds Aurora",
-        "series": "2000 Hot Wheels",
-        "color": "",
-        "part": "27141",
-        "hw": "175",
-        "cas": "",
-        "image": ""
-    },
-    {
-        "year": 2000,
-        "name": "Solar Eagle III",
-        "series": "2000 Hot Wheels",
-        "color": "",
-        "part": "25377",
-        "hw": "176",
-        "cas": "",
-        "image": ""
-    },
-    {
-        "year": 2000,
-        "name": "Flashfire",
-        "series": "2000 Hot Wheels",
-        "color": "",
-        "part": "25378",
-        "hw": "177",
-        "cas": "",
-        "image": ""
-    },
-    {
-        "year": 2000,
-        "name": "Dodge Viper RT/10",
-        "series": "2000 Hot Wheels",
-        "color": "",
-        "part": "25385",
-        "hw": "178",
-        "cas": "",
-        "image": ""
-    },
-    {
-        "year": 2000,
-        "name": "'95 Camaro Convertible",
-        "series": "2000 Hot Wheels",
-        "color": "",
-        "part": "25388",
-        "hw": "179",
-        "cas": "",
-        "image": ""
-    },
-    {
-        "year": 2000,
-        "name": "Jaguar D-Type",
-        "series": "2000 Hot Wheels",
-        "color": "",
-        "part": "25389",
-        "hw": "180",
-        "cas": "",
-        "image": ""
-    },
-    {
-        "year": 2000,
-        "name": "GT Racer",
-        "series": "2000 Hot Wheels",
-        "color": "",
-        "part": "25390",
-        "hw": "181",
-        "cas": "",
-        "image": ""
-    },
-    {
-        "year": 2000,
-        "name": "Sweet 16 II",
-        "series": "2000 Hot Wheels",
-        "color": "",
-        "part": "25393",
-        "hw": "182",
-        "cas": "",
-        "image": ""
-    },
-    {
-        "year": 2000,
-        "name": "Buick Wildcat",
-        "series": "2000 Hot Wheels",
-        "color": "",
-        "part": "25398",
-        "hw": "183",
-        "cas": "",
-        "image": ""
-    },
-    {
-        "year": 2000,
-        "name": "Panoz GTR-1",
-        "series": "2000 Hot Wheels​",
-        "color": "",
-        "part": "25413",
-        "hw": "187",
-        "cas": "",
-        "image": ""
-    },
-    {
-        "year": 2000,
-        "name": "'97 Corvette",
-        "series": "2000 Hot Wheels",
-        "color": "",
-        "part": "27106",
-        "hw": "188",
-        "cas": "",
-        "image": ""
-    },
-    {
-        "year": 2000,
-        "name": "Semi-Fast",
-        "series": "2000 Hot Wheels",
-        "color": "",
-        "part": "25381",
-        "hw": "189",
-        "cas": "",
-        "image": ""
-    },
-    {
-        "year": 2000,
-        "name": "Peterbilt Dump Truck",
-        "series": "2000 Hot Wheels",
-        "color": "",
-        "part": "25382",
-        "hw": "190",
-        "cas": "",
-        "image": ""
-    },
-    {
-        "year": 2000,
-        "name": "Ford Stake Bed Truck",
-        "series": "2000 Hot Wheels",
-        "color": "",
-        "part": "25383",
-        "hw": "191",
-        "cas": "",
-        "image": ""
-    },
-    {
-        "year": 2000,
-        "name": "'40 Ford",
-        "series": "2000 Hot Wheels",
-        "color": "",
-        "part": "25384",
-        "hw": "192",
-        "cas": "",
-        "image": ""
-    },
-    {
-        "year": 2000,
-        "name": "'40s Woodie",
-        "series": "2000 Hot Wheels",
-        "color": "",
-        "part": "25415",
-        "hw": "193",
-        "cas": "",
-        "image": ""
-    },
-    {
-        "year": 2000,
-        "name": "T-Bird Stocker",
-        "series": "2000 Hot Wheels",
-        "color": "",
-        "part": "25416",
-        "hw": "194",
-        "cas": "",
-        "image": ""
-    },
-    {
-        "year": 2000,
-        "name": "'32 Ford Coupe",
-        "series": "2000 Hot Wheels",
-        "color": "",
-        "part": "25417",
-        "hw": "195",
-        "cas": "",
-        "image": ""
-    },
-    {
-        "year": 2000,
-        "name": "Chevy Nomad",
-        "series": "2000 Hot Wheels",
-        "color": "",
-        "part": "25418",
-        "hw": "196",
-        "cas": "",
-        "image": ""
-    },
-    {
-        "year": 2000,
-        "name": "'65 Impala",
-        "series": "2000 Hot Wheels",
-        "color": "",
-        "part": "25419",
-        "hw": "197",
-        "cas": "",
-        "image": ""
-    },
-    {
-        "year": 2000,
-        "name": "Ford Bronco",
-        "series": "2000 Hot Wheels",
-        "color": "",
-        "part": "25407",
-        "hw": "198",
-        "cas": "",
-        "image": ""
-    },
-    {
-        "year": 2000,
-        "name": "Roll Patrol",
-        "series": "2000 Hot Wheels",
-        "color": "",
-        "part": "25408",
-        "hw": "199",
-        "cas": "",
-        "image": ""
-    },
-    {
-        "year": 2000,
-        "name": "Purple Passion",
-        "series": "2000 Hot Wheels",
-        "color": "",
-        "part": "25422",
-        "hw": "200",
-        "cas": "",
-        "image": ""
-    },
-    {
-        "year": 2000,
-        "name": "'65 Mustang",
-        "series": "2000 Hot Wheels",
-        "color": "",
-        "part": "25424",
-        "hw": "201",
-        "cas": "",
-        "image": ""
-    },
-    {
-        "year": 2000,
-        "name": "Hydroplane",
-        "series": "2000 Hot Wheels",
-        "color": "",
-        "part": "25426",
-        "hw": "202",
-        "cas": "",
-        "image": ""
-    },
-    {
-        "year": 2000,
-        "name": "Surf Patrol",
-        "series": "2000 Hot Wheels",
-        "color": "",
-        "part": "25428",
-        "hw": "203",
-        "cas": "",
-        "image": ""
-    },
-    {
-        "year": 2000,
-        "name": "Saltflat Racer",
-        "series": "2000 Hot Wheels",
-        "color": "",
-        "part": "25432",
-        "hw": "204",
-        "cas": "",
-        "image": ""
-    },
-    {
-        "year": 2000,
-        "name": "Pikes Peak Celica",
-        "series": "2000 Hot Wheels",
-        "color": "",
-        "part": "25434",
-        "hw": "205",
-        "cas": "",
-        "image": ""
-    },
-    {
-        "year": 2000,
-        "name": "Rig Wrecker",
-        "series": "2000 Hot Wheels",
-        "color": "",
-        "part": "25403",
-        "hw": "206",
-        "cas": "",
-        "image": ""
-    },
-    {
-        "year": 2000,
-        "name": "Police Car",
-        "series": "2000 Hot Wheels",
-        "color": "",
-        "part": "25401",
-        "hw": "207",
-        "cas": "",
-        "image": ""
-    },
-    {
-        "year": 2000,
-        "name": "Zender Fact 4",
-        "series": "2000 Hot Wheels",
-        "color": "",
-        "part": "25395",
-        "hw": "208",
-        "cas": "",
-        "image": ""
-    },
-    {
-        "year": 2000,
-        "name": "Customized C3500",
-        "series": "2000 Hot Wheels",
-        "color": "",
-        "part": "25380",
-        "hw": "209",
-        "cas": "",
-        "image": ""
-    },
-    {
-        "year": 2000,
-        "name": "Lexus SC400",
-        "series": "2000 Hot Wheels",
-        "color": "",
-        "part": "29276",
-        "hw": "210",
-        "cas": "",
-        "image": ""
-    },
-    {
-        "year": 2000,
-        "name": "Tow Jam",
-        "series": "2000 Hot Wheels",
-        "color": "",
-        "part": "29266",
-        "hw": "211",
-        "cas": "",
-        "image": ""
-    },
-    {
-        "year": 2000,
-        "name": "Double Vision",
-        "series": "2000 Hot Wheels",
-        "color": "",
-        "part": "29267",
-        "hw": "212",
-        "cas": "",
-        "image": ""
-    },
-    {
-        "year": 2000,
-        "name": "Whatta Drag",
-        "series": "2000 Hot Wheels",
-        "color": "",
-        "part": "29268",
-        "hw": "213",
-        "cas": "",
-        "image": ""
-    },
-    {
-        "year": 2000,
-        "name": "Super Comp Dragster",
-        "series": "2000 Hot Wheels",
-        "color": "",
-        "part": "29269",
-        "hw": "214",
-        "cas": "",
-        "image": ""
-    },
-    {
-        "year": 2000,
-        "name": "XT-3",
-        "series": "2000 Hot Wheels",
-        "color": "",
-        "part": "29270",
-        "hw": "215",
-        "cas": "",
-        "image": ""
-    },
-    {
-        "year": 2000,
-        "name": "School Bus",
-        "series": "2000 Hot Wheels",
-        "color": "",
-        "part": "29271",
-        "hw": "216",
-        "cas": "",
-        "image": ""
-    },
-    {
-        "year": 2000,
-        "name": "'57 T-Bird",
-        "series": "2000 Hot Wheels",
-        "color": "",
-        "part": "29272",
-        "hw": "217",
-        "cas": "",
-        "image": ""
-    },
-    {
-        "year": 2000,
-        "name": "Rescue Ranger",
-        "series": "2000 Hot Wheels",
-        "color": "",
-        "part": "29273",
-        "hw": "218",
-        "cas": "",
-        "image": ""
-    },
-    {
-        "year": 2000,
-        "name": "Side Kick",
-        "series": "2000 Hot Wheels",
-        "color": "",
-        "part": "29274",
-        "hw": "219",
-        "cas": "",
-        "image": ""
-    },
-    {
-        "year": 2000,
-        "name": "Sweet 16",
-        "series": "2000 Hot Wheels",
-        "color": "",
-        "part": "29275",
-        "hw": "220",
-        "cas": "",
-        "image": ""
-    },
-    {
-        "year": 2000,
-        "name": "Rail Rodder",
-        "series": "2000 Hot Wheels",
-        "color": "",
-        "part": "29277",
-        "hw": "221",
-        "cas": "",
-        "image": ""
-    },
-    {
-        "year": 2000,
-        "name": "Dogfighter",
-        "series": "2000 Hot Wheels",
-        "color": "",
-        "part": "29278",
-        "hw": "222",
-        "cas": "",
-        "image": ""
-    },
-    {
-        "year": 2000,
-        "name": "Twang Thang",
-        "series": "2000 Hot Wheels",
-        "color": "",
-        "part": "29279",
-        "hw": "223",
-        "cas": "",
-        "image": ""
-    },
-    {
-        "year": 2000,
-        "name": "Ford GT-90",
-        "series": "2000 Hot Wheels",
-        "color": "",
-        "part": "29280",
-        "hw": "224",
-        "cas": "",
-        "image": ""
-    },
-    {
-        "year": 2000,
-        "name": "Chrysler Thunderbolt",
-        "series": "2000 Hot Wheels",
-        "color": "",
-        "part": "29281",
-        "hw": "225",
-        "cas": "",
-        "image": ""
-    },
-    {
-        "year": 2000,
-        "name": "'67 Pontiac GTO",
-        "series": "2000 Hot Wheels​",
-        "color": "",
-        "part": "29282",
-        "hw": "226",
-        "cas": "",
-        "image": ""
-    },
-    {
-        "year": 2000,
-        "name": "Skullrider",
-        "series": "2000 Hot Wheels",
-        "color": "",
-        "part": "29283",
-        "hw": "227",
-        "cas": "",
-        "image": ""
-    },
-    {
-        "year": 2000,
-        "name": "'57 Chevy",
-        "series": "2000 Hot Wheels",
-        "color": "",
-        "part": "29284",
-        "hw": "228",
-        "cas": "",
-        "image": ""
-    },
-    {
-        "year": 2000,
-        "name": "Blown Camaro",
-        "series": "2000 Hot Wheels",
-        "color": "",
-        "part": "29285",
-        "hw": "229",
-        "cas": "",
-        "image": ""
-    },
-    {
-        "year": 2000,
-        "name": "Ferrari F355 Spider",
-        "series": "2000 Hot Wheels",
-        "color": "",
-        "part": "29286",
-        "hw": "230",
-        "cas": "",
-        "image": ""
-    },
-    {
-        "year": 2000,
-        "name": "Treadator",
-        "series": "2000 Hot Wheels",
-        "color": "",
-        "part": "29287",
-        "hw": "231",
-        "cas": "",
-        "image": ""
-    },
-    {
-        "year": 2000,
-        "name": "Porsche 959",
-        "series": "2000 Hot Wheels",
-        "color": "",
-        "part": "29288",
-        "hw": "232",
-        "cas": "",
-        "image": ""
-    },
-    {
-        "year": 2000,
-        "name": "Oshkosh Snowplow",
-        "series": "2000 Hot Wheels",
-        "color": "",
-        "part": "29289",
-        "hw": "233",
-        "cas": "",
-        "image": ""
-    },
-    {
-        "year": 2000,
-        "name": "'33 Ford Roadster",
-        "series": "2000 Hot Wheels",
-        "color": "",
-        "part": "29290",
-        "hw": "234",
-        "cas": "",
-        "image": ""
-    },
-    {
-        "year": 2000,
-        "name": "Ferrari 550 Maranello",
-        "series": "2000 Hot Wheels",
-        "color": "",
-        "part": "29291",
-        "hw": "235",
-        "cas": "",
-        "image": ""
-    },
-    {
-        "year": 2000,
-        "name": "Ferrari 365 GTB/4",
-        "series": "2000 Hot Wheels",
-        "color": "",
-        "part": "29292",
-        "hw": "236",
-        "cas": "",
-        "image": ""
-    },
-    {
-        "year": 2000,
-        "name": "1964 Lincoln Continental",
-        "series": "2000 Hot Wheels",
-        "color": "",
-        "part": "29293",
-        "hw": "237",
-        "cas": "",
-        "image": ""
-    },
-    {
-        "year": 2000,
-        "name": "Deuce Roadster",
-        "series": "2000 Hot Wheels",
-        "color": "",
-        "part": "29294",
-        "hw": "238",
-        "cas": "",
-        "image": ""
-    },
-    {
-        "year": 2000,
-        "name": "Tail Dragger",
-        "series": "2000 Hot Wheels",
-        "color": "",
-        "part": "29295",
-        "hw": "239",
-        "cas": "",
-        "image": ""
-    },
-    {
-        "year": 2000,
-        "name": "Scorchin' Scooter",
-        "series": "2000 Hot Wheels",
-        "color": "",
-        "part": "29296",
-        "hw": "240",
-        "cas": "",
-        "image": ""
-    },
-    {
-        "year": 2000,
-        "name": "Propper Chopper",
-        "series": "2000 Hot Wheels",
-        "color": "",
-        "part": "29298",
-        "hw": "241",
-        "cas": "",
-        "image": ""
-    },
-    {
-        "year": 2000,
-        "name": "Olds 442",
-        "series": "2000 Hot Wheels​",
-        "color": "",
-        "part": "29299",
-        "hw": "242",
-        "cas": "",
-        "image": ""
-    },
-    {
-        "year": 2000,
-        "name": "Deora II",
-        "series": "2000 Hot Wheels",
-        "color": "",
-        "part": "29300",
-        "hw": "243",
-        "cas": "",
-        "image": ""
-    },
-    {
-        "year": 2000,
-        "name": "Chevy Pro Stock Truck",
-        "series": "2000 Hot Wheels",
-        "color": "",
-        "part": "29301",
-        "hw": "244",
-        "cas": "",
-        "image": ""
-    },
-    {
-        "year": 2000,
-        "name": "Phantastique",
-        "series": "2000 Hot Wheels",
-        "color": "",
-        "part": "29302",
-        "hw": "245",
-        "cas": "",
-        "image": ""
-    },
-    {
-        "year": 2000,
-        "name": "'68 El Camino",
-        "series": "2000 Hot Wheels",
-        "color": "",
-        "part": "29303",
-        "hw": "246",
-        "cas": "",
-        "image": ""
-    },
-    {
-        "year": 2000,
-        "name": "Ford F-150",
-        "series": "2000 Hot Wheels",
-        "color": "",
-        "part": "29304",
-        "hw": "247",
-        "cas": "",
-        "image": ""
-    },
-    {
-        "year": 2000,
-        "name": "Way 2 Fast",
-        "series": "2000 Hot Wheels",
-        "color": "",
-        "part": "29305",
-        "hw": "248",
-        "cas": "",
-        "image": ""
-    },
-    {
-        "year": 2000,
-        "name": "'59 Impala",
-        "series": "2000 Hot Wheels",
-        "color": "",
-        "part": "29306",
-        "hw": "249",
-        "cas": "",
-        "image": ""
-    },
-    {
-        "year": 2000,
-        "name": "Porsche 911 GT1-98",
-        "series": "2000 Hot Wheels",
-        "color": "",
-        "part": "29307",
-        "hw": "250",
-        "cas": "",
-        "image": ""
-    },
-
-{
+  {
+    "year": 2000,
+    "name": "Ford GT-90",
+    "series": "Future Fleet 2000 (1/4​)",
+    "color": "",
+    "part": "26004",
+    "hw": "001",
+    "cas": "",
+    "image": "https://static.wikia.nocookie.net/hotwheels/images/5/5a/Ford_GT-90_Blk.JPG/revision/latest"
+  },
+  {
+    "year": 2000,
+    "name": "Pontiac Rageous",
+    "series": "Future Fleet 2000 (2/4​)",
+    "color": "",
+    "part": "26005",
+    "hw": "002",
+    "cas": "",
+    "image": "https://static.wikia.nocookie.net/hotwheels/images/a/a2/Pontiac_Rageous_Blk.JPG/revision/latest"
+  },
+  {
+    "year": 2000,
+    "name": "Jeepster",
+    "series": "Future Fleet 2000 (3/4​)",
+    "color": "",
+    "part": "26006",
+    "hw": "003",
+    "cas": "",
+    "image": "https://static.wikia.nocookie.net/hotwheels/images/7/7f/Jeepster_Blk.JPG/revision/latest"
+  },
+  {
+    "year": 2000,
+    "name": "Chrysler Thunderbolt",
+    "series": "Future Fleet 2000 (4/4​)",
+    "color": "",
+    "part": "26007",
+    "hw": "004",
+    "cas": "",
+    "image": "https://static.wikia.nocookie.net/hotwheels/images/2/2e/Chrysler_Thunderbolt_CD.JPG/revision/latest"
+  },
+  {
+    "year": 2000,
+    "name": "Phaeton",
+    "series": "Hot Rod Magazine (1/4​)",
+    "color": "",
+    "part": "26016",
+    "hw": "005",
+    "cas": "",
+    "image": "https://static.wikia.nocookie.net/hotwheels/images/5/5a/Phaeton_Red.JPG/revision/latest"
+  },
+  {
+    "year": 2000,
+    "name": "Track T",
+    "series": "Hot Rod Magazine (2/4​)",
+    "color": "",
+    "part": "26017",
+    "hw": "006",
+    "cas": "",
+    "image": "https://static.wikia.nocookie.net/hotwheels/images/a/af/TrackT_YelSB.JPG/revision/latest"
+  },
+  {
+    "year": 2000,
+    "name": "Tail Dragger",
+    "series": "Hot Rod Magazine (3/4​)",
+    "color": "",
+    "part": "26018",
+    "hw": "007",
+    "cas": "",
+    "image": "https://static.wikia.nocookie.net/hotwheels/images/e/e4/Tail_Dragger_Wht.JPG/revision/latest"
+  },
+  {
+    "year": 2000,
+    "name": "'33 Ford Roadster",
+    "series": "Hot Rod Magazine\nNew In Mainline (4/4​)",
+    "color": "",
+    "part": "26019",
+    "hw": "008",
+    "cas": "",
+    "image": "https://static.wikia.nocookie.net/hotwheels/images/f/fe/33_Ford_Roadster_Grn.JPG/revision/latest"
+  },
+  {
+    "year": 2000,
+    "name": "Propper Chopper",
+    "series": "Seein' 3-D (1/4​)",
+    "color": "",
+    "part": "26008",
+    "hw": "009",
+    "cas": "",
+    "image": "https://static.wikia.nocookie.net/hotwheels/images/7/75/Propperchopper.jpg/revision/latest"
+  },
+  {
+    "year": 2000,
+    "name": "1970 Dodge Charger Daytona",
+    "series": "Seein' 3-D (2/4​)",
+    "color": "",
+    "part": "26009",
+    "hw": "010",
+    "cas": "",
+    "image": "https://static.wikia.nocookie.net/hotwheels/images/9/98/1970_Daytona_Blu5sp.JPG/revision/latest"
+  },
+  {
+    "year": 2000,
+    "name": "Lexus SC400",
+    "series": "Seein' 3-D (3/4​)",
+    "color": "",
+    "part": "26010",
+    "hw": "011",
+    "cas": "",
+    "image": "https://static.wikia.nocookie.net/hotwheels/images/0/04/Lexussc400.jpg/revision/latest"
+  },
+  {
+    "year": 2000,
+    "name": "Olds 442",
+    "series": "Seein' 3-D (4/4​)",
+    "color": "",
+    "part": "26011",
+    "hw": "012",
+    "cas": "",
+    "image": "https://static.wikia.nocookie.net/hotwheels/images/2/2f/Olds_442_W-30_MtGrn.JPG/revision/latest"
+  },
+  {
+    "year": 2000,
+    "name": "Callaway C7",
+    "series": "Snack Time (1/4​)",
+    "color": "",
+    "part": "26012",
+    "hw": "013",
+    "cas": "",
+    "image": "https://static.wikia.nocookie.net/hotwheels/images/3/31/Callaway_C7_MtGrn5SP.JPG/revision/latest"
+  },
+  {
+    "year": 2000,
+    "name": "Firebird",
+    "series": "Snack Time (2/4​)",
+    "color": "",
+    "part": "26013",
+    "hw": "014",
+    "cas": "",
+    "image": "https://static.wikia.nocookie.net/hotwheels/images/b/b2/IROC_Firebird_Org.JPG/revision/latest"
+  },
+  {
+    "year": 2000,
+    "name": "Monte Carlo Concept Car",
+    "series": "Snack Time (3/4​)",
+    "color": "",
+    "part": "26014",
+    "hw": "015",
+    "cas": "",
+    "image": "https://static.wikia.nocookie.net/hotwheels/images/b/bd/Monte_Carlo_Concept_Blu.JPG/revision/latest"
+  },
+  {
+    "year": 2000,
+    "name": "Dodge Sidewinder",
+    "series": "Snack Time (4/4​)",
+    "color": "",
+    "part": "26015",
+    "hw": "016",
+    "cas": "",
+    "image": "https://static.wikia.nocookie.net/hotwheels/images/f/f1/Dodge_Sidwinder_Yel.JPG/revision/latest"
+  },
+  {
+    "year": 2000,
+    "name": "Hot Wheels 500",
+    "series": "Mad Maniax (1/4​)",
+    "color": "",
+    "part": "26020",
+    "hw": "017",
+    "cas": "",
+    "image": "https://static.wikia.nocookie.net/hotwheels/images/0/02/No_Fear_Race_Car_Blu.JPG/revision/latest"
+  },
+  {
+    "year": 2000,
+    "name": "Camaro Z-28",
+    "series": "Mad Maniax (2/4​)",
+    "color": "",
+    "part": "26021",
+    "hw": "018",
+    "cas": "",
+    "image": "https://static.wikia.nocookie.net/hotwheels/images/8/8d/Camaro_Z28_Silv.JPG/revision/latest"
+  },
+  {
+    "year": 2000,
+    "name": "Slideout",
+    "series": "Mad Maniax (3/4​)",
+    "color": "",
+    "part": "26022",
+    "hw": "019",
+    "cas": "",
+    "image": "https://static.wikia.nocookie.net/hotwheels/images/c/ce/SlideOut_Blk.JPG/revision/latest"
+  },
+  {
+    "year": 2000,
+    "name": "Twin Mill II",
+    "series": "Mad Maniax (4/4​)",
+    "color": "",
+    "part": "26023",
+    "hw": "020",
+    "cas": "",
+    "image": "https://static.wikia.nocookie.net/hotwheels/images/c/c7/Twin_Mill_II_Org.JPG/revision/latest"
+  },
+  {
+    "year": 2000,
+    "name": "Nissan Truck",
+    "series": "Attack Pack (1/4​)",
+    "color": "",
+    "part": "26024",
+    "hw": "021",
+    "cas": "",
+    "image": "https://static.wikia.nocookie.net/hotwheels/images/3/31/Nissan_Hardbody_Brn.JPG/revision/latest"
+  },
+  {
+    "year": 2000,
+    "name": "Power Plower",
+    "series": "Attack Pack (2/4​)",
+    "color": "",
+    "part": "26025",
+    "hw": "022",
+    "cas": "",
+    "image": "https://static.wikia.nocookie.net/hotwheels/images/e/ef/Bywayman_Purpl.JPG/revision/latest"
+  },
+  {
+    "year": 2000,
+    "name": "'79 Ford F-150",
+    "series": "Attack Pack (3/4​)",
+    "color": "",
+    "part": "26026",
+    "hw": "023",
+    "cas": "",
+    "image": "https://static.wikia.nocookie.net/hotwheels/images/2/2a/Fordf150.jpg/revision/latest"
+  },
+  {
+    "year": 2000,
+    "name": "Dodge Ram 1500",
+    "series": "Attack Pack (4/4​)",
+    "color": "",
+    "part": "26027",
+    "hw": "024",
+    "cas": "",
+    "image": "https://static.wikia.nocookie.net/hotwheels/images/c/c3/Ford_F-150_MtDkRd.JPG/revision/latest"
+  },
+  {
+    "year": 2000,
+    "name": "'56 Flashsider",
+    "series": "Circus on Wheels Series (1/4​)",
+    "color": "",
+    "part": "26028",
+    "hw": "025",
+    "cas": "",
+    "image": "https://static.wikia.nocookie.net/hotwheels/images/1/16/56_Flashsider_MtRedL.JPG/revision/latest"
+  },
+  {
+    "year": 2000,
+    "name": "'32 Ford Delivery",
+    "series": "Circus on Wheels Series (2/4​)",
+    "color": "",
+    "part": "26029",
+    "hw": "026",
+    "cas": "",
+    "image": "https://static.wikia.nocookie.net/hotwheels/images/2/25/%2732_Ford_Delivery_Circus.jpg/revision/latest"
+  },
+  {
+    "year": 2000,
+    "name": "Fat Fendered '40",
+    "series": "Circus on Wheels Series (3/4​)",
+    "color": "",
+    "part": "26030",
+    "hw": "027",
+    "cas": "",
+    "image": "https://static.wikia.nocookie.net/hotwheels/images/7/71/%2740%27s_Ford_2-Door_Blu.JPG/revision/latest"
+  },
+  {
+    "year": 2000,
+    "name": "Dairy Delivery",
+    "series": "Circus on Wheels Series (4/4​)",
+    "color": "",
+    "part": "26031",
+    "hw": "028",
+    "cas": "",
+    "image": "https://static.wikia.nocookie.net/hotwheels/images/a/a6/Dairy_Delivery_Circus_2000_-_2820gf.jpg/revision/latest"
+  },
+  {
+    "year": 2000,
+    "name": "Chrysler Pronto",
+    "series": "CD Customs Series (1/4​)",
+    "color": "",
+    "part": "26032",
+    "hw": "029",
+    "cas": "",
+    "image": "https://static.wikia.nocookie.net/hotwheels/images/f/ff/Chrysler_Pronto_Grn.JPG/revision/latest"
+  },
+  {
+    "year": 2000,
+    "name": "Pikes Peak Tacoma",
+    "series": "CD Customs Series (2/4​)",
+    "color": "",
+    "part": "26033",
+    "hw": "030",
+    "cas": "",
+    "image": "https://static.wikia.nocookie.net/hotwheels/images/0/00/Pikes_Peak_Tacoma_Blk.JPG/revision/latest"
+  },
+  {
+    "year": 2000,
+    "name": "Shadow Mk IIa",
+    "series": "CD Customs Series (3/4​)",
+    "color": "",
+    "part": "26034",
+    "hw": "031",
+    "cas": "",
+    "image": "https://static.wikia.nocookie.net/hotwheels/images/b/bc/Shadow_Mk_II_Wht.JPG/revision/latest"
+  },
+  {
+    "year": 2000,
+    "name": "Pontiac Banshee",
+    "series": "CD Customs Series (4/4​)",
+    "color": "",
+    "part": "26035",
+    "hw": "032",
+    "cas": "",
+    "image": "https://static.wikia.nocookie.net/hotwheels/images/8/84/Pontiac_Banshee_CDL.JPG/revision/latest"
+  },
+  {
+    "year": 2000,
+    "name": "Toyota MR2",
+    "series": "Kung Fu Force series (1/4​)",
+    "color": "",
+    "part": "26036",
+    "hw": "033",
+    "cas": "",
+    "image": "https://static.wikia.nocookie.net/hotwheels/images/3/38/Toyota_Rally_Blk3sp.JPG/revision/latest"
+  },
+  {
+    "year": 2000,
+    "name": "'99 Mustang",
+    "series": "Kung Fu Force series (2/4​)",
+    "color": "",
+    "part": "26037",
+    "hw": "034",
+    "cas": "",
+    "image": "https://static.wikia.nocookie.net/hotwheels/images/c/c6/99_Mustang_Red.JPG/revision/latest"
+  },
+  {
+    "year": 2000,
+    "name": "Shadow Jet II",
+    "series": "Kung Fu Force series (3/4​)",
+    "color": "",
+    "part": "26038",
+    "hw": "035",
+    "cas": "",
+    "image": "https://static.wikia.nocookie.net/hotwheels/images/2/2b/Shadow_Jet_II_Blu.JPG/revision/latest"
+  },
+  {
+    "year": 2000,
+    "name": "Mini Truck",
+    "series": "Kung Fu Force series (4/4​)",
+    "color": "",
+    "part": "26039",
+    "hw": "036",
+    "cas": "",
+    "image": "https://static.wikia.nocookie.net/hotwheels/images/2/26/Minitruck_MtGrn.JPG/revision/latest"
+  },
+  {
+    "year": 2000,
+    "name": "Firebird Funny Car",
+    "series": "Speed Blaster Series (1/4​)",
+    "color": "",
+    "part": "26040",
+    "hw": "037",
+    "cas": "",
+    "image": "https://static.wikia.nocookie.net/hotwheels/images/2/2f/FireBird_Funny_1997_Org.JPG/revision/latest"
+  },
+  {
+    "year": 2000,
+    "name": "At-A-Tude",
+    "series": "Speed Blaster Series (2/4​)",
+    "color": "",
+    "part": "26041",
+    "hw": "038",
+    "cas": "",
+    "image": "https://static.wikia.nocookie.net/hotwheels/images/b/ba/At-A-Tude_Gry.JPG/revision/latest"
+  },
+  {
+    "year": 2000,
+    "name": "Mustang Cobra",
+    "series": "Speed Blaster Series (3/4​)",
+    "color": "",
+    "part": "26042",
+    "hw": "039",
+    "cas": "",
+    "image": "https://static.wikia.nocookie.net/hotwheels/images/3/3d/Mustang_Cobra_Blu.JPG/revision/latest"
+  },
+  {
+    "year": 2000,
+    "name": "Shelby Cobra 427 S/C",
+    "series": "Speed Blaster Series (4/4​)",
+    "color": "",
+    "part": "26043",
+    "hw": "040",
+    "cas": "",
+    "image": "https://static.wikia.nocookie.net/hotwheels/images/4/44/Shelbycobra.white.jpg/revision/latest"
+  },
+  {
+    "year": 2000,
+    "name": "Rigor Motor",
+    "series": "Tony Hawk Skate Series (1/4​)",
+    "color": "",
+    "part": "26044",
+    "hw": "041",
+    "cas": "",
+    "image": "https://static.wikia.nocookie.net/hotwheels/images/7/76/Rigor_Motor_Blu.JPG/revision/latest"
+  },
+  {
+    "year": 2000,
+    "name": "Sol-Aire CX4",
+    "series": "Tony Hawk Skate Series (2/4​)",
+    "color": "",
+    "part": "26045",
+    "hw": "042",
+    "cas": "",
+    "image": "https://static.wikia.nocookie.net/hotwheels/images/3/38/Sol-Aire_Wht3SP.JPG/revision/latest"
+  },
+  {
+    "year": 2000,
+    "name": "Speed Blaster",
+    "series": "Tony Hawk Skate Series (3/4​)",
+    "color": "",
+    "part": "26046",
+    "hw": "043",
+    "cas": "",
+    "image": "https://static.wikia.nocookie.net/hotwheels/images/1/10/Speed_Blaster_Org.JPG/revision/latest"
+  },
+  {
+    "year": 2000,
+    "name": "Combat Medic",
+    "series": "Tony Hawk Skate Series (4/4​)",
+    "color": "",
+    "part": "26047",
+    "hw": "044",
+    "cas": "",
+    "image": "https://static.wikia.nocookie.net/hotwheels/images/7/73/Tony_Hawk_Combat_Medic_-_6062df.jpg/revision/latest"
+  },
+  {
+    "year": 2000,
+    "name": "Fiat 500C",
+    "series": "Secret Code Series (1/4​)",
+    "color": "",
+    "part": "26048",
+    "hw": "045",
+    "cas": "",
+    "image": "https://static.wikia.nocookie.net/hotwheels/images/4/4b/Fiat_500_Red.JPG/revision/latest"
+  },
+  {
+    "year": 2000,
+    "name": "Baby Boomer",
+    "series": "Secret Code Series (2/4​)",
+    "color": "",
+    "part": "26049",
+    "hw": "046",
+    "cas": "",
+    "image": "https://static.wikia.nocookie.net/hotwheels/images/f/f8/Baby_Bommer_Blu.JPG/revision/latest"
+  },
+  {
+    "year": 2000,
+    "name": "Tee'd Off",
+    "series": "Secret Code Series (3/4​)",
+    "color": "",
+    "part": "26050",
+    "hw": "047",
+    "cas": "",
+    "image": "https://static.wikia.nocookie.net/hotwheels/images/a/a4/Teed_Off_-_00_Secret_Code.jpg/revision/latest"
+  },
+  {
+    "year": 2000,
+    "name": "Screamin' Hauler",
+    "series": "Secret Code Series (4/4​)",
+    "color": "",
+    "part": "26051",
+    "hw": "048",
+    "cas": "",
+    "image": "https://static.wikia.nocookie.net/hotwheels/images/9/9c/Screamin_Hauler_Yel.JPG/revision/latest"
+  },
+  {
+    "year": 2000,
+    "name": "Double Vision",
+    "series": "2000 Treasure Hunts (01/12​)",
+    "color": "",
+    "part": "26371",
+    "hw": "049",
+    "cas": "",
+    "image": "https://static.wikia.nocookie.net/hotwheels/images/a/ae/Double_Vision_-_00TH.jpg/revision/latest"
+  },
+  {
+    "year": 2000,
+    "name": "Tow Jam",
+    "series": "2000 Treasure Hunts (02/12​)",
+    "color": "",
+    "part": "26372",
+    "hw": "050",
+    "cas": "",
+    "image": "https://static.wikia.nocookie.net/hotwheels/images/0/03/Tow_Jam_-_00TH.jpg/revision/latest"
+  },
+  {
+    "year": 2000,
+    "name": "1936 Cord",
+    "series": "2000 Treasure Hunts (03/12​)",
+    "color": "",
+    "part": "26373",
+    "hw": "051",
+    "cas": "",
+    "image": "https://static.wikia.nocookie.net/hotwheels/images/d/d0/36_Cord_-_00TH_WW.jpg/revision/latest"
+  },
+  {
+    "year": 2000,
+    "name": "Sweet 16 II",
+    "series": "2000 Treasure Hunts (04/12​)",
+    "color": "",
+    "part": "26374",
+    "hw": "052",
+    "cas": "",
+    "image": "https://static.wikia.nocookie.net/hotwheels/images/b/ba/Sweet_16_II_-_00TH.jpg/revision/latest"
+  },
+  {
+    "year": 2000,
+    "name": "Lakester",
+    "series": "2000 Treasure Hunts (05/12​)",
+    "color": "",
+    "part": "26375",
+    "hw": "053",
+    "cas": "",
+    "image": "https://static.wikia.nocookie.net/hotwheels/images/d/db/Lakester_-_00TH.jpg/revision/latest"
+  },
+  {
+    "year": 2000,
+    "name": "Go Kart",
+    "series": "2000 Treasure Hunts (06/12​)",
+    "color": "",
+    "part": "26376",
+    "hw": "054",
+    "cas": "",
+    "image": "https://static.wikia.nocookie.net/hotwheels/images/3/38/Go_Kart_-_00TH.jpg/revision/latest"
+  },
+  {
+    "year": 2000,
+    "name": "Chaparral 2",
+    "series": "2000 Treasure Hunts (07/12​)",
+    "color": "",
+    "part": "26377",
+    "hw": "055",
+    "cas": "",
+    "image": "https://static.wikia.nocookie.net/hotwheels/images/4/4e/Chaparral_2_-_00TH.jpg/revision/latest"
+  },
+  {
+    "year": 2000,
+    "name": "'57 T-Bird",
+    "series": "2000 Treasure Hunts (08/12​)",
+    "color": "",
+    "part": "26378",
+    "hw": "056",
+    "cas": "",
+    "image": "https://static.wikia.nocookie.net/hotwheels/images/0/09/57_T-Bird_-_00TH.jpg/revision/latest"
+  },
+  {
+    "year": 2000,
+    "name": "Pikes Peak Celica",
+    "series": "2000 Treasure Hunts (09/12​)",
+    "color": "",
+    "part": "26379",
+    "hw": "057",
+    "cas": "",
+    "image": "https://static.wikia.nocookie.net/hotwheels/images/4/4a/Pikes_Peak_Celica_-_00TH.jpg/revision/latest"
+  },
+  {
+    "year": 2000,
+    "name": "'67 Pontiac GTO",
+    "series": "2000 Treasure Hunts (10/12​)",
+    "color": "",
+    "part": "26380",
+    "hw": "058",
+    "cas": "",
+    "image": "https://static.wikia.nocookie.net/hotwheels/images/8/8e/67_GTO_-_00TH.jpg/revision/latest"
+  },
+  {
+    "year": 2000,
+    "name": "Ford GT-40",
+    "series": "2000 Treasure Hunts (11/12​)",
+    "color": "",
+    "part": "26381",
+    "hw": "059",
+    "cas": "",
+    "image": "https://static.wikia.nocookie.net/hotwheels/images/d/d3/Ford_GT-40_-_00TH.jpg/revision/latest"
+  },
+  {
+    "year": 2000,
+    "name": "1970 Chevelle SS",
+    "series": "2000 Treasure Hunts (12/12​)",
+    "color": "",
+    "part": "26382",
+    "hw": "060",
+    "cas": "",
+    "image": "https://static.wikia.nocookie.net/hotwheels/images/e/ea/70_Chevelle_SS_-_00TH.jpg/revision/latest"
+  },
+  {
+    "year": 2000,
+    "name": "Ferrari 365 GTB/4",
+    "series": "2000 First Editions (01/36​)",
+    "color": "",
+    "part": "23928",
+    "hw": "061",
+    "cas": "",
+    "image": "https://static.wikia.nocookie.net/hotwheels/images/6/65/Ferrari_365_GTB.JPG/revision/latest"
+  },
+  {
+    "year": 2000,
+    "name": "Ferrari 550 Maranello",
+    "series": "2000 First Editions (02/36​)",
+    "color": "",
+    "part": "23929",
+    "hw": "062",
+    "cas": "",
+    "image": "https://static.wikia.nocookie.net/hotwheels/images/7/75/Ferrari550Maranello.jpg/revision/latest"
+  },
+  {
+    "year": 2000,
+    "name": "1964 Lincoln Continental",
+    "series": "2000 First Editions (03/36​)",
+    "color": "",
+    "part": "24366",
+    "hw": "063",
+    "cas": "",
+    "image": "https://static.wikia.nocookie.net/hotwheels/images/b/b8/64_Lincoln_Wht.JPG/revision/latest"
+  },
+  {
+    "year": 2000,
+    "name": "Pro Stock Firebird",
+    "series": "2000 First Editions (04/36​)",
+    "color": "",
+    "part": "24368",
+    "hw": "064",
+    "cas": "",
+    "image": "https://static.wikia.nocookie.net/hotwheels/images/5/50/Pro_Stock_Firebird_Yel.JPG/revision/latest"
+  },
+  {
+    "year": 2000,
+    "name": "Deora II",
+    "series": "2000 First Editions (05/36​)",
+    "color": "",
+    "part": "24369",
+    "hw": "065",
+    "cas": "",
+    "image": "https://static.wikia.nocookie.net/hotwheels/images/3/32/2000_First_Edition_Deora_II-BBB01.jpg/revision/latest"
+  },
+  {
+    "year": 2000,
+    "name": "Deuce Roadster",
+    "series": "2000 First Editions (06/36​)",
+    "color": "",
+    "part": "24389",
+    "hw": "066",
+    "cas": "",
+    "image": "https://static.wikia.nocookie.net/hotwheels/images/b/ba/Deuce_Roadster_UnP.JPG/revision/latest"
+  },
+  {
+    "year": 2000,
+    "name": "Chevy Pro Stock Truck",
+    "series": "2000 First Editions (07/36​)",
+    "color": "",
+    "part": "24370",
+    "hw": "067",
+    "cas": "",
+    "image": "https://static.wikia.nocookie.net/hotwheels/images/b/b4/Chevy_Pro_Stock_Truck_Org.JPG/revision/latest"
+  },
+  {
+    "year": 2000,
+    "name": "'68 El Camino",
+    "series": "2000 First Editions (08/36​)",
+    "color": "",
+    "part": "24371",
+    "hw": "068",
+    "cas": "",
+    "image": "https://static.wikia.nocookie.net/hotwheels/images/8/81/69_El_Camino_Wht.JPG/revision/latest"
+  },
+  {
+    "year": 2000,
+    "name": "Phantastique",
+    "series": "2000 First Editions (09/36​)",
+    "color": "",
+    "part": "24373",
+    "hw": "069",
+    "cas": "",
+    "image": "https://static.wikia.nocookie.net/hotwheels/images/4/4d/Phantastique_Blu.JPG/revision/latest"
+  },
+  {
+    "year": 2000,
+    "name": "Thomassima 3",
+    "series": "2000 First Editions (10/36​)",
+    "color": "",
+    "part": "24367",
+    "hw": "070",
+    "cas": "",
+    "image": "https://static.wikia.nocookie.net/hotwheels/images/6/62/Thomassima_3_LW.JPG/revision/latest"
+  },
+  {
+    "year": 2000,
+    "name": "Ferrari 333 SP",
+    "series": "2000 First Editions (11/36​)",
+    "color": "",
+    "part": "24374",
+    "hw": "071",
+    "cas": "",
+    "image": "https://static.wikia.nocookie.net/hotwheels/images/4/4e/Ferrari_333_SP_01.jpg/revision/latest"
+  },
+  {
+    "year": 2000,
+    "name": "Dodge Charger R/T",
+    "series": "2000 First Editions (12/36​)",
+    "color": "",
+    "part": "24377",
+    "hw": "072",
+    "cas": "",
+    "image": "https://static.wikia.nocookie.net/hotwheels/images/d/dd/Dodge_Charger_RT5sp.JPG/revision/latest"
+  },
+  {
+    "year": 2000,
+    "name": "Surf Crate",
+    "series": "2000 First Editions (13/36​)",
+    "color": "",
+    "part": "24378",
+    "hw": "073",
+    "cas": "",
+    "image": "https://static.wikia.nocookie.net/hotwheels/images/1/11/Surf_Crate_Prp.JPG/revision/latest"
+  },
+  {
+    "year": 2000,
+    "name": "'41 Willys",
+    "series": "2000 First Editions (14/36​)",
+    "color": "",
+    "part": "24383",
+    "hw": "074",
+    "cas": "",
+    "image": "https://static.wikia.nocookie.net/hotwheels/images/2/22/41willyscoupe.jpg/revision/latest"
+  },
+  {
+    "year": 2000,
+    "name": "Lotus Elise 340R",
+    "series": "2000 First Editions (15/36​)",
+    "color": "",
+    "part": "24388",
+    "hw": "075",
+    "cas": "",
+    "image": "https://static.wikia.nocookie.net/hotwheels/images/c/c1/Lotus_Elise_340R_Slv.JPG/revision/latest"
+  },
+  {
+    "year": 2000,
+    "name": "1999 Isuzu VehiCROSS",
+    "series": "2000 First Editions (16/36​)",
+    "color": "",
+    "part": "24392",
+    "hw": "076",
+    "cas": "",
+    "image": "https://static.wikia.nocookie.net/hotwheels/images/c/c7/Isuzu_VehiCross_Slv.JPG/revision/latest"
+  },
+  {
+    "year": 2000,
+    "name": "Anglia Panel Truck",
+    "series": "2000 First Editions (17/36​)",
+    "color": "",
+    "part": "24397",
+    "hw": "077",
+    "cas": "",
+    "image": "https://static.wikia.nocookie.net/hotwheels/images/b/ba/Anglia_Panel_Truck_Prp.JPG/revision/latest"
+  },
+  {
+    "year": 2000,
+    "name": "So Fine",
+    "series": "2000 First Editions (18/36​)",
+    "color": "",
+    "part": "24400",
+    "hw": "078",
+    "cas": "",
+    "image": "https://static.wikia.nocookie.net/hotwheels/images/d/dc/Sofine.jpg/revision/latest"
+  },
+  {
+    "year": 2000,
+    "name": "'65 Vette",
+    "series": "2000 First Editions (19/36​)",
+    "color": "",
+    "part": "24372",
+    "hw": "079",
+    "cas": "",
+    "image": "https://static.wikia.nocookie.net/hotwheels/images/4/49/65_Vette_AGENTAIR_1.jpg/revision/latest"
+  },
+  {
+    "year": 2000,
+    "name": "MX48 Turbo",
+    "series": "2000 First Editions (20/26​)",
+    "color": "",
+    "part": "24375",
+    "hw": "080",
+    "cas": "",
+    "image": "https://static.wikia.nocookie.net/hotwheels/images/1/1f/MX48_Turbo_Blu.JPG/revision/latest"
+  },
+  {
+    "year": 2000,
+    "name": "Holden",
+    "series": "2000 First Editions (21/36​)",
+    "color": "",
+    "part": "24376",
+    "hw": "081",
+    "cas": "",
+    "image": "https://static.wikia.nocookie.net/hotwheels/images/7/75/Holden_SS_Commodore_VT.JPG/revision/latest"
+  },
+  {
+    "year": 2000,
+    "name": "Cabbin' Fever",
+    "series": "2000 First Editions (22/36​)",
+    "color": "",
+    "part": "24379",
+    "hw": "082",
+    "cas": "",
+    "image": "https://static.wikia.nocookie.net/hotwheels/images/3/35/2000_Cabin_First_Edition.jpg/revision/latest"
+  },
+  {
+    "year": 2000,
+    "name": "Metrorail",
+    "series": "2000 First Editions (23/36​)",
+    "color": "",
+    "part": "24384",
+    "hw": "083",
+    "cas": "",
+    "image": "https://static.wikia.nocookie.net/hotwheels/images/9/98/FE_Metrorail.jpg/revision/latest"
+  },
+  {
+    "year": 2000,
+    "name": "Muscle Tone",
+    "series": "2000 First Editions (24/36​)",
+    "color": "",
+    "part": "24390",
+    "hw": "084",
+    "cas": "",
+    "image": "https://static.wikia.nocookie.net/hotwheels/images/9/9f/Muscle_Tone_00FE.jpg/revision/latest"
+  },
+  {
+    "year": 2000,
+    "name": "Dodge Power Wagon",
+    "series": "2000 First Editions (25/36​)",
+    "color": "",
+    "part": "24393",
+    "hw": "085",
+    "cas": "",
+    "image": "https://static.wikia.nocookie.net/hotwheels/images/d/db/Dodge_Power_Wagon.JPG/revision/latest"
+  },
+  {
+    "year": 2000,
+    "name": "Shoe Box",
+    "series": "2000 First Editions (26/36​)",
+    "color": "",
+    "part": "24395",
+    "hw": "086",
+    "cas": "",
+    "image": "https://static.wikia.nocookie.net/hotwheels/images/b/b5/ShoeBoxHiLBest.jpg/revision/latest"
+  },
+  {
+    "year": 2000,
+    "name": "Sho-Stopper",
+    "series": "2000 First Editions (27/36​)",
+    "color": "",
+    "part": "24396",
+    "hw": "087",
+    "cas": "",
+    "image": "https://static.wikia.nocookie.net/hotwheels/images/c/c7/Seared_Tuner_-_00FE_3SP.JPG/revision/latest"
+  },
+  {
+    "year": 2000,
+    "name": "'67 Dodge Charger",
+    "series": "2000 First Editions (28/36​)",
+    "color": "",
+    "part": "24381",
+    "hw": "088",
+    "cas": "",
+    "image": "https://static.wikia.nocookie.net/hotwheels/images/4/4c/%2767_Charger.JPG/revision/latest"
+  },
+  {
+    "year": 2000,
+    "name": "Vulture",
+    "series": "2000 First Editions (29/36​)",
+    "color": "",
+    "part": "24382",
+    "hw": "089",
+    "cas": "",
+    "image": "https://static.wikia.nocookie.net/hotwheels/images/c/ca/Vulture5sp.JPG/revision/latest"
+  },
+  {
+    "year": 2000,
+    "name": "Mini Cooper",
+    "series": "2000 First Editions (30/36​)",
+    "color": "",
+    "part": "24386",
+    "hw": "090",
+    "cas": "",
+    "image": "https://static.wikia.nocookie.net/hotwheels/images/d/d6/Mini_-_00_FE.jpg/revision/latest"
+  },
+  {
+    "year": 2000,
+    "name": "Roll Cage",
+    "series": "2000 First Editions (31/36​)",
+    "color": "",
+    "part": "24387",
+    "hw": "091",
+    "cas": "",
+    "image": "https://static.wikia.nocookie.net/hotwheels/images/4/4c/Roll_Cage_Yel.JPG/revision/latest"
+  },
+  {
+    "year": 2000,
+    "name": "Austin Healey",
+    "series": "2000 First Editions (32/36​)",
+    "color": "",
+    "part": "24391",
+    "hw": "092",
+    "cas": "",
+    "image": "https://static.wikia.nocookie.net/hotwheels/images/0/06/Austinhealy2000.jpg/revision/latest"
+  },
+  {
+    "year": 2000,
+    "name": "Hammered Coupe",
+    "series": "2000 First Editions (33/36​)",
+    "color": "",
+    "part": "24394",
+    "hw": "093",
+    "cas": "",
+    "image": "https://static.wikia.nocookie.net/hotwheels/images/5/5c/Hammered_Coupe_Prp.JPG/revision/latest"
+  },
+  {
+    "year": 2000,
+    "name": "Arachnorod",
+    "series": "2000 First Editions (34/36​)",
+    "color": "",
+    "part": "24398",
+    "hw": "094",
+    "cas": "",
+    "image": "https://static.wikia.nocookie.net/hotwheels/images/c/c1/Arachnorod.JPG/revision/latest"
+  },
+  {
+    "year": 2000,
+    "name": "Greased Lightnin'",
+    "series": "2000 First Editions (35/36​)",
+    "color": "",
+    "part": "24399",
+    "hw": "095",
+    "cas": "",
+    "image": "https://static.wikia.nocookie.net/hotwheels/images/4/4c/Greased_Lightning_5sp.JPG/revision/latest"
+  },
+  {
+    "year": 2000,
+    "name": "Blast Lane",
+    "series": "2000 First Editions (36/36​)",
+    "color": "",
+    "part": "27497",
+    "hw": "096",
+    "cas": "",
+    "image": "https://static.wikia.nocookie.net/hotwheels/images/6/67/BlastLProRor.jpg/revision/latest"
+  },
+  {
+    "year": 2000,
+    "name": "1936 Cord",
+    "series": "2000 Virtual Collection (LIV42DA)",
+    "color": "",
+    "part": "27064",
+    "hw": "097",
+    "cas": "",
+    "image": "https://static.wikia.nocookie.net/hotwheels/images/6/6c/1936_Cord_Grn.JPG/revision/latest"
+  },
+  {
+    "year": 2000,
+    "name": "Hot Seat",
+    "series": "2000 Virtual Collection (XLR82XS)",
+    "color": "",
+    "part": "27068",
+    "hw": "101",
+    "cas": "",
+    "image": "https://static.wikia.nocookie.net/hotwheels/images/4/4a/Th_HotSeat016.jpg/revision/latest"
+  },
+  {
+    "year": 2000,
+    "name": "Tractor",
+    "series": "2000 Virtual Collection (IW84NO1)",
+    "color": "",
+    "part": "27070",
+    "hw": "103",
+    "cas": "",
+    "image": "https://static.wikia.nocookie.net/hotwheels/images/f/fc/Tractor_GrnBlk.JPG/revision/latest"
+  },
+  {
+    "year": 2000,
+    "name": "Speed-A-Saurus",
+    "series": "2000 Virtual Collection (SPDGTKT)",
+    "color": "",
+    "part": "27071",
+    "hw": "104",
+    "cas": "",
+    "image": "https://static.wikia.nocookie.net/hotwheels/images/a/a4/Speed_A-Saurus_BrtGrn.JPG/revision/latest"
+  },
+  {
+    "year": 2000,
+    "name": "Monte Carlo Concept Car",
+    "series": "2000 Virtual Collection (2KUL4U)",
+    "color": "",
+    "part": "27076",
+    "hw": "109",
+    "cas": "",
+    "image": "https://static.wikia.nocookie.net/hotwheels/images/0/04/Monte_Carlo_Concept_Pnk.JPG/revision/latest"
+  },
+  {
+    "year": 2000,
+    "name": "Fork Lift",
+    "series": "2000 Virtual Collection (MVNONUP)",
+    "color": "",
+    "part": "27077",
+    "hw": "110",
+    "cas": "",
+    "image": "https://static.wikia.nocookie.net/hotwheels/images/5/53/CAT_Forklift_Org.JPG/revision/latest"
+  },
+  {
+    "year": 2000,
+    "name": "Wheel Loader",
+    "series": "2000 Virtual Collection (GSGZLR)",
+    "color": "",
+    "part": "27078",
+    "hw": "111",
+    "cas": "",
+    "image": "https://static.wikia.nocookie.net/hotwheels/images/e/ed/CAT_Whee_Loader_Wht.JPG/revision/latest"
+  },
+  {
+    "year": 2000,
+    "name": "Turbo Flame",
+    "series": "2000 Virtual Collection (SPLDRTN)",
+    "color": "",
+    "part": "27079",
+    "hw": "112",
+    "cas": "",
+    "image": "https://static.wikia.nocookie.net/hotwheels/images/0/0d/Turbo_Flame_Red.JPG/revision/latest"
+  },
+  {
+    "year": 2000,
+    "name": "Flame Stopper",
+    "series": "2000 Virtual Collection (HYPRDRV)",
+    "color": "",
+    "part": "27080",
+    "hw": "113",
+    "cas": "",
+    "image": "https://static.wikia.nocookie.net/hotwheels/images/c/c4/Flame_Stopper_Org.JPG/revision/latest"
+  },
+  {
+    "year": 2000,
+    "name": "Lamborghini Diablo",
+    "series": "2000 Virtual Collection (TPSPDR)",
+    "color": "",
+    "part": "27081",
+    "hw": "114",
+    "cas": "",
+    "image": "https://static.wikia.nocookie.net/hotwheels/images/f/f2/Lamborghini_Diablo_blu.JPG/revision/latest"
+  },
+  {
+    "year": 2000,
+    "name": "Way 2 Fast",
+    "series": "2000 Virtual Collection (WAY2KUL)",
+    "color": "",
+    "part": "27082",
+    "hw": "115",
+    "cas": "",
+    "image": "https://static.wikia.nocookie.net/hotwheels/images/a/ad/Way_2_Fast_DkRd.JPG/revision/latest"
+  },
+  {
+    "year": 2000,
+    "name": "Tee'd Off",
+    "series": "2000 Virtual Collection (NJYNLF)",
+    "color": "",
+    "part": "27084",
+    "hw": "117",
+    "cas": "",
+    "image": "https://static.wikia.nocookie.net/hotwheels/images/0/05/Teed_Off_-_00_Virtual_Collection.jpg/revision/latest"
+  },
+  {
+    "year": 2000,
+    "name": "Semi-Fast",
+    "series": "2000 Virtual Collection (MYLS2GO)",
+    "color": "",
+    "part": "27085",
+    "hw": "118",
+    "cas": "",
+    "image": "https://static.wikia.nocookie.net/hotwheels/images/8/85/Semi-Fast_Blu.JPG/revision/latest"
+  },
+  {
+    "year": 2000,
+    "name": "Oshkosh Cement Truck",
+    "series": "2000 Virtual Collection (FSTFWD)",
+    "color": "",
+    "part": "27090",
+    "hw": "123",
+    "cas": "",
+    "image": "https://static.wikia.nocookie.net/hotwheels/images/0/0b/Oshkosh_Cement_Mixer_Grn.JPG/revision/latest"
+  },
+  {
+    "year": 2000,
+    "name": "Rodzilla",
+    "series": "2000 Virtual Collection (UNSTPBL)",
+    "color": "",
+    "part": "27093",
+    "hw": "126",
+    "cas": "",
+    "image": "https://static.wikia.nocookie.net/hotwheels/images/1/16/Rodzilla_Grn3sp.JPG/revision/latest"
+  },
+  {
+    "year": 2000,
+    "name": "Track T",
+    "series": "2000 Virtual Collection (DRVNBY)",
+    "color": "",
+    "part": "27094",
+    "hw": "127",
+    "cas": "",
+    "image": "https://static.wikia.nocookie.net/hotwheels/images/3/33/TrackT_WhtSB.JPG/revision/latest"
+  },
+  {
+    "year": 2000,
+    "name": "Turbolence",
+    "series": "2000 Virtual Collection (FASTRNU)",
+    "color": "",
+    "part": "27096",
+    "hw": "129",
+    "cas": "",
+    "image": "https://static.wikia.nocookie.net/hotwheels/images/b/bd/Turbolence_Slv.JPG/revision/latest"
+  },
+  {
+    "year": 2000,
+    "name": "Mercedes-Benz Unimog",
+    "series": "2000 Virtual Collection (RDTRPZ)",
+    "color": "",
+    "part": "27100",
+    "hw": "133",
+    "cas": "",
+    "image": "https://static.wikia.nocookie.net/hotwheels/images/d/db/Mercedes_Benz_Unimog_MtRedSB.JPG/revision/latest"
+  },
+  {
+    "year": 2000,
+    "name": "Thunderstreak",
+    "series": "2000 Virtual Collection (CYAL8R)",
+    "color": "",
+    "part": "27102",
+    "hw": "135",
+    "cas": "",
+    "image": "https://static.wikia.nocookie.net/hotwheels/images/9/94/Thunderstreak_Prp.JPG/revision/latest"
+  },
+  {
+    "year": 2000,
+    "name": "Dogfighter",
+    "series": "2000 Virtual Collection (FLYNBYU)",
+    "color": "",
+    "part": "22413",
+    "hw": "137",
+    "cas": "",
+    "image": "https://static.wikia.nocookie.net/hotwheels/images/a/a1/Dofighter_Yel.JPG/revision/latest"
+  },
+  {
+    "year": 2000,
+    "name": "Skullrider",
+    "series": "2000 Virtual Collection (LKNKUL)",
+    "color": "",
+    "part": "22414",
+    "hw": "138",
+    "cas": "",
+    "image": "https://static.wikia.nocookie.net/hotwheels/images/e/e1/Skullrider_Red.JPG/revision/latest"
+  },
+  {
+    "year": 2000,
+    "name": "Blimp",
+    "series": "2000 Virtual Collection (FLYNAWY)",
+    "color": "",
+    "part": "27108",
+    "hw": "142",
+    "cas": "",
+    "image": "https://static.wikia.nocookie.net/hotwheels/images/5/53/Blimp_VC.JPG/revision/latest"
+  },
+  {
+    "year": 2000,
+    "name": "Recycling Truck",
+    "series": "2000 Virtual Collection (NVR2L8)",
+    "color": "",
+    "part": "27109",
+    "hw": "143",
+    "cas": "",
+    "image": "https://static.wikia.nocookie.net/hotwheels/images/6/62/Recycling_Truck_Blue.JPG/revision/latest"
+  },
+  {
+    "year": 2000,
+    "name": "Ice Cream Truck",
+    "series": "2000 Virtual Collection (COOLONE)",
+    "color": "",
+    "part": "27110",
+    "hw": "144",
+    "cas": "",
+    "image": "https://static.wikia.nocookie.net/hotwheels/images/3/30/Icecream2.jpg/revision/latest"
+  },
+  {
+    "year": 2000,
+    "name": "Fire-Eater",
+    "series": "2000 Virtual Collection (2DARESQ)",
+    "color": "",
+    "part": "27111",
+    "hw": "145",
+    "cas": "",
+    "image": "https://static.wikia.nocookie.net/hotwheels/images/7/72/Fire_Eater_Wht.JPG/revision/latest"
+  },
+  {
+    "year": 2000,
+    "name": "Go Kart",
+    "series": "2000 Virtual Collection (SPDBMP)",
+    "color": "",
+    "part": "27117",
+    "hw": "151",
+    "cas": "",
+    "image": "https://static.wikia.nocookie.net/hotwheels/images/3/32/Go_Kart_Prpl.JPG/revision/latest"
+  },
+  {
+    "year": 2000,
+    "name": "Fathom This",
+    "series": "2000 Virtual Collection (H2OSPDR)",
+    "color": "",
+    "part": "27118",
+    "hw": "152",
+    "cas": "",
+    "image": "https://static.wikia.nocookie.net/hotwheels/images/1/1f/Fathom_This_WhtOrg.JPG/revision/latest"
+  },
+  {
+    "year": 2000,
+    "name": "Shadow Jet II",
+    "series": "2000 Virtual Collection (2QWK4U)",
+    "color": "",
+    "part": "27119",
+    "hw": "153",
+    "cas": "",
+    "image": "https://static.wikia.nocookie.net/hotwheels/images/d/d0/153_Virtual_Collection_Shadow_Jet_II.jpg/revision/latest"
+  },
+  {
+    "year": 2000,
+    "name": "Splittin' Image II",
+    "series": "2000 Virtual Collection (DBLTBL)",
+    "color": "",
+    "part": "27121",
+    "hw": "155",
+    "cas": "",
+    "image": "https://static.wikia.nocookie.net/hotwheels/images/f/f6/Splittin%27_Image_II_Slv.JPG/revision/latest"
+  },
+  {
+    "year": 2000,
+    "name": "Screamin' Hauler",
+    "series": "2000 Virtual Collection (HAULINA)",
+    "color": "",
+    "part": "27122",
+    "hw": "156",
+    "cas": "",
+    "image": "https://static.wikia.nocookie.net/hotwheels/images/7/71/Screamin_Hauler_Red.JPG/revision/latest"
+  },
+  {
+    "year": 2000,
+    "name": "Popcycle",
+    "series": "2000 Virtual Collection (PDLPWR)",
+    "color": "",
+    "part": "27123",
+    "hw": "157",
+    "cas": "",
+    "image": "https://static.wikia.nocookie.net/hotwheels/images/4/4f/Popcycle_Grn.JPG/revision/latest"
+  },
+  {
+    "year": 2000,
+    "name": "Super Modified",
+    "series": "2000 Virtual Collection (SPDDMN)",
+    "color": "",
+    "part": "27124",
+    "hw": "158",
+    "cas": "",
+    "image": "https://static.wikia.nocookie.net/hotwheels/images/1/19/Super_Modified_Red.JPG/revision/latest"
+  },
+  {
+    "year": 2000,
+    "name": "Phaeton",
+    "series": "2000 Virtual Collection (CNTA4IT)",
+    "color": "",
+    "part": "27130",
+    "hw": "164",
+    "cas": "",
+    "image": "https://static.wikia.nocookie.net/hotwheels/images/8/89/Phaeton_Blk.JPG/revision/latest"
+  },
+  {
+    "year": 2000,
+    "name": "Lakester",
+    "series": "2000 Virtual Collection (LNDSPDR)",
+    "color": "",
+    "part": "27134",
+    "hw": "168",
+    "cas": "",
+    "image": "https://static.wikia.nocookie.net/hotwheels/images/b/be/Lakester_BlkLft.JPG/revision/latest"
+  },
+  {
+    "year": 2000,
+    "name": "Baby Boomer",
+    "series": "2000 Virtual Collection (FSTBUGE)",
+    "color": "",
+    "part": "27139",
+    "hw": "173",
+    "cas": "",
+    "image": "https://static.wikia.nocookie.net/hotwheels/images/4/46/Baby_Bommer_RedBt.JPG/revision/latest"
+  },
+  {
+    "year": 2000,
+    "name": "'99 Mustang",
+    "series": "2000 Hot Wheels",
+    "color": "",
+    "part": "27065",
+    "hw": "098",
+    "cas": "",
+    "image": ""
+  },
+  {
+    "year": 2000,
+    "name": "Phantom Corsair",
+    "series": "2000 Hot Wheels",
+    "color": "",
+    "part": "27066",
+    "hw": "099",
+    "cas": "",
+    "image": ""
+  },
+  {
+    "year": 2000,
+    "name": "BMW M Roadster",
+    "series": "2000 Hot Wheels",
+    "color": "",
+    "part": "27067",
+    "hw": "100",
+    "cas": "",
+    "image": ""
+  },
+  {
+    "year": 2000,
+    "name": "'90 T-Bird",
+    "series": "2000 Hot Wheels",
+    "color": "",
+    "part": "27069",
+    "hw": "102",
+    "cas": "",
+    "image": ""
+  },
+  {
+    "year": 2000,
+    "name": "'57 Chevy",
+    "series": "2000 Hot Wheels",
+    "color": "",
+    "part": "27072",
+    "hw": "105",
+    "cas": "",
+    "image": ""
+  },
+  {
+    "year": 2000,
+    "name": "Ferrari 348",
+    "series": "2000 Hot Wheels",
+    "color": "",
+    "part": "27073",
+    "hw": "106",
+    "cas": "",
+    "image": ""
+  },
+  {
+    "year": 2000,
+    "name": "'70 Chevelle",
+    "series": "2000 Hot Wheels",
+    "color": "",
+    "part": "27074",
+    "hw": "107",
+    "cas": "",
+    "image": ""
+  },
+  {
+    "year": 2000,
+    "name": "Olds Aurora",
+    "series": "2000 Hot Wheels",
+    "color": "",
+    "part": "27075",
+    "hw": "108",
+    "cas": "",
+    "image": ""
+  },
+  {
+    "year": 2000,
+    "name": "'59 Chevy",
+    "series": "2000 Hot Wheels",
+    "color": "",
+    "part": "27083",
+    "hw": "116",
+    "cas": "",
+    "image": ""
+  },
+  {
+    "year": 2000,
+    "name": "Pontiac Rageous",
+    "series": "2000 Hot Wheels",
+    "color": "",
+    "part": "27086",
+    "hw": "119",
+    "cas": "",
+    "image": ""
+  },
+  {
+    "year": 2000,
+    "name": "Mercedes SLK",
+    "series": "2000 Hot Wheels",
+    "color": "",
+    "part": "27087",
+    "hw": "120",
+    "cas": "",
+    "image": ""
+  },
+  {
+    "year": 2000,
+    "name": "Mustang Cobra",
+    "series": "2000 Hot Wheels",
+    "color": "",
+    "part": "27088",
+    "hw": "121",
+    "cas": "",
+    "image": ""
+  },
+  {
+    "year": 2000,
+    "name": "Ferrari F40",
+    "series": "2000 Hot Wheels",
+    "color": "",
+    "part": "27089",
+    "hw": "122",
+    "cas": "",
+    "image": ""
+  },
+  {
+    "year": 2000,
+    "name": "Camaro Z-28",
+    "series": "2000 Hot Wheels",
+    "color": "",
+    "part": "27091",
+    "hw": "124",
+    "cas": "",
+    "image": ""
+  },
+  {
+    "year": 2000,
+    "name": "Porsche 930",
+    "series": "2000 Hot Wheels",
+    "color": "",
+    "part": "27092",
+    "hw": "125",
+    "cas": "",
+    "image": ""
+  },
+  {
+    "year": 2000,
+    "name": "Porsche 911 GT3 Cup",
+    "series": "2000 Hot Wheels",
+    "color": "",
+    "part": "27095",
+    "hw": "128",
+    "cas": "",
+    "image": ""
+  },
+  {
+    "year": 2000,
+    "name": "'63 T-Bird",
+    "series": "2000 Hot Wheels",
+    "color": "",
+    "part": "27097",
+    "hw": "130",
+    "cas": "",
+    "image": ""
+  },
+  {
+    "year": 2000,
+    "name": "Mercedes C-Class",
+    "series": "2000 Hot Wheels",
+    "color": "",
+    "part": "27098",
+    "hw": "131",
+    "cas": "",
+    "image": ""
+  },
+  {
+    "year": 2000,
+    "name": "3-Window '34",
+    "series": "2000 Hot Wheels",
+    "color": "",
+    "part": "27099",
+    "hw": "132",
+    "cas": "",
+    "image": ""
+  },
+  {
+    "year": 2000,
+    "name": "Mercedes 500SL",
+    "series": "2000 Hot Wheels",
+    "color": "",
+    "part": "27101",
+    "hw": "134",
+    "cas": "",
+    "image": ""
+  },
+  {
+    "year": 2000,
+    "name": "Ferrari Testarossa",
+    "series": "2000 Hot Wheels",
+    "color": "",
+    "part": "27103",
+    "hw": "136",
+    "cas": "",
+    "image": ""
+  },
+  {
+    "year": 2000,
+    "name": "Ford GT-40",
+    "series": "2000 Hot Wheels",
+    "color": "",
+    "part": "27104",
+    "hw": "139",
+    "cas": "",
+    "image": ""
+  },
+  {
+    "year": 2000,
+    "name": "Jeepster",
+    "series": "2000 Hot Wheels",
+    "color": "",
+    "part": "27105",
+    "hw": "140",
+    "cas": "",
+    "image": ""
+  },
+  {
+    "year": 2000,
+    "name": "'95 Camaro Convertible",
+    "series": "2000 Hot Wheels",
+    "color": "",
+    "part": "27107",
+    "hw": "141",
+    "cas": "",
+    "image": ""
+  },
+  {
+    "year": 2000,
+    "name": "Porsche Carrera",
+    "series": "2000 Hot Wheels",
+    "color": "",
+    "part": "27112",
+    "hw": "146",
+    "cas": "",
+    "image": ""
+  },
+  {
+    "year": 2000,
+    "name": "Pikes Peak Tacoma",
+    "series": "2000 Hot Wheels",
+    "color": "",
+    "part": "27114",
+    "hw": "148",
+    "cas": "",
+    "image": ""
+  },
+  {
+    "year": 2000,
+    "name": "Shadow Mk IIa",
+    "series": "2000 Hot Wheels",
+    "color": "",
+    "part": "27115",
+    "hw": "149",
+    "cas": "",
+    "image": ""
+  },
+  {
+    "year": 2000,
+    "name": "Chrysler Pronto",
+    "series": "2000 Hot Wheels",
+    "color": "",
+    "part": "27116",
+    "hw": "150",
+    "cas": "",
+    "image": ""
+  },
+  {
+    "year": 2000,
+    "name": "Corvette Stingray",
+    "series": "2000 Hot Wheels",
+    "color": "",
+    "part": "27120",
+    "hw": "154",
+    "cas": "",
+    "image": ""
+  },
+  {
+    "year": 2000,
+    "name": "BMW 850i",
+    "series": "2000 Hot Wheels",
+    "color": "",
+    "part": "27125",
+    "hw": "159",
+    "cas": "",
+    "image": ""
+  },
+  {
+    "year": 2000,
+    "name": "Jaguar XJ220",
+    "series": "2000 Hot Wheels",
+    "color": "",
+    "part": "27126",
+    "hw": "160",
+    "cas": "",
+    "image": ""
+  },
+  {
+    "year": 2000,
+    "name": "Ferrari F50",
+    "series": "2000 Hot Wheels",
+    "color": "",
+    "part": "27127",
+    "hw": "161",
+    "cas": "",
+    "image": ""
+  },
+  {
+    "year": 2000,
+    "name": "Ferrari 355 Challenge",
+    "series": "2000 Hot Wheels",
+    "color": "",
+    "part": "27128",
+    "hw": "162",
+    "cas": "",
+    "image": ""
+  },
+  {
+    "year": 2000,
+    "name": "Mercedes CLK-LM",
+    "series": "2000 Hot Wheels",
+    "color": "",
+    "part": "27129",
+    "hw": "163",
+    "cas": "",
+    "image": ""
+  },
+  {
+    "year": 2000,
+    "name": "Jaguar XK8",
+    "series": "2000 Hot Wheels",
+    "color": "",
+    "part": "27131",
+    "hw": "165",
+    "cas": "",
+    "image": ""
+  },
+  {
+    "year": 2000,
+    "name": "Pikes Peak Celica",
+    "series": "2000 Hot Wheels",
+    "color": "",
+    "part": "27132",
+    "hw": "166",
+    "cas": "",
+    "image": ""
+  },
+  {
+    "year": 2000,
+    "name": "Dodge Concept Car",
+    "series": "2000 Hot Wheels",
+    "color": "",
+    "part": "27133",
+    "hw": "167",
+    "cas": "",
+    "image": ""
+  },
+  {
+    "year": 2000,
+    "name": "Panoz GTR-1",
+    "series": "2000 Hot Wheels",
+    "color": "",
+    "part": "27135",
+    "hw": "169",
+    "cas": "",
+    "image": ""
+  },
+  {
+    "year": 2000,
+    "name": "'56 Ford Truck",
+    "series": "2000 Hot Wheels",
+    "color": "",
+    "part": "27137",
+    "hw": "171",
+    "cas": "",
+    "image": ""
+  },
+  {
+    "year": 2000,
+    "name": "Porsche 911 GT1-98",
+    "series": "2000 Hot Wheels",
+    "color": "",
+    "part": "27138",
+    "hw": "172",
+    "cas": "",
+    "image": ""
+  },
+  {
+    "year": 2000,
+    "name": "'63 Vette",
+    "series": "2000 Hot Wheels",
+    "color": "",
+    "part": "27140",
+    "hw": "174",
+    "cas": "",
+    "image": ""
+  },
+  {
+    "year": 2000,
+    "name": "Olds Aurora",
+    "series": "2000 Hot Wheels",
+    "color": "",
+    "part": "27141",
+    "hw": "175",
+    "cas": "",
+    "image": ""
+  },
+  {
+    "year": 2000,
+    "name": "Solar Eagle III",
+    "series": "2000 Hot Wheels",
+    "color": "",
+    "part": "25377",
+    "hw": "176",
+    "cas": "",
+    "image": ""
+  },
+  {
+    "year": 2000,
+    "name": "Flashfire",
+    "series": "2000 Hot Wheels",
+    "color": "",
+    "part": "25378",
+    "hw": "177",
+    "cas": "",
+    "image": ""
+  },
+  {
+    "year": 2000,
+    "name": "Dodge Viper RT/10",
+    "series": "2000 Hot Wheels",
+    "color": "",
+    "part": "25385",
+    "hw": "178",
+    "cas": "",
+    "image": ""
+  },
+  {
+    "year": 2000,
+    "name": "'95 Camaro Convertible",
+    "series": "2000 Hot Wheels",
+    "color": "",
+    "part": "25388",
+    "hw": "179",
+    "cas": "",
+    "image": ""
+  },
+  {
+    "year": 2000,
+    "name": "Jaguar D-Type",
+    "series": "2000 Hot Wheels",
+    "color": "",
+    "part": "25389",
+    "hw": "180",
+    "cas": "",
+    "image": ""
+  },
+  {
+    "year": 2000,
+    "name": "GT Racer",
+    "series": "2000 Hot Wheels",
+    "color": "",
+    "part": "25390",
+    "hw": "181",
+    "cas": "",
+    "image": ""
+  },
+  {
+    "year": 2000,
+    "name": "Sweet 16 II",
+    "series": "2000 Hot Wheels",
+    "color": "",
+    "part": "25393",
+    "hw": "182",
+    "cas": "",
+    "image": ""
+  },
+  {
+    "year": 2000,
+    "name": "Buick Wildcat",
+    "series": "2000 Hot Wheels",
+    "color": "",
+    "part": "25398",
+    "hw": "183",
+    "cas": "",
+    "image": ""
+  },
+  {
+    "year": 2000,
+    "name": "Panoz GTR-1",
+    "series": "2000 Hot Wheels​",
+    "color": "",
+    "part": "25413",
+    "hw": "187",
+    "cas": "",
+    "image": ""
+  },
+  {
+    "year": 2000,
+    "name": "'97 Corvette",
+    "series": "2000 Hot Wheels",
+    "color": "",
+    "part": "27106",
+    "hw": "188",
+    "cas": "",
+    "image": ""
+  },
+  {
+    "year": 2000,
+    "name": "Semi-Fast",
+    "series": "2000 Hot Wheels",
+    "color": "",
+    "part": "25381",
+    "hw": "189",
+    "cas": "",
+    "image": ""
+  },
+  {
+    "year": 2000,
+    "name": "Peterbilt Dump Truck",
+    "series": "2000 Hot Wheels",
+    "color": "",
+    "part": "25382",
+    "hw": "190",
+    "cas": "",
+    "image": ""
+  },
+  {
+    "year": 2000,
+    "name": "Ford Stake Bed Truck",
+    "series": "2000 Hot Wheels",
+    "color": "",
+    "part": "25383",
+    "hw": "191",
+    "cas": "",
+    "image": ""
+  },
+  {
+    "year": 2000,
+    "name": "'40 Ford",
+    "series": "2000 Hot Wheels",
+    "color": "",
+    "part": "25384",
+    "hw": "192",
+    "cas": "",
+    "image": ""
+  },
+  {
+    "year": 2000,
+    "name": "'40s Woodie",
+    "series": "2000 Hot Wheels",
+    "color": "",
+    "part": "25415",
+    "hw": "193",
+    "cas": "",
+    "image": ""
+  },
+  {
+    "year": 2000,
+    "name": "T-Bird Stocker",
+    "series": "2000 Hot Wheels",
+    "color": "",
+    "part": "25416",
+    "hw": "194",
+    "cas": "",
+    "image": ""
+  },
+  {
+    "year": 2000,
+    "name": "'32 Ford Coupe",
+    "series": "2000 Hot Wheels",
+    "color": "",
+    "part": "25417",
+    "hw": "195",
+    "cas": "",
+    "image": ""
+  },
+  {
+    "year": 2000,
+    "name": "Chevy Nomad",
+    "series": "2000 Hot Wheels",
+    "color": "",
+    "part": "25418",
+    "hw": "196",
+    "cas": "",
+    "image": ""
+  },
+  {
+    "year": 2000,
+    "name": "'65 Impala",
+    "series": "2000 Hot Wheels",
+    "color": "",
+    "part": "25419",
+    "hw": "197",
+    "cas": "",
+    "image": ""
+  },
+  {
+    "year": 2000,
+    "name": "Ford Bronco",
+    "series": "2000 Hot Wheels",
+    "color": "",
+    "part": "25407",
+    "hw": "198",
+    "cas": "",
+    "image": ""
+  },
+  {
+    "year": 2000,
+    "name": "Roll Patrol",
+    "series": "2000 Hot Wheels",
+    "color": "",
+    "part": "25408",
+    "hw": "199",
+    "cas": "",
+    "image": ""
+  },
+  {
+    "year": 2000,
+    "name": "Purple Passion",
+    "series": "2000 Hot Wheels",
+    "color": "",
+    "part": "25422",
+    "hw": "200",
+    "cas": "",
+    "image": ""
+  },
+  {
+    "year": 2000,
+    "name": "'65 Mustang",
+    "series": "2000 Hot Wheels",
+    "color": "",
+    "part": "25424",
+    "hw": "201",
+    "cas": "",
+    "image": ""
+  },
+  {
+    "year": 2000,
+    "name": "Hydroplane",
+    "series": "2000 Hot Wheels",
+    "color": "",
+    "part": "25426",
+    "hw": "202",
+    "cas": "",
+    "image": ""
+  },
+  {
+    "year": 2000,
+    "name": "Surf Patrol",
+    "series": "2000 Hot Wheels",
+    "color": "",
+    "part": "25428",
+    "hw": "203",
+    "cas": "",
+    "image": ""
+  },
+  {
+    "year": 2000,
+    "name": "Saltflat Racer",
+    "series": "2000 Hot Wheels",
+    "color": "",
+    "part": "25432",
+    "hw": "204",
+    "cas": "",
+    "image": ""
+  },
+  {
+    "year": 2000,
+    "name": "Pikes Peak Celica",
+    "series": "2000 Hot Wheels",
+    "color": "",
+    "part": "25434",
+    "hw": "205",
+    "cas": "",
+    "image": ""
+  },
+  {
+    "year": 2000,
+    "name": "Rig Wrecker",
+    "series": "2000 Hot Wheels",
+    "color": "",
+    "part": "25403",
+    "hw": "206",
+    "cas": "",
+    "image": ""
+  },
+  {
+    "year": 2000,
+    "name": "Police Car",
+    "series": "2000 Hot Wheels",
+    "color": "",
+    "part": "25401",
+    "hw": "207",
+    "cas": "",
+    "image": ""
+  },
+  {
+    "year": 2000,
+    "name": "Zender Fact 4",
+    "series": "2000 Hot Wheels",
+    "color": "",
+    "part": "25395",
+    "hw": "208",
+    "cas": "",
+    "image": ""
+  },
+  {
+    "year": 2000,
+    "name": "Customized C3500",
+    "series": "2000 Hot Wheels",
+    "color": "",
+    "part": "25380",
+    "hw": "209",
+    "cas": "",
+    "image": ""
+  },
+  {
+    "year": 2000,
+    "name": "Lexus SC400",
+    "series": "2000 Hot Wheels",
+    "color": "",
+    "part": "29276",
+    "hw": "210",
+    "cas": "",
+    "image": ""
+  },
+  {
+    "year": 2000,
+    "name": "Tow Jam",
+    "series": "2000 Hot Wheels",
+    "color": "",
+    "part": "29266",
+    "hw": "211",
+    "cas": "",
+    "image": ""
+  },
+  {
+    "year": 2000,
+    "name": "Double Vision",
+    "series": "2000 Hot Wheels",
+    "color": "",
+    "part": "29267",
+    "hw": "212",
+    "cas": "",
+    "image": ""
+  },
+  {
+    "year": 2000,
+    "name": "Whatta Drag",
+    "series": "2000 Hot Wheels",
+    "color": "",
+    "part": "29268",
+    "hw": "213",
+    "cas": "",
+    "image": ""
+  },
+  {
+    "year": 2000,
+    "name": "Super Comp Dragster",
+    "series": "2000 Hot Wheels",
+    "color": "",
+    "part": "29269",
+    "hw": "214",
+    "cas": "",
+    "image": ""
+  },
+  {
+    "year": 2000,
+    "name": "XT-3",
+    "series": "2000 Hot Wheels",
+    "color": "",
+    "part": "29270",
+    "hw": "215",
+    "cas": "",
+    "image": ""
+  },
+  {
+    "year": 2000,
+    "name": "School Bus",
+    "series": "2000 Hot Wheels",
+    "color": "",
+    "part": "29271",
+    "hw": "216",
+    "cas": "",
+    "image": ""
+  },
+  {
+    "year": 2000,
+    "name": "'57 T-Bird",
+    "series": "2000 Hot Wheels",
+    "color": "",
+    "part": "29272",
+    "hw": "217",
+    "cas": "",
+    "image": ""
+  },
+  {
+    "year": 2000,
+    "name": "Rescue Ranger",
+    "series": "2000 Hot Wheels",
+    "color": "",
+    "part": "29273",
+    "hw": "218",
+    "cas": "",
+    "image": ""
+  },
+  {
+    "year": 2000,
+    "name": "Side Kick",
+    "series": "2000 Hot Wheels",
+    "color": "",
+    "part": "29274",
+    "hw": "219",
+    "cas": "",
+    "image": ""
+  },
+  {
+    "year": 2000,
+    "name": "Sweet 16",
+    "series": "2000 Hot Wheels",
+    "color": "",
+    "part": "29275",
+    "hw": "220",
+    "cas": "",
+    "image": ""
+  },
+  {
+    "year": 2000,
+    "name": "Rail Rodder",
+    "series": "2000 Hot Wheels",
+    "color": "",
+    "part": "29277",
+    "hw": "221",
+    "cas": "",
+    "image": ""
+  },
+  {
+    "year": 2000,
+    "name": "Dogfighter",
+    "series": "2000 Hot Wheels",
+    "color": "",
+    "part": "29278",
+    "hw": "222",
+    "cas": "",
+    "image": ""
+  },
+  {
+    "year": 2000,
+    "name": "Twang Thang",
+    "series": "2000 Hot Wheels",
+    "color": "",
+    "part": "29279",
+    "hw": "223",
+    "cas": "",
+    "image": ""
+  },
+  {
+    "year": 2000,
+    "name": "Ford GT-90",
+    "series": "2000 Hot Wheels",
+    "color": "",
+    "part": "29280",
+    "hw": "224",
+    "cas": "",
+    "image": ""
+  },
+  {
+    "year": 2000,
+    "name": "Chrysler Thunderbolt",
+    "series": "2000 Hot Wheels",
+    "color": "",
+    "part": "29281",
+    "hw": "225",
+    "cas": "",
+    "image": ""
+  },
+  {
+    "year": 2000,
+    "name": "'67 Pontiac GTO",
+    "series": "2000 Hot Wheels​",
+    "color": "",
+    "part": "29282",
+    "hw": "226",
+    "cas": "",
+    "image": ""
+  },
+  {
+    "year": 2000,
+    "name": "Skullrider",
+    "series": "2000 Hot Wheels",
+    "color": "",
+    "part": "29283",
+    "hw": "227",
+    "cas": "",
+    "image": ""
+  },
+  {
+    "year": 2000,
+    "name": "'57 Chevy",
+    "series": "2000 Hot Wheels",
+    "color": "",
+    "part": "29284",
+    "hw": "228",
+    "cas": "",
+    "image": ""
+  },
+  {
+    "year": 2000,
+    "name": "Blown Camaro",
+    "series": "2000 Hot Wheels",
+    "color": "",
+    "part": "29285",
+    "hw": "229",
+    "cas": "",
+    "image": ""
+  },
+  {
+    "year": 2000,
+    "name": "Ferrari F355 Spider",
+    "series": "2000 Hot Wheels",
+    "color": "",
+    "part": "29286",
+    "hw": "230",
+    "cas": "",
+    "image": ""
+  },
+  {
+    "year": 2000,
+    "name": "Treadator",
+    "series": "2000 Hot Wheels",
+    "color": "",
+    "part": "29287",
+    "hw": "231",
+    "cas": "",
+    "image": ""
+  },
+  {
+    "year": 2000,
+    "name": "Porsche 959",
+    "series": "2000 Hot Wheels",
+    "color": "",
+    "part": "29288",
+    "hw": "232",
+    "cas": "",
+    "image": ""
+  },
+  {
+    "year": 2000,
+    "name": "Oshkosh Snowplow",
+    "series": "2000 Hot Wheels",
+    "color": "",
+    "part": "29289",
+    "hw": "233",
+    "cas": "",
+    "image": ""
+  },
+  {
+    "year": 2000,
+    "name": "'33 Ford Roadster",
+    "series": "2000 Hot Wheels",
+    "color": "",
+    "part": "29290",
+    "hw": "234",
+    "cas": "",
+    "image": ""
+  },
+  {
+    "year": 2000,
+    "name": "Ferrari 550 Maranello",
+    "series": "2000 Hot Wheels",
+    "color": "",
+    "part": "29291",
+    "hw": "235",
+    "cas": "",
+    "image": ""
+  },
+  {
+    "year": 2000,
+    "name": "Ferrari 365 GTB/4",
+    "series": "2000 Hot Wheels",
+    "color": "",
+    "part": "29292",
+    "hw": "236",
+    "cas": "",
+    "image": ""
+  },
+  {
+    "year": 2000,
+    "name": "1964 Lincoln Continental",
+    "series": "2000 Hot Wheels",
+    "color": "",
+    "part": "29293",
+    "hw": "237",
+    "cas": "",
+    "image": ""
+  },
+  {
+    "year": 2000,
+    "name": "Deuce Roadster",
+    "series": "2000 Hot Wheels",
+    "color": "",
+    "part": "29294",
+    "hw": "238",
+    "cas": "",
+    "image": ""
+  },
+  {
+    "year": 2000,
+    "name": "Tail Dragger",
+    "series": "2000 Hot Wheels",
+    "color": "",
+    "part": "29295",
+    "hw": "239",
+    "cas": "",
+    "image": ""
+  },
+  {
+    "year": 2000,
+    "name": "Scorchin' Scooter",
+    "series": "2000 Hot Wheels",
+    "color": "",
+    "part": "29296",
+    "hw": "240",
+    "cas": "",
+    "image": ""
+  },
+  {
+    "year": 2000,
+    "name": "Propper Chopper",
+    "series": "2000 Hot Wheels",
+    "color": "",
+    "part": "29298",
+    "hw": "241",
+    "cas": "",
+    "image": ""
+  },
+  {
+    "year": 2000,
+    "name": "Olds 442",
+    "series": "2000 Hot Wheels​",
+    "color": "",
+    "part": "29299",
+    "hw": "242",
+    "cas": "",
+    "image": ""
+  },
+  {
+    "year": 2000,
+    "name": "Deora II",
+    "series": "2000 Hot Wheels",
+    "color": "",
+    "part": "29300",
+    "hw": "243",
+    "cas": "",
+    "image": ""
+  },
+  {
+    "year": 2000,
+    "name": "Chevy Pro Stock Truck",
+    "series": "2000 Hot Wheels",
+    "color": "",
+    "part": "29301",
+    "hw": "244",
+    "cas": "",
+    "image": ""
+  },
+  {
+    "year": 2000,
+    "name": "Phantastique",
+    "series": "2000 Hot Wheels",
+    "color": "",
+    "part": "29302",
+    "hw": "245",
+    "cas": "",
+    "image": ""
+  },
+  {
+    "year": 2000,
+    "name": "'68 El Camino",
+    "series": "2000 Hot Wheels",
+    "color": "",
+    "part": "29303",
+    "hw": "246",
+    "cas": "",
+    "image": ""
+  },
+  {
+    "year": 2000,
+    "name": "Ford F-150",
+    "series": "2000 Hot Wheels",
+    "color": "",
+    "part": "29304",
+    "hw": "247",
+    "cas": "",
+    "image": ""
+  },
+  {
+    "year": 2000,
+    "name": "Way 2 Fast",
+    "series": "2000 Hot Wheels",
+    "color": "",
+    "part": "29305",
+    "hw": "248",
+    "cas": "",
+    "image": ""
+  },
+  {
+    "year": 2000,
+    "name": "'59 Impala",
+    "series": "2000 Hot Wheels",
+    "color": "",
+    "part": "29306",
+    "hw": "249",
+    "cas": "",
+    "image": ""
+  },
+  {
+    "year": 2000,
+    "name": "Porsche 911 GT1-98",
+    "series": "2000 Hot Wheels",
+    "color": "",
+    "part": "29307",
+    "hw": "250",
+    "cas": "",
+    "image": ""
+  },
+  {
     "year": 1999,
     "name": "1936 Cord",
     "series": "1999 First Editions (01/26)",
@@ -105932,8 +105879,6 @@ export const RAW = [
     "cas": "",
     "image": "https://static.wikia.nocookie.net/hotwheels/images/4/42/Power_Pipes_BlkBC.JPG/revision/latest?cb=20090103010414"
   },
-
-
   {
     "year": 1998,
     "name": "Escort Rally",
@@ -107824,9 +107769,6 @@ export const RAW = [
     "cas": "",
     "image": "https://static.wikia.nocookie.net/hotwheels/images/4/40/Speed_Machine_Bns.JPG/revision/latest?cb=20090131003745"
   },
-
-
-
   {
     "year": 1997,
     "name": "Firebird Funny Car",
@@ -109337,2371 +109279,2366 @@ export const RAW = [
     "cas": "",
     "image": "https://static.wikia.nocookie.net/hotwheels/images/b/b5/Image_Not_Available.jpg/revision/latest?cb=20151025125428"
   },
-
-
-    {
-        "year": 1996,
-        "name": "Monte Carlo Stocker",
-        "series": "Model Series (01/01)",
-        "color": "",
-        "part": "14860",
-        "hw": "440",
-        "cas": "",
-        "image": "https://static.wikia.nocookie.net/hotwheels/images/1/1c/Monte_Carlo_Stocker_RT7dpBlk.JPG/revision/latest"
-    },
-    {
-        "year": 1996,
-        "name": "1996 Mustang GT",
-        "series": "First Editions (01/12)",
-        "color": "",
-        "part": "14841",
-        "hw": "378",
-        "cas": "",
-        "image": "https://static.wikia.nocookie.net/hotwheels/images/8/8e/1996HotWheels001.JPG/revision/latest"
-    },
-    {
-        "year": 1996,
-        "name": "Chevy 1500",
-        "series": "First Editions (02/12)",
-        "color": "",
-        "part": "14907",
-        "hw": "367",
-        "cas": "",
-        "image": "https://static.wikia.nocookie.net/hotwheels/images/b/ba/1996HotWheels002.JPG/revision/latest"
-    },
-    {
-        "year": 1996,
-        "name": "1970 Dodge Charger Daytona",
-        "series": "First Editions (03/12)",
-        "color": "",
-        "part": "14908",
-        "hw": "368",
-        "cas": "",
-        "image": "https://static.wikia.nocookie.net/hotwheels/images/6/61/1970_Daytona_RedLW.JPG/revision/latest"
-    },
-    {
-        "year": 1996,
-        "name": "Street Cleaver",
-        "series": "First Editions (04/12)",
-        "color": "",
-        "part": "14913",
-        "hw": "373",
-        "cas": "",
-        "image": "https://static.wikia.nocookie.net/hotwheels/images/9/9d/Stcleavr.jpg/revision/latest"
-    },
-    {
-        "year": 1996,
-        "name": "Rail Rodder",
-        "series": "First Editions (05/12)",
-        "color": "",
-        "part": "14910",
-        "hw": "370",
-        "cas": "",
-        "image": "https://static.wikia.nocookie.net/hotwheels/images/2/24/FE_Rail_Rodder.jpg/revision/latest"
-    },
-    {
-        "year": 1996,
-        "name": "Volkswagen Drag Bus",
-        "series": "First Editions (06/12)",
-        "color": "",
-        "part": "14912",
-        "hw": "372",
-        "cas": "",
-        "image": "https://static.wikia.nocookie.net/hotwheels/images/f/f1/Volkswagon.drag.bus.14912.a-l.jpg/revision/latest"
-    },
-    {
-        "year": 1996,
-        "name": "Road Rocket",
-        "series": "First Editions (07/12)",
-        "color": "",
-        "part": "14911",
-        "hw": "371",
-        "cas": "",
-        "image": "https://static.wikia.nocookie.net/hotwheels/images/d/d4/Road_Rocket_GrnBluLW.JPG/revision/latest"
-    },
-    {
-        "year": 1996,
-        "name": "Turbo Flame (Sizzlers)",
-        "series": "First Editions (08/12)",
-        "color": "Sizzlers",
-        "part": "14909",
-        "hw": "369",
-        "cas": "",
-        "image": "https://static.wikia.nocookie.net/hotwheels/images/7/7d/Turbo_Flame_Wht.JPG/revision/latest"
-    },
-    {
-        "year": 1996,
-        "name": "Radio Flyer Wagon",
-        "series": "First Editions (09/12)",
-        "color": "",
-        "part": "14914",
-        "hw": "374",
-        "cas": "",
-        "image": "https://static.wikia.nocookie.net/hotwheels/images/3/36/Radio_Flyer_RedBW.JPG/revision/latest"
-    },
-    {
-        "year": 1996,
-        "name": "Dogfighter",
-        "series": "First Editions (10/12)",
-        "color": "",
-        "part": "14915",
-        "hw": "375",
-        "cas": "",
-        "image": "https://static.wikia.nocookie.net/hotwheels/images/4/42/Dofighter_RedSB.JPG/revision/latest"
-    },
-    {
-        "year": 1996,
-        "name": "Twang Thang",
-        "series": "First Editions (11/12)",
-        "color": "",
-        "part": "14916",
-        "hw": "376",
-        "cas": "",
-        "image": "https://static.wikia.nocookie.net/hotwheels/images/4/4a/Twang_Thang_SlvRed.JPG/revision/latest"
-    },
-    {
-        "year": 1996,
-        "name": "Ferrari F50 Spider",
-        "series": "First Editions (12/12)",
-        "color": "",
-        "part": "14917",
-        "hw": "377",
-        "cas": "",
-        "image": "https://static.wikia.nocookie.net/hotwheels/images/3/39/Ferrari_F50_Spider_Red.JPG/revision/latest"
-    },
-    {
-        "year": 1996,
-        "name": "Dodge Ram 1500 (1995)",
-        "series": "Race Truck Series (1/4)",
-        "color": "1995",
-        "part": "15218",
-        "hw": "380",
-        "cas": "",
-        "image": "https://static.wikia.nocookie.net/hotwheels/images/b/b0/Dodge_Ram_RTrkS.JPG/revision/latest"
-    },
-    {
-        "year": 1996,
-        "name": "Kenworth T-600A",
-        "series": "Race Truck Series (2/4)",
-        "color": "",
-        "part": "15219",
-        "hw": "381",
-        "cas": "",
-        "image": "https://static.wikia.nocookie.net/hotwheels/images/a/a4/Kenworth_T-600_A_Slv.JPG/revision/latest"
-    },
-    {
-        "year": 1996,
-        "name": "'56 Flashsider",
-        "series": "Race Truck Series (3/4)",
-        "color": "",
-        "part": "15220",
-        "hw": "382",
-        "cas": "",
-        "image": "https://static.wikia.nocookie.net/hotwheels/images/3/32/56_Flashsider_RcTrk.JPG/revision/latest"
-    },
-    {
-        "year": 1996,
-        "name": "Nissan Truck",
-        "series": "Race Truck Series (4/4)",
-        "color": "",
-        "part": "15221",
-        "hw": "383",
-        "cas": "",
-        "image": "https://static.wikia.nocookie.net/hotwheels/images/6/6d/Nissan_Hardbody_BluRT.JPG/revision/latest"
-    },
-    {
-        "year": 1996,
-        "name": "'57 T-Bird",
-        "series": "Flamethrower Series (1/4)",
-        "color": "",
-        "part": "15223",
-        "hw": "384",
-        "cas": "",
-        "image": "https://static.wikia.nocookie.net/hotwheels/images/7/7c/%2757_T-Bird_-_96_Flamethrower.jpg/revision/latest"
-    },
-    {
-        "year": 1996,
-        "name": "Hydroplane",
-        "series": "Flamethrower Series (2/4)",
-        "color": "",
-        "part": "15224",
-        "hw": "385",
-        "cas": "",
-        "image": "https://static.wikia.nocookie.net/hotwheels/images/0/03/Hydroplane_Yel.JPG/revision/latest"
-    },
-    {
-        "year": 1996,
-        "name": "Range Rover",
-        "series": "Flamethrower Series (3/4)",
-        "color": "",
-        "part": "15225",
-        "hw": "386",
-        "cas": "",
-        "image": "https://static.wikia.nocookie.net/hotwheels/images/0/0c/Range_Rover_FTh.JPG/revision/latest"
-    },
-    {
-        "year": 1996,
-        "name": "Oshkosh Snow Plow",
-        "series": "Flamethrower Series (4/4)",
-        "color": "",
-        "part": "15226",
-        "hw": "387",
-        "cas": "",
-        "image": "https://static.wikia.nocookie.net/hotwheels/images/b/be/Oshkosh_Snowplow_BlkCT.JPG/revision/latest"
-    },
-    {
-        "year": 1996,
-        "name": "Radar Ranger",
-        "series": "Space Series (1/4)",
-        "color": "",
-        "part": "15228",
-        "hw": "388",
-        "cas": "",
-        "image": "https://static.wikia.nocookie.net/hotwheels/images/b/b8/Radar_Ranger_-_6012df.jpg/revision/latest"
-    },
-    {
-        "year": 1996,
-        "name": "GM Lean Machine",
-        "series": "Space Series (2/4)",
-        "color": "",
-        "part": "15229",
-        "hw": "389",
-        "cas": "",
-        "image": "https://static.wikia.nocookie.net/hotwheels/images/5/55/GM_Lean_Machine_BluWht.JPG/revision/latest"
-    },
-    {
-        "year": 1996,
-        "name": "Alien",
-        "series": "Space Series (3/4)",
-        "color": "",
-        "part": "15230",
-        "hw": "390",
-        "cas": "",
-        "image": "https://static.wikia.nocookie.net/hotwheels/images/8/80/Alien_SpcSer.JPG/revision/latest"
-    },
-    {
-        "year": 1996,
-        "name": "Treadator",
-        "series": "Space Series (4/4)",
-        "color": "",
-        "part": "15231",
-        "hw": "391",
-        "cas": "",
-        "image": "https://static.wikia.nocookie.net/hotwheels/images/b/b5/Treadator_LtBlu.JPG/revision/latest"
-    },
-    {
-        "year": 1996,
-        "name": "Ramp Truck",
-        "series": "Race Team Series II (1/4)",
-        "color": "",
-        "part": "15233",
-        "hw": "392",
-        "cas": "",
-        "image": "https://static.wikia.nocookie.net/hotwheels/images/c/cb/Ramp_Truck_-_96_Race_Team_Series_II.jpg/revision/latest"
-    },
-    {
-        "year": 1996,
-        "name": "Baja Bug",
-        "series": "Race Team Series II (2/4)",
-        "color": "",
-        "part": "15234",
-        "hw": "393",
-        "cas": "",
-        "image": "https://static.wikia.nocookie.net/hotwheels/images/4/4e/Baja_Bug_-_96_Race_Team_II.jpg/revision/latest"
-    },
-    {
-        "year": 1996,
-        "name": "'57 Chevy",
-        "series": "Race Team Series II (3/4)",
-        "color": "",
-        "part": "15235",
-        "hw": "394",
-        "cas": "",
-        "image": "https://static.wikia.nocookie.net/hotwheels/images/9/95/%2757_Chevy_-_96_Race_Team_II.jpg/revision/latest"
-    },
-    {
-        "year": 1996,
-        "name": "Bywayman",
-        "series": "Race Team Series II (4/4)",
-        "color": "",
-        "part": "15236",
-        "hw": "395",
-        "cas": "",
-        "image": "https://static.wikia.nocookie.net/hotwheels/images/a/a7/Bywayman_RTct.JPG/revision/latest"
-    },
-    {
-        "year": 1996,
-        "name": "Hummer",
-        "series": "Mod Bod Series (1/4​)",
-        "color": "",
-        "part": "15238",
-        "hw": "396",
-        "cas": "",
-        "image": "https://static.wikia.nocookie.net/hotwheels/images/f/f8/Hummer_Pnk.JPG/revision/latest"
-    },
-    {
-        "year": 1996,
-        "name": "School Bus",
-        "series": "Mod Bod Series (2/4​)",
-        "color": "",
-        "part": "15239",
-        "hw": "397",
-        "cas": "",
-        "image": "https://static.wikia.nocookie.net/hotwheels/images/f/f7/School_Bus_Prp.JPG/revision/latest"
-    },
-    {
-        "year": 1996,
-        "name": "VW Bug",
-        "series": "Mod Bod Series (3/4​)",
-        "color": "",
-        "part": "15240",
-        "hw": "398",
-        "cas": "",
-        "image": "https://static.wikia.nocookie.net/hotwheels/images/2/2a/VW_Bug_ModBod.JPG/revision/latest"
-    },
-    {
-        "year": 1996,
-        "name": "'67 Camaro",
-        "series": "Mod Bod Series (4/4​)",
-        "color": "",
-        "part": "15242",
-        "hw": "399",
-        "cas": "",
-        "image": "https://static.wikia.nocookie.net/hotwheels/images/3/37/ModBod.jpg/revision/latest"
-    },
-    {
-        "year": 1996,
-        "name": "Big Chill",
-        "series": "Dark Rider Series II (1/4)",
-        "color": "",
-        "part": "15243",
-        "hw": "400",
-        "cas": "",
-        "image": "https://static.wikia.nocookie.net/hotwheels/images/a/a3/Big_Chill_Blk.JPG/revision/latest"
-    },
-    {
-        "year": 1996,
-        "name": "Street Beast",
-        "series": "Dark Rider Series II (2/4)",
-        "color": "",
-        "part": "15244",
-        "hw": "401",
-        "cas": "",
-        "image": "https://static.wikia.nocookie.net/hotwheels/images/8/85/Street_Beast_MtBlk.JPG/revision/latest"
-    },
-    {
-        "year": 1996,
-        "name": "Thunderstreak",
-        "series": "Dark Rider Series II",
-        "color": "",
-        "part": "15245",
-        "hw": "402",
-        "cas": "",
-        "image": "https://static.wikia.nocookie.net/hotwheels/images/8/88/Thunderstreak_Crm.JPG/revision/latest"
-    },
-    {
-        "year": 1996,
-        "name": "Power Pistons",
-        "series": "Dark Rider Series II (4/4)",
-        "color": "",
-        "part": "15246",
-        "hw": "403",
-        "cas": "",
-        "image": "https://static.wikia.nocookie.net/hotwheels/images/2/20/Power_Pistons_Crm.JPG/revision/latest"
-    },
-    {
-        "year": 1996,
-        "name": "Porsche 930",
-        "series": "Sports Car Series (1/4)",
-        "color": "",
-        "part": "15248",
-        "hw": "404",
-        "cas": "",
-        "image": "https://static.wikia.nocookie.net/hotwheels/images/6/67/Porsche_930_Silv.JPG/revision/latest"
-    },
-    {
-        "year": 1996,
-        "name": "Custom Corvette Convertible",
-        "series": "Sports Car Series (2/4)",
-        "color": "",
-        "part": "15249",
-        "hw": "405",
-        "cas": "",
-        "image": "https://static.wikia.nocookie.net/hotwheels/images/b/ba/Custom_Corvette_Prpl.JPG/revision/latest"
-    },
-    {
-        "year": 1996,
-        "name": "Shelby Cobra 427 S/C",
-        "series": "Sports Car Series (3/4)",
-        "color": "",
-        "part": "15250",
-        "hw": "406",
-        "cas": "",
-        "image": "https://static.wikia.nocookie.net/hotwheels/images/3/30/Classic_Cobra_SprtCr.JPG/revision/latest"
-    },
-    {
-        "year": 1996,
-        "name": "'59 Caddy",
-        "series": "Sports Car Series (4/4)",
-        "color": "",
-        "part": "15251",
-        "hw": "407",
-        "cas": "",
-        "image": "https://static.wikia.nocookie.net/hotwheels/images/b/b0/59_Caddy_BlkSC.JPG/revision/latest"
-    },
-    {
-        "year": 1996,
-        "name": "Rescue Ranger",
-        "series": "Splatter Paint Series (1/4)",
-        "color": "",
-        "part": "15253",
-        "hw": "408",
-        "cas": "",
-        "image": "https://static.wikia.nocookie.net/hotwheels/images/5/50/Rescue_Ranger_Org5sp.JPG/revision/latest"
-    },
-    {
-        "year": 1996,
-        "name": "Probe Funny Car",
-        "series": "Splatter Paint Series (2/4)",
-        "color": "",
-        "part": "15254",
-        "hw": "409",
-        "cas": "",
-        "image": "https://static.wikia.nocookie.net/hotwheels/images/c/c2/Probe_Funny_Car_SpltrPnt.JPG/revision/latest"
-    },
-    {
-        "year": 1996,
-        "name": "'55 Chevy",
-        "series": "Splatter Paint Series (3/4)",
-        "color": "",
-        "part": "15255",
-        "hw": "410",
-        "cas": "",
-        "image": "https://static.wikia.nocookie.net/hotwheels/images/2/26/55_Chevy_YelSS.JPG/revision/latest"
-    },
-    {
-        "year": 1996,
-        "name": "'80s Camaro",
-        "series": "Splatter Paint Series (4/4)",
-        "color": "",
-        "part": "15256",
-        "hw": "411",
-        "cas": "",
-        "image": "https://static.wikia.nocookie.net/hotwheels/images/c/c7/80s_Camaro_wht.JPG/revision/latest"
-    },
-    {
-        "year": 1996,
-        "name": "Speed Machine",
-        "series": "Street Eaters Series (1/4)",
-        "color": "",
-        "part": "15258",
-        "hw": "412",
-        "cas": "",
-        "image": "https://static.wikia.nocookie.net/hotwheels/images/4/49/Speed_Machine_Grn.JPG/revision/latest"
-    },
-    {
-        "year": 1996,
-        "name": "Silhouette II",
-        "series": "Street Eaters Series (2/4)",
-        "color": "",
-        "part": "15259",
-        "hw": "413",
-        "cas": "",
-        "image": "https://static.wikia.nocookie.net/hotwheels/images/f/fb/Silouette_II_PrplStrtEat.JPG/revision/latest"
-    },
-    {
-        "year": 1996,
-        "name": "Propper Chopper",
-        "series": "Street Eaters Series (3/4)",
-        "color": "",
-        "part": "15260",
-        "hw": "414",
-        "cas": "",
-        "image": "https://static.wikia.nocookie.net/hotwheels/images/e/e2/Propper_Chopper_BluStrBst.JPG/revision/latest"
-    },
-    {
-        "year": 1996,
-        "name": "Roll Patrol Jeep CJ",
-        "series": "Street Eaters Series (4/4)",
-        "color": "",
-        "part": "15261",
-        "hw": "415",
-        "cas": "",
-        "image": "https://static.wikia.nocookie.net/hotwheels/images/2/2b/Roll_Patrol_Jeep_CJ_StrtBst.JPG/revision/latest"
-    },
-    {
-        "year": 1996,
-        "name": "Pizza Vette",
-        "series": "Fast Food Series (1/4)",
-        "color": "",
-        "part": "15263",
-        "hw": "416",
-        "cas": "",
-        "image": "https://static.wikia.nocookie.net/hotwheels/images/2/27/Corvette_Stingray_Pza5sp.JPG/revision/latest"
-    },
-    {
-        "year": 1996,
-        "name": "Pasta Pipes",
-        "series": "Fast Food Series (2/4)",
-        "color": "",
-        "part": "15264",
-        "hw": "417",
-        "cas": "",
-        "image": "https://static.wikia.nocookie.net/hotwheels/images/c/ca/Power_Pipes_Pasta.JPG/revision/latest"
-    },
-    {
-        "year": 1996,
-        "name": "Sweet Stocker",
-        "series": "Fast Food Series (3/4)",
-        "color": "",
-        "part": "15265",
-        "hw": "418",
-        "cas": "",
-        "image": "https://static.wikia.nocookie.net/hotwheels/images/6/62/Sweet-Stocker.JPG/revision/latest"
-    },
-    {
-        "year": 1996,
-        "name": "Crunch Chief",
-        "series": "Fast Food Series (4/4)",
-        "color": "",
-        "part": "15266",
-        "hw": "419",
-        "cas": "",
-        "image": "https://static.wikia.nocookie.net/hotwheels/images/1/13/Crunch_Chief.JPG/revision/latest"
-    },
-    {
-        "year": 1996,
-        "name": "CAT Dump Truck",
-        "series": "Silver Series II (1/4)",
-        "color": "",
-        "part": "15268",
-        "hw": "420",
-        "cas": "",
-        "image": "https://static.wikia.nocookie.net/hotwheels/images/6/67/CAT_Dump_Truck_Chrm.JPG/revision/latest"
-    },
-    {
-        "year": 1996,
-        "name": "'40's Woodie",
-        "series": "Silver Series II (2/4)",
-        "color": "",
-        "part": "15269",
-        "hw": "421",
-        "cas": "",
-        "image": "https://static.wikia.nocookie.net/hotwheels/images/3/39/Chrome_%2740%27s_Woodie_-_6403df.jpg/revision/latest"
-    },
-    {
-        "year": 1996,
-        "name": "'57 Chevy",
-        "series": "Silver Series II (3/4)",
-        "color": "",
-        "part": "15270",
-        "hw": "422",
-        "cas": "",
-        "image": "https://static.wikia.nocookie.net/hotwheels/images/1/1f/1957_Chevy_Silver.jpg/revision/latest"
-    },
-    {
-        "year": 1996,
-        "name": "Oscar Mayer Wienermobile",
-        "series": "Silver Series II (4/4)",
-        "color": "",
-        "part": "15271",
-        "hw": "423",
-        "cas": "",
-        "image": "https://static.wikia.nocookie.net/hotwheels/images/4/4f/Oscar_Mayer_Wienermobile_Crm.JPG/revision/latest"
-    },
-    {
-        "year": 1996,
-        "name": "Ambulance",
-        "series": "Fire Squad Series (1/4)",
-        "color": "",
-        "part": "15273",
-        "hw": "424",
-        "cas": "",
-        "image": "https://static.wikia.nocookie.net/hotwheels/images/9/95/Ambulance_Grn7sp.JPG/revision/latest"
-    },
-    {
-        "year": 1996,
-        "name": "Rescue Ranger",
-        "series": "Fire Squad Series (2/4)",
-        "color": "",
-        "part": "15274",
-        "hw": "425",
-        "cas": "",
-        "image": "https://static.wikia.nocookie.net/hotwheels/images/5/54/Rescue_Ranger_YelFR.JPG/revision/latest"
-    },
-    {
-        "year": 1996,
-        "name": "Flame Stopper",
-        "series": "Fire Squad Series (3/4)",
-        "color": "",
-        "part": "15275",
-        "hw": "426",
-        "cas": "",
-        "image": "https://static.wikia.nocookie.net/hotwheels/images/d/d0/Flame_Stopper_YelFrRs.JPG/revision/latest"
-    },
-    {
-        "year": 1996,
-        "name": "Fire Eater",
-        "series": "Fire Squad Series (4/4)",
-        "color": "",
-        "part": "15276",
-        "hw": "427",
-        "cas": "",
-        "image": "https://static.wikia.nocookie.net/hotwheels/images/5/54/Fire_Eater_FR.JPG/revision/latest"
-    },
-    {
-        "year": 1996,
-        "name": "'40's Woodie",
-        "series": "1996 Treasure Hunts (01/12)",
-        "color": "",
-        "part": "15074",
-        "hw": "428",
-        "cas": "",
-        "image": "https://static.wikia.nocookie.net/hotwheels/images/9/98/40swoody_96TH.JPG/revision/latest"
-    },
-    {
-        "year": 1996,
-        "name": "Auburn 852",
-        "series": "1996 Treasure Hunts (02/12)",
-        "color": "",
-        "part": "15083",
-        "hw": "437",
-        "cas": "",
-        "image": "https://static.wikia.nocookie.net/hotwheels/images/7/70/Auburn852%24TH.jpg/revision/latest"
-    },
-    {
-        "year": 1996,
-        "name": "Ferrari 250",
-        "series": "1996 Treasure Hunts (03/12)",
-        "color": "",
-        "part": "15076",
-        "hw": "430",
-        "cas": "",
-        "image": "https://static.wikia.nocookie.net/hotwheels/images/8/85/430_Treasure_Hunt_Series_Ferrari_250.jpg/revision/latest"
-    },
-    {
-        "year": 1996,
-        "name": "Jaguar XJ220",
-        "series": "1996 Treasure Hunts (04/12)",
-        "color": "",
-        "part": "15077",
-        "hw": "431",
-        "cas": "",
-        "image": "https://static.wikia.nocookie.net/hotwheels/images/4/41/431_Treasure_Hunt_Series_Jaguar_XJ220.jpg/revision/latest"
-    },
-    {
-        "year": 1996,
-        "name": "'59 Caddy",
-        "series": "1996 Treasure Hunts (05/12)",
-        "color": "",
-        "part": "15078",
-        "hw": "432",
-        "cas": "",
-        "image": "https://static.wikia.nocookie.net/hotwheels/images/5/59/432_Treasure_Hunt_Series_%2759_Caddy.jpg/revision/latest"
-    },
-    {
-        "year": 1996,
-        "name": "Dodge Viper RT/10",
-        "series": "1996 Treasure Hunts (06/12)",
-        "color": "",
-        "part": "15079",
-        "hw": "433",
-        "cas": "",
-        "image": "https://static.wikia.nocookie.net/hotwheels/images/c/ce/Viper_RT10_-_96TH_White.JPG/revision/latest"
-    },
-    {
-        "year": 1996,
-        "name": "'57 Chevy",
-        "series": "1996 Treasure Hunts (07/12)",
-        "color": "",
-        "part": "15080",
-        "hw": "434",
-        "cas": "",
-        "image": "https://static.wikia.nocookie.net/hotwheels/images/c/c4/%2757Chevy%24TH.jpg/revision/latest"
-    },
-    {
-        "year": 1996,
-        "name": "Ferrari 355",
-        "series": "1996 Treasure Hunts (08/12)",
-        "color": "",
-        "part": "15081",
-        "hw": "435",
-        "cas": "",
-        "image": "https://static.wikia.nocookie.net/hotwheels/images/a/af/1996THFerrari355.jpg/revision/latest"
-    },
-    {
-        "year": 1996,
-        "name": "'58 Corvette",
-        "series": "1996 Treasure Hunts (09/12)",
-        "color": "",
-        "part": "15082",
-        "hw": "436",
-        "cas": "",
-        "image": "https://static.wikia.nocookie.net/hotwheels/images/a/af/436_Treasure_Hunt_Series_%2758_Corvette.jpg/revision/latest"
-    },
-    {
-        "year": 1996,
-        "name": "Lamborghini Countach",
-        "series": "1996 Treasure Hunts (10/12)",
-        "color": "",
-        "part": "15075",
-        "hw": "429",
-        "cas": "",
-        "image": "https://static.wikia.nocookie.net/hotwheels/images/c/c7/10_Trea%24ure_Hunt_1996_-_Lamborghini_Countach.jpg/revision/latest"
-    },
-    {
-        "year": 1996,
-        "name": "Dodge Ram 1500",
-        "series": "1996 Treasure Hunts (11/12)",
-        "color": "",
-        "part": "15084",
-        "hw": "438",
-        "cas": "",
-        "image": "https://static.wikia.nocookie.net/hotwheels/images/9/9b/Hotwheels_016.jpg/revision/latest"
-    },
-    {
-        "year": 1996,
-        "name": "'37 Bugatti",
-        "series": "1996 Treasure Hunts (12/12)",
-        "color": "",
-        "part": "15085",
-        "hw": "439",
-        "cas": "",
-        "image": "https://static.wikia.nocookie.net/hotwheels/images/3/3e/37BUGATTI.jpg/revision/latest"
-    },
-    {
-        "year": 1996,
-        "name": "Shadow Jet",
-        "series": "1996 Hot Wheels",
-        "color": "",
-        "part": "4699",
-        "hw": "182",
-        "cas": "",
-        "image": ""
-    },
-    {
-        "year": 1996,
-        "name": "Silhouette II",
-        "series": "1996 Hot Wheels",
-        "color": "",
-        "part": "5267",
-        "hw": "212",
-        "cas": "",
-        "image": ""
-    },
-    {
-        "year": 1996,
-        "name": "'93 Camaro",
-        "series": "1996 Hot Wheels",
-        "color": "",
-        "part": "11253",
-        "hw": "242",
-        "cas": "",
-        "image": ""
-    },
-    {
-        "year": 1996,
-        "name": "Sol-Aire CX-4",
-        "series": "1996 Hot Wheels",
-        "color": "",
-        "part": "13506",
-        "hw": "254",
-        "cas": "",
-        "image": ""
-    },
-    {
-        "year": 1996,
-        "name": "BMW 850i",
-        "series": "1996 Hot Wheels",
-        "color": "",
-        "part": "5667",
-        "hw": "255",
-        "cas": "",
-        "image": ""
-    },
-    {
-        "year": 1996,
-        "name": "Chevy Stocker",
-        "series": "1996 Hot Wheels",
-        "color": "",
-        "part": "12924",
-        "hw": "441",
-        "cas": "",
-        "image": ""
-    },
-    {
-        "year": 1996,
-        "name": "Ferrari F40",
-        "series": "1996 Hot Wheels",
-        "color": "",
-        "part": "12935",
-        "hw": "442",
-        "cas": "",
-        "image": ""
-    },
-    {
-        "year": 1996,
-        "name": "Ferrari 348",
-        "series": "1996 Hot Wheels",
-        "color": "",
-        "part": "12933",
-        "hw": "443",
-        "cas": "",
-        "image": ""
-    },
-    {
-        "year": 1996,
-        "name": "Aeroflash",
-        "series": "1996 Hot Wheels",
-        "color": "",
-        "part": "13232",
-        "hw": "444",
-        "cas": "",
-        "image": ""
-    },
-    {
-        "year": 1996,
-        "name": "Jaguar XJ220",
-        "series": "1996 Hot Wheels",
-        "color": "",
-        "part": "12865",
-        "hw": "445",
-        "cas": "",
-        "image": ""
-    },
-    {
-        "year": 1996,
-        "name": "'32 Ford Delivery",
-        "series": "1996 Hot Wheels",
-        "color": "",
-        "part": "12927",
-        "hw": "446",
-        "cas": "",
-        "image": ""
-    },
-    {
-        "year": 1996,
-        "name": "'63 Split Window Corvette",
-        "series": "1996 Hot Wheels",
-        "color": "",
-        "part": "13874",
-        "hw": "447",
-        "cas": "",
-        "image": ""
-    },
-    {
-        "year": 1996,
-        "name": "'67 Camaro",
-        "series": "1996 Hot Wheels",
-        "color": "",
-        "part": "13872",
-        "hw": "448",
-        "cas": "",
-        "image": ""
-    },
-    {
-        "year": 1996,
-        "name": "Camaro Z-28",
-        "series": "1996 Hot Wheels",
-        "color": "",
-        "part": "12922",
-        "hw": "449",
-        "cas": "",
-        "image": ""
-    },
-    {
-        "year": 1996,
-        "name": "Corvette Stingray (1976)",
-        "series": "1996 Hot Wheels",
-        "color": "1976",
-        "part": "12925",
-        "hw": "450",
-        "cas": "",
-        "image": ""
-    },
-    {
-        "year": 1996,
-        "name": "3-Window '34",
-        "series": "1996 Hot Wheels",
-        "color": "",
-        "part": "12931",
-        "hw": "451",
-        "cas": "",
-        "image": ""
-    },
-    {
-        "year": 1996,
-        "name": "Ferrari 250",
-        "series": "1996 Hot Wheels",
-        "color": "",
-        "part": "12936",
-        "hw": "452",
-        "cas": "",
-        "image": ""
-    },
-    {
-        "year": 1996,
-        "name": "Avus Quattro",
-        "series": "1996 Hot Wheels",
-        "color": "",
-        "part": "13868",
-        "hw": "453",
-        "cas": "",
-        "image": ""
-    },
-    {
-        "year": 1996,
-        "name": "Zender Fact 4",
-        "series": "1996 Hot Wheels",
-        "color": "",
-        "part": "13867",
-        "hw": "454",
-        "cas": "",
-        "image": ""
-    },
-    {
-        "year": 1996,
-        "name": "'65 Mustang Convertible",
-        "series": "1996 Hot Wheels",
-        "color": "",
-        "part": "13871",
-        "hw": "455",
-        "cas": "",
-        "image": ""
-    },
-    {
-        "year": 1996,
-        "name": "Pontiac Banshee",
-        "series": "1996 Hot Wheels",
-        "color": "",
-        "part": "15965",
-        "hw": "457",
-        "cas": "",
-        "image": ""
-    },
-    {
-        "year": 1996,
-        "name": "Speed Shark",
-        "series": "1996 Hot Wheels",
-        "color": "",
-        "part": "15969",
-        "hw": "458",
-        "cas": "",
-        "image": ""
-    },
-    {
-        "year": 1996,
-        "name": "Zombot",
-        "series": "1996 Hot Wheels",
-        "color": "",
-        "part": "15971",
-        "hw": "460",
-        "cas": "",
-        "image": ""
-    },
-    {
-        "year": 1996,
-        "name": "Enforcer",
-        "series": "1996 Hot Wheels",
-        "color": "",
-        "part": "15968",
-        "hw": "461",
-        "cas": "",
-        "image": ""
-    },
-    {
-        "year": 1996,
-        "name": "'80s Firebird",
-        "series": "1996 Hot Wheels",
-        "color": "",
-        "part": "15961",
-        "hw": "462",
-        "cas": "",
-        "image": ""
-    },
-    {
-        "year": 1996,
-        "name": "Fiero 2M4",
-        "series": "1996 Hot Wheels",
-        "color": "",
-        "part": "15962",
-        "hw": "463",
-        "cas": "",
-        "image": ""
-    },
-    {
-        "year": 1996,
-        "name": "Blazer 4x4",
-        "series": "1996 Hot Wheels",
-        "color": "",
-        "part": "15972",
-        "hw": "464",
-        "cas": "",
-        "image": ""
-    },
-    {
-        "year": 1996,
-        "name": "Peugeot 405",
-        "series": "1996 Hot Wheels",
-        "color": "",
-        "part": "15977",
-        "hw": "467",
-        "cas": "",
-        "image": ""
-    },
-    {
-        "year": 1996,
-        "name": "GT Racer",
-        "series": "1996 Hot Wheels",
-        "color": "",
-        "part": "15964",
-        "hw": "468",
-        "cas": "",
-        "image": ""
-    },
-    {
-        "year": 1996,
-        "name": "Hot Bird",
-        "series": "1996 Hot Wheels",
-        "color": "",
-        "part": "15978",
-        "hw": "469",
-        "cas": "",
-        "image": ""
-    },
-    {
-        "year": 1996,
-        "name": "Turbo Streak",
-        "series": "1996 Hot Wheels",
-        "color": "",
-        "part": "15979",
-        "hw": "470",
-        "cas": "",
-        "image": ""
-    },
-    {
-        "year": 1996,
-        "name": "Velocitor",
-        "series": "1996 Hot Wheels",
-        "color": "",
-        "part": "16039",
-        "hw": "471",
-        "cas": "",
-        "image": ""
-    },
-    {
-        "year": 1996,
-        "name": "Buick Stocker",
-        "series": "1996 Hot Wheels",
-        "color": "",
-        "part": "16040",
-        "hw": "472",
-        "cas": "",
-        "image": ""
-    },
-    {
-        "year": 1996,
-        "name": "BMW M1",
-        "series": "1996 Hot Wheels",
-        "color": "",
-        "part": "15963",
-        "hw": "473",
-        "cas": "",
-        "image": ""
-    },
-    {
-        "year": 1996,
-        "name": "BMW M1",
-        "series": "1996 Hot Wheels",
-        "color": "",
-        "part": "15963",
-        "hw": "473",
-        "cas": "",
-        "image": ""
-    },
-    {
-        "year": 1996,
-        "name": "VW Golf",
-        "series": "1996 Hot Wheels",
-        "color": "",
-        "part": "16041",
-        "hw": "474",
-        "cas": "",
-        "image": ""
-    },
-    {
-        "year": 1996,
-        "name": "CAT Forklift",
-        "series": "1996 Hot Wheels",
-        "color": "",
-        "part": "16042",
-        "hw": "475",
-        "cas": "",
-        "image": ""
-    },
-    {
-        "year": 1996,
-        "name": "Double Demon",
-        "series": "1996 Hot Wheels",
-        "color": "",
-        "part": "16046",
-        "hw": "477",
-        "cas": "",
-        "image": ""
-    },
-    {
-        "year": 1996,
-        "name": "Dragon Wagon",
-        "series": "1996 Hot Wheels",
-        "color": "",
-        "part": "16047",
-        "hw": "478",
-        "cas": "",
-        "image": ""
-    },
-    {
-        "year": 1996,
-        "name": "Computer Warrior",
-        "series": "1996 Hot Wheels",
-        "color": "",
-        "part": "16048",
-        "hw": "479",
-        "cas": "",
-        "image": ""
-    },
-    {
-        "year": 1996,
-        "name": "Tall Ryder",
-        "series": "1996 Hot Wheels",
-        "color": "",
-        "part": "16050",
-        "hw": "481",
-        "cas": "",
-        "image": ""
-    },
-    {
-        "year": 1996,
-        "name": "CAT Earth Mover",
-        "series": "1996 Hot Wheels",
-        "color": "",
-        "part": "16053",
-        "hw": "482",
-        "cas": "",
-        "image": ""
-    },
-    {
-        "year": 1996,
-        "name": "Thunder Roller",
-        "series": "1996 Hot Wheels",
-        "color": "",
-        "part": "16064",
-        "hw": "483",
-        "cas": "",
-        "image": ""
-    },
-    {
-        "year": 1996,
-        "name": "Grizzlor",
-        "series": "1996 Hot Wheels",
-        "color": "",
-        "part": "16055",
-        "hw": "484",
-        "cas": "",
-        "image": ""
-    },
-    {
-        "year": 1996,
-        "name": "Evil Weevil",
-        "series": "1996 Hot Wheels",
-        "color": "",
-        "part": "16056",
-        "hw": "485",
-        "cas": "",
-        "image": ""
-    },
-    {
-        "year": 1996,
-        "name": "Command Tank",
-        "series": "1996 Hot Wheels",
-        "color": "",
-        "part": "16057",
-        "hw": "486",
-        "cas": "",
-        "image": ""
-    },
-    {
-        "year": 1996,
-        "name": "Troop Convoy",
-        "series": "1996 Hot Wheels",
-        "color": "",
-        "part": "16296",
-        "hw": "487",
-        "cas": "",
-        "image": ""
-    },
-    {
-        "year": 1996,
-        "name": "Sting Rod",
-        "series": "1996 Hot Wheels",
-        "color": "",
-        "part": "16297",
-        "hw": "488",
-        "cas": "",
-        "image": ""
-    },
-    {
-        "year": 1996,
-        "name": "Big Bertha",
-        "series": "1996 Hot Wheels",
-        "color": "",
-        "part": "16309",
-        "hw": "489",
-        "cas": "",
-        "image": ""
-    },
-    {
-        "year": 1996,
-        "name": "Rocket Shot",
-        "series": "1996 Hot Wheels",
-        "color": "",
-        "part": "16298",
-        "hw": "491",
-        "cas": "",
-        "image": ""
-    },
-    {
-        "year": 1996,
-        "name": "Rocket Shot",
-        "series": "1996 Hot Wheels",
-        "color": "",
-        "part": "16298",
-        "hw": "491",
-        "cas": "",
-        "image": ""
-    },
-    {
-        "year": 1996,
-        "name": "Swingfire",
-        "series": "1996 Hot Wheels",
-        "color": "",
-        "part": "16299",
-        "hw": "492",
-        "cas": "",
-        "image": ""
-    },
-    {
-        "year": 1996,
-        "name": "Porsche Targa",
-        "series": "1996 Hot Wheels",
-        "color": "",
-        "part": "16300",
-        "hw": "493",
-        "cas": "",
-        "image": ""
-    },
-    {
-        "year": 1996,
-        "name": "Mercedes-Benz SL",
-        "series": "1996 Hot Wheels",
-        "color": "",
-        "part": "16301",
-        "hw": "494",
-        "cas": "",
-        "image": ""
-    },
-    {
-        "year": 1996,
-        "name": "Ferrari 308 GTS",
-        "series": "1996 Hot Wheels",
-        "color": "",
-        "part": "16303",
-        "hw": "496",
-        "cas": "",
-        "image": ""
-    },
-    {
-        "year": 1996,
-        "name": "Ferrari Testarossa",
-        "series": "1996 Hot Wheels",
-        "color": "",
-        "part": "16304",
-        "hw": "497",
-        "cas": "",
-        "image": ""
-    },
-    {
-        "year": 1996,
-        "name": "BMW 850i",
-        "series": "1996 Hot Wheels",
-        "color": "",
-        "part": "16305",
-        "hw": "498",
-        "cas": "",
-        "image": ""
-    },
-    {
-        "year": 1996,
-        "name": "Corvette Coupe",
-        "series": "1996 Hot Wheels",
-        "color": "",
-        "part": "16306",
-        "hw": "499",
-        "cas": "",
-        "image": ""
-    },
-    {
-        "year": 1996,
-        "name": "Chevy Nomad",
-        "series": "1996 Hot Wheels",
-        "color": "",
-        "part": "15770",
-        "hw": "502",
-        "cas": "",
-        "image": ""
-    },
-    {
-        "year": 1996,
-        "name": "'80's Corvette",
-        "series": "1996 Hot Wheels",
-        "color": "",
-        "part": "15781",
-        "hw": "503",
-        "cas": "",
-        "image": ""
-    },
-    {
-        "year": 1996,
-        "name": "Camaro Z28",
-        "series": "1996 Hot Wheels",
-        "color": "",
-        "part": "15775",
-        "hw": "504",
-        "cas": "",
-        "image": ""
-    },
-    {
-        "year": 1996,
-        "name": "'93 Camaro",
-        "series": "1996 Hot Wheels",
-        "color": "",
-        "part": "15776",
-        "hw": "505",
-        "cas": "",
-        "image": ""
-    },
-    {
-        "year": 1996,
-        "name": "Nissan 300ZX",
-        "series": "1996 Hot Wheels",
-        "color": "",
-        "part": "16363",
-        "hw": "506",
-        "cas": "",
-        "image": ""
-    },
-    {
-        "year": 1996,
-        "name": "Peugeot 205 Rallye",
-        "series": "1996 Hot Wheels",
-        "color": "",
-        "part": "16364",
-        "hw": "507",
-        "cas": "",
-        "image": ""
-    },
-    {
-        "year": 1996,
-        "name": "Deora",
-        "series": "Bonus Cars (01/04)",
-        "color": "",
-        "part": "10495",
-        "hw": "000",
-        "cas": "",
-        "image": "https://static.wikia.nocookie.net/hotwheels/images/1/1f/Deora_-_96_Bonus_Car.jpg/revision/latest"
-    },
-    {
-        "year": 1996,
-        "name": "Custom Mustang",
-        "series": "Bonus Cars (02/04)",
-        "color": "",
-        "part": "15083",
-        "hw": "000",
-        "cas": "",
-        "image": "https://static.wikia.nocookie.net/hotwheels/images/6/69/MustangMailAway96.jpg/revision/latest"
-    },
-    {
-        "year": 1996,
-        "name": "Twin Mill",
-        "series": "Bonus Cars (03/04)",
-        "color": "",
-        "part": "15076",
-        "hw": "000",
-        "cas": "",
-        "image": "https://static.wikia.nocookie.net/hotwheels/images/6/64/Twin_Mill_YelBons_L.JPG/revision/latest"
-    },
-    {
-        "year": 1996,
-        "name": "Classic Nomad",
-        "series": "Bonus Cars (04/04)",
-        "color": "",
-        "part": "15077",
-        "hw": "000",
-        "cas": "",
-        "image": "https://static.wikia.nocookie.net/hotwheels/images/0/0f/Nomad_Bonus.jpg/revision/latest"
-    },
-
-    {
-        "year": 1995,
-        "name": "Speed Blaster",
-        "series": "1995 Model Series (1/12​)",
-        "color": "",
-        "part": "13609",
-        "hw": "343",
-        "cas": "",
-        "image": "https://static.wikia.nocookie.net/hotwheels/images/4/4d/Speed_Blaster_blu5sp.JPG/revision/latest"
-    },
-    {
-        "year": 1995,
-        "name": "Mercedes-Benz SL",
-        "series": "1995 Model Series (2/12​)",
-        "color": "",
-        "part": "13610",
-        "hw": "342",
-        "cas": "",
-        "image": "https://static.wikia.nocookie.net/hotwheels/images/2/25/Mercedes_SL_BlkRedInt.JPG/revision/latest"
-    },
-    {
-        "year": 1995,
-        "name": "'58 Corvette Coupe",
-        "series": "1995 Model Series (3/12​)",
-        "color": "",
-        "part": "14908\n/\n2015",
-        "hw": "341",
-        "cas": "",
-        "image": "https://static.wikia.nocookie.net/hotwheels/images/b/bf/58_Vette_AGENTAIR_5.jpg/revision/latest"
-    },
-    {
-        "year": 1995,
-        "name": "Speed-A-Saurus",
-        "series": "1995 Model Series (4/12​)",
-        "color": "",
-        "part": "13341",
-        "hw": "345",
-        "cas": "",
-        "image": "https://static.wikia.nocookie.net/hotwheels/images/0/06/Speed_A-Saurus_GrnBW.JPG/revision/latest"
-    },
-    {
-        "year": 1995,
-        "name": "Power Pistons",
-        "series": "1995 Model Series (5/12​)",
-        "color": "",
-        "part": "13343",
-        "hw": "347",
-        "cas": "",
-        "image": "https://static.wikia.nocookie.net/hotwheels/images/9/9a/Power_Pistons_RedUH.JPG/revision/latest"
-    },
-    {
-        "year": 1995,
-        "name": "Hydroplane",
-        "series": "1995 Model Series (6/12​)",
-        "color": "",
-        "part": "13342",
-        "hw": "346",
-        "cas": "",
-        "image": "https://static.wikia.nocookie.net/hotwheels/images/b/bd/Hydroplane_Blu.JPG/revision/latest"
-    },
-    {
-        "year": 1995,
-        "name": "Dodge Ram 1500",
-        "series": "1995 Model Series (7/12​)",
-        "color": "",
-        "part": "13344",
-        "hw": "348",
-        "cas": "",
-        "image": "https://static.wikia.nocookie.net/hotwheels/images/4/4c/Dodge_Ram_Grn5sp.JPG/revision/latest"
-    },
-    {
-        "year": 1995,
-        "name": "Camaro Convertible",
-        "series": "1995 Model Series (8/12​)",
-        "color": "",
-        "part": "13340",
-        "hw": "344",
-        "cas": "",
-        "image": "https://static.wikia.nocookie.net/hotwheels/images/a/a8/Camaro_Convertible_MtGnUH.JPG/revision/latest"
-    },
-    {
-        "year": 1995,
-        "name": "Power Pipes",
-        "series": "1995 Model Series (9/12​)",
-        "color": "",
-        "part": "13346",
-        "hw": "349",
-        "cas": "",
-        "image": "https://static.wikia.nocookie.net/hotwheels/images/2/23/Power_Pipes_Prpl5SP.JPG/revision/latest"
-    },
-    {
-        "year": 1995,
-        "name": "Ferrari 355",
-        "series": "1995 Model Series (10/12​)",
-        "color": "",
-        "part": "13338",
-        "hw": "350",
-        "cas": "",
-        "image": "https://static.wikia.nocookie.net/hotwheels/images/9/9a/Ferrari355_yel5spk.JPG/revision/latest"
-    },
-    {
-        "year": 1995,
-        "name": "Power Rocket",
-        "series": "1995 Model Series (11/12​)",
-        "color": "",
-        "part": "13348",
-        "hw": "351",
-        "cas": "",
-        "image": "https://static.wikia.nocookie.net/hotwheels/images/5/5a/Power_Rocket_Purpl5SP2.JPG/revision/latest"
-    },
-    {
-        "year": 1995,
-        "name": "Big Chill",
-        "series": "1995 Model Series (12/12​)",
-        "color": "",
-        "part": "13347",
-        "hw": "352",
-        "cas": "",
-        "image": "https://static.wikia.nocookie.net/hotwheels/images/0/0e/Big_Chill_WhtPnk.JPG/revision/latest"
-    },
-    {
-        "year": 1995,
-        "name": "Olds 442",
-        "series": "1995 Treasure Hunts (1/12​)",
-        "color": "",
-        "part": "13349",
-        "hw": "353",
-        "cas": "",
-        "image": "https://static.wikia.nocookie.net/hotwheels/images/3/35/Olds442w30_thunt1995.JPG/revision/latest"
-    },
-    {
-        "year": 1995,
-        "name": "Gold Passion",
-        "series": "1995 Treasure Hunts (2/12​)",
-        "color": "",
-        "part": "13350",
-        "hw": "354",
-        "cas": "",
-        "image": "https://static.wikia.nocookie.net/hotwheels/images/f/f2/Passion_AGENTAIR_7.jpg/revision/latest"
-    },
-    {
-        "year": 1995,
-        "name": "'67 Camaro",
-        "series": "1995 Treasure Hunts (3/12​)",
-        "color": "",
-        "part": "13351",
-        "hw": "355",
-        "cas": "",
-        "image": "https://static.wikia.nocookie.net/hotwheels/images/a/ac/95_hunt.jpg/revision/latest"
-    },
-    {
-        "year": 1995,
-        "name": "'57 T-Bird",
-        "series": "1995 Treasure Hunts (4/12​)",
-        "color": "",
-        "part": "13352",
-        "hw": "356",
-        "cas": "",
-        "image": "https://static.wikia.nocookie.net/hotwheels/images/2/21/%2757_T-bird_MetBlk.JPG/revision/latest"
-    },
-    {
-        "year": 1995,
-        "name": "VW Bug",
-        "series": "1995 Treasure Hunts (5/12​)",
-        "color": "",
-        "part": "13353",
-        "hw": "357",
-        "cas": "",
-        "image": "https://static.wikia.nocookie.net/hotwheels/images/6/6f/Vwbug_thunt_1995.JPG/revision/latest"
-    },
-    {
-        "year": 1995,
-        "name": "Split Window '63",
-        "series": "1995 Treasure Hunts (6/12​)",
-        "color": "",
-        "part": "13354",
-        "hw": "358",
-        "cas": "",
-        "image": "https://static.wikia.nocookie.net/hotwheels/images/1/19/358_Treasure_Hunt_%2763_Corvette_Split_Window.jpg/revision/latest"
-    },
-    {
-        "year": 1995,
-        "name": "Stutz Blackhawk",
-        "series": "1995 Treasure Hunts (7/12​)",
-        "color": "",
-        "part": "13355",
-        "hw": "359",
-        "cas": "",
-        "image": "https://static.wikia.nocookie.net/hotwheels/images/3/32/359_Treasure_Hunt_Series_Stutz_Blackhawk.jpg/revision/latest"
-    },
-    {
-        "year": 1995,
-        "name": "Rolls Royce Phantom II",
-        "series": "1995 Treasure Hunts (8/12​)",
-        "color": "",
-        "part": "13356",
-        "hw": "360",
-        "cas": "",
-        "image": "https://static.wikia.nocookie.net/hotwheels/images/9/9c/%24_57_%281%29.JPG/revision/latest"
-    },
-    {
-        "year": 1995,
-        "name": "Classic Caddy",
-        "series": "1995 Treasure Hunts (9/12​)",
-        "color": "",
-        "part": "13357",
-        "hw": "361",
-        "cas": "",
-        "image": "https://static.wikia.nocookie.net/hotwheels/images/f/f5/ClassicCaddyTH%24.jpg/revision/latest"
-    },
-    {
-        "year": 1995,
-        "name": "Classic Nomad",
-        "series": "1995 Treasure Hunts (10/12​)",
-        "color": "",
-        "part": "13359",
-        "hw": "362",
-        "cas": "",
-        "image": "https://static.wikia.nocookie.net/hotwheels/images/3/39/Hotwheels_019.jpg/revision/latest"
-    },
-    {
-        "year": 1995,
-        "name": "Classic Cobra",
-        "series": "1995 Treasure Hunts (11/12​)",
-        "color": "",
-        "part": "13360",
-        "hw": "363",
-        "cas": "",
-        "image": "https://static.wikia.nocookie.net/hotwheels/images/f/f0/Treasure_hunt_1995_cobra.jpg/revision/latest"
-    },
-    {
-        "year": 1995,
-        "name": "'31 Doozie",
-        "series": "1995 Treasure Hunts (12/12​)",
-        "color": "",
-        "part": "13361",
-        "hw": "364",
-        "cas": "",
-        "image": "https://static.wikia.nocookie.net/hotwheels/images/e/ed/364_Treasure_Hunt_Series_%2731_Doozie.jpg/revision/latest"
-    },
-    {
-        "year": 1995,
-        "name": "Lumina Stocker",
-        "series": "Race Team Series (1/4​)",
-        "color": "",
-        "part": "12794",
-        "hw": "275",
-        "cas": "",
-        "image": "https://static.wikia.nocookie.net/hotwheels/images/2/25/Lumina_Stocker_Blu.JPG/revision/latest"
-    },
-    {
-        "year": 1995,
-        "name": "Hot Wheels 500",
-        "series": "Race Team Series (2/4​)",
-        "color": "",
-        "part": "12803",
-        "hw": "276",
-        "cas": "",
-        "image": "https://static.wikia.nocookie.net/hotwheels/images/d/d3/Hot_Wheels_500_Blu.JPG/revision/latest"
-    },
-    {
-        "year": 1995,
-        "name": "Side-Splitter",
-        "series": "Race Team Series (3/4​)",
-        "color": "",
-        "part": "12795",
-        "hw": "277",
-        "cas": "",
-        "image": "https://static.wikia.nocookie.net/hotwheels/images/b/be/Side-Splitter_-_95_Race_Team.JPG/revision/latest"
-    },
-    {
-        "year": 1995,
-        "name": "Dragster",
-        "series": "Race Team Series (4/4​)",
-        "color": "",
-        "part": "13265",
-        "hw": "278",
-        "cas": "",
-        "image": "https://static.wikia.nocookie.net/hotwheels/images/a/a8/Dragster_-_95_Race_Team.JPG/revision/latest"
-    },
-    {
-        "year": 1995,
-        "name": "Sharkruiser",
-        "series": "Krackle Car Series (1/4​)",
-        "color": "",
-        "part": "13267",
-        "hw": "280",
-        "cas": "",
-        "image": "https://static.wikia.nocookie.net/hotwheels/images/0/06/Shark_Cruiser_Krackle.jpg/revision/latest"
-    },
-    {
-        "year": 1995,
-        "name": "Turboa",
-        "series": "Krackle Car Series (2/4​)",
-        "color": "",
-        "part": "13268",
-        "hw": "281",
-        "cas": "",
-        "image": "https://static.wikia.nocookie.net/hotwheels/images/b/b3/Turboa_KC7sp.JPG/revision/latest"
-    },
-    {
-        "year": 1995,
-        "name": "Split Window '63",
-        "series": "Krackle Car Series (3/4​)",
-        "color": "",
-        "part": "13269",
-        "hw": "282",
-        "cas": "",
-        "image": "https://static.wikia.nocookie.net/hotwheels/images/0/04/Th_63corvette020.jpg/revision/latest"
-    },
-    {
-        "year": 1995,
-        "name": "Flashfire",
-        "series": "Krackle Car Series (4/4​)",
-        "color": "",
-        "part": "13271",
-        "hw": "284",
-        "cas": "",
-        "image": "https://static.wikia.nocookie.net/hotwheels/images/8/80/Flashfire_PrpUH.JPG/revision/latest"
-    },
-    {
-        "year": 1995,
-        "name": "Steel Passion",
-        "series": "Steel Stamp Series (1/4​)",
-        "color": "",
-        "part": "13272",
-        "hw": "285",
-        "cas": "",
-        "image": "https://static.wikia.nocookie.net/hotwheels/images/e/ed/Passion_AGENTAIR_30.jpg/revision/latest"
-    },
-    {
-        "year": 1995,
-        "name": "Zender Fact 4",
-        "series": "Steel Stamp Series (2/4​)",
-        "color": "",
-        "part": "13274",
-        "hw": "287",
-        "cas": "",
-        "image": "https://static.wikia.nocookie.net/hotwheels/images/6/61/Zender_Fact_4_SS35sp.JPG/revision/latest"
-    },
-    {
-        "year": 1995,
-        "name": "'56 Flashsider",
-        "series": "Steel Stamp Series (3/4​)",
-        "color": "",
-        "part": "13276",
-        "hw": "289",
-        "cas": "",
-        "image": "https://static.wikia.nocookie.net/hotwheels/images/a/a4/56_Flashsider_SS.JPG/revision/latest"
-    },
-    {
-        "year": 1995,
-        "name": "'57 Chevy",
-        "series": "Steel Stamp Series (4/4​)",
-        "color": "",
-        "part": "13277",
-        "hw": "290",
-        "cas": "",
-        "image": "https://static.wikia.nocookie.net/hotwheels/images/3/35/57_Chevy_SSuh.JPG/revision/latest"
-    },
-    {
-        "year": 1995,
-        "name": "Talbot Lago",
-        "series": "Pearl Driver Series (1/4​)",
-        "color": "",
-        "part": "13282",
-        "hw": "295",
-        "cas": "",
-        "image": "https://static.wikia.nocookie.net/hotwheels/images/e/eb/Talbot_Lago_BluWW.JPG/revision/latest"
-    },
-    {
-        "year": 1995,
-        "name": "Pearl Passion",
-        "series": "Pearl Driver Series (2/4​)",
-        "color": "",
-        "part": "13279",
-        "hw": "292",
-        "cas": "",
-        "image": "https://static.wikia.nocookie.net/hotwheels/images/0/07/Passion_AGENTAIR_8.jpg/revision/latest"
-    },
-    {
-        "year": 1995,
-        "name": "VW Bug",
-        "series": "Pearl Driver Series (3/4​)",
-        "color": "",
-        "part": "13280",
-        "hw": "293",
-        "cas": "",
-        "image": "https://static.wikia.nocookie.net/hotwheels/images/9/99/VW_Bug_AGENTAIR_7.jpg/revision/latest"
-    },
-    {
-        "year": 1995,
-        "name": "Jaguar XJ220",
-        "series": "Pearl Driver Series (4/4​)",
-        "color": "",
-        "part": "13283",
-        "hw": "296",
-        "cas": "",
-        "image": "https://static.wikia.nocookie.net/hotwheels/images/9/90/Jaguar_XJ220_-_Pearl_Driver.JPG/revision/latest"
-    },
-    {
-        "year": 1995,
-        "name": "Splittin' Image II",
-        "series": "Dark Rider Series (1/4​)",
-        "color": "",
-        "part": "13284",
-        "hw": "297",
-        "cas": "",
-        "image": "https://static.wikia.nocookie.net/hotwheels/images/9/91/Splittin%27_Image_II_Blk7SP.JPG/revision/latest"
-    },
-    {
-        "year": 1995,
-        "name": "Twin Mill II",
-        "series": "Dark Rider Series (2/4​)",
-        "color": "",
-        "part": "13285",
-        "hw": "298",
-        "cas": "",
-        "image": "https://static.wikia.nocookie.net/hotwheels/images/5/54/Twin_Mill_II_BlkPC.JPG/revision/latest"
-    },
-    {
-        "year": 1995,
-        "name": "Silhouette II",
-        "series": "Dark Rider Series (3/4​)",
-        "color": "",
-        "part": "13286",
-        "hw": "299",
-        "cas": "",
-        "image": "https://static.wikia.nocookie.net/hotwheels/images/d/d3/Silouette_II_DkRdrPC.JPG/revision/latest"
-    },
-    {
-        "year": 1995,
-        "name": "Rigor Motor",
-        "series": "Dark Rider Series (4/4​)",
-        "color": "",
-        "part": "13287",
-        "hw": "300",
-        "cas": "",
-        "image": "https://static.wikia.nocookie.net/hotwheels/images/6/68/Rigor_Motor_Blk57sp.JPG/revision/latest"
-    },
-    {
-        "year": 1995,
-        "name": "Street Roader",
-        "series": "Roarin' Rods Series (1/4​)",
-        "color": "",
-        "part": "13290",
-        "hw": "303",
-        "cas": "",
-        "image": "https://static.wikia.nocookie.net/hotwheels/images/d/da/Street_Roader_OrgRR.JPG/revision/latest"
-    },
-    {
-        "year": 1995,
-        "name": "Roll Patrol",
-        "series": "Roarin' Rods Series (2/4​)",
-        "color": "",
-        "part": "13291",
-        "hw": "304",
-        "cas": "",
-        "image": "https://static.wikia.nocookie.net/hotwheels/images/c/cc/Roll_Patrol_Jeep_CJ_RornRdsCT.JPG/revision/latest"
-    },
-    {
-        "year": 1995,
-        "name": "Classic Cobra",
-        "series": "Roarin' Rods Series (3/4​)",
-        "color": "",
-        "part": "13292",
-        "hw": "305",
-        "cas": "",
-        "image": "https://static.wikia.nocookie.net/hotwheels/images/1/1a/Classic_Cobra_BrtGrn.JPG/revision/latest"
-    },
-    {
-        "year": 1995,
-        "name": "Mini Truck",
-        "series": "Roarin' Rods Series (4/4​)",
-        "color": "",
-        "part": "13289",
-        "hw": "302",
-        "cas": "",
-        "image": "https://static.wikia.nocookie.net/hotwheels/images/f/fc/Minitruck_TanUH.JPG/revision/latest"
-    },
-    {
-        "year": 1995,
-        "name": "Cybercruiser",
-        "series": "Hot Hubs Series (1/4​)",
-        "color": "",
-        "part": "13294",
-        "hw": "307",
-        "cas": "",
-        "image": "https://static.wikia.nocookie.net/hotwheels/images/6/64/Pipe_Jammer_Blk.JPG/revision/latest"
-    },
-    {
-        "year": 1995,
-        "name": "Shadow Jet",
-        "series": "Hot Hubs Series (3/4​)",
-        "color": "",
-        "part": "13297",
-        "hw": "310",
-        "cas": "",
-        "image": "https://static.wikia.nocookie.net/hotwheels/images/f/f4/Shadow_Jet_HH.JPG/revision/latest"
-    },
-    {
-        "year": 1995,
-        "name": "Vampyra",
-        "series": "Hot Hubs Series (2/4​)",
-        "color": "",
-        "part": "13925",
-        "hw": "308",
-        "cas": "",
-        "image": "https://static.wikia.nocookie.net/hotwheels/images/6/62/Vampyra_PuplTW.JPG/revision/latest"
-    },
-    {
-        "year": 1995,
-        "name": "Suzuki Quadracer",
-        "series": "Hot Hubs Series (4/4​)",
-        "color": "",
-        "part": "13298",
-        "hw": "311",
-        "cas": "",
-        "image": "https://static.wikia.nocookie.net/hotwheels/images/5/5f/Suzuki_Quadracer_HH.JPG/revision/latest"
-    },
-    {
-        "year": 1995,
-        "name": "3-Window '34",
-        "series": "Speed Gleamer Series (1/4​)",
-        "color": "",
-        "part": "13299",
-        "hw": "312",
-        "cas": "",
-        "image": "https://static.wikia.nocookie.net/hotwheels/images/5/5e/3-Window_34_CrmGrn.JPG/revision/latest"
-    },
-    {
-        "year": 1995,
-        "name": "T-Bucket",
-        "series": "Speed Gleamer Series (2/4​)",
-        "color": "",
-        "part": "13300",
-        "hw": "313",
-        "cas": "",
-        "image": "https://static.wikia.nocookie.net/hotwheels/images/8/8f/T-Bucket_Purp.JPG/revision/latest"
-    },
-    {
-        "year": 1995,
-        "name": "Ratmobile",
-        "series": "Speed Gleamer Series (3/4​)",
-        "color": "",
-        "part": "13302",
-        "hw": "315",
-        "cas": "",
-        "image": "https://static.wikia.nocookie.net/hotwheels/images/3/3f/Ratmobile_BlkUH.JPG/revision/latest"
-    },
-    {
-        "year": 1995,
-        "name": "Limozeen",
-        "series": "Speed Gleamer Series (4/4​)",
-        "color": "",
-        "part": "13303",
-        "hw": "316",
-        "cas": "",
-        "image": "https://static.wikia.nocookie.net/hotwheels/images/a/a3/Limozeen_GldWW.JPG/revision/latest"
-    },
-    {
-        "year": 1995,
-        "name": "Peterbilt Dump Truck",
-        "series": "Real Riders Series (1/4​)",
-        "color": "",
-        "part": "13304",
-        "hw": "317",
-        "cas": "",
-        "image": "https://static.wikia.nocookie.net/hotwheels/images/2/26/Peterbilt_Dump_RR.JPG/revision/latest"
-    },
-    {
-        "year": 1995,
-        "name": "Mercedes-Benz Unimog",
-        "series": "Real Riders Series (2/4​)",
-        "color": "",
-        "part": "13305",
-        "hw": "318",
-        "cas": "",
-        "image": "https://static.wikia.nocookie.net/hotwheels/images/d/d7/Mercedes_Benz_Unimog_RR.JPG/revision/latest"
-    },
-    {
-        "year": 1995,
-        "name": "'59 Caddy",
-        "series": "Real Riders Series (3/4​)",
-        "color": "",
-        "part": "13307",
-        "hw": "320",
-        "cas": "",
-        "image": "https://static.wikia.nocookie.net/hotwheels/images/e/e7/59_Caddy_PnkRR.JPG/revision/latest"
-    },
-    {
-        "year": 1995,
-        "name": "Corvette Stingray (1976)",
-        "series": "Real Riders Series (4/4​)",
-        "color": "1976",
-        "part": "13308",
-        "hw": "321",
-        "cas": "",
-        "image": "https://static.wikia.nocookie.net/hotwheels/images/4/48/Corvette_Stingray_MtGrnRR.JPG/revision/latest"
-    },
-    {
-        "year": 1995,
-        "name": "Fire Eater",
-        "series": "Silver Series (1/4​)",
-        "color": "",
-        "part": "13309",
-        "hw": "322",
-        "cas": "",
-        "image": "https://static.wikia.nocookie.net/hotwheels/images/e/e8/Fire_Eater_CrmBW.JPG/revision/latest"
-    },
-    {
-        "year": 1995,
-        "name": "Rodzilla",
-        "series": "Silver Series (2/4​)",
-        "color": "",
-        "part": "13310",
-        "hw": "323",
-        "cas": "",
-        "image": "https://static.wikia.nocookie.net/hotwheels/images/2/29/Rodzilla_CrmUH.JPG/revision/latest"
-    },
-    {
-        "year": 1995,
-        "name": "Propper Chopper",
-        "series": "Silver Series (3/4​)",
-        "color": "",
-        "part": "13312",
-        "hw": "325",
-        "cas": "",
-        "image": "https://static.wikia.nocookie.net/hotwheels/images/4/4b/Propper_Chopper_Crm.JPG/revision/latest"
-    },
-    {
-        "year": 1995,
-        "name": "School Bus",
-        "series": "Silver Series (4/4​)",
-        "color": "",
-        "part": "13315",
-        "hw": "328",
-        "cas": "",
-        "image": "https://static.wikia.nocookie.net/hotwheels/images/8/87/School_Bus_Chrmbw.JPG/revision/latest"
-    },
-    {
-        "year": 1995,
-        "name": "Ford Aerostar",
-        "series": "Photo Finish Series (1/4​)",
-        "color": "",
-        "part": "13318",
-        "hw": "331",
-        "cas": "",
-        "image": "https://static.wikia.nocookie.net/hotwheels/images/3/39/Ford_Aerostar_Photo.JPG/revision/latest"
-    },
-    {
-        "year": 1995,
-        "name": "Flyin' Aces Blimp",
-        "series": "Photo Finish Series (2/4​)",
-        "color": "",
-        "part": "13319",
-        "hw": "332",
-        "cas": "",
-        "image": "https://static.wikia.nocookie.net/hotwheels/images/5/5f/Blimp_PP.JPG/revision/latest"
-    },
-    {
-        "year": 1995,
-        "name": "Tank Truck",
-        "series": "Photo Finish Series (3/4​)",
-        "color": "",
-        "part": "13320",
-        "hw": "333",
-        "cas": "",
-        "image": "https://static.wikia.nocookie.net/hotwheels/images/a/a8/Tank_Truck_PF.JPG/revision/latest"
-    },
-    {
-        "year": 1995,
-        "name": "Hiway Hauler",
-        "series": "Photo Finish Series (4/4​)",
-        "color": "",
-        "part": "13322",
-        "hw": "335",
-        "cas": "",
-        "image": "https://static.wikia.nocookie.net/hotwheels/images/1/12/Hiway_Hauler_PP.JPG/revision/latest"
-    },
-    {
-        "year": 1995,
-        "name": "Race Truck",
-        "series": "Racing Metals Series (1/4​)",
-        "color": "",
-        "part": "13323",
-        "hw": "336",
-        "cas": "",
-        "image": "https://static.wikia.nocookie.net/hotwheels/images/5/55/Bywayman_Crm.JPG/revision/latest"
-    },
-    {
-        "year": 1995,
-        "name": "Ramp Truck",
-        "series": "Racing Metals Series (2/4​)",
-        "color": "",
-        "part": "13324",
-        "hw": "337",
-        "cas": "",
-        "image": "https://static.wikia.nocookie.net/hotwheels/images/e/e0/Ramp_Truck_Purp7SP.JPG/revision/latest"
-    },
-    {
-        "year": 1995,
-        "name": "Camaro Racer",
-        "series": "Racing Metals Series (3/4​)",
-        "color": "",
-        "part": "13325",
-        "hw": "338",
-        "cas": "",
-        "image": "https://static.wikia.nocookie.net/hotwheels/images/1/13/93_Camaro_Racer.jpg/revision/latest"
-    },
-    {
-        "year": 1995,
-        "name": "Dragster",
-        "series": "Racing Metals Series (4/4​)",
-        "color": "",
-        "part": "13326",
-        "hw": "340",
-        "cas": "",
-        "image": "https://static.wikia.nocookie.net/hotwheels/images/c/c5/Dragster_CrmBlu.JPG/revision/latest"
-    },
-    {
-        "year": 1995,
-        "name": "Good Humor Truck",
-        "series": "White (5SP)",
-        "color": "",
-        "part": "5904",
-        "hw": "005",
-        "cas": "",
-        "image": ""
-    },
-    {
-        "year": 1995,
-        "name": "'37 Bugatti",
-        "series": "Blue (7SP)",
-        "color": "",
-        "part": "2195",
-        "hw": "028",
-        "cas": "",
-        "image": ""
-    },
-    {
-        "year": 1995,
-        "name": "Classic Cobra",
-        "series": "Orange (7SP)",
-        "color": "",
-        "part": "2535",
-        "hw": "031",
-        "cas": "",
-        "image": ""
-    },
-    {
-        "year": 1995,
-        "name": "Ferrari Testarossa",
-        "series": "Red (UH)",
-        "color": "",
-        "part": "13576",
-        "hw": "035",
-        "cas": "",
-        "image": ""
-    },
-    {
-        "year": 1995,
-        "name": "Classic Caddy",
-        "series": "Blue (5SP)",
-        "color": "",
-        "part": "2529",
-        "hw": "044",
-        "cas": "",
-        "image": ""
-    },
-    {
-        "year": 1995,
-        "name": "Kenworth Big Rig",
-        "series": "Black (7SP)",
-        "color": "",
-        "part": "1790",
-        "hw": "076",
-        "cas": "",
-        "image": ""
-    },
-    {
-        "year": 1995,
-        "name": "Ferrari 250",
-        "series": "Yellow (7SP)",
-        "color": "",
-        "part": "5665",
-        "hw": "117",
-        "cas": "",
-        "image": ""
-    },
-    {
-        "year": 1995,
-        "name": "'32 Ford Delivery",
-        "series": "White (7SP)",
-        "color": "",
-        "part": "9599",
-        "hw": "135",
-        "cas": "",
-        "image": ""
-    },
-    {
-        "year": 1995,
-        "name": "Tank Truck",
-        "series": "Red/Chrome (7SP)",
-        "color": "",
-        "part": "2076",
-        "hw": "147",
-        "cas": "",
-        "image": ""
-    },
-    {
-        "year": 1995,
-        "name": "'65 Mustang Convertible",
-        "series": "Red (5SP)",
-        "color": "",
-        "part": "0420",
-        "hw": "162",
-        "cas": "",
-        "image": ""
-    },
-    {
-        "year": 1995,
-        "name": "Mercedes 540K",
-        "series": "Blue (5SP)",
-        "color": "",
-        "part": "5142",
-        "hw": "164",
-        "cas": "",
-        "image": ""
-    },
-    {
-        "year": 1995,
-        "name": "Custom Corvette",
-        "series": "Black (5SP)",
-        "color": "",
-        "part": "15249",
-        "hw": "200",
-        "cas": "",
-        "image": ""
-    },
-    {
-        "year": 1995,
-        "name": "Oshkosh Snowplow",
-        "series": "Orange (Orange ORSB)",
-        "color": "",
-        "part": "2902",
-        "hw": "201",
-        "cas": "",
-        "image": ""
-    },
-    {
-        "year": 1995,
-        "name": "Lamborghini Diablo",
-        "series": "Yellow (5SP)",
-        "color": "",
-        "part": "4406",
-        "hw": "227",
-        "cas": "",
-        "image": ""
-    },
-    {
-        "year": 1995,
-        "name": "Talbot Lago",
-        "series": "Black (7SP)",
-        "color": "",
-        "part": "12342",
-        "hw": "250",
-        "cas": "",
-        "image": ""
-    },
-    {
-        "year": 1995,
-        "name": "Gulch Stepper",
-        "series": "Red",
-        "color": "",
-        "part": "12343",
-        "hw": "251",
-        "cas": "",
-        "image": ""
-    },
-    {
-        "year": 1995,
-        "name": "Street Roader",
-        "series": "White (ORSB)",
-        "color": "",
-        "part": "12344",
-        "hw": "252",
-        "cas": "",
-        "image": ""
-    },
-    {
-        "year": 1995,
-        "name": "3 Window 34",
-        "series": "Metalflake Silver (3SP)",
-        "color": "",
-        "part": "1299",
-        "hw": "257",
-        "cas": "",
-        "image": ""
-    },
-    {
-        "year": 1995,
-        "name": "Blazer 4X4",
-        "series": "Light Blue (CT)",
-        "color": "",
-        "part": "12351",
-        "hw": "258",
-        "cas": "",
-        "image": ""
-    },
-    {
-        "year": 1995,
-        "name": "Lexus SC400",
-        "series": "Maroon (5SP)",
-        "color": "",
-        "part": "12357",
-        "hw": "264",
-        "cas": "",
-        "image": ""
-    },
-    {
-        "year": 1995,
-        "name": "Olds 442 W-30",
-        "series": "Yellow (5DOT)",
-        "color": "",
-        "part": "12360",
-        "hw": "267",
-        "cas": "",
-        "image": ""
-    },
-    {
-        "year": 1995,
-        "name": "Oshkosh Cement Mixer",
-        "series": "Yellow (5SP)",
-        "color": "",
-        "part": "12362",
-        "hw": "269",
-        "cas": "",
-        "image": ""
-    },
-    {
-        "year": 1995,
-        "name": "Super Cannon",
-        "series": "Olive Green (BW)",
-        "color": "",
-        "part": "11378",
-        "hw": "274",
-        "cas": "",
-        "image": ""
-    },
-
-
+  {
+    "year": 1996,
+    "name": "Monte Carlo Stocker",
+    "series": "Model Series (01/01)",
+    "color": "",
+    "part": "14860",
+    "hw": "440",
+    "cas": "",
+    "image": "https://static.wikia.nocookie.net/hotwheels/images/1/1c/Monte_Carlo_Stocker_RT7dpBlk.JPG/revision/latest"
+  },
+  {
+    "year": 1996,
+    "name": "1996 Mustang GT",
+    "series": "First Editions (01/12)",
+    "color": "",
+    "part": "14841",
+    "hw": "378",
+    "cas": "",
+    "image": "https://static.wikia.nocookie.net/hotwheels/images/8/8e/1996HotWheels001.JPG/revision/latest"
+  },
+  {
+    "year": 1996,
+    "name": "Chevy 1500",
+    "series": "First Editions (02/12)",
+    "color": "",
+    "part": "14907",
+    "hw": "367",
+    "cas": "",
+    "image": "https://static.wikia.nocookie.net/hotwheels/images/b/ba/1996HotWheels002.JPG/revision/latest"
+  },
+  {
+    "year": 1996,
+    "name": "1970 Dodge Charger Daytona",
+    "series": "First Editions (03/12)",
+    "color": "",
+    "part": "14908",
+    "hw": "368",
+    "cas": "",
+    "image": "https://static.wikia.nocookie.net/hotwheels/images/6/61/1970_Daytona_RedLW.JPG/revision/latest"
+  },
+  {
+    "year": 1996,
+    "name": "Street Cleaver",
+    "series": "First Editions (04/12)",
+    "color": "",
+    "part": "14913",
+    "hw": "373",
+    "cas": "",
+    "image": "https://static.wikia.nocookie.net/hotwheels/images/9/9d/Stcleavr.jpg/revision/latest"
+  },
+  {
+    "year": 1996,
+    "name": "Rail Rodder",
+    "series": "First Editions (05/12)",
+    "color": "",
+    "part": "14910",
+    "hw": "370",
+    "cas": "",
+    "image": "https://static.wikia.nocookie.net/hotwheels/images/2/24/FE_Rail_Rodder.jpg/revision/latest"
+  },
+  {
+    "year": 1996,
+    "name": "Volkswagen Drag Bus",
+    "series": "First Editions (06/12)",
+    "color": "",
+    "part": "14912",
+    "hw": "372",
+    "cas": "",
+    "image": "https://static.wikia.nocookie.net/hotwheels/images/f/f1/Volkswagon.drag.bus.14912.a-l.jpg/revision/latest"
+  },
+  {
+    "year": 1996,
+    "name": "Road Rocket",
+    "series": "First Editions (07/12)",
+    "color": "",
+    "part": "14911",
+    "hw": "371",
+    "cas": "",
+    "image": "https://static.wikia.nocookie.net/hotwheels/images/d/d4/Road_Rocket_GrnBluLW.JPG/revision/latest"
+  },
+  {
+    "year": 1996,
+    "name": "Turbo Flame (Sizzlers)",
+    "series": "First Editions (08/12)",
+    "color": "Sizzlers",
+    "part": "14909",
+    "hw": "369",
+    "cas": "",
+    "image": "https://static.wikia.nocookie.net/hotwheels/images/7/7d/Turbo_Flame_Wht.JPG/revision/latest"
+  },
+  {
+    "year": 1996,
+    "name": "Radio Flyer Wagon",
+    "series": "First Editions (09/12)",
+    "color": "",
+    "part": "14914",
+    "hw": "374",
+    "cas": "",
+    "image": "https://static.wikia.nocookie.net/hotwheels/images/3/36/Radio_Flyer_RedBW.JPG/revision/latest"
+  },
+  {
+    "year": 1996,
+    "name": "Dogfighter",
+    "series": "First Editions (10/12)",
+    "color": "",
+    "part": "14915",
+    "hw": "375",
+    "cas": "",
+    "image": "https://static.wikia.nocookie.net/hotwheels/images/4/42/Dofighter_RedSB.JPG/revision/latest"
+  },
+  {
+    "year": 1996,
+    "name": "Twang Thang",
+    "series": "First Editions (11/12)",
+    "color": "",
+    "part": "14916",
+    "hw": "376",
+    "cas": "",
+    "image": "https://static.wikia.nocookie.net/hotwheels/images/4/4a/Twang_Thang_SlvRed.JPG/revision/latest"
+  },
+  {
+    "year": 1996,
+    "name": "Ferrari F50 Spider",
+    "series": "First Editions (12/12)",
+    "color": "",
+    "part": "14917",
+    "hw": "377",
+    "cas": "",
+    "image": "https://static.wikia.nocookie.net/hotwheels/images/3/39/Ferrari_F50_Spider_Red.JPG/revision/latest"
+  },
+  {
+    "year": 1996,
+    "name": "Dodge Ram 1500 (1995)",
+    "series": "Race Truck Series (1/4)",
+    "color": "1995",
+    "part": "15218",
+    "hw": "380",
+    "cas": "",
+    "image": "https://static.wikia.nocookie.net/hotwheels/images/b/b0/Dodge_Ram_RTrkS.JPG/revision/latest"
+  },
+  {
+    "year": 1996,
+    "name": "Kenworth T-600A",
+    "series": "Race Truck Series (2/4)",
+    "color": "",
+    "part": "15219",
+    "hw": "381",
+    "cas": "",
+    "image": "https://static.wikia.nocookie.net/hotwheels/images/a/a4/Kenworth_T-600_A_Slv.JPG/revision/latest"
+  },
+  {
+    "year": 1996,
+    "name": "'56 Flashsider",
+    "series": "Race Truck Series (3/4)",
+    "color": "",
+    "part": "15220",
+    "hw": "382",
+    "cas": "",
+    "image": "https://static.wikia.nocookie.net/hotwheels/images/3/32/56_Flashsider_RcTrk.JPG/revision/latest"
+  },
+  {
+    "year": 1996,
+    "name": "Nissan Truck",
+    "series": "Race Truck Series (4/4)",
+    "color": "",
+    "part": "15221",
+    "hw": "383",
+    "cas": "",
+    "image": "https://static.wikia.nocookie.net/hotwheels/images/6/6d/Nissan_Hardbody_BluRT.JPG/revision/latest"
+  },
+  {
+    "year": 1996,
+    "name": "'57 T-Bird",
+    "series": "Flamethrower Series (1/4)",
+    "color": "",
+    "part": "15223",
+    "hw": "384",
+    "cas": "",
+    "image": "https://static.wikia.nocookie.net/hotwheels/images/7/7c/%2757_T-Bird_-_96_Flamethrower.jpg/revision/latest"
+  },
+  {
+    "year": 1996,
+    "name": "Hydroplane",
+    "series": "Flamethrower Series (2/4)",
+    "color": "",
+    "part": "15224",
+    "hw": "385",
+    "cas": "",
+    "image": "https://static.wikia.nocookie.net/hotwheels/images/0/03/Hydroplane_Yel.JPG/revision/latest"
+  },
+  {
+    "year": 1996,
+    "name": "Range Rover",
+    "series": "Flamethrower Series (3/4)",
+    "color": "",
+    "part": "15225",
+    "hw": "386",
+    "cas": "",
+    "image": "https://static.wikia.nocookie.net/hotwheels/images/0/0c/Range_Rover_FTh.JPG/revision/latest"
+  },
+  {
+    "year": 1996,
+    "name": "Oshkosh Snow Plow",
+    "series": "Flamethrower Series (4/4)",
+    "color": "",
+    "part": "15226",
+    "hw": "387",
+    "cas": "",
+    "image": "https://static.wikia.nocookie.net/hotwheels/images/b/be/Oshkosh_Snowplow_BlkCT.JPG/revision/latest"
+  },
+  {
+    "year": 1996,
+    "name": "Radar Ranger",
+    "series": "Space Series (1/4)",
+    "color": "",
+    "part": "15228",
+    "hw": "388",
+    "cas": "",
+    "image": "https://static.wikia.nocookie.net/hotwheels/images/b/b8/Radar_Ranger_-_6012df.jpg/revision/latest"
+  },
+  {
+    "year": 1996,
+    "name": "GM Lean Machine",
+    "series": "Space Series (2/4)",
+    "color": "",
+    "part": "15229",
+    "hw": "389",
+    "cas": "",
+    "image": "https://static.wikia.nocookie.net/hotwheels/images/5/55/GM_Lean_Machine_BluWht.JPG/revision/latest"
+  },
+  {
+    "year": 1996,
+    "name": "Alien",
+    "series": "Space Series (3/4)",
+    "color": "",
+    "part": "15230",
+    "hw": "390",
+    "cas": "",
+    "image": "https://static.wikia.nocookie.net/hotwheels/images/8/80/Alien_SpcSer.JPG/revision/latest"
+  },
+  {
+    "year": 1996,
+    "name": "Treadator",
+    "series": "Space Series (4/4)",
+    "color": "",
+    "part": "15231",
+    "hw": "391",
+    "cas": "",
+    "image": "https://static.wikia.nocookie.net/hotwheels/images/b/b5/Treadator_LtBlu.JPG/revision/latest"
+  },
+  {
+    "year": 1996,
+    "name": "Ramp Truck",
+    "series": "Race Team Series II (1/4)",
+    "color": "",
+    "part": "15233",
+    "hw": "392",
+    "cas": "",
+    "image": "https://static.wikia.nocookie.net/hotwheels/images/c/cb/Ramp_Truck_-_96_Race_Team_Series_II.jpg/revision/latest"
+  },
+  {
+    "year": 1996,
+    "name": "Baja Bug",
+    "series": "Race Team Series II (2/4)",
+    "color": "",
+    "part": "15234",
+    "hw": "393",
+    "cas": "",
+    "image": "https://static.wikia.nocookie.net/hotwheels/images/4/4e/Baja_Bug_-_96_Race_Team_II.jpg/revision/latest"
+  },
+  {
+    "year": 1996,
+    "name": "'57 Chevy",
+    "series": "Race Team Series II (3/4)",
+    "color": "",
+    "part": "15235",
+    "hw": "394",
+    "cas": "",
+    "image": "https://static.wikia.nocookie.net/hotwheels/images/9/95/%2757_Chevy_-_96_Race_Team_II.jpg/revision/latest"
+  },
+  {
+    "year": 1996,
+    "name": "Bywayman",
+    "series": "Race Team Series II (4/4)",
+    "color": "",
+    "part": "15236",
+    "hw": "395",
+    "cas": "",
+    "image": "https://static.wikia.nocookie.net/hotwheels/images/a/a7/Bywayman_RTct.JPG/revision/latest"
+  },
+  {
+    "year": 1996,
+    "name": "Hummer",
+    "series": "Mod Bod Series (1/4​)",
+    "color": "",
+    "part": "15238",
+    "hw": "396",
+    "cas": "",
+    "image": "https://static.wikia.nocookie.net/hotwheels/images/f/f8/Hummer_Pnk.JPG/revision/latest"
+  },
+  {
+    "year": 1996,
+    "name": "School Bus",
+    "series": "Mod Bod Series (2/4​)",
+    "color": "",
+    "part": "15239",
+    "hw": "397",
+    "cas": "",
+    "image": "https://static.wikia.nocookie.net/hotwheels/images/f/f7/School_Bus_Prp.JPG/revision/latest"
+  },
+  {
+    "year": 1996,
+    "name": "VW Bug",
+    "series": "Mod Bod Series (3/4​)",
+    "color": "",
+    "part": "15240",
+    "hw": "398",
+    "cas": "",
+    "image": "https://static.wikia.nocookie.net/hotwheels/images/2/2a/VW_Bug_ModBod.JPG/revision/latest"
+  },
+  {
+    "year": 1996,
+    "name": "'67 Camaro",
+    "series": "Mod Bod Series (4/4​)",
+    "color": "",
+    "part": "15242",
+    "hw": "399",
+    "cas": "",
+    "image": "https://static.wikia.nocookie.net/hotwheels/images/3/37/ModBod.jpg/revision/latest"
+  },
+  {
+    "year": 1996,
+    "name": "Big Chill",
+    "series": "Dark Rider Series II (1/4)",
+    "color": "",
+    "part": "15243",
+    "hw": "400",
+    "cas": "",
+    "image": "https://static.wikia.nocookie.net/hotwheels/images/a/a3/Big_Chill_Blk.JPG/revision/latest"
+  },
+  {
+    "year": 1996,
+    "name": "Street Beast",
+    "series": "Dark Rider Series II (2/4)",
+    "color": "",
+    "part": "15244",
+    "hw": "401",
+    "cas": "",
+    "image": "https://static.wikia.nocookie.net/hotwheels/images/8/85/Street_Beast_MtBlk.JPG/revision/latest"
+  },
+  {
+    "year": 1996,
+    "name": "Thunderstreak",
+    "series": "Dark Rider Series II",
+    "color": "",
+    "part": "15245",
+    "hw": "402",
+    "cas": "",
+    "image": "https://static.wikia.nocookie.net/hotwheels/images/8/88/Thunderstreak_Crm.JPG/revision/latest"
+  },
+  {
+    "year": 1996,
+    "name": "Power Pistons",
+    "series": "Dark Rider Series II (4/4)",
+    "color": "",
+    "part": "15246",
+    "hw": "403",
+    "cas": "",
+    "image": "https://static.wikia.nocookie.net/hotwheels/images/2/20/Power_Pistons_Crm.JPG/revision/latest"
+  },
+  {
+    "year": 1996,
+    "name": "Porsche 930",
+    "series": "Sports Car Series (1/4)",
+    "color": "",
+    "part": "15248",
+    "hw": "404",
+    "cas": "",
+    "image": "https://static.wikia.nocookie.net/hotwheels/images/6/67/Porsche_930_Silv.JPG/revision/latest"
+  },
+  {
+    "year": 1996,
+    "name": "Custom Corvette Convertible",
+    "series": "Sports Car Series (2/4)",
+    "color": "",
+    "part": "15249",
+    "hw": "405",
+    "cas": "",
+    "image": "https://static.wikia.nocookie.net/hotwheels/images/b/ba/Custom_Corvette_Prpl.JPG/revision/latest"
+  },
+  {
+    "year": 1996,
+    "name": "Shelby Cobra 427 S/C",
+    "series": "Sports Car Series (3/4)",
+    "color": "",
+    "part": "15250",
+    "hw": "406",
+    "cas": "",
+    "image": "https://static.wikia.nocookie.net/hotwheels/images/3/30/Classic_Cobra_SprtCr.JPG/revision/latest"
+  },
+  {
+    "year": 1996,
+    "name": "'59 Caddy",
+    "series": "Sports Car Series (4/4)",
+    "color": "",
+    "part": "15251",
+    "hw": "407",
+    "cas": "",
+    "image": "https://static.wikia.nocookie.net/hotwheels/images/b/b0/59_Caddy_BlkSC.JPG/revision/latest"
+  },
+  {
+    "year": 1996,
+    "name": "Rescue Ranger",
+    "series": "Splatter Paint Series (1/4)",
+    "color": "",
+    "part": "15253",
+    "hw": "408",
+    "cas": "",
+    "image": "https://static.wikia.nocookie.net/hotwheels/images/5/50/Rescue_Ranger_Org5sp.JPG/revision/latest"
+  },
+  {
+    "year": 1996,
+    "name": "Probe Funny Car",
+    "series": "Splatter Paint Series (2/4)",
+    "color": "",
+    "part": "15254",
+    "hw": "409",
+    "cas": "",
+    "image": "https://static.wikia.nocookie.net/hotwheels/images/c/c2/Probe_Funny_Car_SpltrPnt.JPG/revision/latest"
+  },
+  {
+    "year": 1996,
+    "name": "'55 Chevy",
+    "series": "Splatter Paint Series (3/4)",
+    "color": "",
+    "part": "15255",
+    "hw": "410",
+    "cas": "",
+    "image": "https://static.wikia.nocookie.net/hotwheels/images/2/26/55_Chevy_YelSS.JPG/revision/latest"
+  },
+  {
+    "year": 1996,
+    "name": "'80s Camaro",
+    "series": "Splatter Paint Series (4/4)",
+    "color": "",
+    "part": "15256",
+    "hw": "411",
+    "cas": "",
+    "image": "https://static.wikia.nocookie.net/hotwheels/images/c/c7/80s_Camaro_wht.JPG/revision/latest"
+  },
+  {
+    "year": 1996,
+    "name": "Speed Machine",
+    "series": "Street Eaters Series (1/4)",
+    "color": "",
+    "part": "15258",
+    "hw": "412",
+    "cas": "",
+    "image": "https://static.wikia.nocookie.net/hotwheels/images/4/49/Speed_Machine_Grn.JPG/revision/latest"
+  },
+  {
+    "year": 1996,
+    "name": "Silhouette II",
+    "series": "Street Eaters Series (2/4)",
+    "color": "",
+    "part": "15259",
+    "hw": "413",
+    "cas": "",
+    "image": "https://static.wikia.nocookie.net/hotwheels/images/f/fb/Silouette_II_PrplStrtEat.JPG/revision/latest"
+  },
+  {
+    "year": 1996,
+    "name": "Propper Chopper",
+    "series": "Street Eaters Series (3/4)",
+    "color": "",
+    "part": "15260",
+    "hw": "414",
+    "cas": "",
+    "image": "https://static.wikia.nocookie.net/hotwheels/images/e/e2/Propper_Chopper_BluStrBst.JPG/revision/latest"
+  },
+  {
+    "year": 1996,
+    "name": "Roll Patrol Jeep CJ",
+    "series": "Street Eaters Series (4/4)",
+    "color": "",
+    "part": "15261",
+    "hw": "415",
+    "cas": "",
+    "image": "https://static.wikia.nocookie.net/hotwheels/images/2/2b/Roll_Patrol_Jeep_CJ_StrtBst.JPG/revision/latest"
+  },
+  {
+    "year": 1996,
+    "name": "Pizza Vette",
+    "series": "Fast Food Series (1/4)",
+    "color": "",
+    "part": "15263",
+    "hw": "416",
+    "cas": "",
+    "image": "https://static.wikia.nocookie.net/hotwheels/images/2/27/Corvette_Stingray_Pza5sp.JPG/revision/latest"
+  },
+  {
+    "year": 1996,
+    "name": "Pasta Pipes",
+    "series": "Fast Food Series (2/4)",
+    "color": "",
+    "part": "15264",
+    "hw": "417",
+    "cas": "",
+    "image": "https://static.wikia.nocookie.net/hotwheels/images/c/ca/Power_Pipes_Pasta.JPG/revision/latest"
+  },
+  {
+    "year": 1996,
+    "name": "Sweet Stocker",
+    "series": "Fast Food Series (3/4)",
+    "color": "",
+    "part": "15265",
+    "hw": "418",
+    "cas": "",
+    "image": "https://static.wikia.nocookie.net/hotwheels/images/6/62/Sweet-Stocker.JPG/revision/latest"
+  },
+  {
+    "year": 1996,
+    "name": "Crunch Chief",
+    "series": "Fast Food Series (4/4)",
+    "color": "",
+    "part": "15266",
+    "hw": "419",
+    "cas": "",
+    "image": "https://static.wikia.nocookie.net/hotwheels/images/1/13/Crunch_Chief.JPG/revision/latest"
+  },
+  {
+    "year": 1996,
+    "name": "CAT Dump Truck",
+    "series": "Silver Series II (1/4)",
+    "color": "",
+    "part": "15268",
+    "hw": "420",
+    "cas": "",
+    "image": "https://static.wikia.nocookie.net/hotwheels/images/6/67/CAT_Dump_Truck_Chrm.JPG/revision/latest"
+  },
+  {
+    "year": 1996,
+    "name": "'40's Woodie",
+    "series": "Silver Series II (2/4)",
+    "color": "",
+    "part": "15269",
+    "hw": "421",
+    "cas": "",
+    "image": "https://static.wikia.nocookie.net/hotwheels/images/3/39/Chrome_%2740%27s_Woodie_-_6403df.jpg/revision/latest"
+  },
+  {
+    "year": 1996,
+    "name": "'57 Chevy",
+    "series": "Silver Series II (3/4)",
+    "color": "",
+    "part": "15270",
+    "hw": "422",
+    "cas": "",
+    "image": "https://static.wikia.nocookie.net/hotwheels/images/1/1f/1957_Chevy_Silver.jpg/revision/latest"
+  },
+  {
+    "year": 1996,
+    "name": "Oscar Mayer Wienermobile",
+    "series": "Silver Series II (4/4)",
+    "color": "",
+    "part": "15271",
+    "hw": "423",
+    "cas": "",
+    "image": "https://static.wikia.nocookie.net/hotwheels/images/4/4f/Oscar_Mayer_Wienermobile_Crm.JPG/revision/latest"
+  },
+  {
+    "year": 1996,
+    "name": "Ambulance",
+    "series": "Fire Squad Series (1/4)",
+    "color": "",
+    "part": "15273",
+    "hw": "424",
+    "cas": "",
+    "image": "https://static.wikia.nocookie.net/hotwheels/images/9/95/Ambulance_Grn7sp.JPG/revision/latest"
+  },
+  {
+    "year": 1996,
+    "name": "Rescue Ranger",
+    "series": "Fire Squad Series (2/4)",
+    "color": "",
+    "part": "15274",
+    "hw": "425",
+    "cas": "",
+    "image": "https://static.wikia.nocookie.net/hotwheels/images/5/54/Rescue_Ranger_YelFR.JPG/revision/latest"
+  },
+  {
+    "year": 1996,
+    "name": "Flame Stopper",
+    "series": "Fire Squad Series (3/4)",
+    "color": "",
+    "part": "15275",
+    "hw": "426",
+    "cas": "",
+    "image": "https://static.wikia.nocookie.net/hotwheels/images/d/d0/Flame_Stopper_YelFrRs.JPG/revision/latest"
+  },
+  {
+    "year": 1996,
+    "name": "Fire Eater",
+    "series": "Fire Squad Series (4/4)",
+    "color": "",
+    "part": "15276",
+    "hw": "427",
+    "cas": "",
+    "image": "https://static.wikia.nocookie.net/hotwheels/images/5/54/Fire_Eater_FR.JPG/revision/latest"
+  },
+  {
+    "year": 1996,
+    "name": "'40's Woodie",
+    "series": "1996 Treasure Hunts (01/12)",
+    "color": "",
+    "part": "15074",
+    "hw": "428",
+    "cas": "",
+    "image": "https://static.wikia.nocookie.net/hotwheels/images/9/98/40swoody_96TH.JPG/revision/latest"
+  },
+  {
+    "year": 1996,
+    "name": "Auburn 852",
+    "series": "1996 Treasure Hunts (02/12)",
+    "color": "",
+    "part": "15083",
+    "hw": "437",
+    "cas": "",
+    "image": "https://static.wikia.nocookie.net/hotwheels/images/7/70/Auburn852%24TH.jpg/revision/latest"
+  },
+  {
+    "year": 1996,
+    "name": "Ferrari 250",
+    "series": "1996 Treasure Hunts (03/12)",
+    "color": "",
+    "part": "15076",
+    "hw": "430",
+    "cas": "",
+    "image": "https://static.wikia.nocookie.net/hotwheels/images/8/85/430_Treasure_Hunt_Series_Ferrari_250.jpg/revision/latest"
+  },
+  {
+    "year": 1996,
+    "name": "Jaguar XJ220",
+    "series": "1996 Treasure Hunts (04/12)",
+    "color": "",
+    "part": "15077",
+    "hw": "431",
+    "cas": "",
+    "image": "https://static.wikia.nocookie.net/hotwheels/images/4/41/431_Treasure_Hunt_Series_Jaguar_XJ220.jpg/revision/latest"
+  },
+  {
+    "year": 1996,
+    "name": "'59 Caddy",
+    "series": "1996 Treasure Hunts (05/12)",
+    "color": "",
+    "part": "15078",
+    "hw": "432",
+    "cas": "",
+    "image": "https://static.wikia.nocookie.net/hotwheels/images/5/59/432_Treasure_Hunt_Series_%2759_Caddy.jpg/revision/latest"
+  },
+  {
+    "year": 1996,
+    "name": "Dodge Viper RT/10",
+    "series": "1996 Treasure Hunts (06/12)",
+    "color": "",
+    "part": "15079",
+    "hw": "433",
+    "cas": "",
+    "image": "https://static.wikia.nocookie.net/hotwheels/images/c/ce/Viper_RT10_-_96TH_White.JPG/revision/latest"
+  },
+  {
+    "year": 1996,
+    "name": "'57 Chevy",
+    "series": "1996 Treasure Hunts (07/12)",
+    "color": "",
+    "part": "15080",
+    "hw": "434",
+    "cas": "",
+    "image": "https://static.wikia.nocookie.net/hotwheels/images/c/c4/%2757Chevy%24TH.jpg/revision/latest"
+  },
+  {
+    "year": 1996,
+    "name": "Ferrari 355",
+    "series": "1996 Treasure Hunts (08/12)",
+    "color": "",
+    "part": "15081",
+    "hw": "435",
+    "cas": "",
+    "image": "https://static.wikia.nocookie.net/hotwheels/images/a/af/1996THFerrari355.jpg/revision/latest"
+  },
+  {
+    "year": 1996,
+    "name": "'58 Corvette",
+    "series": "1996 Treasure Hunts (09/12)",
+    "color": "",
+    "part": "15082",
+    "hw": "436",
+    "cas": "",
+    "image": "https://static.wikia.nocookie.net/hotwheels/images/a/af/436_Treasure_Hunt_Series_%2758_Corvette.jpg/revision/latest"
+  },
+  {
+    "year": 1996,
+    "name": "Lamborghini Countach",
+    "series": "1996 Treasure Hunts (10/12)",
+    "color": "",
+    "part": "15075",
+    "hw": "429",
+    "cas": "",
+    "image": "https://static.wikia.nocookie.net/hotwheels/images/c/c7/10_Trea%24ure_Hunt_1996_-_Lamborghini_Countach.jpg/revision/latest"
+  },
+  {
+    "year": 1996,
+    "name": "Dodge Ram 1500",
+    "series": "1996 Treasure Hunts (11/12)",
+    "color": "",
+    "part": "15084",
+    "hw": "438",
+    "cas": "",
+    "image": "https://static.wikia.nocookie.net/hotwheels/images/9/9b/Hotwheels_016.jpg/revision/latest"
+  },
+  {
+    "year": 1996,
+    "name": "'37 Bugatti",
+    "series": "1996 Treasure Hunts (12/12)",
+    "color": "",
+    "part": "15085",
+    "hw": "439",
+    "cas": "",
+    "image": "https://static.wikia.nocookie.net/hotwheels/images/3/3e/37BUGATTI.jpg/revision/latest"
+  },
+  {
+    "year": 1996,
+    "name": "Shadow Jet",
+    "series": "1996 Hot Wheels",
+    "color": "",
+    "part": "4699",
+    "hw": "182",
+    "cas": "",
+    "image": ""
+  },
+  {
+    "year": 1996,
+    "name": "Silhouette II",
+    "series": "1996 Hot Wheels",
+    "color": "",
+    "part": "5267",
+    "hw": "212",
+    "cas": "",
+    "image": ""
+  },
+  {
+    "year": 1996,
+    "name": "'93 Camaro",
+    "series": "1996 Hot Wheels",
+    "color": "",
+    "part": "11253",
+    "hw": "242",
+    "cas": "",
+    "image": ""
+  },
+  {
+    "year": 1996,
+    "name": "Sol-Aire CX-4",
+    "series": "1996 Hot Wheels",
+    "color": "",
+    "part": "13506",
+    "hw": "254",
+    "cas": "",
+    "image": ""
+  },
+  {
+    "year": 1996,
+    "name": "BMW 850i",
+    "series": "1996 Hot Wheels",
+    "color": "",
+    "part": "5667",
+    "hw": "255",
+    "cas": "",
+    "image": ""
+  },
+  {
+    "year": 1996,
+    "name": "Chevy Stocker",
+    "series": "1996 Hot Wheels",
+    "color": "",
+    "part": "12924",
+    "hw": "441",
+    "cas": "",
+    "image": ""
+  },
+  {
+    "year": 1996,
+    "name": "Ferrari F40",
+    "series": "1996 Hot Wheels",
+    "color": "",
+    "part": "12935",
+    "hw": "442",
+    "cas": "",
+    "image": ""
+  },
+  {
+    "year": 1996,
+    "name": "Ferrari 348",
+    "series": "1996 Hot Wheels",
+    "color": "",
+    "part": "12933",
+    "hw": "443",
+    "cas": "",
+    "image": ""
+  },
+  {
+    "year": 1996,
+    "name": "Aeroflash",
+    "series": "1996 Hot Wheels",
+    "color": "",
+    "part": "13232",
+    "hw": "444",
+    "cas": "",
+    "image": ""
+  },
+  {
+    "year": 1996,
+    "name": "Jaguar XJ220",
+    "series": "1996 Hot Wheels",
+    "color": "",
+    "part": "12865",
+    "hw": "445",
+    "cas": "",
+    "image": ""
+  },
+  {
+    "year": 1996,
+    "name": "'32 Ford Delivery",
+    "series": "1996 Hot Wheels",
+    "color": "",
+    "part": "12927",
+    "hw": "446",
+    "cas": "",
+    "image": ""
+  },
+  {
+    "year": 1996,
+    "name": "'63 Split Window Corvette",
+    "series": "1996 Hot Wheels",
+    "color": "",
+    "part": "13874",
+    "hw": "447",
+    "cas": "",
+    "image": ""
+  },
+  {
+    "year": 1996,
+    "name": "'67 Camaro",
+    "series": "1996 Hot Wheels",
+    "color": "",
+    "part": "13872",
+    "hw": "448",
+    "cas": "",
+    "image": ""
+  },
+  {
+    "year": 1996,
+    "name": "Camaro Z-28",
+    "series": "1996 Hot Wheels",
+    "color": "",
+    "part": "12922",
+    "hw": "449",
+    "cas": "",
+    "image": ""
+  },
+  {
+    "year": 1996,
+    "name": "Corvette Stingray (1976)",
+    "series": "1996 Hot Wheels",
+    "color": "1976",
+    "part": "12925",
+    "hw": "450",
+    "cas": "",
+    "image": ""
+  },
+  {
+    "year": 1996,
+    "name": "3-Window '34",
+    "series": "1996 Hot Wheels",
+    "color": "",
+    "part": "12931",
+    "hw": "451",
+    "cas": "",
+    "image": ""
+  },
+  {
+    "year": 1996,
+    "name": "Ferrari 250",
+    "series": "1996 Hot Wheels",
+    "color": "",
+    "part": "12936",
+    "hw": "452",
+    "cas": "",
+    "image": ""
+  },
+  {
+    "year": 1996,
+    "name": "Avus Quattro",
+    "series": "1996 Hot Wheels",
+    "color": "",
+    "part": "13868",
+    "hw": "453",
+    "cas": "",
+    "image": ""
+  },
+  {
+    "year": 1996,
+    "name": "Zender Fact 4",
+    "series": "1996 Hot Wheels",
+    "color": "",
+    "part": "13867",
+    "hw": "454",
+    "cas": "",
+    "image": ""
+  },
+  {
+    "year": 1996,
+    "name": "'65 Mustang Convertible",
+    "series": "1996 Hot Wheels",
+    "color": "",
+    "part": "13871",
+    "hw": "455",
+    "cas": "",
+    "image": ""
+  },
+  {
+    "year": 1996,
+    "name": "Pontiac Banshee",
+    "series": "1996 Hot Wheels",
+    "color": "",
+    "part": "15965",
+    "hw": "457",
+    "cas": "",
+    "image": ""
+  },
+  {
+    "year": 1996,
+    "name": "Speed Shark",
+    "series": "1996 Hot Wheels",
+    "color": "",
+    "part": "15969",
+    "hw": "458",
+    "cas": "",
+    "image": ""
+  },
+  {
+    "year": 1996,
+    "name": "Zombot",
+    "series": "1996 Hot Wheels",
+    "color": "",
+    "part": "15971",
+    "hw": "460",
+    "cas": "",
+    "image": ""
+  },
+  {
+    "year": 1996,
+    "name": "Enforcer",
+    "series": "1996 Hot Wheels",
+    "color": "",
+    "part": "15968",
+    "hw": "461",
+    "cas": "",
+    "image": ""
+  },
+  {
+    "year": 1996,
+    "name": "'80s Firebird",
+    "series": "1996 Hot Wheels",
+    "color": "",
+    "part": "15961",
+    "hw": "462",
+    "cas": "",
+    "image": ""
+  },
+  {
+    "year": 1996,
+    "name": "Fiero 2M4",
+    "series": "1996 Hot Wheels",
+    "color": "",
+    "part": "15962",
+    "hw": "463",
+    "cas": "",
+    "image": ""
+  },
+  {
+    "year": 1996,
+    "name": "Blazer 4x4",
+    "series": "1996 Hot Wheels",
+    "color": "",
+    "part": "15972",
+    "hw": "464",
+    "cas": "",
+    "image": ""
+  },
+  {
+    "year": 1996,
+    "name": "Peugeot 405",
+    "series": "1996 Hot Wheels",
+    "color": "",
+    "part": "15977",
+    "hw": "467",
+    "cas": "",
+    "image": ""
+  },
+  {
+    "year": 1996,
+    "name": "GT Racer",
+    "series": "1996 Hot Wheels",
+    "color": "",
+    "part": "15964",
+    "hw": "468",
+    "cas": "",
+    "image": ""
+  },
+  {
+    "year": 1996,
+    "name": "Hot Bird",
+    "series": "1996 Hot Wheels",
+    "color": "",
+    "part": "15978",
+    "hw": "469",
+    "cas": "",
+    "image": ""
+  },
+  {
+    "year": 1996,
+    "name": "Turbo Streak",
+    "series": "1996 Hot Wheels",
+    "color": "",
+    "part": "15979",
+    "hw": "470",
+    "cas": "",
+    "image": ""
+  },
+  {
+    "year": 1996,
+    "name": "Velocitor",
+    "series": "1996 Hot Wheels",
+    "color": "",
+    "part": "16039",
+    "hw": "471",
+    "cas": "",
+    "image": ""
+  },
+  {
+    "year": 1996,
+    "name": "Buick Stocker",
+    "series": "1996 Hot Wheels",
+    "color": "",
+    "part": "16040",
+    "hw": "472",
+    "cas": "",
+    "image": ""
+  },
+  {
+    "year": 1996,
+    "name": "BMW M1",
+    "series": "1996 Hot Wheels",
+    "color": "",
+    "part": "15963",
+    "hw": "473",
+    "cas": "",
+    "image": ""
+  },
+  {
+    "year": 1996,
+    "name": "BMW M1",
+    "series": "1996 Hot Wheels",
+    "color": "",
+    "part": "15963",
+    "hw": "473",
+    "cas": "",
+    "image": ""
+  },
+  {
+    "year": 1996,
+    "name": "VW Golf",
+    "series": "1996 Hot Wheels",
+    "color": "",
+    "part": "16041",
+    "hw": "474",
+    "cas": "",
+    "image": ""
+  },
+  {
+    "year": 1996,
+    "name": "CAT Forklift",
+    "series": "1996 Hot Wheels",
+    "color": "",
+    "part": "16042",
+    "hw": "475",
+    "cas": "",
+    "image": ""
+  },
+  {
+    "year": 1996,
+    "name": "Double Demon",
+    "series": "1996 Hot Wheels",
+    "color": "",
+    "part": "16046",
+    "hw": "477",
+    "cas": "",
+    "image": ""
+  },
+  {
+    "year": 1996,
+    "name": "Dragon Wagon",
+    "series": "1996 Hot Wheels",
+    "color": "",
+    "part": "16047",
+    "hw": "478",
+    "cas": "",
+    "image": ""
+  },
+  {
+    "year": 1996,
+    "name": "Computer Warrior",
+    "series": "1996 Hot Wheels",
+    "color": "",
+    "part": "16048",
+    "hw": "479",
+    "cas": "",
+    "image": ""
+  },
+  {
+    "year": 1996,
+    "name": "Tall Ryder",
+    "series": "1996 Hot Wheels",
+    "color": "",
+    "part": "16050",
+    "hw": "481",
+    "cas": "",
+    "image": ""
+  },
+  {
+    "year": 1996,
+    "name": "CAT Earth Mover",
+    "series": "1996 Hot Wheels",
+    "color": "",
+    "part": "16053",
+    "hw": "482",
+    "cas": "",
+    "image": ""
+  },
+  {
+    "year": 1996,
+    "name": "Thunder Roller",
+    "series": "1996 Hot Wheels",
+    "color": "",
+    "part": "16064",
+    "hw": "483",
+    "cas": "",
+    "image": ""
+  },
+  {
+    "year": 1996,
+    "name": "Grizzlor",
+    "series": "1996 Hot Wheels",
+    "color": "",
+    "part": "16055",
+    "hw": "484",
+    "cas": "",
+    "image": ""
+  },
+  {
+    "year": 1996,
+    "name": "Evil Weevil",
+    "series": "1996 Hot Wheels",
+    "color": "",
+    "part": "16056",
+    "hw": "485",
+    "cas": "",
+    "image": ""
+  },
+  {
+    "year": 1996,
+    "name": "Command Tank",
+    "series": "1996 Hot Wheels",
+    "color": "",
+    "part": "16057",
+    "hw": "486",
+    "cas": "",
+    "image": ""
+  },
+  {
+    "year": 1996,
+    "name": "Troop Convoy",
+    "series": "1996 Hot Wheels",
+    "color": "",
+    "part": "16296",
+    "hw": "487",
+    "cas": "",
+    "image": ""
+  },
+  {
+    "year": 1996,
+    "name": "Sting Rod",
+    "series": "1996 Hot Wheels",
+    "color": "",
+    "part": "16297",
+    "hw": "488",
+    "cas": "",
+    "image": ""
+  },
+  {
+    "year": 1996,
+    "name": "Big Bertha",
+    "series": "1996 Hot Wheels",
+    "color": "",
+    "part": "16309",
+    "hw": "489",
+    "cas": "",
+    "image": ""
+  },
+  {
+    "year": 1996,
+    "name": "Rocket Shot",
+    "series": "1996 Hot Wheels",
+    "color": "",
+    "part": "16298",
+    "hw": "491",
+    "cas": "",
+    "image": ""
+  },
+  {
+    "year": 1996,
+    "name": "Rocket Shot",
+    "series": "1996 Hot Wheels",
+    "color": "",
+    "part": "16298",
+    "hw": "491",
+    "cas": "",
+    "image": ""
+  },
+  {
+    "year": 1996,
+    "name": "Swingfire",
+    "series": "1996 Hot Wheels",
+    "color": "",
+    "part": "16299",
+    "hw": "492",
+    "cas": "",
+    "image": ""
+  },
+  {
+    "year": 1996,
+    "name": "Porsche Targa",
+    "series": "1996 Hot Wheels",
+    "color": "",
+    "part": "16300",
+    "hw": "493",
+    "cas": "",
+    "image": ""
+  },
+  {
+    "year": 1996,
+    "name": "Mercedes-Benz SL",
+    "series": "1996 Hot Wheels",
+    "color": "",
+    "part": "16301",
+    "hw": "494",
+    "cas": "",
+    "image": ""
+  },
+  {
+    "year": 1996,
+    "name": "Ferrari 308 GTS",
+    "series": "1996 Hot Wheels",
+    "color": "",
+    "part": "16303",
+    "hw": "496",
+    "cas": "",
+    "image": ""
+  },
+  {
+    "year": 1996,
+    "name": "Ferrari Testarossa",
+    "series": "1996 Hot Wheels",
+    "color": "",
+    "part": "16304",
+    "hw": "497",
+    "cas": "",
+    "image": ""
+  },
+  {
+    "year": 1996,
+    "name": "BMW 850i",
+    "series": "1996 Hot Wheels",
+    "color": "",
+    "part": "16305",
+    "hw": "498",
+    "cas": "",
+    "image": ""
+  },
+  {
+    "year": 1996,
+    "name": "Corvette Coupe",
+    "series": "1996 Hot Wheels",
+    "color": "",
+    "part": "16306",
+    "hw": "499",
+    "cas": "",
+    "image": ""
+  },
+  {
+    "year": 1996,
+    "name": "Chevy Nomad",
+    "series": "1996 Hot Wheels",
+    "color": "",
+    "part": "15770",
+    "hw": "502",
+    "cas": "",
+    "image": ""
+  },
+  {
+    "year": 1996,
+    "name": "'80's Corvette",
+    "series": "1996 Hot Wheels",
+    "color": "",
+    "part": "15781",
+    "hw": "503",
+    "cas": "",
+    "image": ""
+  },
+  {
+    "year": 1996,
+    "name": "Camaro Z28",
+    "series": "1996 Hot Wheels",
+    "color": "",
+    "part": "15775",
+    "hw": "504",
+    "cas": "",
+    "image": ""
+  },
+  {
+    "year": 1996,
+    "name": "'93 Camaro",
+    "series": "1996 Hot Wheels",
+    "color": "",
+    "part": "15776",
+    "hw": "505",
+    "cas": "",
+    "image": ""
+  },
+  {
+    "year": 1996,
+    "name": "Nissan 300ZX",
+    "series": "1996 Hot Wheels",
+    "color": "",
+    "part": "16363",
+    "hw": "506",
+    "cas": "",
+    "image": ""
+  },
+  {
+    "year": 1996,
+    "name": "Peugeot 205 Rallye",
+    "series": "1996 Hot Wheels",
+    "color": "",
+    "part": "16364",
+    "hw": "507",
+    "cas": "",
+    "image": ""
+  },
+  {
+    "year": 1996,
+    "name": "Deora",
+    "series": "Bonus Cars (01/04)",
+    "color": "",
+    "part": "10495",
+    "hw": "000",
+    "cas": "",
+    "image": "https://static.wikia.nocookie.net/hotwheels/images/1/1f/Deora_-_96_Bonus_Car.jpg/revision/latest"
+  },
+  {
+    "year": 1996,
+    "name": "Custom Mustang",
+    "series": "Bonus Cars (02/04)",
+    "color": "",
+    "part": "15083",
+    "hw": "000",
+    "cas": "",
+    "image": "https://static.wikia.nocookie.net/hotwheels/images/6/69/MustangMailAway96.jpg/revision/latest"
+  },
+  {
+    "year": 1996,
+    "name": "Twin Mill",
+    "series": "Bonus Cars (03/04)",
+    "color": "",
+    "part": "15076",
+    "hw": "000",
+    "cas": "",
+    "image": "https://static.wikia.nocookie.net/hotwheels/images/6/64/Twin_Mill_YelBons_L.JPG/revision/latest"
+  },
+  {
+    "year": 1996,
+    "name": "Classic Nomad",
+    "series": "Bonus Cars (04/04)",
+    "color": "",
+    "part": "15077",
+    "hw": "000",
+    "cas": "",
+    "image": "https://static.wikia.nocookie.net/hotwheels/images/0/0f/Nomad_Bonus.jpg/revision/latest"
+  },
+  {
+    "year": 1995,
+    "name": "Speed Blaster",
+    "series": "1995 Model Series (1/12​)",
+    "color": "",
+    "part": "13609",
+    "hw": "343",
+    "cas": "",
+    "image": "https://static.wikia.nocookie.net/hotwheels/images/4/4d/Speed_Blaster_blu5sp.JPG/revision/latest"
+  },
+  {
+    "year": 1995,
+    "name": "Mercedes-Benz SL",
+    "series": "1995 Model Series (2/12​)",
+    "color": "",
+    "part": "13610",
+    "hw": "342",
+    "cas": "",
+    "image": "https://static.wikia.nocookie.net/hotwheels/images/2/25/Mercedes_SL_BlkRedInt.JPG/revision/latest"
+  },
+  {
+    "year": 1995,
+    "name": "'58 Corvette Coupe",
+    "series": "1995 Model Series (3/12​)",
+    "color": "",
+    "part": "14908\n/\n2015",
+    "hw": "341",
+    "cas": "",
+    "image": "https://static.wikia.nocookie.net/hotwheels/images/b/bf/58_Vette_AGENTAIR_5.jpg/revision/latest"
+  },
+  {
+    "year": 1995,
+    "name": "Speed-A-Saurus",
+    "series": "1995 Model Series (4/12​)",
+    "color": "",
+    "part": "13341",
+    "hw": "345",
+    "cas": "",
+    "image": "https://static.wikia.nocookie.net/hotwheels/images/0/06/Speed_A-Saurus_GrnBW.JPG/revision/latest"
+  },
+  {
+    "year": 1995,
+    "name": "Power Pistons",
+    "series": "1995 Model Series (5/12​)",
+    "color": "",
+    "part": "13343",
+    "hw": "347",
+    "cas": "",
+    "image": "https://static.wikia.nocookie.net/hotwheels/images/9/9a/Power_Pistons_RedUH.JPG/revision/latest"
+  },
+  {
+    "year": 1995,
+    "name": "Hydroplane",
+    "series": "1995 Model Series (6/12​)",
+    "color": "",
+    "part": "13342",
+    "hw": "346",
+    "cas": "",
+    "image": "https://static.wikia.nocookie.net/hotwheels/images/b/bd/Hydroplane_Blu.JPG/revision/latest"
+  },
+  {
+    "year": 1995,
+    "name": "Dodge Ram 1500",
+    "series": "1995 Model Series (7/12​)",
+    "color": "",
+    "part": "13344",
+    "hw": "348",
+    "cas": "",
+    "image": "https://static.wikia.nocookie.net/hotwheels/images/4/4c/Dodge_Ram_Grn5sp.JPG/revision/latest"
+  },
+  {
+    "year": 1995,
+    "name": "Camaro Convertible",
+    "series": "1995 Model Series (8/12​)",
+    "color": "",
+    "part": "13340",
+    "hw": "344",
+    "cas": "",
+    "image": "https://static.wikia.nocookie.net/hotwheels/images/a/a8/Camaro_Convertible_MtGnUH.JPG/revision/latest"
+  },
+  {
+    "year": 1995,
+    "name": "Power Pipes",
+    "series": "1995 Model Series (9/12​)",
+    "color": "",
+    "part": "13346",
+    "hw": "349",
+    "cas": "",
+    "image": "https://static.wikia.nocookie.net/hotwheels/images/2/23/Power_Pipes_Prpl5SP.JPG/revision/latest"
+  },
+  {
+    "year": 1995,
+    "name": "Ferrari 355",
+    "series": "1995 Model Series (10/12​)",
+    "color": "",
+    "part": "13338",
+    "hw": "350",
+    "cas": "",
+    "image": "https://static.wikia.nocookie.net/hotwheels/images/9/9a/Ferrari355_yel5spk.JPG/revision/latest"
+  },
+  {
+    "year": 1995,
+    "name": "Power Rocket",
+    "series": "1995 Model Series (11/12​)",
+    "color": "",
+    "part": "13348",
+    "hw": "351",
+    "cas": "",
+    "image": "https://static.wikia.nocookie.net/hotwheels/images/5/5a/Power_Rocket_Purpl5SP2.JPG/revision/latest"
+  },
+  {
+    "year": 1995,
+    "name": "Big Chill",
+    "series": "1995 Model Series (12/12​)",
+    "color": "",
+    "part": "13347",
+    "hw": "352",
+    "cas": "",
+    "image": "https://static.wikia.nocookie.net/hotwheels/images/0/0e/Big_Chill_WhtPnk.JPG/revision/latest"
+  },
+  {
+    "year": 1995,
+    "name": "Olds 442",
+    "series": "1995 Treasure Hunts (1/12​)",
+    "color": "",
+    "part": "13349",
+    "hw": "353",
+    "cas": "",
+    "image": "https://static.wikia.nocookie.net/hotwheels/images/3/35/Olds442w30_thunt1995.JPG/revision/latest"
+  },
+  {
+    "year": 1995,
+    "name": "Gold Passion",
+    "series": "1995 Treasure Hunts (2/12​)",
+    "color": "",
+    "part": "13350",
+    "hw": "354",
+    "cas": "",
+    "image": "https://static.wikia.nocookie.net/hotwheels/images/f/f2/Passion_AGENTAIR_7.jpg/revision/latest"
+  },
+  {
+    "year": 1995,
+    "name": "'67 Camaro",
+    "series": "1995 Treasure Hunts (3/12​)",
+    "color": "",
+    "part": "13351",
+    "hw": "355",
+    "cas": "",
+    "image": "https://static.wikia.nocookie.net/hotwheels/images/a/ac/95_hunt.jpg/revision/latest"
+  },
+  {
+    "year": 1995,
+    "name": "'57 T-Bird",
+    "series": "1995 Treasure Hunts (4/12​)",
+    "color": "",
+    "part": "13352",
+    "hw": "356",
+    "cas": "",
+    "image": "https://static.wikia.nocookie.net/hotwheels/images/2/21/%2757_T-bird_MetBlk.JPG/revision/latest"
+  },
+  {
+    "year": 1995,
+    "name": "VW Bug",
+    "series": "1995 Treasure Hunts (5/12​)",
+    "color": "",
+    "part": "13353",
+    "hw": "357",
+    "cas": "",
+    "image": "https://static.wikia.nocookie.net/hotwheels/images/6/6f/Vwbug_thunt_1995.JPG/revision/latest"
+  },
+  {
+    "year": 1995,
+    "name": "Split Window '63",
+    "series": "1995 Treasure Hunts (6/12​)",
+    "color": "",
+    "part": "13354",
+    "hw": "358",
+    "cas": "",
+    "image": "https://static.wikia.nocookie.net/hotwheels/images/1/19/358_Treasure_Hunt_%2763_Corvette_Split_Window.jpg/revision/latest"
+  },
+  {
+    "year": 1995,
+    "name": "Stutz Blackhawk",
+    "series": "1995 Treasure Hunts (7/12​)",
+    "color": "",
+    "part": "13355",
+    "hw": "359",
+    "cas": "",
+    "image": "https://static.wikia.nocookie.net/hotwheels/images/3/32/359_Treasure_Hunt_Series_Stutz_Blackhawk.jpg/revision/latest"
+  },
+  {
+    "year": 1995,
+    "name": "Rolls Royce Phantom II",
+    "series": "1995 Treasure Hunts (8/12​)",
+    "color": "",
+    "part": "13356",
+    "hw": "360",
+    "cas": "",
+    "image": "https://static.wikia.nocookie.net/hotwheels/images/9/9c/%24_57_%281%29.JPG/revision/latest"
+  },
+  {
+    "year": 1995,
+    "name": "Classic Caddy",
+    "series": "1995 Treasure Hunts (9/12​)",
+    "color": "",
+    "part": "13357",
+    "hw": "361",
+    "cas": "",
+    "image": "https://static.wikia.nocookie.net/hotwheels/images/f/f5/ClassicCaddyTH%24.jpg/revision/latest"
+  },
+  {
+    "year": 1995,
+    "name": "Classic Nomad",
+    "series": "1995 Treasure Hunts (10/12​)",
+    "color": "",
+    "part": "13359",
+    "hw": "362",
+    "cas": "",
+    "image": "https://static.wikia.nocookie.net/hotwheels/images/3/39/Hotwheels_019.jpg/revision/latest"
+  },
+  {
+    "year": 1995,
+    "name": "Classic Cobra",
+    "series": "1995 Treasure Hunts (11/12​)",
+    "color": "",
+    "part": "13360",
+    "hw": "363",
+    "cas": "",
+    "image": "https://static.wikia.nocookie.net/hotwheels/images/f/f0/Treasure_hunt_1995_cobra.jpg/revision/latest"
+  },
+  {
+    "year": 1995,
+    "name": "'31 Doozie",
+    "series": "1995 Treasure Hunts (12/12​)",
+    "color": "",
+    "part": "13361",
+    "hw": "364",
+    "cas": "",
+    "image": "https://static.wikia.nocookie.net/hotwheels/images/e/ed/364_Treasure_Hunt_Series_%2731_Doozie.jpg/revision/latest"
+  },
+  {
+    "year": 1995,
+    "name": "Lumina Stocker",
+    "series": "Race Team Series (1/4​)",
+    "color": "",
+    "part": "12794",
+    "hw": "275",
+    "cas": "",
+    "image": "https://static.wikia.nocookie.net/hotwheels/images/2/25/Lumina_Stocker_Blu.JPG/revision/latest"
+  },
+  {
+    "year": 1995,
+    "name": "Hot Wheels 500",
+    "series": "Race Team Series (2/4​)",
+    "color": "",
+    "part": "12803",
+    "hw": "276",
+    "cas": "",
+    "image": "https://static.wikia.nocookie.net/hotwheels/images/d/d3/Hot_Wheels_500_Blu.JPG/revision/latest"
+  },
+  {
+    "year": 1995,
+    "name": "Side-Splitter",
+    "series": "Race Team Series (3/4​)",
+    "color": "",
+    "part": "12795",
+    "hw": "277",
+    "cas": "",
+    "image": "https://static.wikia.nocookie.net/hotwheels/images/b/be/Side-Splitter_-_95_Race_Team.JPG/revision/latest"
+  },
+  {
+    "year": 1995,
+    "name": "Dragster",
+    "series": "Race Team Series (4/4​)",
+    "color": "",
+    "part": "13265",
+    "hw": "278",
+    "cas": "",
+    "image": "https://static.wikia.nocookie.net/hotwheels/images/a/a8/Dragster_-_95_Race_Team.JPG/revision/latest"
+  },
+  {
+    "year": 1995,
+    "name": "Sharkruiser",
+    "series": "Krackle Car Series (1/4​)",
+    "color": "",
+    "part": "13267",
+    "hw": "280",
+    "cas": "",
+    "image": "https://static.wikia.nocookie.net/hotwheels/images/0/06/Shark_Cruiser_Krackle.jpg/revision/latest"
+  },
+  {
+    "year": 1995,
+    "name": "Turboa",
+    "series": "Krackle Car Series (2/4​)",
+    "color": "",
+    "part": "13268",
+    "hw": "281",
+    "cas": "",
+    "image": "https://static.wikia.nocookie.net/hotwheels/images/b/b3/Turboa_KC7sp.JPG/revision/latest"
+  },
+  {
+    "year": 1995,
+    "name": "Split Window '63",
+    "series": "Krackle Car Series (3/4​)",
+    "color": "",
+    "part": "13269",
+    "hw": "282",
+    "cas": "",
+    "image": "https://static.wikia.nocookie.net/hotwheels/images/0/04/Th_63corvette020.jpg/revision/latest"
+  },
+  {
+    "year": 1995,
+    "name": "Flashfire",
+    "series": "Krackle Car Series (4/4​)",
+    "color": "",
+    "part": "13271",
+    "hw": "284",
+    "cas": "",
+    "image": "https://static.wikia.nocookie.net/hotwheels/images/8/80/Flashfire_PrpUH.JPG/revision/latest"
+  },
+  {
+    "year": 1995,
+    "name": "Steel Passion",
+    "series": "Steel Stamp Series (1/4​)",
+    "color": "",
+    "part": "13272",
+    "hw": "285",
+    "cas": "",
+    "image": "https://static.wikia.nocookie.net/hotwheels/images/e/ed/Passion_AGENTAIR_30.jpg/revision/latest"
+  },
+  {
+    "year": 1995,
+    "name": "Zender Fact 4",
+    "series": "Steel Stamp Series (2/4​)",
+    "color": "",
+    "part": "13274",
+    "hw": "287",
+    "cas": "",
+    "image": "https://static.wikia.nocookie.net/hotwheels/images/6/61/Zender_Fact_4_SS35sp.JPG/revision/latest"
+  },
+  {
+    "year": 1995,
+    "name": "'56 Flashsider",
+    "series": "Steel Stamp Series (3/4​)",
+    "color": "",
+    "part": "13276",
+    "hw": "289",
+    "cas": "",
+    "image": "https://static.wikia.nocookie.net/hotwheels/images/a/a4/56_Flashsider_SS.JPG/revision/latest"
+  },
+  {
+    "year": 1995,
+    "name": "'57 Chevy",
+    "series": "Steel Stamp Series (4/4​)",
+    "color": "",
+    "part": "13277",
+    "hw": "290",
+    "cas": "",
+    "image": "https://static.wikia.nocookie.net/hotwheels/images/3/35/57_Chevy_SSuh.JPG/revision/latest"
+  },
+  {
+    "year": 1995,
+    "name": "Talbot Lago",
+    "series": "Pearl Driver Series (1/4​)",
+    "color": "",
+    "part": "13282",
+    "hw": "295",
+    "cas": "",
+    "image": "https://static.wikia.nocookie.net/hotwheels/images/e/eb/Talbot_Lago_BluWW.JPG/revision/latest"
+  },
+  {
+    "year": 1995,
+    "name": "Pearl Passion",
+    "series": "Pearl Driver Series (2/4​)",
+    "color": "",
+    "part": "13279",
+    "hw": "292",
+    "cas": "",
+    "image": "https://static.wikia.nocookie.net/hotwheels/images/0/07/Passion_AGENTAIR_8.jpg/revision/latest"
+  },
+  {
+    "year": 1995,
+    "name": "VW Bug",
+    "series": "Pearl Driver Series (3/4​)",
+    "color": "",
+    "part": "13280",
+    "hw": "293",
+    "cas": "",
+    "image": "https://static.wikia.nocookie.net/hotwheels/images/9/99/VW_Bug_AGENTAIR_7.jpg/revision/latest"
+  },
+  {
+    "year": 1995,
+    "name": "Jaguar XJ220",
+    "series": "Pearl Driver Series (4/4​)",
+    "color": "",
+    "part": "13283",
+    "hw": "296",
+    "cas": "",
+    "image": "https://static.wikia.nocookie.net/hotwheels/images/9/90/Jaguar_XJ220_-_Pearl_Driver.JPG/revision/latest"
+  },
+  {
+    "year": 1995,
+    "name": "Splittin' Image II",
+    "series": "Dark Rider Series (1/4​)",
+    "color": "",
+    "part": "13284",
+    "hw": "297",
+    "cas": "",
+    "image": "https://static.wikia.nocookie.net/hotwheels/images/9/91/Splittin%27_Image_II_Blk7SP.JPG/revision/latest"
+  },
+  {
+    "year": 1995,
+    "name": "Twin Mill II",
+    "series": "Dark Rider Series (2/4​)",
+    "color": "",
+    "part": "13285",
+    "hw": "298",
+    "cas": "",
+    "image": "https://static.wikia.nocookie.net/hotwheels/images/5/54/Twin_Mill_II_BlkPC.JPG/revision/latest"
+  },
+  {
+    "year": 1995,
+    "name": "Silhouette II",
+    "series": "Dark Rider Series (3/4​)",
+    "color": "",
+    "part": "13286",
+    "hw": "299",
+    "cas": "",
+    "image": "https://static.wikia.nocookie.net/hotwheels/images/d/d3/Silouette_II_DkRdrPC.JPG/revision/latest"
+  },
+  {
+    "year": 1995,
+    "name": "Rigor Motor",
+    "series": "Dark Rider Series (4/4​)",
+    "color": "",
+    "part": "13287",
+    "hw": "300",
+    "cas": "",
+    "image": "https://static.wikia.nocookie.net/hotwheels/images/6/68/Rigor_Motor_Blk57sp.JPG/revision/latest"
+  },
+  {
+    "year": 1995,
+    "name": "Street Roader",
+    "series": "Roarin' Rods Series (1/4​)",
+    "color": "",
+    "part": "13290",
+    "hw": "303",
+    "cas": "",
+    "image": "https://static.wikia.nocookie.net/hotwheels/images/d/da/Street_Roader_OrgRR.JPG/revision/latest"
+  },
+  {
+    "year": 1995,
+    "name": "Roll Patrol",
+    "series": "Roarin' Rods Series (2/4​)",
+    "color": "",
+    "part": "13291",
+    "hw": "304",
+    "cas": "",
+    "image": "https://static.wikia.nocookie.net/hotwheels/images/c/cc/Roll_Patrol_Jeep_CJ_RornRdsCT.JPG/revision/latest"
+  },
+  {
+    "year": 1995,
+    "name": "Classic Cobra",
+    "series": "Roarin' Rods Series (3/4​)",
+    "color": "",
+    "part": "13292",
+    "hw": "305",
+    "cas": "",
+    "image": "https://static.wikia.nocookie.net/hotwheels/images/1/1a/Classic_Cobra_BrtGrn.JPG/revision/latest"
+  },
+  {
+    "year": 1995,
+    "name": "Mini Truck",
+    "series": "Roarin' Rods Series (4/4​)",
+    "color": "",
+    "part": "13289",
+    "hw": "302",
+    "cas": "",
+    "image": "https://static.wikia.nocookie.net/hotwheels/images/f/fc/Minitruck_TanUH.JPG/revision/latest"
+  },
+  {
+    "year": 1995,
+    "name": "Cybercruiser",
+    "series": "Hot Hubs Series (1/4​)",
+    "color": "",
+    "part": "13294",
+    "hw": "307",
+    "cas": "",
+    "image": "https://static.wikia.nocookie.net/hotwheels/images/6/64/Pipe_Jammer_Blk.JPG/revision/latest"
+  },
+  {
+    "year": 1995,
+    "name": "Shadow Jet",
+    "series": "Hot Hubs Series (3/4​)",
+    "color": "",
+    "part": "13297",
+    "hw": "310",
+    "cas": "",
+    "image": "https://static.wikia.nocookie.net/hotwheels/images/f/f4/Shadow_Jet_HH.JPG/revision/latest"
+  },
+  {
+    "year": 1995,
+    "name": "Vampyra",
+    "series": "Hot Hubs Series (2/4​)",
+    "color": "",
+    "part": "13925",
+    "hw": "308",
+    "cas": "",
+    "image": "https://static.wikia.nocookie.net/hotwheels/images/6/62/Vampyra_PuplTW.JPG/revision/latest"
+  },
+  {
+    "year": 1995,
+    "name": "Suzuki Quadracer",
+    "series": "Hot Hubs Series (4/4​)",
+    "color": "",
+    "part": "13298",
+    "hw": "311",
+    "cas": "",
+    "image": "https://static.wikia.nocookie.net/hotwheels/images/5/5f/Suzuki_Quadracer_HH.JPG/revision/latest"
+  },
+  {
+    "year": 1995,
+    "name": "3-Window '34",
+    "series": "Speed Gleamer Series (1/4​)",
+    "color": "",
+    "part": "13299",
+    "hw": "312",
+    "cas": "",
+    "image": "https://static.wikia.nocookie.net/hotwheels/images/5/5e/3-Window_34_CrmGrn.JPG/revision/latest"
+  },
+  {
+    "year": 1995,
+    "name": "T-Bucket",
+    "series": "Speed Gleamer Series (2/4​)",
+    "color": "",
+    "part": "13300",
+    "hw": "313",
+    "cas": "",
+    "image": "https://static.wikia.nocookie.net/hotwheels/images/8/8f/T-Bucket_Purp.JPG/revision/latest"
+  },
+  {
+    "year": 1995,
+    "name": "Ratmobile",
+    "series": "Speed Gleamer Series (3/4​)",
+    "color": "",
+    "part": "13302",
+    "hw": "315",
+    "cas": "",
+    "image": "https://static.wikia.nocookie.net/hotwheels/images/3/3f/Ratmobile_BlkUH.JPG/revision/latest"
+  },
+  {
+    "year": 1995,
+    "name": "Limozeen",
+    "series": "Speed Gleamer Series (4/4​)",
+    "color": "",
+    "part": "13303",
+    "hw": "316",
+    "cas": "",
+    "image": "https://static.wikia.nocookie.net/hotwheels/images/a/a3/Limozeen_GldWW.JPG/revision/latest"
+  },
+  {
+    "year": 1995,
+    "name": "Peterbilt Dump Truck",
+    "series": "Real Riders Series (1/4​)",
+    "color": "",
+    "part": "13304",
+    "hw": "317",
+    "cas": "",
+    "image": "https://static.wikia.nocookie.net/hotwheels/images/2/26/Peterbilt_Dump_RR.JPG/revision/latest"
+  },
+  {
+    "year": 1995,
+    "name": "Mercedes-Benz Unimog",
+    "series": "Real Riders Series (2/4​)",
+    "color": "",
+    "part": "13305",
+    "hw": "318",
+    "cas": "",
+    "image": "https://static.wikia.nocookie.net/hotwheels/images/d/d7/Mercedes_Benz_Unimog_RR.JPG/revision/latest"
+  },
+  {
+    "year": 1995,
+    "name": "'59 Caddy",
+    "series": "Real Riders Series (3/4​)",
+    "color": "",
+    "part": "13307",
+    "hw": "320",
+    "cas": "",
+    "image": "https://static.wikia.nocookie.net/hotwheels/images/e/e7/59_Caddy_PnkRR.JPG/revision/latest"
+  },
+  {
+    "year": 1995,
+    "name": "Corvette Stingray (1976)",
+    "series": "Real Riders Series (4/4​)",
+    "color": "1976",
+    "part": "13308",
+    "hw": "321",
+    "cas": "",
+    "image": "https://static.wikia.nocookie.net/hotwheels/images/4/48/Corvette_Stingray_MtGrnRR.JPG/revision/latest"
+  },
+  {
+    "year": 1995,
+    "name": "Fire Eater",
+    "series": "Silver Series (1/4​)",
+    "color": "",
+    "part": "13309",
+    "hw": "322",
+    "cas": "",
+    "image": "https://static.wikia.nocookie.net/hotwheels/images/e/e8/Fire_Eater_CrmBW.JPG/revision/latest"
+  },
+  {
+    "year": 1995,
+    "name": "Rodzilla",
+    "series": "Silver Series (2/4​)",
+    "color": "",
+    "part": "13310",
+    "hw": "323",
+    "cas": "",
+    "image": "https://static.wikia.nocookie.net/hotwheels/images/2/29/Rodzilla_CrmUH.JPG/revision/latest"
+  },
+  {
+    "year": 1995,
+    "name": "Propper Chopper",
+    "series": "Silver Series (3/4​)",
+    "color": "",
+    "part": "13312",
+    "hw": "325",
+    "cas": "",
+    "image": "https://static.wikia.nocookie.net/hotwheels/images/4/4b/Propper_Chopper_Crm.JPG/revision/latest"
+  },
+  {
+    "year": 1995,
+    "name": "School Bus",
+    "series": "Silver Series (4/4​)",
+    "color": "",
+    "part": "13315",
+    "hw": "328",
+    "cas": "",
+    "image": "https://static.wikia.nocookie.net/hotwheels/images/8/87/School_Bus_Chrmbw.JPG/revision/latest"
+  },
+  {
+    "year": 1995,
+    "name": "Ford Aerostar",
+    "series": "Photo Finish Series (1/4​)",
+    "color": "",
+    "part": "13318",
+    "hw": "331",
+    "cas": "",
+    "image": "https://static.wikia.nocookie.net/hotwheels/images/3/39/Ford_Aerostar_Photo.JPG/revision/latest"
+  },
+  {
+    "year": 1995,
+    "name": "Flyin' Aces Blimp",
+    "series": "Photo Finish Series (2/4​)",
+    "color": "",
+    "part": "13319",
+    "hw": "332",
+    "cas": "",
+    "image": "https://static.wikia.nocookie.net/hotwheels/images/5/5f/Blimp_PP.JPG/revision/latest"
+  },
+  {
+    "year": 1995,
+    "name": "Tank Truck",
+    "series": "Photo Finish Series (3/4​)",
+    "color": "",
+    "part": "13320",
+    "hw": "333",
+    "cas": "",
+    "image": "https://static.wikia.nocookie.net/hotwheels/images/a/a8/Tank_Truck_PF.JPG/revision/latest"
+  },
+  {
+    "year": 1995,
+    "name": "Hiway Hauler",
+    "series": "Photo Finish Series (4/4​)",
+    "color": "",
+    "part": "13322",
+    "hw": "335",
+    "cas": "",
+    "image": "https://static.wikia.nocookie.net/hotwheels/images/1/12/Hiway_Hauler_PP.JPG/revision/latest"
+  },
+  {
+    "year": 1995,
+    "name": "Race Truck",
+    "series": "Racing Metals Series (1/4​)",
+    "color": "",
+    "part": "13323",
+    "hw": "336",
+    "cas": "",
+    "image": "https://static.wikia.nocookie.net/hotwheels/images/5/55/Bywayman_Crm.JPG/revision/latest"
+  },
+  {
+    "year": 1995,
+    "name": "Ramp Truck",
+    "series": "Racing Metals Series (2/4​)",
+    "color": "",
+    "part": "13324",
+    "hw": "337",
+    "cas": "",
+    "image": "https://static.wikia.nocookie.net/hotwheels/images/e/e0/Ramp_Truck_Purp7SP.JPG/revision/latest"
+  },
+  {
+    "year": 1995,
+    "name": "Camaro Racer",
+    "series": "Racing Metals Series (3/4​)",
+    "color": "",
+    "part": "13325",
+    "hw": "338",
+    "cas": "",
+    "image": "https://static.wikia.nocookie.net/hotwheels/images/1/13/93_Camaro_Racer.jpg/revision/latest"
+  },
+  {
+    "year": 1995,
+    "name": "Dragster",
+    "series": "Racing Metals Series (4/4​)",
+    "color": "",
+    "part": "13326",
+    "hw": "340",
+    "cas": "",
+    "image": "https://static.wikia.nocookie.net/hotwheels/images/c/c5/Dragster_CrmBlu.JPG/revision/latest"
+  },
+  {
+    "year": 1995,
+    "name": "Good Humor Truck",
+    "series": "White (5SP)",
+    "color": "",
+    "part": "5904",
+    "hw": "005",
+    "cas": "",
+    "image": ""
+  },
+  {
+    "year": 1995,
+    "name": "'37 Bugatti",
+    "series": "Blue (7SP)",
+    "color": "",
+    "part": "2195",
+    "hw": "028",
+    "cas": "",
+    "image": ""
+  },
+  {
+    "year": 1995,
+    "name": "Classic Cobra",
+    "series": "Orange (7SP)",
+    "color": "",
+    "part": "2535",
+    "hw": "031",
+    "cas": "",
+    "image": ""
+  },
+  {
+    "year": 1995,
+    "name": "Ferrari Testarossa",
+    "series": "Red (UH)",
+    "color": "",
+    "part": "13576",
+    "hw": "035",
+    "cas": "",
+    "image": ""
+  },
+  {
+    "year": 1995,
+    "name": "Classic Caddy",
+    "series": "Blue (5SP)",
+    "color": "",
+    "part": "2529",
+    "hw": "044",
+    "cas": "",
+    "image": ""
+  },
+  {
+    "year": 1995,
+    "name": "Kenworth Big Rig",
+    "series": "Black (7SP)",
+    "color": "",
+    "part": "1790",
+    "hw": "076",
+    "cas": "",
+    "image": ""
+  },
+  {
+    "year": 1995,
+    "name": "Ferrari 250",
+    "series": "Yellow (7SP)",
+    "color": "",
+    "part": "5665",
+    "hw": "117",
+    "cas": "",
+    "image": ""
+  },
+  {
+    "year": 1995,
+    "name": "'32 Ford Delivery",
+    "series": "White (7SP)",
+    "color": "",
+    "part": "9599",
+    "hw": "135",
+    "cas": "",
+    "image": ""
+  },
+  {
+    "year": 1995,
+    "name": "Tank Truck",
+    "series": "Red/Chrome (7SP)",
+    "color": "",
+    "part": "2076",
+    "hw": "147",
+    "cas": "",
+    "image": ""
+  },
+  {
+    "year": 1995,
+    "name": "'65 Mustang Convertible",
+    "series": "Red (5SP)",
+    "color": "",
+    "part": "0420",
+    "hw": "162",
+    "cas": "",
+    "image": ""
+  },
+  {
+    "year": 1995,
+    "name": "Mercedes 540K",
+    "series": "Blue (5SP)",
+    "color": "",
+    "part": "5142",
+    "hw": "164",
+    "cas": "",
+    "image": ""
+  },
+  {
+    "year": 1995,
+    "name": "Custom Corvette",
+    "series": "Black (5SP)",
+    "color": "",
+    "part": "15249",
+    "hw": "200",
+    "cas": "",
+    "image": ""
+  },
+  {
+    "year": 1995,
+    "name": "Oshkosh Snowplow",
+    "series": "Orange (Orange ORSB)",
+    "color": "",
+    "part": "2902",
+    "hw": "201",
+    "cas": "",
+    "image": ""
+  },
+  {
+    "year": 1995,
+    "name": "Lamborghini Diablo",
+    "series": "Yellow (5SP)",
+    "color": "",
+    "part": "4406",
+    "hw": "227",
+    "cas": "",
+    "image": ""
+  },
+  {
+    "year": 1995,
+    "name": "Talbot Lago",
+    "series": "Black (7SP)",
+    "color": "",
+    "part": "12342",
+    "hw": "250",
+    "cas": "",
+    "image": ""
+  },
+  {
+    "year": 1995,
+    "name": "Gulch Stepper",
+    "series": "Red",
+    "color": "",
+    "part": "12343",
+    "hw": "251",
+    "cas": "",
+    "image": ""
+  },
+  {
+    "year": 1995,
+    "name": "Street Roader",
+    "series": "White (ORSB)",
+    "color": "",
+    "part": "12344",
+    "hw": "252",
+    "cas": "",
+    "image": ""
+  },
+  {
+    "year": 1995,
+    "name": "3 Window 34",
+    "series": "Metalflake Silver (3SP)",
+    "color": "",
+    "part": "1299",
+    "hw": "257",
+    "cas": "",
+    "image": ""
+  },
+  {
+    "year": 1995,
+    "name": "Blazer 4X4",
+    "series": "Light Blue (CT)",
+    "color": "",
+    "part": "12351",
+    "hw": "258",
+    "cas": "",
+    "image": ""
+  },
+  {
+    "year": 1995,
+    "name": "Lexus SC400",
+    "series": "Maroon (5SP)",
+    "color": "",
+    "part": "12357",
+    "hw": "264",
+    "cas": "",
+    "image": ""
+  },
+  {
+    "year": 1995,
+    "name": "Olds 442 W-30",
+    "series": "Yellow (5DOT)",
+    "color": "",
+    "part": "12360",
+    "hw": "267",
+    "cas": "",
+    "image": ""
+  },
+  {
+    "year": 1995,
+    "name": "Oshkosh Cement Mixer",
+    "series": "Yellow (5SP)",
+    "color": "",
+    "part": "12362",
+    "hw": "269",
+    "cas": "",
+    "image": ""
+  },
+  {
+    "year": 1995,
+    "name": "Super Cannon",
+    "series": "Olive Green (BW)",
+    "color": "",
+    "part": "11378",
+    "hw": "274",
+    "cas": "",
+    "image": ""
+  },
   {
     "year": "1994",
     "name": "'93 Camaro",
@@ -111862,9 +111799,7 @@ export const RAW = [
     "cas": "Small Blue Hot Wheels logo on right rear fender",
     "image": "https://static.wikia.nocookie.net/hotwheels/images/6/63/Corvette_Stingray_Wht5SP.JPG/revision/latest?cb=20081208171104"
   },
-
-
-      {
+  {
     "year": "1993",
     "name": "'93 Camaro",
     "series": "",
@@ -112604,9 +112539,6 @@ export const RAW = [
     "cas": "",
     "image": "https://static.wikia.nocookie.net/hotwheels/images/3/39/Classic_Nomad-25th_Violet.jpg/revision/latest?cb=20130324120301"
   },
-
-
-
   {
     "year": "1992",
     "name": "Chevy Lumina",
@@ -112877,8 +112809,6 @@ export const RAW = [
     "cas": "",
     "image": "https://static.wikia.nocookie.net/hotwheels/images/3/31/Porsche_959_GTPnk.JPG/revision/latest?cb=20090120021719"
   },
-
-
   {
     "year": "1991",
     "name": "Buick Stocker",
@@ -113499,8 +113429,6 @@ export const RAW = [
     "cas": "Yellow, Pink",
     "image": "https://static.wikia.nocookie.net/hotwheels/images/f/fe/Stutz_Blackhawk_CalC.JPG/revision/latest?cb=20090118035542"
   },
-
-
   {
     "year": 1990,
     "name": "T-Bird Stocker (1990)",
@@ -114371,6 +114299,4 @@ export const RAW = [
     "cas": "",
     "image": "https://static.wikia.nocookie.net/hotwheels/images/5/58/Street_Roader_WhtBluCC.JPG/revision/latest"
   }
-
-
 ];
