@@ -4,7 +4,7 @@ import { onAuthStateChanged, getAuth as getAuthSecondary, createUserWithEmailAnd
 import { doc, getDoc, collection, getDocs, setDoc, deleteDoc, updateDoc, increment } from "https://www.gstatic.com/firebasejs/12.13.0/firebase-firestore.js";
 import { RAW } from './data.js';
 
-// INICIALIZA O APP SECUNDÁRIO PARA CADASTRO SILENCIOSO
+
 const secondaryApp = initializeApp(firebaseConfig, "SecondaryApp");
 const secondaryAuth = getAuthSecondary(secondaryApp);
 
@@ -36,15 +36,15 @@ RAW.forEach((r) => {
   }
 });
 
-// =========================================
-// 1. SEGURANÇA E ACESSO
-// =========================================
+
+
+
 onAuthStateChanged(auth, async (user) => {
   if (user) {
     try {
       const userDoc = await getDoc(doc(db, 'users', user.uid));
       const role = userDoc.exists() ? userDoc.data().role : 'user';
-      // Permite Admin e Gerente acessarem a tela
+
       if (role === 'admin' || role === 'gerente') {
         loadUsersList();
       } else {
@@ -63,13 +63,13 @@ async function loadUsersList() {
   try {
     if (!usersTbody) return;
 
-    // Busca dados de quem está logado para o filtro Multi-lojas
+
     const myUid = auth.currentUser.uid;
     const myDoc = await getDoc(doc(db, 'users', myUid));
     const myRole = myDoc.exists() ? myDoc.data().role : 'user';
     const myLojaId = myDoc.exists() ? (myDoc.data().lojaId || '') : '';
 
-    // Guardamos o cargo globalmente para usar no bloqueio do Modal
+
     window.currentUserRole = myRole;
 
     const querySnapshot = await getDocs(collection(db, 'users'));
@@ -82,17 +82,17 @@ async function loadUsersList() {
       userData.uid = docSnap.id;
 
       if (myRole === 'gerente') {
- 
+
         if (userData.role !== 'cliente' || userData.lojaId !== myLojaId) {
-          return; 
+          return;
         }
       }
 
       allUsersCache.push(userData);
 
-      // Define o nome e a cor do cargo na tabela
+
       let roleName = 'Usuário';
-      let roleColor = '#64748b'; // Cinza
+      let roleColor = '#64748b';
       let btnPremios = '';
 
       if (userData.role === 'admin') {
@@ -101,8 +101,8 @@ async function loadUsersList() {
       } else if (userData.role === 'gerente') {
         roleName = 'Gerente';
         roleColor = '#10b981';
-        
-        // O botão de configurar prêmios SÓ aparece para você (Admin Master)
+
+
         if (myRole === 'admin' && userData.lojaId) {
           btnPremios = `<button class="btn-manage-rewards" data-lojaid="${userData.lojaId}" style="background: #8b5cf6; color: white; border: none; padding: 5px 10px; border-radius: 4px; cursor: pointer; margin-right: 8px;">🎁 Prêmios</button>`;
         }
@@ -111,7 +111,7 @@ async function loadUsersList() {
         roleColor = '#3b82f6';
       }
 
-      // CORREÇÃO DO TELEFONE (Ignora os zeros antigos)
+
       const phoneTxt = (userData.phone && userData.phone !== '(00) 00000-0000') ? userData.phone : 'Sem Telefone';
 
       const tr = document.createElement('tr');
@@ -140,13 +140,13 @@ async function loadUsersList() {
 if (usersTbody) {
   usersTbody.addEventListener('click', async (e) => {
 
-    // AÇÃO: EDITAR
+
     if (e.target.classList.contains('btn-edit')) {
       const uidToEdit = e.target.getAttribute('data-id');
       openEditModal(uidToEdit);
     }
 
-    // AÇÃO: EXCLUIR
+
     if (e.target.classList.contains('btn-delete')) {
       const uidToDelete = e.target.getAttribute('data-id');
       const userName = e.target.getAttribute('data-name');
@@ -178,7 +178,7 @@ if (usersTbody) {
 
     }
     if (e.target.classList.contains('btn-manage-rewards')) {
-      // Pega o lojaId que salvamos no atributo data-lojaid do botão
+
       lojaIdParaEditar = e.target.getAttribute('data-lojaid');
 
       const nomeLojaEl = document.getElementById('loja-alvo-nome');
@@ -187,7 +187,7 @@ if (usersTbody) {
       const modal = document.getElementById('loja-modal');
       if (modal) modal.style.display = 'flex';
 
-      await renderAdminRewards(); // Carrega a lista de prêmios daquela loja
+      await renderAdminRewards();
     }
   });
 }
@@ -205,9 +205,9 @@ function openEditModal(uid) {
     editRole.value = userSelected.role || 'user';
     if (editLojaId) editLojaId.value = userSelected.lojaId || '';
 
-    // 🔒 TRAVA DE SEGURANÇA PARA GERENTES
+
     if (window.currentUserRole === 'gerente') {
-      // Gerentes só podem editar Nome e Telefone. Cargo e ID da Loja ficam cinzas e bloqueados!
+
       editRole.disabled = true;
       editRole.style.opacity = '0.5';
       if (editLojaId) {
@@ -215,7 +215,7 @@ function openEditModal(uid) {
         editLojaId.style.opacity = '0.5';
       }
     } else {
-      // Se for o Admin, liberta os campos
+
       editRole.disabled = false;
       editRole.style.opacity = '1';
       if (editLojaId) {
@@ -258,7 +258,7 @@ if (editForm) {
   });
 }
 
-// Máscara do Telefone corrigida para o Modal
+
 if (editPhone) {
   editPhone.addEventListener('input', (e) => {
     let value = e.target.value.replace(/\D/g, '');
@@ -280,9 +280,9 @@ if (editPhone) {
   });
 }
 
-// =========================================
-// 3. VALIDADOR DE CUPONS VIP
-// =========================================
+
+
+
 window.validarCupom = async function () {
   const inputElement = document.getElementById('cupom-input');
   const resultDiv = document.getElementById('cupom-result');
@@ -374,9 +374,9 @@ window.marcarComoUtilizado = async function (docId, index) {
   }
 };
 
-// =========================================
-// SISTEMA DE RIFAS (VIA PAINEL)
-// =========================================
+
+
+
 if (usersTbody) {
   usersTbody.addEventListener('click', (e) => {
     if (e.target.classList.contains('btn-manage-rifa')) {
@@ -436,9 +436,9 @@ if (btnSaveRifa) {
   });
 }
 
-// =========================================
-// SISTEMA DE INJEÇÃO DE CARROS
-// =========================================
+
+
+
 const carDatalist = document.getElementById('car-datalist');
 if (carDatalist) {
   let options = '';
@@ -495,7 +495,7 @@ if (btnSaveCar) {
       userColData[carId] = qtyInput;
       let novosPontos = pontosAtuais;
 
-      // Soma pontos e registra no extrato se for cliente e quantidade aumentou
+
       if (userRole === 'cliente' && qtyInput > qtdAntiga) {
         const diferenca = qtyInput - qtdAntiga;
         const ptsGanhos = diferenca * PONTOS_POR_CARRO;
@@ -526,14 +526,14 @@ if (btnSaveCar) {
   });
 }
 
-// =========================================
-// GESTÃO MULTI-LOJAS: PRÊMIOS PERSONALIZADOS (SOMENTE ADMIN)
-// =========================================
+
+
+
 let lojaIdParaEditar = '';
 
 if (usersTbody) {
   usersTbody.addEventListener('click', async (e) => {
-    // AÇÃO: ABRIR MODAL DE PRÊMIOS DO GERENTE
+
     if (e.target.classList.contains('btn-manage-rewards')) {
       lojaIdParaEditar = e.target.getAttribute('data-lojaid');
       document.getElementById('loja-alvo-nome').textContent = lojaIdParaEditar;
@@ -550,7 +550,7 @@ async function renderAdminRewards() {
   listEl.innerHTML = '<p style="color: #fff; text-align: center;">Carregando prêmios...</p>';
 
   try {
-    // BUSCA NA COLEÇÃO 'lojas' PELO ID QUE CLICAMOS
+
     const snap = await getDoc(doc(db, 'lojas', lojaIdParaEditar));
     const recompensas = snap.exists() ? (snap.data().recompensas || []) : [];
 
@@ -596,7 +596,7 @@ document.getElementById('btn-add-rew')?.addEventListener('click', async () => {
 
     await setDoc(ref, { recompensas }, { merge: true });
 
-    // Limpa campos
+
     document.getElementById('rew-icone').value = '';
     document.getElementById('rew-titulo').value = '';
     document.getElementById('rew-desc').value = '';
@@ -623,24 +623,24 @@ window.deleteReward = async function (index) {
   }
 };
 
-// =========================================
-// SISTEMA DE RIFAS (VIA PAINEL ADMIN)
-// =========================================
 
-// 1. Ouvinte para ABRIR o modal ao clicar no botão "🎟️ Rifas" da tabela
+
+
+
+
 if (usersTbody) {
   usersTbody.addEventListener('click', (e) => {
     if (e.target.classList.contains('btn-manage-rifa')) {
-      // Pega o ID e o Nome do cliente selecionado
+
       currentTargetUid = e.target.getAttribute('data-id');
       const nameEl = document.getElementById('rifa-user-name');
       if (nameEl) nameEl.textContent = e.target.getAttribute('data-name') || 'Cliente';
 
-      // Reseta a quantidade para 1
+
       const qtyInput = document.getElementById('rifa-qty-input');
       if (qtyInput) qtyInput.value = 1;
 
-      // Mostra o Modal
+
       const modal = document.getElementById('rifa-modal');
       if (modal) modal.style.display = 'flex';
     }
@@ -648,15 +648,15 @@ if (usersTbody) {
 }
 
 
-// =========================================
-// CADASTRO DE CLIENTES VIP PELO GERENTE
-// =========================================
+
+
+
 const btnNewClient = document.getElementById('btn-new-client');
 const createModal = document.getElementById('create-modal');
 const createForm = document.getElementById('create-user-form');
 const createPhone = document.getElementById('create-phone');
 
-// Máscara de telefone no cadastro
+
 if (createPhone) {
   createPhone.addEventListener('input', (e) => {
     let value = e.target.value.replace(/\D/g, '');
@@ -668,14 +668,14 @@ if (createPhone) {
   });
 }
 
-// Faz o botão Verde do topo abrir o modal
+
 if (btnNewClient) {
   btnNewClient.addEventListener('click', () => {
     if (createModal) createModal.style.display = 'flex';
   });
 }
 
-// Processa o envio do formulário de criação
+
 if (createForm) {
   createForm.addEventListener('submit', async (e) => {
     e.preventDefault();
@@ -689,28 +689,28 @@ if (createForm) {
     const phone = createPhone.value.trim();
 
     try {
-      // 1. Cria a conta no App Secundário (Não desloga o gerente!)
+
       const userCredential = await createUserWithEmailAndPassword(secondaryAuth, email, pass);
       const newUid = userCredential.user.uid;
 
-      // 2. Encerra a sessão do App Secundário imediatamente
+
       await signOut(secondaryAuth);
 
-      // 3. Pega o ID da Loja de quem está logado (Admin ou Gerente) para vincular ao novo cliente
+
       const myDoc = await getDoc(doc(db, 'users', auth.currentUser.uid));
       const targetLojaId = myDoc.exists() ? (myDoc.data().lojaId || '') : '';
 
-      // 4. Salva o perfil no Firestore
+
       await setDoc(doc(db, 'users', newUid), {
         name: name,
         email: email,
         phone: phone,
         role: 'cliente',
-        lojaId: targetLojaId, 
+        lojaId: targetLojaId,
         createdAt: new Date().toLocaleDateString('pt-BR')
       });
 
-      // 5. Prepara a garagem zerada do cliente
+
       await setDoc(doc(db, 'collections', newUid), {
         items: {},
         points: 0,
@@ -722,16 +722,16 @@ if (createForm) {
         }]
       });
 
-      // 6. Atualiza estatísticas (Opcional)
+
       const configRef = doc(db, 'config', 'app');
       await updateDoc(configRef, { cadastrados: increment(1) }).catch(() => {});
 
-      // Sucesso!
+
       createModal.style.display = 'none';
       createForm.reset();
       alert('✅ Cliente VIP cadastrado e vinculado à sua loja com sucesso!');
-      
-      // Recarrega a tabela para mostrar o novo cliente instantaneamente
+
+
       loadUsersList();
 
     } catch (error) {

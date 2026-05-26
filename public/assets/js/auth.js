@@ -1,24 +1,24 @@
 import { auth, db } from './firebase-config.js';
-import { 
-  signInWithEmailAndPassword, 
-  signInWithPopup, 
+import {
+  signInWithEmailAndPassword,
+  signInWithPopup,
   GoogleAuthProvider,
-  sendPasswordResetEmail 
+  sendPasswordResetEmail
 } from "https://www.gstatic.com/firebasejs/12.13.0/firebase-auth.js";
 import { doc, getDoc, setDoc } from "https://www.gstatic.com/firebasejs/12.13.0/firebase-firestore.js";
 
 const provider = new GoogleAuthProvider();
 const loginForm = document.getElementById('login-form');
-const btnGoogle = document.getElementById('btn-google'); // ID do novo botão no HTML
+const btnGoogle = document.getElementById('btn-google');
 const errorMessage = document.getElementById('error-message');
 const welcomeOverlay = document.getElementById('welcome-overlay');
 const welcomeMessage = document.getElementById('welcome-message');
 
-// Função auxiliar para tratar a animação de boas-vindas e redirecionamento
+
 async function handleLoginSuccess(user) {
   let firstName = "Colecionador";
 
-  // Busca o nome no Firestore
+
   try {
     const userDoc = await getDoc(doc(db, 'users', user.uid));
     if (userDoc.exists() && userDoc.data().name) {
@@ -39,7 +39,7 @@ async function handleLoginSuccess(user) {
   }
 }
 
-// 1. LOGIN TRADICIONAL
+
 if (loginForm) {
   loginForm.addEventListener('submit', async (e) => {
     e.preventDefault();
@@ -49,7 +49,7 @@ if (loginForm) {
     const password = document.getElementById('password').value;
     const btnSubmit = loginForm.querySelector('button[type="submit"]');
     const originalBtnText = btnSubmit.textContent;
-    
+
     btnSubmit.textContent = "Acessando...";
     btnSubmit.disabled = true;
 
@@ -68,14 +68,14 @@ if (loginForm) {
   });
 }
 
-// 2. LOGIN COM GOOGLE
+
 if (btnGoogle) {
   btnGoogle.addEventListener('click', async () => {
     try {
       const result = await signInWithPopup(auth, provider);
       const user = result.user;
 
-      // Cria o documento no Firestore se for o primeiro acesso do usuário Google
+
       const userRef = doc(db, 'users', user.uid);
       const userSnap = await getDoc(userRef);
 
@@ -96,9 +96,9 @@ if (btnGoogle) {
   });
 }
 
-// ==========================================
-// RECUPERAÇÃO DE SENHA (ESQUECI A SENHA)
-// ==========================================
+
+
+
 const forgotPasswordLink = document.getElementById('forgot-password-link');
 const forgotPasswordModal = document.getElementById('forgot-password-modal');
 const btnCloseReset = document.getElementById('btn-close-reset');
@@ -107,24 +107,24 @@ const resetEmailInput = document.getElementById('reset-email');
 const resetMessage = document.getElementById('reset-message');
 
 if (forgotPasswordLink && forgotPasswordModal) {
-  // Abrir o modal
+
   forgotPasswordLink.addEventListener('click', (e) => {
     e.preventDefault();
-    // Pega o e-mail que o usuário já tenha digitado no login e joga pro modal
+
     resetEmailInput.value = document.getElementById('email').value;
     resetMessage.style.display = 'none';
     forgotPasswordModal.classList.add('active');
   });
 
-  // Fechar o modal
+
   btnCloseReset.addEventListener('click', () => {
     forgotPasswordModal.classList.remove('active');
   });
 
-  // Enviar o e-mail de redefinição
+
   btnSendReset.addEventListener('click', async () => {
     const email = resetEmailInput.value.trim();
-    
+
     if (!email) {
       showResetMessage('Por favor, digite um e-mail válido.', 'error');
       return;
@@ -137,8 +137,8 @@ if (forgotPasswordLink && forgotPasswordModal) {
     try {
       await sendPasswordResetEmail(auth, email);
       showResetMessage('Link enviado! Verifique sua caixa de entrada (e spam).', 'success');
-      
-      // Fecha o modal sozinho depois de 4 segundos
+
+
       setTimeout(() => {
         forgotPasswordModal.classList.remove('active');
         btnSendReset.textContent = originalText;
@@ -159,7 +159,7 @@ if (forgotPasswordLink && forgotPasswordModal) {
   });
 }
 
-// Função auxiliar para pintar a caixinha de mensagem de verde ou vermelho no modal
+
 function showResetMessage(text, type) {
   resetMessage.textContent = text;
   resetMessage.style.display = 'block';

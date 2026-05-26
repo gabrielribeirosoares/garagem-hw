@@ -1,6 +1,5 @@
-// assets/js/perfil.js
 import { auth, db } from './firebase-config.js';
-// ATENÇÃO: Adicionamos o updatePassword na importação abaixo
+
 import { onAuthStateChanged, updatePassword } from "https://www.gstatic.com/firebasejs/12.13.0/firebase-auth.js";
 import { doc, getDoc, setDoc } from "https://www.gstatic.com/firebasejs/12.13.0/firebase-firestore.js";
 
@@ -15,7 +14,7 @@ const messageBox = document.getElementById('messageBox');
 
 let currentUser = null;
 
-// 1. CARREGA OS DADOS INICIAIS
+
 onAuthStateChanged(auth, async (user) => {
   if (user) {
     currentUser = user;
@@ -40,7 +39,7 @@ onAuthStateChanged(auth, async (user) => {
   }
 });
 
-// 2. SALVA AS ALTERAÇÕES
+
 profileForm.addEventListener('submit', async (e) => {
   e.preventDefault();
   showMessage("Salvando alterações...", "blue");
@@ -50,7 +49,7 @@ profileForm.addEventListener('submit', async (e) => {
   const newPassword = newPasswordInput.value;
   const confirmPassword = confirmPasswordInput.value;
 
-  // Validação das senhas (caso o usuário tenha digitado algo)
+
   if (newPassword || confirmPassword) {
     if (newPassword !== confirmPassword) {
       showMessage("As senhas não coincidem!", "red");
@@ -63,22 +62,22 @@ profileForm.addEventListener('submit', async (e) => {
   }
 
   try {
-    // A. Atualiza a senha no Firebase Auth (se o campo foi preenchido)
+
     if (newPassword) {
       await updatePassword(currentUser, newPassword);
     }
 
-   // B. Atualiza os dados no Firestore usando setDoc com merge!
+
     const docRef = doc(db, 'users', currentUser.uid);
     await setDoc(docRef, {
       name: nameInput.value.trim(),
       birthdate: birthdateInput.value,
       phone: phoneInput.value.trim()
-    }, { merge: true }); // O merge é a chave do sucesso aqui
+    }, { merge: true });
 
     showMessage("Perfil atualizado com sucesso!", "green");
-    
-    // Limpa os campos de senha após salvar
+
+
     newPasswordInput.value = '';
     confirmPasswordInput.value = '';
 
@@ -88,8 +87,8 @@ profileForm.addEventListener('submit', async (e) => {
 
   } catch (error) {
     console.error("Erro ao atualizar perfil:", error);
-    
-    // Regra de segurança do Firebase: se o login for muito antigo, ele impede de trocar a senha
+
+
     if (error.code === 'auth/requires-recent-login') {
       showMessage("Por segurança, saia da conta e faça login novamente para alterar sua senha.", "red");
     } else {
@@ -98,16 +97,16 @@ profileForm.addEventListener('submit', async (e) => {
   }
 });
 
-// =========================================
-// FUNÇÕES AUXILIARES
-// =========================================
+
+
+
 
 function showMessage(text, color) {
   messageBox.textContent = text;
   messageBox.style.color = color;
 }
 
-// Máscara de Telefone
+
 phoneInput.addEventListener('input', (e) => {
   let value = e.target.value.replace(/\D/g, '');
   if (value.length > 11) value = value.slice(0, 11);

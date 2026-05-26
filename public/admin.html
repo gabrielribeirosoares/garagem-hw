@@ -58,7 +58,7 @@
             width: fit-content;
         }
 
-        /* Transformando a Tabela em Cartões para Mobile */
+
         table,
         thead,
         tbody,
@@ -70,7 +70,7 @@
             box-sizing: border-box;
         }
 
-        /* Esconde o cabeçalho original da tabela no mobile */
+
         thead tr {
             position: absolute;
             top: -9999px;
@@ -96,21 +96,21 @@
             min-height: 40px;
             word-break: break-all;
             flex-wrap: wrap;
-            /* NOVO: Permite quebra de linha para botões */
+
         }
 
         td:last-child {
             border-bottom: none;
         }
 
-        /* NOVO: Ajuste específico para a célula de Ações no celular */
+
         td[data-label="Ações"] {
             justify-content: space-between;
             gap: 8px;
             padding-left: 0;
         }
 
-        /* O "data-label" será injetado pelo JS para mostrar o título da coluna */
+
         td::before {
             content: attr(data-label);
             position: absolute;
@@ -123,7 +123,7 @@
             font-size: 14px;
         }
 
-        /* NOVO: Botões alinhados lado a lado no celular */
+
         .btn-edit,
         .btn-delete {
             flex: 1;
@@ -157,7 +157,7 @@
         }
 
 
-        /* Modal Responsivo */
+
         .modal {
             display: none;
             position: fixed;
@@ -266,7 +266,7 @@
                 display: inline-block;
             }
 
-            /* Restaura o formato original da Tabela */
+
             table {
                 display: table;
                 background: #1e293b;
@@ -314,7 +314,7 @@
                 display: none;
             }
 
-            /* NOVO: Restaura o comportamento de célula para a coluna de ações no Desktop */
+
             td[data-label="Ações"] {
                 display: table-cell;
             }
@@ -328,7 +328,7 @@
                 width: auto;
             }
 
-            /* NOVO: Retorna os botões ao tamanho compacto no PC */
+
             .btn-edit,
             .btn-delete {
                 flex: none;

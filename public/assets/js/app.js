@@ -23,9 +23,9 @@ RAW.forEach((r) => {
   }
 });
 
-// ==========================================
-// 1. ESTADO GLOBAL E ROTEAMENTO
-// ==========================================
+
+
+
 let pageType = 'all';
 let PAGE_DATA = [];
 let sessionUid = null;
@@ -47,9 +47,9 @@ let targetRole = 'user';
 let isManager = false;
 let userHistory = [];
 
-// ==========================================
-// 2. FUNÇÕES DE ROTEAMENTO (SPA)
-// ==========================================
+
+
+
 function updatePageData() {
   PAGE_DATA = RAW.filter(r => {
     if (pageType === 'all' || pageType === 'owned') return true;
@@ -91,7 +91,7 @@ function changePage(newPageType) {
   const missionsArea = document.getElementById('missions-view');
   const rewardsArea = document.getElementById('rewards-view');
 
-  // 1. CAPTURA A BARRA DE ESTATÍSTICAS
+
   const statsRow = document.querySelector('.stats-row');
 
   if (pageType === 'missions') {
@@ -101,7 +101,7 @@ function changePage(newPageType) {
     if (countArea) countArea.style.display = 'none';
     if (pagArea) pagArea.style.display = 'none';
     if (rewardsArea) rewardsArea.style.display = 'none';
-    if (statsRow) statsRow.style.display = 'none'; // 2. ESCONDE NAS MISSÕES
+    if (statsRow) statsRow.style.display = 'none';
     if (missionsArea) missionsArea.style.display = 'block';
 
     document.getElementById('dynamic-title').innerHTML = 'Garagem <span>VIP</span>';
@@ -115,7 +115,7 @@ function changePage(newPageType) {
     if (countArea) countArea.style.display = 'none';
     if (pagArea) pagArea.style.display = 'none';
     if (missionsArea) missionsArea.style.display = 'none';
-    if (statsRow) statsRow.style.display = 'none'; // 3. ESCONDE NA LOJA DE RPMs
+    if (statsRow) statsRow.style.display = 'none';
     if (rewardsArea) rewardsArea.style.display = 'block';
 
     document.getElementById('dynamic-title').innerHTML = 'Loja de <span>RPMs</span>';
@@ -130,7 +130,7 @@ function changePage(newPageType) {
     if (pagArea) pagArea.style.display = 'flex';
     if (missionsArea) missionsArea.style.display = 'none';
     if (rewardsArea) rewardsArea.style.display = 'none';
-    if (statsRow) statsRow.style.display = 'flex'; // 4. MOSTRA NOVAMENTE NA GARAGEM
+    if (statsRow) statsRow.style.display = 'flex';
   }
 
   updatePageData();
@@ -140,9 +140,9 @@ function changePage(newPageType) {
   render();
 }
 
-// ==========================================
-// 3. UTILITÁRIOS
-// ==========================================
+
+
+
 function getEra(year) {
   if (year >= 2007 && year <= 2011) return 'classic';
   if (year === 2012) return 'secret';
@@ -171,9 +171,9 @@ function getColor(c) {
 function isOwned(r) { return (userCollection[r.id] || 0) > 0; }
 function getQty(r) { return userCollection[r.id] || 0; }
 
-// ==========================================
-// 4. PREENCHER FILTROS
-// ==========================================
+
+
+
 function populateFilters() {
   const years = [...new Set(PAGE_DATA.map(r => r.year))].sort((a, b) => b - a);
   const selYear = document.getElementById('filter-year');
@@ -199,12 +199,12 @@ function populateFilters() {
   }
 }
 
-// Ativa o novo menu de ordenação no mobile
+
 const mobileSort = document.getElementById('mobile-sort');
 if (mobileSort) {
   mobileSort.addEventListener('change', (e) => {
     sortCol = e.target.value;
-    sortDesc = (sortCol === 'year'); // Ano é decrescente (mais novos primeiro), o resto é crescente (A-Z)
+    sortDesc = (sortCol === 'year');
     currentPage = 1;
     render();
   });
@@ -258,12 +258,12 @@ function getFilteredData() {
   return filtered;
 }
 
-// ==========================================
-// 6. RENDERIZAÇÃO DA TABELA (HÍBRIDA E ADMIN)
-// ==========================================
+
+
+
 function render() {
   const fullData = getFilteredData();
-  const tbody = document.getElementById('table-body'); // Agora é a nossa Grid
+  const tbody = document.getElementById('table-body');
   if (!tbody) return;
 
   let totalPages = 1;
@@ -313,7 +313,7 @@ function render() {
     const dot = getColor(r.color);
     const has = isOwned(r);
 
-    // Cria o card em vez da linha de tabela
+
     const card = document.createElement('div');
     card.className = `car-card ${has ? 'owned-card' : ''}`;
 
@@ -324,7 +324,7 @@ function render() {
     const qty = getQty(r);
     const repetidos = qty > 1 ? qty - 1 : 0;
     const isEditingAllowed = true;
-    // Gera as opções da roda do celular (de 0 a 50 carros)
+
     let controlesHTML = '';
     let optionsHTML = '';
     for (let i = 0; i <= 50; i++) {
@@ -365,14 +365,14 @@ function render() {
       </div>
     `;
 
-    // Ativa o clique na imagem para o Lightbox
+
     if (card.querySelector('.car-image-container') && r.image) {
       card.querySelector('.car-image-container').addEventListener('click', () => openLb(globalIdx));
     }
 
     tbody.appendChild(card);
 
-    // Lógica para os botões de alterar a quantidade
+
     if (isEditingAllowed) {
       const inputElement = card.querySelector('.qty-input');
       const saveBtn = card.querySelector('.btn-save');
@@ -391,9 +391,9 @@ function render() {
   window.currentFilteredData = fullData;
 }
 
-// ==========================================
-// 7. ESTATÍSTICAS
-// ==========================================
+
+
+
 function updateCounts() {
   const total = PAGE_DATA.length;
   let owned = 0;
@@ -434,21 +434,21 @@ onAuthStateChanged(auth, async (user) => {
 
       if (userDoc.exists()) {
         const userRole = userDoc.data().role;
-        const myLojaId = userDoc.data().lojaId || ''; // Puxa a loja logada
+        const myLojaId = userDoc.data().lojaId || '';
 
-        // Define as flags com base no cargo
+
         if (userRole === 'admin') isAdmin = true;
         if (userRole === 'gerente') isManager = true;
 
-        // 1. TRAVA DO MENU ADMIN: Exibe apenas se for estritamente 'admin'
-        // 1. TRAVA DO MENU ADMIN: Exibe para Admin E Gerente
+
+
         if ((isAdmin || isManager) && menuAdminItem) {
           menuAdminItem.style.display = 'block';
         } else if (menuAdminItem) {
-          menuAdminItem.style.display = 'none'; // Força a ocultação para clientes
+          menuAdminItem.style.display = 'none';
         }
 
-        // 2. MODO VENDEDOR: Liberado para Admin E Gerente
+
         const adminSelector = document.getElementById('admin-client-selector');
         const clientSelect = document.getElementById('client-select');
 
@@ -459,10 +459,10 @@ onAuthStateChanged(auth, async (user) => {
           usersSnap.forEach(docSnap => {
             const uData = docSnap.data();
 
-            // REGRA MULTI-LOJA: Admin vê todos. Gerente só vê sua loja.
+
             const isMyClient = isAdmin || (isManager && uData.lojaId === myLojaId);
 
-            // O Modo Vendedor só lista os clientes VIP daquela loja
+
             if (docSnap.id !== user.uid && uData.role === 'cliente' && isMyClient) {
               const opt = document.createElement('option');
               opt.value = docSnap.id;
@@ -471,7 +471,7 @@ onAuthStateChanged(auth, async (user) => {
             }
           });
 
-          // Quando muda o cliente no dropdown
+
           clientSelect.addEventListener('change', async (e) => {
             targetUid = e.target.value === 'ME' ? null : e.target.value;
 
@@ -503,7 +503,7 @@ onAuthStateChanged(auth, async (user) => {
   }
 
   document.querySelectorAll('[data-page="missions"], [data-page="rewards"]').forEach(el => {
-    // Se for o menu lateral, exibimos para quem tem acesso ao sistema
+
     if (isAdmin || isManager || targetRole === 'cliente') {
       el.parentElement.style.display = 'block';
     } else {
@@ -550,30 +550,30 @@ async function loadCollection() {
     const uRef = doc(db, 'users', uidToLoad);
     const uSnap = await getDoc(uRef);
 
-    // Variável para descobrir a qual loja este usuário pertence
+
     let currentLojaId = 'default';
 
     if (uSnap.exists()) {
       targetRole = uSnap.data().role || 'user';
-      currentLojaId = uSnap.data().lojaId || 'default'; // Puxa a etiqueta da loja
+      currentLojaId = uSnap.data().lojaId || 'default';
     } else {
       targetRole = 'user';
     }
 
-    // --- NOVO: BUSCA OS PRÊMIOS EXCLUSIVOS DA LOJA ---
+
     try {
       const lojaRef = doc(db, 'lojas', currentLojaId);
       const lojaSnap = await getDoc(lojaRef);
       if (lojaSnap.exists() && lojaSnap.data().recompensas) {
         LISTA_RECOMPENSAS = lojaSnap.data().recompensas;
       } else {
-        LISTA_RECOMPENSAS = []; // Fica vazio se a loja não tiver prêmios cadastrados
+        LISTA_RECOMPENSAS = [];
       }
     } catch (e) {
       console.error("Erro ao carregar prêmios da loja:", e);
       LISTA_RECOMPENSAS = [];
     }
-    // --------------------------------------------------
+
 
     const pointsEl = document.getElementById('user-points');
     if (pointsEl) pointsEl.textContent = userPoints;
@@ -594,36 +594,36 @@ async function saveData(carId, qty) {
   userCollection[carId] = qty;
   const uidToSave = targetUid || sessionUid;
 
-  // ==========================================
-  // 🔒 CADEADO DE SEGURANÇA DOS PONTOS
-  // ==========================================
-  // Só é verdadeiro se for um Admin ou Gerente editando a conta de outra pessoa (Modo Vendedor)
+
+
+
+
   const isVendedorEditandoCliente = (isAdmin || isManager) && targetUid && targetUid !== sessionUid;
 
-  // 1. CÁLCULO IMEDIATO (Atualiza a interface na mesma hora)
-  // Adicionada a trava "isVendedorEditandoCliente" na condição!
+
+
   if (isVendedorEditandoCliente && targetRole === 'cliente' && qty > oldQty) {
     const diff = qty - oldQty;
     const pontosGanhos = diff * PONTOS_POR_CARRO;
 
-    userPoints += pontosGanhos; // Soma na variável global
+    userPoints += pontosGanhos;
 
-    // Atualiza o contador de RPMs lá no topo instantaneamente
+
     const pointsEl = document.getElementById('user-points');
     if (pointsEl) pointsEl.textContent = userPoints;
 
-    // Lança no histórico em segundo plano
+
     addHistoryEntry(uidToSave, `Compra de Carros`, pontosGanhos, 'earning');
   }
 
-  // 2. SALVAMENTO NO BANCO (Mantém o delay de 1 seg para não sobrecarregar o Firebase)
+
   if (saveTimeout) clearTimeout(saveTimeout);
 
   saveTimeout = setTimeout(async () => {
     if (!uidToSave) return;
     try {
       const dRef = doc(db, 'collections', uidToSave);
-      // Salva os carros E o saldo final de pontos sincronizado
+
       await setDoc(dRef, { items: userCollection, points: userPoints }, { merge: true });
     } catch (e) {
       console.error("Erro save:", e);
@@ -631,9 +631,9 @@ async function saveData(carId, qty) {
   }, 1000);
 }
 
-// ==========================================
-// 9. LIGHTBOX
-// ==========================================
+
+
+
 function openLb(index) {
   lbIndex = index;
   const r = PAGE_DATA[lbIndex];
@@ -671,9 +671,9 @@ document.addEventListener('keydown', (e) => {
   }
 });
 
-// ==========================================
-// 10. INICIALIZAÇÃO E EVENTOS
-// ==========================================
+
+
+
 
 document.querySelectorAll('.sidebar-menu a[data-page]').forEach(link => {
   link.addEventListener('click', (e) => {
@@ -773,9 +773,9 @@ if (btnNext) {
   });
 }
 
-// ==========================================
-// MOTOR DE MISSÕES E GAMIFICAÇÃO
-// ==========================================
+
+
+
 const LISTA_MISSOES = [
   {
     id: 'j-imports_2026',
@@ -910,9 +910,9 @@ window.claimMission = async function (missionId, rewardPoints) {
   }
 }
 
-// ==========================================
-// LOJA DE RESGATE (REWARDS)
-// ==========================================
+
+
+
 let LISTA_RECOMPENSAS = [];
 
 async function renderRewards() {
@@ -935,7 +935,7 @@ async function renderRewards() {
     `;
   });
 
-  // --- TABELA DE CUPONS (EXISTENTE) ---
+
   let cuponsHTML = '';
   if (userRewards && userRewards.length > 0) {
     let linhasCupons = userRewards.map(resgate => `
@@ -963,7 +963,7 @@ async function renderRewards() {
     `;
   }
 
-  // --- TABELA DE EXTRATO (NOVO) ---
+
   let extratoHTML = '';
   if (userHistory && userHistory.length > 0) {
     let linhasExtrato = userHistory.map(item => `
@@ -999,9 +999,9 @@ async function renderRewards() {
   `;
 }
 
-// ==========================================
-// SISTEMA DE MODAIS (POP-UPS)
-// ==========================================
+
+
+
 function showModal(type, options) {
   const existingModal = document.getElementById('hw-custom-modal');
   if (existingModal) existingModal.remove();
@@ -1047,7 +1047,7 @@ function showModal(type, options) {
         <div class="custom-modal-text">O prêmio "<b>${options.title}</b>" é seu! Salve o código abaixo:</div>
         <div class="custom-modal-code">${options.code}</div>
         <div class="custom-modal-actions">
-          <a href="https://wa.me/5548991348421?text=${msgWpp}" target="_blank" class="btn-modal whatsapp">📱 Enviar no Whats</a>
+          <a href="https:
           <button class="btn-modal cancel" onclick="document.getElementById('hw-custom-modal').remove()">Fechar</button>
         </div>
       </div>
@@ -1120,9 +1120,9 @@ window.redeemReward = function (rewardId, cost, title) {
   });
 }
 
-// ==========================================
-// SISTEMA DE RIFAS (MODO VENDEDOR)
-// ==========================================
+
+
+
 const btnOpenRifa = document.getElementById('btn-open-rifa');
 const btnSaveRifa = document.getElementById('btn-save-rifa');
 const rifaModal = document.getElementById('rifa-modal');
@@ -1158,22 +1158,22 @@ if (btnSaveRifa) {
     try {
       const pontosGanhos = qtyInput * pointsPerNum;
 
-      // Atualiza a variável de pontos localmente (que já reflete a conta do cliente)
+
       userPoints += pontosGanhos;
 
-      // Salva a nova soma no banco do cliente que você selecionou no dropdown
+
       await setDoc(doc(db, 'collections', targetUid), {
         points: userPoints
       }, { merge: true });
 
-      // Após await setDoc(...) no btnSaveRifa:
+
       await addHistoryEntry(targetUid, `Lançamento de Rifa`, pontosGanhos, 'earning');
 
-      // Atualiza o contador de RPMs no cabeçalho na mesma hora
+
       const pointsEl = document.getElementById('user-points');
       if (pointsEl) pointsEl.textContent = userPoints;
 
-      // Se você estiver com a página da loja aberta, recarrega para liberar os botões de prêmio
+
       if (pageType === 'rewards') renderRewards();
 
       alert(`🎉 SUCESSO!\n\nForam creditados +${pontosGanhos} RPMs na conta do cliente!`);
@@ -1191,7 +1191,7 @@ if (btnSaveRifa) {
   });
 }
 
-// Função para registrar histórico de pontos
+
 async function addHistoryEntry(uid, desc, amount, type) {
   try {
     const ref = doc(db, 'collections', uid);
@@ -1214,4 +1214,3 @@ async function addHistoryEntry(uid, desc, amount, type) {
     console.error("Erro ao registrar histórico:", e);
   }
 }
-// NÃO ADICIONE NENHUMA CHAVE EXTRA APÓS ESTA LINHA

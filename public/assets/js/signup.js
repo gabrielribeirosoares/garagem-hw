@@ -5,19 +5,19 @@ import { doc, setDoc, serverTimestamp, collection, query, where, getDocs, getDoc
 const messageBox = document.getElementById('messageBox');
 const btnSubmit = document.querySelector('#signup-form button[type="submit"]');
 
-// Função para mostrar mensagens na tela em vez de usar alert()
+
 function showMessage(text, type) {
   if (!messageBox) return;
   messageBox.textContent = text;
   messageBox.style.display = 'block';
 
   if (type === 'success') {
-    messageBox.style.color = '#15803d'; // Verde escuro
-    messageBox.style.backgroundColor = '#dcfce7'; // Fundo verde claro
+    messageBox.style.color = '#15803d';
+    messageBox.style.backgroundColor = '#dcfce7';
     messageBox.style.border = '1px solid #bbf7d0';
   } else {
-    messageBox.style.color = '#b91c1c'; // Vermelho escuro
-    messageBox.style.backgroundColor = '#fee2e2'; // Fundo vermelho claro
+    messageBox.style.color = '#b91c1c';
+    messageBox.style.backgroundColor = '#fee2e2';
     messageBox.style.border = '1px solid #fecaca';
   }
 }
@@ -25,7 +25,7 @@ function showMessage(text, type) {
 document.getElementById('signup-form').addEventListener('submit', async (e) => {
   e.preventDefault();
 
-  // Oculta mensagens antigas a cada nova tentativa
+
   if (messageBox) messageBox.style.display = 'none';
 
   const name = document.getElementById('name').value.trim();
@@ -53,7 +53,7 @@ document.getElementById('signup-form').addEventListener('submit', async (e) => {
 
   if (!temLetraOuNumero || !temCaractereEspecial) {
     showMessage('A senha precisa conter pelo menos 1 letra/número e pelo menos 1 caractere especial (ex: @, #, $, !).', 'error');
-    return; // Bloqueia o registo se não cumprir o requisito
+    return;
   }
 
 
@@ -62,15 +62,15 @@ document.getElementById('signup-form').addEventListener('submit', async (e) => {
     return;
   }
 
-  // Desativa o botão enquanto processa
+
   const originalBtnText = btnSubmit.textContent;
   btnSubmit.textContent = "Criando conta...";
   btnSubmit.disabled = true;
 
   try {
-    // ==========================================
-    // VERIFICAÇÃO DE LIMITE DE USUÁRIOS
-    // ==========================================
+
+
+
     const configRef = doc(db, 'config', 'app');
     const configSnap = await getDoc(configRef);
 
@@ -87,9 +87,9 @@ document.getElementById('signup-form').addEventListener('submit', async (e) => {
       }
     }
 
-    // ==========================================
-    // VERIFICAÇÃO: TELEFONE DUPLICADO
-    // ==========================================
+
+
+
     const usersRef = collection(db, 'users');
     const qPhone = query(usersRef, where('phone', '==', phone));
     const phoneSnapshot = await getDocs(qPhone);
@@ -101,13 +101,13 @@ document.getElementById('signup-form').addEventListener('submit', async (e) => {
       return;
     }
 
-    // 1. Cria o usuário na Autenticação do Firebase
+
     const cred = await createUserWithEmailAndPassword(auth, email, password);
 
-    // 2. Atualiza o perfil com o nome
+
     await updateProfile(cred.user, { displayName: name });
 
-    // 3. Salva os dados extras no Firestore
+
     await setDoc(doc(db, 'users', cred.user.uid), {
       uid: cred.user.uid,
       name,
@@ -120,14 +120,14 @@ document.getElementById('signup-form').addEventListener('submit', async (e) => {
       createdAt: serverTimestamp()
     }, { merge: true });
 
-    // 4. Soma +1 NO CONTADOR DE USUÁRIOS
+
     if (configSnap.exists()) {
       await updateDoc(configRef, {
         cadastrados: increment(1)
       });
     }
 
-    // Sucesso! Mostra a mensagem e redireciona após 2 segundos
+
     showMessage('Conta criada com sucesso! Redirecionando...', 'success');
 
     setTimeout(() => {
@@ -152,9 +152,9 @@ document.getElementById('signup-form').addEventListener('submit', async (e) => {
   }
 });
 
-// =========================================
-// MÁSCARA DO TELEFONE / WHATSAPP
-// =========================================
+
+
+
 const phoneInput = document.getElementById('phone');
 
 if (phoneInput) {

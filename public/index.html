@@ -29,7 +29,7 @@
       width: 100%;
       height: 100%;
       background: rgba(15, 23, 42, 0.98);
-      /* Fundo um pouco mais escuro e sólido */
+
       backdrop-filter: blur(8px);
       display: flex;
       justify-content: center;
@@ -39,7 +39,7 @@
       pointer-events: none;
       transition: opacity 0.4s ease;
       overflow: hidden;
-      /* Impede a barra de rolagem quando o carro sair da tela */
+
     }
 
     .welcome-overlay.active {
@@ -47,26 +47,26 @@
       pointer-events: all;
     }
 
-    /* O Carro */
+
     .impala-car {
       position: absolute;
       top: 50%;
       left: 50%;
       width: 700px;
-      /* Tamanho do carro - ajuste se precisar */
+
       transform: translate(-150vw, -50%);
-      /* Começa muito à esquerda, fora da tela */
+
       z-index: 2;
       filter: drop-shadow(0px 10px 15px rgba(0, 0, 0, 0.5));
-      /* Sombra para dar profundidade */
+
     }
 
-    /* A Animação de atravessar a tela */
+
     .welcome-overlay.active .impala-car {
       animation: driveAcross 3.0s cubic-bezier(0.4, 0.0, 0.2, 1) forwards;
     }
 
-    /* O Texto de Boas Vindas */
+
     .welcome-text {
       font-family: 'Bebas Neue', sans-serif;
       font-size: 2.8rem;
@@ -79,13 +79,13 @@
       position: relative;
     }
 
-    /* A Animação do texto (só começa DEPOIS que o carro passa) */
+
     .welcome-overlay.active .welcome-text {
-      /* O 1.5s no final é o "delay" para esperar o carro sair */
+
       animation: textFadeIn 0.6s ease-out forwards 1.5s;
     }
 
-    /* Keyframes (O roteiro da animação) */
+
     @keyframes driveAcross {
       0% {
         transform: translate(-150vw, -50%);
@@ -95,7 +95,7 @@
         transform: translate(-20vw, -50%);
       }
 
-      /* Dá uma leve desacelerada no meio */
+
       60% {
         transform: translate(20vw, -50%);
       }
@@ -104,7 +104,7 @@
         transform: translate(150vw, -50%);
       }
 
-      /* Some na direita */
+
     }
 
     @keyframes textFadeIn {

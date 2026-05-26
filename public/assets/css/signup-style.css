@@ -1,13 +1,13 @@
 .auth-body {
   min-height: 100vh;
   display: flex;
-  /* Mudamos de center para flex-start para o topo não ser cortado */
-  align-items: flex-start; 
+
+  align-items: flex-start;
   justify-content: center;
-  /* Adicionamos margem no topo e embaixo para o formulário respirar */
-  padding: 40px 20px; 
+
+  padding: 40px 20px;
   background: var(--darker);
-  overflow-y: auto; /* Garante que a barra de rolagem funcione */
+  overflow-y: auto;
 }
 
 .auth-card {
@@ -20,8 +20,8 @@
   box-shadow: 0 20px 50px rgba(0, 0, 0, 0.8);
   position: relative;
   overflow: hidden;
-  /* Isso faz o card centralizar verticalmente apenas quando sobrar espaço na tela */
-  margin: auto; 
+
+  margin: auto;
 }
 
 .auth-card::before {
@@ -175,17 +175,17 @@
   font-size: 14px;
 }
 
-/* Ajustes específicos para Celular */
+
 @media (max-width: 480px) {
   .auth-body {
     padding: 20px 15px;
   }
-  
+
   .auth-card {
-    padding: 24px; /* Reduz o espaçamento interno */
+    padding: 24px;
   }
-  
+
   .auth-card h1 {
-    font-size: 32px; /* Diminui um pouco o título */
+    font-size: 32px;
   }
 }

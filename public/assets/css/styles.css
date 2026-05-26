@@ -32,14 +32,14 @@ body {
 .auth-body {
   min-height: 100vh;
   display: flex;
-  /* Mudamos de center para flex-start para o topo não ser cortado */
+
   align-items: flex-start;
   justify-content: center;
-  /* Adicionamos margem no topo e embaixo para o formulário respirar */
+
   padding: 40px 20px;
   background: var(--darker);
   overflow-y: auto;
-  /* Garante que a barra de rolagem funcione */
+
 }
 
 .auth-card {
@@ -52,7 +52,7 @@ body {
   box-shadow: 0 20px 50px rgba(0, 0, 0, 0.8);
   position: relative;
   overflow: hidden;
-  /* Isso faz o card centralizar verticalmente apenas quando sobrar espaço na tela */
+
   margin: auto;
 }
 
@@ -768,7 +768,7 @@ td {
   }
 }
 
-/* Campo de Quantidade */
+
 .qty-input {
   background: var(--surface2);
   border: 1px solid var(--border);
@@ -792,9 +792,9 @@ td {
 .sidebar {
   position: fixed;
   top: 0;
-  /* Alterado para 0 para cobrir todo o ecrã */
+
   left: -300px;
-  /* Escondido totalmente fora do ecrã */
+
   width: 280px;
   height: 100vh;
   background-color: #1a1a1a;
@@ -802,7 +802,7 @@ td {
   color: #fff;
   transition: left 0.3s ease-in-out;
   z-index: 9999;
-  /* Z-index muito alto para ficar acima de tudo */
+
   padding: 24px;
   box-shadow: 4px 0 15px rgba(0, 0, 0, 0.8);
 }
@@ -851,7 +851,7 @@ td {
 
 .menu-item.active {
   background-color: #e63946;
-  /* Cor de destaque (vermelho Hot Wheels) */
+
   color: #fff;
   font-weight: 600;
 }
@@ -864,7 +864,7 @@ td {
   height: 100vh;
   background: rgba(0, 0, 0, 0.7);
   z-index: 9998;
-  /* Fica logo abaixo da sidebar */
+
   opacity: 0;
   visibility: hidden;
   transition: all 0.3s ease-in-out;
@@ -885,8 +885,8 @@ td {
    AJUSTES PARA DISPOSITIVOS MÓVEIS
    ========================================= */
 
-/* 1. Tabela com scroll horizontal */
-/* Isto impede que a tabela quebre o site. Pode arrastar a tabela para o lado no telemóvel */
+
+
 .table-wrapper {
   width: 100%;
   overflow-x: auto;
@@ -896,10 +896,10 @@ td {
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
 }
 
-/* Regras aplicadas apenas a ecrãs menores que 768px (Telemóveis e Tablets pequenos) */
+
 @media (max-width: 768px) {
 
-  /* Ajuste do botão de Sair e Email no topo */
+
   header div[style*="position: absolute"] {
     position: relative !important;
     top: auto !important;
@@ -908,12 +908,12 @@ td {
     margin-bottom: 15px;
   }
 
-  /* Ocultar o email para poupar espaço no topo, mantém só o botão Sair */
+
   #user-email {
     display: none;
   }
 
-  /* Ajuste do Título */
+
   .header-top {
     align-items: flex-start !important;
   }
@@ -923,7 +923,7 @@ td {
     line-height: 1.2;
   }
 
-  /* Estatísticas: Coloca em grelha de 2x2 em vez de tudo numa linha */
+
   .stats-row {
     display: flex;
     flex-wrap: wrap;
@@ -932,12 +932,12 @@ td {
 
   .stat {
     flex: 1 1 45%;
-    /* Cada bloco ocupa ~50% do ecrã */
+
     margin: 0;
     padding: 10px;
   }
 
-  /* Filtros: Empilha tudo verticalmente */
+
   .controls {
     display: flex;
     flex-direction: column;
@@ -958,16 +958,16 @@ td {
     width: 100%;
     margin-top: 5px;
     padding: 10px;
-    /* Mais fácil de tocar com o dedo */
+
   }
 
-  /* Barra de pesquisa a ocupar toda a largura */
+
   #filter-search {
     width: 100%;
     box-sizing: border-box;
   }
 
-  /* Paginação: Empilha verticalmente e centra */
+
   .pagination-container {
     flex-direction: column;
     gap: 15px;
@@ -982,12 +982,12 @@ td {
     justify-content: space-between;
   }
 
-  /* Botões mais fáceis de tocar */
+
   .pagination-controls button {
     padding: 10px 15px !important;
   }
 
-  /* Ocultar as legendas grandes no telemóvel para poupar espaço */
+
   .legend {
     flex-direction: column;
     gap: 10px;
@@ -1056,9 +1056,9 @@ td {
   border-radius: 4px;
   letter-spacing: 1px;
   white-space: nowrap;
-  /* Garante que o selo fica sempre numa única linha */
+
   max-width: 50%;
-  /* Evita que ocupe demasiado espaço em telemóveis */
+
   overflow: hidden;
   text-overflow: ellipsis;
 }
@@ -1070,9 +1070,9 @@ td {
   letter-spacing: 1px;
   margin: 0;
   padding-right: 140px;
-  /* Aumentado de 90px para 140px para dar espaço ao badge */
+
   line-height: 1.2;
-  /* Melhora o aspeto visual caso o título passe para a segunda linha */
+
 }
 
 .mission-card p {
@@ -1405,12 +1405,12 @@ td {
 .car-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  /* 2 colunas no mobile */
+
   gap: 12px;
   padding-bottom: 20px;
 }
 
-/* Tablet e Desktop (mais colunas) */
+
 @media (min-width: 600px) {
   .car-grid {
     grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
@@ -1430,7 +1430,7 @@ td {
   transition: transform 0.2s, border-color 0.2s;
 }
 
-/* Efeito azul quando o utilizador possui o carro */
+
 .car-card.owned-card {
   border-color: #3b82f6;
   box-shadow: 0 0 0 1px #3b82f6, 0 4px 15px rgba(59, 130, 246, 0.15);
@@ -1440,7 +1440,7 @@ td {
   width: 100%;
   aspect-ratio: 1 / 1;
   background: #0f172a;
-  /* Fundo mais escuro para destacar o blister */
+
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1487,7 +1487,7 @@ td {
   margin-bottom: 4px;
   display: -webkit-box;
   -webkit-line-clamp: 2;
-  /* Trunca em 2 linhas */
+
   -webkit-box-orient: vertical;
   overflow: hidden;
 }
