@@ -587,7 +587,7 @@ async function loadCollection() {
 
 let saveTimeout = null;
 
-const PONTOS_POR_CARRO = 10;
+const PONTOS_POR_CARRO = 100;
 
 async function saveData(carId, qty) {
   const oldQty = userCollection[carId] || 0;
