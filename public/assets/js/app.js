@@ -82,7 +82,6 @@ function updatePageUI() {
 function changePage(newPageType) {
   pageType = newPageType;
 
-  // ATUALIZADO: Agora procuramos o ID correto da grelha de carros e o menu de ordenação
   const tableArea = document.getElementById('table-body');
   const sortHeader = document.getElementById('mobile-sort') ? document.getElementById('mobile-sort').parentElement : null;
 
@@ -92,6 +91,9 @@ function changePage(newPageType) {
   const missionsArea = document.getElementById('missions-view');
   const rewardsArea = document.getElementById('rewards-view');
 
+  // 1. CAPTURA A BARRA DE ESTATÍSTICAS
+  const statsRow = document.querySelector('.stats-row');
+
   if (pageType === 'missions') {
     if (tableArea) tableArea.style.display = 'none';
     if (sortHeader) sortHeader.style.display = 'none';
@@ -99,6 +101,7 @@ function changePage(newPageType) {
     if (countArea) countArea.style.display = 'none';
     if (pagArea) pagArea.style.display = 'none';
     if (rewardsArea) rewardsArea.style.display = 'none';
+    if (statsRow) statsRow.style.display = 'none'; // 2. ESCONDE NAS MISSÕES
     if (missionsArea) missionsArea.style.display = 'block';
 
     document.getElementById('dynamic-title').innerHTML = 'Garagem <span>VIP</span>';
@@ -112,6 +115,7 @@ function changePage(newPageType) {
     if (countArea) countArea.style.display = 'none';
     if (pagArea) pagArea.style.display = 'none';
     if (missionsArea) missionsArea.style.display = 'none';
+    if (statsRow) statsRow.style.display = 'none'; // 3. ESCONDE NA LOJA DE RPMs
     if (rewardsArea) rewardsArea.style.display = 'block';
 
     document.getElementById('dynamic-title').innerHTML = 'Loja de <span>RPMs</span>';
@@ -119,7 +123,6 @@ function changePage(newPageType) {
     renderRewards();
     return;
   } else {
-    // ATUALIZADO: A Garagem agora volta como 'grid' em vez de 'block'
     if (tableArea) tableArea.style.display = 'grid';
     if (sortHeader) sortHeader.style.display = 'flex';
     if (controlsArea) controlsArea.style.display = 'flex';
@@ -127,6 +130,7 @@ function changePage(newPageType) {
     if (pagArea) pagArea.style.display = 'flex';
     if (missionsArea) missionsArea.style.display = 'none';
     if (rewardsArea) rewardsArea.style.display = 'none';
+    if (statsRow) statsRow.style.display = 'flex'; // 4. MOSTRA NOVAMENTE NA GARAGEM
   }
 
   updatePageData();
@@ -437,10 +441,11 @@ onAuthStateChanged(auth, async (user) => {
         if (userRole === 'gerente') isManager = true;
 
         // 1. TRAVA DO MENU ADMIN: Exibe apenas se for estritamente 'admin'
-        if (isAdmin && menuAdminItem) {
+        // 1. TRAVA DO MENU ADMIN: Exibe para Admin E Gerente
+        if ((isAdmin || isManager) && menuAdminItem) {
           menuAdminItem.style.display = 'block';
         } else if (menuAdminItem) {
-          menuAdminItem.style.display = 'none'; // Força a ocultação
+          menuAdminItem.style.display = 'none'; // Força a ocultação para clientes
         }
 
         // 2. MODO VENDEDOR: Liberado para Admin E Gerente

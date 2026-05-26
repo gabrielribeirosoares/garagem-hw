@@ -3,7 +3,7 @@ import { initializeApp } from "https://www.gstatic.com/firebasejs/12.13.0/fireba
 import { getAuth } from "https://www.gstatic.com/firebasejs/12.13.0/firebase-auth.js";
 import { getFirestore } from "https://www.gstatic.com/firebasejs/12.13.0/firebase-firestore.js";
 
-const firebaseConfig = {
+export const firebaseConfig = {
   apiKey: "AIzaSyCLT6Uf12Ycznl9eXSvCGvNo7pFbuREpGc",
   authDomain: "hotwheels-colletcion.firebaseapp.com",
   projectId: "hotwheels-colletcion",
