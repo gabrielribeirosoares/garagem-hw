@@ -594,8 +594,15 @@ async function saveData(carId, qty) {
   userCollection[carId] = qty;
   const uidToSave = targetUid || sessionUid;
 
+  // ==========================================
+  // 🔒 CADEADO DE SEGURANÇA DOS PONTOS
+  // ==========================================
+  // Só é verdadeiro se for um Admin ou Gerente editando a conta de outra pessoa (Modo Vendedor)
+  const isVendedorEditandoCliente = (isAdmin || isManager) && targetUid && targetUid !== sessionUid;
+
   // 1. CÁLCULO IMEDIATO (Atualiza a interface na mesma hora)
-  if (targetRole === 'cliente' && qty > oldQty) {
+  // Adicionada a trava "isVendedorEditandoCliente" na condição!
+  if (isVendedorEditandoCliente && targetRole === 'cliente' && qty > oldQty) {
     const diff = qty - oldQty;
     const pontosGanhos = diff * PONTOS_POR_CARRO;
 
