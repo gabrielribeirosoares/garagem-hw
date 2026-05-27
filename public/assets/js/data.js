@@ -26,7 +26,7 @@ export const RAW = [
         "color": "Amarelo",
         "part": "JJH80",
         "hw": "002",
-        "cas": "",
+        "cas": "A",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJH80_16_Lamborghini_Centenario_Roadster.jpg"
     },
     {
@@ -51,7 +51,7 @@ export const RAW = [
     },
     {
         "year": 2026,
-        "name": "Gordon Murray Automotive T.33",
+        "name": "Gordon Murray Automotive T33",
         "series": "Exoticars (2/10)",
         "color": "Amarelo",
         "part": "JJJ62",
@@ -76,7 +76,7 @@ export const RAW = [
         "color": "",
         "part": "JJH83",
         "hw": "004",
-        "cas": "",
+        "cas": "A",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJH83_Batmobile.jpg"
     },
     {
@@ -96,7 +96,7 @@ export const RAW = [
         "color": "",
         "part": "JJH30",
         "hw": "005",
-        "cas": "",
+        "cas": "A",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJH30_Pass_n_Go.jpg"
     },
     {
@@ -116,7 +116,7 @@ export const RAW = [
         "color": "Roxo",
         "part": "JJH84",
         "hw": "006",
-        "cas": "",
+        "cas": "A",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJH84_RD-06.jpg"
     },
     {
@@ -136,7 +136,7 @@ export const RAW = [
         "color": "Azul",
         "part": "JJH85",
         "hw": "007",
-        "cas": "",
+        "cas": "A",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJH85_Solar_Reflex.jpg"
     },
     {
@@ -156,7 +156,7 @@ export const RAW = [
         "color": "",
         "part": "JJH86",
         "hw": "008",
-        "cas": "",
+        "cas": "A",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJH86_Ford_Mustang_Mach-E_1400.jpg"
     },
     {
@@ -186,7 +186,7 @@ export const RAW = [
         "color": "",
         "part": "JJM00",
         "hw": "009",
-        "cas": "",
+        "cas": "A",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJM00_87_Buick_Regal_GNX.jpg"
     },
     {
@@ -196,7 +196,7 @@ export const RAW = [
         "color": "",
         "part": "JJH87",
         "hw": "010",
-        "cas": "",
+        "cas": "A",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJH87_2020_Ford_Mustang_Shelby_GT500.jpg"
     },
     {
@@ -226,7 +226,7 @@ export const RAW = [
         "color": "",
         "part": "JJH88",
         "hw": "011",
-        "cas": "",
+        "cas": "A",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJH88_2018_Honda_Civic_Type_R.jpg"
     },
     {
@@ -246,7 +246,7 @@ export const RAW = [
         "color": "",
         "part": "JJH89",
         "hw": "012",
-        "cas": "",
+        "cas": "A",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJH89_Carbonator.jpg"
     },
     {
@@ -276,7 +276,7 @@ export const RAW = [
         "color": "",
         "part": "JJH91",
         "hw": "014",
-        "cas": "",
+        "cas": "A",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJH91_20_Jeep_Gladiator.jpg"
     },
     {
@@ -296,7 +296,7 @@ export const RAW = [
         "color": "",
         "part": "JJH33",
         "hw": "015",
-        "cas": "",
+        "cas": "A",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJH33_Porsche_911_Carrera_T.jpg"
     },
     {
@@ -326,7 +326,7 @@ export const RAW = [
         "color": "",
         "part": "JJH92",
         "hw": "016",
-        "cas": "",
+        "cas": "A",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJH92_Maserati_Shamal.jpg"
     },
     {
@@ -356,7 +356,7 @@ export const RAW = [
         "color": "",
         "part": "JJH32",
         "hw": "017",
-        "cas": "",
+        "cas": "A",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJH32_Bouncen_Bass.jpg"
     },
     {
@@ -376,7 +376,7 @@ export const RAW = [
         "color": "",
         "part": "JJH93",
         "hw": "018",
-        "cas": "",
+        "cas": "A",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJH93_Deora_II.jpg"
     },
     {
@@ -396,7 +396,7 @@ export const RAW = [
         "color": "",
         "part": "JJH94",
         "hw": "019",
-        "cas": "",
+        "cas": "A",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJH94_Rodger_Dodger.jpg"
     },
     {
@@ -426,7 +426,7 @@ export const RAW = [
         "color": "",
         "part": "JJH95",
         "hw": "020",
-        "cas": "",
+        "cas": "B",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJH95_McLaren_Formula_1_Team.jpg"
     },
     {
@@ -436,7 +436,7 @@ export const RAW = [
         "color": "",
         "part": "JJH96",
         "hw": "021",
-        "cas": "",
+        "cas": "A",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJH96_Barbie_Dream_Camper.jpg"
     },
     {
@@ -456,7 +456,7 @@ export const RAW = [
         "color": "",
         "part": "JJH31",
         "hw": "022",
-        "cas": "",
+        "cas": "A",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJH31_Instant_Boost.jpg"
     },
     {
@@ -476,7 +476,7 @@ export const RAW = [
         "color": "",
         "part": "JJH97",
         "hw": "023",
-        "cas": "",
+        "cas": "A",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJH97_69_Dodge_Charger_Daytona.jpg"
     },
     {
@@ -496,7 +496,7 @@ export const RAW = [
         "color": "",
         "part": "JJH82",
         "hw": "024",
-        "cas": "",
+        "cas": "A",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJH82_Track_Ripper.jpg"
     },
     {
@@ -536,7 +536,7 @@ export const RAW = [
         "color": "",
         "part": "JJH34",
         "hw": "026",
-        "cas": "",
+        "cas": "B",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJH34_Pagani_Zonda_Cinque.jpg"
     },
     {
@@ -566,7 +566,7 @@ export const RAW = [
         "color": "",
         "part": "JJJ00",
         "hw": "027",
-        "cas": "",
+        "cas": "B",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJJ00_Optimus_Prime.jpg"
     },
     {
@@ -586,7 +586,7 @@ export const RAW = [
         "color": "",
         "part": "JJM01",
         "hw": "029",
-        "cas": "",
+        "cas": "B",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJM01_92_Dodge_Viper_RT-10.jpg"
     },
     {
@@ -596,7 +596,7 @@ export const RAW = [
         "color": "",
         "part": "JJJ01",
         "hw": "030",
-        "cas": "",
+        "cas": "B",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJJ01_X-Steam.jpg"
     },
     {
@@ -636,7 +636,7 @@ export const RAW = [
         "color": "",
         "part": "JJJ03",
         "hw": "032",
-        "cas": "",
+        "cas": "B",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJJ03_5_Alarm.jpg"
     },
     {
@@ -656,7 +656,7 @@ export const RAW = [
         "color": "",
         "part": "JJJ04",
         "hw": "033",
-        "cas": "",
+        "cas": "B",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJJ04_Haulerback.jpg"
     },
     {
@@ -676,7 +676,7 @@ export const RAW = [
         "color": "",
         "part": "JJJ05",
         "hw": "034",
-        "cas": "",
+        "cas": "B",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJJ05_Porsche_Taycan_Turbo_S.jpg"
     },
     {
@@ -696,7 +696,7 @@ export const RAW = [
         "color": "",
         "part": "JJJ06",
         "hw": "035",
-        "cas": "",
+        "cas": "B",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJJ06_Wattzup.jpg"
     },
     {
@@ -716,7 +716,7 @@ export const RAW = [
         "color": "",
         "part": "JJJ07",
         "hw": "036",
-        "cas": "",
+        "cas": "B",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJJ07_70_Dodge_Hemi_Challenger.jpg"
     },
     {
@@ -746,7 +746,7 @@ export const RAW = [
         "color": "",
         "part": "JJJ08",
         "hw": "037",
-        "cas": "",
+        "cas": "B",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJJ08_Cupra_e-Racer.jpg"
     },
     {
@@ -766,7 +766,7 @@ export const RAW = [
         "color": "",
         "part": "JJJ09",
         "hw": "038",
-        "cas": "",
+        "cas": "B",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJJ09_24-Seven.jpg"
     },
     {
@@ -786,7 +786,7 @@ export const RAW = [
         "color": "",
         "part": "JJJ10",
         "hw": "039",
-        "cas": "",
+        "cas": "B",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJJ10_Roller_Toaster.jpg"
     },
     {
@@ -806,7 +806,7 @@ export const RAW = [
         "color": "",
         "part": "JJJ11",
         "hw": "040",
-        "cas": "",
+        "cas": "B",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJJ11_Braille_Racer_-_Twin_Mill.jpg"
     },
     {
@@ -816,7 +816,7 @@ export const RAW = [
         "color": "",
         "part": "JJJ12",
         "hw": "041",
-        "cas": "",
+        "cas": "B",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJJ12_Ferrari_SF90_Stradale.jpg"
     },
     {
@@ -836,7 +836,7 @@ export const RAW = [
         "color": "",
         "part": "JJJ13",
         "hw": "042",
-        "cas": "",
+        "cas": "B",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJJ13_83_Chevy_Silverado.jpg"
     },
     {
@@ -856,7 +856,7 @@ export const RAW = [
         "color": "",
         "part": "JJJ14",
         "hw": "043",
-        "cas": "",
+        "cas": "B",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJM16_Ford_Mustang_GTD.jpg"
     },
     {
@@ -866,7 +866,7 @@ export const RAW = [
         "color": "",
         "part": "JJM16",
         "hw": "043",
-        "cas": "",
+        "cas": "B",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJM16_Ford_Mustang_GTD.jpg"
     },
     {
@@ -876,7 +876,7 @@ export const RAW = [
         "color": "",
         "part": "JJJ15",
         "hw": "044",
-        "cas": "",
+        "cas": "A",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJJ15_59_Chevy_Impala.jpg"
     },
     {
@@ -906,7 +906,7 @@ export const RAW = [
         "color": "",
         "part": "JJJ16",
         "hw": "045",
-        "cas": "",
+        "cas": "B",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJJ16_47_Chevy_Fleetline.jpg"
     },
     {
@@ -926,7 +926,7 @@ export const RAW = [
         "color": "",
         "part": "JJJ17",
         "hw": "046",
-        "cas": "",
+        "cas": "B",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJJ17_Purple_Passion.jpg"
     },
     {
@@ -946,7 +946,7 @@ export const RAW = [
         "color": "",
         "part": "JJH35",
         "hw": "047",
-        "cas": "",
+        "cas": "B",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJH35_High-Tail_Chaser.jpg"
     },
     {
@@ -966,7 +966,7 @@ export const RAW = [
         "color": "",
         "part": "JJJ19",
         "hw": "048",
-        "cas": "",
+        "cas": "B",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJJ19_Monster_High_Ghoul_Mobile.jpg"
     },
     {
@@ -986,7 +986,7 @@ export const RAW = [
         "color": "",
         "part": "JJJ18",
         "hw": "049",
-        "cas": "",
+        "cas": "C",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJJ18_Quick_Chat.jpg"
     },
     {
@@ -1006,7 +1006,7 @@ export const RAW = [
         "color": "",
         "part": "JJJ20",
         "hw": "050",
-        "cas": "",
+        "cas": "B",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJJ20_Bugatti_Bolide.jpg"
     },
     {
@@ -1026,7 +1026,7 @@ export const RAW = [
         "color": "",
         "part": "JJJ21",
         "hw": "051",
-        "cas": "",
+        "cas": "C",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJJ21_The_Dark_Knight_Batmobile.jpg"
     },
     {
@@ -1046,7 +1046,7 @@ export const RAW = [
         "color": "",
         "part": "JJJ22",
         "hw": "052",
-        "cas": "",
+        "cas": "C",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJJ22_Porsche_911_Turbo_Cabriolet.jpg"
     },
     {
@@ -1066,7 +1066,7 @@ export const RAW = [
         "color": "",
         "part": "JJJ23",
         "hw": "053",
-        "cas": "",
+        "cas": "C",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJJ23_69_Chevelle.jpg"
     },
     {
@@ -1086,7 +1086,7 @@ export const RAW = [
         "color": "",
         "part": "JJJ24",
         "hw": "054",
-        "cas": "",
+        "cas": "C",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJJ24_Donut_Drifter.jpg"
     },
     {
@@ -1096,7 +1096,7 @@ export const RAW = [
         "color": "",
         "part": "JJJ25",
         "hw": "055",
-        "cas": "",
+        "cas": "C",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJJ25_Dessert_Drifter.jpg"
     },
     {
@@ -1116,7 +1116,7 @@ export const RAW = [
         "color": "",
         "part": "JJJ26",
         "hw": "056",
-        "cas": "",
+        "cas": "C",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJJ26_67_Camaro.jpg"
     },
     {
@@ -1136,7 +1136,7 @@ export const RAW = [
         "color": "",
         "part": "JJJ27",
         "hw": "057",
-        "cas": "",
+        "cas": "B",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJJ27_Raijin_Express.jpg"
     },
     {
@@ -1156,7 +1156,7 @@ export const RAW = [
         "color": "",
         "part": "JJM02",
         "hw": "058",
-        "cas": "",
+        "cas": "C",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJM02_Electro_Silhouette.jpg"
     },
     {
@@ -1166,7 +1166,7 @@ export const RAW = [
         "color": "",
         "part": "JJJ28",
         "hw": "059",
-        "cas": "",
+        "cas": "C",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJJ28_Lucid_Air.jpg"
     },
     {
@@ -1176,7 +1176,7 @@ export const RAW = [
         "color": "",
         "part": "JJH37",
         "hw": "060",
-        "cas": "",
+        "cas": "D",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJH37_Toyota_Prius_Custom.jpg"
     },
     {
@@ -1206,7 +1206,7 @@ export const RAW = [
         "color": "",
         "part": "JJJ29",
         "hw": "061",
-        "cas": "",
+        "cas": "C",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJJ29_Mazda_RX-7.jpg"
     },
     {
@@ -1226,7 +1226,7 @@ export const RAW = [
         "color": "",
         "part": "JJJ30",
         "hw": "062",
-        "cas": "",
+        "cas": "C",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJJ30_Ferrari_365_GTB4_Competizione.jpg"
     },
     {
@@ -1246,7 +1246,7 @@ export const RAW = [
         "color": "",
         "part": "JJJ31",
         "hw": "063",
-        "cas": "",
+        "cas": "C",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJM17_Ferrari_F40_Competizione.jpg"
     },
     {
@@ -1256,7 +1256,7 @@ export const RAW = [
         "color": "",
         "part": "JJM17",
         "hw": "063",
-        "cas": "",
+        "cas": "C",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJM17_Ferrari_F40_Competizione.jpg"
     },
     {
@@ -1266,7 +1266,7 @@ export const RAW = [
         "color": "",
         "part": "JJJ32",
         "hw": "064",
-        "cas": "",
+        "cas": "C",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJJ32_Mercedes-Benz_Unimog_1300L.jpg"
     },
     {
@@ -1276,7 +1276,7 @@ export const RAW = [
         "color": "",
         "part": "JJH40",
         "hw": "065",
-        "cas": "",
+        "cas": "B",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJH40_Drift_Box.jpg"
     },
     {
@@ -1296,7 +1296,7 @@ export const RAW = [
         "color": "",
         "part": "JJJ33",
         "hw": "066",
-        "cas": "",
+        "cas": "C",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJJ33_17_Audi_RS_6_Avant.jpg"
     },
     {
@@ -1316,7 +1316,7 @@ export const RAW = [
         "color": "",
         "part": "JJJ34",
         "hw": "067",
-        "cas": "",
+        "cas": "C",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJJ34_Lotus_Cortina.jpg"
     },
     {
@@ -1346,7 +1346,7 @@ export const RAW = [
         "color": "",
         "part": "JJJ35",
         "hw": "068",
-        "cas": "",
+        "cas": "D",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJJ35_Visa_Cash_App_Racing_Bulls_Formula_One_Team.jpg"
     },
     {
@@ -1356,7 +1356,7 @@ export const RAW = [
         "color": "",
         "part": "JJJ36",
         "hw": "069",
-        "cas": "",
+        "cas": "C",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJJ36_Volvo_240_Drift_Wagon.jpg"
     },
     {
@@ -1376,7 +1376,7 @@ export const RAW = [
         "color": "",
         "part": "JJJ37",
         "hw": "070",
-        "cas": "",
+        "cas": "C",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJJ37_Decidedly_Go.jpg"
     },
     {
@@ -1396,7 +1396,7 @@ export const RAW = [
         "color": "",
         "part": "JJH39",
         "hw": "071",
-        "cas": "",
+        "cas": "C",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJH39_Austin_Mini_Cooper_S.jpg"
     },
     {
@@ -1416,7 +1416,7 @@ export const RAW = [
         "color": "",
         "part": "JJJ38",
         "hw": "072",
-        "cas": "",
+        "cas": "C",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJJ38_Datsun_240Z.jpg"
     },
     {
@@ -1436,7 +1436,7 @@ export const RAW = [
         "color": "",
         "part": "JNG69",
         "hw": "073",
-        "cas": "",
+        "cas": "K",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JNG69_BMW_M4_GT3.jpg"
     },
     {
@@ -1446,7 +1446,7 @@ export const RAW = [
         "color": "",
         "part": "JJJ39",
         "hw": "074",
-        "cas": "",
+        "cas": "C",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJJ39_McLaren_W1.jpg"
     },
     {
@@ -1476,7 +1476,7 @@ export const RAW = [
         "color": "",
         "part": "JJH43",
         "hw": "075",
-        "cas": "",
+        "cas": "D",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJH43_X-cceleron.jpg"
     },
     {
@@ -1486,7 +1486,7 @@ export const RAW = [
         "color": "",
         "part": "JJJ40",
         "hw": "076",
-        "cas": "",
+        "cas": "C",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJJ40_76_Chevy_Chevette.jpg"
     },
     {
@@ -1506,7 +1506,7 @@ export const RAW = [
         "color": "",
         "part": "JJJ41",
         "hw": "077",
-        "cas": "",
+        "cas": "D",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJJ41_Supercharged.jpg"
     },
     {
@@ -1526,7 +1526,7 @@ export const RAW = [
         "color": "",
         "part": "JJJ43",
         "hw": "078",
-        "cas": "",
+        "cas": "D",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJJ43_Hako_Type_D.jpg"
     },
     {
@@ -1536,7 +1536,7 @@ export const RAW = [
         "color": "",
         "part": "JJJ44",
         "hw": "079",
-        "cas": "",
+        "cas": "D",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJJ44_Hoto_Roto.jpg"
     },
     {
@@ -1546,7 +1546,7 @@ export const RAW = [
         "color": "",
         "part": "JJJ65",
         "hw": "080",
-        "cas": "",
+        "cas": "E",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJJ65_Kei_Swap.jpg"
     },
     {
@@ -1556,7 +1556,7 @@ export const RAW = [
         "color": "",
         "part": "JJM03",
         "hw": "081",
-        "cas": "",
+        "cas": "D",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJM03_Hot_Wheengs.jpg"
     },
     {
@@ -1566,7 +1566,7 @@ export const RAW = [
         "color": "",
         "part": "JJJ45",
         "hw": "082",
-        "cas": "",
+        "cas": "D",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJJ45_Birthday_Burner.jpg"
     },
     {
@@ -1576,7 +1576,7 @@ export const RAW = [
         "color": "",
         "part": "JJJ46",
         "hw": "083",
-        "cas": "",
+        "cas": "D",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJJ46_Rapid_Pulse.jpg"
     },
     {
@@ -1606,7 +1606,7 @@ export const RAW = [
         "color": "",
         "part": "JJJ48",
         "hw": "085",
-        "cas": "",
+        "cas": "D",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJJ48_Voltage_Spike.jpg"
     },
     {
@@ -1636,7 +1636,7 @@ export const RAW = [
         "color": "",
         "part": "JJJ49",
         "hw": "087",
-        "cas": "",
+        "cas": "D",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJJ49_Cruise_Bruiser.jpg"
     },
     {
@@ -1646,7 +1646,7 @@ export const RAW = [
         "color": "",
         "part": "JJJ50",
         "hw": "088",
-        "cas": "",
+        "cas": "D",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJJ50_Nissan_Skyline_2000_GT-R.jpg"
     },
     {
@@ -1666,7 +1666,7 @@ export const RAW = [
         "color": "",
         "part": "JJJ51",
         "hw": "089",
-        "cas": "",
+        "cas": "D",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJJ51_1985_Honda_CR-X.jpg"
     },
     {
@@ -1716,7 +1716,7 @@ export const RAW = [
         "color": "",
         "part": "JJJ54",
         "hw": "092",
-        "cas": "",
+        "cas": "D",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJJ54_Feline_Lucky.jpg"
     },
     {
@@ -1766,7 +1766,7 @@ export const RAW = [
         "color": "",
         "part": "JJJ56",
         "hw": "095",
-        "cas": "",
+        "cas": "D",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJM18_64_Impala.jpg"
     },
     {
@@ -1776,7 +1776,7 @@ export const RAW = [
         "color": "",
         "part": "JJM18",
         "hw": "095",
-        "cas": "",
+        "cas": "D",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJM18_64_Impala.jpg"
     },
     {
@@ -1786,7 +1786,7 @@ export const RAW = [
         "color": "",
         "part": "JJJ57",
         "hw": "096",
-        "cas": "",
+        "cas": "D",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJJ57_El_Segundo_Coupe.jpg"
     },
     {
@@ -1796,7 +1796,7 @@ export const RAW = [
         "color": "",
         "part": "JJJ58",
         "hw": "097",
-        "cas": "",
+        "cas": "C",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJJ58_Corvette_Grand_Sport.jpg"
     },
     {
@@ -1806,7 +1806,7 @@ export const RAW = [
         "color": "",
         "part": "JJJ59",
         "hw": "098",
-        "cas": "",
+        "cas": "D",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJJ59_96_Porsche_Carrera.jpg"
     },
     {
@@ -1826,7 +1826,7 @@ export const RAW = [
         "color": "",
         "part": "JJJ60",
         "hw": "099",
-        "cas": "",
+        "cas": "D",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJJ60_Renault_Espace_F1.jpg"
     },
     {
@@ -1846,7 +1846,7 @@ export const RAW = [
         "color": "",
         "part": "JJJ61",
         "hw": "100",
-        "cas": "",
+        "cas": "D",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJJ61_Twin_Dorado.jpg"
     },
     {
@@ -1856,7 +1856,7 @@ export const RAW = [
         "color": "",
         "part": "JJH99",
         "hw": "101",
-        "cas": "",
+        "cas": "E",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJH99_17_Pagani_Huayra_Roadster.jpg"
     },
     {
@@ -1866,7 +1866,7 @@ export const RAW = [
         "color": "",
         "part": "JJK30",
         "hw": "102",
-        "cas": "",
+        "cas": "D",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJK30_Passn_Gasser.jpg"
     },
     {
@@ -1886,7 +1886,7 @@ export const RAW = [
         "color": "",
         "part": "JJH47",
         "hw": "103",
-        "cas": "",
+        "cas": "E",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJH47_Eggshelleracer.jpg"
     },
     {
@@ -1906,7 +1906,7 @@ export const RAW = [
         "color": "",
         "part": "JJJ63",
         "hw": "104",
-        "cas": "",
+        "cas": "E",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJJ63_68_Dodge_Dart.jpg"
     },
     {
@@ -1916,7 +1916,7 @@ export const RAW = [
         "color": "",
         "part": "JJJ66",
         "hw": "105",
-        "cas": "",
+        "cas": "E",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJJ66_85_Honda_City_Turbo_II.jpg"
     },
     {
@@ -1926,7 +1926,7 @@ export const RAW = [
         "color": "",
         "part": "JJJ82",
         "hw": "106",
-        "cas": "",
+        "cas": "E",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJJ95_Mazda_RX-3.jpg"
     },
     {
@@ -1946,7 +1946,7 @@ export const RAW = [
         "color": "",
         "part": "JJJ67",
         "hw": "107",
-        "cas": "",
+        "cas": "E",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJJ67_1966_Bat_Boat.jpg"
     },
     {
@@ -1956,7 +1956,7 @@ export const RAW = [
         "color": "",
         "part": "JJJ68",
         "hw": "108",
-        "cas": "",
+        "cas": "E",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJJ68_The_Simpsons_Family_Car.jpg"
     },
     {
@@ -1966,7 +1966,7 @@ export const RAW = [
         "color": "",
         "part": "JJJ69",
         "hw": "109",
-        "cas": "",
+        "cas": "E",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJJ69_Time_Shifter.jpg"
     },
     {
@@ -1976,7 +1976,7 @@ export const RAW = [
         "color": "",
         "part": "JJJ70",
         "hw": "110",
-        "cas": "",
+        "cas": "E",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJJ70_70_Chevelle_SS_Wagon.jpg"
     },
     {
@@ -1986,7 +1986,7 @@ export const RAW = [
         "color": "",
         "part": "JJJ71",
         "hw": "111",
-        "cas": "",
+        "cas": "E",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJJ71_Long_Bloc.jpg"
     },
     {
@@ -1996,7 +1996,7 @@ export const RAW = [
         "color": "",
         "part": "JJJ72",
         "hw": "112",
-        "cas": "",
+        "cas": "E",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJJ72_89_Mazda_Savanna_RX-7_FC3S.jpg"
     },
     {
@@ -2016,7 +2016,7 @@ export const RAW = [
         "color": "",
         "part": "JJJ73",
         "hw": "113",
-        "cas": "",
+        "cas": "E",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJJ73_Corvette_C7_Z06.jpg"
     },
     {
@@ -2036,7 +2036,7 @@ export const RAW = [
         "color": "",
         "part": "JJH45",
         "hw": "114",
-        "cas": "",
+        "cas": "E",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJH45_Custom_66_Toronado.jpg"
     },
     {
@@ -2046,7 +2046,7 @@ export const RAW = [
         "color": "",
         "part": "JMB11",
         "hw": "115",
-        "cas": "",
+        "cas": "E",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JMB11_Custom_2020_Honda_e.jpg"
     },
     {
@@ -2056,7 +2056,7 @@ export const RAW = [
         "color": "",
         "part": "JJJ74",
         "hw": "116",
-        "cas": "",
+        "cas": "E",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJM19_87_Ford_Sierra_Cosworth.jpg"
     },
     {
@@ -2066,7 +2066,7 @@ export const RAW = [
         "color": "",
         "part": "JJM19",
         "hw": "116",
-        "cas": "",
+        "cas": "E",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJM19_87_Ford_Sierra_Cosworth.jpg"
     },
     {
@@ -2076,7 +2076,7 @@ export const RAW = [
         "color": "",
         "part": "JJJ75",
         "hw": "117",
-        "cas": "",
+        "cas": "E",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJJ75_Erikenstein_Rod.jpg"
     },
     {
@@ -2096,7 +2096,7 @@ export const RAW = [
         "color": "",
         "part": "JJJ77",
         "hw": "118",
-        "cas": "",
+        "cas": "E",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJJ77_Pedal_Driver.jpg"
     },
     {
@@ -2116,7 +2116,7 @@ export const RAW = [
         "color": "",
         "part": "JJJ76",
         "hw": "119",
-        "cas": "",
+        "cas": "F",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJJ76_33_Ford_Lo_Boy.jpg"
     },
     {
@@ -2136,7 +2136,7 @@ export const RAW = [
         "color": "",
         "part": "JJJ78",
         "hw": "120",
-        "cas": "",
+        "cas": "F",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJJ78_Scuderia_Ferrari_HP.jpg"
     },
     {
@@ -2146,7 +2146,7 @@ export const RAW = [
         "color": "",
         "part": "JJJ79",
         "hw": "121",
-        "cas": "",
+        "cas": "D",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJJ79_2023_Nissan_Z.jpg"
     },
     {
@@ -2166,7 +2166,7 @@ export const RAW = [
         "color": "",
         "part": "JJM04",
         "hw": "122",
-        "cas": "",
+        "cas": "E",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJM04_Cone_Shaker.jpg"
     },
     {
@@ -2176,7 +2176,7 @@ export const RAW = [
         "color": "",
         "part": "JJH44",
         "hw": "123",
-        "cas": "",
+        "cas": "E",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJH44_Maserati_Tipo_61.jpg"
     },
     {
@@ -2196,7 +2196,7 @@ export const RAW = [
         "color": "",
         "part": "JJM05",
         "hw": "124",
-        "cas": "",
+        "cas": "F",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJM05_2016_Ford_GT_Race.jpg"
     },
     {
@@ -2206,7 +2206,7 @@ export const RAW = [
         "color": "",
         "part": "JJH55",
         "hw": "125",
-        "cas": "",
+        "cas": "F",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJH55_2024_Aston_Martin_Vantage_GT3.jpg"
     },
     {
@@ -2226,7 +2226,7 @@ export const RAW = [
         "color": "",
         "part": "JJJ64",
         "hw": "126",
-        "cas": "",
+        "cas": "E",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJJ64_64_Dodge_330.jpg"
     },
     {
@@ -2236,7 +2236,7 @@ export const RAW = [
         "color": "",
         "part": "JJJ80",
         "hw": "127",
-        "cas": "",
+        "cas": "F",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJJ80_Custom_72_Chevy_LUV.jpg"
     },
     {
@@ -2256,7 +2256,7 @@ export const RAW = [
         "color": "",
         "part": "JPJ80",
         "hw": "128",
-        "cas": "",
+        "cas": "H",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JPJ80_Datsun_620.jpg"
     },
     {
@@ -2276,7 +2276,7 @@ export const RAW = [
         "color": "",
         "part": "JJJ84",
         "hw": "130",
-        "cas": "",
+        "cas": "E",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJJ84_2019_Audi_R8_Spyder.jpg"
     },
     {
@@ -2286,7 +2286,7 @@ export const RAW = [
         "color": "",
         "part": "JJH48",
         "hw": "131",
-        "cas": "",
+        "cas": "G",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJH48_Fiat_Beast_of_Turin.jpg"
     },
     {
@@ -2306,7 +2306,7 @@ export const RAW = [
         "color": "",
         "part": "JJJ85",
         "hw": "132",
-        "cas": "",
+        "cas": "F",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJJ85_Bullet_Proof.jpg"
     },
     {
@@ -2316,7 +2316,7 @@ export const RAW = [
         "color": "",
         "part": "JJJ86",
         "hw": "133",
-        "cas": "",
+        "cas": "F",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJJ86_8_Crate.jpg"
     },
     {
@@ -2326,7 +2326,7 @@ export const RAW = [
         "color": "",
         "part": "JJJ87",
         "hw": "134",
-        "cas": "",
+        "cas": "F",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJJ87_20_Dodge_Charger_Hellcat.jpg"
     },
     {
@@ -2336,7 +2336,7 @@ export const RAW = [
         "color": "",
         "part": "JJJ88",
         "hw": "135",
-        "cas": "",
+        "cas": "F",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJJ88_Flippin_Fast.jpg"
     },
     {
@@ -2346,7 +2346,7 @@ export const RAW = [
         "color": "",
         "part": "JJJ89",
         "hw": "136",
-        "cas": "",
+        "cas": "F",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJJ89_98_Honda_Prelude.jpg"
     },
     {
@@ -2366,7 +2366,7 @@ export const RAW = [
         "color": "",
         "part": "JJJ90",
         "hw": "137",
-        "cas": "",
+        "cas": "F",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJJ90_La_Troca.jpg"
     },
     {
@@ -2376,7 +2376,7 @@ export const RAW = [
         "color": "",
         "part": "JJJ91",
         "hw": "138",
-        "cas": "",
+        "cas": "F",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJJ91_Morgan_Super_3.jpg"
     },
     {
@@ -2386,7 +2386,7 @@ export const RAW = [
         "color": "",
         "part": "JJJ92",
         "hw": "139",
-        "cas": "",
+        "cas": "F",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJJ92_Bone_Shaker.jpg"
     },
     {
@@ -2406,7 +2406,7 @@ export const RAW = [
         "color": "",
         "part": "JJJ93",
         "hw": "140",
-        "cas": "",
+        "cas": "F",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJJ93_Mid_Mill.jpg"
     },
     {
@@ -2416,7 +2416,7 @@ export const RAW = [
         "color": "",
         "part": "JJJ94",
         "hw": "141",
-        "cas": "",
+        "cas": "F",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJJ94_Screamliner.jpg"
     },
     {
@@ -2426,7 +2426,7 @@ export const RAW = [
         "color": "",
         "part": "JJJ95",
         "hw": "142",
-        "cas": "",
+        "cas": "E",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJJ95_Mazda_RX-3.jpg"
     },
     {
@@ -2436,7 +2436,7 @@ export const RAW = [
         "color": "",
         "part": "JJH50",
         "hw": "143",
-        "cas": "",
+        "cas": "F",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJH50_Deora_Toond.jpg"
     },
     {
@@ -2456,7 +2456,7 @@ export const RAW = [
         "color": "",
         "part": "JJJ96",
         "hw": "144",
-        "cas": "",
+        "cas": "G",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJJ96_Classic_TV_Series_Batmobile.jpg"
     },
     {
@@ -2466,7 +2466,7 @@ export const RAW = [
         "color": "",
         "part": "JJJ97",
         "hw": "145",
-        "cas": "",
+        "cas": "H",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJJ97_El_Segundo_Rallye.jpg"
     },
     {
@@ -2476,7 +2476,7 @@ export const RAW = [
         "color": "",
         "part": "JJJ98",
         "hw": "146",
-        "cas": "",
+        "cas": "G",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJJ98_Mazda_Autozam.jpg"
     },
     {
@@ -2486,7 +2486,7 @@ export const RAW = [
         "color": "",
         "part": "JJM06",
         "hw": "147",
-        "cas": "",
+        "cas": "G",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJM06_2_Jet_Z.jpg"
     },
     {
@@ -2496,7 +2496,7 @@ export const RAW = [
         "color": "",
         "part": "JJH54",
         "hw": "148",
-        "cas": "",
+        "cas": "G",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJH54_Tooned_Purple_Passion.jpg"
     },
     {
@@ -2506,7 +2506,7 @@ export const RAW = [
         "color": "",
         "part": "JJJ99",
         "hw": "149",
-        "cas": "",
+        "cas": "G",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJJ99_Honda_Odyssey.jpg"
     },
     {
@@ -2526,7 +2526,7 @@ export const RAW = [
         "color": "",
         "part": "JJH56",
         "hw": "150",
-        "cas": "",
+        "cas": "G",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJH56_Dino_206_GT.jpg"
     },
     {
@@ -2546,7 +2546,7 @@ export const RAW = [
         "color": "",
         "part": "JJH52",
         "hw": "151",
-        "cas": "",
+        "cas": "G",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJH52_Ford_F-150_Lightning_SuperTruck.jpg"
     },
     {
@@ -2556,7 +2556,7 @@ export const RAW = [
         "color": "",
         "part": "JJK00",
         "hw": "152",
-        "cas": "",
+        "cas": "G",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJK00_BMW_635_CSi.jpg"
     },
     {
@@ -2566,7 +2566,7 @@ export const RAW = [
         "color": "",
         "part": "JJK01",
         "hw": "153",
-        "cas": "",
+        "cas": "G",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJK01_41_Willys.jpg"
     },
     {
@@ -2576,7 +2576,7 @@ export const RAW = [
         "color": "",
         "part": "JJK02",
         "hw": "154",
-        "cas": "",
+        "cas": "H",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJK02_Kick_Sauber_F1_Team.jpg"
     },
     {
@@ -2586,7 +2586,7 @@ export const RAW = [
         "color": "",
         "part": "JJH53",
         "hw": "155",
-        "cas": "",
+        "cas": "F",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJH53_Vairstrike.jpg"
     },
     {
@@ -2606,7 +2606,7 @@ export const RAW = [
         "color": "",
         "part": "JJK03",
         "hw": "156",
-        "cas": "",
+        "cas": "G",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJM21_Custom_Otto.jpg"
     },
     {
@@ -2616,7 +2616,7 @@ export const RAW = [
         "color": "",
         "part": "JJM21",
         "hw": "156",
-        "cas": "",
+        "cas": "G",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJM21_Custom_Otto.jpg"
     },
     {
@@ -2626,7 +2626,7 @@ export const RAW = [
         "color": "",
         "part": "JJK04",
         "hw": "157",
-        "cas": "",
+        "cas": "G",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJK04_20_Toyota_GR_Supra.jpg"
     },
     {
@@ -2636,7 +2636,7 @@ export const RAW = [
         "color": "",
         "part": "JJK05",
         "hw": "158",
-        "cas": "",
+        "cas": "H",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJK05_Mach_Speeder.jpg"
     },
     {
@@ -2646,7 +2646,7 @@ export const RAW = [
         "color": "",
         "part": "JJJ81",
         "hw": "159",
-        "cas": "",
+        "cas": "F",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJM20_Honda_Civic_Custom.jpg"
     },
     {
@@ -2656,7 +2656,7 @@ export const RAW = [
         "color": "",
         "part": "JJM20",
         "hw": "159",
-        "cas": "",
+        "cas": "F",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJM20_Honda_Civic_Custom.jpg"
     },
     {
@@ -2666,7 +2666,7 @@ export const RAW = [
         "color": "",
         "part": "JJK07",
         "hw": "160",
-        "cas": "",
+        "cas": "H",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJM22_Lotus_Sport_Elise.jpg"
     },
     {
@@ -2676,7 +2676,7 @@ export const RAW = [
         "color": "",
         "part": "JJM22",
         "hw": "160",
-        "cas": "",
+        "cas": "H",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJM22_Lotus_Sport_Elise.jpg"
     },
     {
@@ -2686,7 +2686,7 @@ export const RAW = [
         "color": "",
         "part": "JJK08",
         "hw": "161",
-        "cas": "",
+        "cas": "H",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJK08_70_Ford_Escort_RS1600.jpg"
     },
     {
@@ -2696,7 +2696,7 @@ export const RAW = [
         "color": "",
         "part": "JJM07",
         "hw": "162",
-        "cas": "",
+        "cas": "H",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJM07_Total_Disposal.jpg"
     },
     {
@@ -2706,7 +2706,7 @@ export const RAW = [
         "color": "",
         "part": "JJH49",
         "hw": "163",
-        "cas": "",
+        "cas": "H",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJH49_Cadillac_Celestiq.jpg"
     },
     {
@@ -2716,7 +2716,7 @@ export const RAW = [
         "color": "",
         "part": "JJK10",
         "hw": "164",
-        "cas": "",
+        "cas": "G",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJK10_Classic_55_Nomad.jpg"
     },
     {
@@ -2726,7 +2726,7 @@ export const RAW = [
         "color": "",
         "part": "JJK09",
         "hw": "165",
-        "cas": "",
+        "cas": "H",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJK09_Gone_Mad.jpg"
     },
     {
@@ -2736,7 +2736,7 @@ export const RAW = [
         "color": "",
         "part": "JJH64",
         "hw": "166",
-        "cas": "",
+        "cas": "H",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJH64_Twin_Tags.jpg"
     },
     {
@@ -2756,7 +2756,7 @@ export const RAW = [
         "color": "",
         "part": "JJK11",
         "hw": "167",
-        "cas": "",
+        "cas": "H",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJK11_Head_Gasket.jpg"
     },
     {
@@ -2766,7 +2766,7 @@ export const RAW = [
         "color": "",
         "part": "JJK12",
         "hw": "168",
-        "cas": "",
+        "cas": "H",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJK12_Mailed_It.jpg"
     },
     {
@@ -2776,7 +2776,7 @@ export const RAW = [
         "color": "",
         "part": "JJK13",
         "hw": "169",
-        "cas": "",
+        "cas": "H",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJK13_Super_Twin_Mill.jpg"
     },
     {
@@ -2786,7 +2786,7 @@ export const RAW = [
         "color": "",
         "part": "JJK14",
         "hw": "170",
-        "cas": "",
+        "cas": "H",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJK14_64_Lincoln_Continental.jpg"
     },
     {
@@ -2796,7 +2796,7 @@ export const RAW = [
         "color": "",
         "part": "JJK15",
         "hw": "171",
-        "cas": "",
+        "cas": "H",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJK15_1983_Porsche_928S.jpg"
     },
     {
@@ -2806,7 +2806,7 @@ export const RAW = [
         "color": "",
         "part": "JJK16",
         "hw": "172",
-        "cas": "",
+        "cas": "H",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJK16_Tooned_Volkswagen_Golf_Mk1.jpg"
     },
     {
@@ -2836,7 +2836,7 @@ export const RAW = [
         "color": "",
         "part": "JJK18",
         "hw": "175",
-        "cas": "",
+        "cas": "J",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJK18_94_Audi_Avant_RS2.jpg"
     },
     {
@@ -2866,7 +2866,7 @@ export const RAW = [
         "color": "",
         "part": "JJH58",
         "hw": "177",
-        "cas": "",
+        "cas": "J",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJH58_88_Mitsubishi_Starion.jpg"
     },
     {
@@ -2896,7 +2896,7 @@ export const RAW = [
         "color": "",
         "part": "JJH61",
         "hw": "178",
-        "cas": "",
+        "cas": "K",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJH61_Click_Shift.jpg"
     },
     {
@@ -2906,7 +2906,7 @@ export const RAW = [
         "color": "",
         "part": "JJK20",
         "hw": "179",
-        "cas": "",
+        "cas": "J",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJK20_Mountain_Mauler.jpg"
     },
     {
@@ -2916,7 +2916,7 @@ export const RAW = [
         "color": "",
         "part": "JJK21",
         "hw": "180",
-        "cas": "",
+        "cas": "J",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJK21_55_Chevy.jpg"
     },
     {
@@ -2926,7 +2926,7 @@ export const RAW = [
         "color": "",
         "part": "JJH63",
         "hw": "181",
-        "cas": "",
+        "cas": "H",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJH63_Mercedes-Benz_CLA_HW.jpg"
     },
     {
@@ -2936,7 +2936,7 @@ export const RAW = [
         "color": "",
         "part": "JJH60",
         "hw": "182",
-        "cas": "",
+        "cas": "J",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJH60_Chop_n_Bloc.jpg"
     },
     {
@@ -2946,7 +2946,7 @@ export const RAW = [
         "color": "",
         "part": "JJK23",
         "hw": "183",
-        "cas": "",
+        "cas": "J",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJK23_70_Buick_GSX.jpg"
     },
     {
@@ -2966,7 +2966,7 @@ export const RAW = [
         "color": "",
         "part": "JJK24",
         "hw": "184",
-        "cas": "",
+        "cas": "J",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJK24_68_Shelby_GT500.jpg"
     },
     {
@@ -2976,7 +2976,7 @@ export const RAW = [
         "color": "",
         "part": "JJK25",
         "hw": "185",
-        "cas": "",
+        "cas": "K",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJK25_Aston_Martin_Aramco_Formula_One_Team.jpg"
     },
     {
@@ -2986,7 +2986,7 @@ export const RAW = [
         "color": "",
         "part": "JJM08",
         "hw": "186",
-        "cas": "",
+        "cas": "J",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJM08_Amaru_GTC.jpg"
     },
     {
@@ -2996,7 +2996,7 @@ export const RAW = [
         "color": "",
         "part": "JJH59",
         "hw": "187",
-        "cas": "",
+        "cas": "J",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJH59_PT_Fast.jpg"
     },
     {
@@ -3006,7 +3006,7 @@ export const RAW = [
         "color": "",
         "part": "JJK26",
         "hw": "188",
-        "cas": "",
+        "cas": "J",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJK26_70_Dodge_Charger.jpg"
     },
     {
@@ -3016,7 +3016,7 @@ export const RAW = [
         "color": "",
         "part": "JJK27",
         "hw": "189",
-        "cas": "",
+        "cas": "J",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJK27_11_Corvette_Grand_Sport.jpg"
     },
     {
@@ -3026,7 +3026,7 @@ export const RAW = [
         "color": "",
         "part": "JJK28",
         "hw": "190",
-        "cas": "",
+        "cas": "J",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJK28_82_Toyota_Supra.jpg"
     },
     {
@@ -3036,7 +3036,7 @@ export const RAW = [
         "color": "",
         "part": "JJK06",
         "hw": "191",
-        "cas": "",
+        "cas": "H",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJK06_65_Mercury_Comet_Cyclone.jpg"
     },
     {
@@ -3066,7 +3066,7 @@ export const RAW = [
         "color": "",
         "part": "JJK29",
         "hw": "192",
-        "cas": "",
+        "cas": "K",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJK29_Fiat_500C.jpg"
     },
     {
@@ -3076,7 +3076,7 @@ export const RAW = [
         "color": "",
         "part": "JJK31",
         "hw": "193",
-        "cas": "",
+        "cas": "J",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJK31_63_Chevy_II.jpg"
     },
     {
@@ -3086,7 +3086,7 @@ export const RAW = [
         "color": "",
         "part": "JJK32",
         "hw": "194",
-        "cas": "",
+        "cas": "K",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJK32_Lil_Roar.jpg"
     },
     {
@@ -3096,7 +3096,7 @@ export const RAW = [
         "color": "",
         "part": "JJK33",
         "hw": "195",
-        "cas": "",
+        "cas": "K",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJK33_Spider-Mobile.jpg"
     },
     {
@@ -3106,7 +3106,7 @@ export const RAW = [
         "color": "",
         "part": "JJM09",
         "hw": "196",
-        "cas": "",
+        "cas": "K",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJM09_Sweet_Driver.jpg"
     },
     {
@@ -3116,7 +3116,7 @@ export const RAW = [
         "color": "",
         "part": "JJH57",
         "hw": "197",
-        "cas": "",
+        "cas": "J",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJH57_Mad_Drip.jpg"
     },
     {
@@ -3126,7 +3126,7 @@ export const RAW = [
         "color": "",
         "part": "JJK35",
         "hw": "198",
-        "cas": "",
+        "cas": "K",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJK35_Toyota_AE86_Sprinter_Trueno.jpg"
     },
     {
@@ -3136,7 +3136,7 @@ export const RAW = [
         "color": "",
         "part": "JJK34",
         "hw": "199",
-        "cas": "",
+        "cas": "K",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJK34_Nissan_Skyline_GT-R_BNR34.jpg"
     },
     {
@@ -3146,7 +3146,7 @@ export const RAW = [
         "color": "",
         "part": "JJK36",
         "hw": "200",
-        "cas": "",
+        "cas": "K",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJK36_Punk_Rod.jpg"
     },
     {
@@ -3156,7 +3156,7 @@ export const RAW = [
         "color": "",
         "part": "JJK37",
         "hw": "201",
-        "cas": "",
+        "cas": "K",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJM65_1970_Pontiac_Firebird.jpg"
     },
     {
@@ -3166,7 +3166,7 @@ export const RAW = [
         "color": "",
         "part": "JJM65",
         "hw": "201",
-        "cas": "",
+        "cas": "K",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJM65_1970_Pontiac_Firebird.jpg"
     },
     {
@@ -3176,7 +3176,7 @@ export const RAW = [
         "color": "",
         "part": "JJK38",
         "hw": "202",
-        "cas": "",
+        "cas": "K",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJK38_Street_Shaker.jpg"
     },
     {
@@ -3196,7 +3196,7 @@ export const RAW = [
         "color": "",
         "part": "JJK40",
         "hw": "204",
-        "cas": "",
+        "cas": "K",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJK40_Mod_Mill.jpg"
     },
     {
@@ -3206,7 +3206,7 @@ export const RAW = [
         "color": "",
         "part": "JJK22",
         "hw": "205",
-        "cas": "",
+        "cas": "J",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJK22_Jaguar_XJC_V12_Coupe.jpg"
     },
     {
@@ -3226,7 +3226,7 @@ export const RAW = [
         "color": "",
         "part": "JJK41",
         "hw": "206",
-        "cas": "",
+        "cas": "K",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJK41_Bully_Goat.jpg"
     },
     {
@@ -3236,7 +3236,7 @@ export const RAW = [
         "color": "",
         "part": "JJK42",
         "hw": "207",
-        "cas": "",
+        "cas": "K",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJK42_18_Camaro_SS.jpg"
     },
     {
@@ -3246,7 +3246,7 @@ export const RAW = [
         "color": "",
         "part": "JJK43",
         "hw": "208",
-        "cas": "",
+        "cas": "M",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJM24_Porsche_911_Carrera_RS_27.jpg"
     },
     {
@@ -3256,7 +3256,7 @@ export const RAW = [
         "color": "",
         "part": "JJM24",
         "hw": "208",
-        "cas": "",
+        "cas": "M",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJM24_Porsche_911_Carrera_RS_27.jpg"
     },
     {
@@ -3266,7 +3266,7 @@ export const RAW = [
         "color": "",
         "part": "JJH65",
         "hw": "215",
-        "cas": "",
+        "cas": "K",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJH65_Lil_Mad.jpg"
     },
     {
@@ -3276,7 +3276,7 @@ export const RAW = [
         "color": "",
         "part": "JJK51",
         "hw": "222",
-        "cas": "",
+        "cas": "K",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJM25_94_Toyota_Supra.jpg"
     },
     {
@@ -3286,7 +3286,7 @@ export const RAW = [
         "color": "",
         "part": "JJM25",
         "hw": "222",
-        "cas": "",
+        "cas": "K",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJM25_94_Toyota_Supra.jpg"
     },
     {
@@ -3296,7 +3296,7 @@ export const RAW = [
         "color": "",
         "part": "JJH69",
         "hw": "223",
-        "cas": "",
+        "cas": "M",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJH69_2019_Audi_TT_Safari.jpg"
     },
     {
@@ -3306,7 +3306,7 @@ export const RAW = [
         "color": "",
         "part": "JJK53",
         "hw": "225",
-        "cas": "",
+        "cas": "L",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJM26_Nissan_Maxima_Drift_Car.jpg"
     },
     {
@@ -3316,7 +3316,7 @@ export const RAW = [
         "color": "",
         "part": "JJM26",
         "hw": "225",
-        "cas": "",
+        "cas": "L",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJM26_Nissan_Maxima_Drift_Car.jpg"
     },
     {
@@ -3346,7 +3346,7 @@ export const RAW = [
         "color": "",
         "part": "JJH51",
         "hw": "",
-        "cas": "",
+        "cas": "M",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJH51_Ferrari_F2004.jpg"
     },
     {
@@ -3366,7 +3366,7 @@ export const RAW = [
         "color": "",
         "part": "JJH66",
         "hw": "",
-        "cas": "",
+        "cas": "L",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJH66_1972_Datsun_Sunny_Coupe.jpg"
     },
     {
@@ -3386,7 +3386,7 @@ export const RAW = [
         "color": "",
         "part": "JJH67",
         "hw": "",
-        "cas": "",
+        "cas": "L",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJH67_Project_Twin_Mill.jpg"
     },
     {
@@ -3396,7 +3396,7 @@ export const RAW = [
         "color": "",
         "part": "JJH73",
         "hw": "",
-        "cas": "",
+        "cas": "M",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJH73_1963_Ford_Galaxie.jpg"
     },
     {
@@ -3406,7 +3406,7 @@ export const RAW = [
         "color": "",
         "part": "JJH68",
         "hw": "",
-        "cas": "",
+        "cas": "L",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJH68_HW_Test_Ride.jpg"
     },
     {
@@ -3456,7 +3456,7 @@ export const RAW = [
         "color": "",
         "part": "JJM11",
         "hw": "",
-        "cas": "",
+        "cas": "M",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJM11_Ford_Model_A_Custom_31.jpg"
     },
     {
@@ -3466,7 +3466,7 @@ export const RAW = [
         "color": "",
         "part": "JJM10",
         "hw": "",
-        "cas": "",
+        "cas": "L",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJM10_Mad_Manga.jpg"
     },
     {
@@ -3486,7 +3486,7 @@ export const RAW = [
         "color": "",
         "part": "",
         "hw": "",
-        "cas": "",
+        "cas": "L",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJK49_Custom_62_Chevy_Pickup.jpg"
     },
     {
@@ -3506,7 +3506,7 @@ export const RAW = [
         "color": "",
         "part": "JJK58",
         "hw": "",
-        "cas": "",
+        "cas": "N",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJM27_23_Ram_1500.jpg"
     },
     {
@@ -3516,7 +3516,7 @@ export const RAW = [
         "color": "",
         "part": "JJM27",
         "hw": "",
-        "cas": "",
+        "cas": "N",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJM27_23_Ram_1500.jpg"
     },
     {
@@ -3526,7 +3526,7 @@ export const RAW = [
         "color": "",
         "part": "",
         "hw": "",
-        "cas": "",
+        "cas": "P",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJM28_70_Plymouth_AAR_Cuda.jpg"
     },
     {
@@ -3536,7 +3536,7 @@ export const RAW = [
         "color": "",
         "part": "JJM28",
         "hw": "",
-        "cas": "",
+        "cas": "P",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJM28_70_Plymouth_AAR_Cuda.jpg"
     },
     {
@@ -3546,7 +3546,7 @@ export const RAW = [
         "color": "",
         "part": "",
         "hw": "",
-        "cas": "",
+        "cas": "Q",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJM29_67_Pontiac_Firebird_400.jpg"
     },
     {
@@ -3556,7 +3556,7 @@ export const RAW = [
         "color": "",
         "part": "JJM29",
         "hw": "",
-        "cas": "",
+        "cas": "Q",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJM29_67_Pontiac_Firebird_400.jpg"
     },
     {
@@ -3586,7 +3586,7 @@ export const RAW = [
         "color": "",
         "part": "",
         "hw": "",
-        "cas": "",
+        "cas": "L",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJK50_96_Dodge_Viper_GTS.jpg"
     },
     {
@@ -3596,7 +3596,7 @@ export const RAW = [
         "color": "",
         "part": "JJK46",
         "hw": "",
-        "cas": "",
+        "cas": "L",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJK46_21_Ford_Bronco.jpg"
     },
     {
@@ -3606,7 +3606,7 @@ export const RAW = [
         "color": "",
         "part": "",
         "hw": "",
-        "cas": "",
+        "cas": "L",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJK48_Alfa_Romeo_Giulia_TI_Super.jpg"
     },
     {
