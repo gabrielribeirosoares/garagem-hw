@@ -94,7 +94,7 @@ function changePage(newPageType) {
   const kaidoArea = document.getElementById('kaido-view');
   const statsRow = document.querySelector('.stats-row');
 
-  if (pageType === 'kaido') {
+  if (pageType === 'kaido' || pageType === 'kaido-owned') {
     updateSidebarVisibility('kaido');
   } else {
     updateSidebarVisibility('hw');
@@ -131,7 +131,7 @@ function changePage(newPageType) {
     renderRewards();
     return;
 
-  } else if (pageType === 'kaido') {
+  } else if (pageType === 'kaido' || pageType === 'kaido-owned') {
     if (tableArea) tableArea.style.display = 'none';
     if (sortHeader) sortHeader.style.display = 'none';
     if (controlsArea) controlsArea.style.display = 'none';
@@ -144,7 +144,7 @@ function changePage(newPageType) {
 
     document.getElementById('dynamic-title').innerHTML = 'Kaido <span>House</span>';
     document.getElementById('dynamic-badge').style.display = 'none';
-    renderKaido();
+    renderKaido(pageType === 'kaido-owned');
     return;
   } else {
 
@@ -681,42 +681,42 @@ async function saveData(carId, qty) {
   }, 1000);
 
 
-  
+
 }
 
 window.saveKaidoData = async function (codigo, qty) {
-    const oldQty = userKaidoCollection[codigo] || 0;
-    userKaidoCollection[codigo] = qty;
-    const uidToSave = targetUid || sessionUid;
+  const oldQty = userKaidoCollection[codigo] || 0;
+  userKaidoCollection[codigo] = qty;
+  const uidToSave = targetUid || sessionUid;
 
-    const isVendedorEditandoCliente = (isAdmin || isManager) && targetUid && targetUid !== sessionUid;
+  const isVendedorEditandoCliente = (isAdmin || isManager) && targetUid && targetUid !== sessionUid;
 
-    if (isVendedorEditandoCliente && targetRole === 'cliente' && qty > oldQty) {
-      const diff = qty - oldQty;
-      const pontosGanhos = diff * PONTOS_POR_CARRO;
+  if (isVendedorEditandoCliente && targetRole === 'cliente' && qty > oldQty) {
+    const diff = qty - oldQty;
+    const pontosGanhos = diff * PONTOS_POR_CARRO;
 
-      userPoints += pontosGanhos;
+    userPoints += pontosGanhos;
 
-      const pointsEl = document.getElementById('user-points');
-      if (pointsEl) pointsEl.textContent = userPoints;
+    const pointsEl = document.getElementById('user-points');
+    if (pointsEl) pointsEl.textContent = userPoints;
 
-      addHistoryEntry(uidToSave, `Adição Kaido House`, pontosGanhos, 'earning');
-    }
-
-
-    if (saveKaidoTimeout) clearTimeout(saveKaidoTimeout);
-
-    saveKaidoTimeout = setTimeout(async () => {
-      if (!uidToSave) return;
-      try {
-        const dRef = doc(db, 'collections', uidToSave);
-
-        await setDoc(dRef, { kaidoItems: userKaidoCollection, points: userPoints }, { merge: true });
-      } catch (e) {
-        console.error("Erro ao salvar Kaido:", e);
-      }
-    }, 1000);
+    addHistoryEntry(uidToSave, `Adição Kaido House`, pontosGanhos, 'earning');
   }
+
+
+  if (saveKaidoTimeout) clearTimeout(saveKaidoTimeout);
+
+  saveKaidoTimeout = setTimeout(async () => {
+    if (!uidToSave) return;
+    try {
+      const dRef = doc(db, 'collections', uidToSave);
+
+      await setDoc(dRef, { kaidoItems: userKaidoCollection, points: userPoints }, { merge: true });
+    } catch (e) {
+      console.error("Erro ao salvar Kaido:", e);
+    }
+  }, 1000);
+}
 
 
 function openLb(index) {
@@ -1306,8 +1306,10 @@ async function addHistoryEntry(uid, desc, amount, type) {
 // ==========================================
 window.kaidoCurrentPage = 1;
 window.kaidoItemsPerPage = 25;
+let showingOnlyOwnedKaido = false;
 
-window.renderKaido = function () {
+window.renderKaido = function (onlyOwned = false) {
+  showingOnlyOwnedKaido = onlyOwned;
   const container = document.getElementById('kaido-view');
   if (!container) return;
 
@@ -1353,13 +1355,13 @@ window.renderKaido = function () {
     `;
 
     // Adiciona o evento de clique após o HTML ser inserido
-  const btnBack = document.getElementById('btn-back-to-hw');
-  if (btnBack) {
-    btnBack.addEventListener('click', () => {
-      changePage('all'); 
-      updateSidebarVisibility('hw');
-    });
-  }
+    const btnBack = document.getElementById('btn-back-to-hw');
+    if (btnBack) {
+      btnBack.addEventListener('click', () => {
+        changePage('all');
+        updateSidebarVisibility('hw');
+      });
+    }
 
     // EVENTOS DA BARRA DE PESQUISA
     document.getElementById('kaido-search').addEventListener('input', () => {
@@ -1403,7 +1405,6 @@ window.renderKaido = function () {
   window.renderKaidoGrid();
 };
 
-let showingOnlyOwnedKaido = false;
 
 window.renderKaidoGrid = function () {
   const grid = document.getElementById('kaido-grid');
@@ -1414,12 +1415,16 @@ window.renderKaidoGrid = function () {
   grid.innerHTML = '';
 
   // 1. APLICA O FILTRO DE PESQUISA
-  const filteredData = KAIDO_DATA.filter(car => {
+  let filteredData = KAIDO_DATA.filter(car => {
     if (!query) return true;
     return (car.modelo && car.modelo.toLowerCase().includes(query)) ||
       (car.codigo && car.codigo.toLowerCase().includes(query)) ||
       (car.marca && car.marca.toLowerCase().includes(query));
   });
+
+  if (showingOnlyOwnedKaido) {
+    filteredData = filteredData.filter(car => (userKaidoCollection[car.codigo] || 0) > 0);
+  }
 
   // 2. APLICA A PAGINAÇÃO
   let dataToRender = filteredData;
@@ -1512,15 +1517,18 @@ window.renderKaidoGrid = function () {
   }
 };
 
-window.updateSidebarVisibility = function(tipo) {
+window.updateSidebarVisibility = function (tipo) {
   const hwItems = document.querySelectorAll('.hw-menu-item');
   const sthItems = document.querySelectorAll('.sth-menu-item');
-  
+  const kaidoItems = document.querySelectorAll('.kaido-menu-item');
+
   if (tipo === 'kaido') {
     hwItems.forEach(el => el.style.display = 'none');
     sthItems.forEach(el => el.style.display = 'none');
+    kaidoItems.forEach(el => el.style.display = 'block');
   } else {
     hwItems.forEach(el => el.style.display = 'block');
     sthItems.forEach(el => el.style.display = 'block');
+    kaidoItems.forEach(el => el.style.display = 'none');
   }
 };
