@@ -5,7 +5,7 @@ export const KAIDO_DATA = [
         "fabricante": "Mini GT",
         "marca": "Kaido House",
         "escala": "1:64",
-        "caminho_imagem": "assets/img/imagens_kaido/KHMG287.jpg"
+        "caminho_imagem": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/KHMG287.jpg"
     },
     {
         "codigo": "KHMG285",
@@ -13,7 +13,7 @@ export const KAIDO_DATA = [
         "fabricante": "Mini GT",
         "marca": "Kaido House",
         "escala": "1:64",
-        "caminho_imagem": "assets/img/imagens_kaido/KHMG285.jpg"
+        "caminho_imagem": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/KHMG285.jpg"
     },
     {
         "codigo": "KHMG284",
@@ -21,7 +21,7 @@ export const KAIDO_DATA = [
         "fabricante": "Mini GT",
         "marca": "Kaido House",
         "escala": "1:64",
-        "caminho_imagem": "assets/img/imagens_kaido/KHMG284.jpg"
+        "caminho_imagem": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/KHMG284.jpg"
     },
     {
         "codigo": "KHMG279",
@@ -29,7 +29,7 @@ export const KAIDO_DATA = [
         "fabricante": "Mini GT",
         "marca": "Kaido House",
         "escala": "1:64",
-        "caminho_imagem": "assets/img/imagens_kaido/KHMG279.jpg"
+        "caminho_imagem": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/KHMG279.jpg"
     },
     {
         "codigo": "KHMG277",
@@ -37,7 +37,7 @@ export const KAIDO_DATA = [
         "fabricante": "Mini GT",
         "marca": "Kaido House",
         "escala": "1:64",
-        "caminho_imagem": "assets/img/imagens_kaido/KHMG277.jpg"
+        "caminho_imagem": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/KHMG277.jpg"
     },
     {
         "codigo": "KHMG268",
@@ -45,7 +45,7 @@ export const KAIDO_DATA = [
         "fabricante": "Mini GT",
         "marca": "Kaido House",
         "escala": "1:64",
-        "caminho_imagem": "assets/img/imagens_kaido/KHMG268.jpg"
+        "caminho_imagem": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/KHMG268.jpg"
     },
     {
         "codigo": "KHMG267",
@@ -53,7 +53,7 @@ export const KAIDO_DATA = [
         "fabricante": "Mini GT",
         "marca": "Kaido House",
         "escala": "1:64",
-        "caminho_imagem": "assets/img/imagens_kaido/KHMG267.jpg"
+        "caminho_imagem": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/KHMG267.jpg"
     },
     {
         "codigo": "KHMG273",
@@ -61,7 +61,7 @@ export const KAIDO_DATA = [
         "fabricante": "Mini GT",
         "marca": "Kaido House",
         "escala": "1:64",
-        "caminho_imagem": "assets/img/imagens_kaido/KHMG273.jpg"
+        "caminho_imagem": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/KHMG273.jpg"
     },
     {
         "codigo": "KHMG266",
@@ -69,7 +69,7 @@ export const KAIDO_DATA = [
         "fabricante": "Mini GT",
         "marca": "Kaido House",
         "escala": "1:64",
-        "caminho_imagem": "assets/img/imagens_kaido/KHMG266.jpg"
+        "caminho_imagem": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/KHMG266.jpg"
     },
     {
         "codigo": "KHMG263",
@@ -77,7 +77,7 @@ export const KAIDO_DATA = [
         "fabricante": "Mini GT",
         "marca": "Kaido House",
         "escala": "1:64",
-        "caminho_imagem": "assets/img/imagens_kaido/KHMG263.jpg"
+        "caminho_imagem": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/KHMG263.jpg"
     },
     {
         "codigo": "KHMG255",
@@ -85,7 +85,7 @@ export const KAIDO_DATA = [
         "fabricante": "Mini GT",
         "marca": "Kaido House",
         "escala": "1:64",
-        "caminho_imagem": "assets/img/imagens_kaido/KHMG255.jpg"
+        "caminho_imagem": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/KHMG255.jpg"
     },
     {
         "codigo": "KHMG261",
@@ -93,7 +93,7 @@ export const KAIDO_DATA = [
         "fabricante": "Mini GT",
         "marca": "Kaido House",
         "escala": "1:64",
-        "caminho_imagem": "assets/img/imagens_kaido/KHMG261.jpg"
+        "caminho_imagem": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/KHMG261.jpg"
     },
     {
         "codigo": "KHMG252",
@@ -101,7 +101,7 @@ export const KAIDO_DATA = [
         "fabricante": "Mini GT",
         "marca": "Kaido House",
         "escala": "1:64",
-        "caminho_imagem": "assets/img/imagens_kaido/KHMG252.jpg"
+        "caminho_imagem": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/KHMG252.jpg"
     },
     {
         "codigo": "KHMG251",
@@ -109,7 +109,7 @@ export const KAIDO_DATA = [
         "fabricante": "Mini GT",
         "marca": "Kaido House",
         "escala": "1:64",
-        "caminho_imagem": "assets/img/imagens_kaido/KHMG251.jpg"
+        "caminho_imagem": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/KHMG251.jpg"
     },
     {
         "codigo": "KHMG249",
@@ -117,7 +117,7 @@ export const KAIDO_DATA = [
         "fabricante": "Mini GT",
         "marca": "Kaido House",
         "escala": "1:64",
-        "caminho_imagem": "assets/img/imagens_kaido/KHMG249.jpg"
+        "caminho_imagem": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/KHMG249.jpg"
     },
     {
         "codigo": "KHMG217",
@@ -125,7 +125,7 @@ export const KAIDO_DATA = [
         "fabricante": "Mini GT",
         "marca": "Kaido House",
         "escala": "1:64",
-        "caminho_imagem": "assets/img/imagens_kaido/KHMG217.jpg"
+        "caminho_imagem": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/KHMG217.jpg"
     },
     {
         "codigo": "KHMG223",
@@ -133,7 +133,7 @@ export const KAIDO_DATA = [
         "fabricante": "Mini GT",
         "marca": "Kaido House",
         "escala": "1:64",
-        "caminho_imagem": "assets/img/imagens_kaido/KHMG223.jpg"
+        "caminho_imagem": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/KHMG223.jpg"
     },
     {
         "codigo": "KHMG220",
@@ -141,7 +141,7 @@ export const KAIDO_DATA = [
         "fabricante": "Mini GT",
         "marca": "Kaido House",
         "escala": "1:64",
-        "caminho_imagem": "assets/img/imagens_kaido/KHMG220.jpg"
+        "caminho_imagem": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/KHMG220.jpg"
     },
     {
         "codigo": "KHMG214",
@@ -149,7 +149,7 @@ export const KAIDO_DATA = [
         "fabricante": "Mini GT",
         "marca": "Kaido House",
         "escala": "1:64",
-        "caminho_imagem": "assets/img/imagens_kaido/KHMG214.jpg"
+        "caminho_imagem": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/KHMG214.jpg"
     },
     {
         "codigo": "KHMG208",
@@ -157,7 +157,7 @@ export const KAIDO_DATA = [
         "fabricante": "Mini GT",
         "marca": "Kaido House",
         "escala": "1:64",
-        "caminho_imagem": "assets/img/imagens_kaido/KHMG208.jpg"
+        "caminho_imagem": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/KHMG208.jpg"
     },
     {
         "codigo": "KHMG229",
@@ -165,7 +165,7 @@ export const KAIDO_DATA = [
         "fabricante": "Mini GT",
         "marca": "Kaido House",
         "escala": "1:64",
-        "caminho_imagem": "assets/img/imagens_kaido/KHMG229.jpg"
+        "caminho_imagem": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/KHMG229.jpg"
     },
     {
         "codigo": "KHMG228",
@@ -173,7 +173,7 @@ export const KAIDO_DATA = [
         "fabricante": "Mini GT",
         "marca": "Kaido House",
         "escala": "1:64",
-        "caminho_imagem": "assets/img/imagens_kaido/KHMG228.jpg"
+        "caminho_imagem": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/KHMG228.jpg"
     },
     {
         "codigo": "KHMG226",
@@ -181,7 +181,7 @@ export const KAIDO_DATA = [
         "fabricante": "Mini GT",
         "marca": "Kaido House",
         "escala": "1:64",
-        "caminho_imagem": "assets/img/imagens_kaido/KHMG226.jpg"
+        "caminho_imagem": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/KHMG226.jpg"
     },
     {
         "codigo": "KHMG243",
@@ -189,7 +189,7 @@ export const KAIDO_DATA = [
         "fabricante": "Mini GT",
         "marca": "Kaido House",
         "escala": "1:64",
-        "caminho_imagem": "assets/img/imagens_kaido/KHMG243.jpg"
+        "caminho_imagem": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/KHMG243.jpg"
     },
     {
         "codigo": "KHMG254",
@@ -197,7 +197,7 @@ export const KAIDO_DATA = [
         "fabricante": "Mini GT",
         "marca": "Kaido House",
         "escala": "1:64",
-        "caminho_imagem": "assets/img/imagens_kaido/KHMG254.jpg"
+        "caminho_imagem": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/KHMG254.jpg"
     },
     {
         "codigo": "KHMG247",
@@ -205,7 +205,7 @@ export const KAIDO_DATA = [
         "fabricante": "Mini GT",
         "marca": "Kaido House",
         "escala": "1:64",
-        "caminho_imagem": "assets/img/imagens_kaido/KHMG247.jpg"
+        "caminho_imagem": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/KHMG247.jpg"
     },
     {
         "codigo": "KHMG242",
@@ -213,7 +213,7 @@ export const KAIDO_DATA = [
         "fabricante": "Mini GT",
         "marca": "Kaido House",
         "escala": "1:64",
-        "caminho_imagem": "assets/img/imagens_kaido/KHMG242.jpg"
+        "caminho_imagem": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/KHMG242.jpg"
     },
     {
         "codigo": "KHMG241",
@@ -221,7 +221,7 @@ export const KAIDO_DATA = [
         "fabricante": "Mini GT",
         "marca": "Kaido House",
         "escala": "1:64",
-        "caminho_imagem": "assets/img/imagens_kaido/KHMG241.jpg"
+        "caminho_imagem": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/KHMG241.jpg"
     },
     {
         "codigo": "KHMG240",
@@ -229,7 +229,7 @@ export const KAIDO_DATA = [
         "fabricante": "Mini GT",
         "marca": "Kaido House",
         "escala": "1:64",
-        "caminho_imagem": "assets/img/imagens_kaido/KHMG240.jpg"
+        "caminho_imagem": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/KHMG240.jpg"
     },
     {
         "codigo": "KHMG238",
@@ -237,7 +237,7 @@ export const KAIDO_DATA = [
         "fabricante": "Mini GT",
         "marca": "Kaido House",
         "escala": "1:64",
-        "caminho_imagem": "assets/img/imagens_kaido/KHMG238.jpg"
+        "caminho_imagem": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/KHMG238.jpg"
     },
     {
         "codigo": "KHMG236",
@@ -245,7 +245,7 @@ export const KAIDO_DATA = [
         "fabricante": "Mini GT",
         "marca": "Kaido House",
         "escala": "1:64",
-        "caminho_imagem": "assets/img/imagens_kaido/KHMG236.jpg"
+        "caminho_imagem": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/KHMG236.jpg"
     },
     {
         "codigo": "KHMG235",
@@ -253,7 +253,7 @@ export const KAIDO_DATA = [
         "fabricante": "Mini GT",
         "marca": "Kaido House",
         "escala": "1:64",
-        "caminho_imagem": "assets/img/imagens_kaido/KHMG235.jpg"
+        "caminho_imagem": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/KHMG235.jpg"
     },
     {
         "codigo": "KHMG218",
@@ -261,7 +261,7 @@ export const KAIDO_DATA = [
         "fabricante": "Mini GT",
         "marca": "Kaido House",
         "escala": "1:64",
-        "caminho_imagem": "assets/img/imagens_kaido/KHMG218.jpg"
+        "caminho_imagem": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/KHMG218.jpg"
     },
     {
         "codigo": "KHMG216",
@@ -269,7 +269,7 @@ export const KAIDO_DATA = [
         "fabricante": "Mini GT",
         "marca": "Kaido House",
         "escala": "1:64",
-        "caminho_imagem": "assets/img/imagens_kaido/KHMG216.jpg"
+        "caminho_imagem": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/KHMG216.jpg"
     },
     {
         "codigo": "KHMG211",
@@ -277,7 +277,7 @@ export const KAIDO_DATA = [
         "fabricante": "Mini GT",
         "marca": "Kaido House",
         "escala": "1:64",
-        "caminho_imagem": "assets/img/imagens_kaido/KHMG211.jpg"
+        "caminho_imagem": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/KHMG211.jpg"
     },
     {
         "codigo": "KHMG210",
@@ -285,7 +285,7 @@ export const KAIDO_DATA = [
         "fabricante": "Mini GT",
         "marca": "Kaido House",
         "escala": "1:64",
-        "caminho_imagem": "assets/img/imagens_kaido/KHMG210.jpg"
+        "caminho_imagem": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/KHMG210.jpg"
     },
     {
         "codigo": "KHMG222",
@@ -293,7 +293,7 @@ export const KAIDO_DATA = [
         "fabricante": "Mini GT",
         "marca": "Kaido House",
         "escala": "1:64",
-        "caminho_imagem": "assets/img/imagens_kaido/KHMG222.jpg"
+        "caminho_imagem": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/KHMG222.jpg"
     },
     {
         "codigo": "KHMG176",
@@ -301,7 +301,7 @@ export const KAIDO_DATA = [
         "fabricante": "Mini GT",
         "marca": "Kaido House",
         "escala": "1:64",
-        "caminho_imagem": "assets/img/imagens_kaido/KHMG176.jpg"
+        "caminho_imagem": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/KHMG176.jpg"
     },
     {
         "codigo": "KHMG175",
@@ -309,7 +309,7 @@ export const KAIDO_DATA = [
         "fabricante": "Mini GT",
         "marca": "Kaido House",
         "escala": "1:64",
-        "caminho_imagem": "assets/img/imagens_kaido/KHMG175.jpg"
+        "caminho_imagem": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/KHMG175.jpg"
     },
     {
         "codigo": "KHMG173",
@@ -317,7 +317,7 @@ export const KAIDO_DATA = [
         "fabricante": "Mini GT",
         "marca": "Kaido House",
         "escala": "1:64",
-        "caminho_imagem": "assets/img/imagens_kaido/KHMG173.jpg"
+        "caminho_imagem": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/KHMG173.jpg"
     },
     {
         "codigo": "KHMG177",
@@ -325,7 +325,7 @@ export const KAIDO_DATA = [
         "fabricante": "Mini GT",
         "marca": "Kaido House",
         "escala": "1:64",
-        "caminho_imagem": "assets/img/imagens_kaido/KHMG177.jpg"
+        "caminho_imagem": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/KHMG177.jpg"
     },
     {
         "codigo": "KHMG174",
@@ -333,7 +333,7 @@ export const KAIDO_DATA = [
         "fabricante": "Mini GT",
         "marca": "Kaido House",
         "escala": "1:64",
-        "caminho_imagem": "assets/img/imagens_kaido/KHMG174.jpg"
+        "caminho_imagem": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/KHMG174.jpg"
     },
     {
         "codigo": "KHMG167",
@@ -341,7 +341,7 @@ export const KAIDO_DATA = [
         "fabricante": "Mini GT",
         "marca": "Kaido House",
         "escala": "1:64",
-        "caminho_imagem": "assets/img/imagens_kaido/KHMG167.jpg"
+        "caminho_imagem": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/KHMG167.jpg"
     },
     {
         "codigo": "KHMG180",
@@ -349,7 +349,7 @@ export const KAIDO_DATA = [
         "fabricante": "Mini GT",
         "marca": "Kaido House",
         "escala": "1:64",
-        "caminho_imagem": "assets/img/imagens_kaido/KHMG180.jpg"
+        "caminho_imagem": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/KHMG180.jpg"
     },
     {
         "codigo": "KHMG179",
@@ -357,7 +357,7 @@ export const KAIDO_DATA = [
         "fabricante": "Mini GT",
         "marca": "Kaido House",
         "escala": "1:64",
-        "caminho_imagem": "assets/img/imagens_kaido/KHMG179.jpg"
+        "caminho_imagem": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/KHMG179.jpg"
     },
     {
         "codigo": "KHMG164",
@@ -365,7 +365,7 @@ export const KAIDO_DATA = [
         "fabricante": "Mini GT",
         "marca": "Kaido House",
         "escala": "1:64",
-        "caminho_imagem": "assets/img/imagens_kaido/KHMG164.jpg"
+        "caminho_imagem": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/KHMG164.jpg"
     },
     {
         "codigo": "KHMG199",
@@ -373,7 +373,7 @@ export const KAIDO_DATA = [
         "fabricante": "Mini GT",
         "marca": "Kaido House",
         "escala": "1:64",
-        "caminho_imagem": "assets/img/imagens_kaido/KHMG199.jpg"
+        "caminho_imagem": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/KHMG199.jpg"
     },
     {
         "codigo": "KHMG197",
@@ -381,7 +381,7 @@ export const KAIDO_DATA = [
         "fabricante": "Mini GT",
         "marca": "Kaido House",
         "escala": "1:64",
-        "caminho_imagem": "assets/img/imagens_kaido/KHMG197.jpg"
+        "caminho_imagem": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/KHMG197.jpg"
     },
     {
         "codigo": "KHMG196",
@@ -389,7 +389,7 @@ export const KAIDO_DATA = [
         "fabricante": "Mini GT",
         "marca": "Kaido House",
         "escala": "1:64",
-        "caminho_imagem": "assets/img/imagens_kaido/KHMG196.jpg"
+        "caminho_imagem": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/KHMG196.jpg"
     },
     {
         "codigo": "KHMG194",
@@ -397,7 +397,7 @@ export const KAIDO_DATA = [
         "fabricante": "Mini GT",
         "marca": "Kaido House",
         "escala": "1:64",
-        "caminho_imagem": "assets/img/imagens_kaido/KHMG194.jpg"
+        "caminho_imagem": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/KHMG194.jpg"
     },
     {
         "codigo": "KHMG161",
@@ -405,7 +405,7 @@ export const KAIDO_DATA = [
         "fabricante": "Mini GT",
         "marca": "Kaido House",
         "escala": "1:64",
-        "caminho_imagem": "assets/img/imagens_kaido/KHMG161.jpg"
+        "caminho_imagem": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/KHMG161.jpg"
     },
     {
         "codigo": "KHMG195",
@@ -413,7 +413,7 @@ export const KAIDO_DATA = [
         "fabricante": "Mini GT",
         "marca": "Kaido House",
         "escala": "1:64",
-        "caminho_imagem": "assets/img/imagens_kaido/KHMG195.jpg"
+        "caminho_imagem": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/KHMG195.jpg"
     },
     {
         "codigo": "KHMG192",
@@ -421,7 +421,7 @@ export const KAIDO_DATA = [
         "fabricante": "Mini GT",
         "marca": "Kaido House",
         "escala": "1:64",
-        "caminho_imagem": "assets/img/imagens_kaido/KHMG192.jpg"
+        "caminho_imagem": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/KHMG192.jpg"
     },
     {
         "codigo": "KHMG191",
@@ -429,7 +429,7 @@ export const KAIDO_DATA = [
         "fabricante": "Mini GT",
         "marca": "Kaido House",
         "escala": "1:64",
-        "caminho_imagem": "assets/img/imagens_kaido/KHMG191.jpg"
+        "caminho_imagem": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/KHMG191.jpg"
     },
     {
         "codigo": "KHMG190",
@@ -437,7 +437,7 @@ export const KAIDO_DATA = [
         "fabricante": "Mini GT",
         "marca": "Kaido House",
         "escala": "1:64",
-        "caminho_imagem": "assets/img/imagens_kaido/KHMG190.jpg"
+        "caminho_imagem": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/KHMG190.jpg"
     },
     {
         "codigo": "KHMG150",
@@ -445,7 +445,7 @@ export const KAIDO_DATA = [
         "fabricante": "Mini GT",
         "marca": "Kaido House",
         "escala": "1:64",
-        "caminho_imagem": "assets/img/imagens_kaido/KHMG150.jpg"
+        "caminho_imagem": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/KHMG150.jpg"
     },
     {
         "codigo": "KHMG149",
@@ -453,7 +453,7 @@ export const KAIDO_DATA = [
         "fabricante": "Mini GT",
         "marca": "Kaido House",
         "escala": "1:64",
-        "caminho_imagem": "assets/img/imagens_kaido/KHMG149.jpg"
+        "caminho_imagem": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/KHMG149.jpg"
     },
     {
         "codigo": "KHMG148",
@@ -461,7 +461,7 @@ export const KAIDO_DATA = [
         "fabricante": "Mini GT",
         "marca": "Kaido House",
         "escala": "1:64",
-        "caminho_imagem": "assets/img/imagens_kaido/KHMG148.jpg"
+        "caminho_imagem": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/KHMG148.jpg"
     },
     {
         "codigo": "KHMG153",
@@ -469,7 +469,7 @@ export const KAIDO_DATA = [
         "fabricante": "Mini GT",
         "marca": "Kaido House",
         "escala": "1:64",
-        "caminho_imagem": "assets/img/imagens_kaido/KHMG153.jpg"
+        "caminho_imagem": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/KHMG153.jpg"
     },
     {
         "codigo": "KHMG172",
@@ -477,7 +477,7 @@ export const KAIDO_DATA = [
         "fabricante": "Mini GT",
         "marca": "Kaido House",
         "escala": "1:64",
-        "caminho_imagem": "assets/img/imagens_kaido/KHMG172.jpg"
+        "caminho_imagem": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/KHMG172.jpg"
     },
     {
         "codigo": "KHMG165",
@@ -485,7 +485,7 @@ export const KAIDO_DATA = [
         "fabricante": "Mini GT",
         "marca": "Kaido House",
         "escala": "1:64",
-        "caminho_imagem": "assets/img/imagens_kaido/KHMG165.jpg"
+        "caminho_imagem": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/KHMG165.jpg"
     },
     {
         "codigo": "KHMG163",
@@ -493,7 +493,7 @@ export const KAIDO_DATA = [
         "fabricante": "Mini GT",
         "marca": "Kaido House",
         "escala": "1:64",
-        "caminho_imagem": "assets/img/imagens_kaido/KHMG163.jpg"
+        "caminho_imagem": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/KHMG163.jpg"
     },
     {
         "codigo": "KHMG139",
@@ -501,7 +501,7 @@ export const KAIDO_DATA = [
         "fabricante": "Mini GT",
         "marca": "Kaido House",
         "escala": "1:64",
-        "caminho_imagem": "assets/img/imagens_kaido/KHMG139.jpg"
+        "caminho_imagem": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/KHMG139.jpg"
     },
     {
         "codigo": "KHMG138",
@@ -509,7 +509,7 @@ export const KAIDO_DATA = [
         "fabricante": "Mini GT",
         "marca": "Kaido House",
         "escala": "1:64",
-        "caminho_imagem": "assets/img/imagens_kaido/KHMG138.jpg"
+        "caminho_imagem": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/KHMG138.jpg"
     },
     {
         "codigo": "KHMG137",
@@ -517,7 +517,7 @@ export const KAIDO_DATA = [
         "fabricante": "Mini GT",
         "marca": "Kaido House",
         "escala": "1:64",
-        "caminho_imagem": "assets/img/imagens_kaido/KHMG137.jpg"
+        "caminho_imagem": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/KHMG137.jpg"
     },
     {
         "codigo": "KHMG142",
@@ -525,7 +525,7 @@ export const KAIDO_DATA = [
         "fabricante": "Mini GT",
         "marca": "Kaido House",
         "escala": "1:64",
-        "caminho_imagem": "assets/img/imagens_kaido/KHMG142.jpg"
+        "caminho_imagem": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/KHMG142.jpg"
     },
     {
         "codigo": "KHMG162",
@@ -533,7 +533,7 @@ export const KAIDO_DATA = [
         "fabricante": "Mini GT",
         "marca": "Kaido House",
         "escala": "1:64",
-        "caminho_imagem": "assets/img/imagens_kaido/KHMG162.jpg"
+        "caminho_imagem": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/KHMG162.jpg"
     },
     {
         "codigo": "KHMG160",
@@ -541,7 +541,7 @@ export const KAIDO_DATA = [
         "fabricante": "Mini GT",
         "marca": "Kaido House",
         "escala": "1:64",
-        "caminho_imagem": "assets/img/imagens_kaido/KHMG160.jpg"
+        "caminho_imagem": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/KHMG160.jpg"
     },
     {
         "codigo": "KHMG158",
@@ -549,7 +549,7 @@ export const KAIDO_DATA = [
         "fabricante": "Mini GT",
         "marca": "Kaido House",
         "escala": "1:64",
-        "caminho_imagem": "assets/img/imagens_kaido/KHMG158.jpg"
+        "caminho_imagem": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/KHMG158.jpg"
     },
     {
         "codigo": "KHMG157",
@@ -557,7 +557,7 @@ export const KAIDO_DATA = [
         "fabricante": "Mini GT",
         "marca": "Kaido House",
         "escala": "1:64",
-        "caminho_imagem": "assets/img/imagens_kaido/KHMG157.jpg"
+        "caminho_imagem": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/KHMG157.jpg"
     },
     {
         "codigo": "KHMG156",
@@ -565,7 +565,7 @@ export const KAIDO_DATA = [
         "fabricante": "Mini GT",
         "marca": "Kaido House",
         "escala": "1:64",
-        "caminho_imagem": "assets/img/imagens_kaido/KHMG156.jpg"
+        "caminho_imagem": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/KHMG156.jpg"
     },
     {
         "codigo": "KHMG154",
@@ -573,7 +573,7 @@ export const KAIDO_DATA = [
         "fabricante": "Mini GT",
         "marca": "Kaido House",
         "escala": "1:64",
-        "caminho_imagem": "assets/img/imagens_kaido/KHMG154.jpg"
+        "caminho_imagem": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/KHMG154.jpg"
     },
     {
         "codigo": "KHMG145",
@@ -581,7 +581,7 @@ export const KAIDO_DATA = [
         "fabricante": "Mini GT",
         "marca": "Kaido House",
         "escala": "1:64",
-        "caminho_imagem": "assets/img/imagens_kaido/KHMG145.jpg"
+        "caminho_imagem": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/KHMG145.jpg"
     },
     {
         "codigo": "KHMG144",
@@ -589,7 +589,7 @@ export const KAIDO_DATA = [
         "fabricante": "Mini GT",
         "marca": "Kaido House",
         "escala": "1:64",
-        "caminho_imagem": "assets/img/imagens_kaido/KHMG144.jpg"
+        "caminho_imagem": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/KHMG144.jpg"
     },
     {
         "codigo": "KHMG143",
@@ -597,7 +597,7 @@ export const KAIDO_DATA = [
         "fabricante": "Mini GT",
         "marca": "Kaido House",
         "escala": "1:64",
-        "caminho_imagem": "assets/img/imagens_kaido/KHMG143.jpg"
+        "caminho_imagem": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/KHMG143.jpg"
     },
     {
         "codigo": "KHMG130",
@@ -605,7 +605,7 @@ export const KAIDO_DATA = [
         "fabricante": "Mini GT",
         "marca": "Kaido House",
         "escala": "1:64",
-        "caminho_imagem": "assets/img/imagens_kaido/KHMG130.jpg"
+        "caminho_imagem": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/KHMG130.jpg"
     },
     {
         "codigo": "KHMG129",
@@ -613,7 +613,7 @@ export const KAIDO_DATA = [
         "fabricante": "Mini GT",
         "marca": "Kaido House",
         "escala": "1:64",
-        "caminho_imagem": "assets/img/imagens_kaido/KHMG129.jpg"
+        "caminho_imagem": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/KHMG129.jpg"
     },
     {
         "codigo": "KHMG126",
@@ -621,7 +621,7 @@ export const KAIDO_DATA = [
         "fabricante": "Mini GT",
         "marca": "Kaido House",
         "escala": "1:64",
-        "caminho_imagem": "assets/img/imagens_kaido/KHMG126.jpg"
+        "caminho_imagem": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/KHMG126.jpg"
     },
     {
         "codigo": "KHMG131",
@@ -629,7 +629,7 @@ export const KAIDO_DATA = [
         "fabricante": "Mini GT",
         "marca": "Kaido House",
         "escala": "1:64",
-        "caminho_imagem": "assets/img/imagens_kaido/KHMG131.jpg"
+        "caminho_imagem": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/KHMG131.jpg"
     },
     {
         "codigo": "KHMG128",
@@ -637,7 +637,7 @@ export const KAIDO_DATA = [
         "fabricante": "Mini GT",
         "marca": "Kaido House",
         "escala": "1:64",
-        "caminho_imagem": "assets/img/imagens_kaido/KHMG128.jpg"
+        "caminho_imagem": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/KHMG128.jpg"
     },
     {
         "codigo": "KHMG127",
@@ -645,7 +645,7 @@ export const KAIDO_DATA = [
         "fabricante": "Mini GT",
         "marca": "Kaido House",
         "escala": "1:64",
-        "caminho_imagem": "assets/img/imagens_kaido/KHMG127.jpg"
+        "caminho_imagem": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/KHMG127.jpg"
     },
     {
         "codigo": "KHMG121",
@@ -653,7 +653,7 @@ export const KAIDO_DATA = [
         "fabricante": "Mini GT",
         "marca": "Kaido House",
         "escala": "1:64",
-        "caminho_imagem": "assets/img/imagens_kaido/KHMG121.jpg"
+        "caminho_imagem": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/KHMG121.jpg"
     },
     {
         "codigo": "KHMG120",
@@ -661,7 +661,7 @@ export const KAIDO_DATA = [
         "fabricante": "Mini GT",
         "marca": "Kaido House",
         "escala": "1:64",
-        "caminho_imagem": "assets/img/imagens_kaido/KHMG120.jpg"
+        "caminho_imagem": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/KHMG120.jpg"
     },
     {
         "codigo": "KHMG119",
@@ -669,7 +669,7 @@ export const KAIDO_DATA = [
         "fabricante": "Mini GT",
         "marca": "Kaido House",
         "escala": "1:64",
-        "caminho_imagem": "assets/img/imagens_kaido/KHMG119.jpg"
+        "caminho_imagem": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/KHMG119.jpg"
     },
     {
         "codigo": "KHMG122",
@@ -677,7 +677,7 @@ export const KAIDO_DATA = [
         "fabricante": "Mini GT",
         "marca": "Kaido House",
         "escala": "1:64",
-        "caminho_imagem": "assets/img/imagens_kaido/KHMG122.jpg"
+        "caminho_imagem": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/KHMG122.jpg"
     },
     {
         "codigo": "KHMG118",
@@ -685,7 +685,7 @@ export const KAIDO_DATA = [
         "fabricante": "Mini GT",
         "marca": "Kaido House",
         "escala": "1:64",
-        "caminho_imagem": "assets/img/imagens_kaido/KHMG118.jpg"
+        "caminho_imagem": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/KHMG118.jpg"
     },
     {
         "codigo": "KHMG116",
@@ -693,7 +693,7 @@ export const KAIDO_DATA = [
         "fabricante": "Mini GT",
         "marca": "Kaido House",
         "escala": "1:64",
-        "caminho_imagem": "assets/img/imagens_kaido/KHMG116.jpg"
+        "caminho_imagem": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/KHMG116.jpg"
     },
     {
         "codigo": "KHMG110",
@@ -701,7 +701,7 @@ export const KAIDO_DATA = [
         "fabricante": "Mini GT",
         "marca": "Kaido House",
         "escala": "1:64",
-        "caminho_imagem": "assets/img/imagens_kaido/KHMG110.jpg"
+        "caminho_imagem": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/KHMG110.jpg"
     },
     {
         "codigo": "KHMG108",
@@ -709,7 +709,7 @@ export const KAIDO_DATA = [
         "fabricante": "Mini GT",
         "marca": "Kaido House",
         "escala": "1:64",
-        "caminho_imagem": "assets/img/imagens_kaido/KHMG108.jpg"
+        "caminho_imagem": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/KHMG108.jpg"
     },
     {
         "codigo": "KHMG090",
@@ -717,7 +717,7 @@ export const KAIDO_DATA = [
         "fabricante": "Mini GT",
         "marca": "Kaido House",
         "escala": "1:64",
-        "caminho_imagem": "assets/img/imagens_kaido/KHMG090.jpg"
+        "caminho_imagem": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/KHMG090.jpg"
     },
     {
         "codigo": "KHMG098",
@@ -725,7 +725,7 @@ export const KAIDO_DATA = [
         "fabricante": "Mini GT",
         "marca": "Kaido House",
         "escala": "1:64",
-        "caminho_imagem": "assets/img/imagens_kaido/KHMG098.jpg"
+        "caminho_imagem": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/KHMG098.jpg"
     },
     {
         "codigo": "KHMG103",
@@ -733,7 +733,7 @@ export const KAIDO_DATA = [
         "fabricante": "Mini GT",
         "marca": "Kaido House",
         "escala": "1:64",
-        "caminho_imagem": "assets/img/imagens_kaido/KHMG103.jpg"
+        "caminho_imagem": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/KHMG103.jpg"
     },
     {
         "codigo": "KHMG102",
@@ -741,7 +741,7 @@ export const KAIDO_DATA = [
         "fabricante": "Mini GT",
         "marca": "Kaido House",
         "escala": "1:64",
-        "caminho_imagem": "assets/img/imagens_kaido/KHMG102.jpg"
+        "caminho_imagem": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/KHMG102.jpg"
     },
     {
         "codigo": "KHMG101",
@@ -749,7 +749,7 @@ export const KAIDO_DATA = [
         "fabricante": "Mini GT",
         "marca": "Kaido House",
         "escala": "1:64",
-        "caminho_imagem": "assets/img/imagens_kaido/KHMG101.jpg"
+        "caminho_imagem": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/KHMG101.jpg"
     },
     {
         "codigo": "KHMG100",
@@ -757,7 +757,7 @@ export const KAIDO_DATA = [
         "fabricante": "Mini GT",
         "marca": "Kaido House",
         "escala": "1:64",
-        "caminho_imagem": "assets/img/imagens_kaido/KHMG100.jpg"
+        "caminho_imagem": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/KHMG100.jpg"
     },
     {
         "codigo": "KHMG099",
@@ -765,7 +765,7 @@ export const KAIDO_DATA = [
         "fabricante": "Mini GT",
         "marca": "Kaido House",
         "escala": "1:64",
-        "caminho_imagem": "assets/img/imagens_kaido/KHMG099.jpg"
+        "caminho_imagem": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/KHMG099.jpg"
     },
     {
         "codigo": "KHMG097",
@@ -773,7 +773,7 @@ export const KAIDO_DATA = [
         "fabricante": "Mini GT",
         "marca": "Kaido House",
         "escala": "1:64",
-        "caminho_imagem": "assets/img/imagens_kaido/KHMG097.jpg"
+        "caminho_imagem": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/KHMG097.jpg"
     },
     {
         "codigo": "KHMG094",
@@ -781,7 +781,7 @@ export const KAIDO_DATA = [
         "fabricante": "Mini GT",
         "marca": "Kaido House",
         "escala": "1:64",
-        "caminho_imagem": "assets/img/imagens_kaido/KHMG094.jpg"
+        "caminho_imagem": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/KHMG094.jpg"
     },
     {
         "codigo": "KHMG089",
@@ -789,7 +789,7 @@ export const KAIDO_DATA = [
         "fabricante": "Mini GT",
         "marca": "Kaido House",
         "escala": "1:64",
-        "caminho_imagem": "assets/img/imagens_kaido/KHMG089.jpg"
+        "caminho_imagem": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/KHMG089.jpg"
     },
     {
         "codigo": "KHMG087",
@@ -797,7 +797,7 @@ export const KAIDO_DATA = [
         "fabricante": "Mini GT",
         "marca": "Kaido House",
         "escala": "1:64",
-        "caminho_imagem": "assets/img/imagens_kaido/KHMG087.jpg"
+        "caminho_imagem": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/KHMG087.jpg"
     },
     {
         "codigo": "KHMG082",
@@ -805,7 +805,7 @@ export const KAIDO_DATA = [
         "fabricante": "Mini GT",
         "marca": "Kaido House",
         "escala": "1:64",
-        "caminho_imagem": "assets/img/imagens_kaido/KHMG082.jpg"
+        "caminho_imagem": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/KHMG082.jpg"
     },
     {
         "codigo": "KHMG072",
@@ -813,7 +813,7 @@ export const KAIDO_DATA = [
         "fabricante": "Mini GT",
         "marca": "Kaido House",
         "escala": "1:64",
-        "caminho_imagem": "assets/img/imagens_kaido/KHMG072.jpg"
+        "caminho_imagem": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/KHMG072.jpg"
     },
     {
         "codigo": "KHMG074",
@@ -821,7 +821,7 @@ export const KAIDO_DATA = [
         "fabricante": "Mini GT",
         "marca": "Kaido House",
         "escala": "1:64",
-        "caminho_imagem": "assets/img/imagens_kaido/KHMG074.jpg"
+        "caminho_imagem": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/KHMG074.jpg"
     },
     {
         "codigo": "KHMG066",
@@ -829,7 +829,7 @@ export const KAIDO_DATA = [
         "fabricante": "Mini GT",
         "marca": "Kaido House",
         "escala": "1:64",
-        "caminho_imagem": "assets/img/imagens_kaido/KHMG066.jpg"
+        "caminho_imagem": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/KHMG066.jpg"
     },
     {
         "codigo": "KHMG064",
@@ -837,7 +837,7 @@ export const KAIDO_DATA = [
         "fabricante": "Mini GT",
         "marca": "Kaido House",
         "escala": "1:64",
-        "caminho_imagem": "assets/img/imagens_kaido/KHMG064.jpg"
+        "caminho_imagem": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/KHMG064.jpg"
     },
     {
         "codigo": "KHMG084",
@@ -845,7 +845,7 @@ export const KAIDO_DATA = [
         "fabricante": "Mini GT",
         "marca": "Kaido House",
         "escala": "1:64",
-        "caminho_imagem": "assets/img/imagens_kaido/KHMG084.jpg"
+        "caminho_imagem": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/KHMG084.jpg"
     },
     {
         "codigo": "KHMG076",
@@ -853,7 +853,7 @@ export const KAIDO_DATA = [
         "fabricante": "Mini GT",
         "marca": "Kaido House",
         "escala": "1:64",
-        "caminho_imagem": "assets/img/imagens_kaido/KHMG076.jpg"
+        "caminho_imagem": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/KHMG076.jpg"
     },
     {
         "codigo": "KHMG093",
@@ -861,7 +861,7 @@ export const KAIDO_DATA = [
         "fabricante": "Mini GT",
         "marca": "Kaido House",
         "escala": "1:64",
-        "caminho_imagem": "assets/img/imagens_kaido/KHMG093.jpg"
+        "caminho_imagem": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/KHMG093.jpg"
     },
     {
         "codigo": "KHMG092",
@@ -869,7 +869,7 @@ export const KAIDO_DATA = [
         "fabricante": "Mini GT",
         "marca": "Kaido House",
         "escala": "1:64",
-        "caminho_imagem": "assets/img/imagens_kaido/KHMG092.jpg"
+        "caminho_imagem": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/KHMG092.jpg"
     },
     {
         "codigo": "KHMG091",
@@ -877,7 +877,7 @@ export const KAIDO_DATA = [
         "fabricante": "Mini GT",
         "marca": "Kaido House",
         "escala": "1:64",
-        "caminho_imagem": "assets/img/imagens_kaido/KHMG091.jpg"
+        "caminho_imagem": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/KHMG091.jpg"
     },
     {
         "codigo": "KHMG051",
@@ -885,7 +885,7 @@ export const KAIDO_DATA = [
         "fabricante": "Mini GT",
         "marca": "Kaido House",
         "escala": "1:64",
-        "caminho_imagem": "assets/img/imagens_kaido/KHMG051.jpg"
+        "caminho_imagem": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/KHMG051.jpg"
     },
     {
         "codigo": "KHMG044",
@@ -893,7 +893,7 @@ export const KAIDO_DATA = [
         "fabricante": "Mini GT",
         "marca": "Kaido House",
         "escala": "1:64",
-        "caminho_imagem": "assets/img/imagens_kaido/KHMG044.jpg"
+        "caminho_imagem": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/KHMG044.jpg"
     },
     {
         "codigo": "KHMG013",
@@ -901,7 +901,7 @@ export const KAIDO_DATA = [
         "fabricante": "Mini GT",
         "marca": "Kaido House",
         "escala": "1:64",
-        "caminho_imagem": "assets/img/imagens_kaido/KHMG013.jpg"
+        "caminho_imagem": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/KHMG013.jpg"
     },
     {
         "codigo": "KHMG012",
@@ -909,7 +909,7 @@ export const KAIDO_DATA = [
         "fabricante": "Mini GT",
         "marca": "Kaido House",
         "escala": "1:64",
-        "caminho_imagem": "assets/img/imagens_kaido/KHMG012.jpg"
+        "caminho_imagem": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/KHMG012.jpg"
     },
     {
         "codigo": "KHMG005",
@@ -917,7 +917,7 @@ export const KAIDO_DATA = [
         "fabricante": "Mini GT",
         "marca": "Kaido House",
         "escala": "1:64",
-        "caminho_imagem": "assets/img/imagens_kaido/KHMG005.jpg"
+        "caminho_imagem": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/KHMG005.jpg"
     },
     {
         "codigo": "KHMG004",
@@ -925,7 +925,7 @@ export const KAIDO_DATA = [
         "fabricante": "Mini GT",
         "marca": "Kaido House",
         "escala": "1:64",
-        "caminho_imagem": "assets/img/imagens_kaido/KHMG004.jpg"
+        "caminho_imagem": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/KHMG004.jpg"
     },
     {
         "codigo": "KHMG003",
@@ -933,7 +933,7 @@ export const KAIDO_DATA = [
         "fabricante": "Mini GT",
         "marca": "Kaido House",
         "escala": "1:64",
-        "caminho_imagem": "assets/img/imagens_kaido/KHMG003.jpg"
+        "caminho_imagem": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/KHMG003.jpg"
     },
     {
         "codigo": "KHMG002",
@@ -941,7 +941,7 @@ export const KAIDO_DATA = [
         "fabricante": "Mini GT",
         "marca": "Kaido House",
         "escala": "1:64",
-        "caminho_imagem": "assets/img/imagens_kaido/KHMG002.jpg"
+        "caminho_imagem": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/KHMG002.jpg"
     },
     {
         "codigo": "KHMG001",
@@ -949,6 +949,6 @@ export const KAIDO_DATA = [
         "fabricante": "Mini GT",
         "marca": "Kaido House",
         "escala": "1:64",
-        "caminho_imagem": "assets/img/imagens_kaido/KHMG001.jpg"
+        "caminho_imagem": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/KHMG001.jpg"
     }
 ]
