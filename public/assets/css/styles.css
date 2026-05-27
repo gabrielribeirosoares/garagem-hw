@@ -1505,3 +1505,24 @@ td {
   padding-top: 10px;
   border-top: 1px solid #334155;
 }
+
+/* Ajuste para a grade da Kaido House */
+.car-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 15px;
+    margin-top: 20px;
+}
+
+/* Garante que o cartão seja consistente */
+.car-card {
+    background: #1e293b;
+    border-radius: 8px;
+    padding: 10px;
+    border: 1px solid #334155;
+    transition: transform 0.2s;
+}
+
+.car-card:hover {
+    border-color: #c084fc;
+}

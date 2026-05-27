@@ -22,14 +22,16 @@
       <button id="close-sidebar" class="btn-clear" style="font-size: 16px;">✕</button>
     </div>
     <ul class="sidebar-menu">
-      <li><a href="#" class="menu-item" data-page="all">Mostrar Tudo</a></li>
-      <li><a href="#" class="menu-item" data-page="sth">Super Treasure Hunt (STH)</a></li>
-      <li><a href="#" class="menu-item" data-page="owned" style="color: #ef4444; font-weight: bold;">Minha Coleção</a>
+      <li class="hw-menu-item"><a href="#" class="menu-item" data-page="all" data-type="hw">Mostrar Tudo (HW)</a></li>
+      <li class="sth-menu-item"><a href="#" class="menu-item" data-page="sth" data-type="hw">Super Treasure Hunt (STH)</a></li>
+      <li class="hw-menu-item"><a href="#" class="menu-item" data-page="owned" data-type="hw" style="color: #ef4444; font-weight: bold;">Minha Coleção</a>
       </li>
       <li><a href="#" class="menu-item" data-page="missions" style="color: #22c55e; font-weight: bold;">Missões &
           VIP</a></li>
       <li><a href="#" class="menu-item" data-page="rewards" style="color: #facc15; font-weight: bold;">Loja de
           RPMs</a></li>
+      <li><a href="#" class="menu-item" data-page="kaido" data-type="kaido"style="color: #c084fc; font-weight: bold;">Kaido House</a>
+      </li>
 
       <li id="menu-admin-item"
         style="display: none; border-top: 1px solid #334155; margin-top: 10px; padding-top: 10px;">
@@ -206,6 +208,7 @@
 
   <div id="missions-view" style="display: none; padding: 24px; max-width: 1200px; margin: 0 auto;"></div>
   <div id="rewards-view" style="display: none; padding: 24px; max-width: 1200px; margin: 0 auto;"></div>
+  <div id="kaido-view" style="display: none; padding: 24px; max-width: 1200px; margin: 0 auto;"></div>
   <div id="rifa-modal" class="custom-modal-overlay" style="display: none; z-index: 10001;">
     <div class="custom-modal-box" style="max-width: 450px; text-align: left;">
       <h2 style="font-family: 'Bebas Neue', sans-serif; color: var(--yellow); font-size: 28px; margin-bottom: 5px;">🎟️

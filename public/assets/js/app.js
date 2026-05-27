@@ -2,6 +2,7 @@ import { auth, db } from './firebase-config.js';
 import { onAuthStateChanged, signOut } from "https://www.gstatic.com/firebasejs/12.13.0/firebase-auth.js";
 import { doc, getDoc, setDoc, collection, getDocs } from "https://www.gstatic.com/firebasejs/12.13.0/firebase-firestore.js";
 import { RAW } from './data.js';
+import { KAIDO_DATA } from './data_kaido.js';
 
 const idsGerados = new Set();
 RAW.forEach((r) => {
@@ -30,6 +31,7 @@ let pageType = 'all';
 let PAGE_DATA = [];
 let sessionUid = null;
 let userCollection = {};
+let userKaidoCollection = {};
 let sortCol = 'year';
 let sortDesc = true;
 let userPoints = 0;
@@ -84,15 +86,19 @@ function changePage(newPageType) {
 
   const tableArea = document.getElementById('table-body');
   const sortHeader = document.getElementById('mobile-sort') ? document.getElementById('mobile-sort').parentElement : null;
-
   const controlsArea = document.querySelector('.controls');
   const countArea = document.querySelector('.count-bar');
   const pagArea = document.querySelector('.pagination-container');
   const missionsArea = document.getElementById('missions-view');
   const rewardsArea = document.getElementById('rewards-view');
-
-
+  const kaidoArea = document.getElementById('kaido-view');
   const statsRow = document.querySelector('.stats-row');
+
+  if (pageType === 'kaido') {
+    updateSidebarVisibility('kaido');
+  } else {
+    updateSidebarVisibility('hw');
+  }
 
   if (pageType === 'missions') {
     if (tableArea) tableArea.style.display = 'none';
@@ -101,6 +107,7 @@ function changePage(newPageType) {
     if (countArea) countArea.style.display = 'none';
     if (pagArea) pagArea.style.display = 'none';
     if (rewardsArea) rewardsArea.style.display = 'none';
+    if (kaidoArea) kaidoArea.style.display = 'none';
     if (statsRow) statsRow.style.display = 'none';
     if (missionsArea) missionsArea.style.display = 'block';
 
@@ -115,6 +122,7 @@ function changePage(newPageType) {
     if (countArea) countArea.style.display = 'none';
     if (pagArea) pagArea.style.display = 'none';
     if (missionsArea) missionsArea.style.display = 'none';
+    if (kaidoArea) kaidoArea.style.display = 'none';
     if (statsRow) statsRow.style.display = 'none';
     if (rewardsArea) rewardsArea.style.display = 'block';
 
@@ -122,7 +130,24 @@ function changePage(newPageType) {
     document.getElementById('dynamic-badge').style.display = 'none';
     renderRewards();
     return;
+
+  } else if (pageType === 'kaido') {
+    if (tableArea) tableArea.style.display = 'none';
+    if (sortHeader) sortHeader.style.display = 'none';
+    if (controlsArea) controlsArea.style.display = 'none';
+    if (countArea) countArea.style.display = 'none';
+    if (pagArea) pagArea.style.display = 'none';
+    if (missionsArea) missionsArea.style.display = 'none';
+    if (rewardsArea) rewardsArea.style.display = 'none';
+    if (statsRow) statsRow.style.display = 'none';
+    if (kaidoArea) kaidoArea.style.display = 'block';
+
+    document.getElementById('dynamic-title').innerHTML = 'Kaido <span>House</span>';
+    document.getElementById('dynamic-badge').style.display = 'none';
+    renderKaido();
+    return;
   } else {
+
     if (tableArea) tableArea.style.display = 'grid';
     if (sortHeader) sortHeader.style.display = 'flex';
     if (controlsArea) controlsArea.style.display = 'flex';
@@ -130,6 +155,7 @@ function changePage(newPageType) {
     if (pagArea) pagArea.style.display = 'flex';
     if (missionsArea) missionsArea.style.display = 'none';
     if (rewardsArea) rewardsArea.style.display = 'none';
+    if (kaidoArea) kaidoArea.style.display = 'none';
     if (statsRow) statsRow.style.display = 'flex';
   }
 
@@ -556,12 +582,14 @@ async function loadCollection() {
     const snap = await getDoc(dRef);
     if (snap.exists()) {
       userCollection = snap.data().items || {};
+      userKaidoCollection = snap.data().kaidoItems || {};
       userPoints = snap.data().points || 0;
       userMissions = snap.data().missions || {};
       userRewards = snap.data().rewards || [];
       userHistory = snap.data().history || [];
     } else {
       userCollection = {};
+      userKaidoCollection = {};
       userPoints = 0;
       userMissions = {};
       userRewards = [];
@@ -607,6 +635,7 @@ async function loadCollection() {
 }
 
 let saveTimeout = null;
+let saveKaidoTimeout = null;
 
 const PONTOS_POR_CARRO = 100;
 
@@ -650,9 +679,44 @@ async function saveData(carId, qty) {
       console.error("Erro save:", e);
     }
   }, 1000);
+
+
+  
 }
 
+window.saveKaidoData = async function (codigo, qty) {
+    const oldQty = userKaidoCollection[codigo] || 0;
+    userKaidoCollection[codigo] = qty;
+    const uidToSave = targetUid || sessionUid;
 
+    const isVendedorEditandoCliente = (isAdmin || isManager) && targetUid && targetUid !== sessionUid;
+
+    if (isVendedorEditandoCliente && targetRole === 'cliente' && qty > oldQty) {
+      const diff = qty - oldQty;
+      const pontosGanhos = diff * PONTOS_POR_CARRO;
+
+      userPoints += pontosGanhos;
+
+      const pointsEl = document.getElementById('user-points');
+      if (pointsEl) pointsEl.textContent = userPoints;
+
+      addHistoryEntry(uidToSave, `Adição Kaido House`, pontosGanhos, 'earning');
+    }
+
+
+    if (saveKaidoTimeout) clearTimeout(saveKaidoTimeout);
+
+    saveKaidoTimeout = setTimeout(async () => {
+      if (!uidToSave) return;
+      try {
+        const dRef = doc(db, 'collections', uidToSave);
+
+        await setDoc(dRef, { kaidoItems: userKaidoCollection, points: userPoints }, { merge: true });
+      } catch (e) {
+        console.error("Erro ao salvar Kaido:", e);
+      }
+    }, 1000);
+  }
 
 
 function openLb(index) {
@@ -1235,3 +1299,228 @@ async function addHistoryEntry(uid, desc, amount, type) {
     console.error("Erro ao registrar histórico:", e);
   }
 }
+
+
+// ==========================================
+// RENDERIZAÇÃO DA PÁGINA KAIDO HOUSE
+// ==========================================
+window.kaidoCurrentPage = 1;
+window.kaidoItemsPerPage = 25;
+
+window.renderKaido = function () {
+  const container = document.getElementById('kaido-view');
+  if (!container) return;
+
+  // Só cria o layout principal se ele ainda não existir na tela
+  if (!document.getElementById('kaido-search')) {
+    container.innerHTML = `
+    <div style="margin-bottom: 20px;">
+       <button id="btn-back-to-hw" style="background: #334155; color: #fff; border: none; padding: 8px 16px; border-radius: 6px; cursor: pointer;">← Voltar para Hot Wheels</button>
+    </div>
+      <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom: 25px; flex-wrap: wrap; gap: 10px;">
+          <h2 style="font-family: 'Bebas Neue', sans-serif; color: #fff; font-size: 32px; margin: 0; letter-spacing: 1px;">Catálogo Kaido House</h2>
+          <span id="kaido-count-badge" style="background: rgba(192, 132, 252, 0.15); color: #c084fc; padding: 6px 12px; border-radius: 6px; font-weight: bold; border: 1px solid #c084fc; font-family: 'Barlow Condensed', sans-serif;">${KAIDO_DATA.length} Modelos</span>
+      </div>
+      
+      <div style="margin-bottom: 15px;">
+          <input type="text" id="kaido-search" placeholder="🔍 Buscar modelo, marca ou código Kaido..." style="width: 100%; padding: 12px; background: #0f172a; border: 1px solid #475569; color: white; border-radius: 6px; font-family: 'Barlow', sans-serif; font-size: 16px; outline: none; box-sizing: border-box;">
+      </div>
+      
+
+      <div class="count-bar" style="display: flex; margin-bottom: 15px; color: #cbd5e1; font-size: 14px; background: #1e293b; padding: 10px; border-radius: 6px; border: 1px solid #334155;">
+          <span>Exibindo <b id="kaido-visible-count" style="color: #fff;">0</b> de <b id="kaido-all-count" style="color: #fff;">0</b> carros</span>
+      </div>
+      
+      <div class="car-grid" id="kaido-grid"></div>
+
+      <div class="pagination-container" style="display: flex; justify-content: space-between; align-items: center; padding: 20px 0; font-family: 'Barlow', sans-serif; flex-wrap: wrap; gap: 15px; margin-top: 20px; border-top: 1px solid #334155;">
+          <div class="items-per-page">
+              <label style="font-size: 14px; color: #cbd5e1; margin-right: 8px;">Mostrar: </label>
+              <select id="kaido-per-page-select" style="padding: 6px 12px; border-radius: 4px; border: 1px solid #475569; background: #0f172a; color: white; outline: none; cursor: pointer;">
+                  <option value="25" selected>25</option>
+                  <option value="50" >50</option>
+                  <option value="100">100</option>
+                  <option value="all">Todos</option>
+              </select>
+          </div>
+
+          <div class="pagination-controls" style="display: flex; gap: 10px; align-items: center;">
+              <button id="kaido-btn-prev" class="btn-clear" style="padding: 8px 16px; border: 1px solid #475569; border-radius: 4px; background: #1e293b; color: white; cursor: pointer; font-weight: 500;">← Anterior</button>
+              <span id="kaido-page-indicator" style="font-size: 14px; font-weight: bold; color: white; min-width: 100px; text-align: center;">Página 1 de 1</span>
+              <button id="kaido-btn-next" class="btn-clear" style="padding: 8px 16px; border: 1px solid #475569; border-radius: 4px; background: #1e293b; color: white; cursor: pointer; font-weight: 500;">Próximo →</button>
+          </div>
+      </div>
+    `;
+
+    // Adiciona o evento de clique após o HTML ser inserido
+  const btnBack = document.getElementById('btn-back-to-hw');
+  if (btnBack) {
+    btnBack.addEventListener('click', () => {
+      changePage('all'); 
+      updateSidebarVisibility('hw');
+    });
+  }
+
+    // EVENTOS DA BARRA DE PESQUISA
+    document.getElementById('kaido-search').addEventListener('input', () => {
+      window.kaidoCurrentPage = 1; // Volta para a página 1 ao pesquisar
+      window.renderKaidoGrid();
+    });
+
+    // EVENTOS DA PAGINAÇÃO
+    document.getElementById('kaido-per-page-select').addEventListener('change', (e) => {
+      window.kaidoItemsPerPage = e.target.value === 'all' ? 'all' : parseInt(e.target.value);
+      window.kaidoCurrentPage = 1;
+      window.renderKaidoGrid();
+    });
+
+    document.getElementById('kaido-btn-prev').addEventListener('click', () => {
+      if (window.kaidoCurrentPage > 1) {
+        window.kaidoCurrentPage--;
+        window.renderKaidoGrid();
+      }
+    });
+
+    document.getElementById('kaido-btn-next').addEventListener('click', () => {
+      // Descobre o total de páginas atuais (baseado na pesquisa ativa)
+      const searchInput = document.getElementById('kaido-search');
+      const query = searchInput ? searchInput.value.toLowerCase().trim() : '';
+      const filteredData = KAIDO_DATA.filter(car => {
+        if (!query) return true;
+        return (car.modelo && car.modelo.toLowerCase().includes(query)) ||
+          (car.codigo && car.codigo.toLowerCase().includes(query)) ||
+          (car.marca && car.marca.toLowerCase().includes(query));
+      });
+
+      const maxPages = window.kaidoItemsPerPage === 'all' ? 1 : Math.ceil(filteredData.length / window.kaidoItemsPerPage);
+      if (window.kaidoCurrentPage < maxPages) {
+        window.kaidoCurrentPage++;
+        window.renderKaidoGrid();
+      }
+    });
+  }
+
+  window.renderKaidoGrid();
+};
+
+let showingOnlyOwnedKaido = false;
+
+window.renderKaidoGrid = function () {
+  const grid = document.getElementById('kaido-grid');
+  const searchInput = document.getElementById('kaido-search');
+  if (!grid || !searchInput) return;
+
+  const query = searchInput.value.toLowerCase().trim();
+  grid.innerHTML = '';
+
+  // 1. APLICA O FILTRO DE PESQUISA
+  const filteredData = KAIDO_DATA.filter(car => {
+    if (!query) return true;
+    return (car.modelo && car.modelo.toLowerCase().includes(query)) ||
+      (car.codigo && car.codigo.toLowerCase().includes(query)) ||
+      (car.marca && car.marca.toLowerCase().includes(query));
+  });
+
+  // 2. APLICA A PAGINAÇÃO
+  let dataToRender = filteredData;
+  let totalPages = 1;
+
+  if (window.kaidoItemsPerPage !== 'all') {
+    totalPages = Math.ceil(filteredData.length / window.kaidoItemsPerPage) || 1;
+    if (window.kaidoCurrentPage > totalPages) window.kaidoCurrentPage = totalPages;
+    if (window.kaidoCurrentPage < 1) window.kaidoCurrentPage = 1;
+
+    const start = (window.kaidoCurrentPage - 1) * window.kaidoItemsPerPage;
+    dataToRender = filteredData.slice(start, start + window.kaidoItemsPerPage);
+  }
+
+  // 3. ATUALIZA OS TEXTOS E BOTÕES DE PAGINAÇÃO
+  const pageIndicator = document.getElementById('kaido-page-indicator');
+  const btnPrev = document.getElementById('kaido-btn-prev');
+  const btnNext = document.getElementById('kaido-btn-next');
+  const visCount = document.getElementById('kaido-visible-count');
+  const allCount = document.getElementById('kaido-all-count');
+  const badge = document.getElementById('kaido-count-badge');
+
+  if (pageIndicator) pageIndicator.textContent = `Página ${window.kaidoCurrentPage} de ${totalPages}`;
+  if (btnPrev) { btnPrev.disabled = window.kaidoCurrentPage === 1; btnPrev.style.opacity = btnPrev.disabled ? "0.3" : "1"; }
+  if (btnNext) { btnNext.disabled = window.kaidoCurrentPage === totalPages; btnNext.style.opacity = btnNext.disabled ? "0.3" : "1"; }
+  if (visCount) visCount.textContent = dataToRender.length;
+  if (allCount) allCount.textContent = filteredData.length;
+  if (badge) badge.textContent = `${filteredData.length} Modelos`;
+
+  // 4. DESENHA OS CARTÕES DA PÁGINA ATUAL
+  dataToRender.forEach(car => {
+    const qty = userKaidoCollection[car.codigo] || 0;
+    const repetidos = qty > 1 ? qty - 1 : 0;
+    const has = qty > 0;
+
+    const card = document.createElement('div');
+    card.className = `car-card ${has ? 'owned-card' : ''}`;
+
+    let optionsHTML = '';
+    for (let i = 0; i <= 50; i++) {
+      optionsHTML += `<option value="${i}" ${i === qty ? 'selected' : ''}>${i}</option>`;
+    }
+
+    let controlesHTML = `
+      <div style="display: flex; gap: 8px; align-items: center; width: 100%;">
+        <select class="qty-input" style="width: 100%; max-width: 65px; padding: 8px; background: #0f172a; border: 1px solid #475569; color: var(--yellow); border-radius: 6px; font-weight: bold; font-size: 16px; outline: none; cursor: pointer; appearance: none; -webkit-appearance: none; text-align-last: center;">
+          ${optionsHTML}
+        </select>
+        <button class="btn-save-kaido" style="display: none; flex: 1; padding: 8px; background: #16a34a; color: white; border: none; border-radius: 6px; font-weight: bold; cursor: pointer;">Salvar</button>
+        ${repetidos > 0 ? `<span class="rep-badge" style="background: #ffedd5; color: #ea580c; padding: 4px 8px; border-radius: 6px; font-weight: bold; font-size: 11px;">+${repetidos}</span>` : ''}
+      </div>`;
+
+    card.innerHTML = `
+      <div class="car-image-container" style="position: relative;">
+        <span class="year-badge" style="background: #c084fc; color: #fff; font-family: 'Barlow', sans-serif;">${car.codigo}</span>
+        <img src="${car.caminho_imagem}" loading="lazy" alt="${car.modelo}" onerror="this.src='assets/img/placeholder.png';">
+      </div>
+      <div class="car-info">
+        <div class="car-title" title="${car.modelo}">${car.modelo}</div>
+        <div class="car-series">${car.fabricante} | Escala ${car.escala}</div>
+        <div style="display:flex; align-items:center; gap:6px; margin-top: 12px; margin-bottom: 12px; font-size: 11px; color: #cbd5e1; font-weight: bold; text-transform: uppercase;">
+            <span style="display:inline-block; width:10px; height:10px; border-radius:50%; background:#c084fc; box-shadow:0 0 0 1px rgba(255,255,255,0.15)"></span>
+            ${car.marca}
+        </div>
+        <div class="car-controls">
+            ${controlesHTML}
+        </div>
+      </div>
+    `;
+
+    grid.appendChild(card);
+
+    const inputElement = card.querySelector('.qty-input');
+    const saveBtn = card.querySelector('.btn-save-kaido');
+
+    inputElement.addEventListener('change', (e) => {
+      let newVal = parseInt(e.target.value) || 0;
+      saveBtn.style.display = newVal !== (userKaidoCollection[car.codigo] || 0) ? 'block' : 'none';
+    });
+
+    saveBtn.addEventListener('click', () => {
+      saveKaidoData(car.codigo, parseInt(inputElement.value) || 0);
+      saveBtn.style.display = 'none';
+      setTimeout(() => renderKaidoGrid(), 50);
+    });
+  });
+
+  if (filteredData.length === 0) {
+    grid.innerHTML = `<div style="grid-column: 1 / -1; text-align: center; padding: 40px; color: var(--muted); font-size: 16px;">Nenhum modelo encontrado para "${query}".</div>`;
+  }
+};
+
+window.updateSidebarVisibility = function(tipo) {
+  const hwItems = document.querySelectorAll('.hw-menu-item');
+  const sthItems = document.querySelectorAll('.sth-menu-item');
+  
+  if (tipo === 'kaido') {
+    hwItems.forEach(el => el.style.display = 'none');
+    sthItems.forEach(el => el.style.display = 'none');
+  } else {
+    hwItems.forEach(el => el.style.display = 'block');
+    sthItems.forEach(el => el.style.display = 'block');
+  }
+};
