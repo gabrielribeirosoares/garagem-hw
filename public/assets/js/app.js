@@ -1316,9 +1316,6 @@ window.renderKaido = function (onlyOwned = false) {
   // Só cria o layout principal se ele ainda não existir na tela
   if (!document.getElementById('kaido-search')) {
     container.innerHTML = `
-    <div style="margin-bottom: 20px;">
-       <button id="btn-back-to-hw" style="background: #334155; color: #fff; border: none; padding: 8px 16px; border-radius: 6px; cursor: pointer;">← Voltar para Hot Wheels</button>
-    </div>
       <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom: 25px; flex-wrap: wrap; gap: 10px;">
           <h2 style="font-family: 'Bebas Neue', sans-serif; color: #fff; font-size: 32px; margin: 0; letter-spacing: 1px;">Catálogo Kaido House</h2>
           <span id="kaido-count-badge" style="background: rgba(192, 132, 252, 0.15); color: #c084fc; padding: 6px 12px; border-radius: 6px; font-weight: bold; border: 1px solid #c084fc; font-family: 'Barlow Condensed', sans-serif;">${KAIDO_DATA.length} Modelos</span>
@@ -1353,16 +1350,7 @@ window.renderKaido = function (onlyOwned = false) {
           </div>
       </div>
     `;
-
-    // Adiciona o evento de clique após o HTML ser inserido
-    const btnBack = document.getElementById('btn-back-to-hw');
-    if (btnBack) {
-      btnBack.addEventListener('click', () => {
-        changePage('all');
-        updateSidebarVisibility('hw');
-      });
-    }
-
+  
     // EVENTOS DA BARRA DE PESQUISA
     document.getElementById('kaido-search').addEventListener('input', () => {
       window.kaidoCurrentPage = 1; // Volta para a página 1 ao pesquisar
