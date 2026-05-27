@@ -6,7 +6,7 @@ export const RAW = [
     "color": "Branco",
     "part": "JJJ02",
     "hw": "001",
-    "cas": "",
+    "cas": "A",
     "image": "https://static.wikia.nocookie.net/hotwheels/images/2/26/CyberpunkMazda.jpg/revision/latest?cb=20251015121255"
   },
   {
@@ -112546,7 +112546,7 @@ export const RAW = [
     "color": "Red",
     "part": "5675",
     "hw": "BW",
-    "cas": "Yellow, Pink and Blue stripes",
+    "cas": "",
     "image": "https://static.wikia.nocookie.net/hotwheels/images/6/6b/Chevy_Lumina_Red.JPG/revision/latest?cb=20081220184511"
   },
   {
@@ -112556,7 +112556,7 @@ export const RAW = [
     "color": "Teal",
     "part": "2029",
     "hw": "UH",
-    "cas": "Blue and Yellow graphics",
+    "cas": "",
     "image": "https://static.wikia.nocookie.net/hotwheels/images/3/33/%2756_Flashsider_-_6407df.jpg/revision/latest?cb=20081113105505"
   },
   {
@@ -112566,7 +112566,7 @@ export const RAW = [
     "color": "Yellow",
     "part": "3765",
     "hw": "MW",
-    "cas": "N/A",
+    "cas": "",
     "image": "https://static.wikia.nocookie.net/hotwheels/images/c/cb/Bulldozer.JPG/revision/latest?cb=20090109063021"
   },
   {
@@ -112576,7 +112576,7 @@ export const RAW = [
     "color": "Black",
     "part": "3156",
     "hw": "GHO",
-    "cas": "Green, Pink, Yellow \"TURBO\"",
+    "cas": "",
     "image": "https://static.wikia.nocookie.net/hotwheels/images/6/60/Flashfire_BlkSho.JPG/revision/latest?cb=20090202040905"
   },
   {
@@ -112586,7 +112586,7 @@ export const RAW = [
     "color": "Gray",
     "part": "1384",
     "hw": "N/A",
-    "cas": "Black, \"GOOD YEAR\"",
+    "cas": "",
     "image": "https://static.wikia.nocookie.net/hotwheels/images/e/e7/Blimp_GY.JPG/revision/latest?cb=20090319210758"
   },
   {
@@ -112596,7 +112596,7 @@ export const RAW = [
     "color": "Red",
     "part": "3782",
     "hw": "BW",
-    "cas": "Red, Blue, Yellow, \"WACKY WAREHOUSE\" \"Kool-Aid\"",
+    "cas": "",
     "image": "https://static.wikia.nocookie.net/hotwheels/images/d/d7/Hiway_Hauler_KlAid.JPG/revision/latest?cb=20090219001350"
   },
   {
@@ -112606,7 +112606,7 @@ export const RAW = [
     "color": "Light Brown",
     "part": "0773",
     "hw": "CT",
-    "cas": "Orange, Brown, Black camouflage",
+    "cas": "",
     "image": "https://static.wikia.nocookie.net/hotwheels/images/7/70/Hummer_ltBrnMet.JPG/revision/latest?cb=20090207051810"
   },
   {
@@ -112616,7 +112616,7 @@ export const RAW = [
     "color": "White with Blue fenders and Red mixer",
     "part": "2074",
     "hw": "BW",
-    "cas": "No tampos",
+    "cas": "",
     "image": "https://static.wikia.nocookie.net/hotwheels/images/8/8f/Oshkosh_Cement_Mixer_Wht.JPG/revision/latest?cb=20090108183128"
   },
   {
@@ -112626,7 +112626,7 @@ export const RAW = [
     "color": "Orange",
     "part": "2073",
     "hw": "BW",
-    "cas": "Pink, Blue, Yellow, \"Recycler\"",
+    "cas": "",
     "image": "https://static.wikia.nocookie.net/hotwheels/images/d/d8/Recycling_Truck_Orgbw.JPG/revision/latest?cb=20090203154532"
   },
   {
@@ -112636,7 +112636,7 @@ export const RAW = [
     "color": "Black & Pink",
     "part": "3164",
     "hw": "CT",
-    "cas": "Blue, Red, Yellow \"7\"",
+    "cas": "",
     "image": "https://static.wikia.nocookie.net/hotwheels/images/9/92/Shock_Factor_BlkPk.JPG/revision/latest?cb=20090201224356"
   },
   {
@@ -112646,7 +112646,7 @@ export const RAW = [
     "color": "Yellow w/Yellow Plastic Top",
     "part": "2075",
     "hw": "Yellow Tractor Wheel & Yellow CT",
-    "cas": "No tampos",
+    "cas": "",
     "image": "https://static.wikia.nocookie.net/hotwheels/images/b/bc/Tractor_YelYel.JPG/revision/latest?cb=20081220203550"
   },
   {
@@ -112656,7 +112656,7 @@ export const RAW = [
     "color": "Red with Chrome plastic tank",
     "part": "2076",
     "hw": "BW",
-    "cas": "Orange & Blue \"Unocal\" \"76\" on tank",
+    "cas": "",
     "image": "https://static.wikia.nocookie.net/hotwheels/images/6/69/Tank_Truck_RedBW.JPG/revision/latest?cb=20090228212319"
   },
   {
@@ -112666,7 +112666,7 @@ export const RAW = [
     "color": "Yellow",
     "part": "3853",
     "hw": "CR1",
-    "cas": "N/A",
+    "cas": "",
     "image": "https://static.wikia.nocookie.net/hotwheels/images/1/19/Hot_Wheels_Road_Roller_1992_-_07181df.jpg/revision/latest?cb=20170719231848"
   },
   {
@@ -112676,7 +112676,7 @@ export const RAW = [
     "color": "Yellow",
     "part": "1795",
     "hw": "BW",
-    "cas": "Black SCHOOL BUS",
+    "cas": "",
     "image": "https://static.wikia.nocookie.net/hotwheels/images/7/77/School_Bus_-_3030cf2.jpg/revision/latest?cb=20170705013036"
   },
   {
@@ -112686,7 +112686,7 @@ export const RAW = [
     "color": "Red",
     "part": "9640",
     "hw": "BW",
-    "cas": "Balck and Yellow Instrument Panel and Hoses. '51', Yellow sheild with stars on sides",
+    "cas": "",
     "image": "https://static.wikia.nocookie.net/hotwheels/images/6/64/FIRE-EATER_9640_4.jpg/revision/latest?cb=20211229142858"
   },
   {
@@ -112696,7 +112696,7 @@ export const RAW = [
     "color": "Yellow",
     "part": "3999",
     "hw": "BW",
-    "cas": "Black \"PENNZOIL\", Red \"4\"",
+    "cas": "",
     "image": "https://static.wikia.nocookie.net/hotwheels/images/9/98/Thunderstreak_Penzl.JPG/revision/latest?cb=20090201164457"
   },
   {
@@ -112706,7 +112706,7 @@ export const RAW = [
     "color": "Black",
     "part": "0444",
     "hw": "BW",
-    "cas": "Yellow, Green and Purple on wings",
+    "cas": "",
     "image": "https://static.wikia.nocookie.net/hotwheels/images/c/c2/Vampyra_BlkBW.JPG/revision/latest?cb=20090102210155"
   },
   {
@@ -112716,7 +112716,7 @@ export const RAW = [
     "color": "Blue",
     "part": "5902",
     "hw": "UH",
-    "cas": "Orange,Magenta,Pink ‘2’",
+    "cas": "",
     "image": "https://static.wikia.nocookie.net/hotwheels/images/0/0e/Sol-Aire_CX4_-_92_HW.jpg/revision/latest?cb=20090126045843"
   },
   {
@@ -112726,7 +112726,7 @@ export const RAW = [
     "color": "Fluorescent Lime",
     "part": "2781",
     "hw": "ORSB",
-    "cas": "Orange, White and Blue \"Ecology Recycle Center\"",
+    "cas": "",
     "image": "https://static.wikia.nocookie.net/hotwheels/images/b/b5/Image_Not_Available.jpg/revision/latest?cb=20151025125428"
   },
   {
@@ -112736,7 +112736,7 @@ export const RAW = [
     "color": "Metalflake Dark Blue",
     "part": "13579",
     "hw": "GLW",
-    "cas": "N/A",
+    "cas": "",
     "image": "https://static.wikia.nocookie.net/hotwheels/images/b/b5/Image_Not_Available.jpg/revision/latest?cb=20151025125428"
   },
   {
@@ -112746,7 +112746,7 @@ export const RAW = [
     "color": "Tan",
     "part": "4643",
     "hw": "ORSB",
-    "cas": "Brown, Black and Orange Camouflage",
+    "cas": "",
     "image": "https://static.wikia.nocookie.net/hotwheels/images/0/0f/Mercedes_Benz_Unimog_TanSBW.JPG/revision/latest?cb=20090108184733"
   },
   {
@@ -112756,7 +112756,7 @@ export const RAW = [
     "color": "Light Grey",
     "part": "13192",
     "hw": "Black MGW",
-    "cas": "Brown, Black & White Camouflage",
+    "cas": "",
     "image": "https://static.wikia.nocookie.net/hotwheels/images/7/70/Big_Bertha_gryL.JPG/revision/latest?cb=20100723020736"
   },
   {
@@ -112816,7 +112816,7 @@ export const RAW = [
     "color": "Blue",
     "part": "9258",
     "hw": "BW",
-    "cas": "Red \"6\" on sides, White \"Roses\", \"BUICK\" on hood",
+    "cas": "",
     "image": "https://static.wikia.nocookie.net/hotwheels/images/4/4c/Buick_Stocker_Roses6.JPG/revision/latest?cb=20081210022303"
   },
   {
@@ -112826,7 +112826,7 @@ export const RAW = [
     "color": "White",
     "part": "9713",
     "hw": "BW",
-    "cas": "Black, Pink, Yellow \"SV\"",
+    "cas": "",
     "image": "https://static.wikia.nocookie.net/hotwheels/images/8/89/Holden_Commodore.jpg/revision/latest?cb=20090612191330"
   },
   {
@@ -112836,7 +112836,7 @@ export const RAW = [
     "color": "Chrome with Black beltline",
     "part": "9770",
     "hw": "Chrome HO",
-    "cas": "N/A",
+    "cas": "",
     "image": "https://static.wikia.nocookie.net/hotwheels/images/2/26/Mercedes-Benz_SL_CrmSho.JPG/revision/latest?cb=20081219193056"
   },
   {
@@ -112846,7 +112846,7 @@ export const RAW = [
     "color": "Black",
     "part": "5670",
     "hw": "BW",
-    "cas": "N/A",
+    "cas": "",
     "image": "https://static.wikia.nocookie.net/hotwheels/images/2/2c/Peugeot_405_Blk.JPG/revision/latest?cb=20090213150137"
   },
   {
@@ -112856,7 +112856,7 @@ export const RAW = [
     "color": "Blue",
     "part": "3204",
     "hw": "BW",
-    "cas": "White, Black, Red \"Rally\" \"21\"",
+    "cas": "",
     "image": "https://static.wikia.nocookie.net/hotwheels/images/3/38/Peugeot_405_Blu.JPG/revision/latest?cb=20090213150113"
   },
   {
@@ -112866,7 +112866,7 @@ export const RAW = [
     "color": "Met. Dark Red",
     "part": "7607",
     "hw": "BW",
-    "cas": "Yellow, Black, \"TURBO\", White \"PORSCHE 930\"",
+    "cas": "",
     "image": "https://static.wikia.nocookie.net/hotwheels/images/1/1d/Porsche_930_MtRed.JPG/revision/latest?cb=20090311023033"
   },
   {
@@ -112876,7 +112876,7 @@ export const RAW = [
     "color": "Blue",
     "part": "9749",
     "hw": "BW",
-    "cas": "Red, White \"Turbo\", Yellow \"GT\"",
+    "cas": "",
     "image": "https://static.wikia.nocookie.net/hotwheels/images/e/eb/Renault_5_Turbo_Blu.JPG/revision/latest?cb=20090116180531"
   },
   {
@@ -112886,7 +112886,7 @@ export const RAW = [
     "color": "White",
     "part": "9749",
     "hw": "BW",
-    "cas": "Blue, Yellow, Black \"17\"",
+    "cas": "",
     "image": "https://static.wikia.nocookie.net/hotwheels/images/c/c7/Renault_5_Turbo_Wht.JPG/revision/latest?cb=20090116180550"
   },
   {
@@ -112896,7 +112896,7 @@ export const RAW = [
     "color": "White",
     "part": "",
     "hw": "BW",
-    "cas": "N/A",
+    "cas": "",
     "image": "https://static.wikia.nocookie.net/hotwheels/images/c/c1/Speed_Shark_Wht.JPG/revision/latest?cb=20090124023858"
   },
   {
@@ -113226,7 +113226,7 @@ export const RAW = [
     "color": "White & Turquoise",
     "part": "",
     "hw": "BW",
-    "cas": "Turquoise, Pink, Blue scallops",
+    "cas": "",
     "image": "https://static.wikia.nocookie.net/hotwheels/images/1/11/32_Ford_Delivery_TrqwhtBW.JPG/revision/latest?cb=20091021221623"
   },
   {
@@ -113236,7 +113236,7 @@ export const RAW = [
     "color": "Blue & Gray",
     "part": "",
     "hw": "WW",
-    "cas": "None",
+    "cas": "",
     "image": "https://static.wikia.nocookie.net/hotwheels/images/c/c7/37_Bugatti_Bluww.JPG/revision/latest?cb=20091021215143"
   },
   {
@@ -113246,7 +113246,7 @@ export const RAW = [
     "color": "Red",
     "part": "",
     "hw": "WW",
-    "cas": "None",
+    "cas": "",
     "image": "https://static.wikia.nocookie.net/hotwheels/images/9/92/Auburn_852_-_5376ef.jpg/revision/latest?cb=20110405173733"
   },
   {
@@ -113266,7 +113266,7 @@ export const RAW = [
     "color": "Gray",
     "part": "3286",
     "hw": "UH",
-    "cas": "No tampos",
+    "cas": "",
     "image": "https://static.wikia.nocookie.net/hotwheels/images/7/7e/Sharkruiser_PrpUH.JPG/revision/latest?cb=20090113054003"
   },
   {
@@ -113276,7 +113276,7 @@ export const RAW = [
     "color": "Gold Chrome",
     "part": "3852",
     "hw": "Chrome GHO",
-    "cas": "Pink",
+    "cas": "",
     "image": "https://static.wikia.nocookie.net/hotwheels/images/8/8c/Zombot_GldHO.JPG/revision/latest?cb=20090113013404"
   },
   {
@@ -113286,7 +113286,7 @@ export const RAW = [
     "color": "Purple",
     "part": "2060",
     "hw": "BW",
-    "cas": "White, Orange & Red on wings",
+    "cas": "",
     "image": "https://static.wikia.nocookie.net/hotwheels/images/0/0a/Vampyra_-_Basic_Wheels.jpg/revision/latest?cb=20150222002054"
   },
   {
@@ -113296,7 +113296,7 @@ export const RAW = [
     "color": "White",
     "part": "5028",
     "hw": "UH",
-    "cas": "Red & Black Eyes, Silver Teeth, Black Nose",
+    "cas": "",
     "image": "https://static.wikia.nocookie.net/hotwheels/images/b/b5/Image_Not_Available.jpg/revision/latest?cb=20151025125428"
   },
   {
@@ -113306,7 +113306,7 @@ export const RAW = [
     "color": "Olive",
     "part": "9560",
     "hw": "Black CT",
-    "cas": "Brown, Tan & Olive Camouflage on hood",
+    "cas": "",
     "image": "https://static.wikia.nocookie.net/hotwheels/images/e/e4/Trailbuster_OlvCT.JPG/revision/latest?cb=20091028154339"
   },
   {
@@ -113316,7 +113316,7 @@ export const RAW = [
     "color": "Turquoise",
     "part": "1610",
     "hw": "BW",
-    "cas": "Yellow, White, & Purple stripes on sides.",
+    "cas": "",
     "image": "https://static.wikia.nocookie.net/hotwheels/images/6/6e/HW_57_T-BIRD_1610_1_C.jpg/revision/latest?cb=20190805181305"
   },
   {
@@ -113326,7 +113326,7 @@ export const RAW = [
     "color": "Bright Pink",
     "part": "10153",
     "hw": "TW Pink",
-    "cas": "Yellow, Green, Blue, White Graphics",
+    "cas": "",
     "image": "https://static.wikia.nocookie.net/hotwheels/images/3/37/55nomad.orangecc.jpg/revision/latest?cb=20090614153638"
   },
   {
@@ -113336,7 +113336,7 @@ export const RAW = [
     "color": "Bright Orange",
     "part": "1297",
     "hw": "TW",
-    "cas": "Pink, Blue, Silver \"'57\"",
+    "cas": "",
     "image": "https://static.wikia.nocookie.net/hotwheels/images/1/18/57_Chevy_CalCustTW.JPG/revision/latest?cb=20090309022604"
   },
   {
@@ -113346,7 +113346,7 @@ export const RAW = [
     "color": "Pink",
     "part": "2097",
     "hw": "WW",
-    "cas": "Yellow, Purple, Blue, White Graphics",
+    "cas": "",
     "image": "https://static.wikia.nocookie.net/hotwheels/images/6/62/59_CADDY_pink_CC.JPG/revision/latest?cb=20090815015940"
   },
   {
@@ -113356,7 +113356,7 @@ export const RAW = [
     "color": "Met. Blue",
     "part": "",
     "hw": "TW",
-    "cas": "Light Green, White and Pink splashes",
+    "cas": "",
     "image": "https://static.wikia.nocookie.net/hotwheels/images/f/f8/%2767_Camaro_CalCust.jpg/revision/latest?cb=20081231051423"
   },
   {
@@ -113366,7 +113366,7 @@ export const RAW = [
     "color": "Bright Orange",
     "part": "1301",
     "hw": "TW",
-    "cas": "Yellow, White, Pink \"CORVETTE\" on hood",
+    "cas": "",
     "image": "https://static.wikia.nocookie.net/hotwheels/images/a/ab/Custom_Corvette_CCtw.JPG/revision/latest?cb=20091010204911"
   },
   {
@@ -113376,7 +113376,7 @@ export const RAW = [
     "color": "Bright Pink",
     "part": "1897",
     "hw": "RR Yellow",
-    "cas": "Blue & Yellow \"Ferrari\" \"3\"",
+    "cas": "",
     "image": "https://static.wikia.nocookie.net/hotwheels/images/8/80/Ferrari_Testarossa_BrtRed.JPG/revision/latest?cb=20081222052828"
   },
   {
@@ -113386,7 +113386,7 @@ export const RAW = [
     "color": "Bright Pink",
     "part": "1897",
     "hw": "TW",
-    "cas": "Blue & Yellow \"Ferrari\" \"3\"",
+    "cas": "",
     "image": "https://static.wikia.nocookie.net/hotwheels/images/b/b4/Ferrari_Testarossa_BrtRedTW.JPG/revision/latest?cb=20081222052854"
   },
   {
@@ -113396,7 +113396,7 @@ export const RAW = [
     "color": "Pink Chrome",
     "part": "2108",
     "hw": "TW Yellow",
-    "cas": "Yellow, Red, Blue confetti",
+    "cas": "",
     "image": "https://static.wikia.nocookie.net/hotwheels/images/3/3e/P-911_CalCstm.JPG/revision/latest?cb=20090313132325"
   },
   {
@@ -113406,7 +113406,7 @@ export const RAW = [
     "color": "Bright Orange",
     "part": "1470",
     "hw": "CT",
-    "cas": "White, Blue & Red stripes and confetti",
+    "cas": "",
     "image": "https://static.wikia.nocookie.net/hotwheels/images/b/be/Street_Roader_OrgClCst.jpg/revision/latest?cb=20081123211617"
   },
   {
@@ -113416,7 +113416,7 @@ export const RAW = [
     "color": "Bright Orange & Pink",
     "part": "1470",
     "hw": "CT",
-    "cas": "White, Blue & Red stripes and confetti",
+    "cas": "",
     "image": "https://static.wikia.nocookie.net/hotwheels/images/5/5b/Street_Roader_OrgPkClCst.jpg/revision/latest?cb=20081123211738"
   },
   {
@@ -113426,7 +113426,7 @@ export const RAW = [
     "color": "Fluorescent Red",
     "part": "2106",
     "hw": "TW Yellow",
-    "cas": "Yellow, Pink",
+    "cas": "",
     "image": "https://static.wikia.nocookie.net/hotwheels/images/f/fe/Stutz_Blackhawk_CalC.JPG/revision/latest?cb=20090118035542"
   },
   {

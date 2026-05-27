@@ -245,11 +245,29 @@ function getFilteredData() {
     let vA = a[sortCol];
     let vB = b[sortCol];
 
-    if (sortCol === 'name' || sortCol === 'series' || sortCol === 'color' || sortCol === 'part') {
-      vA = String(vA || '').toLowerCase();
-      vB = String(vB || '').toLowerCase();
+    // Limpa espaços acidentais (.trim) e ignora maiúsculas/minúsculas
+    if (sortCol === 'name' || sortCol === 'series' || sortCol === 'color' || sortCol === 'part' || sortCol === 'cas') {
+      vA = String(vA || '').trim().toLowerCase();
+      vB = String(vB || '').trim().toLowerCase();
     }
 
+    // 🔒 REGRA ESPECIAL PARA ORDENAÇÃO DE LOTE
+    if (sortCol === 'cas') {
+      // 1. Se um carro não tem lote, joga ele para o final da lista
+      if (vA === '' && vB !== '') return 1;
+      if (vA !== '' && vB === '') return -1;
+
+      // 2. Se os dois carros são do MESMO lote, desempata pelo Nome do Carro (A-Z)
+      if (vA === vB) {
+        let nA = String(a.name || '').trim().toLowerCase();
+        let nB = String(b.name || '').trim().toLowerCase();
+        if (nA < nB) return -1;
+        if (nA > nB) return 1;
+        return 0;
+      }
+    }
+
+    // Ordenação padrão para os outros filtros
     if (vA < vB) return sortDesc ? 1 : -1;
     if (vA > vB) return sortDesc ? -1 : 1;
     return 0;
@@ -257,9 +275,6 @@ function getFilteredData() {
 
   return filtered;
 }
-
-
-
 
 function render() {
   const fullData = getFilteredData();
@@ -348,9 +363,15 @@ function render() {
         </div>`;
     }
 
+    // Cria a etiqueta (badge) do Lote se existir, posicionada no canto superior direito
+    const loteBadge = r.cas
+      ? `<span style="position: absolute; top: 8px; right: 8px; background: #334155; color: #f8fafc; padding: 4px 8px; border-radius: 4px; font-size: 11px; font-weight: bold; border: 1px solid #475569; z-index: 2; box-shadow: 0 2px 4px rgba(0,0,0,0.5);">LOTE ${r.cas}</span>`
+      : '';
+
     card.innerHTML = `
-      <div class="car-image-container">
+      <div class="car-image-container" style="position: relative;">
         <span class="year-badge">${r.year}</span>
+        ${loteBadge}
         ${imgCell}
       </div>
       <div class="car-info">
