@@ -94,7 +94,8 @@ function updatePageUI() {
   currentPage = 1;
 }
 
-function changePage(newPageType) {
+window.changePage = function(newPageType) {
+
   if (isPublicView) {
     if (newPageType === 'all') newPageType = 'owned';
     if (newPageType === 'kaido') newPageType = 'kaido-owned';
@@ -639,11 +640,12 @@ if (btnLogoutMenu) {
   });
 }
 
-async function loadCollection() {
+window.loadCollection = async function() {
   const uidToLoad = publicGarageUid || targetUid || sessionUid;
   if (!uidToLoad) return;
 
   try {
+    // 1. Carrega os carrinhos
     const dRef = doc(db, 'collections', uidToLoad);
     const snap = await getDoc(dRef);
     if (snap.exists()) {
@@ -664,6 +666,7 @@ async function loadCollection() {
       userWishlist = {}; 
     }
 
+    // 2. Carrega os dados do Usuário (Nome e Permissões)
     const uRef = doc(db, 'users', uidToLoad);
     const uSnap = await getDoc(uRef);
 
@@ -674,7 +677,7 @@ async function loadCollection() {
       currentLojaId = uSnap.data().lojaId || 'default';
 
       // ==========================================
-      // NOVA LÓGICA: NOME DO DONO E OCULTAÇÃO DE MENUS (VISITANTES)
+      // LÓGICA DO VISITANTE: NOME E OCULTAÇÃO DE MENUS
       // ==========================================
       if (typeof isPublicView !== 'undefined' && isPublicView) {
         const nomeEncontrado = uSnap.data().name || uSnap.data().nome;
@@ -694,6 +697,9 @@ async function loadCollection() {
         
         const menuLogout = document.getElementById('logout-menu');
         if (menuLogout) menuLogout.parentElement.style.display = 'none';
+        
+        const adminSelector = document.getElementById('admin-client-selector');
+        if (adminSelector) adminSelector.style.display = 'none';
       }
       // ==========================================
 
@@ -701,26 +707,41 @@ async function loadCollection() {
       targetRole = 'user';
     }
 
-    try {
-      const lojaRef = doc(db, 'lojas', currentLojaId);
-      const lojaSnap = await getDoc(lojaRef);
-      if (lojaSnap.exists() && lojaSnap.data().recompensas) {
-        LISTA_RECOMPENSAS = lojaSnap.data().recompensas;
-      } else {
+    // ==========================================
+    // 🔒 TRAVA CRUCIAL: Só busca a loja se NÃO for visitante
+    // ==========================================
+    if (!isPublicView) {
+      try {
+        const lojaRef = doc(db, 'lojas', currentLojaId);
+        const lojaSnap = await getDoc(lojaRef);
+        if (lojaSnap.exists() && lojaSnap.data().recompensas) {
+          LISTA_RECOMPENSAS = lojaSnap.data().recompensas;
+        } else {
+          LISTA_RECOMPENSAS = [];
+        }
+      } catch (e) {
+        console.error("Erro ao carregar prêmios da loja:", e);
         LISTA_RECOMPENSAS = [];
       }
-    } catch (e) {
-      console.error("Erro ao carregar prêmios da loja:", e);
-      LISTA_RECOMPENSAS = [];
+    } else {
+       // Se for visitante, a lista de recompensas fica vazia para evitar erros
+       LISTA_RECOMPENSAS = []; 
     }
 
+    // 3. Atualiza os pontos na tela
     const pointsEl = document.getElementById('user-points');
     if (pointsEl) pointsEl.textContent = userPoints;
 
-    changePage('all'); // Lembra que nossa mudança no changePage vai converter 'all' em 'owned' se for visitante!
+    // 4. Força a ir para a tela de "Minha Coleção" se for visitante
+    if (isPublicView) {
+        changePage('owned'); 
+    } else {
+        changePage('all');
+    }
+    
   } catch (err) {
     console.error("Erro load:", err);
-    changePage('all');
+    changePage(isPublicView ? 'owned' : 'all');
   }
 }
 
