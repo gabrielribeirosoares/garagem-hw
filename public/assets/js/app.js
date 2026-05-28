@@ -49,6 +49,12 @@ let targetRole = 'user';
 let isManager = false;
 let userHistory = [];
 
+let userWishlist = {};
+
+const urlParams = new URLSearchParams(window.location.search);
+const publicGarageUid = urlParams.get('garagem');
+const isPublicView = !!publicGarageUid;
+
 
 
 
@@ -57,6 +63,8 @@ function updatePageData() {
     if (pageType === 'all' || pageType === 'owned') return true;
     if (pageType === 'sth' && r.series && r.series.toLowerCase().includes('super')) return true;
     if (pageType === 'th' && r.series && !r.series.toLowerCase().includes('super')) return true;
+    // Ensina o sistema a mostrar os carros curtidos na página da wishlist
+    if (pageType === 'wishlist' && userWishlist[r.id]) return true;
     return false;
   });
 }
@@ -75,6 +83,10 @@ function updatePageUI() {
   } else if (pageType === 'owned') {
     titleEl.innerHTML = 'Minha <span>Coleção</span>';
     badgeEl.style.display = 'none';
+  } else if (pageType === 'wishlist') {
+    titleEl.innerHTML = 'Lista de <span>Desejos</span>';
+    badgeEl.style.display = 'block';
+    badgeEl.textContent = '❤️';
   }
 
   document.getElementById('filter-search').value = '';
@@ -93,6 +105,8 @@ function changePage(newPageType) {
   const rewardsArea = document.getElementById('rewards-view');
   const kaidoArea = document.getElementById('kaido-view');
   const statsRow = document.querySelector('.stats-row');
+  const statsArea = document.getElementById('stats-view');
+
 
   if (pageType === 'kaido' || pageType === 'kaido-owned') {
     updateSidebarVisibility('kaido');
@@ -100,6 +114,7 @@ function changePage(newPageType) {
     updateSidebarVisibility('hw');
   }
 
+  // Roteamento
   if (pageType === 'missions') {
     if (tableArea) tableArea.style.display = 'none';
     if (sortHeader) sortHeader.style.display = 'none';
@@ -109,12 +124,14 @@ function changePage(newPageType) {
     if (rewardsArea) rewardsArea.style.display = 'none';
     if (kaidoArea) kaidoArea.style.display = 'none';
     if (statsRow) statsRow.style.display = 'none';
+    if (statsArea) statsArea.style.display = 'none';
     if (missionsArea) missionsArea.style.display = 'block';
 
     document.getElementById('dynamic-title').innerHTML = 'Garagem <span>VIP</span>';
     document.getElementById('dynamic-badge').style.display = 'none';
     renderMissions();
     return;
+
   } else if (pageType === 'rewards') {
     if (tableArea) tableArea.style.display = 'none';
     if (sortHeader) sortHeader.style.display = 'none';
@@ -124,6 +141,7 @@ function changePage(newPageType) {
     if (missionsArea) missionsArea.style.display = 'none';
     if (kaidoArea) kaidoArea.style.display = 'none';
     if (statsRow) statsRow.style.display = 'none';
+    if (statsArea) statsArea.style.display = 'none';
     if (rewardsArea) rewardsArea.style.display = 'block';
 
     document.getElementById('dynamic-title').innerHTML = 'Loja de <span>RPMs</span>';
@@ -131,7 +149,7 @@ function changePage(newPageType) {
     renderRewards();
     return;
 
-  } else if (pageType === 'kaido' || pageType === 'kaido-owned') {
+  } else if (pageType === 'kaido' || pageType === 'kaido-owned' || pageType === 'kaido-wishlist') {
     if (tableArea) tableArea.style.display = 'none';
     if (sortHeader) sortHeader.style.display = 'none';
     if (controlsArea) controlsArea.style.display = 'none';
@@ -140,12 +158,41 @@ function changePage(newPageType) {
     if (missionsArea) missionsArea.style.display = 'none';
     if (rewardsArea) rewardsArea.style.display = 'none';
     if (statsRow) statsRow.style.display = 'none';
+    if (statsArea) statsArea.style.display = 'none';
     if (kaidoArea) kaidoArea.style.display = 'block';
 
-    document.getElementById('dynamic-title').innerHTML = 'Kaido <span>House</span>';
+    // Muda o título de acordo com o menu clicado
+    if (pageType === 'kaido-owned') {
+      document.getElementById('dynamic-title').innerHTML = 'Minha Coleção <span>Kaido</span>';
+    } else if (pageType === 'kaido-wishlist') {
+      document.getElementById('dynamic-title').innerHTML = 'Lista de desejos <span>Kaido</span>';
+    } else {
+      document.getElementById('dynamic-title').innerHTML = 'Kaido <span>House</span>';
+    }
+
     document.getElementById('dynamic-badge').style.display = 'none';
-    renderKaido(pageType === 'kaido-owned');
+
+    // Passa o pageType para a função renderKaido
+    renderKaido(pageType);
     return;
+
+  } else if (pageType === 'stats') {
+    if (tableArea) tableArea.style.display = 'none';
+    if (sortHeader) sortHeader.style.display = 'none';
+    if (controlsArea) controlsArea.style.display = 'none';
+    if (countArea) countArea.style.display = 'none';
+    if (pagArea) pagArea.style.display = 'none';
+    if (missionsArea) missionsArea.style.display = 'none';
+    if (rewardsArea) rewardsArea.style.display = 'none';
+    if (kaidoArea) kaidoArea.style.display = 'none';
+    if (statsRow) statsRow.style.display = 'none';
+    if (statsArea) statsArea.style.display = 'block';
+
+    document.getElementById('dynamic-title').innerHTML = 'Meu <span>Dashboard</span>';
+    document.getElementById('dynamic-badge').style.display = 'none';
+    if (window.renderStats) window.renderStats();
+    return;
+
   } else {
 
     if (tableArea) tableArea.style.display = 'grid';
@@ -156,6 +203,7 @@ function changePage(newPageType) {
     if (missionsArea) missionsArea.style.display = 'none';
     if (rewardsArea) rewardsArea.style.display = 'none';
     if (kaidoArea) kaidoArea.style.display = 'none';
+    if (statsArea) statsArea.style.display = 'none';
     if (statsRow) statsRow.style.display = 'flex';
   }
 
@@ -364,7 +412,7 @@ function render() {
 
     const qty = getQty(r);
     const repetidos = qty > 1 ? qty - 1 : 0;
-    const isEditingAllowed = true;
+    const isEditingAllowed = !isPublicView;
 
     let controlesHTML = '';
     let optionsHTML = '';
@@ -401,7 +449,14 @@ function render() {
         ${imgCell}
       </div>
       <div class="car-info">
-        <div class="car-title" title="${r.name}">${r.name}</div>
+        
+        <div style="display: flex; justify-content: space-between; align-items: start;">
+            <div class="car-title" title="${r.name}">${r.name}</div>
+            <button id="wish-${r.id}" onclick="toggleWishlist('${r.id}')" style="background: none; border: none; font-size: 18px; cursor: pointer; padding: 0 0 0 8px; filter: drop-shadow(0 2px 4px rgba(0,0,0,0.5)); transition: transform 0.2s;">
+                ${userWishlist[r.id] ? '❤️' : '🤍'}
+            </button>
+        </div>
+        
         <div class="car-series">${r.series || 'Sem Série'}</div>
         <div style="display:flex; align-items:center; gap:6px; margin-bottom: 12px; font-size: 11px; color: #cbd5e1;">
             <span style="display:inline-block; width:10px; height:10px; border-radius:50%; background:${dot}; box-shadow:0 0 0 1px rgba(255,255,255,0.15)"></span> ${r.color || 'N/A'}
@@ -574,7 +629,7 @@ if (btnLogoutMenu) {
 }
 
 async function loadCollection() {
-  const uidToLoad = targetUid || sessionUid;
+  const uidToLoad = publicGarageUid || targetUid || sessionUid;
   if (!uidToLoad) return;
 
   try {
@@ -587,6 +642,7 @@ async function loadCollection() {
       userMissions = snap.data().missions || {};
       userRewards = snap.data().rewards || [];
       userHistory = snap.data().history || [];
+      userWishlist = snap.data().wishlist || {};
     } else {
       userCollection = {};
       userKaidoCollection = {};
@@ -644,44 +700,41 @@ async function saveData(carId, qty) {
   userCollection[carId] = qty;
   const uidToSave = targetUid || sessionUid;
 
-
-
-
-
   const isVendedorEditandoCliente = (isAdmin || isManager) && targetUid && targetUid !== sessionUid;
-
-
 
   if (isVendedorEditandoCliente && targetRole === 'cliente' && qty > oldQty) {
     const diff = qty - oldQty;
     const pontosGanhos = diff * PONTOS_POR_CARRO;
-
     userPoints += pontosGanhos;
-
-
     const pointsEl = document.getElementById('user-points');
     if (pointsEl) pointsEl.textContent = userPoints;
-
-
     addHistoryEntry(uidToSave, `Compra de Carros`, pontosGanhos, 'earning');
+  }
+
+  if (qty > 0 && userWishlist[carId]) {
+    userWishlist[carId] = false;
+    const btnWish = document.getElementById(`wish-${carId}`);
+    if (btnWish) btnWish.innerHTML = '🤍';
+    if (typeof pageType !== 'undefined' && pageType === 'wishlist') {
+      setTimeout(() => {
+        updatePageData();
+        render();
+      }, 50);
+    }
   }
 
 
   if (saveTimeout) clearTimeout(saveTimeout);
-
   saveTimeout = setTimeout(async () => {
     if (!uidToSave) return;
     try {
       const dRef = doc(db, 'collections', uidToSave);
 
-      await setDoc(dRef, { items: userCollection, points: userPoints }, { merge: true });
+      await setDoc(dRef, { items: userCollection, points: userPoints, wishlist: userWishlist }, { merge: true });
     } catch (e) {
       console.error("Erro save:", e);
     }
   }, 1000);
-
-
-
 }
 
 window.saveKaidoData = async function (codigo, qty) {
@@ -694,29 +747,33 @@ window.saveKaidoData = async function (codigo, qty) {
   if (isVendedorEditandoCliente && targetRole === 'cliente' && qty > oldQty) {
     const diff = qty - oldQty;
     const pontosGanhos = diff * PONTOS_POR_CARRO;
-
     userPoints += pontosGanhos;
-
     const pointsEl = document.getElementById('user-points');
     if (pointsEl) pointsEl.textContent = userPoints;
-
     addHistoryEntry(uidToSave, `Adição Kaido House`, pontosGanhos, 'earning');
   }
 
+  if (qty > 0 && userWishlist[codigo]) {
+    userWishlist[codigo] = false;
+    const btnWish = document.getElementById(`wish-${codigo}`);
+    if (btnWish) btnWish.innerHTML = '🤍';
+    if (typeof showingOnlyWishlistKaido !== 'undefined' && showingOnlyWishlistKaido) {
+      setTimeout(() => window.renderKaidoGrid(), 50);
+    }
+  }
 
   if (saveKaidoTimeout) clearTimeout(saveKaidoTimeout);
-
   saveKaidoTimeout = setTimeout(async () => {
     if (!uidToSave) return;
     try {
       const dRef = doc(db, 'collections', uidToSave);
 
-      await setDoc(dRef, { kaidoItems: userKaidoCollection, points: userPoints }, { merge: true });
+      await setDoc(dRef, { kaidoItems: userKaidoCollection, points: userPoints, wishlist: userWishlist }, { merge: true });
     } catch (e) {
       console.error("Erro ao salvar Kaido:", e);
     }
   }, 1000);
-}
+};
 
 
 function openLb(index) {
@@ -1301,19 +1358,19 @@ async function addHistoryEntry(uid, desc, amount, type) {
 }
 
 
-// ==========================================
-// RENDERIZAÇÃO DA PÁGINA KAIDO HOUSE
-// ==========================================
 window.kaidoCurrentPage = 1;
 window.kaidoItemsPerPage = 25;
 let showingOnlyOwnedKaido = false;
+let showingOnlyWishlistKaido = false;
 
-window.renderKaido = function (onlyOwned = false) {
-  showingOnlyOwnedKaido = onlyOwned;
+window.renderKaido = function (currentPageType = 'kaido') {
+  // Define os filtros com base na página que veio do menu
+  showingOnlyOwnedKaido = (currentPageType === 'kaido-owned');
+  showingOnlyWishlistKaido = (currentPageType === 'kaido-wishlist');
+
   const container = document.getElementById('kaido-view');
   if (!container) return;
 
-  // Só cria o layout principal se ele ainda não existir na tela
   if (!document.getElementById('kaido-search')) {
     container.innerHTML = `
       <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom: 25px; flex-wrap: wrap; gap: 10px;">
@@ -1324,7 +1381,6 @@ window.renderKaido = function (onlyOwned = false) {
       <div style="margin-bottom: 15px;">
           <input type="text" id="kaido-search" placeholder="🔍 Buscar modelo, marca ou código Kaido..." style="width: 100%; padding: 12px; background: #0f172a; border: 1px solid #475569; color: white; border-radius: 6px; font-family: 'Barlow', sans-serif; font-size: 16px; outline: none; box-sizing: border-box;">
       </div>
-      
 
       <div class="count-bar" style="display: flex; margin-bottom: 15px; color: #cbd5e1; font-size: 14px; background: #1e293b; padding: 10px; border-radius: 6px; border: 1px solid #334155;">
           <span>Exibindo <b id="kaido-visible-count" style="color: #fff;">0</b> de <b id="kaido-all-count" style="color: #fff;">0</b> carros</span>
@@ -1350,10 +1406,26 @@ window.renderKaido = function (onlyOwned = false) {
           </div>
       </div>
     `;
-  
+
+    document.getElementById('kaido-filter-owned').addEventListener('click', (e) => {
+      showingOnlyOwnedKaido = !showingOnlyOwnedKaido;
+      e.target.style.background = showingOnlyOwnedKaido ? '#c084fc' : '#1e293b';
+      e.target.style.color = showingOnlyOwnedKaido ? '#000' : '#cbd5e1';
+      window.kaidoCurrentPage = 1;
+      window.renderKaidoGrid();
+    });
+
+    document.getElementById('kaido-filter-wishlist').addEventListener('click', (e) => {
+      showingOnlyWishlistKaido = !showingOnlyWishlistKaido;
+      e.target.style.background = showingOnlyWishlistKaido ? '#ef4444' : '#1e293b';
+      e.target.style.color = showingOnlyWishlistKaido ? '#fff' : '#cbd5e1';
+      window.kaidoCurrentPage = 1;
+      window.renderKaidoGrid();
+    });
+
     // EVENTOS DA BARRA DE PESQUISA
     document.getElementById('kaido-search').addEventListener('input', () => {
-      window.kaidoCurrentPage = 1; // Volta para a página 1 ao pesquisar
+      window.kaidoCurrentPage = 1;
       window.renderKaidoGrid();
     });
 
@@ -1372,14 +1444,19 @@ window.renderKaido = function (onlyOwned = false) {
     });
 
     document.getElementById('kaido-btn-next').addEventListener('click', () => {
-      // Descobre o total de páginas atuais (baseado na pesquisa ativa)
       const searchInput = document.getElementById('kaido-search');
       const query = searchInput ? searchInput.value.toLowerCase().trim() : '';
+
       const filteredData = KAIDO_DATA.filter(car => {
-        if (!query) return true;
-        return (car.modelo && car.modelo.toLowerCase().includes(query)) ||
+        const matchesSearch = !query ||
+          (car.modelo && car.modelo.toLowerCase().includes(query)) ||
           (car.codigo && car.codigo.toLowerCase().includes(query)) ||
           (car.marca && car.marca.toLowerCase().includes(query));
+
+        const matchesOwned = !showingOnlyOwnedKaido || (userKaidoCollection[car.codigo] > 0);
+        const matchesWish = !showingOnlyWishlistKaido || userWishlist[car.codigo];
+
+        return matchesSearch && matchesOwned && matchesWish;
       });
 
       const maxPages = window.kaidoItemsPerPage === 'all' ? 1 : Math.ceil(filteredData.length / window.kaidoItemsPerPage);
@@ -1400,34 +1477,47 @@ window.renderKaidoGrid = function () {
   if (!grid || !searchInput) return;
 
   const query = searchInput.value.toLowerCase().trim();
-  grid.innerHTML = '';
+  grid.innerHTML = ''; // Limpa a tela para os novos resultados
 
-  // 1. APLICA O FILTRO DE PESQUISA
-  let filteredData = KAIDO_DATA.filter(car => {
-    if (!query) return true;
-    return (car.modelo && car.modelo.toLowerCase().includes(query)) ||
+  // 1. TRAVAS DE SEGURANÇA PARA AS VARIÁVEIS
+  const ownedKaidos = (typeof userKaidoCollection !== 'undefined' && userKaidoCollection) ? userKaidoCollection : {};
+  const wishKaidos = (typeof userWishlist !== 'undefined' && userWishlist) ? userWishlist : {};
+  const isOwnedActive = (typeof showingOnlyOwnedKaido !== 'undefined') ? showingOnlyOwnedKaido : false;
+  const isWishActive = (typeof showingOnlyWishlistKaido !== 'undefined') ? showingOnlyWishlistKaido : false;
+
+  // 2. APLICA TODOS OS FILTROS AO MESMO TEMPO
+  const filteredData = KAIDO_DATA.filter(car => {
+    // Pesquisa por texto
+    const matchesSearch = !query ||
+      (car.modelo && car.modelo.toLowerCase().includes(query)) ||
       (car.codigo && car.codigo.toLowerCase().includes(query)) ||
       (car.marca && car.marca.toLowerCase().includes(query));
+
+    // Filtro "Minha Coleção" (mostra apenas se a quantidade for maior que zero)
+    const matchesOwned = !isOwnedActive || (ownedKaidos[car.codigo] > 0);
+
+    // Filtro "Lista de Desejos" (mostra apenas se tiver coração)
+    const matchesWish = !isWishActive || wishKaidos[car.codigo];
+
+    return matchesSearch && matchesOwned && matchesWish;
   });
 
-  if (showingOnlyOwnedKaido) {
-    filteredData = filteredData.filter(car => (userKaidoCollection[car.codigo] || 0) > 0);
-  }
-
-  // 2. APLICA A PAGINAÇÃO
+  // 3. APLICA A PAGINAÇÃO
   let dataToRender = filteredData;
   let totalPages = 1;
+  let itemsPerPage = (typeof window.kaidoItemsPerPage !== 'undefined') ? window.kaidoItemsPerPage : 25;
 
-  if (window.kaidoItemsPerPage !== 'all') {
-    totalPages = Math.ceil(filteredData.length / window.kaidoItemsPerPage) || 1;
+  if (itemsPerPage !== 'all') {
+    totalPages = Math.ceil(filteredData.length / itemsPerPage) || 1;
+    if (typeof window.kaidoCurrentPage === 'undefined') window.kaidoCurrentPage = 1;
     if (window.kaidoCurrentPage > totalPages) window.kaidoCurrentPage = totalPages;
     if (window.kaidoCurrentPage < 1) window.kaidoCurrentPage = 1;
 
-    const start = (window.kaidoCurrentPage - 1) * window.kaidoItemsPerPage;
-    dataToRender = filteredData.slice(start, start + window.kaidoItemsPerPage);
+    const start = (window.kaidoCurrentPage - 1) * itemsPerPage;
+    dataToRender = filteredData.slice(start, start + itemsPerPage);
   }
 
-  // 3. ATUALIZA OS TEXTOS E BOTÕES DE PAGINAÇÃO
+  // 4. ATUALIZA TEXTOS E INDICADORES DA TELA
   const pageIndicator = document.getElementById('kaido-page-indicator');
   const btnPrev = document.getElementById('kaido-btn-prev');
   const btnNext = document.getElementById('kaido-btn-next');
@@ -1435,16 +1525,16 @@ window.renderKaidoGrid = function () {
   const allCount = document.getElementById('kaido-all-count');
   const badge = document.getElementById('kaido-count-badge');
 
-  if (pageIndicator) pageIndicator.textContent = `Página ${window.kaidoCurrentPage} de ${totalPages}`;
-  if (btnPrev) { btnPrev.disabled = window.kaidoCurrentPage === 1; btnPrev.style.opacity = btnPrev.disabled ? "0.3" : "1"; }
-  if (btnNext) { btnNext.disabled = window.kaidoCurrentPage === totalPages; btnNext.style.opacity = btnNext.disabled ? "0.3" : "1"; }
+  if (pageIndicator) pageIndicator.textContent = `Página ${window.kaidoCurrentPage || 1} de ${totalPages}`;
+  if (btnPrev) { btnPrev.disabled = (window.kaidoCurrentPage === 1); btnPrev.style.opacity = btnPrev.disabled ? "0.3" : "1"; }
+  if (btnNext) { btnNext.disabled = (window.kaidoCurrentPage === totalPages); btnNext.style.opacity = btnNext.disabled ? "0.3" : "1"; }
   if (visCount) visCount.textContent = dataToRender.length;
   if (allCount) allCount.textContent = filteredData.length;
   if (badge) badge.textContent = `${filteredData.length} Modelos`;
 
-  // 4. DESENHA OS CARTÕES DA PÁGINA ATUAL
+  // 5. DESENHA AS MINIATURAS NA TELA
   dataToRender.forEach(car => {
-    const qty = userKaidoCollection[car.codigo] || 0;
+    const qty = ownedKaidos[car.codigo] || 0;
     const repetidos = qty > 1 ? qty - 1 : 0;
     const has = qty > 0;
 
@@ -1471,11 +1561,16 @@ window.renderKaidoGrid = function () {
         <img src="${car.caminho_imagem}" loading="lazy" alt="${car.modelo}" onerror="this.src='assets/img/placeholder.png';">
       </div>
       <div class="car-info">
-        <div class="car-title" title="${car.modelo}">${car.modelo}</div>
-        <div class="car-series">${car.fabricante} | Escala ${car.escala}</div>
+        <div style="display: flex; justify-content: space-between; align-items: start;">
+            <div class="car-title" title="${car.modelo}">${car.modelo}</div>
+            <button id="wish-${car.codigo}" onclick="toggleWishlist('${car.codigo}')" style="background: none; border: none; font-size: 18px; cursor: pointer; padding: 0 0 0 8px; filter: drop-shadow(0 2px 4px rgba(0,0,0,0.5)); transition: transform 0.2s;">
+                ${wishKaidos[car.codigo] ? '❤️' : '🤍'}
+            </button>
+        </div>
+        <div class="car-series">${car.fabricante || ''} | Escala ${car.escala || '1:64'}</div>
         <div style="display:flex; align-items:center; gap:6px; margin-top: 12px; margin-bottom: 12px; font-size: 11px; color: #cbd5e1; font-weight: bold; text-transform: uppercase;">
             <span style="display:inline-block; width:10px; height:10px; border-radius:50%; background:#c084fc; box-shadow:0 0 0 1px rgba(255,255,255,0.15)"></span>
-            ${car.marca}
+            ${car.marca || ''}
         </div>
         <div class="car-controls">
             ${controlesHTML}
@@ -1490,33 +1585,119 @@ window.renderKaidoGrid = function () {
 
     inputElement.addEventListener('change', (e) => {
       let newVal = parseInt(e.target.value) || 0;
-      saveBtn.style.display = newVal !== (userKaidoCollection[car.codigo] || 0) ? 'block' : 'none';
+      saveBtn.style.display = newVal !== qty ? 'block' : 'none';
     });
 
     saveBtn.addEventListener('click', () => {
-      saveKaidoData(car.codigo, parseInt(inputElement.value) || 0);
+      if (window.saveKaidoData) window.saveKaidoData(car.codigo, parseInt(inputElement.value) || 0);
       saveBtn.style.display = 'none';
-      setTimeout(() => renderKaidoGrid(), 50);
+      setTimeout(() => window.renderKaidoGrid(), 50);
     });
   });
 
   if (filteredData.length === 0) {
-    grid.innerHTML = `<div style="grid-column: 1 / -1; text-align: center; padding: 40px; color: var(--muted); font-size: 16px;">Nenhum modelo encontrado para "${query}".</div>`;
+    grid.innerHTML = `<div style="grid-column: 1 / -1; text-align: center; padding: 40px; color: var(--muted); font-size: 16px;">Nenhum modelo encontrado com os filtros selecionados.</div>`;
   }
 };
 
 window.updateSidebarVisibility = function (tipo) {
-  const hwItems = document.querySelectorAll('.hw-menu-item');
-  const sthItems = document.querySelectorAll('.sth-menu-item');
+  const hwItems = document.querySelectorAll('.hw-menu-item, .sth-menu-item');
   const kaidoItems = document.querySelectorAll('.kaido-menu-item');
 
   if (tipo === 'kaido') {
     hwItems.forEach(el => el.style.display = 'none');
-    sthItems.forEach(el => el.style.display = 'none');
     kaidoItems.forEach(el => el.style.display = 'block');
   } else {
     hwItems.forEach(el => el.style.display = 'block');
-    sthItems.forEach(el => el.style.display = 'block');
     kaidoItems.forEach(el => el.style.display = 'none');
   }
+};
+
+window.toggleWishlist = async function (carId) {
+  if (isPublicView) return;
+
+
+  userWishlist[carId] = !userWishlist[carId];
+
+
+  const btn = document.getElementById(`wish-${carId}`);
+  if (btn) btn.innerHTML = userWishlist[carId] ? '❤️' : '🤍';
+
+
+  if (!userWishlist[carId]) {
+    if (typeof pageType !== 'undefined' && pageType === 'wishlist') {
+      setTimeout(() => {
+        updatePageData();
+        render();
+      }, 50);
+    } else if (typeof pageType !== 'undefined' && pageType === 'kaido-wishlist') {
+      // Recarrega o grid da Kaido instantaneamente
+      setTimeout(() => window.renderKaidoGrid(), 50);
+    }
+  }
+
+  const uidToSave = targetUid || sessionUid;
+  if (!uidToSave) return;
+
+  try {
+    await setDoc(doc(db, 'collections', uidToSave), { wishlist: userWishlist }, { merge: true });
+  } catch (e) {
+    console.error("Erro ao salvar wishlist:", e);
+  }
+};
+
+window.copiarLinkPublico = function () {
+  const link = `${window.location.origin}${window.location.pathname}?garagem=${sessionUid}`;
+  navigator.clipboard.writeText(link).then(() => {
+    alert("🔗 Link da sua garagem copiado!\nEnvie para seus amigos verem sua coleção.");
+  });
+};
+
+window.renderStats = function () {
+  const container = document.getElementById('stats-view');
+  if (!container) return;
+
+  let totalHW = 0, totalKaido = 0, totalWishlist = 0;
+
+  Object.values(userCollection).forEach(qty => { if (qty > 0) totalHW += qty; });
+  Object.values(userKaidoCollection).forEach(qty => { if (qty > 0) totalKaido += qty; });
+  Object.values(userWishlist).forEach(wished => { if (wished) totalWishlist++; });
+
+  const pctHW = Math.round((Object.keys(userCollection).filter(k => userCollection[k] > 0).length / PAGE_DATA.length) * 100) || 0;
+
+  container.innerHTML = `
+    <div style="margin-bottom: 30px;">
+        <h2 style="font-family: 'Bebas Neue', sans-serif; color: #fff; font-size: 32px; margin: 0; letter-spacing: 1px;">Visão Geral da Garagem</h2>
+        <p style="color: var(--muted); font-size: 14px;">Acompanhe o crescimento do seu império diecast.</p>
+    </div>
+
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 15px; margin-bottom: 30px;">
+        <div style="background: var(--surface); padding: 20px; border-radius: 12px; border: 1px solid var(--border); text-align: center;">
+            <div style="font-size: 36px; margin-bottom: 10px;">🔥</div>
+            <div style="font-size: 28px; font-weight: bold; color: #fff; font-family: 'Bebas Neue';">${totalHW}</div>
+            <div style="color: var(--muted); font-size: 13px; text-transform: uppercase;">Hot Wheels na Garagem</div>
+        </div>
+        <div style="background: var(--surface); padding: 20px; border-radius: 12px; border: 1px solid var(--border); text-align: center;">
+            <div style="font-size: 36px; margin-bottom: 10px;">🔰</div>
+            <div style="font-size: 28px; font-weight: bold; color: #c084fc; font-family: 'Bebas Neue';">${totalKaido}</div>
+            <div style="color: var(--muted); font-size: 13px; text-transform: uppercase;">Kaido House</div>
+        </div>
+        <div style="background: var(--surface); padding: 20px; border-radius: 12px; border: 1px solid var(--border); text-align: center;">
+            <div style="font-size: 36px; margin-bottom: 10px;">❤️</div>
+            <div style="font-size: 28px; font-weight: bold; color: #ef4444; font-family: 'Bebas Neue';">${totalWishlist}</div>
+            <div style="color: var(--muted); font-size: 13px; text-transform: uppercase;">Na Lista de Desejos</div>
+        </div>
+    </div>
+
+    <div style="background: var(--surface); padding: 24px; border-radius: 12px; border: 1px solid var(--border);">
+        <h3 style="color: #fff; margin-top: 0; margin-bottom: 15px; font-family: 'Bebas Neue'; font-size: 24px;">Progresso da Coleção (HW)</h3>
+        <div style="display: flex; justify-content: space-between; margin-bottom: 8px; font-size: 14px; color: #cbd5e1; font-weight: bold;">
+            <span>Completude do Catálogo</span>
+            <span style="color: var(--yellow);">${pctHW}%</span>
+        </div>
+        <div style="width: 100%; background: #0f172a; border-radius: 10px; height: 12px; overflow: hidden; border: 1px solid #334155;">
+            <div style="width: ${pctHW}%; background: linear-gradient(90deg, #facc15, #f59e0b); height: 100%; border-radius: 10px;"></div>
+        </div>
+    </div>
+  `;
 };
