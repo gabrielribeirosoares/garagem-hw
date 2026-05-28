@@ -94,6 +94,11 @@ function updatePageUI() {
 }
 
 function changePage(newPageType) {
+  if (isPublicView) {
+    if (newPageType === 'all') newPageType = 'owned';
+    if (newPageType === 'kaido') newPageType = 'kaido-owned';
+  }
+  
   pageType = newPageType;
 
   const tableArea = document.getElementById('table-body');
