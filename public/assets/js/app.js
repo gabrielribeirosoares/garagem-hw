@@ -98,7 +98,7 @@ function changePage(newPageType) {
     if (newPageType === 'all') newPageType = 'owned';
     if (newPageType === 'kaido') newPageType = 'kaido-owned';
   }
-  
+
   pageType = newPageType;
 
   const tableArea = document.getElementById('table-body');
@@ -598,8 +598,15 @@ onAuthStateChanged(auth, async (user) => {
     await loadCollection();
 
   } else {
-    window.location.href = 'index.html';
-  }
+    
+    if (isPublicView) {
+    
+      console.log("Visitante acessando garagem pública.");
+      if (typeof window.loadCollection === 'function') window.loadCollection();
+    } else {
+
+      window.location.href = 'index.html';
+    }}
 
 
   const isVip = (targetRole === 'cliente' || targetRole === 'admin' || isManager);

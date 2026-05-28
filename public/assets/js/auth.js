@@ -61,7 +61,7 @@ if (loginForm) {
       btnSubmit.textContent = originalBtnText;
       btnSubmit.disabled = false;
       if (errorMessage) {
-        errorMessage.textContent = "Falha no login. Verifique o seu e-mail e palavra-passe.";
+        errorMessage.textContent = "Falha no login. Verifique o seu e-mail e senha.";
         errorMessage.style.display = 'block';
       }
     }
