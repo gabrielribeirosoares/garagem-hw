@@ -31,6 +31,7 @@ let pageType = 'all';
 let PAGE_DATA = [];
 let sessionUid = null;
 let userCollection = {};
+let publicOwnerName = "Colecionador";
 let userKaidoCollection = {};
 let sortCol = 'year';
 let sortDesc = true;
@@ -81,7 +82,7 @@ function updatePageUI() {
     badgeEl.style.display = 'block';
     badgeEl.textContent = '$TH';
   } else if (pageType === 'owned') {
-    titleEl.innerHTML = 'Minha <span>Coleção</span>';
+    titleEl.innerHTML = isPublicView ? `Garagem de <span>${publicOwnerName}</span>` : 'Minha <span>Coleção</span>';
     badgeEl.style.display = 'none';
   } else if (pageType === 'wishlist') {
     titleEl.innerHTML = 'Lista de <span>Desejos</span>';
@@ -166,18 +167,16 @@ function changePage(newPageType) {
     if (statsArea) statsArea.style.display = 'none';
     if (kaidoArea) kaidoArea.style.display = 'block';
 
-    // Muda o título de acordo com o menu clicado
     if (pageType === 'kaido-owned') {
-      document.getElementById('dynamic-title').innerHTML = 'Minha Coleção <span>Kaido</span>';
+        document.getElementById('dynamic-title').innerHTML = isPublicView ? `Kaidos de <span>${publicOwnerName}</span>` : 'Minha Coleção <span>Kaido</span>';
     } else if (pageType === 'kaido-wishlist') {
-      document.getElementById('dynamic-title').innerHTML = 'Lista de desejos <span>Kaido</span>';
+        document.getElementById('dynamic-title').innerHTML = isPublicView ? `Desejos de <span>${publicOwnerName}</span>` : 'Desejos <span>Kaido</span>';
     } else {
-      document.getElementById('dynamic-title').innerHTML = 'Kaido <span>House</span>';
+        document.getElementById('dynamic-title').innerHTML = 'Kaido <span>House</span>';
     }
 
     document.getElementById('dynamic-badge').style.display = 'none';
 
-    // Passa o pageType para a função renderKaido
     renderKaido(pageType);
     return;
 
@@ -662,21 +661,45 @@ async function loadCollection() {
       userMissions = {};
       userRewards = [];
       userHistory = [];
+      userWishlist = {}; 
     }
 
     const uRef = doc(db, 'users', uidToLoad);
     const uSnap = await getDoc(uRef);
-
 
     let currentLojaId = 'default';
 
     if (uSnap.exists()) {
       targetRole = uSnap.data().role || 'user';
       currentLojaId = uSnap.data().lojaId || 'default';
+
+      // ==========================================
+      // NOVA LÓGICA: NOME DO DONO E OCULTAÇÃO DE MENUS (VISITANTES)
+      // ==========================================
+      if (typeof isPublicView !== 'undefined' && isPublicView) {
+        const nomeEncontrado = uSnap.data().name || uSnap.data().nome;
+        if (nomeEncontrado) {
+          publicOwnerName = nomeEncontrado.split(' ')[0]; // Pega o primeiro nome
+        }
+
+        // Esconde os menus que o visitante não precisa ver
+        const menusToHide = ['rewards', 'missions', 'stats'];
+        menusToHide.forEach(page => {
+          const link = document.querySelector(`[data-page="${page}"]`);
+          if (link && link.parentElement) link.parentElement.style.display = 'none';
+        });
+        
+        const menuProfile = document.getElementById('menu-profile');
+        if (menuProfile) menuProfile.parentElement.style.display = 'none';
+        
+        const menuLogout = document.getElementById('logout-menu');
+        if (menuLogout) menuLogout.parentElement.style.display = 'none';
+      }
+      // ==========================================
+
     } else {
       targetRole = 'user';
     }
-
 
     try {
       const lojaRef = doc(db, 'lojas', currentLojaId);
@@ -691,11 +714,10 @@ async function loadCollection() {
       LISTA_RECOMPENSAS = [];
     }
 
-
     const pointsEl = document.getElementById('user-points');
     if (pointsEl) pointsEl.textContent = userPoints;
 
-    changePage('all');
+    changePage('all'); // Lembra que nossa mudança no changePage vai converter 'all' em 'owned' se for visitante!
   } catch (err) {
     console.error("Erro load:", err);
     changePage('all');
