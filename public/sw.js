@@ -1,4 +1,4 @@
-const CACHE_NAME = 'garagem-hw-v1';
+const CACHE_NAME = 'garagem-hw-v2';
 const ASSETS_TO_CACHE = [
   '/',
   '/index.html',
@@ -9,21 +9,47 @@ const ASSETS_TO_CACHE = [
   '/manifest.json'
 ];
 
-// Instala o Service Worker e salva os arquivos principais no cache
 self.addEventListener('install', (event) => {
+  self.skipWaiting(); // Força a atualização imediata
   event.waitUntil(
     caches.open(CACHE_NAME).then((cache) => {
-      return cache.addAll(ASSETS_TO_CACHE);
+      // Usamos um truque para não falhar se um arquivo não existir
+      return Promise.allSettled(
+        ASSETS_TO_CACHE.map(url => cache.add(url).catch(err => console.log(`Falha ao cachear ${url}`, err)))
+      );
     })
   );
 });
 
-// Intercepta as requisições para carregar mais rápido
+self.addEventListener('activate', (event) => {
+  // Limpa o cache antigo (v1) que quebrou o iOS
+  event.waitUntil(
+    caches.keys().then((cacheNames) => {
+      return Promise.all(
+        cacheNames.map((cacheName) => {
+          if (cacheName !== CACHE_NAME) {
+            return caches.delete(cacheName);
+          }
+        })
+      );
+    })
+  );
+});
+
 self.addEventListener('fetch', (event) => {
+  // TRAVA DE SEGURANÇA PARA O FIREBASE NO IOS:
+  // Só intercepta navegação local (ignora APIs, Auth e Firestore)
+  if (event.request.method !== 'GET') return;
+  if (!event.request.url.startsWith(self.location.origin)) return;
+
   event.respondWith(
-    caches.match(event.request).then((response) => {
-      // Retorna do cache se existir, senão busca na internet
-      return response || fetch(event.request);
+    caches.match(event.request).then((cachedResponse) => {
+      if (cachedResponse) {
+        return cachedResponse;
+      }
+      return fetch(event.request).catch(() => {
+        console.log("Erro de fetch ou offline");
+      });
     })
   );
 });

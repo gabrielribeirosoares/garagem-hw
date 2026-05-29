@@ -1,9 +1,11 @@
 import { auth, db } from './firebase-config.js';
 import {
   signInWithEmailAndPassword,
-  signInWithPopup,
+  signInWithRedirect,
+  getRedirectResult,
   GoogleAuthProvider,
-  sendPasswordResetEmail
+  sendPasswordResetEmail,
+  onAuthStateChanged
 } from "https://www.gstatic.com/firebasejs/12.13.0/firebase-auth.js";
 import { doc, getDoc, setDoc } from "https://www.gstatic.com/firebasejs/12.13.0/firebase-firestore.js";
 
@@ -14,32 +16,42 @@ const errorMessage = document.getElementById('error-message');
 const welcomeOverlay = document.getElementById('welcome-overlay');
 const welcomeMessage = document.getElementById('welcome-message');
 
+const isIOSStandalone = window.navigator.standalone === true || 
+                        window.matchMedia('(display-mode: standalone)').matches;
 
-async function handleLoginSuccess(user) {
-  let firstName = "Colecionador";
-
-
-  try {
-    const userDoc = await getDoc(doc(db, 'users', user.uid));
-    if (userDoc.exists() && userDoc.data().name) {
-      firstName = userDoc.data().name.split(" ")[0];
-    } else if (user.displayName) {
-      firstName = user.displayName.split(" ")[0];
-    }
-  } catch (dbError) {
-    console.error("Erro ao buscar nome:", dbError);
+// ==========================================
+// NAVEGAÇÃO RÁPIDA (COM TRAVA DE LOOP INFINITO)
+// ==========================================
+function redirectParaGaragem(user) {
+  // TRAVA DE SEGURANÇA MÁXIMA: Se a URL já for a garagem, aborta para não dar loop.
+  if (window.location.pathname.includes('app.html')) {
+    return;
   }
 
+  let firstName = user.displayName ? user.displayName.split(" ")[0] : "Colecionador";
+
   if (welcomeOverlay && welcomeMessage) {
-    welcomeMessage.textContent = `Olá ${firstName}, seja muito bem-vindo(a) à sua Garagem.`;
+    welcomeMessage.textContent = `Olá ${firstName}, seja muito bem-vindo(a)!`;
     welcomeOverlay.classList.add('active');
-    setTimeout(() => { window.location.href = 'app.html'; }, 5000);
+    setTimeout(() => { window.location.replace('app.html'); }, 1500);
   } else {
-    window.location.href = 'app.html';
+    window.location.replace('app.html');
   }
 }
 
+// ==========================================
+// MONITOR DE SESSÃO ATIVA (AUTO-LOGIN)
+// ==========================================
+onAuthStateChanged(auth, (user) => {
+  if (user) {
+    if (loginForm) loginForm.style.display = 'none';
+    redirectParaGaragem(user);
+  }
+});
 
+// ==========================================
+// LOGIN COM E-MAIL E SENHA
+// ==========================================
 if (loginForm) {
   loginForm.addEventListener('submit', async (e) => {
     e.preventDefault();
@@ -55,50 +67,70 @@ if (loginForm) {
 
     try {
       const cred = await signInWithEmailAndPassword(auth, email, password);
-      await handleLoginSuccess(cred.user);
+      redirectParaGaragem(cred.user);
     } catch (error) {
-      console.error("Erro completo:", error);
+      console.error("Erro no login com senha:", error);
       btnSubmit.textContent = originalBtnText;
       btnSubmit.disabled = false;
       if (errorMessage) {
-        errorMessage.textContent = "Falha no login. Verifique o seu e-mail e senha.";
+        errorMessage.textContent = `Erro no Login (${error.code}): ${error.message}`;
         errorMessage.style.display = 'block';
       }
     }
   });
 }
 
-
+// ==========================================
+// CLICK DO BOTÃO DO GOOGLE
+// ==========================================
 if (btnGoogle) {
-  btnGoogle.addEventListener('click', async () => {
-    try {
-      const result = await signInWithPopup(auth, provider);
-      const user = result.user;
-
-
-      const userRef = doc(db, 'users', user.uid);
-      const userSnap = await getDoc(userRef);
-
-      if (!userSnap.exists()) {
-        await setDoc(userRef, {
-          uid: user.uid,
-          name: user.displayName,
-          email: user.email,
-          createdAt: new Date()
-        });
-      }
-
-      await handleLoginSuccess(user);
-    } catch (error) {
-      console.error("Erro no Login Google:", error);
-      alert("Erro ao logar com Google: " + error.message);
+  btnGoogle.addEventListener('click', () => {
+    if (isIOSStandalone) {
+      alert("No aplicativo instalado no iOS, o login direto com o Google é bloqueado pela Apple. Por favor, utilize E-mail e Senha.");
+      return;
     }
+    btnGoogle.textContent = "Acessando...";
+    btnGoogle.style.opacity = "0.7";
+    signInWithRedirect(auth, provider);
   });
 }
 
+// ==========================================
+// CAPTURA RETORNO DO REDIRECIONAMENTO GOOGLE
+// ==========================================
+getRedirectResult(auth).then((result) => {
+  if (result) {
+    const user = result.user;
 
+    const userRef = doc(db, 'users', user.uid);
+    getDoc(userRef).then(snap => {
+        if (!snap.exists()) {
+            setDoc(userRef, {
+                uid: user.uid,
+                name: user.displayName,
+                email: user.email,
+                createdAt: new Date()
+            });
+        }
+    }).catch(e => console.log("Erro ao salvar dados de perfil:", e));
 
+    redirectParaGaragem(user);
+  }
+}).catch((error) => {
+  console.error("Erro capturado no retorno do Google:", error);
+  if (errorMessage) {
+    errorMessage.textContent = `Erro no Google (${error.code}): ${error.message}`;
+    errorMessage.style.display = 'block';
+  }
+  if (btnGoogle) {
+    btnGoogle.textContent = "Entrar com Google";
+    btnGoogle.style.opacity = "1";
+  }
+});
 
+// ==========================================
+// RECUPERAÇÃO DE SENHA
+// ==========================================
 const forgotPasswordLink = document.getElementById('forgot-password-link');
 const forgotPasswordModal = document.getElementById('forgot-password-modal');
 const btnCloseReset = document.getElementById('btn-close-reset');
@@ -107,20 +139,16 @@ const resetEmailInput = document.getElementById('reset-email');
 const resetMessage = document.getElementById('reset-message');
 
 if (forgotPasswordLink && forgotPasswordModal) {
-
   forgotPasswordLink.addEventListener('click', (e) => {
     e.preventDefault();
-
-    resetEmailInput.value = document.getElementById('email').value;
+    resetEmailInput.value = document.getElementById('email') ? document.getElementById('email').value : '';
     resetMessage.style.display = 'none';
     forgotPasswordModal.classList.add('active');
   });
 
-
   btnCloseReset.addEventListener('click', () => {
     forgotPasswordModal.classList.remove('active');
   });
-
 
   btnSendReset.addEventListener('click', async () => {
     const email = resetEmailInput.value.trim();
@@ -138,7 +166,6 @@ if (forgotPasswordLink && forgotPasswordModal) {
       await sendPasswordResetEmail(auth, email);
       showResetMessage('Link enviado! Verifique sua caixa de entrada (e spam).', 'success');
 
-
       setTimeout(() => {
         forgotPasswordModal.classList.remove('active');
         btnSendReset.textContent = originalText;
@@ -149,16 +176,10 @@ if (forgotPasswordLink && forgotPasswordModal) {
       console.error("Erro ao enviar reset de senha:", error);
       btnSendReset.textContent = originalText;
       btnSendReset.disabled = false;
-
-      if (error.code === 'auth/user-not-found' || error.code === 'auth/invalid-email') {
-        showResetMessage('E-mail não encontrado ou inválido.', 'error');
-      } else {
-        showResetMessage('Erro ao enviar o link. Tente novamente mais tarde.', 'error');
-      }
+      showResetMessage(`Erro (${error.code}): ${error.message}`, 'error');
     }
   });
 }
-
 
 function showResetMessage(text, type) {
   resetMessage.textContent = text;

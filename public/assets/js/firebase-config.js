@@ -5,7 +5,10 @@ import { getFirestore } from "https://www.gstatic.com/firebasejs/12.13.0/firebas
 
 export const firebaseConfig = {
   apiKey: "AIzaSyCLT6Uf12Ycznl9eXSvCGvNo7pFbuREpGc",
-  authDomain: "hotwheels-colletcion.firebaseapp.com",
+  
+
+  authDomain: "garagemhw.web.app", 
+  
   projectId: "hotwheels-colletcion",
   storageBucket: "hotwheels-colletcion.firebasestorage.app",
   messagingSenderId: "94113385499",
