@@ -749,3 +749,102 @@ if (createForm) {
     }
   });
 }
+
+// ===================================================================
+// SISTEMA DE PREENCHIMENTO RÁPIDO DE LOTES
+// ===================================================================
+
+const btnPendingLots = document.getElementById('btn-pending-lots');
+const btnBackDashboard = document.getElementById('btn-back-dashboard');
+const mainDashboard = document.getElementById('main-dashboard-view');
+const pendingLotsView = document.getElementById('pending-lots-view');
+
+if (btnPendingLots && btnBackDashboard) {
+    // Alterna para a tela de lotes
+    btnPendingLots.addEventListener('click', () => {
+        mainDashboard.style.display = 'none';
+        pendingLotsView.style.display = 'block';
+        window.renderPendingLots();
+    });
+
+    // Volta para o dashboard normal
+    btnBackDashboard.addEventListener('click', () => {
+        pendingLotsView.style.display = 'none';
+        mainDashboard.style.display = 'block';
+    });
+}
+
+window.renderPendingLots = function() {
+    const grid = document.getElementById('pending-lots-grid');
+    if (!grid) return;
+    
+    // Tenta usar a base de dados (seja RAW ou PAGE_DATA) que o admin carrega para a pesquisa
+    const baseDeDados = typeof RAW !== 'undefined' ? RAW : (typeof PAGE_DATA !== 'undefined' ? PAGE_DATA : []);
+
+    const pendentes = baseDeDados.filter(car => (!car.cas || car.cas.trim() === '') && car.part);
+
+    grid.innerHTML = '';
+
+    if (pendentes.length === 0) {
+        grid.innerHTML = `<div style="grid-column: 1 / -1; text-align: center; padding: 40px; background: #1e293b; border-radius: 8px; color: #10b981; font-size: 18px; font-weight: bold;">🎉 Todos os lotes estão preenchidos!</div>`;
+        return;
+    }
+
+    pendentes.forEach(car => {
+        const card = document.createElement('div');
+        card.style.cssText = "display: flex; align-items: center; gap: 15px; background: #1e293b; padding: 12px; border-radius: 8px; border: 1px solid #334155;";
+        
+        card.innerHTML = `
+            <img src="${car.image}" style="width: 80px; height: 80px; object-fit: contain; border-radius: 4px; background: #fff;" onerror="this.src='assets/img/placeholder.png';">
+            <div style="flex: 1;">
+                <div style="color: #fff; font-weight: bold; font-size: 14px; margin-bottom: 4px;">${car.name}</div>
+                <div style="color: #94a3b8; font-size: 12px; margin-bottom: 8px;">SKU: <span style="color:#f59e0b;">${car.part}</span> | ${car.series || ''}</div>
+                <div style="display: flex; align-items: center; gap: 8px;">
+                    <label style="color: #cbd5e1; font-size: 12px; font-weight: bold;">LOTE:</label>
+                    <input type="text" class="input-lote-rapido" data-part="${car.part}" maxlength="1" style="width: 50px; padding: 6px; text-align: center; font-weight: bold; font-size: 16px; background: #0f172a; color: #facc15; border: 1px solid #475569; border-radius: 4px; outline: none; text-transform: uppercase;">
+                </div>
+            </div>
+        `;
+        grid.appendChild(card);
+    });
+};
+
+window.gerarCodigoLotes = function() {
+    const inputs = document.querySelectorAll('.input-lote-rapido');
+    let codigoGerado = "const LOTES_ATUALIZADOS = {\n";
+    let adicionados = 0;
+
+    inputs.forEach(input => {
+        const letraLote = input.value.trim().toUpperCase();
+        const skuPart = input.dataset.part;
+        
+        if (letraLote) {
+            codigoGerado += `    "${skuPart}": "${letraLote}",\n`;
+            adicionados++;
+        }
+    });
+
+    codigoGerado += "};\n\n";
+    codigoGerado += "// === ATUALIZADOR AUTOMÁTICO DE LOTES ===\n";
+    codigoGerado += "if (typeof RAW !== 'undefined') {\n";
+    codigoGerado += "    RAW.forEach(carro => {\n";
+    codigoGerado += "        if (LOTES_ATUALIZADOS[carro.part]) {\n";
+    codigoGerado += "            carro.cas = LOTES_ATUALIZADOS[carro.part];\n";
+    codigoGerado += "        }\n";
+    codigoGerado += "    });\n";
+    codigoGerado += "}\n";
+
+    if (adicionados === 0) {
+        alert("⚠️ Atenção: Preencha pelo menos um lote antes de gerar o código.");
+        return;
+    }
+
+    const exportArea = document.getElementById('export-area');
+    const textarea = document.getElementById('export-textarea');
+    
+    textarea.value = codigoGerado;
+    exportArea.style.display = 'block';
+    
+    // Rola a tela suavemente para baixo para mostrar o resultado
+    exportArea.scrollIntoView({ behavior: 'smooth' });
+};

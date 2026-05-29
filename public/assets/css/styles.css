@@ -805,6 +805,9 @@ td {
 
   padding: 24px;
   box-shadow: 4px 0 15px rgba(0, 0, 0, 0.8);
+  overflow-y: auto;
+  max-height: 100vh;
+  padding-bottom: 30px; 
 }
 
 .sidebar.open {
