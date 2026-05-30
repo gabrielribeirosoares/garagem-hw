@@ -65,6 +65,11 @@ async function loadUsersList() {
     const myLojaId = myDoc.exists() ? (myDoc.data().lojaId || '') : '';
 
     window.currentUserRole = myRole;
+    window.minhaLojaId = myLojaId; 
+    const btnMyRewards = document.getElementById('btn-my-store-rewards');
+    if (btnMyRewards && (myRole === 'admin' || myRole === 'gerente')) {
+        btnMyRewards.style.display = 'inline-block';
+    }
 
     const querySnapshot = await getDocs(collection(db, 'users'));
 
@@ -590,10 +595,14 @@ window.deleteReward = async function (index) {
   }
 };
 
-const btnNewClient = document.getElementById('btn-new-client');
+
 const createModal = document.getElementById('create-modal');
 const createForm = document.getElementById('create-user-form');
 const createPhone = document.getElementById('create-phone');
+
+const btnNewClient = document.getElementById('btn-new-client');
+const modalNewClient = document.getElementById('new-client-modal');
+const btnSaveNewClient = document.getElementById('btn-save-new-client');
 
 if (createPhone) {
   createPhone.addEventListener('input', (e) => {
@@ -606,10 +615,88 @@ if (createPhone) {
   });
 }
 
-if (btnNewClient) {
-  btnNewClient.addEventListener('click', () => {
-    if (createModal) createModal.style.display = 'flex';
-  });
+if (btnNewClient && modalNewClient) {
+    btnNewClient.addEventListener('click', () => {
+        document.getElementById('new-client-name').value = '';
+        document.getElementById('new-client-email').value = '';
+        document.getElementById('new-client-password').value = '';
+        modalNewClient.style.display = 'flex';
+    });
+}
+
+// Salva o usuário no Firebase
+if (btnSaveNewClient) {
+    btnSaveNewClient.addEventListener('click', async () => {
+        const name = document.getElementById('new-client-name').value.trim();
+        const email = document.getElementById('new-client-email').value.trim();
+        const pass = document.getElementById('new-client-password').value;
+
+        if (!name || !email || !pass) {
+            alert("Por favor, preencha todos os campos (Nome, E-mail e Senha)!");
+            return;
+        }
+
+        const originalText = btnSaveNewClient.textContent;
+        btnSaveNewClient.textContent = "Criando Conta...";
+        btnSaveNewClient.disabled = true;
+
+        try {
+            // Cria a conta do usuário no Auth secundário
+            const userCredential = await createUserWithEmailAndPassword(secondaryAuth, email, pass);
+            const newUid = userCredential.user.uid;
+
+            await signOut(secondaryAuth);
+
+            // Descobre qual é a loja do Admin logado
+            const myDoc = await getDoc(doc(db, 'users', auth.currentUser.uid));
+            const targetLojaId = myDoc.exists() ? (myDoc.data().lojaId || '') : '';
+
+            // Salva o perfil do Cliente atrelado à loja do Admin
+            await setDoc(doc(db, 'users', newUid), {
+                name: name,
+                email: email,
+                phone: '', // Pode ser editado depois pelo Admin
+                role: 'cliente',
+                lojaId: targetLojaId,
+                createdAt: new Date().toLocaleDateString('pt-BR')
+            });
+
+            // Cria a Garagem vazia para o Cliente
+            await setDoc(doc(db, 'collections', newUid), {
+                items: {},
+                points: 0,
+                history: [{
+                    date: new Date().toLocaleDateString('pt-BR'),
+                    desc: "Conta VIP Criada",
+                    amount: 0,
+                    type: "earning"
+                }]
+            });
+
+            // Atualiza estatísticas globais
+            const configRef = doc(db, 'config', 'app');
+            await updateDoc(configRef, { cadastrados: increment(1) }).catch(() => {});
+
+            modalNewClient.style.display = 'none';
+            alert('✅ Cliente VIP cadastrado e vinculado à sua loja com sucesso!');
+
+            // Recarrega a tabela para exibir o cliente recém criado
+            loadUsersList();
+
+        } catch (error) {
+            console.error("Erro no cadastro:", error);
+            if (error.code === 'auth/email-already-in-use') {
+                alert("Erro: Este e-mail já está cadastrado no sistema.");
+            } else if (error.code === 'auth/weak-password') {
+                alert("Erro: A senha precisa ter pelo menos 6 caracteres.");
+            } else {
+                alert("Erro ao criar cliente: " + error.message);
+            }
+        } finally {
+            btnSaveNewClient.textContent = originalText;
+            btnSaveNewClient.disabled = false;
+        }
+    });
 }
 
 if (createForm) {
@@ -771,3 +858,24 @@ window.gerarCodigoLotes = function() {
     
     exportArea.scrollIntoView({ behavior: 'smooth' });
 };
+
+
+// ===================================================================
+// ABRIR OS PRÊMIOS DA PRÓPRIA LOJA (GLOBAL PARA ADMIN E GERENTES)
+// ===================================================================
+const btnMyStoreRewards = document.getElementById('btn-my-store-rewards');
+if (btnMyStoreRewards) {
+    btnMyStoreRewards.addEventListener('click', async () => {
+        // Puxa o ID da loja da pessoa que está logada
+        lojaIdParaEditar = window.minhaLojaId || 'default';
+        
+        const lojaNomeEl = document.getElementById('loja-alvo-nome');
+        if (lojaNomeEl) lojaNomeEl.textContent = "Loja: " + lojaIdParaEditar;
+        
+        const lojaModal = document.getElementById('loja-modal');
+        if (lojaModal) lojaModal.style.display = 'flex';
+        
+        // Renderiza a lista usando a função que já existe no seu código
+        await renderAdminRewards();
+    });
+}
