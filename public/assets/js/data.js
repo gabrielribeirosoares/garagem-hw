@@ -36,7 +36,7 @@ export const RAW = [
         "color": "Cinza",
         "part": "JJM49",
         "hw": "002",
-        "cas": "",
+        "cas": "G",
         "image": "./assets/img/hw/2026-hot-wheels-kroger-exclusive-03.jpg"
     },
     {
