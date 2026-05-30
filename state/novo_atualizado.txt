@@ -1,0 +1,3622 @@
+export const RAW = [
+    {
+        "year": 2026,
+        "name": "Mazda MX-5 Miata",
+        "series": "HW Dream Garage (1/5)",
+        "color": "Branco",
+        "part": "JJJ02",
+        "hw": "001",
+        "cas": "A",
+        "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJJ02_Mazda_MX-5_Miata.jpg"
+    },
+    {
+        "year": 2026,
+        "name": "Mazda MX-5 Miata (2nd Color)",
+        "series": "HW Dream Garage (1/5)",
+        "color": "Azul",
+        "part": "JJL03",
+        "hw": "001",
+        "cas": "K",
+        "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJL03_Mazda_MX-5_Miata_2nd_Color.jpg"
+    },
+    {
+        "year": 2026,
+        "name": "'16 Lamborghini Centenario Roadster",
+        "series": "Exoticars (1/10)",
+        "color": "Amarelo",
+        "part": "JJH80",
+        "hw": "002",
+        "cas": "A",
+        "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJH80_16_Lamborghini_Centenario_Roadster.jpg"
+    },
+    {
+        "year": 2026,
+        "name": "'16 Lamborghini Centenario Roadster (2nd Color)",
+        "series": "Exoticars Kroger Exclusive (1/10)",
+        "color": "Cinza",
+        "part": "JJM49",
+        "hw": "002",
+        "cas": "",
+        "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJM49_16_Lamborghini_Centenario_Roadster_2nd_Color.jpg"
+    },
+    {
+        "year": 2026,
+        "name": "'16 Lamborghini Centenario Roadster (3rd Color)",
+        "series": "Exoticars (1/10)",
+        "color": "Verde",
+        "part": "JJK74",
+        "hw": "002",
+        "cas": "",
+        "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJK74_16_Lamborghini_Centenario_Roadster_3rd_Color.jpg"
+    },
+    {
+        "year": 2026,
+        "name": "Gordon Murray Automotive T33",
+        "series": "Exoticars (2/10)",
+        "color": "Amarelo",
+        "part": "JJJ62",
+        "hw": "003",
+        "cas": "",
+        "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJJ62_Gordon_Murray_Automotive_T33.jpg"
+    },
+    {
+        "year": 2026,
+        "name": "Gordon Murray Automotive T.33 (2nd Color)",
+        "series": "Exoticars (2/10)",
+        "color": "",
+        "part": "JJL44",
+        "hw": "003",
+        "cas": "",
+        "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJL44_Gordon_Murray_Automotive_T33_2nd_Color.jpg"
+    },
+    {
+        "year": 2026,
+        "name": "Batmobile",
+        "series": "Batman (1/5)",
+        "color": "",
+        "part": "JJH83",
+        "hw": "004",
+        "cas": "A",
+        "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJH83_Batmobile.jpg"
+    },
+    {
+        "year": 2026,
+        "name": "Batmobile (2nd Color)",
+        "series": "Batman (1/5)",
+        "color": "",
+        "part": "JJK97",
+        "hw": "004",
+        "cas": "J",
+        "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJK97_Batmobile_2nd_Color.jpg"
+    },
+    {
+        "year": 2026,
+        "name": "Pass 'n Go",
+        "series": "Drop Tops New for 2026! (1/5)",
+        "color": "",
+        "part": "JJH30",
+        "hw": "005",
+        "cas": "A",
+        "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJH30_Pass_n_Go.jpg"
+    },
+    {
+        "year": 2026,
+        "name": "Pass 'n Go (2nd Color)",
+        "series": "Drop Tops New for 2026! (1/5)",
+        "color": "",
+        "part": "JJK98",
+        "hw": "005",
+        "cas": "J",
+        "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJK98_Pass_n_Go_2nd_Color.jpg"
+    },
+    {
+        "year": 2026,
+        "name": "RD-06",
+        "series": "X-Raycers (1/5)",
+        "color": "Roxo",
+        "part": "JJH84",
+        "hw": "006",
+        "cas": "A",
+        "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJH84_RD-06.jpg"
+    },
+    {
+        "year": 2026,
+        "name": "RD-06 (2nd Color)",
+        "series": "X-Raycers (1/5)",
+        "color": "Preto",
+        "part": "JJK66",
+        "hw": "006",
+        "cas": "F",
+        "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJK66_RD-06_2nd_Color.jpg"
+    },
+    {
+        "year": 2026,
+        "name": "Solar Reflex",
+        "series": "HW EV (1/10)",
+        "color": "Azul",
+        "part": "JJH85",
+        "hw": "007",
+        "cas": "A",
+        "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJH85_Solar_Reflex.jpg"
+    },
+    {
+        "year": 2026,
+        "name": "Solar Reflex (2nd Color)",
+        "series": "HW EV (1/10)",
+        "color": "Azul",
+        "part": "JJK67",
+        "hw": "007",
+        "cas": "F",
+        "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJK67_Solar_Reflex_2nd_Color.jpg"
+    },
+    {
+        "year": 2026,
+        "name": "Ford Mustang Mach-E 1400",
+        "series": "HW EV (2/10)",
+        "color": "",
+        "part": "JJH86",
+        "hw": "008",
+        "cas": "A",
+        "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJH86_Ford_Mustang_Mach-E_1400.jpg"
+    },
+    {
+        "year": 2026,
+        "name": "Ford Mustang Mach-E 1400 (2nd Color)",
+        "series": "Red Edition Target Exclusive (1/12)",
+        "color": "",
+        "part": "JJM61",
+        "hw": "008",
+        "cas": "C",
+        "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJM61_Ford_Mustang_Mach-E_1400_2nd_Color.jpg"
+    },
+    {
+        "year": 2026,
+        "name": "Ford Mustang Mach-E 1400 (3rd Color)",
+        "series": "HW EV (2/10)",
+        "color": "",
+        "part": "JJK78",
+        "hw": "008",
+        "cas": "G",
+        "image": "https://static.wikia.nocookie.net/hotwheels/images/5/53/MachE1400.jpg/revision/latest?cb=20260303120424"
+    },
+    {
+        "year": 2026,
+        "name": "'87 Buick Regal GNX",
+        "series": "Nightspeed Treasure Hunt (1/10)",
+        "color": "",
+        "part": "JJM00",
+        "hw": "009",
+        "cas": "A",
+        "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJM00_87_Buick_Regal_GNX.jpg"
+    },
+    {
+        "year": 2026,
+        "name": "2020 Ford Mustang Shelby GT500",
+        "series": "Nightspeed (2/10)",
+        "color": "",
+        "part": "JJH87",
+        "hw": "010",
+        "cas": "A",
+        "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJH87_2020_Ford_Mustang_Shelby_GT500.jpg"
+    },
+    {
+        "year": 2026,
+        "name": "2020 Ford Mustang Shelby GT500 (2nd Color)",
+        "series": "Nightspeed Kroger Exclusive (2/10)",
+        "color": "",
+        "part": "JJM50",
+        "hw": "010",
+        "cas": "C",
+        "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJM50_2020_Ford_Mustang_Shelby_GT500_2nd_Color.jpg"
+    },
+    {
+        "year": 2026,
+        "name": "2020 Ford Mustang Shelby GT500 (3rd Color)",
+        "series": "Nightspeed (2/10)",
+        "color": "",
+        "part": "JJK68",
+        "hw": "010",
+        "cas": "F",
+        "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJK68_2020_Ford_Mustang_Shelby_GT500_3rd_Color.jpg"
+    },
+    {
+        "year": 2026,
+        "name": "2018 Honda Civic Type R",
+        "series": "Nightspeed (3/10)",
+        "color": "",
+        "part": "JJH88",
+        "hw": "011",
+        "cas": "A",
+        "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJH88_2018_Honda_Civic_Type_R.jpg"
+    },
+    {
+        "year": 2026,
+        "name": "2018 Honda Civic Type R (2nd Color)",
+        "series": "Nightspeed (3/10)",
+        "color": "",
+        "part": "JJK87",
+        "hw": "011",
+        "cas": "F",
+        "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJK87_2018_Honda_Civic_Type_R_2nd_Color.jpg"
+    },
+    {
+        "year": 2026,
+        "name": "Carbonator",
+        "series": "Experimotors (1/5)",
+        "color": "",
+        "part": "JJH89",
+        "hw": "012",
+        "cas": "A",
+        "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJH89_Carbonator.jpg"
+    },
+    {
+        "year": 2026,
+        "name": "Drift-Ender",
+        "series": "Truckin' Along (1/5)",
+        "color": "",
+        "part": "JJH90",
+        "hw": "013",
+        "cas": "A",
+        "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJM15_Drift-Ender.jpg"
+    },
+    {
+        "year": 2026,
+        "name": "Drift-Ender",
+        "series": "Truckin' Along Super Treasure Hunt (1/5)",
+        "color": "",
+        "part": "JJM15",
+        "hw": "013",
+        "cas": "A",
+        "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJM15_Drift-Ender.jpg"
+    },
+    {
+        "year": 2026,
+        "name": "'20 Jeep Gladiator",
+        "series": "Truckin' Along (2/5)",
+        "color": "",
+        "part": "JJH91",
+        "hw": "014",
+        "cas": "A",
+        "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJH91_20_Jeep_Gladiator.jpg"
+    },
+    {
+        "year": 2026,
+        "name": "'20 Jeep Gladiator (2nd Color)",
+        "series": "Red Edition Target Exclusive (2/12)",
+        "color": "",
+        "part": "JJM62",
+        "hw": "014",
+        "cas": "C",
+        "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJM62_20_Jeep_Gladiator_2nd_Color.jpg"
+    },
+    {
+        "year": 2026,
+        "name": "Porsche 911 Carrera T",
+        "series": "Factory Fresh New for 2026! (1/5)",
+        "color": "",
+        "part": "JJH33",
+        "hw": "015",
+        "cas": "A",
+        "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJH33_Porsche_911_Carrera_T.jpg"
+    },
+    {
+        "year": 2026,
+        "name": "Porsche 911 Carrera T (2nd Color - Zamac)",
+        "series": "Factory Fresh New for 2026! Walmart Exclusive (1/5)",
+        "color": "",
+        "part": "JJM31",
+        "hw": "015",
+        "cas": "B",
+        "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJM31_Porsche_911_Carrera_T_2nd_Color_-_Zamac.jpg"
+    },
+    {
+        "year": 2026,
+        "name": "Porsche 911 Carrera T (3rd Color)",
+        "series": "Factory Fresh New for 2026! (1/5)",
+        "color": "",
+        "part": "JJK80",
+        "hw": "015",
+        "cas": "G",
+        "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJK80_Porsche_911_Carrera_T_3rd_Color.jpg"
+    },
+    {
+        "year": 2026,
+        "name": "Maserati Shamal",
+        "series": "Factory Fresh (2/5)",
+        "color": "",
+        "part": "JJH92",
+        "hw": "016",
+        "cas": "A",
+        "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJH92_Maserati_Shamal.jpg"
+    },
+    {
+        "year": 2026,
+        "name": "Maserati Shamal (2nd Color)",
+        "series": "Red Edition Target Exclusive (3/12)",
+        "color": "",
+        "part": "JJM57",
+        "hw": "016",
+        "cas": "C",
+        "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJM57_Maserati_Shamal_2nd_Color.jpg"
+    },
+    {
+        "year": 2026,
+        "name": "Maserati Shamal (3rd Color)",
+        "series": "Factory Fresh (2/5)",
+        "color": "",
+        "part": "JJL08",
+        "hw": "016",
+        "cas": "K",
+        "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJL08_Maserati_Shamal_3rd_Color.jpg"
+    },
+    {
+        "year": 2026,
+        "name": "Bounce'n Bass",
+        "series": "Layin' Low New for 2026! (1/5)",
+        "color": "",
+        "part": "JJH32",
+        "hw": "017",
+        "cas": "A",
+        "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJH32_Bouncen_Bass.jpg"
+    },
+    {
+        "year": 2026,
+        "name": "Bounce'n Bass (2nd Color)",
+        "series": "Layin' Low New for 2026! (1/5)",
+        "color": "",
+        "part": "JJK69",
+        "hw": "017",
+        "cas": "F",
+        "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJK69_Bouncen_Bass_2nd_Color.jpg"
+    },
+    {
+        "year": 2026,
+        "name": "Deora II",
+        "series": "HW Fan Driven (1/5)",
+        "color": "",
+        "part": "JJH93",
+        "hw": "018",
+        "cas": "A",
+        "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJH93_Deora_II.jpg"
+    },
+    {
+        "year": 2026,
+        "name": "Deora II (2nd Color)",
+        "series": "HW Fan Driven (1/5)",
+        "color": "",
+        "part": "JJK70",
+        "hw": "018",
+        "cas": "F",
+        "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJK70_Deora_II_2nd_Color.jpg"
+    },
+    {
+        "year": 2026,
+        "name": "Rodger Dodger",
+        "series": "HW Fan Driven (2/5)",
+        "color": "",
+        "part": "JJH94",
+        "hw": "019",
+        "cas": "A",
+        "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJH94_Rodger_Dodger.jpg"
+    },
+    {
+        "year": 2026,
+        "name": "Rodger Dodger (2nd Color)",
+        "series": "HW Fan Driven Kroger Exclusive (2/5)",
+        "color": "",
+        "part": "JJM51",
+        "hw": "019",
+        "cas": "C",
+        "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJM51_Rodger_Dodger_2nd_Color.jpg"
+    },
+    {
+        "year": 2026,
+        "name": "Rodger Dodger (3rd Color)",
+        "series": "HW Fan Driven (2/5)",
+        "color": "",
+        "part": "JJK71",
+        "hw": "019",
+        "cas": "F",
+        "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJK71_Rodger_Dodger_3rd_Color.jpg"
+    },
+    {
+        "year": 2026,
+        "name": "McLaren Formula 1 Team",
+        "series": "Formula 1 (1/5)",
+        "color": "",
+        "part": "JJH95",
+        "hw": "020",
+        "cas": "B",
+        "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJH95_McLaren_Formula_1_Team.jpg"
+    },
+    {
+        "year": 2026,
+        "name": "Barbie Dream Camper",
+        "series": "Mattel (1/5)",
+        "color": "",
+        "part": "JJH96",
+        "hw": "021",
+        "cas": "A",
+        "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJH96_Barbie_Dream_Camper.jpg"
+    },
+    {
+        "year": 2026,
+        "name": "Barbie Dream Camper (2nd Color)",
+        "series": "Mattel (1/5)",
+        "color": "",
+        "part": "JJK72",
+        "hw": "021",
+        "cas": "F",
+        "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJK72_Barbie_Dream_Camper_2nd_Color.jpg"
+    },
+    {
+        "year": 2026,
+        "name": "Instant Boost",
+        "series": "HW Starting Grid New for 2026! (1/10)",
+        "color": "",
+        "part": "JJH31",
+        "hw": "022",
+        "cas": "A",
+        "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJH31_Instant_Boost.jpg"
+    },
+    {
+        "year": 2026,
+        "name": "Instant Boost (2nd Color)",
+        "series": "HW Starting Grid New for 2026! (1/10)",
+        "color": "",
+        "part": "JJK73",
+        "hw": "022",
+        "cas": "F",
+        "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJK73_Instant_Boost_2nd_Color.jpg"
+    },
+    {
+        "year": 2026,
+        "name": "'69 Dodge Charger Daytona",
+        "series": "HW Starting Grid (2/10)",
+        "color": "",
+        "part": "JJH97",
+        "hw": "023",
+        "cas": "A",
+        "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJH97_69_Dodge_Charger_Daytona.jpg"
+    },
+    {
+        "year": 2026,
+        "name": "'69 Dodge Charger Daytona (2nd Color)",
+        "series": "HW Starting Grid Kroger Exclusive (2/10)",
+        "color": "",
+        "part": "JJM52",
+        "hw": "023",
+        "cas": "C",
+        "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJM52_69_Dodge_Charger_Daytona_2nd_Color.jpg"
+    },
+    {
+        "year": 2026,
+        "name": "Track Ripper",
+        "series": "HW Starting Grid (3/10)",
+        "color": "",
+        "part": "JJH82",
+        "hw": "024",
+        "cas": "A",
+        "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJH82_Track_Ripper.jpg"
+    },
+    {
+        "year": 2026,
+        "name": "Track Ripper (2nd Color - Zamac)",
+        "series": "HW Starting Grid Walmart Exclusive (3/10)",
+        "color": "",
+        "part": "JJM33",
+        "hw": "024",
+        "cas": "B",
+        "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJM33_Track_Ripper_2nd_Color_-_Zamac.jpg"
+    },
+    {
+        "year": 2026,
+        "name": "Track Ripper (3rd Color)",
+        "series": "HW Starting Grid (3/10)",
+        "color": "",
+        "part": "JJK95",
+        "hw": "024",
+        "cas": "H",
+        "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJK95_Track_Ripper_3rd_Color.jpg"
+    },
+    {
+        "year": 2026,
+        "name": "McMurtry Spéirling",
+        "series": "Exoticars (3/10)",
+        "color": "",
+        "part": "JJH81",
+        "hw": "025",
+        "cas": "B",
+        "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJH81_McMurtry_Spéirling.jpg"
+    },
+    {
+        "year": 2026,
+        "name": "Pagani Zonda Cinque",
+        "series": "Exoticars New for 2026! (4/10)",
+        "color": "",
+        "part": "JJH34",
+        "hw": "026",
+        "cas": "B",
+        "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJH34_Pagani_Zonda_Cinque.jpg"
+    },
+    {
+        "year": 2026,
+        "name": "Pagani Zonda Cinque (2nd Color)",
+        "series": "Exoticars New for 2026! (4/10)",
+        "color": "",
+        "part": "JJK75",
+        "hw": "026",
+        "cas": "G",
+        "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJK75_Pagani_Zonda_Cinque_2nd_Color.jpg"
+    },
+    {
+        "year": 2026,
+        "name": "Pagani Zonda Cinque (3rd Color - Zamac)",
+        "series": "Exoticars New for 2026! Walmart Exclusive (4/10)",
+        "color": "",
+        "part": "JJM32",
+        "hw": "026",
+        "cas": "K",
+        "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJM32_Pagani_Zonda_Cinque_3rd_Color_-_Zamac.jpg"
+    },
+    {
+        "year": 2026,
+        "name": "Optimus Prime",
+        "series": "Screen Time (1/10)",
+        "color": "",
+        "part": "JJJ00",
+        "hw": "027",
+        "cas": "B",
+        "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJJ00_Optimus_Prime.jpg"
+    },
+    {
+        "year": 2026,
+        "name": "HW K.I.T.T. Concept",
+        "series": "Screen Time (2/10)",
+        "color": "",
+        "part": "JJH98",
+        "hw": "028",
+        "cas": "B",
+        "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJH98_HW_KITT_Concept.jpg"
+    },
+    {
+        "year": 2026,
+        "name": "'92 Dodge Viper RT/10",
+        "series": "Drop Tops Treasure Hunt (2/5)",
+        "color": "",
+        "part": "JJM01",
+        "hw": "029",
+        "cas": "B",
+        "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJM01_92_Dodge_Viper_RT-10.jpg"
+    },
+    {
+        "year": 2026,
+        "name": "X-Steam",
+        "series": "X-Raycers (2/5)",
+        "color": "",
+        "part": "JJJ01",
+        "hw": "030",
+        "cas": "B",
+        "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJJ01_X-Steam.jpg"
+    },
+    {
+        "year": 2026,
+        "name": "X-Steam (2nd Color)",
+        "series": "X-Raycers (2/5)",
+        "color": "",
+        "part": "JJK76",
+        "hw": "030",
+        "cas": "",
+        "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJK76_X-Steam_2nd_Color.jpg"
+    },
+    {
+        "year": 2026,
+        "name": "La Liebre",
+        "series": "HW Dream Garage New for 2026! (2/5)",
+        "color": "",
+        "part": "JJH36",
+        "hw": "031",
+        "cas": "C",
+        "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJH36_La_Liebre.jpg"
+    },
+    {
+        "year": 2026,
+        "name": "La Liebre (2nd Color)",
+        "series": "HW Dream Garage New for 2026! (2/5)",
+        "color": "",
+        "part": "JJK77",
+        "hw": "031",
+        "cas": "H",
+        "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJK77_La_Liebre_2nd_Color.jpg"
+    },
+    {
+        "year": 2026,
+        "name": "5 Alarm",
+        "series": "HW Heavyweights (1/5)",
+        "color": "",
+        "part": "JJJ03",
+        "hw": "032",
+        "cas": "B",
+        "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJJ03_5_Alarm.jpg"
+    },
+    {
+        "year": 2026,
+        "name": "5 Alarm (2nd Color)",
+        "series": "HW Heavyweights (1/5)",
+        "color": "",
+        "part": "JJK99",
+        "hw": "032",
+        "cas": "J",
+        "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJK99_5_Alarm_2nd_Color.jpg"
+    },
+    {
+        "year": 2026,
+        "name": "Haulerback",
+        "series": "HW Heavyweights (2/5)",
+        "color": "",
+        "part": "JJJ04",
+        "hw": "033",
+        "cas": "B",
+        "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJJ04_Haulerback.jpg"
+    },
+    {
+        "year": 2026,
+        "name": "Haulerback (2nd Color)",
+        "series": "HW Heavyweights (2/5)",
+        "color": "",
+        "part": "JJL00",
+        "hw": "033",
+        "cas": "J",
+        "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJL00_Haulerback_2nd_Color.jpg"
+    },
+    {
+        "year": 2026,
+        "name": "Porsche Taycan Turbo S",
+        "series": "HW EV (3/10)",
+        "color": "",
+        "part": "JJJ05",
+        "hw": "034",
+        "cas": "B",
+        "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJJ05_Porsche_Taycan_Turbo_S.jpg"
+    },
+    {
+        "year": 2026,
+        "name": "Porsche Taycan Turbo S (2nd Color)",
+        "series": "HW EV (3/10)",
+        "color": "",
+        "part": "JJL01",
+        "hw": "034",
+        "cas": "J",
+        "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJL01_Porsche_Taycan_Turbo_S_2nd_Color.jpg"
+    },
+    {
+        "year": 2026,
+        "name": "Wattzup",
+        "series": "HW EV (4/10)",
+        "color": "",
+        "part": "JJJ06",
+        "hw": "035",
+        "cas": "B",
+        "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJJ06_Wattzup.jpg"
+    },
+    {
+        "year": 2026,
+        "name": "Wattzup (2nd Color)",
+        "series": "HW EV (4/10)",
+        "color": "",
+        "part": "JJK86",
+        "hw": "035",
+        "cas": "H",
+        "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJK86_Wattzup_2nd_Color.jpg"
+    },
+    {
+        "year": 2026,
+        "name": "'70 Dodge Hemi Challenger",
+        "series": "Nightspeed (4/10)",
+        "color": "",
+        "part": "JJJ07",
+        "hw": "036",
+        "cas": "B",
+        "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJJ07_70_Dodge_Hemi_Challenger.jpg"
+    },
+    {
+        "year": 2026,
+        "name": "'70 Dodge Hemi Challenger (2nd Color - Zamac)",
+        "series": "Nightspeed Walmart Exclusive (4/10)",
+        "color": "",
+        "part": "JJM38",
+        "hw": "036",
+        "cas": "D",
+        "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJM38_70_Dodge_Hemi_Challenger_2nd_Color_-_Zamac.jpg"
+    },
+    {
+        "year": 2026,
+        "name": "'70 Dodge Hemi Challenger (3rd Color)",
+        "series": "Nightspeed (4/10)",
+        "color": "",
+        "part": "JJK79",
+        "hw": "036",
+        "cas": "",
+        "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJK79_70_Dodge_Hemi_Challenger_3rd_Color.jpg"
+    },
+    {
+        "year": 2026,
+        "name": "Cupra e-Racer",
+        "series": "Nightspeed (5/10)",
+        "color": "",
+        "part": "JJJ08",
+        "hw": "037",
+        "cas": "B",
+        "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJJ08_Cupra_e-Racer.jpg"
+    },
+    {
+        "year": 2026,
+        "name": "Cupra e-Racer (2nd Color)",
+        "series": "Nightspeed (5/10)",
+        "color": "",
+        "part": "JJL50",
+        "hw": "037",
+        "cas": "",
+        "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJL50_Cupra_e-Racer_2nd_Color.jpg"
+    },
+    {
+        "year": 2026,
+        "name": "24/Seven",
+        "series": "Nightspeed (6/10)",
+        "color": "",
+        "part": "JJJ09",
+        "hw": "038",
+        "cas": "B",
+        "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJJ09_24-Seven.jpg"
+    },
+    {
+        "year": 2026,
+        "name": "24/Seven (2nd Color)",
+        "series": "Nightspeed (6/10)",
+        "color": "",
+        "part": "JJL51",
+        "hw": "038",
+        "cas": "",
+        "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJL51_24-Seven_2nd_Color.jpg"
+    },
+    {
+        "year": 2026,
+        "name": "Roller Toaster",
+        "series": "Experimotors (3/5)",
+        "color": "",
+        "part": "JJJ10",
+        "hw": "039",
+        "cas": "B",
+        "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJJ10_Roller_Toaster.jpg"
+    },
+    {
+        "year": 2026,
+        "name": "Roller Toaster (2nd Color)",
+        "series": "Experimotors (3/5)",
+        "color": "",
+        "part": "JJK88",
+        "hw": "039",
+        "cas": "H",
+        "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJK88_Roller_Toaster_2nd_Color.jpg"
+    },
+    {
+        "year": 2026,
+        "name": "Braille Racer - Twin Mill",
+        "series": "HW All Drivers Welcome World Braille Day (1/5)",
+        "color": "",
+        "part": "JJJ11",
+        "hw": "040",
+        "cas": "B",
+        "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJJ11_Braille_Racer_-_Twin_Mill.jpg"
+    },
+    {
+        "year": 2026,
+        "name": "Ferrari SF90 Stradale",
+        "series": "Ferrari (1/5)",
+        "color": "",
+        "part": "JJJ12",
+        "hw": "041",
+        "cas": "B",
+        "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJJ12_Ferrari_SF90_Stradale.jpg"
+    },
+    {
+        "year": 2026,
+        "name": "Ferrari SF90 Stradale (2nd Color)",
+        "series": "Ferrari (1/5)",
+        "color": "",
+        "part": "JJK89",
+        "hw": "041",
+        "cas": "H",
+        "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJK89_Ferrari_SF90_Stradale_2nd_Color.jpg"
+    },
+    {
+        "year": 2026,
+        "name": "'83 Chevy Silverado",
+        "series": "Truckin' Along (3/5)",
+        "color": "",
+        "part": "JJJ13",
+        "hw": "042",
+        "cas": "B",
+        "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJJ13_83_Chevy_Silverado.jpg"
+    },
+    {
+        "year": 2026,
+        "name": "'83 Chevy Silverado (2nd Color)",
+        "series": "Truckin' Along (3/5)",
+        "color": "",
+        "part": "JJL07",
+        "hw": "042",
+        "cas": "K",
+        "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJL07_83_Chevy_Silverado_2nd_Color.jpg"
+    },
+    {
+        "year": 2026,
+        "name": "Ford Mustang GTD",
+        "series": "Factory Fresh (3/5)",
+        "color": "",
+        "part": "JJJ14",
+        "hw": "043",
+        "cas": "B",
+        "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJM16_Ford_Mustang_GTD.jpg"
+    },
+    {
+        "year": 2026,
+        "name": "Ford Mustang GTD",
+        "series": "Factory Fresh Super Treasure Hunt (3/5)",
+        "color": "",
+        "part": "JJM16",
+        "hw": "043",
+        "cas": "B",
+        "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJM16_Ford_Mustang_GTD.jpg"
+    },
+    {
+        "year": 2026,
+        "name": "'59 Chevy Impala",
+        "series": "Layin' Low (2/5)",
+        "color": "",
+        "part": "JJJ15",
+        "hw": "044",
+        "cas": "A",
+        "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJJ15_59_Chevy_Impala.jpg"
+    },
+    {
+        "year": 2026,
+        "name": "'59 Chevy Impala (2nd Color - Zamac)",
+        "series": "Layin' Low Walmart Exclusive (2/5)",
+        "color": "",
+        "part": "JJM35",
+        "hw": "044",
+        "cas": "D",
+        "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJM35_59_Chevy_Impala_2nd_Color_-_Zamac.jpg"
+    },
+    {
+        "year": 2026,
+        "name": "'59 Chevy Impala (3rd Color)",
+        "series": "Layin' Low (2/5)",
+        "color": "",
+        "part": "JJK81",
+        "hw": "044",
+        "cas": "G",
+        "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJK81_59_Chevy_Impala_3rd_Color.jpg"
+    },
+    {
+        "year": 2026,
+        "name": "'47 Chevy Fleetline",
+        "series": "Layin' Low (3/5)",
+        "color": "",
+        "part": "JJJ16",
+        "hw": "045",
+        "cas": "B",
+        "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJJ16_47_Chevy_Fleetline.jpg"
+    },
+    {
+        "year": 2026,
+        "name": "'47 Chevy Fleetline (2nd Color)",
+        "series": "Red Edition Target Exclusive (4/12)",
+        "color": "",
+        "part": "JJM64",
+        "hw": "045",
+        "cas": "F",
+        "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJM64_47_Chevy_Fleetline_2nd_Color.jpg"
+    },
+    {
+        "year": 2026,
+        "name": "Purple Passion",
+        "series": "HW Fan Driven (3/5)",
+        "color": "",
+        "part": "JJJ17",
+        "hw": "046",
+        "cas": "B",
+        "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJJ17_Purple_Passion.jpg"
+    },
+    {
+        "year": 2026,
+        "name": "Purple Passion (2nd Color)",
+        "series": "HW Fan Driven (3/5)",
+        "color": "",
+        "part": "JJK91",
+        "hw": "046",
+        "cas": "H",
+        "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJK91_Purple_Passion_2nd_Color.jpg"
+    },
+    {
+        "year": 2026,
+        "name": "High-Tail Chaser",
+        "series": "HW Mods New for 2026! (1/5)",
+        "color": "",
+        "part": "JJH35",
+        "hw": "047",
+        "cas": "B",
+        "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJH35_High-Tail_Chaser.jpg"
+    },
+    {
+        "year": 2026,
+        "name": "High-Tail Chaser (2nd Color)",
+        "series": "HW Mods New for 2026! (1/5)",
+        "color": "",
+        "part": "JJK92",
+        "hw": "047",
+        "cas": "G",
+        "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJK92_High-Tail_Chaser_2nd_Color.jpg"
+    },
+    {
+        "year": 2026,
+        "name": "Monster High Ghoul Mobile",
+        "series": "Mattel (2/5)",
+        "color": "",
+        "part": "JJJ19",
+        "hw": "048",
+        "cas": "B",
+        "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJJ19_Monster_High_Ghoul_Mobile.jpg"
+    },
+    {
+        "year": 2026,
+        "name": "Monster High Ghoul Mobile (2nd Color)",
+        "series": "Mattel (2/5)",
+        "color": "",
+        "part": "JJK93",
+        "hw": "048",
+        "cas": "H",
+        "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJK93_Monster_High_Ghoul_Mobile_2nd_Color.jpg"
+    },
+    {
+        "year": 2026,
+        "name": "Quick Chat",
+        "series": "Mattel (3/5)",
+        "color": "",
+        "part": "JJJ18",
+        "hw": "049",
+        "cas": "C",
+        "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJJ18_Quick_Chat.jpg"
+    },
+    {
+        "year": 2026,
+        "name": "Quick Chat (2nd Color)",
+        "series": "Mattel (3/5)",
+        "color": "",
+        "part": "JJK82",
+        "hw": "049",
+        "cas": "G",
+        "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJK82_Quick_Chat_2nd_Color.jpg"
+    },
+    {
+        "year": 2026,
+        "name": "Bugatti Bolide",
+        "series": "HW Starting Grid (4/10)",
+        "color": "",
+        "part": "JJJ20",
+        "hw": "050",
+        "cas": "B",
+        "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJJ20_Bugatti_Bolide.jpg"
+    },
+    {
+        "year": 2026,
+        "name": "Bugatti Bolide (2nd Color)",
+        "series": "HW Starting Grid (4/10)",
+        "color": "",
+        "part": "",
+        "hw": "050",
+        "cas": "",
+        "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJL22_Bugatti_Bolide_2nd_Color.jpg"
+    },
+    {
+        "year": 2026,
+        "name": "The Dark Knight Batmobile",
+        "series": "Batman (2/5)",
+        "color": "",
+        "part": "JJJ21",
+        "hw": "051",
+        "cas": "C",
+        "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJJ21_The_Dark_Knight_Batmobile.jpg"
+    },
+    {
+        "year": 2026,
+        "name": "The Dark Knight Batmobile (2nd Color)",
+        "series": "Batman (2/5)",
+        "color": "",
+        "part": "",
+        "hw": "051",
+        "cas": "",
+        "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026__The_Dark_Knight_Batmobile_2nd_Color.jpg"
+    },
+    {
+        "year": 2026,
+        "name": "Porsche 911 Turbo Cabriolet",
+        "series": "Drop Tops (3/5)",
+        "color": "",
+        "part": "JJJ22",
+        "hw": "052",
+        "cas": "C",
+        "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJJ22_Porsche_911_Turbo_Cabriolet.jpg"
+    },
+    {
+        "year": 2026,
+        "name": "Porsche 911 Turbo Cabriolet (2nd Color)",
+        "series": "Red Edition Target Exclusive (5/12)",
+        "color": "",
+        "part": "JJM67",
+        "hw": "052",
+        "cas": "F",
+        "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJM67_Porsche_911_Turbo_Cabriolet_2nd_Color.jpg"
+    },
+    {
+        "year": 2026,
+        "name": "'69 Chevelle",
+        "series": "X-Raycers (3/5)",
+        "color": "",
+        "part": "JJJ23",
+        "hw": "053",
+        "cas": "C",
+        "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJJ23_69_Chevelle.jpg"
+    },
+    {
+        "year": 2026,
+        "name": "'69 Chevelle (2nd Color)",
+        "series": "X-Raycers (3/5)",
+        "color": "",
+        "part": "JJK83",
+        "hw": "053",
+        "cas": "H",
+        "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJK83_69_Chevelle_2nd_Color.jpg"
+    },
+    {
+        "year": 2026,
+        "name": "Donut Drifter",
+        "series": "Sweet Rides (1/5)",
+        "color": "",
+        "part": "JJJ24",
+        "hw": "054",
+        "cas": "C",
+        "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJJ24_Donut_Drifter.jpg"
+    },
+    {
+        "year": 2026,
+        "name": "Dessert Drifter",
+        "series": "Sweet Rides (2/5)",
+        "color": "",
+        "part": "JJJ25",
+        "hw": "055",
+        "cas": "C",
+        "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJJ25_Dessert_Drifter.jpg"
+    },
+    {
+        "year": 2026,
+        "name": "Dessert Drifter (2nd Color)",
+        "series": "Sweet Rides (2/5)",
+        "color": "",
+        "part": "JJK84",
+        "hw": "055",
+        "cas": "H",
+        "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJK84_Dessert_Drifter_2nd_Color.jpg"
+    },
+    {
+        "year": 2026,
+        "name": "'67 Camaro",
+        "series": "HW Dream Garage (3/5)",
+        "color": "",
+        "part": "JJJ26",
+        "hw": "056",
+        "cas": "C",
+        "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJJ26_67_Camaro.jpg"
+    },
+    {
+        "year": 2026,
+        "name": "'67 Camaro (2nd Color)",
+        "series": "HW Dream Garage Dollar Tree/Family Dollar Exclusive (3/5)",
+        "color": "",
+        "part": "JJM46",
+        "hw": "056",
+        "cas": "E",
+        "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJM46_67_Camaro_2nd_Color.jpg"
+    },
+    {
+        "year": 2026,
+        "name": "Raijin Express",
+        "series": "HW Heavyweights (3/5)",
+        "color": "",
+        "part": "JJJ27",
+        "hw": "057",
+        "cas": "B",
+        "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJJ27_Raijin_Express.jpg"
+    },
+    {
+        "year": 2026,
+        "name": "Raijin Express (2nd Color)",
+        "series": "HW Heavyweights (3/5)",
+        "color": "",
+        "part": "JJK85",
+        "hw": "057",
+        "cas": "H",
+        "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJK85_Raijin_Express_2nd_Color.jpg"
+    },
+    {
+        "year": 2026,
+        "name": "Electro Silhouette",
+        "series": "HW EV Treasure Hunt (5/10)",
+        "color": "",
+        "part": "JJM02",
+        "hw": "058",
+        "cas": "C",
+        "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJM02_Electro_Silhouette.jpg"
+    },
+    {
+        "year": 2026,
+        "name": "Lucid Air",
+        "series": "HW EV (6/10)",
+        "color": "",
+        "part": "JJJ28",
+        "hw": "059",
+        "cas": "C",
+        "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJJ28_Lucid_Air.jpg"
+    },
+    {
+        "year": 2026,
+        "name": "Toyota Prius Custom",
+        "series": "HW J-Imports New for 2026! (1/10)",
+        "color": "",
+        "part": "JJH37",
+        "hw": "060",
+        "cas": "D",
+        "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJH37_Toyota_Prius_Custom.jpg"
+    },
+    {
+        "year": 2026,
+        "name": "Toyota Prius Custom (2nd Color)",
+        "series": "HW J-Imports New for 2026! Dollar Tree/Family Dollar Exclusive (1/10)",
+        "color": "",
+        "part": "JJM48",
+        "hw": "060",
+        "cas": "E",
+        "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJM48_Toyota_Prius_Custom_2nd_Color.jpg"
+    },
+    {
+        "year": 2026,
+        "name": "Toyota Prius Custom (3rd Color)",
+        "series": "HW J-Imports New for 2026! (1/10)",
+        "color": "",
+        "part": "JJL34",
+        "hw": "060",
+        "cas": "",
+        "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJL34_Toyota_Prius_Custom_3rd_Color.jpg"
+    },
+    {
+        "year": 2026,
+        "name": "Mazda RX-7",
+        "series": "HW J-Imports (2/10)",
+        "color": "",
+        "part": "JJJ29",
+        "hw": "061",
+        "cas": "C",
+        "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJJ29_Mazda_RX-7.jpg"
+    },
+    {
+        "year": 2026,
+        "name": "Mazda RX-7 (2nd Color)",
+        "series": "HW J-Imports (2/10)",
+        "color": "",
+        "part": "JJL35",
+        "hw": "061",
+        "cas": "",
+        "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJL35_Mazda_RX-7_2nd_Color.jpg"
+    },
+    {
+        "year": 2026,
+        "name": "Ferrari 365 GTB4 Competizione",
+        "series": "Ferrari (2/5)",
+        "color": "",
+        "part": "JJJ30",
+        "hw": "062",
+        "cas": "C",
+        "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJJ30_Ferrari_365_GTB4_Competizione.jpg"
+    },
+    {
+        "year": 2026,
+        "name": "Ferrari 365 GTB4 Competizione (2nd Color)",
+        "series": "Ferrari (2/5)",
+        "color": "",
+        "part": "JJL06",
+        "hw": "062",
+        "cas": "K",
+        "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJL06_Ferrari_365_GTB4_Competizione_2nd_Color.jpg"
+    },
+    {
+        "year": 2026,
+        "name": "Ferrari F40 Competizione",
+        "series": "Ferrari (3/5)",
+        "color": "",
+        "part": "JJJ31",
+        "hw": "063",
+        "cas": "C",
+        "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJM17_Ferrari_F40_Competizione.jpg"
+    },
+    {
+        "year": 2026,
+        "name": "Ferrari F40 Competizione",
+        "series": "Ferrari Super Treasure Hunt (3/5)",
+        "color": "",
+        "part": "JJM17",
+        "hw": "063",
+        "cas": "C",
+        "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJM17_Ferrari_F40_Competizione.jpg"
+    },
+    {
+        "year": 2026,
+        "name": "Mercedes-Benz Unimog 1300L",
+        "series": "Truckin' Along (4/5)",
+        "color": "",
+        "part": "JJJ32",
+        "hw": "064",
+        "cas": "C",
+        "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJJ32_Mercedes-Benz_Unimog_1300L.jpg"
+    },
+    {
+        "year": 2026,
+        "name": "Drift Box",
+        "series": "HW Euro New for 2026! (1/10)",
+        "color": "",
+        "part": "JJH40",
+        "hw": "065",
+        "cas": "B",
+        "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJH40_Drift_Box.jpg"
+    },
+    {
+        "year": 2026,
+        "name": "Drift Box (2nd Color)",
+        "series": "HW Euro New for 2026! (1/10)",
+        "color": "",
+        "part": "JJL09",
+        "hw": "065",
+        "cas": "K",
+        "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJL09_Drift_Box_2nd_Color.jpg"
+    },
+    {
+        "year": 2026,
+        "name": "'17 Audi RS 6 Avant",
+        "series": "HW Euro (2/10)",
+        "color": "",
+        "part": "JJJ33",
+        "hw": "066",
+        "cas": "C",
+        "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJJ33_17_Audi_RS_6_Avant.jpg"
+    },
+    {
+        "year": 2026,
+        "name": "'17 Audi RS 6 Avant (2nd Color)",
+        "series": "HW Euro (2/10)",
+        "color": "",
+        "part": "JJK90",
+        "hw": "066",
+        "cas": "H",
+        "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJK90_17_Audi_RS_6_Avant_2nd_Color.jpg"
+    },
+    {
+        "year": 2026,
+        "name": "Lotus Cortina",
+        "series": "HW Euro (3/10)",
+        "color": "",
+        "part": "JJJ34",
+        "hw": "067",
+        "cas": "C",
+        "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJJ34_Lotus_Cortina.jpg"
+    },
+    {
+        "year": 2026,
+        "name": "Lotus Cortina (2nd Color)",
+        "series": "HW Euro Dollar Tree/Family Dollar Exclusive (3/10)",
+        "color": "",
+        "part": "JJM47",
+        "hw": "067",
+        "cas": "L",
+        "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJM47_Lotus_Cortina_2nd_Color.jpg"
+    },
+    {
+        "year": 2026,
+        "name": "Lotus Cortina (3rd Color)",
+        "series": "HW Euro (3/10)",
+        "color": "",
+        "part": "JJL16",
+        "hw": "067",
+        "cas": "",
+        "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJL16_Lotus_Cortina_3rd_Color.jpg"
+    },
+    {
+        "year": 2026,
+        "name": "Visa Cash App Racing Bulls Formula One Team",
+        "series": "Formula 1 (2/5)",
+        "color": "",
+        "part": "JJJ35",
+        "hw": "068",
+        "cas": "D",
+        "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJJ35_Visa_Cash_App_Racing_Bulls_Formula_One_Team.jpg"
+    },
+    {
+        "year": 2026,
+        "name": "Volvo 240 Drift Wagon",
+        "series": "HW Mods (2/5)",
+        "color": "",
+        "part": "JJJ36",
+        "hw": "069",
+        "cas": "C",
+        "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJJ36_Volvo_240_Drift_Wagon.jpg"
+    },
+    {
+        "year": 2026,
+        "name": "Volvo 240 Drift Wagon (2nd Color)",
+        "series": "HW Mods (2/5)",
+        "color": "",
+        "part": "",
+        "hw": "069",
+        "cas": "",
+        "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026__Volvo_240_Drift_Wagon_2nd_Color.jpg"
+    },
+    {
+        "year": 2026,
+        "name": "Decidedly Go",
+        "series": "Mattel (4/5)",
+        "color": "",
+        "part": "JJJ37",
+        "hw": "070",
+        "cas": "C",
+        "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJJ37_Decidedly_Go.jpg"
+    },
+    {
+        "year": 2026,
+        "name": "Decidedly Go (2nd Color)",
+        "series": "Mattel (4/5)",
+        "color": "",
+        "part": "JJL12",
+        "hw": "070",
+        "cas": "K",
+        "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJL12_Decidedly_Go_2nd_Color.jpg"
+    },
+    {
+        "year": 2026,
+        "name": "Austin Mini Cooper S",
+        "series": "Then and Now New for 2026! (1/10)",
+        "color": "",
+        "part": "JJH39",
+        "hw": "071",
+        "cas": "C",
+        "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJH39_Austin_Mini_Cooper_S.jpg"
+    },
+    {
+        "year": 2026,
+        "name": "Austin Mini Cooper S (2nd Color)",
+        "series": "Then and Now New for 2026! (1/10)",
+        "color": "",
+        "part": "JJK94",
+        "hw": "071",
+        "cas": "H",
+        "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJK94_Austin_Mini_Cooper_S_2nd_Color.jpg"
+    },
+    {
+        "year": 2026,
+        "name": "Datsun 240Z",
+        "series": "Then and Now (2/10)",
+        "color": "",
+        "part": "JJJ38",
+        "hw": "072",
+        "cas": "C",
+        "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJJ38_Datsun_240Z.jpg"
+    },
+    {
+        "year": 2026,
+        "name": "Datsun 240Z (2nd Color)",
+        "series": "Then and Now (2/10)",
+        "color": "",
+        "part": "JJM69",
+        "hw": "072",
+        "cas": "",
+        "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJM69_Datsun_240Z_2nd_Color.jpg"
+    },
+    {
+        "year": 2026,
+        "name": "BMW M4 GT3",
+        "series": "HW Starting Grid New for 2026! (5/10)",
+        "color": "",
+        "part": "JNG69",
+        "hw": "073",
+        "cas": "K",
+        "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JNG69_BMW_M4_GT3.jpg"
+    },
+    {
+        "year": 2026,
+        "name": "McLaren W1",
+        "series": "Exoticars (5/10)",
+        "color": "",
+        "part": "JJJ39",
+        "hw": "074",
+        "cas": "C",
+        "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJJ39_McLaren_W1.jpg"
+    },
+    {
+        "year": 2026,
+        "name": "McLaren W1 (2nd Color)",
+        "series": "Red Edition Target Exclusive (6/12)",
+        "color": "",
+        "part": "JJM60",
+        "hw": "074",
+        "cas": "F",
+        "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJM60_McLaren_W1_2nd_Color.jpg"
+    },
+    {
+        "year": 2026,
+        "name": "McLaren W1 (3rd Color)",
+        "series": "Exoticars (5/10)",
+        "color": "",
+        "part": "JJL43",
+        "hw": "074",
+        "cas": "",
+        "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJL43_McLaren_W1_3rd_Color.jpg"
+    },
+    {
+        "year": 2026,
+        "name": "X-cceleron",
+        "series": "Exoticars New for 2026! (6/10)",
+        "color": "",
+        "part": "JJH43",
+        "hw": "075",
+        "cas": "D",
+        "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJH43_X-cceleron.jpg"
+    },
+    {
+        "year": 2026,
+        "name": "'76 Chevy Chevette",
+        "series": "Drag Racers (1/10)",
+        "color": "",
+        "part": "JJJ40",
+        "hw": "076",
+        "cas": "C",
+        "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJJ40_76_Chevy_Chevette.jpg"
+    },
+    {
+        "year": 2026,
+        "name": "'76 Chevy Chevette (2nd Color)",
+        "series": "Drag Racers (1/10)",
+        "color": "",
+        "part": "JJL45",
+        "hw": "076",
+        "cas": "",
+        "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJL45_76_Chevy_Chevette_2nd_Color.jpg"
+    },
+    {
+        "year": 2026,
+        "name": "Supercharged",
+        "series": "Drag Racers (2/10)",
+        "color": "",
+        "part": "JJJ41",
+        "hw": "077",
+        "cas": "D",
+        "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJJ41_Supercharged.jpg"
+    },
+    {
+        "year": 2026,
+        "name": "Supercharged (2nd Color)",
+        "series": "Drag Racers (2/10)",
+        "color": "",
+        "part": "JJL02",
+        "hw": "077",
+        "cas": "K",
+        "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJL02_Supercharged_2nd_Color.jpg"
+    },
+    {
+        "year": 2026,
+        "name": "Hako Type D",
+        "series": "Compact Kings (1/10)",
+        "color": "",
+        "part": "JJJ43",
+        "hw": "078",
+        "cas": "D",
+        "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJJ43_Hako_Type_D.jpg"
+    },
+    {
+        "year": 2026,
+        "name": "Hoto Roto",
+        "series": "Compact Kings (2/10)",
+        "color": "",
+        "part": "JJJ44",
+        "hw": "079",
+        "cas": "D",
+        "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJJ44_Hoto_Roto.jpg"
+    },
+    {
+        "year": 2026,
+        "name": "Kei Swap",
+        "series": "Compact Kings (3/10)",
+        "color": "",
+        "part": "JJJ65",
+        "hw": "080",
+        "cas": "E",
+        "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJJ65_Kei_Swap.jpg"
+    },
+    {
+        "year": 2026,
+        "name": "Hot Wheengs",
+        "series": "X-Raycers Treasure Hunt (4/5)",
+        "color": "",
+        "part": "JJM03",
+        "hw": "081",
+        "cas": "D",
+        "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJM03_Hot_Wheengs.jpg"
+    },
+    {
+        "year": 2026,
+        "name": "Birthday Burner",
+        "series": "Sweet Rides (3/5)",
+        "color": "",
+        "part": "JJJ45",
+        "hw": "082",
+        "cas": "D",
+        "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJJ45_Birthday_Burner.jpg"
+    },
+    {
+        "year": 2026,
+        "name": "Rapid Pulse",
+        "series": "HW Heavyweights (4/5)",
+        "color": "",
+        "part": "JJJ46",
+        "hw": "083",
+        "cas": "D",
+        "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJJ46_Rapid_Pulse.jpg"
+    },
+    {
+        "year": 2026,
+        "name": "Rapid Pulse (2nd Color)",
+        "series": "HW Heavyweights (4/5)",
+        "color": "",
+        "part": "JJL04",
+        "hw": "083",
+        "cas": "K",
+        "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJL04_Rapid_Pulse_2nd_Color.jpg"
+    },
+    {
+        "year": 2026,
+        "name": "Polestar TRX",
+        "series": "HW EV (7/10)",
+        "color": "",
+        "part": "JJJ47",
+        "hw": "084",
+        "cas": "D",
+        "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJJ47_Polestar_TRX.jpg"
+    },
+    {
+        "year": 2026,
+        "name": "Voltage Spike",
+        "series": "HW EV (8/10)",
+        "color": "",
+        "part": "JJJ48",
+        "hw": "085",
+        "cas": "D",
+        "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJJ48_Voltage_Spike.jpg"
+    },
+    {
+        "year": 2026,
+        "name": "VW ID. Buzz Bomb",
+        "series": "HW Euro New for 2026! (4/10)",
+        "color": "",
+        "part": "JJH46",
+        "hw": "086",
+        "cas": "D",
+        "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJH46_VW_ID_Buzz_Bomb.jpg"
+    },
+    {
+        "year": 2026,
+        "name": "VW ID. Buzz Bomb (2nd Color)",
+        "series": "HW Euro New for 2026! (4/10)",
+        "color": "",
+        "part": "JJL95",
+        "hw": "086",
+        "cas": "H",
+        "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJL95_VW_ID_Buzz_Bomb_2nd_Color.jpg"
+    },
+    {
+        "year": 2026,
+        "name": "Cruise Bruiser",
+        "series": "Wagons (1/10)",
+        "color": "",
+        "part": "JJJ49",
+        "hw": "087",
+        "cas": "D",
+        "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJJ49_Cruise_Bruiser.jpg"
+    },
+    {
+        "year": 2026,
+        "name": "Nissan Skyline 2000 GT-R",
+        "series": "HW J-Imports (3/10)",
+        "color": "",
+        "part": "JJJ50",
+        "hw": "088",
+        "cas": "D",
+        "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJJ50_Nissan_Skyline_2000_GT-R.jpg"
+    },
+    {
+        "year": 2026,
+        "name": "Nissan Skyline 2000 GT-R (2nd Color)",
+        "series": "HW J-Imports (3/10)",
+        "color": "",
+        "part": "JJL68",
+        "hw": "088",
+        "cas": "",
+        "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJL68_Nissan_Skyline_2000_GT-R_2nd_Color.jpg"
+    },
+    {
+        "year": 2026,
+        "name": "1985 Honda CR-X",
+        "series": "HW J-Imports (4/10)",
+        "color": "",
+        "part": "JJJ51",
+        "hw": "089",
+        "cas": "D",
+        "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJJ51_1985_Honda_CR-X.jpg"
+    },
+    {
+        "year": 2026,
+        "name": "1985 Honda CR-X (2nd Color - Zamac)",
+        "series": "HW J-Imports Walmart Exclusive (4/10)",
+        "color": "",
+        "part": "JJM40",
+        "hw": "089",
+        "cas": "",
+        "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJM40_1985_Honda_CR-X_2nd_Color_-_Zamac.jpg"
+    },
+    {
+        "year": 2026,
+        "name": "'16 Cadillac ATS-V R",
+        "series": "Nightspeed (7/10)",
+        "color": "",
+        "part": "JJJ52",
+        "hw": "090",
+        "cas": "D",
+        "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJJ52_16_Cadillac_ATS-V_R.jpg"
+    },
+    {
+        "year": 2026,
+        "name": "'16 Cadillac ATS-V R (2nd Color)",
+        "series": "Nightspeed (7/10)",
+        "color": "",
+        "part": "JJL36",
+        "hw": "090",
+        "cas": "",
+        "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJL36_16_Cadillac_ATS-V_R_2nd_Color.jpg"
+    },
+    {
+        "year": 2026,
+        "name": "LB-WORKS Lamborghini Huracán Coupé",
+        "series": "Nightspeed (8/10)",
+        "color": "",
+        "part": "JJJ53",
+        "hw": "091",
+        "cas": "D",
+        "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJJ53_LB-WORKS_Lamborghini_Huracán_Coupé.jpg"
+    },
+    {
+        "year": 2026,
+        "name": "Feline Lucky",
+        "series": "Experimotors (2/5)",
+        "color": "",
+        "part": "JJJ54",
+        "hw": "092",
+        "cas": "D",
+        "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJJ54_Feline_Lucky.jpg"
+    },
+    {
+        "year": 2026,
+        "name": "Coupé Clip",
+        "series": "Experimotors (4/5)",
+        "color": "",
+        "part": "JJJ55",
+        "hw": "093",
+        "cas": "D",
+        "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJJ55_Coupé_Clip.jpg"
+    },
+    {
+        "year": 2026,
+        "name": "El Segundo Coupé Clip (2nd Color)",
+        "series": "Experimotors (4/5)",
+        "color": "",
+        "part": "JJL05",
+        "hw": "093",
+        "cas": "K",
+        "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJL05_El_Segundo_Coupé_Clip_2nd_Color.jpg"
+    },
+    {
+        "year": 2026,
+        "name": "Ferrari 12Cilindri",
+        "series": "Ferrari New for 2026! (4/5)",
+        "color": "",
+        "part": "JJH41",
+        "hw": "094",
+        "cas": "D",
+        "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJH41_Ferrari_12Cilindri.jpg"
+    },
+    {
+        "year": 2026,
+        "name": "Ferrari 12Cilindri (2nd Color)",
+        "series": "Ferrari New for 2026! (4/5)",
+        "color": "",
+        "part": "",
+        "hw": "094",
+        "cas": "",
+        "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026__Ferrari_12Cilindri_2nd_Color.jpg"
+    },
+    {
+        "year": 2026,
+        "name": "'64 Impala",
+        "series": "Layin' Low (4/5)",
+        "color": "",
+        "part": "JJJ56",
+        "hw": "095",
+        "cas": "D",
+        "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJM18_64_Impala.jpg"
+    },
+    {
+        "year": 2026,
+        "name": "'64 Impala",
+        "series": "Layin' Low Super Treasure Hunt (4/5)",
+        "color": "",
+        "part": "JJM18",
+        "hw": "095",
+        "cas": "D",
+        "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJM18_64_Impala.jpg"
+    },
+    {
+        "year": 2026,
+        "name": "El Segundo Coupe",
+        "series": "HW Fan Driven (4/5)",
+        "color": "",
+        "part": "JJJ57",
+        "hw": "096",
+        "cas": "D",
+        "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJJ57_El_Segundo_Coupe.jpg"
+    },
+    {
+        "year": 2026,
+        "name": "Corvette Grand Sport",
+        "series": "Then and Now (3/10)",
+        "color": "",
+        "part": "JJJ58",
+        "hw": "097",
+        "cas": "C",
+        "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJJ58_Corvette_Grand_Sport.jpg"
+    },
+    {
+        "year": 2026,
+        "name": "'96 Porsche Carrera",
+        "series": "Then and Now (4/10)",
+        "color": "",
+        "part": "JJJ59",
+        "hw": "098",
+        "cas": "D",
+        "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJJ59_96_Porsche_Carrera.jpg"
+    },
+    {
+        "year": 2026,
+        "name": "'96 Porsche Carrera (2nd Color)",
+        "series": "Then and Now (4/10)",
+        "color": "",
+        "part": "",
+        "hw": "098",
+        "cas": "",
+        "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026__96_Porsche_Carrera_2nd_Color.jpg"
+    },
+    {
+        "year": 2026,
+        "name": "Renault Espace F1",
+        "series": "HW Starting Grid (6/10)",
+        "color": "",
+        "part": "JJJ60",
+        "hw": "099",
+        "cas": "D",
+        "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJJ60_Renault_Espace_F1.jpg"
+    },
+    {
+        "year": 2026,
+        "name": "Renault Espace F1 (2nd Color)",
+        "series": "HW Starting Grid (6/10)",
+        "color": "",
+        "part": "JJL40",
+        "hw": "099",
+        "cas": "K",
+        "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJL40_Renault_Espace_F1_2nd_Color.jpg"
+    },
+    {
+        "year": 2026,
+        "name": "Twin Dorado",
+        "series": "HW Starting Grid (7/10)",
+        "color": "",
+        "part": "JJJ61",
+        "hw": "100",
+        "cas": "D",
+        "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJJ61_Twin_Dorado.jpg"
+    },
+    {
+        "year": 2026,
+        "name": "'17 Pagani Huayra Roadster",
+        "series": "Exoticars (7/10)",
+        "color": "",
+        "part": "JJH99",
+        "hw": "101",
+        "cas": "E",
+        "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJH99_17_Pagani_Huayra_Roadster.jpg"
+    },
+    {
+        "year": 2026,
+        "name": "Pass'n Gasser",
+        "series": "Drag Racers (3/10)",
+        "color": "",
+        "part": "JJK30",
+        "hw": "102",
+        "cas": "D",
+        "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJK30_Passn_Gasser.jpg"
+    },
+    {
+        "year": 2026,
+        "name": "Pass'n Gasser (2nd Color)",
+        "series": "Red Edition Target Exclusive (?/12)",
+        "color": "",
+        "part": "JJM59",
+        "hw": "102",
+        "cas": "",
+        "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJM59_Passn_Gasser_2nd_Color.jpg"
+    },
+    {
+        "year": 2026,
+        "name": "Eggshelleracer",
+        "series": "Drag Racers New for 2026! (4/10)",
+        "color": "",
+        "part": "JJH47",
+        "hw": "103",
+        "cas": "E",
+        "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJH47_Eggshelleracer.jpg"
+    },
+    {
+        "year": 2026,
+        "name": "Eggshelleracer (2nd Color)",
+        "series": "Drag Racers New for 2026! (4/10)",
+        "color": "",
+        "part": "JJL25",
+        "hw": "103",
+        "cas": "",
+        "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJL25_Eggshelleracer_2nd_Color.jpg"
+    },
+    {
+        "year": 2026,
+        "name": "'68 Dodge Dart",
+        "series": "Drag Racers (5/10)",
+        "color": "",
+        "part": "JJJ63",
+        "hw": "104",
+        "cas": "E",
+        "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJJ63_68_Dodge_Dart.jpg"
+    },
+    {
+        "year": 2026,
+        "name": "'85 Honda City Turbo II",
+        "series": "Compact Kings (4/10)",
+        "color": "",
+        "part": "JJJ66",
+        "hw": "105",
+        "cas": "E",
+        "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJJ66_85_Honda_City_Turbo_II.jpg"
+    },
+    {
+        "year": 2026,
+        "name": "Mazda RX-3",
+        "series": "Compact Kings (5/10)",
+        "color": "",
+        "part": "JJJ82",
+        "hw": "106",
+        "cas": "E",
+        "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJJ95_Mazda_RX-3.jpg"
+    },
+    {
+        "year": 2026,
+        "name": "Mazda RX-3 (2nd Color)",
+        "series": "Red Edition Target Exclusive (8/12)",
+        "color": "",
+        "part": "JJM58",
+        "hw": "106",
+        "cas": "J",
+        "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJM58_Mazda_RX-3_2nd_Color.jpg"
+    },
+    {
+        "year": 2026,
+        "name": "1966 Bat Boat",
+        "series": "Batman (3/5)",
+        "color": "",
+        "part": "JJJ67",
+        "hw": "107",
+        "cas": "E",
+        "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJJ67_1966_Bat_Boat.jpg"
+    },
+    {
+        "year": 2026,
+        "name": "The Simpsons Family Car",
+        "series": "Screen Time (3/10)",
+        "color": "",
+        "part": "JJJ68",
+        "hw": "108",
+        "cas": "E",
+        "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJJ68_The_Simpsons_Family_Car.jpg"
+    },
+    {
+        "year": 2026,
+        "name": "Time Shifter",
+        "series": "Wagons (2/10)",
+        "color": "",
+        "part": "JJJ69",
+        "hw": "109",
+        "cas": "E",
+        "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJJ69_Time_Shifter.jpg"
+    },
+    {
+        "year": 2026,
+        "name": "'70 Chevelle SS Wagon",
+        "series": "Wagons (3/10)",
+        "color": "",
+        "part": "JJJ70",
+        "hw": "110",
+        "cas": "E",
+        "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJJ70_70_Chevelle_SS_Wagon.jpg"
+    },
+    {
+        "year": 2026,
+        "name": "Long Bloc",
+        "series": "Wagons (4/10)",
+        "color": "",
+        "part": "JJJ71",
+        "hw": "111",
+        "cas": "E",
+        "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJJ71_Long_Bloc.jpg"
+    },
+    {
+        "year": 2026,
+        "name": "'89 Mazda Savanna RX-7 FC3S",
+        "series": "HW J-Imports (5/10)",
+        "color": "",
+        "part": "JJJ72",
+        "hw": "112",
+        "cas": "E",
+        "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJJ72_89_Mazda_Savanna_RX-7_FC3S.jpg"
+    },
+    {
+        "year": 2026,
+        "name": "'89 Mazda Savanna RX-7 FC3S (2nd Color)",
+        "series": "HW J-Imports (5/10)",
+        "color": "",
+        "part": "JJL69",
+        "hw": "112",
+        "cas": "",
+        "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJL69_89_Mazda_Savanna_RX-7_FC3S_2nd_Color.jpg"
+    },
+    {
+        "year": 2026,
+        "name": "Corvette C7 Z06",
+        "series": "Nightspeed (9/10)",
+        "color": "",
+        "part": "JJJ73",
+        "hw": "113",
+        "cas": "E",
+        "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJJ73_Corvette_C7_Z06.jpg"
+    },
+    {
+        "year": 2026,
+        "name": "Corvette C7 Z06 (2nd Color)",
+        "series": "Nightspeed (9/10)",
+        "color": "",
+        "part": "JJL89",
+        "hw": "113",
+        "cas": "",
+        "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJL89_Corvette_C7_Z06_2nd_Color.jpg"
+    },
+    {
+        "year": 2026,
+        "name": "Custom '66 Toronado",
+        "series": "Factory Fresh New for 2026! (4/5)",
+        "color": "",
+        "part": "JJH45",
+        "hw": "114",
+        "cas": "E",
+        "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJH45_Custom_66_Toronado.jpg"
+    },
+    {
+        "year": 2026,
+        "name": "Custom 2020 Honda e",
+        "series": "HW EV New for 2026! (9/10)",
+        "color": "",
+        "part": "JMB11",
+        "hw": "115",
+        "cas": "E",
+        "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JMB11_Custom_2020_Honda_e.jpg"
+    },
+    {
+        "year": 2026,
+        "name": "'87 Ford Sierra Cosworth",
+        "series": "HW Euro (5/10)",
+        "color": "",
+        "part": "JJJ74",
+        "hw": "116",
+        "cas": "E",
+        "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJM19_87_Ford_Sierra_Cosworth.jpg"
+    },
+    {
+        "year": 2026,
+        "name": "'87 Ford Sierra Cosworth",
+        "series": "HW Euro Super Treasure Hunt (5/10)",
+        "color": "",
+        "part": "JJM19",
+        "hw": "116",
+        "cas": "E",
+        "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJM19_87_Ford_Sierra_Cosworth.jpg"
+    },
+    {
+        "year": 2026,
+        "name": "Erikenstein Rod",
+        "series": "Rod Squad (1/10)",
+        "color": "",
+        "part": "JJJ75",
+        "hw": "117",
+        "cas": "E",
+        "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJJ75_Erikenstein_Rod.jpg"
+    },
+    {
+        "year": 2026,
+        "name": "Erikenstein Rod (2nd Color)",
+        "series": "Rod Squad (1/10)",
+        "color": "",
+        "part": "JJL10",
+        "hw": "117",
+        "cas": "K",
+        "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJL10_Erikenstein_Rod_2nd_Color.jpg"
+    },
+    {
+        "year": 2026,
+        "name": "Pedal Driver",
+        "series": "Rod Squad (2/10)",
+        "color": "",
+        "part": "JJJ77",
+        "hw": "118",
+        "cas": "E",
+        "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJJ77_Pedal_Driver.jpg"
+    },
+    {
+        "year": 2026,
+        "name": "Pedal Driver (2nd Color)",
+        "series": "Rod Squad (2/10)",
+        "color": "",
+        "part": "JJL11",
+        "hw": "118",
+        "cas": "K",
+        "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJL11_Pedal_Driver_2nd_Color.jpg"
+    },
+    {
+        "year": 2026,
+        "name": "'33 Ford Lo Boy",
+        "series": "Rod Squad (3/10)",
+        "color": "",
+        "part": "JJJ76",
+        "hw": "119",
+        "cas": "F",
+        "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJJ76_33_Ford_Lo_Boy.jpg"
+    },
+    {
+        "year": 2026,
+        "name": "'33 Ford Lo Boy (2nd Color)",
+        "series": "Rod Squad (3/10)",
+        "color": "",
+        "part": "",
+        "hw": "119",
+        "cas": "",
+        "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026__33_Ford_Lo_Boy_2nd_Color.jpg"
+    },
+    {
+        "year": 2026,
+        "name": "Scuderia Ferrari HP",
+        "series": "Formula 1 (3/5)",
+        "color": "",
+        "part": "JJJ78",
+        "hw": "120",
+        "cas": "F",
+        "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJJ78_Scuderia_Ferrari_HP.jpg"
+    },
+    {
+        "year": 2026,
+        "name": "2023 Nissan Z",
+        "series": "Then and Now (5/10)",
+        "color": "",
+        "part": "JJJ79",
+        "hw": "121",
+        "cas": "D",
+        "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJJ79_2023_Nissan_Z.jpg"
+    },
+    {
+        "year": 2026,
+        "name": "2023 Nissan Z (2nd Color - Zamac)",
+        "series": "Then and Now Walmart Exclusive (5/10)",
+        "color": "",
+        "part": "JJM34",
+        "hw": "121",
+        "cas": "",
+        "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJM34_2023_Nissan_Z_2nd_Color_-_Zamac.jpg"
+    },
+    {
+        "year": 2026,
+        "name": "Cone Shaker",
+        "series": "HW Starting Grid Treasure Hunt (8/10)",
+        "color": "",
+        "part": "JJM04",
+        "hw": "122",
+        "cas": "E",
+        "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJM04_Cone_Shaker.jpg"
+    },
+    {
+        "year": 2026,
+        "name": "Maserati Tipo 61",
+        "series": "HW Starting Grid New for 2026! (9/10)",
+        "color": "",
+        "part": "JJH44",
+        "hw": "123",
+        "cas": "E",
+        "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJH44_Maserati_Tipo_61.jpg"
+    },
+    {
+        "year": 2026,
+        "name": "Maserati Tipo 61 (2nd Color)",
+        "series": "Red Edition Target Exclusive (7/12)",
+        "color": "",
+        "part": "JJM39",
+        "hw": "123",
+        "cas": "J",
+        "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJM39_Maserati_Tipo_61_2nd_Color.jpg"
+    },
+    {
+        "year": 2026,
+        "name": "2016 Ford GT Race",
+        "series": "Exoticars Treasure Hunt (8/10)",
+        "color": "",
+        "part": "JJM05",
+        "hw": "124",
+        "cas": "F",
+        "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJM05_2016_Ford_GT_Race.jpg"
+    },
+    {
+        "year": 2026,
+        "name": "2024 Aston Martin Vantage GT3",
+        "series": "Exoticars New for 2026! (9/10)",
+        "color": "",
+        "part": "JJH55",
+        "hw": "125",
+        "cas": "F",
+        "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJH55_2024_Aston_Martin_Vantage_GT3.jpg"
+    },
+    {
+        "year": 2026,
+        "name": "2024 Aston Martin Vantage GT3 (2nd Color)",
+        "series": "Exoticars New for 2026! (9/10)",
+        "color": "",
+        "part": "JJL24",
+        "hw": "125",
+        "cas": "L",
+        "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJL24_2024_Aston_Martin_Vantage_GT3_2nd_Color.jpg"
+    },
+    {
+        "year": 2026,
+        "name": "'64 Dodge 330",
+        "series": "Drag Racers New in Mainline (6/10)",
+        "color": "",
+        "part": "JJJ64",
+        "hw": "126",
+        "cas": "E",
+        "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJJ64_64_Dodge_330.jpg"
+    },
+    {
+        "year": 2026,
+        "name": "Custom '72 Chevy LUV",
+        "series": "Drag Racers (7/10)",
+        "color": "",
+        "part": "JJJ80",
+        "hw": "127",
+        "cas": "F",
+        "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJJ80_Custom_72_Chevy_LUV.jpg"
+    },
+    {
+        "year": 2026,
+        "name": "Custom '72 Chevy LUV (2nd Color)",
+        "series": "Drag Racers (7/10)",
+        "color": "",
+        "part": "JJL63",
+        "hw": "127",
+        "cas": "",
+        "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJL63_Custom_72_Chevy_LUV_2nd_Color.jpg"
+    },
+    {
+        "year": 2026,
+        "name": "Datsun 620",
+        "series": "Compact Kings (6/10)",
+        "color": "",
+        "part": "JPJ80",
+        "hw": "128",
+        "cas": "H",
+        "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JPJ80_Datsun_620.jpg"
+    },
+    {
+        "year": 2026,
+        "name": "Standard Kart",
+        "series": "Screen Time (4/10)",
+        "color": "",
+        "part": "JJJ83",
+        "hw": "129",
+        "cas": "G",
+        "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJJ83_Standard_Kart.jpg"
+    },
+    {
+        "year": 2026,
+        "name": "2019 Audi R8 Spyder",
+        "series": "Drop Tops (4/5)",
+        "color": "",
+        "part": "JJJ84",
+        "hw": "130",
+        "cas": "E",
+        "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJJ84_2019_Audi_R8_Spyder.jpg"
+    },
+    {
+        "year": 2026,
+        "name": "Fiat Beast of Turin",
+        "series": "Drop Tops New for 2026! (5/5)",
+        "color": "",
+        "part": "JJH48",
+        "hw": "131",
+        "cas": "G",
+        "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJH48_Fiat_Beast_of_Turin.jpg"
+    },
+    {
+        "year": 2026,
+        "name": "Fiat Beast of Turin (2nd Color - Zamac)",
+        "series": "Drop Tops New for 2026! Walmart Exclusive (5/5)",
+        "color": "",
+        "part": "JJM66",
+        "hw": "131",
+        "cas": "H",
+        "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJM66_Fiat_Beast_of_Turin_2nd_Color_-_Zamac.jpg"
+    },
+    {
+        "year": 2026,
+        "name": "Bullet Proof",
+        "series": "X-Raycers (5/5)",
+        "color": "",
+        "part": "JJJ85",
+        "hw": "132",
+        "cas": "F",
+        "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJJ85_Bullet_Proof.jpg"
+    },
+    {
+        "year": 2026,
+        "name": "8 Crate",
+        "series": "Wagons (5/10)",
+        "color": "",
+        "part": "JJJ86",
+        "hw": "133",
+        "cas": "F",
+        "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJJ86_8_Crate.jpg"
+    },
+    {
+        "year": 2026,
+        "name": "'20 Dodge Charger Hellcat",
+        "series": "Nightspeed (10/10)",
+        "color": "",
+        "part": "JJJ87",
+        "hw": "134",
+        "cas": "F",
+        "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJJ87_20_Dodge_Charger_Hellcat.jpg"
+    },
+    {
+        "year": 2026,
+        "name": "Flippin Fast",
+        "series": "HW All Drivers Welcome World Autism Awareness Day (2/5)",
+        "color": "",
+        "part": "JJJ88",
+        "hw": "135",
+        "cas": "F",
+        "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJJ88_Flippin_Fast.jpg"
+    },
+    {
+        "year": 2026,
+        "name": "'98 Honda Prelude",
+        "series": "Factory Fresh (5/5)",
+        "color": "",
+        "part": "JJJ89",
+        "hw": "136",
+        "cas": "F",
+        "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJJ89_98_Honda_Prelude.jpg"
+    },
+    {
+        "year": 2026,
+        "name": "'98 Honda Prelude (2nd Color)",
+        "series": "Factory Fresh (5/5)",
+        "color": "",
+        "part": "JJL15",
+        "hw": "136",
+        "cas": "L",
+        "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJL15_98_Honda_Prelude_2nd_Color.jpg"
+    },
+    {
+        "year": 2026,
+        "name": "La Troca",
+        "series": "Layin' Low (5/5)",
+        "color": "",
+        "part": "JJJ90",
+        "hw": "137",
+        "cas": "F",
+        "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJJ90_La_Troca.jpg"
+    },
+    {
+        "year": 2026,
+        "name": "Morgan Super 3",
+        "series": "HW Euro (6/10)",
+        "color": "",
+        "part": "JJJ91",
+        "hw": "138",
+        "cas": "F",
+        "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJJ91_Morgan_Super_3.jpg"
+    },
+    {
+        "year": 2026,
+        "name": "Bone Shaker",
+        "series": "HW Fan Driven (5/5)",
+        "color": "",
+        "part": "JJJ92",
+        "hw": "139",
+        "cas": "F",
+        "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJJ92_Bone_Shaker.jpg"
+    },
+    {
+        "year": 2026,
+        "name": "Bone Shaker (2nd Color)",
+        "series": "HW Fan Driven (5/5)",
+        "color": "",
+        "part": "",
+        "hw": "139",
+        "cas": "",
+        "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026__Bone_Shaker_2nd_Color.jpg"
+    },
+    {
+        "year": 2026,
+        "name": "Mid Mill",
+        "series": "Rod Squad (4/10)",
+        "color": "",
+        "part": "JJJ93",
+        "hw": "140",
+        "cas": "F",
+        "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJJ93_Mid_Mill.jpg"
+    },
+    {
+        "year": 2026,
+        "name": "Screamliner",
+        "series": "Rod Squad (5/10)",
+        "color": "",
+        "part": "JJJ94",
+        "hw": "141",
+        "cas": "F",
+        "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJJ94_Screamliner.jpg"
+    },
+    {
+        "year": 2026,
+        "name": "Mazda RX-3",
+        "series": "Tooned (1/5)",
+        "color": "",
+        "part": "JJJ95",
+        "hw": "142",
+        "cas": "E",
+        "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJJ95_Mazda_RX-3.jpg"
+    },
+    {
+        "year": 2026,
+        "name": "Deora Too'nd",
+        "series": "Tooned New for 2026! (2/5)",
+        "color": "",
+        "part": "JJH50",
+        "hw": "143",
+        "cas": "F",
+        "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJH50_Deora_Toond.jpg"
+    },
+    {
+        "year": 2026,
+        "name": "Deora Too'nd (2nd Color)",
+        "series": "Tooned New for 2026! (2/5)",
+        "color": "",
+        "part": "",
+        "hw": "143",
+        "cas": "",
+        "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJL21_Deora_Toond_2nd_Color.jpg"
+    },
+    {
+        "year": 2026,
+        "name": "Classic TV Series Batmobile",
+        "series": "Batman (4/5)",
+        "color": "",
+        "part": "JJJ96",
+        "hw": "144",
+        "cas": "G",
+        "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJJ96_Classic_TV_Series_Batmobile.jpg"
+    },
+    {
+        "year": 2026,
+        "name": "El Segundo Rallye",
+        "series": "HW Dirt (1/10)",
+        "color": "",
+        "part": "JJJ97",
+        "hw": "145",
+        "cas": "H",
+        "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJJ97_El_Segundo_Rallye.jpg"
+    },
+    {
+        "year": 2026,
+        "name": "Mazda Autozam",
+        "series": "HW Dirt (2/10)",
+        "color": "",
+        "part": "JJJ98",
+        "hw": "146",
+        "cas": "G",
+        "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJJ98_Mazda_Autozam.jpg"
+    },
+    {
+        "year": 2026,
+        "name": "2 Jet Z",
+        "series": "HW Dream Garage Treasure Hunt (4/5)",
+        "color": "",
+        "part": "JJM06",
+        "hw": "147",
+        "cas": "G",
+        "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJM06_2_Jet_Z.jpg"
+    },
+    {
+        "year": 2026,
+        "name": "Tooned Purple Passion",
+        "series": "HW Dream Garage New for 2026! (5/5)",
+        "color": "",
+        "part": "JJH54",
+        "hw": "148",
+        "cas": "G",
+        "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJH54_Tooned_Purple_Passion.jpg"
+    },
+    {
+        "year": 2026,
+        "name": "Honda Odyssey",
+        "series": "HW J-Imports (6/10)",
+        "color": "",
+        "part": "JJJ99",
+        "hw": "149",
+        "cas": "G",
+        "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJJ99_Honda_Odyssey.jpg"
+    },
+    {
+        "year": 2026,
+        "name": "Honda Odyssey (2nd Color)",
+        "series": "Red Edition Target Exclusive (9/12)",
+        "color": "",
+        "part": "JJM63",
+        "hw": "149",
+        "cas": "J",
+        "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJM63_Honda_Odyssey_2nd_Color.jpg"
+    },
+    {
+        "year": 2026,
+        "name": "Dino 206 GT",
+        "series": "Ferrari New for 2026! (5/5)",
+        "color": "",
+        "part": "JJH56",
+        "hw": "150",
+        "cas": "G",
+        "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJH56_Dino_206_GT.jpg"
+    },
+    {
+        "year": 2026,
+        "name": "Dino 206 GT (2nd Color)",
+        "series": "Ferrari New for 2026! (5/5)",
+        "color": "",
+        "part": "JJL74",
+        "hw": "150",
+        "cas": "",
+        "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJL74_Dino_206_GT_2nd_Color.jpg"
+    },
+    {
+        "year": 2026,
+        "name": "Ford F-150 Lightning SuperTruck",
+        "series": "Truckin' Along New for 2026! (5/5)",
+        "color": "",
+        "part": "JJH52",
+        "hw": "151",
+        "cas": "G",
+        "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJH52_Ford_F-150_Lightning_SuperTruck.jpg"
+    },
+    {
+        "year": 2026,
+        "name": "BMW 635 CSi",
+        "series": "HW Euro (7/10)",
+        "color": "",
+        "part": "JJK00",
+        "hw": "152",
+        "cas": "G",
+        "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJK00_BMW_635_CSi.jpg"
+    },
+    {
+        "year": 2026,
+        "name": "'41 Willys",
+        "series": "Rod Squad (6/10)",
+        "color": "",
+        "part": "JJK01",
+        "hw": "153",
+        "cas": "G",
+        "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJK01_41_Willys.jpg"
+    },
+    {
+        "year": 2026,
+        "name": "Kick Sauber F1 Team",
+        "series": "Formula 1 (4/5)",
+        "color": "",
+        "part": "JJK02",
+        "hw": "154",
+        "cas": "H",
+        "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJK02_Kick_Sauber_F1_Team.jpg"
+    },
+    {
+        "year": 2026,
+        "name": "Vairstrike",
+        "series": "HW Mods New for 2026! (3/5)",
+        "color": "",
+        "part": "JJH53",
+        "hw": "155",
+        "cas": "F",
+        "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJH53_Vairstrike.jpg"
+    },
+    {
+        "year": 2026,
+        "name": "Vairstrike (2nd Color - Zamac)",
+        "series": "HW Mods New for 2026! Walmart Exclusive (3/5)",
+        "color": "",
+        "part": "JJM36",
+        "hw": "155",
+        "cas": "K",
+        "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJM36_Vairstrike_2nd_Color_-_Zamac.jpg"
+    },
+    {
+        "year": 2026,
+        "name": "Custom Otto",
+        "series": "Mattel (5/5)",
+        "color": "",
+        "part": "JJK03",
+        "hw": "156",
+        "cas": "G",
+        "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJM21_Custom_Otto.jpg"
+    },
+    {
+        "year": 2026,
+        "name": "Custom Otto",
+        "series": "Mattel Super Treasure Hunt (5/5)",
+        "color": "",
+        "part": "JJM21",
+        "hw": "156",
+        "cas": "G",
+        "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJM21_Custom_Otto.jpg"
+    },
+    {
+        "year": 2026,
+        "name": "'20 Toyota GR Supra",
+        "series": "Then and Now (6/10)",
+        "color": "",
+        "part": "JJK04",
+        "hw": "157",
+        "cas": "G",
+        "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJK04_20_Toyota_GR_Supra.jpg"
+    },
+    {
+        "year": 2026,
+        "name": "Mach Speeder",
+        "series": "Exoticars (10/10)",
+        "color": "",
+        "part": "JJK05",
+        "hw": "158",
+        "cas": "H",
+        "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJK05_Mach_Speeder.jpg"
+    },
+    {
+        "year": 2026,
+        "name": "Honda Civic Custom",
+        "series": "Drag Racers (8/10)",
+        "color": "",
+        "part": "JJJ81",
+        "hw": "159",
+        "cas": "F",
+        "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJM20_Honda_Civic_Custom.jpg"
+    },
+    {
+        "year": 2026,
+        "name": "Honda Civic Custom",
+        "series": "Drag Racers Super Treasure Hunt (8/10)",
+        "color": "",
+        "part": "JJM20",
+        "hw": "159",
+        "cas": "F",
+        "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJM20_Honda_Civic_Custom.jpg"
+    },
+    {
+        "year": 2026,
+        "name": "Lotus Sport Elise",
+        "series": "Compact Kings (7/10)",
+        "color": "",
+        "part": "JJK07",
+        "hw": "160",
+        "cas": "H",
+        "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJM22_Lotus_Sport_Elise.jpg"
+    },
+    {
+        "year": 2026,
+        "name": "Lotus Sport Elise",
+        "series": "Compact Kings Super Treasure Hunt (7/10)",
+        "color": "",
+        "part": "JJM22",
+        "hw": "160",
+        "cas": "H",
+        "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJM22_Lotus_Sport_Elise.jpg"
+    },
+    {
+        "year": 2026,
+        "name": "'70 Ford Escort RS1600",
+        "series": "HW Dirt (3/10)",
+        "color": "",
+        "part": "JJK08",
+        "hw": "161",
+        "cas": "H",
+        "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJK08_70_Ford_Escort_RS1600.jpg"
+    },
+    {
+        "year": 2026,
+        "name": "Total Disposal",
+        "series": "HW Heavyweights Treasure Hunt (5/5)",
+        "color": "",
+        "part": "JJM07",
+        "hw": "162",
+        "cas": "H",
+        "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJM07_Total_Disposal.jpg"
+    },
+    {
+        "year": 2026,
+        "name": "Cadillac Celestiq",
+        "series": "HW EV New for 2026! (10/10)",
+        "color": "",
+        "part": "JJH49",
+        "hw": "163",
+        "cas": "H",
+        "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJH49_Cadillac_Celestiq.jpg"
+    },
+    {
+        "year": 2026,
+        "name": "Classic '55 Nomad",
+        "series": "Wagons (6/10)",
+        "color": "",
+        "part": "JJK10",
+        "hw": "164",
+        "cas": "G",
+        "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJK10_Classic_55_Nomad.jpg"
+    },
+    {
+        "year": 2026,
+        "name": "Gone Mad",
+        "series": "Wagons (7/10)",
+        "color": "",
+        "part": "JJK09",
+        "hw": "165",
+        "cas": "H",
+        "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJK09_Gone_Mad.jpg"
+    },
+    {
+        "year": 2026,
+        "name": "Twin Tags",
+        "series": "Experimotors New for 2026! (5/5)",
+        "color": "",
+        "part": "JJH64",
+        "hw": "166",
+        "cas": "H",
+        "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJH64_Twin_Tags.jpg"
+    },
+    {
+        "year": 2026,
+        "name": "Twin Tags (2nd Color)",
+        "series": "Experimotors New for 2026! (5/5)",
+        "color": "",
+        "part": "JJL73",
+        "hw": "166",
+        "cas": "",
+        "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJL73_Twin_Tags_2nd_Color.jpg"
+    },
+    {
+        "year": 2026,
+        "name": "Head Gasket",
+        "series": "HW All Drivers Welcome International Day of Play (3/5)",
+        "color": "",
+        "part": "JJK11",
+        "hw": "167",
+        "cas": "H",
+        "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJK11_Head_Gasket.jpg"
+    },
+    {
+        "year": 2026,
+        "name": "Mailed It!",
+        "series": "Team Wheels (1/5)",
+        "color": "",
+        "part": "JJK12",
+        "hw": "168",
+        "cas": "H",
+        "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJK12_Mailed_It.jpg"
+    },
+    {
+        "year": 2026,
+        "name": "Super Twin Mill",
+        "series": "Hot Wheels Let's Race (1/5)",
+        "color": "",
+        "part": "JJK13",
+        "hw": "169",
+        "cas": "H",
+        "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJK13_Super_Twin_Mill.jpg"
+    },
+    {
+        "year": 2026,
+        "name": "'64 Lincoln Continental",
+        "series": "Cool Classics (1/10)",
+        "color": "",
+        "part": "JJK14",
+        "hw": "170",
+        "cas": "H",
+        "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJK14_64_Lincoln_Continental.jpg"
+    },
+    {
+        "year": 2026,
+        "name": "1983 Porsche 928S",
+        "series": "HW Euro (8/10)",
+        "color": "",
+        "part": "JJK15",
+        "hw": "171",
+        "cas": "H",
+        "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJK15_1983_Porsche_928S.jpg"
+    },
+    {
+        "year": 2026,
+        "name": "Tooned Volkswagen Golf Mk1",
+        "series": "Tooned (3/5)",
+        "color": "",
+        "part": "JJK16",
+        "hw": "172",
+        "cas": "H",
+        "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJK16_Tooned_Volkswagen_Golf_Mk1.jpg"
+    },
+    {
+        "year": 2026,
+        "name": "Duck N' Roll",
+        "series": "HW Dirt (4/10)",
+        "color": "",
+        "part": "JJK17",
+        "hw": "174",
+        "cas": "J",
+        "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJK17_Duck_N_Roll.jpg"
+    },
+    {
+        "year": 2026,
+        "name": "Duck N' Roll (2nd Color)",
+        "series": "HW Dirt (4/10)",
+        "color": "",
+        "part": "JJL59",
+        "hw": "174",
+        "cas": "",
+        "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJL59_Duck_N_Roll_2nd_Color.jpg"
+    },
+    {
+        "year": 2026,
+        "name": "'94 Audi Avant RS2",
+        "series": "Wagons (8/10)",
+        "color": "",
+        "part": "JJK18",
+        "hw": "175",
+        "cas": "J",
+        "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJK18_94_Audi_Avant_RS2.jpg"
+    },
+    {
+        "year": 2026,
+        "name": "Subaru Impreza WRX",
+        "series": "HW J-Imports (7/10)",
+        "color": "",
+        "part": "JJK19",
+        "hw": "176",
+        "cas": "J",
+        "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJM23_Subaru_Impreza_WRX.jpg"
+    },
+    {
+        "year": 2026,
+        "name": "Subaru Impreza WRX",
+        "series": "HW J-Imports Super Treasure Hunt (7/10)",
+        "color": "",
+        "part": "JJM23",
+        "hw": "176",
+        "cas": "J",
+        "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJM23_Subaru_Impreza_WRX.jpg"
+    },
+    {
+        "year": 2026,
+        "name": "'88 Mitsubishi Starion",
+        "series": "HW J-Imports New for 2026! (8/10)",
+        "color": "",
+        "part": "JJH58",
+        "hw": "177",
+        "cas": "J",
+        "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJH58_88_Mitsubishi_Starion.jpg"
+    },
+    {
+        "year": 2026,
+        "name": "'88 Mitsubishi Starion (2nd Color)",
+        "series": "HW J-Imports New for 2026! Kroger Exclusive (8/10)",
+        "color": "",
+        "part": "JJM54",
+        "hw": "177",
+        "cas": "L",
+        "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJM54_88_Mitsubishi_Starion_2nd_Color.jpg"
+    },
+    {
+        "year": 2026,
+        "name": "'88 Mitsubishi Starion (3rd Color)",
+        "series": "HW J-Imports New for 2026! (8/10)",
+        "color": "",
+        "part": "JJL70",
+        "hw": "177",
+        "cas": "",
+        "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJL70_88_Mitsubishi_Starion_3rd_Color.jpg"
+    },
+    {
+        "year": 2026,
+        "name": "Click Shift",
+        "series": "HW All Drivers Welcome New for 2026! Easterseals (4/5)",
+        "color": "",
+        "part": "JJH61",
+        "hw": "178",
+        "cas": "K",
+        "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJH61_Click_Shift.jpg"
+    },
+    {
+        "year": 2026,
+        "name": "Mountain Mauler",
+        "series": "Hot Wheels Let's Race (2/5)",
+        "color": "",
+        "part": "JJK20",
+        "hw": "179",
+        "cas": "J",
+        "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJK20_Mountain_Mauler.jpg"
+    },
+    {
+        "year": 2026,
+        "name": "'55 Chevy",
+        "series": "Cool Classics (2/10)",
+        "color": "",
+        "part": "JJK21",
+        "hw": "180",
+        "cas": "J",
+        "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJK21_55_Chevy.jpg"
+    },
+    {
+        "year": 2026,
+        "name": "Mercedes-Benz CLA HW",
+        "series": "HW Euro New for 2026! (9/10)",
+        "color": "",
+        "part": "JJH63",
+        "hw": "181",
+        "cas": "H",
+        "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJH63_Mercedes-Benz_CLA_HW.jpg"
+    },
+    {
+        "year": 2026,
+        "name": "Chop 'n Bloc",
+        "series": "Rod Squad New for 2026! (7/10)",
+        "color": "",
+        "part": "JJH60",
+        "hw": "182",
+        "cas": "J",
+        "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJH60_Chop_n_Bloc.jpg"
+    },
+    {
+        "year": 2026,
+        "name": "'70 Buick GSX",
+        "series": "HW Torque (1/10)",
+        "color": "",
+        "part": "JJK23",
+        "hw": "183",
+        "cas": "J",
+        "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJK23_70_Buick_GSX.jpg"
+    },
+    {
+        "year": 2026,
+        "name": "'70 Buick GSX (2nd Color - Zamac)",
+        "series": "HW Torque Walmart Exclusive (1/10)",
+        "color": "",
+        "part": "JJM37",
+        "hw": "183",
+        "cas": "",
+        "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJM37_70_Buick_GSX_2nd_Color_-_Zamac.jpg"
+    },
+    {
+        "year": 2026,
+        "name": "'68 Shelby GT500",
+        "series": "HW Torque (2/10)",
+        "color": "",
+        "part": "JJK24",
+        "hw": "184",
+        "cas": "J",
+        "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJK24_68_Shelby_GT500.jpg"
+    },
+    {
+        "year": 2026,
+        "name": "Aston Martin Aramco Formula One Team",
+        "series": "Formula 1 (5/5)",
+        "color": "",
+        "part": "JJK25",
+        "hw": "185",
+        "cas": "K",
+        "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJK25_Aston_Martin_Aramco_Formula_One_Team.jpg"
+    },
+    {
+        "year": 2026,
+        "name": "Amaru GTC",
+        "series": "HW Mods Treasure Hunt (4/5)",
+        "color": "",
+        "part": "JJM08",
+        "hw": "186",
+        "cas": "J",
+        "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJM08_Amaru_GTC.jpg"
+    },
+    {
+        "year": 2026,
+        "name": "PT Fast",
+        "series": "HW Mods New for 2026! (5/5)",
+        "color": "",
+        "part": "JJH59",
+        "hw": "187",
+        "cas": "J",
+        "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJH59_PT_Fast.jpg"
+    },
+    {
+        "year": 2026,
+        "name": "'70 Dodge Charger",
+        "series": "Tooned (4/5)",
+        "color": "",
+        "part": "JJK26",
+        "hw": "188",
+        "cas": "J",
+        "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJK26_70_Dodge_Charger.jpg"
+    },
+    {
+        "year": 2026,
+        "name": "'11 Corvette Grand Sport",
+        "series": "Then and Now (7/10)",
+        "color": "",
+        "part": "JJK27",
+        "hw": "189",
+        "cas": "J",
+        "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJK27_11_Corvette_Grand_Sport.jpg"
+    },
+    {
+        "year": 2026,
+        "name": "'82 Toyota Supra",
+        "series": "Then and Now (8/10)",
+        "color": "",
+        "part": "JJK28",
+        "hw": "190",
+        "cas": "J",
+        "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJK28_82_Toyota_Supra.jpg"
+    },
+    {
+        "year": 2026,
+        "name": "'65 Mercury Comet Cyclone",
+        "series": "Drag Racers (9/10)",
+        "color": "",
+        "part": "JJK06",
+        "hw": "191",
+        "cas": "H",
+        "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJK06_65_Mercury_Comet_Cyclone.jpg"
+    },
+    {
+        "year": 2026,
+        "name": "'65 Mercury Comet Cyclone (2nd Color)",
+        "series": "Drag Racers Kroger Exclusive (9/10)",
+        "color": "",
+        "part": "JJM53",
+        "hw": "191",
+        "cas": "L",
+        "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJM53_65_Mercury_Comet_Cyclone_2nd_Color.jpg"
+    },
+    {
+        "year": 2026,
+        "name": "'65 Mercury Comet Cyclone (3rd Color)",
+        "series": "Drag Racers (9/10)",
+        "color": "",
+        "part": "JJL46",
+        "hw": "191",
+        "cas": "",
+        "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJL46_65_Mercury_Comet_Cyclone_3rd_Color.jpg"
+    },
+    {
+        "year": 2026,
+        "name": "Fiat 500C",
+        "series": "Drag Racers (10/10)",
+        "color": "",
+        "part": "JJK29",
+        "hw": "192",
+        "cas": "K",
+        "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJK29_Fiat_500C.jpg"
+    },
+    {
+        "year": 2026,
+        "name": "'63 Chevy II",
+        "series": "Compact Kings (8/10)",
+        "color": "",
+        "part": "JJK31",
+        "hw": "193",
+        "cas": "J",
+        "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJK31_63_Chevy_II.jpg"
+    },
+    {
+        "year": 2026,
+        "name": "Lil' Roar",
+        "series": "HW Dirt (5/10)",
+        "color": "",
+        "part": "JJK32",
+        "hw": "194",
+        "cas": "K",
+        "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJK32_Lil_Roar.jpg"
+    },
+    {
+        "year": 2026,
+        "name": "Spider-Mobile",
+        "series": "Screen Time (5/10)",
+        "color": "",
+        "part": "JJK33",
+        "hw": "195",
+        "cas": "K",
+        "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJK33_Spider-Mobile.jpg"
+    },
+    {
+        "year": 2026,
+        "name": "Sweet Driver",
+        "series": "Sweet Rides Treasure Hunt (4/5)",
+        "color": "",
+        "part": "JJM09",
+        "hw": "196",
+        "cas": "K",
+        "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJM09_Sweet_Driver.jpg"
+    },
+    {
+        "year": 2026,
+        "name": "Mad Drip",
+        "series": "Sweet Rides New for 2026! (5/5)",
+        "color": "",
+        "part": "JJH57",
+        "hw": "197",
+        "cas": "J",
+        "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJH57_Mad_Drip.jpg"
+    },
+    {
+        "year": 2026,
+        "name": "Toyota AE86 Sprinter Trueno",
+        "series": "HW J-Imports (9/10)",
+        "color": "",
+        "part": "JJK35",
+        "hw": "198",
+        "cas": "K",
+        "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJK35_Toyota_AE86_Sprinter_Trueno.jpg"
+    },
+    {
+        "year": 2026,
+        "name": "Nissan Skyline GT-R (BNR34)",
+        "series": "HW J-Imports (10/10)",
+        "color": "",
+        "part": "JJK34",
+        "hw": "199",
+        "cas": "K",
+        "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJK34_Nissan_Skyline_GT-R_BNR34.jpg"
+    },
+    {
+        "year": 2026,
+        "name": "Punk Rod",
+        "series": "Team Wheels (2/5)",
+        "color": "",
+        "part": "JJK36",
+        "hw": "200",
+        "cas": "K",
+        "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJK36_Punk_Rod.jpg"
+    },
+    {
+        "year": 2026,
+        "name": "1970 Pontiac Firebird",
+        "series": "Team Wheels (3/5)",
+        "color": "",
+        "part": "JJK37",
+        "hw": "201",
+        "cas": "K",
+        "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJM65_1970_Pontiac_Firebird.jpg"
+    },
+    {
+        "year": 2026,
+        "name": "1970 Pontiac Firebird",
+        "series": "Red Edition Target Exclusive (?/12)",
+        "color": "",
+        "part": "JJM65",
+        "hw": "201",
+        "cas": "K",
+        "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJM65_1970_Pontiac_Firebird.jpg"
+    },
+    {
+        "year": 2026,
+        "name": "Street Shaker",
+        "series": "Trophy Case (1/5)",
+        "color": "",
+        "part": "JJK38",
+        "hw": "202",
+        "cas": "K",
+        "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJK38_Street_Shaker.jpg"
+    },
+    {
+        "year": 2026,
+        "name": "Street Shrieker",
+        "series": "Hot Wheels Let's Race (3/5)",
+        "color": "",
+        "part": "JJK39",
+        "hw": "203",
+        "cas": "K",
+        "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJK39_Street_Shrieker.jpg"
+    },
+    {
+        "year": 2026,
+        "name": "Mod Mill",
+        "series": "Cool Classics (3/10)",
+        "color": "",
+        "part": "JJK40",
+        "hw": "204",
+        "cas": "K",
+        "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJK40_Mod_Mill.jpg"
+    },
+    {
+        "year": 2026,
+        "name": "Jaguar XJC V12 Coupe",
+        "series": "HW Euro (10/10)",
+        "color": "",
+        "part": "JJK22",
+        "hw": "205",
+        "cas": "J",
+        "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJK22_Jaguar_XJC_V12_Coupe.jpg"
+    },
+    {
+        "year": 2026,
+        "name": "Jaguar XJC V12 Coupe (2nd Color)",
+        "series": "HW Euro (10/10)",
+        "color": "",
+        "part": "JJL96",
+        "hw": "205",
+        "cas": "",
+        "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJL96_Jaguar_XJC_V12_Coupe_2nd_Color.jpg"
+    },
+    {
+        "year": 2026,
+        "name": "Bully Goat",
+        "series": "HW Torque (3/10)",
+        "color": "",
+        "part": "JJK41",
+        "hw": "206",
+        "cas": "K",
+        "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJK41_Bully_Goat.jpg"
+    },
+    {
+        "year": 2026,
+        "name": "'18 Camaro SS",
+        "series": "HW Torque (4/10)",
+        "color": "",
+        "part": "JJK42",
+        "hw": "207",
+        "cas": "K",
+        "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJK42_18_Camaro_SS.jpg"
+    },
+    {
+        "year": 2026,
+        "name": "Porsche 911 Carrera RS 2.7",
+        "series": "Then and Now (9/10)",
+        "color": "",
+        "part": "JJK43",
+        "hw": "208",
+        "cas": "M",
+        "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJM24_Porsche_911_Carrera_RS_27.jpg"
+    },
+    {
+        "year": 2026,
+        "name": "Porsche 911 Carrera RS 2.7",
+        "series": "Then and Now Super Treasure Hunt (9/10)",
+        "color": "",
+        "part": "JJM24",
+        "hw": "208",
+        "cas": "M",
+        "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJM24_Porsche_911_Carrera_RS_27.jpg"
+    },
+    {
+        "year": 2026,
+        "name": "Lil' Mad",
+        "series": "Wagons New for 2026! (9/10)",
+        "color": "",
+        "part": "JJH65",
+        "hw": "215",
+        "cas": "K",
+        "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJH65_Lil_Mad.jpg"
+    },
+    {
+        "year": 2026,
+        "name": "'94 Toyota Supra",
+        "series": "Tooned (5/5)",
+        "color": "",
+        "part": "JJK51",
+        "hw": "222",
+        "cas": "K",
+        "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJM25_94_Toyota_Supra.jpg"
+    },
+    {
+        "year": 2026,
+        "name": "'94 Toyota Supra",
+        "series": "Tooned Super Treasure Hunt (5/5)",
+        "color": "",
+        "part": "JJM25",
+        "hw": "222",
+        "cas": "K",
+        "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJM25_94_Toyota_Supra.jpg"
+    },
+    {
+        "year": 2026,
+        "name": "2019 Audi TT Safari",
+        "series": "HW Dirt New for 2026! (8/10)",
+        "color": "",
+        "part": "JJH69",
+        "hw": "223",
+        "cas": "M",
+        "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJH69_2019_Audi_TT_Safari.jpg"
+    },
+    {
+        "year": 2026,
+        "name": "Nissan Maxima Drift Car",
+        "series": "Wagons (10/10)",
+        "color": "",
+        "part": "JJK53",
+        "hw": "225",
+        "cas": "L",
+        "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJM26_Nissan_Maxima_Drift_Car.jpg"
+    },
+    {
+        "year": 2026,
+        "name": "Nissan Maxima Drift Car",
+        "series": "Wagons Super Treasure Hunt (10/10)",
+        "color": "",
+        "part": "JJM26",
+        "hw": "225",
+        "cas": "L",
+        "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJM26_Nissan_Maxima_Drift_Car.jpg"
+    },
+    {
+        "year": 2026,
+        "name": "Go-Realla-Fast",
+        "series": "Trophy Case New for 2026! (3/5)",
+        "color": "",
+        "part": "JJH75",
+        "hw": "239",
+        "cas": "",
+        "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJH75_Go-Realla-Fast.jpg"
+    },
+    {
+        "year": 2026,
+        "name": "Ridge Crest GT",
+        "series": "HW Torque New for 2026! (10/10)",
+        "color": "",
+        "part": "JJH77",
+        "hw": "246",
+        "cas": "",
+        "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJH77_Ridge_Crest_GT.jpg"
+    },
+    {
+        "year": 2026,
+        "name": "Ferrari F2004",
+        "series": "HW Starting Grid New for 2026! (10/10)",
+        "color": "",
+        "part": "JJH51",
+        "hw": "",
+        "cas": "M",
+        "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJH51_Ferrari_F2004.jpg"
+    },
+    {
+        "year": 2026,
+        "name": "Mini JCW Electric",
+        "series": "Then and Now New for 2026! (10/10)",
+        "color": "",
+        "part": "JJH62",
+        "hw": "",
+        "cas": "A",
+        "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJH62_Mini_JCW_Electric.jpg"
+    },
+    {
+        "year": 2026,
+        "name": "1972 Datsun Sunny Coupe",
+        "series": "Compact Kings New for 2026! (10/10)",
+        "color": "",
+        "part": "JJH66",
+        "hw": "",
+        "cas": "L",
+        "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJH66_1972_Datsun_Sunny_Coupe.jpg"
+    },
+    {
+        "year": 2026,
+        "name": "Uncertain T",
+        "series": "Rod Squad New for 2026! (10/10)",
+        "color": "",
+        "part": "JJH70",
+        "hw": "",
+        "cas": "L",
+        "image": "https://static.wikia.nocookie.net/hotwheels/images/b/b5/Image_Not_Available.jpg/revision/latest?cb=20151025125428"
+    },
+    {
+        "year": 2026,
+        "name": "Project Twin Mill",
+        "series": "Cool Classics New for 2026! (?/10)",
+        "color": "",
+        "part": "JJH67",
+        "hw": "",
+        "cas": "L",
+        "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJH67_Project_Twin_Mill.jpg"
+    },
+    {
+        "year": 2026,
+        "name": "1963 Ford Galaxie",
+        "series": "Cool Classics New for 2026! (?/10)",
+        "color": "",
+        "part": "JJH73",
+        "hw": "",
+        "cas": "M",
+        "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJH73_1963_Ford_Galaxie.jpg"
+    },
+    {
+        "year": 2026,
+        "name": "HW Test Ride",
+        "series": "TBD New for 2026!",
+        "color": "",
+        "part": "JJH68",
+        "hw": "",
+        "cas": "L",
+        "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJH68_HW_Test_Ride.jpg"
+    },
+    {
+        "year": 2026,
+        "name": "Salt Streaker",
+        "series": "TBD New for 2026!",
+        "color": "",
+        "part": "JJH71",
+        "hw": "",
+        "cas": "",
+        "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJH71_Salt_Streaker.jpg"
+    },
+    {
+        "year": 2026,
+        "name": "Mickey Mouse's Car",
+        "series": "TBD New for 2026!",
+        "color": "",
+        "part": "JJH74",
+        "hw": "",
+        "cas": "",
+        "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJH74_Mickey_Mouses_Car.jpg"
+    },
+    {
+        "year": 2026,
+        "name": "Aston Martin DB5 Safari",
+        "series": "TBD New for 2026!",
+        "color": "",
+        "part": "JJH76",
+        "hw": "",
+        "cas": "",
+        "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJH76_Aston_Martin_DB5_Safari.jpg"
+    },
+    {
+        "year": 2026,
+        "name": "Custom Vanster 4WD",
+        "series": "TBD New for 2026!",
+        "color": "",
+        "part": "JJH79",
+        "hw": "",
+        "cas": "",
+        "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJH79_Custom_Vanster_4WD.jpg"
+    },
+    {
+        "year": 2026,
+        "name": "Ford Model A Custom '31",
+        "series": "Rod Squad Treasure Hunt (9/10)",
+        "color": "",
+        "part": "JJM11",
+        "hw": "",
+        "cas": "M",
+        "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJM11_Ford_Model_A_Custom_31.jpg"
+    },
+    {
+        "year": 2026,
+        "name": "Mad Manga",
+        "series": "TBD Treasure Hunt",
+        "color": "",
+        "part": "JJM10",
+        "hw": "",
+        "cas": "L",
+        "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJM10_Mad_Manga.jpg"
+    },
+    {
+        "year": 2026,
+        "name": "'19 Mercedes-Benz A-Class",
+        "series": "Compact Kings (9/10)",
+        "color": "",
+        "part": "",
+        "hw": "",
+        "cas": "",
+        "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026__19_Mercedes-Benz_A-Class.jpg"
+    },
+    {
+        "year": 2026,
+        "name": "Custom '62 Chevy Pickup",
+        "series": "Rod Squad (8/10)",
+        "color": "",
+        "part": "",
+        "hw": "",
+        "cas": "L",
+        "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJK49_Custom_62_Chevy_Pickup.jpg"
+    },
+    {
+        "year": 2026,
+        "name": "'68 Mercury Cougar",
+        "series": "HW Torque (?/10)",
+        "color": "",
+        "part": "",
+        "hw": "",
+        "cas": "",
+        "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026__68_Mercury_Cougar.jpg"
+    },
+    {
+        "year": 2026,
+        "name": "'23 Ram 1500",
+        "series": "TBD",
+        "color": "",
+        "part": "JJK58",
+        "hw": "",
+        "cas": "N",
+        "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJM27_23_Ram_1500.jpg"
+    },
+    {
+        "year": 2026,
+        "name": "'23 Ram 1500",
+        "series": "TBD Super Treasure Hunt",
+        "color": "",
+        "part": "JJM27",
+        "hw": "",
+        "cas": "N",
+        "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJM27_23_Ram_1500.jpg"
+    },
+    {
+        "year": 2026,
+        "name": "'70 Plymouth AAR Cuda",
+        "series": "TBD",
+        "color": "",
+        "part": "",
+        "hw": "",
+        "cas": "P",
+        "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJM28_70_Plymouth_AAR_Cuda.jpg"
+    },
+    {
+        "year": 2026,
+        "name": "'70 Plymouth AAR Cuda",
+        "series": "TBD Super Treasure Hunt",
+        "color": "",
+        "part": "JJM28",
+        "hw": "",
+        "cas": "P",
+        "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJM28_70_Plymouth_AAR_Cuda.jpg"
+    },
+    {
+        "year": 2026,
+        "name": "'67 Pontiac Firebird 400",
+        "series": "TBD",
+        "color": "",
+        "part": "",
+        "hw": "",
+        "cas": "Q",
+        "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJM29_67_Pontiac_Firebird_400.jpg"
+    },
+    {
+        "year": 2026,
+        "name": "'67 Pontiac Firebird 400",
+        "series": "TBD Super Treasure Hunt",
+        "color": "",
+        "part": "JJM29",
+        "hw": "",
+        "cas": "Q",
+        "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJM29_67_Pontiac_Firebird_400.jpg"
+    },
+    {
+        "year": 2026,
+        "name": "'68 Corvette - Gas Monkey Garage",
+        "series": "TBD",
+        "color": "",
+        "part": "",
+        "hw": "",
+        "cas": "",
+        "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJK47_68_Corvette_-_Gas_Monkey_Garage.jpg"
+    },
+    {
+        "year": 2026,
+        "name": "'71 Lamborghini Miura SV",
+        "series": "TBD",
+        "color": "",
+        "part": "",
+        "hw": "",
+        "cas": "",
+        "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026__71_Lamborghini_Miura_SV.jpg"
+    },
+    {
+        "year": 2026,
+        "name": "'96 Dodge Viper GTS",
+        "series": "TBD",
+        "color": "",
+        "part": "",
+        "hw": "",
+        "cas": "L",
+        "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJK50_96_Dodge_Viper_GTS.jpg"
+    },
+    {
+        "year": 2026,
+        "name": "'21 Ford Bronco",
+        "series": "TBD",
+        "color": "",
+        "part": "JJK46",
+        "hw": "",
+        "cas": "L",
+        "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJK46_21_Ford_Bronco.jpg"
+    },
+    {
+        "year": 2026,
+        "name": "Alfa Romeo Giulia TI Super",
+        "series": "TBD",
+        "color": "",
+        "part": "",
+        "hw": "",
+        "cas": "L",
+        "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJK48_Alfa_Romeo_Giulia_TI_Super.jpg"
+    },
+    {
+        "year": 2026,
+        "name": "Party Wagon",
+        "series": "TBD",
+        "color": "",
+        "part": "",
+        "hw": "",
+        "cas": "",
+        "image": "https://static.wikia.nocookie.net/hotwheels/images/b/b5/Image_Not_Available.jpg/revision/latest?cb=20151025125428"
+    }
+];

@@ -16,7 +16,7 @@ export const RAW = [
         "color": "Azul",
         "part": "JJL03",
         "hw": "001",
-        "cas": "",
+        "cas": "K",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJL03_Mazda_MX-5_Miata_2nd_Color.jpg"
     },
     {
@@ -37,7 +37,7 @@ export const RAW = [
         "part": "JJM49",
         "hw": "002",
         "cas": "",
-        "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJM49_16_Lamborghini_Centenario_Roadster_2nd_Color.jpg"
+        "image": "./assets/img/hw/2026-hot-wheels-kroger-exclusive-03.jpg"
     },
     {
         "year": 2026,
@@ -46,7 +46,7 @@ export const RAW = [
         "color": "Verde",
         "part": "JJK74",
         "hw": "002",
-        "cas": "",
+        "cas": "F",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJK74_16_Lamborghini_Centenario_Roadster_3rd_Color.jpg"
     },
     {
@@ -56,7 +56,7 @@ export const RAW = [
         "color": "Amarelo",
         "part": "JJJ62",
         "hw": "003",
-        "cas": "",
+        "cas": "A",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJJ62_Gordon_Murray_Automotive_T33.jpg"
     },
     {
@@ -66,7 +66,7 @@ export const RAW = [
         "color": "",
         "part": "JJL44",
         "hw": "003",
-        "cas": "",
+        "cas": "F",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJL44_Gordon_Murray_Automotive_T33_2nd_Color.jpg"
     },
     {
@@ -86,7 +86,7 @@ export const RAW = [
         "color": "",
         "part": "JJK97",
         "hw": "004",
-        "cas": "",
+        "cas": "J",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJK97_Batmobile_2nd_Color.jpg"
     },
     {
@@ -106,7 +106,7 @@ export const RAW = [
         "color": "",
         "part": "JJK98",
         "hw": "005",
-        "cas": "",
+        "cas": "J",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJK98_Pass_n_Go_2nd_Color.jpg"
     },
     {
@@ -126,7 +126,7 @@ export const RAW = [
         "color": "Preto",
         "part": "JJK66",
         "hw": "006",
-        "cas": "",
+        "cas": "F",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJK66_RD-06_2nd_Color.jpg"
     },
     {
@@ -146,7 +146,7 @@ export const RAW = [
         "color": "Azul",
         "part": "JJK67",
         "hw": "007",
-        "cas": "",
+        "cas": "F",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJK67_Solar_Reflex_2nd_Color.jpg"
     },
     {
@@ -166,7 +166,7 @@ export const RAW = [
         "color": "",
         "part": "JJM61",
         "hw": "008",
-        "cas": "",
+        "cas": "C",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJM61_Ford_Mustang_Mach-E_1400_2nd_Color.jpg"
     },
     {
@@ -176,7 +176,7 @@ export const RAW = [
         "color": "",
         "part": "JJK78",
         "hw": "008",
-        "cas": "",
+        "cas": "G",
         "image": "https://static.wikia.nocookie.net/hotwheels/images/5/53/MachE1400.jpg/revision/latest?cb=20260303120424"
     },
     {
@@ -206,8 +206,8 @@ export const RAW = [
         "color": "",
         "part": "JJM50",
         "hw": "010",
-        "cas": "",
-        "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJM50_2020_Ford_Mustang_Shelby_GT500_2nd_Color.jpg"
+        "cas": "C",
+        "image": "./assets/img/hw/2026-hot-wheels-kroger-exclusive-06.jpg"
     },
     {
         "year": 2026,
@@ -216,7 +216,7 @@ export const RAW = [
         "color": "",
         "part": "JJK68",
         "hw": "010",
-        "cas": "",
+        "cas": "F",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJK68_2020_Ford_Mustang_Shelby_GT500_3rd_Color.jpg"
     },
     {
@@ -236,7 +236,7 @@ export const RAW = [
         "color": "",
         "part": "JJK87",
         "hw": "011",
-        "cas": "",
+        "cas": "F",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJK87_2018_Honda_Civic_Type_R_2nd_Color.jpg"
     },
     {
@@ -256,7 +256,7 @@ export const RAW = [
         "color": "",
         "part": "JJH90",
         "hw": "013",
-        "cas": "",
+        "cas": "A",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJM15_Drift-Ender.jpg"
     },
     {
@@ -266,7 +266,7 @@ export const RAW = [
         "color": "",
         "part": "JJM15",
         "hw": "013",
-        "cas": "",
+        "cas": "A",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJM15_Drift-Ender.jpg"
     },
     {
@@ -286,7 +286,7 @@ export const RAW = [
         "color": "",
         "part": "JJM62",
         "hw": "014",
-        "cas": "",
+        "cas": "C",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJM62_20_Jeep_Gladiator_2nd_Color.jpg"
     },
     {
@@ -306,7 +306,7 @@ export const RAW = [
         "color": "",
         "part": "JJM31",
         "hw": "015",
-        "cas": "",
+        "cas": "B",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJM31_Porsche_911_Carrera_T_2nd_Color_-_Zamac.jpg"
     },
     {
@@ -316,7 +316,7 @@ export const RAW = [
         "color": "",
         "part": "JJK80",
         "hw": "015",
-        "cas": "",
+        "cas": "G",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJK80_Porsche_911_Carrera_T_3rd_Color.jpg"
     },
     {
@@ -336,7 +336,7 @@ export const RAW = [
         "color": "",
         "part": "JJM57",
         "hw": "016",
-        "cas": "",
+        "cas": "C",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJM57_Maserati_Shamal_2nd_Color.jpg"
     },
     {
@@ -346,7 +346,7 @@ export const RAW = [
         "color": "",
         "part": "JJL08",
         "hw": "016",
-        "cas": "",
+        "cas": "K",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJL08_Maserati_Shamal_3rd_Color.jpg"
     },
     {
@@ -366,7 +366,7 @@ export const RAW = [
         "color": "",
         "part": "JJK69",
         "hw": "017",
-        "cas": "",
+        "cas": "F",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJK69_Bouncen_Bass_2nd_Color.jpg"
     },
     {
@@ -386,7 +386,7 @@ export const RAW = [
         "color": "",
         "part": "JJK70",
         "hw": "018",
-        "cas": "",
+        "cas": "F",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJK70_Deora_II_2nd_Color.jpg"
     },
     {
@@ -406,8 +406,8 @@ export const RAW = [
         "color": "",
         "part": "JJM51",
         "hw": "019",
-        "cas": "",
-        "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJM51_Rodger_Dodger_2nd_Color.jpg"
+        "cas": "C",
+        "image": "./assets/img/hw/2026-hot-wheels-kroger-exclusive-04.jpg"
     },
     {
         "year": 2026,
@@ -416,7 +416,7 @@ export const RAW = [
         "color": "",
         "part": "JJK71",
         "hw": "019",
-        "cas": "",
+        "cas": "F",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJK71_Rodger_Dodger_3rd_Color.jpg"
     },
     {
@@ -446,7 +446,7 @@ export const RAW = [
         "color": "",
         "part": "JJK72",
         "hw": "021",
-        "cas": "",
+        "cas": "F",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJK72_Barbie_Dream_Camper_2nd_Color.jpg"
     },
     {
@@ -466,7 +466,7 @@ export const RAW = [
         "color": "",
         "part": "JJK73",
         "hw": "022",
-        "cas": "",
+        "cas": "F",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJK73_Instant_Boost_2nd_Color.jpg"
     },
     {
@@ -486,7 +486,7 @@ export const RAW = [
         "color": "",
         "part": "JJM52",
         "hw": "023",
-        "cas": "",
+        "cas": "C",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJM52_69_Dodge_Charger_Daytona_2nd_Color.jpg"
     },
     {
@@ -506,7 +506,7 @@ export const RAW = [
         "color": "",
         "part": "JJM33",
         "hw": "024",
-        "cas": "",
+        "cas": "B",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJM33_Track_Ripper_2nd_Color_-_Zamac.jpg"
     },
     {
@@ -516,7 +516,7 @@ export const RAW = [
         "color": "",
         "part": "JJK95",
         "hw": "024",
-        "cas": "",
+        "cas": "H",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJK95_Track_Ripper_3rd_Color.jpg"
     },
     {
@@ -526,7 +526,7 @@ export const RAW = [
         "color": "",
         "part": "JJH81",
         "hw": "025",
-        "cas": "",
+        "cas": "B",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJH81_McMurtry_Spéirling.jpg"
     },
     {
@@ -546,7 +546,7 @@ export const RAW = [
         "color": "",
         "part": "JJK75",
         "hw": "026",
-        "cas": "",
+        "cas": "G",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJK75_Pagani_Zonda_Cinque_2nd_Color.jpg"
     },
     {
@@ -556,7 +556,7 @@ export const RAW = [
         "color": "",
         "part": "JJM32",
         "hw": "026",
-        "cas": "",
+        "cas": "K",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJM32_Pagani_Zonda_Cinque_3rd_Color_-_Zamac.jpg"
     },
     {
@@ -576,7 +576,7 @@ export const RAW = [
         "color": "",
         "part": "JJH98",
         "hw": "028",
-        "cas": "",
+        "cas": "B",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJH98_HW_KITT_Concept.jpg"
     },
     {
@@ -606,7 +606,7 @@ export const RAW = [
         "color": "",
         "part": "JJK76",
         "hw": "030",
-        "cas": "",
+        "cas": "G",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJK76_X-Steam_2nd_Color.jpg"
     },
     {
@@ -616,7 +616,7 @@ export const RAW = [
         "color": "",
         "part": "JJH36",
         "hw": "031",
-        "cas": "",
+        "cas": "C",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJH36_La_Liebre.jpg"
     },
     {
@@ -626,7 +626,7 @@ export const RAW = [
         "color": "",
         "part": "JJK77",
         "hw": "031",
-        "cas": "",
+        "cas": "H",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJK77_La_Liebre_2nd_Color.jpg"
     },
     {
@@ -646,7 +646,7 @@ export const RAW = [
         "color": "",
         "part": "JJK99",
         "hw": "032",
-        "cas": "",
+        "cas": "J",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJK99_5_Alarm_2nd_Color.jpg"
     },
     {
@@ -666,7 +666,7 @@ export const RAW = [
         "color": "",
         "part": "JJL00",
         "hw": "033",
-        "cas": "",
+        "cas": "J",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJL00_Haulerback_2nd_Color.jpg"
     },
     {
@@ -686,7 +686,7 @@ export const RAW = [
         "color": "",
         "part": "JJL01",
         "hw": "034",
-        "cas": "",
+        "cas": "J",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJL01_Porsche_Taycan_Turbo_S_2nd_Color.jpg"
     },
     {
@@ -706,7 +706,7 @@ export const RAW = [
         "color": "",
         "part": "JJK86",
         "hw": "035",
-        "cas": "",
+        "cas": "H",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJK86_Wattzup_2nd_Color.jpg"
     },
     {
@@ -726,7 +726,7 @@ export const RAW = [
         "color": "",
         "part": "JJM38",
         "hw": "036",
-        "cas": "",
+        "cas": "D",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJM38_70_Dodge_Hemi_Challenger_2nd_Color_-_Zamac.jpg"
     },
     {
@@ -736,7 +736,7 @@ export const RAW = [
         "color": "",
         "part": "JJK79",
         "hw": "036",
-        "cas": "",
+        "cas": "G",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJK79_70_Dodge_Hemi_Challenger_3rd_Color.jpg"
     },
     {
@@ -749,16 +749,16 @@ export const RAW = [
         "cas": "B",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJJ08_Cupra_e-Racer.jpg"
     },
-    {
-        "year": 2026,
-        "name": "Cupra e-Racer (2nd Color)",
-        "series": "Nightspeed (5/10)",
-        "color": "",
-        "part": "JJL50",
-        "hw": "037",
-        "cas": "",
-        "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJL50_Cupra_e-Racer_2nd_Color.jpg"
-    },
+    // {
+    //     "year": 2026,
+    //     "name": "Cupra e-Racer (2nd Color)",
+    //     "series": "Nightspeed (5/10)",
+    //     "color": "",
+    //     "part": "JJL50",
+    //     "hw": "037",
+    //     "cas": "",
+    //     "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJL50_Cupra_e-Racer_2nd_Color.jpg"
+    // },
     {
         "year": 2026,
         "name": "24/Seven",
@@ -776,8 +776,8 @@ export const RAW = [
         "color": "",
         "part": "JJL51",
         "hw": "038",
-        "cas": "",
-        "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJL51_24-Seven_2nd_Color.jpg"
+        "cas": "B",
+        "image": ".assets/img/hw/Red-Editon-24-Seven-hot-wheels-Target-01.jpg"
     },
     {
         "year": 2026,
@@ -796,7 +796,7 @@ export const RAW = [
         "color": "",
         "part": "JJK88",
         "hw": "039",
-        "cas": "",
+        "cas": "H",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJK88_Roller_Toaster_2nd_Color.jpg"
     },
     {
@@ -826,7 +826,7 @@ export const RAW = [
         "color": "",
         "part": "JJK89",
         "hw": "041",
-        "cas": "",
+        "cas": "H",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJK89_Ferrari_SF90_Stradale_2nd_Color.jpg"
     },
     {
@@ -846,7 +846,7 @@ export const RAW = [
         "color": "",
         "part": "JJL07",
         "hw": "042",
-        "cas": "",
+        "cas": "K",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJL07_83_Chevy_Silverado_2nd_Color.jpg"
     },
     {
@@ -886,7 +886,7 @@ export const RAW = [
         "color": "",
         "part": "JJM35",
         "hw": "044",
-        "cas": "",
+        "cas": "D",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJM35_59_Chevy_Impala_2nd_Color_-_Zamac.jpg"
     },
     {
@@ -896,7 +896,7 @@ export const RAW = [
         "color": "",
         "part": "JJK81",
         "hw": "044",
-        "cas": "",
+        "cas": "G",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJK81_59_Chevy_Impala_3rd_Color.jpg"
     },
     {
@@ -916,7 +916,7 @@ export const RAW = [
         "color": "",
         "part": "JJM64",
         "hw": "045",
-        "cas": "",
+        "cas": "F",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJM64_47_Chevy_Fleetline_2nd_Color.jpg"
     },
     {
@@ -936,7 +936,7 @@ export const RAW = [
         "color": "",
         "part": "JJK91",
         "hw": "046",
-        "cas": "",
+        "cas": "H",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJK91_Purple_Passion_2nd_Color.jpg"
     },
     {
@@ -956,7 +956,7 @@ export const RAW = [
         "color": "",
         "part": "JJK92",
         "hw": "047",
-        "cas": "",
+        "cas": "G",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJK92_High-Tail_Chaser_2nd_Color.jpg"
     },
     {
@@ -976,7 +976,7 @@ export const RAW = [
         "color": "",
         "part": "JJK93",
         "hw": "048",
-        "cas": "",
+        "cas": "H",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJK93_Monster_High_Ghoul_Mobile_2nd_Color.jpg"
     },
     {
@@ -996,7 +996,7 @@ export const RAW = [
         "color": "",
         "part": "JJK82",
         "hw": "049",
-        "cas": "",
+        "cas": "G",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJK82_Quick_Chat_2nd_Color.jpg"
     },
     {
@@ -1056,7 +1056,7 @@ export const RAW = [
         "color": "",
         "part": "JJM67",
         "hw": "052",
-        "cas": "",
+        "cas": "F",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJM67_Porsche_911_Turbo_Cabriolet_2nd_Color.jpg"
     },
     {
@@ -1076,7 +1076,7 @@ export const RAW = [
         "color": "",
         "part": "JJK83",
         "hw": "053",
-        "cas": "",
+        "cas": "H",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJK83_69_Chevelle_2nd_Color.jpg"
     },
     {
@@ -1106,7 +1106,7 @@ export const RAW = [
         "color": "",
         "part": "JJK84",
         "hw": "055",
-        "cas": "",
+        "cas": "H",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJK84_Dessert_Drifter_2nd_Color.jpg"
     },
     {
@@ -1126,7 +1126,7 @@ export const RAW = [
         "color": "",
         "part": "JJM46",
         "hw": "056",
-        "cas": "",
+        "cas": "E",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJM46_67_Camaro_2nd_Color.jpg"
     },
     {
@@ -1146,7 +1146,7 @@ export const RAW = [
         "color": "",
         "part": "JJK85",
         "hw": "057",
-        "cas": "",
+        "cas": "H",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJK85_Raijin_Express_2nd_Color.jpg"
     },
     {
@@ -1186,19 +1186,19 @@ export const RAW = [
         "color": "",
         "part": "JJM48",
         "hw": "060",
-        "cas": "",
+        "cas": "E",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJM48_Toyota_Prius_Custom_2nd_Color.jpg"
     },
-    {
-        "year": 2026,
-        "name": "Toyota Prius Custom (3rd Color)",
-        "series": "HW J-Imports New for 2026! (1/10)",
-        "color": "",
-        "part": "JJL34",
-        "hw": "060",
-        "cas": "",
-        "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJL34_Toyota_Prius_Custom_3rd_Color.jpg"
-    },
+    // {
+    //     "year": 2026,
+    //     "name": "Toyota Prius Custom (3rd Color)",
+    //     "series": "HW J-Imports New for 2026! (1/10)",
+    //     "color": "",
+    //     "part": "JJL34",
+    //     "hw": "060",
+    //     "cas": "",
+    //     "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJL34_Toyota_Prius_Custom_3rd_Color.jpg"
+    // },
     {
         "year": 2026,
         "name": "Mazda RX-7",
@@ -1209,16 +1209,16 @@ export const RAW = [
         "cas": "C",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJJ29_Mazda_RX-7.jpg"
     },
-    {
-        "year": 2026,
-        "name": "Mazda RX-7 (2nd Color)",
-        "series": "HW J-Imports (2/10)",
-        "color": "",
-        "part": "JJL35",
-        "hw": "061",
-        "cas": "",
-        "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJL35_Mazda_RX-7_2nd_Color.jpg"
-    },
+    // {
+    //     "year": 2026,
+    //     "name": "Mazda RX-7 (2nd Color)",
+    //     "series": "HW J-Imports (2/10)",
+    //     "color": "",
+    //     "part": "JJL35",
+    //     "hw": "061",
+    //     "cas": "",
+    //     "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJL35_Mazda_RX-7_2nd_Color.jpg"
+    // },
     {
         "year": 2026,
         "name": "Ferrari 365 GTB4 Competizione",
@@ -1236,7 +1236,7 @@ export const RAW = [
         "color": "",
         "part": "JJL06",
         "hw": "062",
-        "cas": "",
+        "cas": "K",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJL06_Ferrari_365_GTB4_Competizione_2nd_Color.jpg"
     },
     {
@@ -1286,7 +1286,7 @@ export const RAW = [
         "color": "",
         "part": "JJL09",
         "hw": "065",
-        "cas": "",
+        "cas": "K",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJL09_Drift_Box_2nd_Color.jpg"
     },
     {
@@ -1306,7 +1306,7 @@ export const RAW = [
         "color": "",
         "part": "JJK90",
         "hw": "066",
-        "cas": "",
+        "cas": "H",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJK90_17_Audi_RS_6_Avant_2nd_Color.jpg"
     },
     {
@@ -1326,8 +1326,8 @@ export const RAW = [
         "color": "",
         "part": "JJM47",
         "hw": "067",
-        "cas": "",
-        "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJM47_Lotus_Cortina_2nd_Color.jpg"
+        "cas": "L",
+        "image": "./assets/img/hw/2026-hot-wheels-dollar-exclusive-3.jpg"
     },
     {
         "year": 2026,
@@ -1336,8 +1336,8 @@ export const RAW = [
         "color": "",
         "part": "JJL16",
         "hw": "067",
-        "cas": "",
-        "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJL16_Lotus_Cortina_3rd_Color.jpg"
+        "cas": "L",
+        "image": "./assets/img/hw/Hot_Wheels_2026_Case_L_Lotus_Cortina.jpg"
     },
     {
         "year": 2026,
@@ -1386,7 +1386,7 @@ export const RAW = [
         "color": "",
         "part": "JJL12",
         "hw": "070",
-        "cas": "",
+        "cas": "K",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJL12_Decidedly_Go_2nd_Color.jpg"
     },
     {
@@ -1406,7 +1406,7 @@ export const RAW = [
         "color": "",
         "part": "JJK94",
         "hw": "071",
-        "cas": "",
+        "cas": "H",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJK94_Austin_Mini_Cooper_S_2nd_Color.jpg"
     },
     {
@@ -1426,8 +1426,8 @@ export const RAW = [
         "color": "",
         "part": "JJM69",
         "hw": "072",
-        "cas": "",
-        "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJM69_Datsun_240Z_2nd_Color.jpg"
+        "cas": "C",
+        "image": "./assets/img/hw/Datsun240Z.jpg"
     },
     {
         "year": 2026,
@@ -1456,19 +1456,19 @@ export const RAW = [
         "color": "",
         "part": "JJM60",
         "hw": "074",
-        "cas": "",
+        "cas": "F",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJM60_McLaren_W1_2nd_Color.jpg"
     },
-    {
-        "year": 2026,
-        "name": "McLaren W1 (3rd Color)",
-        "series": "Exoticars (5/10)",
-        "color": "",
-        "part": "JJL43",
-        "hw": "074",
-        "cas": "",
-        "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJL43_McLaren_W1_3rd_Color.jpg"
-    },
+    // {
+    //     "year": 2026,
+    //     "name": "McLaren W1 (3rd Color)",
+    //     "series": "Exoticars (5/10)",
+    //     "color": "",
+    //     "part": "JJL43",
+    //     "hw": "074",
+    //     "cas": "",
+    //     "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJL43_McLaren_W1_3rd_Color.jpg"
+    // },
     {
         "year": 2026,
         "name": "X-cceleron",
@@ -1496,8 +1496,8 @@ export const RAW = [
         "color": "",
         "part": "JJL45",
         "hw": "076",
-        "cas": "",
-        "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJL45_76_Chevy_Chevette_2nd_Color.jpg"
+        "cas": "D",
+        "image": "./assets/img/hw/chevette.jpg"
     },
     {
         "year": 2026,
@@ -1516,7 +1516,7 @@ export const RAW = [
         "color": "",
         "part": "JJL02",
         "hw": "077",
-        "cas": "",
+        "cas": "K",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJL02_Supercharged_2nd_Color.jpg"
     },
     {
@@ -1586,7 +1586,7 @@ export const RAW = [
         "color": "",
         "part": "JJL04",
         "hw": "083",
-        "cas": "",
+        "cas": "K",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJL04_Rapid_Pulse_2nd_Color.jpg"
     },
     {
@@ -1596,7 +1596,7 @@ export const RAW = [
         "color": "",
         "part": "JJJ47",
         "hw": "084",
-        "cas": "",
+        "cas": "D",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJJ47_Polestar_TRX.jpg"
     },
     {
@@ -1616,7 +1616,7 @@ export const RAW = [
         "color": "",
         "part": "JJH46",
         "hw": "086",
-        "cas": "",
+        "cas": "D",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJH46_VW_ID_Buzz_Bomb.jpg"
     },
     {
@@ -1626,7 +1626,7 @@ export const RAW = [
         "color": "",
         "part": "JJL95",
         "hw": "086",
-        "cas": "",
+        "cas": "H",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJL95_VW_ID_Buzz_Bomb_2nd_Color.jpg"
     },
     {
@@ -1649,16 +1649,16 @@ export const RAW = [
         "cas": "D",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJJ50_Nissan_Skyline_2000_GT-R.jpg"
     },
-    {
-        "year": 2026,
-        "name": "Nissan Skyline 2000 GT-R (2nd Color)",
-        "series": "HW J-Imports (3/10)",
-        "color": "",
-        "part": "JJL68",
-        "hw": "088",
-        "cas": "",
-        "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJL68_Nissan_Skyline_2000_GT-R_2nd_Color.jpg"
-    },
+    // {
+    //     "year": 2026,
+    //     "name": "Nissan Skyline 2000 GT-R (2nd Color)",
+    //     "series": "HW J-Imports (3/10)",
+    //     "color": "",
+    //     "part": "JJL68",
+    //     "hw": "088",
+    //     "cas": "",
+    //     "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJL68_Nissan_Skyline_2000_GT-R_2nd_Color.jpg"
+    // },
     {
         "year": 2026,
         "name": "1985 Honda CR-X",
@@ -1676,8 +1676,8 @@ export const RAW = [
         "color": "",
         "part": "JJM40",
         "hw": "089",
-        "cas": "",
-        "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJM40_1985_Honda_CR-X_2nd_Color_-_Zamac.jpg"
+        "cas": "E",
+        "image": "./assets/img/hw/crx-zamac.jpg"
     },
     {
         "year": 2026,
@@ -1686,7 +1686,7 @@ export const RAW = [
         "color": "",
         "part": "JJJ52",
         "hw": "090",
-        "cas": "",
+        "cas": "D",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJJ52_16_Cadillac_ATS-V_R.jpg"
     },
     {
@@ -1696,8 +1696,8 @@ export const RAW = [
         "color": "",
         "part": "JJL36",
         "hw": "090",
-        "cas": "",
-        "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJL36_16_Cadillac_ATS-V_R_2nd_Color.jpg"
+        "cas": "E",
+        "image": "./assets/img/hw/ats-vr.jpg"
     },
     {
         "year": 2026,
@@ -1706,7 +1706,7 @@ export const RAW = [
         "color": "",
         "part": "JJJ53",
         "hw": "091",
-        "cas": "",
+        "cas": "D",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJJ53_LB-WORKS_Lamborghini_Huracán_Coupé.jpg"
     },
     {
@@ -1726,7 +1726,7 @@ export const RAW = [
         "color": "",
         "part": "JJJ55",
         "hw": "093",
-        "cas": "",
+        "cas": "D",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJJ55_Coupé_Clip.jpg"
     },
     {
@@ -1736,7 +1736,7 @@ export const RAW = [
         "color": "",
         "part": "JJL05",
         "hw": "093",
-        "cas": "",
+        "cas": "K",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJL05_El_Segundo_Coupé_Clip_2nd_Color.jpg"
     },
     {
@@ -1746,7 +1746,7 @@ export const RAW = [
         "color": "",
         "part": "JJH41",
         "hw": "094",
-        "cas": "",
+        "cas": "D",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJH41_Ferrari_12Cilindri.jpg"
     },
     {
@@ -1836,7 +1836,7 @@ export const RAW = [
         "color": "",
         "part": "JJL40",
         "hw": "099",
-        "cas": "",
+        "cas": "K",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJL40_Renault_Espace_F1_2nd_Color.jpg"
     },
     {
@@ -1869,16 +1869,16 @@ export const RAW = [
         "cas": "D",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJK30_Passn_Gasser.jpg"
     },
-    {
-        "year": 2026,
-        "name": "Pass'n Gasser (2nd Color)",
-        "series": "Red Edition Target Exclusive (?/12)",
-        "color": "",
-        "part": "JJM59",
-        "hw": "102",
-        "cas": "",
-        "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJM59_Passn_Gasser_2nd_Color.jpg"
-    },
+    // {
+    //     "year": 2026,
+    //     "name": "Pass'n Gasser (2nd Color)",
+    //     "series": "Red Edition Target Exclusive (?/12)",
+    //     "color": "",
+    //     "part": "JJM59",
+    //     "hw": "102",
+    //     "cas": "",
+    //     "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJM59_Passn_Gasser_2nd_Color.jpg"
+    // },
     {
         "year": 2026,
         "name": "Eggshelleracer",
@@ -1889,16 +1889,16 @@ export const RAW = [
         "cas": "E",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJH47_Eggshelleracer.jpg"
     },
-    {
-        "year": 2026,
-        "name": "Eggshelleracer (2nd Color)",
-        "series": "Drag Racers New for 2026! (4/10)",
-        "color": "",
-        "part": "JJL25",
-        "hw": "103",
-        "cas": "",
-        "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJL25_Eggshelleracer_2nd_Color.jpg"
-    },
+    // {
+    //     "year": 2026,
+    //     "name": "Eggshelleracer (2nd Color)",
+    //     "series": "Drag Racers New for 2026! (4/10)",
+    //     "color": "",
+    //     "part": "JJL25",
+    //     "hw": "103",
+    //     "cas": "",
+    //     "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJL25_Eggshelleracer_2nd_Color.jpg"
+    // },
     {
         "year": 2026,
         "name": "'68 Dodge Dart",
@@ -1936,7 +1936,7 @@ export const RAW = [
         "color": "",
         "part": "JJM58",
         "hw": "106",
-        "cas": "",
+        "cas": "J",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJM58_Mazda_RX-3_2nd_Color.jpg"
     },
     {
@@ -1999,16 +1999,16 @@ export const RAW = [
         "cas": "E",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJJ72_89_Mazda_Savanna_RX-7_FC3S.jpg"
     },
-    {
-        "year": 2026,
-        "name": "'89 Mazda Savanna RX-7 FC3S (2nd Color)",
-        "series": "HW J-Imports (5/10)",
-        "color": "",
-        "part": "JJL69",
-        "hw": "112",
-        "cas": "",
-        "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJL69_89_Mazda_Savanna_RX-7_FC3S_2nd_Color.jpg"
-    },
+    // {
+    //     "year": 2026,
+    //     "name": "'89 Mazda Savanna RX-7 FC3S (2nd Color)",
+    //     "series": "HW J-Imports (5/10)",
+    //     "color": "",
+    //     "part": "JJL69",
+    //     "hw": "112",
+    //     "cas": "",
+    //     "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJL69_89_Mazda_Savanna_RX-7_FC3S_2nd_Color.jpg"
+    // },
     {
         "year": 2026,
         "name": "Corvette C7 Z06",
@@ -2019,16 +2019,16 @@ export const RAW = [
         "cas": "E",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJJ73_Corvette_C7_Z06.jpg"
     },
-    {
-        "year": 2026,
-        "name": "Corvette C7 Z06 (2nd Color)",
-        "series": "Nightspeed (9/10)",
-        "color": "",
-        "part": "JJL89",
-        "hw": "113",
-        "cas": "",
-        "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJL89_Corvette_C7_Z06_2nd_Color.jpg"
-    },
+    // {
+    //     "year": 2026,
+    //     "name": "Corvette C7 Z06 (2nd Color)",
+    //     "series": "Nightspeed (9/10)",
+    //     "color": "",
+    //     "part": "JJL89",
+    //     "hw": "113",
+    //     "cas": "",
+    //     "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJL89_Corvette_C7_Z06_2nd_Color.jpg"
+    // },
     {
         "year": 2026,
         "name": "Custom '66 Toronado",
@@ -2086,7 +2086,7 @@ export const RAW = [
         "color": "",
         "part": "JJL10",
         "hw": "117",
-        "cas": "",
+        "cas": "K",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJL10_Erikenstein_Rod_2nd_Color.jpg"
     },
     {
@@ -2106,7 +2106,7 @@ export const RAW = [
         "color": "",
         "part": "JJL11",
         "hw": "118",
-        "cas": "",
+        "cas": "K",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJL11_Pedal_Driver_2nd_Color.jpg"
     },
     {
@@ -2156,8 +2156,8 @@ export const RAW = [
         "color": "",
         "part": "JJM34",
         "hw": "121",
-        "cas": "",
-        "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJM34_2023_Nissan_Z_2nd_Color_-_Zamac.jpg"
+        "cas": "M",
+        "image": "./assets/img/hw/nissan-zamac.jpg"
     },
     {
         "year": 2026,
@@ -2186,7 +2186,7 @@ export const RAW = [
         "color": "",
         "part": "JJM39",
         "hw": "123",
-        "cas": "",
+        "cas": "J",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJM39_Maserati_Tipo_61_2nd_Color.jpg"
     },
     {
@@ -2216,7 +2216,7 @@ export const RAW = [
         "color": "",
         "part": "JJL24",
         "hw": "125",
-        "cas": "",
+        "cas": "L",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJL24_2024_Aston_Martin_Vantage_GT3_2nd_Color.jpg"
     },
     {
@@ -2239,16 +2239,16 @@ export const RAW = [
         "cas": "F",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJJ80_Custom_72_Chevy_LUV.jpg"
     },
-    {
-        "year": 2026,
-        "name": "Custom '72 Chevy LUV (2nd Color)",
-        "series": "Drag Racers (7/10)",
-        "color": "",
-        "part": "JJL63",
-        "hw": "127",
-        "cas": "",
-        "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJL63_Custom_72_Chevy_LUV_2nd_Color.jpg"
-    },
+    // {
+    //     "year": 2026,
+    //     "name": "Custom '72 Chevy LUV (2nd Color)",
+    //     "series": "Drag Racers (7/10)",
+    //     "color": "",
+    //     "part": "JJL63",
+    //     "hw": "127",
+    //     "cas": "",
+    //     "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJL63_Custom_72_Chevy_LUV_2nd_Color.jpg"
+    // },
     {
         "year": 2026,
         "name": "Datsun 620",
@@ -2266,7 +2266,7 @@ export const RAW = [
         "color": "",
         "part": "JJJ83",
         "hw": "129",
-        "cas": "",
+        "cas": "G",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJJ83_Standard_Kart.jpg"
     },
     {
@@ -2296,7 +2296,7 @@ export const RAW = [
         "color": "",
         "part": "JJM66",
         "hw": "131",
-        "cas": "",
+        "cas": "H",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJM66_Fiat_Beast_of_Turin_2nd_Color_-_Zamac.jpg"
     },
     {
@@ -2356,7 +2356,7 @@ export const RAW = [
         "color": "",
         "part": "JJL15",
         "hw": "136",
-        "cas": "",
+        "cas": "L",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJL15_98_Honda_Prelude_2nd_Color.jpg"
     },
     {
@@ -2516,7 +2516,7 @@ export const RAW = [
         "color": "",
         "part": "JJM63",
         "hw": "149",
-        "cas": "",
+        "cas": "J",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJM63_Honda_Odyssey_2nd_Color.jpg"
     },
     {
@@ -2536,8 +2536,8 @@ export const RAW = [
         "color": "",
         "part": "JJL74",
         "hw": "150",
-        "cas": "",
-        "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJL74_Dino_206_GT_2nd_Color.jpg"
+        "cas": "P",
+        "image": "./assets/img/hw/dino.jpg"
     },
     {
         "year": 2026,
@@ -2596,7 +2596,7 @@ export const RAW = [
         "color": "",
         "part": "JJM36",
         "hw": "155",
-        "cas": "",
+        "cas": "K",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJM36_Vairstrike_2nd_Color_-_Zamac.jpg"
     },
     {
@@ -2739,16 +2739,16 @@ export const RAW = [
         "cas": "H",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJH64_Twin_Tags.jpg"
     },
-    {
-        "year": 2026,
-        "name": "Twin Tags (2nd Color)",
-        "series": "Experimotors New for 2026! (5/5)",
-        "color": "",
-        "part": "JJL73",
-        "hw": "166",
-        "cas": "",
-        "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJL73_Twin_Tags_2nd_Color.jpg"
-    },
+    // {
+    //     "year": 2026,
+    //     "name": "Twin Tags (2nd Color)",
+    //     "series": "Experimotors New for 2026! (5/5)",
+    //     "color": "",
+    //     "part": "JJL73",
+    //     "hw": "166",
+    //     "cas": "",
+    //     "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJL73_Twin_Tags_2nd_Color.jpg"
+    // },
     {
         "year": 2026,
         "name": "Head Gasket",
@@ -2816,19 +2816,19 @@ export const RAW = [
         "color": "",
         "part": "JJK17",
         "hw": "174",
-        "cas": "",
+        "cas": "J",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJK17_Duck_N_Roll.jpg"
     },
-    {
-        "year": 2026,
-        "name": "Duck N' Roll (2nd Color)",
-        "series": "HW Dirt (4/10)",
-        "color": "",
-        "part": "JJL59",
-        "hw": "174",
-        "cas": "",
-        "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJL59_Duck_N_Roll_2nd_Color.jpg"
-    },
+    // {
+    //     "year": 2026,
+    //     "name": "Duck N' Roll (2nd Color)",
+    //     "series": "HW Dirt (4/10)",
+    //     "color": "",
+    //     "part": "JJL59",
+    //     "hw": "174",
+    //     "cas": "",
+    //     "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJL59_Duck_N_Roll_2nd_Color.jpg"
+    // },
     {
         "year": 2026,
         "name": "'94 Audi Avant RS2",
@@ -2846,7 +2846,7 @@ export const RAW = [
         "color": "",
         "part": "JJK19",
         "hw": "176",
-        "cas": "",
+        "cas": "J",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJM23_Subaru_Impreza_WRX.jpg"
     },
     {
@@ -2856,7 +2856,7 @@ export const RAW = [
         "color": "",
         "part": "JJM23",
         "hw": "176",
-        "cas": "",
+        "cas": "J",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJM23_Subaru_Impreza_WRX.jpg"
     },
     {
@@ -2876,7 +2876,7 @@ export const RAW = [
         "color": "",
         "part": "JJM54",
         "hw": "177",
-        "cas": "",
+        "cas": "L",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJM54_88_Mitsubishi_Starion_2nd_Color.jpg"
     },
     {
@@ -2886,8 +2886,8 @@ export const RAW = [
         "color": "",
         "part": "JJL70",
         "hw": "177",
-        "cas": "",
-        "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJL70_88_Mitsubishi_Starion_3rd_Color.jpg"
+        "cas": "K",
+        "image": ".assets/img/hw/starion.jpg"
     },
     {
         "year": 2026,
@@ -2956,7 +2956,7 @@ export const RAW = [
         "color": "",
         "part": "JJM37",
         "hw": "183",
-        "cas": "",
+        "cas": "M",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJM37_70_Buick_GSX_2nd_Color_-_Zamac.jpg"
     },
     {
@@ -3046,19 +3046,19 @@ export const RAW = [
         "color": "",
         "part": "JJM53",
         "hw": "191",
-        "cas": "",
+        "cas": "L",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJM53_65_Mercury_Comet_Cyclone_2nd_Color.jpg"
     },
-    {
-        "year": 2026,
-        "name": "'65 Mercury Comet Cyclone (3rd Color)",
-        "series": "Drag Racers (9/10)",
-        "color": "",
-        "part": "JJL46",
-        "hw": "191",
-        "cas": "",
-        "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJL46_65_Mercury_Comet_Cyclone_3rd_Color.jpg"
-    },
+    // {
+    //     "year": 2026,
+    //     "name": "'65 Mercury Comet Cyclone (3rd Color)",
+    //     "series": "Drag Racers (9/10)",
+    //     "color": "",
+    //     "part": "JJL46",
+    //     "hw": "191",
+    //     "cas": "",
+    //     "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJL46_65_Mercury_Comet_Cyclone_3rd_Color.jpg"
+    // },
     {
         "year": 2026,
         "name": "Fiat 500C",
@@ -3186,7 +3186,7 @@ export const RAW = [
         "color": "",
         "part": "JJK39",
         "hw": "203",
-        "cas": "",
+        "cas": "K",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJK39_Street_Shrieker.jpg"
     },
     {
@@ -3209,16 +3209,16 @@ export const RAW = [
         "cas": "J",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJK22_Jaguar_XJC_V12_Coupe.jpg"
     },
-    {
-        "year": 2026,
-        "name": "Jaguar XJC V12 Coupe (2nd Color)",
-        "series": "HW Euro (10/10)",
-        "color": "",
-        "part": "JJL96",
-        "hw": "205",
-        "cas": "",
-        "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJL96_Jaguar_XJC_V12_Coupe_2nd_Color.jpg"
-    },
+    // {
+    //     "year": 2026,
+    //     "name": "Jaguar XJC V12 Coupe (2nd Color)",
+    //     "series": "HW Euro (10/10)",
+    //     "color": "",
+    //     "part": "JJL96",
+    //     "hw": "205",
+    //     "cas": "",
+    //     "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJL96_Jaguar_XJC_V12_Coupe_2nd_Color.jpg"
+    // },
     {
         "year": 2026,
         "name": "Bully Goat",
@@ -3319,26 +3319,26 @@ export const RAW = [
         "cas": "L",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJM26_Nissan_Maxima_Drift_Car.jpg"
     },
-    {
-        "year": 2026,
-        "name": "Go-Realla-Fast",
-        "series": "Trophy Case New for 2026! (3/5)",
-        "color": "",
-        "part": "JJH75",
-        "hw": "239",
-        "cas": "",
-        "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJH75_Go-Realla-Fast.jpg"
-    },
-    {
-        "year": 2026,
-        "name": "Ridge Crest GT",
-        "series": "HW Torque New for 2026! (10/10)",
-        "color": "",
-        "part": "JJH77",
-        "hw": "246",
-        "cas": "",
-        "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJH77_Ridge_Crest_GT.jpg"
-    },
+    // {
+    //     "year": 2026,
+    //     "name": "Go-Realla-Fast",
+    //     "series": "Trophy Case New for 2026! (3/5)",
+    //     "color": "",
+    //     "part": "JJH75",
+    //     "hw": "239",
+    //     "cas": "",
+    //     "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJH75_Go-Realla-Fast.jpg"
+    // },
+    // {
+    //     "year": 2026,
+    //     "name": "Ridge Crest GT",
+    //     "series": "HW Torque New for 2026! (10/10)",
+    //     "color": "",
+    //     "part": "JJH77",
+    //     "hw": "246",
+    //     "cas": "",
+    //     "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJH77_Ridge_Crest_GT.jpg"
+    // },
     {
         "year": 2026,
         "name": "Ferrari F2004",
@@ -3356,7 +3356,7 @@ export const RAW = [
         "color": "",
         "part": "JJH62",
         "hw": "",
-        "cas": "",
+        "cas": "A",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJH62_Mini_JCW_Electric.jpg"
     },
     {
@@ -3376,7 +3376,7 @@ export const RAW = [
         "color": "",
         "part": "JJH70",
         "hw": "",
-        "cas": "",
+        "cas": "L",
         "image": "https://static.wikia.nocookie.net/hotwheels/images/b/b5/Image_Not_Available.jpg/revision/latest?cb=20151025125428"
     },
     {
@@ -3409,46 +3409,46 @@ export const RAW = [
         "cas": "L",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJH68_HW_Test_Ride.jpg"
     },
-    {
-        "year": 2026,
-        "name": "Salt Streaker",
-        "series": "TBD New for 2026!",
-        "color": "",
-        "part": "JJH71",
-        "hw": "",
-        "cas": "",
-        "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJH71_Salt_Streaker.jpg"
-    },
-    {
-        "year": 2026,
-        "name": "Mickey Mouse's Car",
-        "series": "TBD New for 2026!",
-        "color": "",
-        "part": "JJH74",
-        "hw": "",
-        "cas": "",
-        "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJH74_Mickey_Mouses_Car.jpg"
-    },
-    {
-        "year": 2026,
-        "name": "Aston Martin DB5 Safari",
-        "series": "TBD New for 2026!",
-        "color": "",
-        "part": "JJH76",
-        "hw": "",
-        "cas": "",
-        "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJH76_Aston_Martin_DB5_Safari.jpg"
-    },
-    {
-        "year": 2026,
-        "name": "Custom Vanster 4WD",
-        "series": "TBD New for 2026!",
-        "color": "",
-        "part": "JJH79",
-        "hw": "",
-        "cas": "",
-        "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJH79_Custom_Vanster_4WD.jpg"
-    },
+    // {
+    //     "year": 2026,
+    //     "name": "Salt Streaker",
+    //     "series": "TBD New for 2026!",
+    //     "color": "",
+    //     "part": "JJH71",
+    //     "hw": "",
+    //     "cas": "",
+    //     "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJH71_Salt_Streaker.jpg"
+    // },
+    // {
+    //     "year": 2026,
+    //     "name": "Mickey Mouse's Car",
+    //     "series": "TBD New for 2026!",
+    //     "color": "",
+    //     "part": "JJH74",
+    //     "hw": "",
+    //     "cas": "",
+    //     "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJH74_Mickey_Mouses_Car.jpg"
+    // },
+    // {
+    //     "year": 2026,
+    //     "name": "Aston Martin DB5 Safari",
+    //     "series": "TBD New for 2026!",
+    //     "color": "",
+    //     "part": "JJH76",
+    //     "hw": "",
+    //     "cas": "",
+    //     "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJH76_Aston_Martin_DB5_Safari.jpg"
+    // },
+    // {
+    //     "year": 2026,
+    //     "name": "Custom Vanster 4WD",
+    //     "series": "TBD New for 2026!",
+    //     "color": "",
+    //     "part": "JJH79",
+    //     "hw": "",
+    //     "cas": "",
+    //     "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJH79_Custom_Vanster_4WD.jpg"
+    // },
     {
         "year": 2026,
         "name": "Ford Model A Custom '31",
@@ -29136,7 +29136,7 @@ export const RAW = [
         "color": "",
         "part": "GLN67",
         "hw": "170",
-        "cas": "",
+        "cas": "C",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2020_GLN67_16_Lamborghini_Centenario_Roadster_2nd_Color.jpg"
     },
     {
