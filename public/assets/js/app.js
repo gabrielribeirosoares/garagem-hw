@@ -666,8 +666,8 @@ onAuthStateChanged(auth, async (user) => {
     pointsContainer.style.display = isVip ? 'flex' : 'none';
   }
 
-  document.querySelectorAll('[data-page="missions"], [data-page="rewards"]').forEach(el => {
 
+  document.querySelectorAll('[data-page="missions"], [data-page="rewards"], [data-page="sorteios"]').forEach(el => {
     if (isAdmin || isManager || targetRole === 'cliente') {
       el.parentElement.style.display = 'block';
     } else {
@@ -716,15 +716,17 @@ window.loadCollection = async function () {
       userWishlist = {};
     }
 
-    // 2. Carrega os dados do Usuário (Nome e Permissões)
+    // 2. Carrega os dados do Usuário
     const uRef = doc(db, 'users', uidToLoad);
     const uSnap = await getDoc(uRef);
 
+    let currentLojaId = 'default';
+
     if (uSnap.exists()) {
       targetRole = uSnap.data().role || 'user';
-      window.lojaIdAtual = uSnap.data().lojaId || 'default'; // ✅ Salva globalmente para gerenciar rifas
+      currentLojaId = uSnap.data().lojaId || 'default';
+      window.lojaIdAtual = currentLojaId; // ✅ Salva a loja globalmente para usar nas rifas
 
-      // ✅ Libera o botão "Sorteador Virtual" no menu só para Admin/Gerente
       if (targetRole === 'admin' || targetRole === 'gerente') {
           const btnSorteador = document.getElementById('menu-sorteador-item');
           if (btnSorteador) btnSorteador.style.display = 'block';
@@ -733,10 +735,9 @@ window.loadCollection = async function () {
       if (typeof isPublicView !== 'undefined' && isPublicView) {
         const nomeEncontrado = uSnap.data().name || uSnap.data().nome;
         if (nomeEncontrado) {
-          publicOwnerName = nomeEncontrado.split(' ')[0]; // Pega o primeiro nome
+          publicOwnerName = nomeEncontrado.split(' ')[0];
         }
 
-        // Esconde os menus que o visitante não precisa ver (incluindo Sorteios)
         const menusToHide = ['rewards', 'missions', 'stats', 'sorteios'];
         menusToHide.forEach(page => {
           const link = document.querySelector(`[data-page="${page}"]`);
@@ -752,41 +753,35 @@ window.loadCollection = async function () {
         const adminSelector = document.getElementById('admin-client-selector');
         if (adminSelector) adminSelector.style.display = 'none';
       }
-      // ==========================================
-
     } else {
       targetRole = 'user';
-      window.lojaIdAtual = 'default';
     }
 
+    // 🔒 3. Puxa as Recompensas e as RIFAS da loja atrelada
     if (!isPublicView) {
       try {
-        const lojaRef = doc(db, 'lojas', window.lojaIdAtual); // ✅ Puxa da loja atual do admin
+        const lojaRef = doc(db, 'lojas', currentLojaId);
         const lojaSnap = await getDoc(lojaRef);
         if (lojaSnap.exists()) {
           LISTA_RECOMPENSAS = lojaSnap.data().recompensas || [];
-          window.LISTA_RIFAS = lojaSnap.data().rifas || []; // ✅ Carrega as Rifas!
+          window.LISTA_RIFAS = lojaSnap.data().rifas || []; // ✅ As rifas voltam a ser do grupo todo!
         } else {
           LISTA_RECOMPENSAS = [];
           window.LISTA_RIFAS = [];
         }
       } catch (e) {
-        console.error("Erro ao carregar prêmios/rifas da loja:", e);
+        console.error("Erro ao carregar prêmios da loja:", e);
         LISTA_RECOMPENSAS = [];
         window.LISTA_RIFAS = [];
       }
     } else {
-      // Se for visitante, a lista fica vazia
       LISTA_RECOMPENSAS = [];
       window.LISTA_RIFAS = [];
     }
 
-    // 3. Atualiza os pontos na tela
     const pointsEl = document.getElementById('user-points');
     if (pointsEl) pointsEl.textContent = userPoints;
 
-    // 4. Força a ir para a tela de "Minha Coleção" se for visitante
-    // ✅ AJUSTE OBRIGATÓRIO: Respeitar o pageType da URL
     if (isPublicView) {
       changePage('owned');
     } else {
@@ -1060,7 +1055,7 @@ const LISTA_MISSOES = [
   }
 ];
 
-function renderMissions() {
+window.renderMissions = function() {
   const container = document.getElementById('missions-view');
   if (!container) return;
 
@@ -1166,29 +1161,32 @@ window.claimMission = async function (missionId, rewardPoints) {
 
 let LISTA_RECOMPENSAS = [];
 
-async function renderRewards() {
+window.renderRewards = async function() {
   const container = document.getElementById('rewards-view');
   if (!container) return;
 
   let cardsHTML = '';
-  LISTA_RECOMPENSAS.forEach(item => {
-    const canAfford = userPoints >= item.custo;
-    cardsHTML += `
-      <div class="reward-card">
-          <div class="reward-icon">${item.icone}</div>
-          <h3>${item.titulo}</h3>
-          <p>${item.desc}</p>
-          <div class="reward-cost">🪙 ${item.custo} RPMs</div>
-          <button class="btn-redeem" ${!canAfford ? 'disabled' : ''} onclick="window.redeemReward('${item.id}', ${item.custo}, '${item.titulo}')">
-            ${canAfford ? 'Resgatar Prêmio' : 'Pontos Insuficientes'}
-          </button>
-      </div>
-    `;
-  });
-
+  if (typeof LISTA_RECOMPENSAS !== 'undefined' && LISTA_RECOMPENSAS.length > 0) {
+      LISTA_RECOMPENSAS.forEach(item => {
+        const canAfford = userPoints >= item.custo;
+        cardsHTML += `
+          <div class="reward-card">
+              <div class="reward-icon">${item.icone}</div>
+              <h3>${item.titulo}</h3>
+              <p>${item.desc}</p>
+              <div class="reward-cost">🪙 ${item.custo} RPMs</div>
+              <button class="btn-redeem" ${!canAfford ? 'disabled' : ''} onclick="window.redeemReward('${item.id}', ${item.custo}, '${item.titulo}')">
+                ${canAfford ? 'Resgatar Prêmio' : 'Pontos Insuficientes'}
+              </button>
+          </div>
+        `;
+      });
+  } else {
+      cardsHTML = `<div style="color: #94a3b8; text-align: center; width: 100%; padding: 20px;">Nenhuma recompensa disponível na loja no momento.</div>`;
+  }
 
   let cuponsHTML = '';
-  if (userRewards && userRewards.length > 0) {
+  if (typeof userRewards !== 'undefined' && userRewards && userRewards.length > 0) {
     let linhasCupons = userRewards.map(resgate => `
       <tr style="border-bottom: 1px solid var(--border);">
         <td style="padding: 12px; font-family: 'Barlow Condensed', sans-serif; font-weight: 600; color: #fff;">${resgate.data}</td>
@@ -1214,9 +1212,8 @@ async function renderRewards() {
     `;
   }
 
-
   let extratoHTML = '';
-  if (userHistory && userHistory.length > 0) {
+  if (typeof userHistory !== 'undefined' && userHistory && userHistory.length > 0) {
     let linhasExtrato = userHistory.map(item => `
       <tr style="border-bottom: 1px solid var(--border);">
         <td style="padding: 10px; color: var(--muted); font-size: 13px;">${item.date}</td>
@@ -1240,7 +1237,7 @@ async function renderRewards() {
   container.innerHTML = `
     <div class="mission-header">
         <h2>Troque seus Pontos</h2>
-        <p>Seu saldo atual é de <strong style="color: var(--yellow); font-size: 18px;">🪙 ${userPoints} RPMs</strong>.</p>
+        <p>Seu saldo atual é de <strong style="color: var(--yellow); font-size: 18px;">🪙 ${typeof userPoints !== 'undefined' ? userPoints : 0} RPMs</strong>.</p>
     </div>
     <div class="reward-grid">
         ${cardsHTML}
@@ -1289,6 +1286,8 @@ function showModal(type, options) {
     `;
   }
   else if (type === 'success') {
+
+    const whatsappNumber = "5548991348421"; 
     const msgWpp = encodeURIComponent(`Fala mestre! Acabei de resgatar o prêmio "${options.title}" lá no site. Meu cupom é: ${options.code}`);
 
     innerHTML = `
@@ -1296,10 +1295,10 @@ function showModal(type, options) {
         <div class="custom-modal-icon">🎉</div>
         <div class="custom-modal-title" style="color: var(--green);">SUCESSO!</div>
         <div class="custom-modal-text">O prêmio "<b>${options.title}</b>" é seu! Salve o código abaixo:</div>
-        <div class="custom-modal-code">${options.code}</div>
-        <div class="custom-modal-actions">
-          <a href="https:
-          <button class="btn-modal cancel" onclick="document.getElementById('hw-custom-modal').remove()">Fechar</button>
+        <div class="custom-modal-code" style="font-size: 24px; font-weight: bold; background: #0f172a; padding: 10px; border-radius: 8px; margin: 15px 0; color: #fff; letter-spacing: 2px;">${options.code}</div>
+        <div class="custom-modal-actions" style="display: flex; flex-direction: column; gap: 10px;">
+          <a href="https://wa.me/${whatsappNumber}?text=${msgWpp}" target="_blank" class="btn-modal confirm" style="text-decoration: none; text-align: center; background: #25D366; color: white; display: block; border-radius: 6px; padding: 12px; font-weight: bold;">📲 Avisar no WhatsApp</a>
+          <button class="btn-modal cancel" onclick="document.getElementById('hw-custom-modal').remove()" style="width: 100%;">Fechar Janela</button>
         </div>
       </div>
     `;
@@ -1867,6 +1866,9 @@ window.renderSorteios = function () {
     html += `<div style="grid-column: 1 / -1; background: #1e293b; padding: 30px; text-align: center; border-radius: 12px; border: 1px dashed #475569; color: #94a3b8;">Nenhum sorteio ativo no momento. Fique de olho!</div>`;
   } else {
     window.LISTA_RIFAS.forEach((r, index) => {
+      // Verifica se a rifa já foi encerrada
+      const isConcluida = r.status === 'Concluído';
+
       // Controles de edição para o Admin
       let adminControls = '';
       let btnSortearDireto = '';
@@ -1875,21 +1877,32 @@ window.renderSorteios = function () {
         // Previne quebra de aspas se o título tiver apóstrofos
         const safeTitle = r.titulo.replace(/'/g, "\\'");
         
-        // BOTÃO DE SORTEIO DIRETAMENTE NO CARD!
-        btnSortearDireto = `<button onclick="abrirSorteadorDaRifa('${safeTitle}')" style="background: #10b981; color: #000; border: none; padding: 10px 15px; border-radius: 6px; cursor: pointer; font-family: 'Bebas Neue', sans-serif; font-size: 18px; letter-spacing: 1px; transition: 0.2s; box-shadow: 0 4px 10px rgba(16,185,129,0.3);">🎲 Sortear</button>`;
-        
+        // BOTÃO DE SORTEIO SÓ APARECE SE A RIFA ESTIVER ATIVA
+        if (!isConcluida) {
+            btnSortearDireto = `<button onclick="abrirSorteadorDaRifa('${safeTitle}')" style="background: #10b981; color: #000; border: none; padding: 10px 15px; border-radius: 6px; cursor: pointer; font-family: 'Bebas Neue', sans-serif; font-size: 18px; letter-spacing: 1px; transition: 0.2s; box-shadow: 0 4px 10px rgba(16,185,129,0.3);">🎲 Sortear</button>`;
+        }
+
+        // Botões Admin (Editar, Excluir e Concluir)
         adminControls = `
             <div style="display: flex; gap: 8px; margin-top: 15px;">
                 <button onclick="editarRifa(${index})" style="flex: 1; background: #3b82f6; color: white; border: none; padding: 8px; border-radius: 4px; cursor: pointer; font-size: 13px; font-weight: bold;">✏️ Editar</button>
                 <button onclick="excluirRifa(${index})" style="flex: 1; background: #ef4444; color: white; border: none; padding: 8px; border-radius: 4px; cursor: pointer; font-size: 13px; font-weight: bold;">🗑️ Excluir</button>
+                ${!isConcluida ? `<button onclick="concluirRifa(${index})" style="flex: 1; background: #10b981; color: #000; border: none; padding: 8px; border-radius: 4px; cursor: pointer; font-size: 13px; font-weight: bold;">✅ Concluir</button>` : ''}
             </div>
         `;
       }
 
+      // Muda o botão principal caso a rifa esteja encerrada
+      const btnCompra = !isConcluida
+        ? `<a href="https://wa.me/${whatsappNumber}?text=Olá! Gostaria de reservar números para a rifa: ${r.titulo}" target="_blank" style="background: #a855f7; color: #fff; text-decoration: none; padding: 10px 15px; border-radius: 6px; font-family: 'Bebas Neue', sans-serif; font-size: 16px; letter-spacing: 1px; transition: 0.2s; display: flex; align-items: center;">Comprar</a>`
+        : `<span style="background: #475569; color: #fff; padding: 10px 15px; border-radius: 6px; font-family: 'Bebas Neue', sans-serif; font-size: 16px; letter-spacing: 1px; display: flex; align-items: center; cursor: not-allowed;">Encerrada</span>`;
+
       html += `
-        <div style="background: #1e293b; border: 1px solid #334155; border-radius: 12px; overflow: hidden; position: relative;">
-            <img src="${r.imagem}" style="width: 100%; height: 200px; object-fit: cover; border-bottom: 1px solid #334155;" onerror="this.src='assets/img/placeholder.png'">
-            <span style="position: absolute; top: 10px; right: 10px; background: #22c55e; color: #000; font-size: 11px; font-weight: bold; padding: 4px 8px; border-radius: 4px; text-transform: uppercase;">Ativo</span>
+        <div style="background: #1e293b; border: 1px solid ${isConcluida ? '#10b981' : '#334155'}; border-radius: 12px; overflow: hidden; position: relative; opacity: ${isConcluida ? '0.8' : '1'};">
+            <img src="${r.imagem}" style="width: 100%; height: 200px; object-fit: cover; border-bottom: 1px solid #334155; filter: ${isConcluida ? 'grayscale(100%)' : 'none'};" onerror="this.src='assets/img/placeholder.png'">
+            <span style="position: absolute; top: 10px; right: 10px; background: ${isConcluida ? '#10b981' : '#22c55e'}; color: #000; font-size: 11px; font-weight: bold; padding: 4px 8px; border-radius: 4px; text-transform: uppercase;">
+                ${isConcluida ? 'Concluída' : 'Ativo'}
+            </span>
             
             <div style="padding: 20px;">
                 <h4 style="color: #fff; font-family: 'Bebas Neue', sans-serif; font-size: 24px; margin: 0 0 5px 0; letter-spacing: 0.5px;">${r.titulo}</h4>
@@ -1897,12 +1910,12 @@ window.renderSorteios = function () {
                 
                 <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 15px; padding-top: 15px; border-top: 1px dashed #475569;">
                     <div>
-                        <div style="color: #facc15; font-weight: bold; font-size: 20px;">R$ ${r.preco}</div>
+                        <div style="color: ${isConcluida ? '#94a3b8' : '#facc15'}; font-weight: bold; font-size: 20px;">R$ ${r.preco}</div>
                         <div style="color: #64748b; font-size: 12px;">Ganhe +${r.rpms} RPMs / nº</div>
                     </div>
                     <div style="display: flex; gap: 8px;">
                         ${btnSortearDireto}
-                        <a href="https://wa.me/${whatsappNumber}?text=Olá! Gostaria de reservar números para a rifa: ${r.titulo}" target="_blank" style="background: #a855f7; color: #fff; text-decoration: none; padding: 10px 15px; border-radius: 6px; font-family: 'Bebas Neue', sans-serif; font-size: 16px; letter-spacing: 1px; transition: 0.2s; display: flex; align-items: center;">Comprar</a>
+                        ${btnCompra}
                     </div>
                 </div>
                 ${adminControls}
@@ -1913,6 +1926,29 @@ window.renderSorteios = function () {
   }
   html += `</div>`;
   view.innerHTML = html;
+};
+
+// =========================================================
+// FUNÇÃO PARA MARCAR RIFA COMO CONCLUÍDA
+// =========================================================
+window.concluirRifa = async function (index) {
+    if (!confirm('Deseja marcar esta rifa como CONCLUÍDA?\n\nEla não aceitará mais novas reservas e mudará visualmente para Encerrada.')) return;
+
+    try {
+        const { doc, setDoc } = await import("https://www.gstatic.com/firebasejs/12.13.0/firebase-firestore.js");
+        
+        // Atualiza o status no objeto local
+        window.LISTA_RIFAS[index].status = 'Concluído';
+        
+        // Salva a alteração no banco de dados (na mesma loja)
+        await setDoc(doc(db, 'lojas', window.lojaIdAtual), { rifas: window.LISTA_RIFAS }, { merge: true });
+        
+        // Renderiza a tela de novo para o Admin ver a mudança instantaneamente
+        window.renderSorteios();
+    } catch (e) {
+        console.error("Erro ao concluir rifa:", e);
+        alert('Erro ao atualizar o status da rifa.');
+    }
 };
 
 // =========================================================
@@ -1953,6 +1989,9 @@ window.abrirSorteadorDaRifa = function(tituloDaRifa = 'Sorteio da Rifa') {
 // =========================================================
 // FUNÇÕES DE CRUD (Criar, Editar, Salvar e Excluir Rifas)
 // =========================================================
+// =========================================================
+// FUNÇÕES DE CRUD (Criar, Editar, Salvar, Excluir e Concluir Rifas)
+// =========================================================
 window.abrirModalRifa = function () {
   document.getElementById('rifa-edit-index').value = -1;
   document.getElementById('rifa-form-titulo').value = '';
@@ -1986,10 +2025,11 @@ window.salvarRifa = async function () {
 
   if (!titulo || !preco || !rpms) return alert('Por favor, preencha o Título, Preço e RPMs!');
 
-  const rifaData = { titulo, imagem, desc, preco, rpms };
+  const rifaData = { titulo, imagem, desc, preco, rpms, status: 'Ativo' };
 
   if (index >= 0) {
     rifaData.id = window.LISTA_RIFAS[index].id;
+    rifaData.status = window.LISTA_RIFAS[index].status || 'Ativo';
     window.LISTA_RIFAS[index] = rifaData;
   } else {
     rifaData.id = 'rifa_' + Date.now();
@@ -1998,7 +2038,8 @@ window.salvarRifa = async function () {
 
   try {
     const { doc, setDoc } = await import("https://www.gstatic.com/firebasejs/12.13.0/firebase-firestore.js");
-    // Salva direto na loja do banco de dados
+    
+    // ✅ Salva a Rifa na Loja do Admin, liberando para todos os VIPs dele!
     await setDoc(doc(db, 'lojas', window.lojaIdAtual), { rifas: window.LISTA_RIFAS }, { merge: true });
 
     document.getElementById('modal-rifa-form').style.display = 'none';
@@ -2023,6 +2064,21 @@ window.excluirRifa = async function (index) {
     alert('Erro ao excluir do servidor.');
   }
 }
+
+window.concluirRifa = async function (index) {
+    if (!confirm('Deseja marcar esta rifa como CONCLUÍDA? Ela não aceitará mais novas reservas e mudará visualmente para Encerrada.')) return;
+
+    try {
+        window.LISTA_RIFAS[index].status = 'Concluído';
+        const { doc, setDoc } = await import("https://www.gstatic.com/firebasejs/12.13.0/firebase-firestore.js");
+        
+        await setDoc(doc(db, 'lojas', window.lojaIdAtual), { rifas: window.LISTA_RIFAS }, { merge: true });
+        window.renderSorteios();
+    } catch (e) {
+        console.error("Erro ao concluir rifa:", e);
+        alert('Erro ao atualizar o status da rifa.');
+    }
+};
 
 // =========================================================
 // O SORTEADOR VIRTUAL (ANIMAÇÃO COM NÚMEROS E NOMES)

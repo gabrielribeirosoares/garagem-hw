@@ -1,12 +1,15 @@
 <!doctype html>
 <html lang="pt-BR">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Início - Garagem HW</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow+Condensed:wght@400;600;700&family=Barlow:wght@400;500;600&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow+Condensed:wght@400;600;700&family=Barlow:wght@400;500;600&display=swap"
+    rel="stylesheet">
   <link rel="stylesheet" href="assets/css/styles.css" />
   <link rel="manifest" href="manifest.json">
   <meta name="theme-color" content="#0f172a">
@@ -14,37 +17,179 @@
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <style>
-    body { background: #0f172a; color: #f8fafc; font-family: 'Barlow', sans-serif; padding: 20px; margin: 0; }
-    .home-header { margin-bottom: 30px; margin-top: 20px; }
-    .home-header h1 { font-family: 'Bebas Neue', sans-serif; font-size: 3rem; color: #f59e0b; margin: 0; line-height: 1; letter-spacing: 1px; }
-    .home-header p { color: #94a3b8; font-size: 1.1rem; margin-top: 5px; }
-    
-    .stats-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; margin-bottom: 30px; }
-    .stat-card { background: #1e293b; border: 1px solid #334155; border-radius: 12px; padding: 20px; text-align: center; }
-    .stat-card h3 { font-family: 'Bebas Neue', sans-serif; font-size: 2.5rem; margin: 0; color: #fff; }
-    .stat-card p { font-family: 'Barlow Condensed', sans-serif; color: #94a3b8; text-transform: uppercase; font-size: 14px; margin: 5px 0 0 0; font-weight: 600; letter-spacing: 1px; }
-    .stat-card.highlight h3 { color: #10b981; }
+    body {
+      background: #0f172a;
+      color: #f8fafc;
+      font-family: 'Barlow', sans-serif;
+      padding: 20px;
+      margin: 0;
+    }
 
-    .menu-grid { display: grid; grid-template-columns: 1fr; gap: 15px; }
-    .menu-btn { display: flex; align-items: center; justify-content: space-between; background: #1e293b; border: 1px solid #334155; border-radius: 12px; padding: 20px; text-decoration: none; color: #fff; transition: 0.2s; cursor: pointer; }
-    .menu-btn:hover { background: #334155; }
-    .menu-btn-content { display: flex; align-items: center; gap: 15px; }
-    .menu-btn-icon { font-size: 28px; }
-    .menu-btn-text h4 { font-family: 'Bebas Neue', sans-serif; font-size: 1.5rem; margin: 0; letter-spacing: 1px; }
-    .menu-btn-text p { margin: 0; font-size: 0.9rem; color: #94a3b8; }
+    .home-header {
+      margin-bottom: 30px;
+      margin-top: 20px;
+    }
+
+    .home-header h1 {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 3rem;
+      color: #f59e0b;
+      margin: 0;
+      line-height: 1;
+      letter-spacing: 1px;
+    }
+
+    .home-header p {
+      color: #94a3b8;
+      font-size: 1.1rem;
+      margin-top: 5px;
+    }
+
+    .stats-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 15px;
+      margin-bottom: 30px;
+    }
+
+    .stat-card {
+      background: #1e293b;
+      border: 1px solid #334155;
+      border-radius: 12px;
+      padding: 20px;
+      text-align: center;
+    }
+
+    .stat-card h3 {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 2.5rem;
+      margin: 0;
+      color: #fff;
+    }
+
+    .stat-card p {
+      font-family: 'Barlow Condensed', sans-serif;
+      color: #94a3b8;
+      text-transform: uppercase;
+      font-size: 14px;
+      margin: 5px 0 0 0;
+      font-weight: 600;
+      letter-spacing: 1px;
+    }
+
+    .stat-card.highlight h3 {
+      color: #10b981;
+    }
+
+    .menu-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 15px;
+    }
+
+    .menu-btn {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background: #1e293b;
+      border: 1px solid #334155;
+      border-radius: 12px;
+      padding: 20px;
+      text-decoration: none;
+      color: #fff;
+      transition: 0.2s;
+      cursor: pointer;
+    }
+
+    .menu-btn:hover {
+      background: #334155;
+    }
+
+    .menu-btn-content {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+    }
+
+    .menu-btn-icon {
+      font-size: 28px;
+    }
+
+    .menu-btn-text h4 {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 1.5rem;
+      margin: 0;
+      letter-spacing: 1px;
+    }
+
+    .menu-btn-text p {
+      margin: 0;
+      font-size: 0.9rem;
+      color: #94a3b8;
+    }
 
     /* Layout alinhado para os caminhos de atalhos abaixo da Garagem */
-    .shortcut-container { display: flex; gap: 10px; margin-top: -5px; margin-bottom: 5px; }
-    .shortcut-btn { flex: 1; display: flex; align-items: center; justify-content: center; gap: 8px; background: #111827; border: 1px dashed #475569; border-radius: 10px; padding: 12px; text-decoration: none; color: #cbd5e1; transition: 0.2s; }
-    .shortcut-btn:hover { background: #1e293b; color: #fff; }
-    .shortcut-btn span { font-family: 'Bebas Neue', sans-serif; font-size: 1.1rem; letter-spacing: 0.5px; }
+    .shortcut-container {
+      display: flex;
+      gap: 10px;
+      margin-top: -5px;
+      margin-bottom: 5px;
+    }
 
-    .admin-btn { border-color: #f59e0b; background: rgba(245, 158, 11, 0.1); }
-    .admin-btn .menu-btn-text h4 { color: #f59e0b; }
-    
-    .logout-btn { display: block; width: 100%; padding: 15px; margin-top: 30px; background: transparent; border: 1px solid #475569; color: #94a3b8; border-radius: 8px; font-family: 'Barlow', sans-serif; font-weight: 600; font-size: 16px; cursor: pointer; text-align: center; transition: 0.2s; }
+    .shortcut-btn {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      background: #111827;
+      border: 1px dashed #475569;
+      border-radius: 10px;
+      padding: 12px;
+      text-decoration: none;
+      color: #cbd5e1;
+      transition: 0.2s;
+    }
+
+    .shortcut-btn:hover {
+      background: #1e293b;
+      color: #fff;
+    }
+
+    .shortcut-btn span {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 1.1rem;
+      letter-spacing: 0.5px;
+    }
+
+    .admin-btn {
+      border-color: #f59e0b;
+      background: rgba(245, 158, 11, 0.1);
+    }
+
+    .admin-btn .menu-btn-text h4 {
+      color: #f59e0b;
+    }
+
+    .logout-btn {
+      display: block;
+      width: 100%;
+      padding: 15px;
+      margin-top: 30px;
+      background: transparent;
+      border: 1px solid #475569;
+      color: #94a3b8;
+      border-radius: 8px;
+      font-family: 'Barlow', sans-serif;
+      font-weight: 600;
+      font-size: 16px;
+      cursor: pointer;
+      text-align: center;
+      transition: 0.2s;
+    }
   </style>
 </head>
+
 <body>
 
   <div class="home-header">
@@ -84,7 +229,7 @@
       </a>
     </div>
 
-    <a href="#" id="btn-loja" class="menu-btn" onclick="alert('Loja de Prêmios em breve!')">
+    <a href="app.html?type=rewards" id="btn-loja" class="menu-btn" style="display: none;">
       <div class="menu-btn-content">
         <div class="menu-btn-icon">🎁</div>
         <div class="menu-btn-text">
@@ -123,4 +268,5 @@
   <script type="module" src="assets/js/firebase-config.js"></script>
   <script type="module" src="assets/js/home.js?v=7"></script>
 </body>
+
 </html>
