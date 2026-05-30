@@ -4,7 +4,6 @@ import { onAuthStateChanged, getAuth as getAuthSecondary, createUserWithEmailAnd
 import { doc, getDoc, collection, getDocs, setDoc, deleteDoc, updateDoc, increment } from "https://www.gstatic.com/firebasejs/12.13.0/firebase-firestore.js";
 import { RAW } from './data.js';
 
-
 const secondaryApp = initializeApp(firebaseConfig, "SecondaryApp");
 const secondaryAuth = getAuthSecondary(secondaryApp);
 
@@ -36,9 +35,6 @@ RAW.forEach((r) => {
   }
 });
 
-
-
-
 onAuthStateChanged(auth, async (user) => {
   if (user) {
     try {
@@ -63,12 +59,10 @@ async function loadUsersList() {
   try {
     if (!usersTbody) return;
 
-
     const myUid = auth.currentUser.uid;
     const myDoc = await getDoc(doc(db, 'users', myUid));
     const myRole = myDoc.exists() ? myDoc.data().role : 'user';
     const myLojaId = myDoc.exists() ? (myDoc.data().lojaId || '') : '';
-
 
     window.currentUserRole = myRole;
 
@@ -82,14 +76,12 @@ async function loadUsersList() {
       userData.uid = docSnap.id;
 
       if (myRole === 'gerente') {
-
         if (userData.role !== 'cliente' || userData.lojaId !== myLojaId) {
           return;
         }
       }
 
       allUsersCache.push(userData);
-
 
       let roleName = 'Usuário';
       let roleColor = '#64748b';
@@ -102,7 +94,6 @@ async function loadUsersList() {
         roleName = 'Gerente';
         roleColor = '#10b981';
 
-
         if (myRole === 'admin' && userData.lojaId) {
           btnPremios = `<button class="btn-manage-rewards" data-lojaid="${userData.lojaId}" style="background: #8b5cf6; color: white; border: none; padding: 5px 10px; border-radius: 4px; cursor: pointer; margin-right: 8px;">🎁 Prêmios</button>`;
         }
@@ -110,7 +101,6 @@ async function loadUsersList() {
         roleName = 'Cliente VIP';
         roleColor = '#3b82f6';
       }
-
 
       const phoneTxt = (userData.phone && userData.phone !== '(00) 00000-0000') ? userData.phone : 'Sem Telefone';
 
@@ -140,12 +130,10 @@ async function loadUsersList() {
 if (usersTbody) {
   usersTbody.addEventListener('click', async (e) => {
 
-
     if (e.target.classList.contains('btn-edit')) {
       const uidToEdit = e.target.getAttribute('data-id');
       openEditModal(uidToEdit);
     }
-
 
     if (e.target.classList.contains('btn-delete')) {
       const uidToDelete = e.target.getAttribute('data-id');
@@ -174,20 +162,6 @@ if (usersTbody) {
           e.target.disabled = false;
         }
       }
-
-
-    }
-    if (e.target.classList.contains('btn-manage-rewards')) {
-
-      lojaIdParaEditar = e.target.getAttribute('data-lojaid');
-
-      const nomeLojaEl = document.getElementById('loja-alvo-nome');
-      if (nomeLojaEl) nomeLojaEl.textContent = lojaIdParaEditar;
-
-      const modal = document.getElementById('loja-modal');
-      if (modal) modal.style.display = 'flex';
-
-      await renderAdminRewards();
     }
   });
 }
@@ -205,9 +179,7 @@ function openEditModal(uid) {
     editRole.value = userSelected.role || 'user';
     if (editLojaId) editLojaId.value = userSelected.lojaId || '';
 
-
     if (window.currentUserRole === 'gerente') {
-
       editRole.disabled = true;
       editRole.style.opacity = '0.5';
       if (editLojaId) {
@@ -215,7 +187,6 @@ function openEditModal(uid) {
         editLojaId.style.opacity = '0.5';
       }
     } else {
-
       editRole.disabled = false;
       editRole.style.opacity = '1';
       if (editLojaId) {
@@ -258,7 +229,6 @@ if (editForm) {
   });
 }
 
-
 if (editPhone) {
   editPhone.addEventListener('input', (e) => {
     let value = e.target.value.replace(/\D/g, '');
@@ -279,9 +249,6 @@ if (editPhone) {
     }
   });
 }
-
-
-
 
 window.validarCupom = async function () {
   const inputElement = document.getElementById('cupom-input');
@@ -374,9 +341,6 @@ window.marcarComoUtilizado = async function (docId, index) {
   }
 };
 
-
-
-
 if (usersTbody) {
   usersTbody.addEventListener('click', (e) => {
     if (e.target.classList.contains('btn-manage-rifa')) {
@@ -436,9 +400,6 @@ if (btnSaveRifa) {
   });
 }
 
-
-
-
 const carDatalist = document.getElementById('car-datalist');
 if (carDatalist) {
   let options = '';
@@ -452,10 +413,18 @@ if (usersTbody) {
   usersTbody.addEventListener('click', async (e) => {
     if (e.target.classList.contains('btn-manage-cars')) {
       currentTargetUid = e.target.getAttribute('data-id');
-      document.getElementById('manage-user-name').textContent = e.target.getAttribute('data-name');
-      document.getElementById('car-search-input').value = '';
-      document.getElementById('car-qty-input').value = 1;
-      document.getElementById('cars-modal').style.display = 'flex';
+      
+      const carUserEl = document.getElementById('manage-user-name');
+      if (carUserEl) carUserEl.textContent = e.target.getAttribute('data-name');
+      
+      const searchInput = document.getElementById('car-search-input');
+      if(searchInput) searchInput.value = '';
+      
+      const qtyInput = document.getElementById('car-qty-input');
+      if (qtyInput) qtyInput.value = 1;
+      
+      const carsModal = document.getElementById('cars-modal');
+      if (carsModal) carsModal.style.display = 'flex';
     }
   });
 }
@@ -495,7 +464,6 @@ if (btnSaveCar) {
       userColData[carId] = qtyInput;
       let novosPontos = pontosAtuais;
 
-
       if (userRole === 'cliente' && qtyInput > qtdAntiga) {
         const diferenca = qtyInput - qtdAntiga;
         const ptsGanhos = diferenca * PONTOS_POR_CARRO;
@@ -526,18 +494,19 @@ if (btnSaveCar) {
   });
 }
 
-
-
-
 let lojaIdParaEditar = '';
 
 if (usersTbody) {
   usersTbody.addEventListener('click', async (e) => {
-
     if (e.target.classList.contains('btn-manage-rewards')) {
       lojaIdParaEditar = e.target.getAttribute('data-lojaid');
-      document.getElementById('loja-alvo-nome').textContent = lojaIdParaEditar;
-      document.getElementById('loja-modal').style.display = 'flex';
+      
+      const lojaNomeEl = document.getElementById('loja-alvo-nome');
+      if (lojaNomeEl) lojaNomeEl.textContent = lojaIdParaEditar;
+      
+      const lojaModal = document.getElementById('loja-modal');
+      if (lojaModal) lojaModal.style.display = 'flex';
+      
       await renderAdminRewards();
     }
   });
@@ -550,7 +519,6 @@ async function renderAdminRewards() {
   listEl.innerHTML = '<p style="color: #fff; text-align: center;">Carregando prêmios...</p>';
 
   try {
-
     const snap = await getDoc(doc(db, 'lojas', lojaIdParaEditar));
     const recompensas = snap.exists() ? (snap.data().recompensas || []) : [];
 
@@ -596,7 +564,6 @@ document.getElementById('btn-add-rew')?.addEventListener('click', async () => {
 
     await setDoc(ref, { recompensas }, { merge: true });
 
-
     document.getElementById('rew-icone').value = '';
     document.getElementById('rew-titulo').value = '';
     document.getElementById('rew-desc').value = '';
@@ -623,39 +590,10 @@ window.deleteReward = async function (index) {
   }
 };
 
-
-
-
-
-
-if (usersTbody) {
-  usersTbody.addEventListener('click', (e) => {
-    if (e.target.classList.contains('btn-manage-rifa')) {
-
-      currentTargetUid = e.target.getAttribute('data-id');
-      const nameEl = document.getElementById('rifa-user-name');
-      if (nameEl) nameEl.textContent = e.target.getAttribute('data-name') || 'Cliente';
-
-
-      const qtyInput = document.getElementById('rifa-qty-input');
-      if (qtyInput) qtyInput.value = 1;
-
-
-      const modal = document.getElementById('rifa-modal');
-      if (modal) modal.style.display = 'flex';
-    }
-  });
-}
-
-
-
-
-
 const btnNewClient = document.getElementById('btn-new-client');
 const createModal = document.getElementById('create-modal');
 const createForm = document.getElementById('create-user-form');
 const createPhone = document.getElementById('create-phone');
-
 
 if (createPhone) {
   createPhone.addEventListener('input', (e) => {
@@ -668,13 +606,11 @@ if (createPhone) {
   });
 }
 
-
 if (btnNewClient) {
   btnNewClient.addEventListener('click', () => {
     if (createModal) createModal.style.display = 'flex';
   });
 }
-
 
 if (createForm) {
   createForm.addEventListener('submit', async (e) => {
@@ -689,17 +625,13 @@ if (createForm) {
     const phone = createPhone.value.trim();
 
     try {
-
       const userCredential = await createUserWithEmailAndPassword(secondaryAuth, email, pass);
       const newUid = userCredential.user.uid;
 
-
       await signOut(secondaryAuth);
-
 
       const myDoc = await getDoc(doc(db, 'users', auth.currentUser.uid));
       const targetLojaId = myDoc.exists() ? (myDoc.data().lojaId || '') : '';
-
 
       await setDoc(doc(db, 'users', newUid), {
         name: name,
@@ -709,7 +641,6 @@ if (createForm) {
         lojaId: targetLojaId,
         createdAt: new Date().toLocaleDateString('pt-BR')
       });
-
 
       await setDoc(doc(db, 'collections', newUid), {
         items: {},
@@ -722,15 +653,12 @@ if (createForm) {
         }]
       });
 
-
       const configRef = doc(db, 'config', 'app');
       await updateDoc(configRef, { cadastrados: increment(1) }).catch(() => {});
-
 
       createModal.style.display = 'none';
       createForm.reset();
       alert('✅ Cliente VIP cadastrado e vinculado à sua loja com sucesso!');
-
 
       loadUsersList();
 
@@ -760,14 +688,12 @@ const mainDashboard = document.getElementById('main-dashboard-view');
 const pendingLotsView = document.getElementById('pending-lots-view');
 
 if (btnPendingLots && btnBackDashboard) {
-    // Alterna para a tela de lotes
     btnPendingLots.addEventListener('click', () => {
         mainDashboard.style.display = 'none';
         pendingLotsView.style.display = 'block';
         window.renderPendingLots();
     });
 
-    // Volta para o dashboard normal
     btnBackDashboard.addEventListener('click', () => {
         pendingLotsView.style.display = 'none';
         mainDashboard.style.display = 'block';
@@ -778,9 +704,7 @@ window.renderPendingLots = function() {
     const grid = document.getElementById('pending-lots-grid');
     if (!grid) return;
     
-    // Tenta usar a base de dados (seja RAW ou PAGE_DATA) que o admin carrega para a pesquisa
     const baseDeDados = typeof RAW !== 'undefined' ? RAW : (typeof PAGE_DATA !== 'undefined' ? PAGE_DATA : []);
-
     const pendentes = baseDeDados.filter(car => (!car.cas || car.cas.trim() === '') && car.part);
 
     grid.innerHTML = '';
@@ -845,6 +769,5 @@ window.gerarCodigoLotes = function() {
     textarea.value = codigoGerado;
     exportArea.style.display = 'block';
     
-    // Rola a tela suavemente para baixo para mostrar o resultado
     exportArea.scrollIntoView({ behavior: 'smooth' });
 };

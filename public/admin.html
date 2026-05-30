@@ -7,8 +7,7 @@
     <title>Painel Administrativo - Garagem HW</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow:wght@400;500;600&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow:wght@400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/styles.css" />
     <style>
         /* =========================================
@@ -294,7 +293,7 @@
         </div>
     </div>
     
-    <div id="cars-modal" class="custom-modal-overlay" style="display: none;">
+    <div id="cars-modal" class="custom-modal-overlay" style="display: none; z-index: 10000;">
         <div class="custom-modal-box" style="max-width: 600px; text-align: left;">
             <h2 style="font-family: 'Bebas Neue', sans-serif; color: var(--yellow); font-size: 28px; margin-bottom: 5px;">🚗 Adicionar na Garagem</h2>
             <p style="color: var(--muted); font-size: 14px; margin-bottom: 20px;">Adicionando miniaturas para: <b id="manage-user-name" style="color: #fff;"></b></p>
@@ -316,6 +315,55 @@
         </div>
     </div>
 
-    <script type="module" src="assets/js/admin.js?v=6"></script>
+    <div id="rifa-modal" class="custom-modal-overlay" style="display: none; z-index: 10001;">
+        <div class="custom-modal-box" style="max-width: 450px; text-align: left;">
+            <h2 style="font-family: 'Bebas Neue', sans-serif; color: var(--yellow); font-size: 28px; margin-bottom: 5px;">🎟️ Lançar Pontos de Rifa</h2>
+            <p style="color: var(--muted); font-size: 14px; margin-bottom: 20px;">Creditando pontos para: <b id="rifa-user-name" style="color: #fff;"></b></p>
+            <div class="form-group" style="margin-bottom: 20px;">
+                <label style="color: var(--muted); font-size: 13px; text-transform: uppercase; font-family: 'Barlow Condensed', sans-serif; display:block; margin-bottom: 6px;">Quantidade de Números Comprados:</label>
+                <input type="number" id="rifa-qty-input" min="1" value="1" style="width: 100%; padding: 12px; background: var(--surface2); border: 1px solid var(--border); color: #fff; border-radius: 6px; outline: none; font-family: 'Barlow', sans-serif; font-size: 16px;">
+            </div>
+            <div class="form-group" style="margin-bottom: 25px;">
+                <label style="color: var(--muted); font-size: 13px; text-transform: uppercase; font-family: 'Barlow Condensed', sans-serif; display:block; margin-bottom: 6px;">Pontos por cada Número:</label>
+                <input type="number" id="rifa-points-per-num" min="1" value="50" style="width: 100%; padding: 12px; background: var(--surface2); border: 1px solid var(--border); color: var(--yellow); font-weight: bold; border-radius: 6px; outline: none; font-family: 'Barlow', sans-serif; font-size: 16px;">
+            </div>
+            <button id="btn-save-rifa" style="width: 100%; background: var(--green); color: #000; font-family: 'Bebas Neue', sans-serif; font-size: 20px; padding: 12px; border: none; border-radius: 6px; cursor: pointer; font-weight: bold;">🪙 Creditar Pontos</button>
+            <div style="text-align: center; border-top: 1px solid var(--border); padding-top: 20px; margin-top: 20px;">
+                <button class="btn-clear" onclick="document.getElementById('rifa-modal').style.display = 'none'" style="font-size: 16px;">Cancelar</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="loja-modal" class="custom-modal-overlay" style="display: none; z-index: 10001;">
+        <div class="custom-modal-box" style="max-width: 600px; text-align: left;">
+            <h2 style="font-family: 'Bebas Neue', sans-serif; color: var(--yellow); font-size: 28px; margin-bottom: 5px;">🎁 Gerenciar Prêmios</h2>
+            <p style="color: var(--muted); font-size: 14px; margin-bottom: 20px;">Loja: <b id="loja-alvo-nome" style="color: #fff;"></b></p>
+            <div style="background: var(--surface2); padding: 15px; border-radius: 8px; margin-bottom: 20px;">
+                <div class="form-group">
+                    <label style="color: var(--muted); font-size: 13px;">Ícone (Emoji)</label>
+                    <input type="text" id="rew-icone" placeholder="Ex: 🧢" style="width: 100%; padding: 10px; background: #0f172a; border: 1px solid #475569; color: white; border-radius: 4px; box-sizing: border-box;">
+                </div>
+                <div class="form-group">
+                    <label style="color: var(--muted); font-size: 13px;">Título do Prêmio</label>
+                    <input type="text" id="rew-titulo" placeholder="Ex: Boné Oficial" style="width: 100%; padding: 10px; background: #0f172a; border: 1px solid #475569; color: white; border-radius: 4px; box-sizing: border-box;">
+                </div>
+                <div class="form-group">
+                    <label style="color: var(--muted); font-size: 13px;">Descrição</label>
+                    <input type="text" id="rew-desc" placeholder="Ex: Boné preto com logo" style="width: 100%; padding: 10px; background: #0f172a; border: 1px solid #475569; color: white; border-radius: 4px; box-sizing: border-box;">
+                </div>
+                <div class="form-group">
+                    <label style="color: var(--muted); font-size: 13px;">Custo (RPMs)</label>
+                    <input type="number" id="rew-custo" placeholder="Ex: 500" style="width: 100%; padding: 10px; background: #0f172a; border: 1px solid #475569; color: white; border-radius: 4px; box-sizing: border-box;">
+                </div>
+                <button id="btn-add-rew" style="background: var(--green); color: black; font-family: 'Bebas Neue', sans-serif; font-size: 18px; padding: 10px 15px; border: none; border-radius: 6px; cursor: pointer; width: 100%; margin-top: 10px;">➕ Adicionar à Loja</button>
+            </div>
+            <div id="recompensas-list"></div>
+            <div style="text-align: center; border-top: 1px solid var(--border); padding-top: 20px; margin-top: 20px;">
+                <button class="btn-clear" onclick="document.getElementById('loja-modal').style.display = 'none'" style="font-size: 16px;">Fechar Painel</button>
+            </div>
+        </div>
+    </div>
+
+    <script type="module" src="assets/js/admin.js?v=7"></script>
 </body>
 </html>

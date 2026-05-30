@@ -16,15 +16,12 @@ const errorMessage = document.getElementById('error-message');
 const welcomeOverlay = document.getElementById('welcome-overlay');
 const welcomeMessage = document.getElementById('welcome-message');
 
-const isIOSStandalone = window.navigator.standalone === true || 
-                        window.matchMedia('(display-mode: standalone)').matches;
+const isIOSStandalone = window.navigator.standalone === true ||
+  window.matchMedia('(display-mode: standalone)').matches;
 
-// ==========================================
-// NAVEGAÇÃO RÁPIDA (COM TRAVA DE LOOP INFINITO)
-// ==========================================
 function redirectParaGaragem(user) {
-  // TRAVA DE SEGURANÇA MÁXIMA: Se a URL já for a garagem, aborta para não dar loop.
-  if (window.location.pathname.includes('app.html')) {
+  // TRAVA DE SEGURANÇA: Se a URL já for a home ou o app, aborta para não dar loop.
+  if (window.location.pathname.includes('home.html') || window.location.pathname.includes('app.html')) {
     return;
   }
 
@@ -33,15 +30,13 @@ function redirectParaGaragem(user) {
   if (welcomeOverlay && welcomeMessage) {
     welcomeMessage.textContent = `Olá ${firstName}, seja muito bem-vindo(a)!`;
     welcomeOverlay.classList.add('active');
-    setTimeout(() => { window.location.replace('app.html'); }, 1500);
+    // REDIRECIONA PARA A HOME.HTML AGORA
+    setTimeout(() => { window.location.replace('home.html'); }, 1500);
   } else {
-    window.location.replace('app.html');
+    window.location.replace('home.html');
   }
 }
 
-// ==========================================
-// MONITOR DE SESSÃO ATIVA (AUTO-LOGIN)
-// ==========================================
 onAuthStateChanged(auth, (user) => {
   if (user) {
     if (loginForm) loginForm.style.display = 'none';
@@ -104,14 +99,14 @@ getRedirectResult(auth).then((result) => {
 
     const userRef = doc(db, 'users', user.uid);
     getDoc(userRef).then(snap => {
-        if (!snap.exists()) {
-            setDoc(userRef, {
-                uid: user.uid,
-                name: user.displayName,
-                email: user.email,
-                createdAt: new Date()
-            });
-        }
+      if (!snap.exists()) {
+        setDoc(userRef, {
+          uid: user.uid,
+          name: user.displayName,
+          email: user.email,
+          createdAt: new Date()
+        });
+      }
     }).catch(e => console.log("Erro ao salvar dados de perfil:", e));
 
     redirectParaGaragem(user);

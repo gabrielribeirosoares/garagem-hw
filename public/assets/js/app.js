@@ -52,11 +52,20 @@ let userHistory = [];
 
 let userWishlist = {};
 
+window.lojaIdAtual = 'default';
+window.LISTA_RIFAS = [];
+
 const urlParams = new URLSearchParams(window.location.search);
 const publicGarageUid = urlParams.get('garagem');
 const isPublicView = !!publicGarageUid;
 
+if (urlParams.has('type')) {
+  pageType = urlParams.get('type');
 
+  // Limpa a URL silenciosamente para não ficar preso no F5
+  const cleanUrl = window.location.pathname + (isPublicView ? `?garagem=${publicGarageUid}` : '');
+  window.history.replaceState({}, '', cleanUrl);
+}
 
 
 function updatePageData() {
@@ -94,7 +103,7 @@ function updatePageUI() {
   currentPage = 1;
 }
 
-window.changePage = function(newPageType) {
+window.changePage = function (newPageType) {
 
   if (isPublicView) {
     if (newPageType === 'all') newPageType = 'owned';
@@ -102,6 +111,13 @@ window.changePage = function(newPageType) {
   }
 
   pageType = newPageType;
+
+  // Atualiza a URL dinamicamente para o navegador não ficar preso no refresh
+  if (!isPublicView) {
+    const urlAtual = new URL(window.location.href);
+    urlAtual.searchParams.set('type', newPageType);
+    window.history.replaceState({}, '', urlAtual.toString());
+  }
 
   const tableArea = document.getElementById('table-body');
   const sortHeader = document.getElementById('mobile-sort') ? document.getElementById('mobile-sort').parentElement : null;
@@ -113,15 +129,19 @@ window.changePage = function(newPageType) {
   const kaidoArea = document.getElementById('kaido-view');
   const statsRow = document.querySelector('.stats-row');
   const statsArea = document.getElementById('stats-view');
+  // Declara a nova área de Sorteios
+  const sorteiosArea = document.getElementById('sorteios-view');
 
-
-  if (pageType === 'kaido' || pageType === 'kaido-owned') {
+  if (pageType === 'kaido' || pageType === 'kaido-owned' || pageType === 'kaido-wishlist') {
     updateSidebarVisibility('kaido');
   } else {
     updateSidebarVisibility('hw');
   }
 
-  // Roteamento
+  // ==========================================
+  // ROTEAMENTO DE PÁGINAS
+  // ==========================================
+
   if (pageType === 'missions') {
     if (tableArea) tableArea.style.display = 'none';
     if (sortHeader) sortHeader.style.display = 'none';
@@ -132,11 +152,13 @@ window.changePage = function(newPageType) {
     if (kaidoArea) kaidoArea.style.display = 'none';
     if (statsRow) statsRow.style.display = 'none';
     if (statsArea) statsArea.style.display = 'none';
+    if (sorteiosArea) sorteiosArea.style.display = 'none'; // Esconde Sorteios
+
     if (missionsArea) missionsArea.style.display = 'block';
 
     document.getElementById('dynamic-title').innerHTML = 'Garagem <span>VIP</span>';
     document.getElementById('dynamic-badge').style.display = 'none';
-    renderMissions();
+    if (window.renderMissions) window.renderMissions();
     return;
 
   } else if (pageType === 'rewards') {
@@ -149,11 +171,13 @@ window.changePage = function(newPageType) {
     if (kaidoArea) kaidoArea.style.display = 'none';
     if (statsRow) statsRow.style.display = 'none';
     if (statsArea) statsArea.style.display = 'none';
+    if (sorteiosArea) sorteiosArea.style.display = 'none'; // Esconde Sorteios
+
     if (rewardsArea) rewardsArea.style.display = 'block';
 
     document.getElementById('dynamic-title').innerHTML = 'Loja de <span>RPMs</span>';
     document.getElementById('dynamic-badge').style.display = 'none';
-    renderRewards();
+    if (window.renderRewards) window.renderRewards();
     return;
 
   } else if (pageType === 'kaido' || pageType === 'kaido-owned' || pageType === 'kaido-wishlist') {
@@ -166,19 +190,21 @@ window.changePage = function(newPageType) {
     if (rewardsArea) rewardsArea.style.display = 'none';
     if (statsRow) statsRow.style.display = 'none';
     if (statsArea) statsArea.style.display = 'none';
+    if (sorteiosArea) sorteiosArea.style.display = 'none'; // Esconde Sorteios
+
     if (kaidoArea) kaidoArea.style.display = 'block';
 
     if (pageType === 'kaido-owned') {
-        document.getElementById('dynamic-title').innerHTML = isPublicView ? `Kaidos de <span>${publicOwnerName}</span>` : 'Minha Coleção <span>Kaido</span>';
+      document.getElementById('dynamic-title').innerHTML = isPublicView ? `Kaidos de <span>${publicOwnerName}</span>` : 'Minha Coleção <span>Kaido</span>';
     } else if (pageType === 'kaido-wishlist') {
-        document.getElementById('dynamic-title').innerHTML = isPublicView ? `Desejos de <span>${publicOwnerName}</span>` : 'Desejos <span>Kaido</span>';
+      document.getElementById('dynamic-title').innerHTML = isPublicView ? `Desejos de <span>${publicOwnerName}</span>` : 'Desejos <span>Kaido</span>';
     } else {
-        document.getElementById('dynamic-title').innerHTML = 'Kaido <span>House</span>';
+      document.getElementById('dynamic-title').innerHTML = 'Kaido <span>House</span>';
     }
 
     document.getElementById('dynamic-badge').style.display = 'none';
 
-    renderKaido(pageType);
+    if (window.renderKaido) window.renderKaido(pageType);
     return;
 
   } else if (pageType === 'stats') {
@@ -191,6 +217,8 @@ window.changePage = function(newPageType) {
     if (rewardsArea) rewardsArea.style.display = 'none';
     if (kaidoArea) kaidoArea.style.display = 'none';
     if (statsRow) statsRow.style.display = 'none';
+    if (sorteiosArea) sorteiosArea.style.display = 'none'; // Esconde Sorteios
+
     if (statsArea) statsArea.style.display = 'block';
 
     document.getElementById('dynamic-title').innerHTML = 'Meu <span>Dashboard</span>';
@@ -198,8 +226,27 @@ window.changePage = function(newPageType) {
     if (window.renderStats) window.renderStats();
     return;
 
-  } else {
+  } else if (pageType === 'sorteios') { // === NOVA ABA DE SORTEIOS ===
+    if (tableArea) tableArea.style.display = 'none';
+    if (sortHeader) sortHeader.style.display = 'none';
+    if (controlsArea) controlsArea.style.display = 'none';
+    if (countArea) countArea.style.display = 'none';
+    if (pagArea) pagArea.style.display = 'none';
+    if (missionsArea) missionsArea.style.display = 'none';
+    if (rewardsArea) rewardsArea.style.display = 'none';
+    if (kaidoArea) kaidoArea.style.display = 'none';
+    if (statsRow) statsRow.style.display = 'none';
+    if (statsArea) statsArea.style.display = 'none';
 
+    if (sorteiosArea) sorteiosArea.style.display = 'block'; // Mostra os Sorteios!
+
+    document.getElementById('dynamic-title').innerHTML = 'Rifas & <span>Sorteios</span>';
+    document.getElementById('dynamic-badge').style.display = 'none';
+    if (window.renderSorteios) window.renderSorteios();
+    return;
+
+  } else {
+    // === PADRÃO: GARAGEM HOT WHEELS ===
     if (tableArea) tableArea.style.display = 'grid';
     if (sortHeader) sortHeader.style.display = 'flex';
     if (controlsArea) controlsArea.style.display = 'flex';
@@ -209,6 +256,8 @@ window.changePage = function(newPageType) {
     if (rewardsArea) rewardsArea.style.display = 'none';
     if (kaidoArea) kaidoArea.style.display = 'none';
     if (statsArea) statsArea.style.display = 'none';
+    if (sorteiosArea) sorteiosArea.style.display = 'none'; // Esconde Sorteios
+
     if (statsRow) statsRow.style.display = 'flex';
   }
 
@@ -598,15 +647,16 @@ onAuthStateChanged(auth, async (user) => {
     await loadCollection();
 
   } else {
-    
+
     if (isPublicView) {
-    
+
       console.log("Visitante acessando garagem pública.");
       if (typeof window.loadCollection === 'function') window.loadCollection();
     } else {
 
       window.location.href = 'index.html';
-    }}
+    }
+  }
 
 
   const isVip = (targetRole === 'cliente' || targetRole === 'admin' || isManager);
@@ -640,7 +690,7 @@ if (btnLogoutMenu) {
   });
 }
 
-window.loadCollection = async function() {
+window.loadCollection = async function () {
   const uidToLoad = publicGarageUid || targetUid || sessionUid;
   if (!uidToLoad) return;
 
@@ -663,41 +713,42 @@ window.loadCollection = async function() {
       userMissions = {};
       userRewards = [];
       userHistory = [];
-      userWishlist = {}; 
+      userWishlist = {};
     }
 
     // 2. Carrega os dados do Usuário (Nome e Permissões)
     const uRef = doc(db, 'users', uidToLoad);
     const uSnap = await getDoc(uRef);
 
-    let currentLojaId = 'default';
-
     if (uSnap.exists()) {
       targetRole = uSnap.data().role || 'user';
-      currentLojaId = uSnap.data().lojaId || 'default';
+      window.lojaIdAtual = uSnap.data().lojaId || 'default'; // ✅ Salva globalmente para gerenciar rifas
 
-      // ==========================================
-      // LÓGICA DO VISITANTE: NOME E OCULTAÇÃO DE MENUS
-      // ==========================================
+      // ✅ Libera o botão "Sorteador Virtual" no menu só para Admin/Gerente
+      if (targetRole === 'admin' || targetRole === 'gerente') {
+          const btnSorteador = document.getElementById('menu-sorteador-item');
+          if (btnSorteador) btnSorteador.style.display = 'block';
+      }
+
       if (typeof isPublicView !== 'undefined' && isPublicView) {
         const nomeEncontrado = uSnap.data().name || uSnap.data().nome;
         if (nomeEncontrado) {
           publicOwnerName = nomeEncontrado.split(' ')[0]; // Pega o primeiro nome
         }
 
-        // Esconde os menus que o visitante não precisa ver
-        const menusToHide = ['rewards', 'missions', 'stats'];
+        // Esconde os menus que o visitante não precisa ver (incluindo Sorteios)
+        const menusToHide = ['rewards', 'missions', 'stats', 'sorteios'];
         menusToHide.forEach(page => {
           const link = document.querySelector(`[data-page="${page}"]`);
           if (link && link.parentElement) link.parentElement.style.display = 'none';
         });
-        
+
         const menuProfile = document.getElementById('menu-profile');
         if (menuProfile) menuProfile.parentElement.style.display = 'none';
-        
+
         const menuLogout = document.getElementById('logout-menu');
         if (menuLogout) menuLogout.parentElement.style.display = 'none';
-        
+
         const adminSelector = document.getElementById('admin-client-selector');
         if (adminSelector) adminSelector.style.display = 'none';
       }
@@ -705,27 +756,29 @@ window.loadCollection = async function() {
 
     } else {
       targetRole = 'user';
+      window.lojaIdAtual = 'default';
     }
 
-    // ==========================================
-    // 🔒 TRAVA CRUCIAL: Só busca a loja se NÃO for visitante
-    // ==========================================
     if (!isPublicView) {
       try {
-        const lojaRef = doc(db, 'lojas', currentLojaId);
+        const lojaRef = doc(db, 'lojas', window.lojaIdAtual); // ✅ Puxa da loja atual do admin
         const lojaSnap = await getDoc(lojaRef);
-        if (lojaSnap.exists() && lojaSnap.data().recompensas) {
-          LISTA_RECOMPENSAS = lojaSnap.data().recompensas;
+        if (lojaSnap.exists()) {
+          LISTA_RECOMPENSAS = lojaSnap.data().recompensas || [];
+          window.LISTA_RIFAS = lojaSnap.data().rifas || []; // ✅ Carrega as Rifas!
         } else {
           LISTA_RECOMPENSAS = [];
+          window.LISTA_RIFAS = [];
         }
       } catch (e) {
-        console.error("Erro ao carregar prêmios da loja:", e);
+        console.error("Erro ao carregar prêmios/rifas da loja:", e);
         LISTA_RECOMPENSAS = [];
+        window.LISTA_RIFAS = [];
       }
     } else {
-       // Se for visitante, a lista de recompensas fica vazia para evitar erros
-       LISTA_RECOMPENSAS = []; 
+      // Se for visitante, a lista fica vazia
+      LISTA_RECOMPENSAS = [];
+      window.LISTA_RIFAS = [];
     }
 
     // 3. Atualiza os pontos na tela
@@ -733,15 +786,16 @@ window.loadCollection = async function() {
     if (pointsEl) pointsEl.textContent = userPoints;
 
     // 4. Força a ir para a tela de "Minha Coleção" se for visitante
+    // ✅ AJUSTE OBRIGATÓRIO: Respeitar o pageType da URL
     if (isPublicView) {
-        changePage('owned'); 
+      changePage('owned');
     } else {
-        changePage('all');
+      changePage(pageType || 'all');
     }
-    
+
   } catch (err) {
     console.error("Erro load:", err);
-    changePage(isPublicView ? 'owned' : 'all');
+    changePage(isPublicView ? 'owned' : (pageType || 'all'));
   }
 }
 
@@ -1462,64 +1516,86 @@ window.renderKaido = function (currentPageType = 'kaido') {
       </div>
     `;
 
-    document.getElementById('kaido-filter-owned').addEventListener('click', (e) => {
-      showingOnlyOwnedKaido = !showingOnlyOwnedKaido;
-      e.target.style.background = showingOnlyOwnedKaido ? '#c084fc' : '#1e293b';
-      e.target.style.color = showingOnlyOwnedKaido ? '#000' : '#cbd5e1';
-      window.kaidoCurrentPage = 1;
-      window.renderKaidoGrid();
-    });
+    // ==========================================
+    // 🛡️ TRAVAS DE SEGURANÇA ADICIONADAS AQUI 
+    // (Só tenta colocar clique se o botão existir)
+    // ==========================================
+    const btnOwned = document.getElementById('kaido-filter-owned');
+    if (btnOwned) {
+      btnOwned.addEventListener('click', (e) => {
+        showingOnlyOwnedKaido = !showingOnlyOwnedKaido;
+        e.target.style.background = showingOnlyOwnedKaido ? '#c084fc' : '#1e293b';
+        e.target.style.color = showingOnlyOwnedKaido ? '#000' : '#cbd5e1';
+        window.kaidoCurrentPage = 1;
+        window.renderKaidoGrid();
+      });
+    }
 
-    document.getElementById('kaido-filter-wishlist').addEventListener('click', (e) => {
-      showingOnlyWishlistKaido = !showingOnlyWishlistKaido;
-      e.target.style.background = showingOnlyWishlistKaido ? '#ef4444' : '#1e293b';
-      e.target.style.color = showingOnlyWishlistKaido ? '#fff' : '#cbd5e1';
-      window.kaidoCurrentPage = 1;
-      window.renderKaidoGrid();
-    });
+    const btnWish = document.getElementById('kaido-filter-wishlist');
+    if (btnWish) {
+      btnWish.addEventListener('click', (e) => {
+        showingOnlyWishlistKaido = !showingOnlyWishlistKaido;
+        e.target.style.background = showingOnlyWishlistKaido ? '#ef4444' : '#1e293b';
+        e.target.style.color = showingOnlyWishlistKaido ? '#fff' : '#cbd5e1';
+        window.kaidoCurrentPage = 1;
+        window.renderKaidoGrid();
+      });
+    }
 
     // EVENTOS DA BARRA DE PESQUISA
-    document.getElementById('kaido-search').addEventListener('input', () => {
-      window.kaidoCurrentPage = 1;
-      window.renderKaidoGrid();
-    });
+    const searchInput = document.getElementById('kaido-search');
+    if (searchInput) {
+      searchInput.addEventListener('input', () => {
+        window.kaidoCurrentPage = 1;
+        window.renderKaidoGrid();
+      });
+    }
 
     // EVENTOS DA PAGINAÇÃO
-    document.getElementById('kaido-per-page-select').addEventListener('change', (e) => {
-      window.kaidoItemsPerPage = e.target.value === 'all' ? 'all' : parseInt(e.target.value);
-      window.kaidoCurrentPage = 1;
-      window.renderKaidoGrid();
-    });
-
-    document.getElementById('kaido-btn-prev').addEventListener('click', () => {
-      if (window.kaidoCurrentPage > 1) {
-        window.kaidoCurrentPage--;
+    const selectPage = document.getElementById('kaido-per-page-select');
+    if (selectPage) {
+      selectPage.addEventListener('change', (e) => {
+        window.kaidoItemsPerPage = e.target.value === 'all' ? 'all' : parseInt(e.target.value);
+        window.kaidoCurrentPage = 1;
         window.renderKaidoGrid();
-      }
-    });
-
-    document.getElementById('kaido-btn-next').addEventListener('click', () => {
-      const searchInput = document.getElementById('kaido-search');
-      const query = searchInput ? searchInput.value.toLowerCase().trim() : '';
-
-      const filteredData = KAIDO_DATA.filter(car => {
-        const matchesSearch = !query ||
-          (car.modelo && car.modelo.toLowerCase().includes(query)) ||
-          (car.codigo && car.codigo.toLowerCase().includes(query)) ||
-          (car.marca && car.marca.toLowerCase().includes(query));
-
-        const matchesOwned = !showingOnlyOwnedKaido || (userKaidoCollection[car.codigo] > 0);
-        const matchesWish = !showingOnlyWishlistKaido || userWishlist[car.codigo];
-
-        return matchesSearch && matchesOwned && matchesWish;
       });
+    }
 
-      const maxPages = window.kaidoItemsPerPage === 'all' ? 1 : Math.ceil(filteredData.length / window.kaidoItemsPerPage);
-      if (window.kaidoCurrentPage < maxPages) {
-        window.kaidoCurrentPage++;
-        window.renderKaidoGrid();
-      }
-    });
+    const btnPrev = document.getElementById('kaido-btn-prev');
+    if (btnPrev) {
+      btnPrev.addEventListener('click', () => {
+        if (window.kaidoCurrentPage > 1) {
+          window.kaidoCurrentPage--;
+          window.renderKaidoGrid();
+        }
+      });
+    }
+
+    const btnNext = document.getElementById('kaido-btn-next');
+    if (btnNext) {
+      btnNext.addEventListener('click', () => {
+        const inputBusca = document.getElementById('kaido-search');
+        const query = inputBusca ? inputBusca.value.toLowerCase().trim() : '';
+
+        const filteredData = KAIDO_DATA.filter(car => {
+          const matchesSearch = !query ||
+            (car.modelo && car.modelo.toLowerCase().includes(query)) ||
+            (car.codigo && car.codigo.toLowerCase().includes(query)) ||
+            (car.marca && car.marca.toLowerCase().includes(query));
+
+          const matchesOwned = !showingOnlyOwnedKaido || (userKaidoCollection[car.codigo] > 0);
+          const matchesWish = !showingOnlyWishlistKaido || userWishlist[car.codigo];
+
+          return matchesSearch && matchesOwned && matchesWish;
+        });
+
+        const maxPages = window.kaidoItemsPerPage === 'all' ? 1 : Math.ceil(filteredData.length / window.kaidoItemsPerPage);
+        if (window.kaidoCurrentPage < maxPages) {
+          window.kaidoCurrentPage++;
+          window.renderKaidoGrid();
+        }
+      });
+    }
   }
 
   window.renderKaidoGrid();
@@ -1755,4 +1831,272 @@ window.renderStats = function () {
         </div>
     </div>
   `;
+};
+
+// =========================================================
+// MÓDULO: RIFAS E SORTEIOS (TELA, CRIAÇÃO E EDIÇÃO)
+// =========================================================
+window.renderSorteios = function () {
+  const view = document.getElementById('sorteios-view');
+  if (!view) return;
+
+  const whatsappNumber = "5548999999999"; // SEU WHATSAPP AQUI
+
+  // Botões administrativos Globais (Só aparecem para Admin/Gerente)
+  let adminButtons = '';
+  if (targetRole === 'admin' || targetRole === 'gerente') {
+    adminButtons = `
+        <div style="display: flex; gap: 15px; justify-content: center; margin-bottom: 30px;">
+            <button onclick="abrirModalRifa()" style="background: #a855f7; color: #fff; font-family: 'Bebas Neue', sans-serif; font-size: 20px; padding: 10px 20px; border: none; border-radius: 6px; cursor: pointer; box-shadow: 0 4px 10px rgba(168, 85, 247, 0.3);">➕ Adicionar Nova Rifa</button>
+            <button onclick="abrirSorteadorDaRifa()" style="background: #10b981; color: #000; font-family: 'Bebas Neue', sans-serif; font-size: 20px; padding: 10px 20px; border: none; border-radius: 6px; cursor: pointer; box-shadow: 0 4px 10px rgba(16, 185, 129, 0.3);">🎲 Sorteador Livre</button>
+        </div>
+    `;
+  }
+
+  let html = `
+        <div style="background: linear-gradient(135deg, #1e293b, #0f172a); border: 1px solid #334155; padding: 30px; border-radius: 12px; margin-bottom: 25px; text-align: center;">
+            <h2 style="font-family: 'Bebas Neue', sans-serif; color: #a855f7; font-size: 36px; margin: 0 0 10px 0; letter-spacing: 1px;">🎟️ Rifas Exclusivas VIP</h2>
+            <p style="color: #cbd5e1; font-size: 16px; max-width: 600px; margin: 0 auto;">Garanta seus números! Além da chance de ganhar a miniatura, cada número comprado rende <b>RPMs</b> para trocar por prêmios na loja.</p>
+        </div>
+        ${adminButtons}
+        <h3 style="font-family: 'Bebas Neue', sans-serif; color: #fff; font-size: 24px; margin-bottom: 15px;">Rifas Ativas</h3>
+        <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 20px;">
+    `;
+
+  if (!window.LISTA_RIFAS || window.LISTA_RIFAS.length === 0) {
+    html += `<div style="grid-column: 1 / -1; background: #1e293b; padding: 30px; text-align: center; border-radius: 12px; border: 1px dashed #475569; color: #94a3b8;">Nenhum sorteio ativo no momento. Fique de olho!</div>`;
+  } else {
+    window.LISTA_RIFAS.forEach((r, index) => {
+      // Controles de edição para o Admin
+      let adminControls = '';
+      let btnSortearDireto = '';
+      
+      if (targetRole === 'admin' || targetRole === 'gerente') {
+        // Previne quebra de aspas se o título tiver apóstrofos
+        const safeTitle = r.titulo.replace(/'/g, "\\'");
+        
+        // BOTÃO DE SORTEIO DIRETAMENTE NO CARD!
+        btnSortearDireto = `<button onclick="abrirSorteadorDaRifa('${safeTitle}')" style="background: #10b981; color: #000; border: none; padding: 10px 15px; border-radius: 6px; cursor: pointer; font-family: 'Bebas Neue', sans-serif; font-size: 18px; letter-spacing: 1px; transition: 0.2s; box-shadow: 0 4px 10px rgba(16,185,129,0.3);">🎲 Sortear</button>`;
+        
+        adminControls = `
+            <div style="display: flex; gap: 8px; margin-top: 15px;">
+                <button onclick="editarRifa(${index})" style="flex: 1; background: #3b82f6; color: white; border: none; padding: 8px; border-radius: 4px; cursor: pointer; font-size: 13px; font-weight: bold;">✏️ Editar</button>
+                <button onclick="excluirRifa(${index})" style="flex: 1; background: #ef4444; color: white; border: none; padding: 8px; border-radius: 4px; cursor: pointer; font-size: 13px; font-weight: bold;">🗑️ Excluir</button>
+            </div>
+        `;
+      }
+
+      html += `
+        <div style="background: #1e293b; border: 1px solid #334155; border-radius: 12px; overflow: hidden; position: relative;">
+            <img src="${r.imagem}" style="width: 100%; height: 200px; object-fit: cover; border-bottom: 1px solid #334155;" onerror="this.src='assets/img/placeholder.png'">
+            <span style="position: absolute; top: 10px; right: 10px; background: #22c55e; color: #000; font-size: 11px; font-weight: bold; padding: 4px 8px; border-radius: 4px; text-transform: uppercase;">Ativo</span>
+            
+            <div style="padding: 20px;">
+                <h4 style="color: #fff; font-family: 'Bebas Neue', sans-serif; font-size: 24px; margin: 0 0 5px 0; letter-spacing: 0.5px;">${r.titulo}</h4>
+                <p style="color: #94a3b8; font-size: 14px; margin-top: 0; min-height: 40px;">${r.desc}</p>
+                
+                <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 15px; padding-top: 15px; border-top: 1px dashed #475569;">
+                    <div>
+                        <div style="color: #facc15; font-weight: bold; font-size: 20px;">R$ ${r.preco}</div>
+                        <div style="color: #64748b; font-size: 12px;">Ganhe +${r.rpms} RPMs / nº</div>
+                    </div>
+                    <div style="display: flex; gap: 8px;">
+                        ${btnSortearDireto}
+                        <a href="https://wa.me/${whatsappNumber}?text=Olá! Gostaria de reservar números para a rifa: ${r.titulo}" target="_blank" style="background: #a855f7; color: #fff; text-decoration: none; padding: 10px 15px; border-radius: 6px; font-family: 'Bebas Neue', sans-serif; font-size: 16px; letter-spacing: 1px; transition: 0.2s; display: flex; align-items: center;">Comprar</a>
+                    </div>
+                </div>
+                ${adminControls}
+            </div>
+        </div>
+      `;
+    });
+  }
+  html += `</div>`;
+  view.innerHTML = html;
+};
+
+// =========================================================
+// FUNÇÃO PARA ABRIR O SORTEADOR PERSONALIZADO PARA A RIFA
+// =========================================================
+window.abrirSorteadorDaRifa = function(tituloDaRifa = 'Sorteio da Rifa') {
+    const modal = document.getElementById('modal-sorteador');
+    if (modal) {
+        // Altera o título da janela para exibir o nome do prêmio sendo sorteado
+        const titleH2 = modal.querySelector('h2');
+        if (titleH2) {
+            titleH2.innerHTML = tituloDaRifa !== 'Sorteio da Rifa' 
+                ? `SORTEIO: <span style="color: #fff; font-size: 32px; display:block; margin-top: 4px;">${tituloDaRifa}</span>` 
+                : 'Sorteio da Rifa';
+        }
+        
+        // Limpa os dados do sorteio anterior
+        const resultEl = document.getElementById('sort-result');
+        const winnerEl = document.getElementById('sort-winner-name');
+        const participantsEl = document.getElementById('sort-participants');
+        
+        if (resultEl) {
+            resultEl.textContent = '000';
+            resultEl.style.color = '#fff';
+            resultEl.style.transform = 'scale(1)';
+        }
+        if (winnerEl) {
+            winnerEl.textContent = '';
+            winnerEl.style.opacity = '0';
+        }
+        if (participantsEl) participantsEl.value = '';
+        
+        modal.style.display = 'flex';
+    }
+}
+
+
+// =========================================================
+// FUNÇÕES DE CRUD (Criar, Editar, Salvar e Excluir Rifas)
+// =========================================================
+window.abrirModalRifa = function () {
+  document.getElementById('rifa-edit-index').value = -1;
+  document.getElementById('rifa-form-titulo').value = '';
+  document.getElementById('rifa-form-imagem').value = '';
+  document.getElementById('rifa-form-desc').value = '';
+  document.getElementById('rifa-form-preco').value = '';
+  document.getElementById('rifa-form-rpms').value = '';
+  document.getElementById('modal-rifa-title').innerText = 'Criar Nova Rifa';
+  document.getElementById('modal-rifa-form').style.display = 'flex';
+}
+
+window.editarRifa = function (index) {
+  const r = window.LISTA_RIFAS[index];
+  document.getElementById('rifa-edit-index').value = index;
+  document.getElementById('rifa-form-titulo').value = r.titulo;
+  document.getElementById('rifa-form-imagem').value = r.imagem;
+  document.getElementById('rifa-form-desc').value = r.desc;
+  document.getElementById('rifa-form-preco').value = r.preco;
+  document.getElementById('rifa-form-rpms').value = r.rpms;
+  document.getElementById('modal-rifa-title').innerText = 'Editar Rifa';
+  document.getElementById('modal-rifa-form').style.display = 'flex';
+}
+
+window.salvarRifa = async function () {
+  const index = parseInt(document.getElementById('rifa-edit-index').value);
+  const titulo = document.getElementById('rifa-form-titulo').value.trim();
+  const imagem = document.getElementById('rifa-form-imagem').value.trim();
+  const desc = document.getElementById('rifa-form-desc').value.trim();
+  const preco = document.getElementById('rifa-form-preco').value.trim();
+  const rpms = document.getElementById('rifa-form-rpms').value;
+
+  if (!titulo || !preco || !rpms) return alert('Por favor, preencha o Título, Preço e RPMs!');
+
+  const rifaData = { titulo, imagem, desc, preco, rpms };
+
+  if (index >= 0) {
+    rifaData.id = window.LISTA_RIFAS[index].id;
+    window.LISTA_RIFAS[index] = rifaData;
+  } else {
+    rifaData.id = 'rifa_' + Date.now();
+    window.LISTA_RIFAS.push(rifaData);
+  }
+
+  try {
+    const { doc, setDoc } = await import("https://www.gstatic.com/firebasejs/12.13.0/firebase-firestore.js");
+    // Salva direto na loja do banco de dados
+    await setDoc(doc(db, 'lojas', window.lojaIdAtual), { rifas: window.LISTA_RIFAS }, { merge: true });
+
+    document.getElementById('modal-rifa-form').style.display = 'none';
+    window.renderSorteios();
+  } catch (e) {
+    console.error("Erro ao salvar a rifa:", e);
+    alert('Erro ao comunicar com o servidor.');
+  }
+}
+
+window.excluirRifa = async function (index) {
+  if (!confirm('Tem certeza absoluta que deseja EXCLUIR esta rifa? Esta ação não pode ser desfeita.')) return;
+
+  window.LISTA_RIFAS.splice(index, 1);
+
+  try {
+    const { doc, setDoc } = await import("https://www.gstatic.com/firebasejs/12.13.0/firebase-firestore.js");
+    await setDoc(doc(db, 'lojas', window.lojaIdAtual), { rifas: window.LISTA_RIFAS }, { merge: true });
+    window.renderSorteios();
+  } catch (e) {
+    console.error("Erro ao excluir rifa:", e);
+    alert('Erro ao excluir do servidor.');
+  }
+}
+
+// =========================================================
+// O SORTEADOR VIRTUAL (ANIMAÇÃO COM NÚMEROS E NOMES)
+// =========================================================
+window.realizarSorteioVirtual = function() {
+    const minVal = parseInt(document.getElementById('sort-min').value);
+    const maxVal = parseInt(document.getElementById('sort-max').value);
+    const participantsText = document.getElementById('sort-participants').value.trim();
+    
+    const resultEl = document.getElementById('sort-result');
+    const nameEl = document.getElementById('sort-winner-name'); // Onde vai o nome do ganhador
+
+    let participants = [];
+    
+    // Se o admin colou a lista, nós a separamos linha por linha
+    if (participantsText) {
+        const lines = participantsText.split('\n');
+        lines.forEach(line => {
+            if(line.trim() !== '') {
+                // Inteligência para separar Número do Nome (Ex: "15 - Gabriel", "03. Eduarda", "10 Joao")
+                const match = line.match(/^(\d+)[\s\-\.\:]+(.+)$/);
+                if(match) {
+                    participants.push({ num: match[1], name: match[2].trim() });
+                } else {
+                    // Se não tiver número claro, salva só o nome
+                    participants.push({ num: '?', name: line.trim() });
+                }
+            }
+        });
+    }
+
+    // Validação de segurança
+    if (participants.length === 0 && (isNaN(minVal) || isNaN(maxVal) || minVal >= maxVal)) {
+        alert("Preencha a lista de participantes ou defina um intervalo numérico válido!"); 
+        return;
+    }
+
+    // Reseta o visual para começar a girar
+    resultEl.style.color = '#fff';
+    resultEl.style.transform = 'scale(1)';
+    nameEl.textContent = ''; 
+    nameEl.style.opacity = '0';
+    let counter = 0;
+    
+    // Roda a animação super rápida por ~3 segundos
+    const interval = setInterval(() => {
+        // Durante o giro, mostra números aleatórios
+        if (participants.length > 0) {
+            const randomP = participants[Math.floor(Math.random() * participants.length)];
+            resultEl.textContent = randomP.num !== '?' ? randomP.num : Math.floor(Math.random() * 99);
+        } else {
+            resultEl.textContent = Math.floor(Math.random() * (maxVal - minVal + 1)) + minVal;
+        }
+        
+        counter++;
+        
+        // Fim do sorteio
+        if (counter > 60) {
+            clearInterval(interval);
+            
+            if (participants.length > 0) {
+                // Sorteia o grande vencedor da lista!
+                const finalWinner = participants[Math.floor(Math.random() * participants.length)];
+                resultEl.textContent = finalWinner.num !== '?' ? finalWinner.num : '🏆';
+                nameEl.textContent = finalWinner.name; // Aparece o nome!
+                nameEl.style.opacity = '1';
+            } else {
+                // Sorteia apenas o número
+                const finalResult = Math.floor(Math.random() * (maxVal - minVal + 1)) + minVal;
+                resultEl.textContent = finalResult;
+            }
+            
+            resultEl.style.color = '#10b981'; // Fica verde
+            resultEl.style.transform = 'scale(1.2)'; // Dá um "pulo" de comemoração
+        }
+    }, 50);
 };
