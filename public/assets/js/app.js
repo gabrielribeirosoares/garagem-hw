@@ -758,25 +758,30 @@ window.loadCollection = async function () {
     }
 
     // 🔒 3. Puxa as Recompensas e as RIFAS da loja atrelada
+    // 🔒 3. Puxa as Recompensas, RIFAS e o WHATSAPP da loja atrelada
     if (!isPublicView) {
       try {
         const lojaRef = doc(db, 'lojas', currentLojaId);
         const lojaSnap = await getDoc(lojaRef);
         if (lojaSnap.exists()) {
           LISTA_RECOMPENSAS = lojaSnap.data().recompensas || [];
-          window.LISTA_RIFAS = lojaSnap.data().rifas || []; // ✅ As rifas voltam a ser do grupo todo!
+          window.LISTA_RIFAS = lojaSnap.data().rifas || []; 
+          window.lojaWhatsapp = lojaSnap.data().whatsapp || "5548999999999"; // ✅ Puxa o número da Loja (ou usa um padrão)
         } else {
           LISTA_RECOMPENSAS = [];
           window.LISTA_RIFAS = [];
+          window.lojaWhatsapp = "5548999999999";
         }
       } catch (e) {
-        console.error("Erro ao carregar prêmios da loja:", e);
+        console.error("Erro ao carregar dados da loja:", e);
         LISTA_RECOMPENSAS = [];
         window.LISTA_RIFAS = [];
+        window.lojaWhatsapp = "5548999999999";
       }
     } else {
       LISTA_RECOMPENSAS = [];
       window.LISTA_RIFAS = [];
+      window.lojaWhatsapp = "";
     }
 
     const pointsEl = document.getElementById('user-points');
@@ -1287,7 +1292,7 @@ function showModal(type, options) {
   }
   else if (type === 'success') {
 
-    const whatsappNumber = "5548991348421"; 
+    const whatsappNumber = window.lojaWhatsapp;
     const msgWpp = encodeURIComponent(`Fala mestre! Acabei de resgatar o prêmio "${options.title}" lá no site. Meu cupom é: ${options.code}`);
 
     innerHTML = `
@@ -1839,7 +1844,8 @@ window.renderSorteios = function () {
   const view = document.getElementById('sorteios-view');
   if (!view) return;
 
-  const whatsappNumber = "5548999999999"; // SEU WHATSAPP AQUI
+  // Puxa o WhatsApp dinâmico da loja em vez do fixo
+  const whatsappNumber = window.lojaWhatsapp;
 
   // Botões administrativos Globais (Só aparecem para Admin/Gerente)
   let adminButtons = '';
