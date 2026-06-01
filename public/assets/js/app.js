@@ -2228,7 +2228,7 @@ window.renderEncomendas = async function () {
   container.innerHTML = '<p style="color: #cbd5e1; text-align: center; margin-top: 40px; font-style: italic;">Buscando suas encomendas no banco de dados...</p>';
 
   try {
-    // 👇 CORREÇÃO: Lê o cliente diretamente da caixa de seleção (ou pega a própria conta)
+    // 👇 Lê o cliente diretamente da caixa de seleção (ou pega a própria conta)
     const clientSelect = document.getElementById('client-select');
     const clienteSelecionado = (clientSelect && clientSelect.value !== 'ME') ? clientSelect.value : null;
 
@@ -2263,34 +2263,74 @@ window.renderEncomendas = async function () {
     const encomendasOrdenadas = [...garagemLoja].reverse();
 
     encomendasOrdenadas.forEach(pedido => {
-      let carName = pedido.carId;
-      let carImg = 'assets/img/placeholder.png';
+        let carName = pedido.carId;
+        let carImg = 'assets/img/placeholder.png';
+        
+        // 1. Tenta pegar o preço exato que foi salvo no pedido. Inicia em 0 se não existir.
+        let precoUnitario = parseFloat(pedido.preco || pedido.valor || 0);
 
-      // Tenta puxar a imagem e o nome da base de dados local (RAW)
-      if (typeof RAW !== 'undefined') {
-        const carObj = RAW.find(c => c.id === pedido.carId);
-        if (carObj) {
-          carName = `${carObj.name} <br><small style="color: var(--yellow);">${carObj.year} | SKU: ${carObj.part}</small>`;
-          carImg = carObj.image || carImg;
+        // 2. Tenta puxar a imagem e o nome da base de dados local (RAW)
+        if (typeof RAW !== 'undefined') {
+            const carObj = RAW.find(c => c.id === pedido.carId);
+            if (carObj) {
+                carName = `${carObj.name} <br><small style="color: var(--yellow);">${carObj.year} | SKU: ${carObj.part}</small>`;
+                carImg = carObj.image || carImg;
+                
+                // 3. Se o pedido não tinha preço salvo, tenta puxar do catálogo
+                if (precoUnitario === 0 && carObj.price) {
+                    precoUnitario = parseFloat(carObj.price);
+                }
+            }
         }
-      }
 
-      // Define o visual da etiqueta de status
-      let statusBadge = '';
-      if (pedido.status === 'pago') {
-        statusBadge = '<span style="background: rgba(34, 197, 94, 0.15); color: var(--green); border: 1px solid var(--green); padding: 4px 8px; border-radius: 4px; font-weight: bold; font-size: 11px; text-transform: uppercase;">🟢 Pago (Na Garagem)</span>';
-      } else if (pedido.status === 'enviado') {
-        statusBadge = '<span style="background: rgba(56, 189, 248, 0.15); color: #38bdf8; border: 1px solid #38bdf8; padding: 4px 8px; border-radius: 4px; font-weight: bold; font-size: 11px; text-transform: uppercase;">📦 Enviado / Retirado</span>';
-      } else {
-        // SE ESTIVER PENDENTE, MOSTRA O BOTÃO DE PAGAR AGORA
-        statusBadge = `
-                    <button onclick="window.abrirModalPagamentoPix('${pedido.pedidoId}')" 
-                        style="background: var(--green); color: #000; border: none; padding: 6px 12px; border-radius: 4px; font-weight: bold; cursor: pointer; font-size: 11px; font-family: 'Bebas Neue', sans-serif; letter-spacing: 0.5px;">
-                        💳 Pagar via Pix
-                    </button>`;
-      }
+        // Calcula o preço final da encomenda
+        const valorTotalPedido = pedido.qty * precoUnitario;
 
-      html += `
+  
+        // ✏️ Botão de Editar Preço (Bloqueado para clientes)
+        let btnEditarPreco = '';
+
+        // 👇 Substitua 'window.isAdmin' pela variável ou condição que você usa para identificar o administrador no seu app.
+        // Exemplo alternativo: if (sessionUid === 'SEU_UID_DE_ADMIN_AQUI') {
+        if (window.isAdmin) { 
+            btnEditarPreco = `
+                <button onclick="window.editarPrecoPedido('${pedido.pedidoId}', ${precoUnitario})" 
+                    style="background: transparent; color: #94a3b8; border: 1px dashed #475569; padding: 4px 8px; border-radius: 4px; font-size: 10px; cursor: pointer; margin-left: 8px; transition: 0.2s;"
+                    onmouseover="this.style.color='#fff'; this.style.borderColor='#fff'" 
+                    onmouseout="this.style.color='#94a3b8'; this.style.borderColor='#475569'">
+                    ✏️ Definir Preço
+                </button>`;
+        }
+
+        // 🟢 DECLARAÇÃO DO STATUS BADGE (Garante que a variável existe antes do HTML)
+        let statusBadge = '';
+
+        if (pedido.status === 'pago') {
+            statusBadge = '<span style="background: rgba(34, 197, 94, 0.15); color: var(--green); border: 1px solid var(--green); padding: 4px 8px; border-radius: 4px; font-weight: bold; font-size: 11px; text-transform: uppercase;">🟢 Pago (Na Garagem)</span>';
+        } else if (pedido.status === 'enviado') {
+            statusBadge = '<span style="background: rgba(56, 189, 248, 0.15); color: #38bdf8; border: 1px solid #38bdf8; padding: 4px 8px; border-radius: 4px; font-weight: bold; font-size: 11px; text-transform: uppercase;">📦 Enviado / Retirado</span>';
+        } else {
+            // Se não tá pago nem enviado, vê se tem preço para exibir o botão do MP
+            if (valorTotalPedido > 0) {
+                statusBadge = `
+                    <div style="display: flex; align-items: center;">
+                        <button onclick="window.iniciarCheckout('${pedido.pedidoId}', ${valorTotalPedido}, '${pedido.lojaId}')" 
+                            style="background: #009ee3; color: #fff; border: none; padding: 6px 12px; border-radius: 6px; font-weight: bold; cursor: pointer; font-size: 11px; font-family: 'Bebas Neue', sans-serif; letter-spacing: 0.5px; display: flex; align-items: center; gap: 4px; box-shadow: 0 4px 6px rgba(0,158,227,0.2);">
+                            💳 Pagar R$ ${valorTotalPedido.toFixed(2)}
+                        </button>
+                        ${btnEditarPreco}
+                    </div>`;
+            } else {
+                statusBadge = `
+                    <div style="display: flex; align-items: center;">
+                        <span style="color: #ef4444; font-size: 11px; font-weight: bold;">⚠️ Preço Indefinido</span>
+                        ${btnEditarPreco}
+                    </div>`;
+            }
+        }
+
+        // Monta o Card HTML final
+        html += `
             <div style="background: var(--surface); border: 1px solid var(--border); border-radius: 12px; padding: 16px; display: flex; gap: 16px; align-items: center; position: relative; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);">
                 <span style="position: absolute; top: 12px; right: 12px; font-size: 10px; background: #334155; color: #cbd5e1; padding: 4px 8px; border-radius: 4px; font-weight: bold; text-transform: uppercase; border: 1px solid #475569;">
                     🏢 ${pedido.lojaId}
@@ -2306,7 +2346,7 @@ window.renderEncomendas = async function () {
                     <div>${statusBadge}</div>
                 </div>
             </div>
-            `;
+        `;
     });
 
     html += '</div>';
@@ -2457,4 +2497,71 @@ window.venderCarroVisual = async function (carId, event) {
     console.error("Erro ao vender carro via catálogo:", e);
     alert("Erro ao registrar a encomenda. Verifique a conexão.");
   }
+}
+
+window.iniciarCheckout = async function(pedidoId, valor, lojaDoPedido) {
+    try {
+        // 🚀 URL OFICIAL DO SEU SERVIDOR NO RENDER:
+        const URL_BACKEND = "https://servidor-pagamentos-hw.onrender.com/checkout";
+
+        const response = await fetch(URL_BACKEND, {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({
+                pedidoId: pedidoId,
+                valor: valor,
+                clienteId: sessionUid,
+                lojaId: lojaDoPedido
+            })
+        });
+
+        const resData = await response.json();
+
+        if (resData.init_point) {
+            // Sucesso! Redireciona o usuário para a tela azul do Mercado Pago
+            window.location.href = resData.init_point;
+        } else if (resData.error) {
+            alert("Erro do Servidor: " + resData.error);
+        }
+    } catch (e) {
+        console.error("Erro ao conectar com a API de checkout:", e);
+        alert("Não foi possível gerar a tela de pagamento. Verifique a conexão.");
+    }
+}
+
+window.editarPrecoPedido = async function(pedidoId, precoAtual) {
+    // 1. Pergunta o novo valor (já mostra o atual caso exista)
+    const novoPrecoStr = prompt(`Digite o novo preço unitário para este item (Atual: R$ ${precoAtual.toFixed(2)}):\nUse ponto ou vírgula para os centavos.`, precoAtual);
+    
+    // Se clicar em cancelar ou deixar vazio, encerra
+    if (novoPrecoStr === null || novoPrecoStr.trim() === "") return; 
+    
+    // 2. Converte o texto para número de forma segura (trocando vírgula por ponto)
+    const novoPreco = parseFloat(novoPrecoStr.replace(',', '.'));
+    
+    if (isNaN(novoPreco) || novoPreco <= 0) {
+        alert("Preço inválido. Digite um número maior que zero.");
+        return;
+    }
+
+    try {
+        const { doc, updateDoc } = await import("https://www.gstatic.com/firebasejs/12.13.0/firebase-firestore.js");
+        
+        // ⚠️ ATENÇÃO: Se a sua coleção no Firebase se chamar "carrinhos" ou "encomendas", troque "pedidos" abaixo:
+        const pedidoRef = doc(db, 'pedidos', pedidoId); 
+        
+        // 3. Atualiza o banco de dados
+        await updateDoc(pedidoRef, {
+            preco: novoPreco
+        });
+
+        alert("Preço atualizado com sucesso!");
+        
+        // 4. Recarrega a página para o botão azul já aparecer com o valor novo calculado
+        location.reload(); 
+        
+    } catch (error) {
+        console.error("Erro ao atualizar preço:", error);
+        alert("Erro ao atualizar o banco de dados. Verifique o console.");
+    }
 }
