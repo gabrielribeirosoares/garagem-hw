@@ -62,13 +62,19 @@ async function loadUsersList() {
     const myUid = auth.currentUser.uid;
     const myDoc = await getDoc(doc(db, 'users', myUid));
     const myRole = myDoc.exists() ? myDoc.data().role : 'user';
-    const myLojaId = myDoc.exists() ? (myDoc.data().lojaId || '') : '';
+
+    const myLojaIdRaw = myDoc.exists() ? (myDoc.data().lojaId || '') : '';
+    const myLojaId = myLojaIdRaw.split(',')[0].trim();
 
     window.currentUserRole = myRole;
-    window.minhaLojaId = myLojaId; 
+    window.minhaLojaId = myLojaId;
     const btnMyRewards = document.getElementById('btn-my-store-rewards');
     if (btnMyRewards && (myRole === 'admin' || myRole === 'gerente')) {
-        btnMyRewards.style.display = 'inline-block';
+      btnMyRewards.style.display = 'inline-block';
+    }
+    const btnCopyInvite = document.getElementById('btn-copy-invite');
+    if (btnCopyInvite && (myRole === 'admin' || myRole === 'gerente')) {
+      btnCopyInvite.style.display = 'inline-block';
     }
 
     const querySnapshot = await getDocs(collection(db, 'users'));
@@ -80,8 +86,12 @@ async function loadUsersList() {
       const userData = docSnap.data();
       userData.uid = docSnap.id;
 
+      const clientLojas = (userData.lojaId || '').split(',').map(s => s.trim().toLowerCase());
+      const minhaLojaFiltro = window.minhaLojaId.toLowerCase();
+
       if (myRole === 'gerente') {
-        if (userData.role !== 'cliente' || userData.lojaId !== myLojaId) {
+        // Mostra o usuário se ele tiver a loja do gerente na lista E não for um admin
+        if (userData.role === 'admin' || userData.role === 'gerente' || !clientLojas.includes(minhaLojaFiltro)) {
           return;
         }
       }
@@ -378,21 +388,28 @@ if (btnSaveRifa) {
       const uRef = doc(db, 'collections', currentTargetUid);
       const snap = await getDoc(uRef);
       const currentData = snap.exists() ? snap.data() : { history: [] };
-      const currentPts = currentData.points || 0;
       const history = currentData.history || [];
 
+      // Puxa o mapa de pontos. Se o cliente for antigo, migra os pontos velhos para a loja atual.
+      let pointsMap = currentData.pointsMap || {};
+      if (typeof currentData.points === 'number' && Object.keys(pointsMap).length === 0) {
+        pointsMap[window.minhaLojaId || 'default'] = currentData.points;
+      }
+
       const ganhou = qty * pts;
-      const newTotal = currentPts + ganhou;
+      // Adiciona os pontos EXCLUSIVAMENTE na loja do Admin que está logado
+      pointsMap[window.minhaLojaId || 'default'] = (pointsMap[window.minhaLojaId || 'default'] || 0) + ganhou;
 
       history.unshift({
         date: new Date().toLocaleDateString('pt-BR'),
-        desc: "Lançamento de Rifa (Painel)",
+        desc: `Lançamento de Rifa (${window.minhaLojaId || 'Loja'})`,
         amount: ganhou,
         type: "earning"
       });
 
-      await setDoc(uRef, { points: newTotal, history: history }, { merge: true });
-      alert(`+${ganhou} RPMs creditados na conta!`);
+      // Salva no banco o pointsMap atualizado
+      await setDoc(uRef, { pointsMap: pointsMap, history: history }, { merge: true });
+      alert(`+${ganhou} RPMs creditados na conta! (Loja: ${window.minhaLojaId})`);
 
       document.getElementById('rifa-modal').style.display = 'none';
       btnSaveRifa.textContent = "🪙 Creditar Pontos";
@@ -418,16 +435,16 @@ if (usersTbody) {
   usersTbody.addEventListener('click', async (e) => {
     if (e.target.classList.contains('btn-manage-cars')) {
       currentTargetUid = e.target.getAttribute('data-id');
-      
+
       const carUserEl = document.getElementById('manage-user-name');
       if (carUserEl) carUserEl.textContent = e.target.getAttribute('data-name');
-      
+
       const searchInput = document.getElementById('car-search-input');
-      if(searchInput) searchInput.value = '';
-      
+      if (searchInput) searchInput.value = '';
+
       const qtyInput = document.getElementById('car-qty-input');
       if (qtyInput) qtyInput.value = 1;
-      
+
       const carsModal = document.getElementById('cars-modal');
       if (carsModal) carsModal.style.display = 'flex';
     }
@@ -457,42 +474,54 @@ if (btnSaveCar) {
       const dRef = doc(db, 'collections', currentTargetUid);
       const snap = await getDoc(dRef);
 
-      let userColData = snap.exists() ? snap.data().items || {} : {};
-      let pontosAtuais = snap.exists() ? snap.data().points || 0 : 0;
+      // Nova estrutura: Área isolada para a Garagem da Loja
+      let garagemLoja = snap.exists() ? snap.data().garagemLoja || [] : [];
+      let pointsMap = snap.exists() ? snap.data().pointsMap || {} : {};
       let history = snap.exists() ? snap.data().history || [] : [];
 
-      const qtdAntiga = userColData[carId] || 0;
       const uRef = doc(db, 'users', currentTargetUid);
       const uSnap = await getDoc(uRef);
       const userRole = uSnap.exists() ? uSnap.data().role : 'user';
 
-      userColData[carId] = qtyInput;
-      let novosPontos = pontosAtuais;
+      // Verifica se é cliente e bonifica com RPMs
+      if (userRole === 'cliente' && qtyInput > 0) {
+        const ptsGanhos = qtyInput * PONTOS_POR_CARRO;
 
-      if (userRole === 'cliente' && qtyInput > qtdAntiga) {
-        const diferenca = qtyInput - qtdAntiga;
-        const ptsGanhos = diferenca * PONTOS_POR_CARRO;
-        novosPontos += ptsGanhos;
+        if (typeof snap.data().points === 'number' && Object.keys(pointsMap).length === 0) {
+          pointsMap[window.minhaLojaId || 'default'] = snap.data().points;
+        }
+
+        // Adiciona os pontos na carteira da sua loja
+        pointsMap[window.minhaLojaId || 'default'] = (pointsMap[window.minhaLojaId || 'default'] || 0) + ptsGanhos;
 
         history.unshift({
           date: new Date().toLocaleDateString('pt-BR'),
-          desc: "Adição de Carros (Painel)",
+          desc: `Compra retida na Garagem (${window.minhaLojaId || 'Loja'})`,
           amount: ptsGanhos,
           type: "earning"
         });
-
-        await setDoc(dRef, { items: userColData, points: novosPontos, history: history }, { merge: true });
-        alert(`✅ Sucesso! Carro adicionado e +${ptsGanhos} RPMs creditados na conta do Cliente VIP!`);
-      } else {
-        await setDoc(dRef, { items: userColData, points: novosPontos }, { merge: true });
-        alert("✅ Garagem atualizada com sucesso! (Nenhum ponto foi gerado pois o perfil é Usuário Comum ou Qtd não aumentou).");
       }
 
+      // Adiciona o carrinho na fila logística com ID único do pedido
+      garagemLoja.push({
+        pedidoId: 'ped_' + Date.now(),
+        carId: carId,
+        qty: qtyInput,
+        status: 'pendente',
+        lojaId: window.minhaLojaId || 'default',
+        data: new Date().toLocaleDateString('pt-BR')
+      });
+
+      // Salva no Firebase (não toca na coleção pessoal dele!)
+      await setDoc(dRef, { garagemLoja: garagemLoja, pointsMap: pointsMap, history: history }, { merge: true });
+      
+      alert(`✅ Sucesso! Carro retido na Garagem da Loja e pontos creditados.`);
+      
       document.getElementById('car-search-input').value = '';
       btnSaveCar.textContent = "➕ Adicionar";
 
     } catch (error) {
-      console.error("Erro ao salvar carro:", error);
+      console.error("Erro ao salvar carro na garagem da loja:", error);
       alert("Erro ao adicionar o carro. Verifique sua conexão.");
       btnSaveCar.textContent = "➕ Adicionar";
     }
@@ -505,13 +534,13 @@ if (usersTbody) {
   usersTbody.addEventListener('click', async (e) => {
     if (e.target.classList.contains('btn-manage-rewards')) {
       lojaIdParaEditar = e.target.getAttribute('data-lojaid');
-      
+
       const lojaNomeEl = document.getElementById('loja-alvo-nome');
       if (lojaNomeEl) lojaNomeEl.textContent = lojaIdParaEditar;
-      
+
       const lojaModal = document.getElementById('loja-modal');
       if (lojaModal) lojaModal.style.display = 'flex';
-      
+
       await renderAdminRewards();
     }
   });
@@ -609,94 +638,97 @@ if (createPhone) {
     let value = e.target.value.replace(/\D/g, '');
     if (value.length === 0) { e.target.value = ''; return; }
     if (value.length > 11) value = value.slice(0, 11);
-    if (value.length > 6) { e.target.value = `(${value.slice(0, 2)}) ${value.slice(2, 7)}-${value.slice(7)}`;
-    } else if (value.length > 2) { e.target.value = `(${value.slice(0, 2)}) ${value.slice(2)}`;
+    if (value.length > 6) {
+      e.target.value = `(${value.slice(0, 2)}) ${value.slice(2, 7)}-${value.slice(7)}`;
+    } else if (value.length > 2) {
+      e.target.value = `(${value.slice(0, 2)}) ${value.slice(2)}`;
     } else { e.target.value = value; }
   });
 }
 
 if (btnNewClient && modalNewClient) {
-    btnNewClient.addEventListener('click', () => {
-        document.getElementById('new-client-name').value = '';
-        document.getElementById('new-client-email').value = '';
-        document.getElementById('new-client-password').value = '';
-        modalNewClient.style.display = 'flex';
-    });
+  btnNewClient.addEventListener('click', () => {
+    document.getElementById('new-client-name').value = '';
+    document.getElementById('new-client-email').value = '';
+    document.getElementById('new-client-password').value = '';
+    modalNewClient.style.display = 'flex';
+  });
 }
 
 // Salva o usuário no Firebase
 if (btnSaveNewClient) {
-    btnSaveNewClient.addEventListener('click', async () => {
-        const name = document.getElementById('new-client-name').value.trim();
-        const email = document.getElementById('new-client-email').value.trim();
-        const pass = document.getElementById('new-client-password').value;
+  btnSaveNewClient.addEventListener('click', async () => {
+    const name = document.getElementById('new-client-name').value.trim();
+    const email = document.getElementById('new-client-email').value.trim();
+    const pass = document.getElementById('new-client-password').value;
 
-        if (!name || !email || !pass) {
-            alert("Por favor, preencha todos os campos (Nome, E-mail e Senha)!");
-            return;
-        }
+    if (!name || !email || !pass) {
+      alert("Por favor, preencha todos os campos (Nome, E-mail e Senha)!");
+      return;
+    }
 
-        const originalText = btnSaveNewClient.textContent;
-        btnSaveNewClient.textContent = "Criando Conta...";
-        btnSaveNewClient.disabled = true;
+    const originalText = btnSaveNewClient.textContent;
+    btnSaveNewClient.textContent = "Criando Conta...";
+    btnSaveNewClient.disabled = true;
 
-        try {
-            // Cria a conta do usuário no Auth secundário
-            const userCredential = await createUserWithEmailAndPassword(secondaryAuth, email, pass);
-            const newUid = userCredential.user.uid;
+    try {
+      // Cria a conta do usuário no Auth secundário
+      const userCredential = await createUserWithEmailAndPassword(secondaryAuth, email, pass);
+      const newUid = userCredential.user.uid;
 
-            await signOut(secondaryAuth);
+      await signOut(secondaryAuth);
 
-            // Descobre qual é a loja do Admin logado
-            const myDoc = await getDoc(doc(db, 'users', auth.currentUser.uid));
-            const targetLojaId = myDoc.exists() ? (myDoc.data().lojaId || '') : '';
+     // Descobre qual é a loja do Admin logado e pega APENAS a loja matriz (a primeira)
+      const myDoc = await getDoc(doc(db, 'users', auth.currentUser.uid));
+      const myLojaIdRaw = myDoc.exists() ? (myDoc.data().lojaId || '') : '';
+      const targetLojaId = myLojaIdRaw.split(',')[0].trim();
 
-            // Salva o perfil do Cliente atrelado à loja do Admin
-            await setDoc(doc(db, 'users', newUid), {
-                name: name,
-                email: email,
-                phone: '', // Pode ser editado depois pelo Admin
-                role: 'cliente',
-                lojaId: targetLojaId,
-                createdAt: new Date().toLocaleDateString('pt-BR')
-            });
+      // Salva o perfil do Cliente atrelado à loja do Admin
+      await setDoc(doc(db, 'users', newUid), {
+        name: name,
+        email: email,
+        phone: '', // Pode ser editado depois pelo Admin
+        role: 'cliente',
+        lojaId: targetLojaId,
+        createdAt: new Date().toLocaleDateString('pt-BR')
+      });
 
-            // Cria a Garagem vazia para o Cliente
-            await setDoc(doc(db, 'collections', newUid), {
-                items: {},
-                points: 0,
-                history: [{
-                    date: new Date().toLocaleDateString('pt-BR'),
-                    desc: "Conta VIP Criada",
-                    amount: 0,
-                    type: "earning"
-                }]
-            });
+      // Cria a Garagem vazia para o Cliente
+      await setDoc(doc(db, 'collections', newUid), {
+        items: {},
+        points: 0,
+        history: [{
+          date: new Date().toLocaleDateString('pt-BR'),
+          desc: "Conta VIP Criada",
+          amount: 0,
+          type: "earning"
+        }]
+      });
 
-            // Atualiza estatísticas globais
-            const configRef = doc(db, 'config', 'app');
-            await updateDoc(configRef, { cadastrados: increment(1) }).catch(() => {});
+      // Atualiza estatísticas globais
+      const configRef = doc(db, 'config', 'app');
+      await updateDoc(configRef, { cadastrados: increment(1) }).catch(() => { });
 
-            modalNewClient.style.display = 'none';
-            alert('✅ Cliente VIP cadastrado e vinculado à sua loja com sucesso!');
+      modalNewClient.style.display = 'none';
+      alert('✅ Cliente VIP cadastrado e vinculado à sua loja com sucesso!');
 
-            // Recarrega a tabela para exibir o cliente recém criado
-            loadUsersList();
+      // Recarrega a tabela para exibir o cliente recém criado
+      loadUsersList();
 
-        } catch (error) {
-            console.error("Erro no cadastro:", error);
-            if (error.code === 'auth/email-already-in-use') {
-                alert("Erro: Este e-mail já está cadastrado no sistema.");
-            } else if (error.code === 'auth/weak-password') {
-                alert("Erro: A senha precisa ter pelo menos 6 caracteres.");
-            } else {
-                alert("Erro ao criar cliente: " + error.message);
-            }
-        } finally {
-            btnSaveNewClient.textContent = originalText;
-            btnSaveNewClient.disabled = false;
-        }
-    });
+    } catch (error) {
+      console.error("Erro no cadastro:", error);
+      if (error.code === 'auth/email-already-in-use') {
+        alert("Erro: Este e-mail já está cadastrado no sistema.");
+      } else if (error.code === 'auth/weak-password') {
+        alert("Erro: A senha precisa ter pelo menos 6 caracteres.");
+      } else {
+        alert("Erro ao criar cliente: " + error.message);
+      }
+    } finally {
+      btnSaveNewClient.textContent = originalText;
+      btnSaveNewClient.disabled = false;
+    }
+  });
 }
 
 if (createForm) {
@@ -718,7 +750,8 @@ if (createForm) {
       await signOut(secondaryAuth);
 
       const myDoc = await getDoc(doc(db, 'users', auth.currentUser.uid));
-      const targetLojaId = myDoc.exists() ? (myDoc.data().lojaId || '') : '';
+      const myLojaIdRaw = myDoc.exists() ? (myDoc.data().lojaId || '') : '';
+      const targetLojaId = myLojaIdRaw.split(',')[0].trim();
 
       await setDoc(doc(db, 'users', newUid), {
         name: name,
@@ -733,15 +766,15 @@ if (createForm) {
         items: {},
         points: 0,
         history: [{
-            date: new Date().toLocaleDateString('pt-BR'),
-            desc: "Conta VIP Criada na Loja",
-            amount: 0,
-            type: "earning"
+          date: new Date().toLocaleDateString('pt-BR'),
+          desc: "Conta VIP Criada na Loja",
+          amount: 0,
+          type: "earning"
         }]
       });
 
       const configRef = doc(db, 'config', 'app');
-      await updateDoc(configRef, { cadastrados: increment(1) }).catch(() => {});
+      await updateDoc(configRef, { cadastrados: increment(1) }).catch(() => { });
 
       createModal.style.display = 'none';
       createForm.reset();
@@ -775,37 +808,37 @@ const mainDashboard = document.getElementById('main-dashboard-view');
 const pendingLotsView = document.getElementById('pending-lots-view');
 
 if (btnPendingLots && btnBackDashboard) {
-    btnPendingLots.addEventListener('click', () => {
-        mainDashboard.style.display = 'none';
-        pendingLotsView.style.display = 'block';
-        window.renderPendingLots();
-    });
+  btnPendingLots.addEventListener('click', () => {
+    mainDashboard.style.display = 'none';
+    pendingLotsView.style.display = 'block';
+    window.renderPendingLots();
+  });
 
-    btnBackDashboard.addEventListener('click', () => {
-        pendingLotsView.style.display = 'none';
-        mainDashboard.style.display = 'block';
-    });
+  btnBackDashboard.addEventListener('click', () => {
+    pendingLotsView.style.display = 'none';
+    mainDashboard.style.display = 'block';
+  });
 }
 
-window.renderPendingLots = function() {
-    const grid = document.getElementById('pending-lots-grid');
-    if (!grid) return;
-    
-    const baseDeDados = typeof RAW !== 'undefined' ? RAW : (typeof PAGE_DATA !== 'undefined' ? PAGE_DATA : []);
-    const pendentes = baseDeDados.filter(car => (!car.cas || car.cas.trim() === '') && car.part);
+window.renderPendingLots = function () {
+  const grid = document.getElementById('pending-lots-grid');
+  if (!grid) return;
 
-    grid.innerHTML = '';
+  const baseDeDados = typeof RAW !== 'undefined' ? RAW : (typeof PAGE_DATA !== 'undefined' ? PAGE_DATA : []);
+  const pendentes = baseDeDados.filter(car => (!car.cas || car.cas.trim() === '') && car.part);
 
-    if (pendentes.length === 0) {
-        grid.innerHTML = `<div style="grid-column: 1 / -1; text-align: center; padding: 40px; background: #1e293b; border-radius: 8px; color: #10b981; font-size: 18px; font-weight: bold;">🎉 Todos os lotes estão preenchidos!</div>`;
-        return;
-    }
+  grid.innerHTML = '';
 
-    pendentes.forEach(car => {
-        const card = document.createElement('div');
-        card.style.cssText = "display: flex; align-items: center; gap: 15px; background: #1e293b; padding: 12px; border-radius: 8px; border: 1px solid #334155;";
-        
-        card.innerHTML = `
+  if (pendentes.length === 0) {
+    grid.innerHTML = `<div style="grid-column: 1 / -1; text-align: center; padding: 40px; background: #1e293b; border-radius: 8px; color: #10b981; font-size: 18px; font-weight: bold;">🎉 Todos os lotes estão preenchidos!</div>`;
+    return;
+  }
+
+  pendentes.forEach(car => {
+    const card = document.createElement('div');
+    card.style.cssText = "display: flex; align-items: center; gap: 15px; background: #1e293b; padding: 12px; border-radius: 8px; border: 1px solid #334155;";
+
+    card.innerHTML = `
             <img src="${car.image}" style="width: 80px; height: 80px; object-fit: contain; border-radius: 4px; background: #fff;" onerror="this.src='assets/img/placeholder.png';">
             <div style="flex: 1;">
                 <div style="color: #fff; font-weight: bold; font-size: 14px; margin-bottom: 4px;">${car.name}</div>
@@ -816,47 +849,47 @@ window.renderPendingLots = function() {
                 </div>
             </div>
         `;
-        grid.appendChild(card);
-    });
+    grid.appendChild(card);
+  });
 };
 
-window.gerarCodigoLotes = function() {
-    const inputs = document.querySelectorAll('.input-lote-rapido');
-    let codigoGerado = "const LOTES_ATUALIZADOS = {\n";
-    let adicionados = 0;
+window.gerarCodigoLotes = function () {
+  const inputs = document.querySelectorAll('.input-lote-rapido');
+  let codigoGerado = "const LOTES_ATUALIZADOS = {\n";
+  let adicionados = 0;
 
-    inputs.forEach(input => {
-        const letraLote = input.value.trim().toUpperCase();
-        const skuPart = input.dataset.part;
-        
-        if (letraLote) {
-            codigoGerado += `    "${skuPart}": "${letraLote}",\n`;
-            adicionados++;
-        }
-    });
+  inputs.forEach(input => {
+    const letraLote = input.value.trim().toUpperCase();
+    const skuPart = input.dataset.part;
 
-    codigoGerado += "};\n\n";
-    codigoGerado += "// === ATUALIZADOR AUTOMÁTICO DE LOTES ===\n";
-    codigoGerado += "if (typeof RAW !== 'undefined') {\n";
-    codigoGerado += "    RAW.forEach(carro => {\n";
-    codigoGerado += "        if (LOTES_ATUALIZADOS[carro.part]) {\n";
-    codigoGerado += "            carro.cas = LOTES_ATUALIZADOS[carro.part];\n";
-    codigoGerado += "        }\n";
-    codigoGerado += "    });\n";
-    codigoGerado += "}\n";
-
-    if (adicionados === 0) {
-        alert("⚠️ Atenção: Preencha pelo menos um lote antes de gerar o código.");
-        return;
+    if (letraLote) {
+      codigoGerado += `    "${skuPart}": "${letraLote}",\n`;
+      adicionados++;
     }
+  });
 
-    const exportArea = document.getElementById('export-area');
-    const textarea = document.getElementById('export-textarea');
-    
-    textarea.value = codigoGerado;
-    exportArea.style.display = 'block';
-    
-    exportArea.scrollIntoView({ behavior: 'smooth' });
+  codigoGerado += "};\n\n";
+  codigoGerado += "// === ATUALIZADOR AUTOMÁTICO DE LOTES ===\n";
+  codigoGerado += "if (typeof RAW !== 'undefined') {\n";
+  codigoGerado += "    RAW.forEach(carro => {\n";
+  codigoGerado += "        if (LOTES_ATUALIZADOS[carro.part]) {\n";
+  codigoGerado += "            carro.cas = LOTES_ATUALIZADOS[carro.part];\n";
+  codigoGerado += "        }\n";
+  codigoGerado += "    });\n";
+  codigoGerado += "}\n";
+
+  if (adicionados === 0) {
+    alert("⚠️ Atenção: Preencha pelo menos um lote antes de gerar o código.");
+    return;
+  }
+
+  const exportArea = document.getElementById('export-area');
+  const textarea = document.getElementById('export-textarea');
+
+  textarea.value = codigoGerado;
+  exportArea.style.display = 'block';
+
+  exportArea.scrollIntoView({ behavior: 'smooth' });
 };
 
 
@@ -865,17 +898,198 @@ window.gerarCodigoLotes = function() {
 // ===================================================================
 const btnMyStoreRewards = document.getElementById('btn-my-store-rewards');
 if (btnMyStoreRewards) {
-    btnMyStoreRewards.addEventListener('click', async () => {
-        // Puxa o ID da loja da pessoa que está logada
-        lojaIdParaEditar = window.minhaLojaId || 'default';
-        
-        const lojaNomeEl = document.getElementById('loja-alvo-nome');
-        if (lojaNomeEl) lojaNomeEl.textContent = "Loja: " + lojaIdParaEditar;
-        
-        const lojaModal = document.getElementById('loja-modal');
-        if (lojaModal) lojaModal.style.display = 'flex';
-        
-        // Renderiza a lista usando a função que já existe no seu código
-        await renderAdminRewards();
+  btnMyStoreRewards.addEventListener('click', async () => {
+    // Puxa o ID da loja da pessoa que está logada
+    lojaIdParaEditar = window.minhaLojaId || 'default';
+
+    const lojaNomeEl = document.getElementById('loja-alvo-nome');
+    if (lojaNomeEl) lojaNomeEl.textContent = "Loja: " + lojaIdParaEditar;
+
+    const lojaModal = document.getElementById('loja-modal');
+    if (lojaModal) lojaModal.style.display = 'flex';
+
+    // Renderiza a lista usando a função que já existe no seu código
+    await renderAdminRewards();
+  });
+}
+
+// ===================================================================
+// GERADOR DE LINK DE CONVITE
+// ===================================================================
+const btnCopyInviteAction = document.getElementById('btn-copy-invite');
+if (btnCopyInviteAction) {
+  btnCopyInviteAction.addEventListener('click', () => {
+    const minhaLoja = window.minhaLojaId || 'default';
+
+    // Monta o link apontando direto para o app.html com a variável da loja
+    const baseUrl = window.location.href.split('admin.html')[0];
+    const inviteLink = `${baseUrl}app.html?loja=${encodeURIComponent(minhaLoja)}`;
+
+    navigator.clipboard.writeText(inviteLink).then(() => {
+      alert(`✅ Link copiado!\n\nEnvie este link no seu grupo do WhatsApp para os clientes entrarem na sua loja de Prêmios e Rifas automaticamente:\n\n${inviteLink}`);
+    }).catch(err => {
+      alert(`O seu navegador bloqueou a cópia automática. Copie este link manualmente:\n\n${inviteLink}`);
     });
+  });
+}
+
+// ===================================================================
+// SISTEMA DE GESTÃO LOGÍSTICA (GARAGENS, PAGAMENTOS E ENVIOS)
+// ===================================================================
+const btnLogistica = document.getElementById('btn-logistica');
+const logisticaView = document.getElementById('logistica-view');
+const mainDashboardRef = document.getElementById('main-dashboard-view');
+const pendingLotsViewRef = document.getElementById('pending-lots-view');
+const btnBackDashboardRef = document.getElementById('btn-back-dashboard');
+
+if (btnLogistica) {
+    btnLogistica.addEventListener('click', () => {
+        if (mainDashboardRef) mainDashboardRef.style.display = 'none';
+        if (pendingLotsViewRef) pendingLotsViewRef.style.display = 'none';
+        if (logisticaView) logisticaView.style.display = 'block';
+        window.renderLogistica();
+    });
+}
+
+// Garante que o botão de voltar também esconda a logística
+if (btnBackDashboardRef) {
+    btnBackDashboardRef.addEventListener('click', () => {
+        if (logisticaView) logisticaView.style.display = 'none';
+    });
+}
+
+window.renderLogistica = async function() {
+    const container = document.getElementById('logistica-container');
+    if (!container) return;
+    
+    container.innerHTML = '<p style="color: #cbd5e1; font-style: italic;">Buscando garagens logísticas no banco de dados...</p>';
+
+    try {
+        const usersSnap = await getDocs(collection(db, 'users'));
+        const myClients = [];
+        const minhaLojaFiltro = (window.minhaLojaId || '').toLowerCase();
+
+        usersSnap.forEach(docSnap => {
+            const uData = docSnap.data();
+            const clientLojas = (uData.lojaId || '').split(',').map(s => s.trim().toLowerCase());
+            
+            if (uData.role === 'cliente' && (window.currentUserRole === 'admin' || clientLojas.includes(minhaLojaFiltro))) {
+                myClients.push({ uid: docSnap.id, name: uData.name || uData.email, phone: uData.phone });
+            }
+        });
+
+        if (myClients.length === 0) {
+            container.innerHTML = '<div style="background: rgba(51, 65, 85, 0.5); padding: 20px; border-radius: 8px; text-align: center; color: #94a3b8;">Nenhum cliente encontrado na sua loja.</div>';
+            return;
+        }
+
+        let html = '';
+
+        for (const client of myClients) {
+            const colSnap = await getDoc(doc(db, 'collections', client.uid));
+            if (!colSnap.exists()) continue;
+
+            const colData = colSnap.data();
+            const garagemLoja = colData.garagemLoja || [];
+            
+            // Filtra para pegar apenas os carros retidos na SUA loja
+            const meusPedidos = garagemLoja.filter(p => p.lojaId === (window.minhaLojaId || 'default'));
+
+            if (meusPedidos.length === 0) continue; // Pula o cliente se a garagem da loja estiver vazia
+
+            html += `
+            <div style="background: var(--surface); border: 1px solid var(--border); border-radius: 8px; margin-bottom: 25px; padding: 20px; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);">
+                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 15px; border-bottom: 1px solid var(--border); padding-bottom: 10px;">
+                    <h3 style="color: #fff; margin: 0; font-family: 'Bebas Neue', sans-serif; font-size: 24px; letter-spacing: 1px;">👤 ${client.name}</h3>
+                    <span style="color: #94a3b8; font-size: 12px; font-family: 'Barlow', sans-serif;">${client.phone && client.phone !== '(00) 00000-0000' ? '📱 ' + client.phone : ''}</span>
+                </div>
+                <table style="width: 100%; border-collapse: collapse; font-family: 'Barlow', sans-serif; font-size: 14px;">
+                    <thead>
+                        <tr style="color: #94a3b8; border-bottom: 1px solid var(--border); text-align: left;">
+                            <th style="padding: 8px 12px;">Data</th>
+                            <th style="padding: 8px 12px;">Miniatura / ID</th>
+                            <th style="padding: 8px 12px; width: 60px; text-align: center;">Qtd</th>
+                            <th style="padding: 8px 12px; width: 200px;">Situação Logística</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+            `;
+
+            // Percorre os pedidos feitos e salvos na garagem
+            meusPedidos.forEach(pedido => {
+                let carName = pedido.carId;
+                if (typeof RAW !== 'undefined') {
+                    const carObj = RAW.find(c => c.id === pedido.carId);
+                    if (carObj) carName = `<span style="color: #e2e8f0; font-weight: 500;">${carObj.name}</span> <br><small style="color: var(--yellow);">${carObj.year} | SKU: ${carObj.part}</small>`;
+                }
+
+                let selectBg = 'var(--surface2)';
+                let selectColor = '#fff';
+                let borderColor = '#475569';
+                
+                if (pedido.status === 'pago') { 
+                    selectBg = 'rgba(34, 197, 94, 0.15)'; selectColor = 'var(--green)'; borderColor = 'var(--green)'; 
+                } else if (pedido.status === 'enviado') { 
+                    selectBg = 'rgba(56, 189, 248, 0.15)'; selectColor = '#38bdf8'; borderColor = '#38bdf8'; 
+                } else if (pedido.status === 'pendente') { 
+                    selectBg = 'rgba(239, 68, 68, 0.15)'; selectColor = 'var(--red)'; borderColor = 'var(--red)'; 
+                }
+
+                html += `
+                    <tr style="border-bottom: 1px solid rgba(255,255,255,0.05);">
+                        <td style="padding: 12px; color: #64748b; font-size: 12px;">${pedido.data}</td>
+                        <td style="padding: 12px;">${carName}</td>
+                        <td style="padding: 12px; text-align: center; font-weight: bold; color: #fff; font-size: 16px;">${pedido.qty}</td>
+                        <td style="padding: 12px;">
+                            <select onchange="window.updateItemStatus('${client.uid}', '${pedido.pedidoId}', this.value)" style="background: ${selectBg}; color: ${selectColor}; border: 1px solid ${borderColor}; padding: 8px 12px; border-radius: 6px; outline: none; cursor: pointer; font-weight: bold; width: 100%; font-family: 'Barlow Condensed', sans-serif; font-size: 15px; text-transform: uppercase;">
+                                <option value="pendente" ${pedido.status === 'pendente' ? 'selected' : ''} style="background:var(--surface); color:#fff;">🔴 Pendente de Pgto</option>
+                                <option value="pago" ${pedido.status === 'pago' ? 'selected' : ''} style="background:var(--surface); color:#fff;">🟢 Pago (Na Garagem)</option>
+                                <option value="enviado" ${pedido.status === 'enviado' ? 'selected' : ''} style="background:var(--surface); color:#fff;">📦 Enviado / Retirado</option>
+                            </select>
+                        </td>
+                    </tr>
+                `;
+            });
+
+            html += `
+                    </tbody>
+                </table>
+            </div>
+            `;
+        }
+
+        if (html === '') {
+            container.innerHTML = '<div style="background: rgba(51, 65, 85, 0.5); padding: 20px; border-radius: 8px; text-align: center; color: #94a3b8;">Nenhum cliente possui itens retidos na sua loja no momento.</div>';
+        } else {
+            container.innerHTML = html;
+        }
+
+    } catch(e) {
+        console.error("Erro ao renderizar logística:", e);
+        container.innerHTML = '<p style="color: var(--red);">Erro ao carregar os dados de logística. Verifique a conexão.</p>';
+    }
+}
+
+window.updateItemStatus = async function(uid, pedidoId, newStatus) {
+    try {
+        const docRef = doc(db, 'collections', uid);
+        const snap = await getDoc(docRef);
+        
+        if (snap.exists()) {
+            let garagemLoja = snap.data().garagemLoja || [];
+            
+            // Procura o pedido exato pelo ID e atualiza o status
+            let index = garagemLoja.findIndex(p => p.pedidoId === pedidoId);
+            if (index !== -1) {
+                garagemLoja[index].status = newStatus;
+                await updateDoc(docRef, { garagemLoja: garagemLoja });
+                
+                // Recarrega a tela para atualizar as cores e painel
+                window.renderLogistica();
+            }
+        }
+    } catch(e) {
+        console.error("Erro ao atualizar status logístico:", e);
+        alert("Erro ao atualizar o status no banco de dados.");
+    }
 }
