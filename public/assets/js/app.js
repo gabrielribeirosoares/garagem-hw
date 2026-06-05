@@ -1062,7 +1062,7 @@ function openLb(index) {
   lbIndex = index;
   const listaAtual = window.currentFilteredData || PAGE_DATA;
   const r = listaAtual[lbIndex];
-
+  
   if (!r) return;
 
   const qty = (typeof userCollection !== 'undefined' ? userCollection[r.id] : 0) || 0;
@@ -1094,6 +1094,8 @@ function openLb(index) {
   const lbInfo = document.querySelector('.lb-info');
   if (lbInfo) {
     lbInfo.innerHTML = `
+      <button onclick="document.getElementById('lightbox').style.display='none'" style="position: absolute; top: 15px; right: 15px; background: #ef4444; color: white; border: none; border-radius: 50%; width: 40px; height: 40px; font-size: 20px; font-weight: bold; cursor: pointer; display: flex; align-items: center; justify-content: center; z-index: 100; box-shadow: 0 4px 12px rgba(0,0,0,0.5);">✕</button>
+      
       <div class="lb-details-title">${nomeCarro}</div>
       <div class="lb-stat-row">
         <span class="lb-stat-label">Série / Marca</span>
@@ -1117,7 +1119,7 @@ function openLb(index) {
       </div>
       ${hasItem ? `
         <button onclick="window.alterarPrecoItem('${itemId}', ${isKaido})" style="margin-top: 15px; background: #475569; color: #fff; border: 1px solid #64748b; padding: 8px 12px; border-radius: 6px; font-family: 'Barlow', sans-serif; font-size: 13px; cursor: pointer; transition: 0.2s; font-weight: 500;">
-          Editar Preço Pago
+          ✏️ Editar Preço Pago
         </button>
       ` : ''}
       <div class="lb-status-badge" style="color: ${badgeColor}; background: ${badgeBg}; border: 1px solid ${badgeColor}; margin-top: 20px; margin-bottom: 20px;">
@@ -2095,11 +2097,13 @@ window.renderStats = function () {
             <h2 style="font-family: 'Bebas Neue', sans-serif; color: #fff; font-size: 32px; margin: 0; letter-spacing: 1px;">Visão Geral da Garagem</h2>
             <p style="color: var(--muted); font-size: 14px;">Acompanhe o crescimento e a valorização do seu império diecast.</p>
         </div>
-        <button onclick="window.gerarInfografico()" style="background: #3b82f6; color: #fff; border: none; padding: 10px 20px; border-radius: 8px; font-family: 'Bebas Neue', sans-serif; font-size: 18px; cursor: pointer; letter-spacing: 1px; display: flex; align-items: center; gap: 8px; box-shadow: 0 4px 12px rgba(59, 130, 246, 0.4);">
-            📸 Compartilhar Status
-        </button>
+        <div style="display: flex; gap: 10px; flex-wrap: wrap;">
+            <button onclick="window.gerarInfografico()" style="background: #3b82f6; color: #fff; border: none; padding: 10px 20px; border-radius: 8px; font-family: 'Bebas Neue', sans-serif; font-size: 18px; cursor: pointer; letter-spacing: 1px; display: flex; align-items: center; gap: 8px; box-shadow: 0 4px 12px rgba(59, 130, 246, 0.4);">
+                📸 Compartilhar Status
+            </button>
+        </div>
     </div>
-
+    
     <div style="background: linear-gradient(135deg, #1e293b, #0f172a); padding: 25px; border-radius: 12px; border: 1px solid #10b981; margin-bottom: 25px; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 15px;">
         <div>
             <div style="color: #10b981; font-family: 'Bebas Neue', sans-serif; font-size: 20px; letter-spacing: 1px;">Patrimônio Estimado</div>
@@ -3008,3 +3012,15 @@ window.alterarPrecoItem = async function (id, isKaido) {
     if (typeof updateCounts === 'function') updateCounts();
   }
 };
+
+document.addEventListener('DOMContentLoaded', () => {
+  const lb = document.getElementById('lightbox');
+  if (lb) {
+    lb.addEventListener('click', (e) => {
+      if (e.target === lb) {
+        lb.style.display = 'none';
+      }
+    });
+  }
+});
+
