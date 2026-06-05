@@ -111659,2647 +111659,2649 @@ export const RAW = [
     "cas": "",
     "image": "https://static.wikia.nocookie.net/hotwheels/images/8/81/No_Fear_Race_Car_BlkBW.JPG/revision/latest?cb=20090207030713"
   },
-  {
-    "year": "1994",
-    "name": "Driven To The Max",
-    "series": "",
-    "color": "Bright Orange & Grey wing",
-    "part": "11847",
-    "hw": "BW",
-    "cas": "Red & Blue \"DRIVEN TO THE MAX\"",
-    "image": "https://static.wikia.nocookie.net/hotwheels/images/3/36/Dragster_Org.JPG/revision/latest?cb=20090331010645"
-  },
-  {
-    "year": "1994",
-    "name": "Shadow Jet II",
-    "series": "",
-    "color": "Chrome",
-    "part": "11848",
-    "hw": "UH",
-    "cas": "N/A",
-    "image": "https://static.wikia.nocookie.net/hotwheels/images/7/7b/Shadow_Jet_II_Crm.JPG/revision/latest?cb=20090213154346"
-  },
-  {
-    "year": "1994",
-    "name": "Rigor Motor",
-    "series": "",
-    "color": "Burgundy",
-    "part": "11849",
-    "hw": "BW",
-    "cas": "Tiny White Hot Wheels Logo",
-    "image": "https://static.wikia.nocookie.net/hotwheels/images/2/2a/Rigor_Motor_MtRed.JPG/revision/latest?cb=20090321044506"
-  },
-  {
-    "year": "1994",
-    "name": "Splittin' Image II",
-    "series": "",
-    "color": "Metallic Dark Purple",
-    "part": "11850",
-    "hw": "PUH",
-    "cas": "Tiny Red & White Hot Wheels Logo",
-    "image": "https://static.wikia.nocookie.net/hotwheels/images/9/9e/Splittin%27_Image_II_PrplUHpnkRt.JPG/revision/latest?cb=20090102232125"
-  },
-  {
-    "year": "1994",
-    "name": "Vector \"Avtech\" WX-3",
-    "series": "",
-    "color": "Metalflake Lavender",
-    "part": "3050",
-    "hw": "UH",
-    "cas": "Black stripe & Vector logo on sides",
-    "image": "https://static.wikia.nocookie.net/hotwheels/images/a/a5/Vector_Avtech_PrpUH.JPG/revision/latest?cb=20090110181931"
-  },
-  {
-    "year": "1994",
-    "name": "Vector \"Avtech\" WX-3",
-    "series": "",
-    "color": "Metalflake Lavender",
-    "part": "3050",
-    "hw": "5SP",
-    "cas": "Black stripe & Vector logo on sides",
-    "image": "https://static.wikia.nocookie.net/hotwheels/images/d/d3/Vector_Avtech_Prp5SP.JPG/revision/latest?cb=20090110181902"
-  },
-  {
-    "year": "1994",
-    "name": "Sol-Aire CX-4",
-    "series": "",
-    "color": "Metallic Blue",
-    "part": "",
-    "hw": "UH",
-    "cas": "Hot Wheels Race Team Deco. \"1\", Chevy Logo",
-    "image": "https://static.wikia.nocookie.net/hotwheels/images/5/5a/Sol_Aire_BluUH.JPG/revision/latest?cb=20091018113649"
-  },
-  {
-    "year": "1994",
-    "name": "BMW 850i",
-    "series": "",
-    "color": "Metalflake Dark Blue",
-    "part": "5667",
-    "hw": "UH",
-    "cas": "Tiny Red Hot Wheels logo on back window",
-    "image": "https://static.wikia.nocookie.net/hotwheels/images/6/6d/BMW_850_MtBluUH1.JPG/revision/latest?cb=20090120001518"
-  },
-  {
-    "year": "1994",
-    "name": "BMW 850i",
-    "series": "",
-    "color": "Metalflake Dark Blue",
-    "part": "5667",
-    "hw": "GUH",
-    "cas": "Tiny Red Hot Wheels logo on back window",
-    "image": "https://static.wikia.nocookie.net/hotwheels/images/6/6a/BMW_850_MtBluUHG.JPG/revision/latest?cb=20090120001542"
-  },
-  {
-    "year": "1994",
-    "name": "Lamborghini Countach",
-    "series": "",
-    "color": "Red",
-    "part": "4384",
-    "hw": "GUH",
-    "cas": "White, Black \"Countach\"",
-    "image": "https://static.wikia.nocookie.net/hotwheels/images/f/f2/Cod64.jpg/revision/latest?cb=20081031024723"
-  },
-  {
-    "year": "1994",
-    "name": "Nissan Custom \"Z\"",
-    "series": "",
-    "color": "Metalflake Purple",
-    "part": "13584",
-    "hw": "UH",
-    "cas": "Yellow stripes on hood & roof, '300ZX' on hood",
-    "image": "https://static.wikia.nocookie.net/hotwheels/images/d/d9/Nissan_Custom_Z_PrpUH.JPG/revision/latest?cb=20090114211028"
-  },
-  {
-    "year": "1994",
-    "name": "Road Roller",
-    "series": "1994 INTL",
-    "color": "Yellow",
-    "part": "3853",
-    "hw": "Roller",
-    "cas": "N/A",
-    "image": "https://static.wikia.nocookie.net/hotwheels/images/b/b5/Image_Not_Available.jpg/revision/latest?cb=20151025125428"
-  },
-  {
-    "year": "1994",
-    "name": "Tough Customer",
-    "series": "",
-    "color": "Light Grey",
-    "part": "13192",
-    "hw": "Black MGW",
-    "cas": "Brown, Black & White Camouflage",
-    "image": "https://static.wikia.nocookie.net/hotwheels/images/7/70/Big_Bertha_gryL.JPG/revision/latest?cb=20100723020736"
-  },
-  {
-    "year": "1994",
-    "name": "Corvette Stingray",
-    "series": "",
-    "color": "White",
-    "part": "12925",
-    "hw": "5SP",
-    "cas": "Small Blue Hot Wheels logo on right rear fender",
-    "image": "https://static.wikia.nocookie.net/hotwheels/images/6/63/Corvette_Stingray_Wht5SP.JPG/revision/latest?cb=20081208171104"
-  },
-  {
-    "year": "1993",
-    "name": "'93 Camaro",
-    "series": "",
-    "color": "Purple",
-    "part": "3021",
-    "hw": "UH",
-    "cas": "Red, Yellow \"Camaro\" on sides",
-    "image": "https://static.wikia.nocookie.net/hotwheels/images/f/f7/%2793_Camaro_Prp.JPG/revision/latest?cb=20090206215334"
-  },
-  {
-    "year": "1993",
-    "name": "Jaguar XJ220",
-    "series": "",
-    "color": "Metallic Silver",
-    "part": "3026",
-    "hw": "UH",
-    "cas": "N/A",
-    "image": "https://static.wikia.nocookie.net/hotwheels/images/4/4e/Jaguar_XJ220_-_Silver.JPG/revision/latest?cb=20080910053157"
-  },
-  {
-    "year": "1993",
-    "name": "Oscar Mayer Wienermobile",
-    "series": "",
-    "color": "Red, Yellow and Tan",
-    "part": "3029",
-    "hw": "BW Black",
-    "cas": "Whit & Red \"Oscar Mayer\" Logo",
-    "image": "https://static.wikia.nocookie.net/hotwheels/images/3/38/Oscar_Mayer_Wienermobile_BBW.JPG/revision/latest?cb=20090203005838"
-  },
-  {
-    "year": "1993",
-    "name": "Pipe Jammer",
-    "series": "",
-    "color": "Yellow",
-    "part": "3036",
-    "hw": "UH",
-    "cas": "no tampo",
-    "image": "https://static.wikia.nocookie.net/hotwheels/images/b/be/Pipe_Jammer_Yel.JPG/revision/latest?cb=20090110192556"
-  },
-  {
-    "year": "1993",
-    "name": "Avus Quattro",
-    "series": "",
-    "color": "Met. Silver",
-    "part": "5250",
-    "hw": "UH",
-    "cas": "Silver and Black on roof",
-    "image": "https://static.wikia.nocookie.net/hotwheels/images/b/bc/Avus_Quatro_SilvUH.JPG/revision/latest?cb=20090113011549"
-  },
-  {
-    "year": "1993",
-    "name": "Lexus SC400",
-    "series": "",
-    "color": "Metalflake Black",
-    "part": "5263",
-    "hw": "BW",
-    "cas": "N/A",
-    "image": "https://static.wikia.nocookie.net/hotwheels/images/b/bf/Lexus_SC400_Blkbw.JPG/revision/latest?cb=20091118224734"
-  },
-  {
-    "year": "1993",
-    "name": "Dodge Viper RT/10",
-    "series": "",
-    "color": "Red",
-    "part": "5265",
-    "hw": "UH",
-    "cas": "N/A",
-    "image": "https://static.wikia.nocookie.net/hotwheels/images/9/91/Viper_RT10_-_30th_Anni.JPG/revision/latest?cb=20090102204532"
-  },
-  {
-    "year": "1993",
-    "name": "Silhouette II",
-    "series": "",
-    "color": "Met. Purple w/Chrome Engine",
-    "part": "5267",
-    "hw": "UH",
-    "cas": "N/A",
-    "image": "https://static.wikia.nocookie.net/hotwheels/images/1/18/Silouette_II_PrpUH.JPG/revision/latest?cb=20090102173214"
-  },
-  {
-    "year": "1993",
-    "name": "Treadator",
-    "series": "",
-    "color": "Red & Chrome",
-    "part": "3035",
-    "hw": "Black track with tiny rollers",
-    "cas": "N/A",
-    "image": "https://static.wikia.nocookie.net/hotwheels/images/c/c3/Treadator_Red.JPG/revision/latest?cb=20090131152944"
-  },
-  {
-    "year": "1993",
-    "name": "Twin Mill II",
-    "series": "",
-    "color": "Bright Yellow-Green",
-    "part": "5266",
-    "hw": "UH",
-    "cas": "N/A",
-    "image": "https://static.wikia.nocookie.net/hotwheels/images/6/63/Twin_Mill_II_BrtYel.JPG/revision/latest?cb=20090321044827"
-  },
-  {
-    "year": "1993",
-    "name": "BMW 850i",
-    "series": "",
-    "color": "Blue",
-    "part": "5667",
-    "hw": "HO",
-    "cas": "Pink, Blue, Yellow, White markings",
-    "image": "https://static.wikia.nocookie.net/hotwheels/images/5/59/BMW_850_BluHO.JPG/revision/latest?cb=20090120001246"
-  },
-  {
-    "year": "1993",
-    "name": "BMW 850i",
-    "series": "",
-    "color": "Blue",
-    "part": "5667",
-    "hw": "LIW",
-    "cas": "Pink, Blue, Yellow, White markings",
-    "image": "https://static.wikia.nocookie.net/hotwheels/images/9/98/BMW_850_BluGrn.JPG/revision/latest?cb=20090120001219"
-  },
-  {
-    "year": "1993",
-    "name": "Corvette Split Window",
-    "series": "",
-    "color": "Blue",
-    "part": "3092",
-    "hw": "WW",
-    "cas": "Yellow, Red and Purple graphics",
-    "image": "https://static.wikia.nocookie.net/hotwheels/images/1/1c/Th_63corvette016.jpg/revision/latest?cb=20080821193148"
-  },
-  {
-    "year": "1993",
-    "name": "Gleamer Patrol",
-    "series": "",
-    "color": "Textured Chrome",
-    "part": "1691",
-    "hw": "BW",
-    "cas": "N/A",
-    "image": "https://static.wikia.nocookie.net/hotwheels/images/b/bf/Sheriff_Patrol_glmrLt.JPG/revision/latest?cb=20091030152009"
-  },
-  {
-    "year": "1993",
-    "name": "Corvette Convertible",
-    "series": "",
-    "color": "White",
-    "part": "2898",
-    "hw": "UH",
-    "cas": "Black, Red, Yellow \"CORVETTE\" on hood and sides",
-    "image": "https://static.wikia.nocookie.net/hotwheels/images/e/e7/Custom_Corvette_WhtUH.JPG/revision/latest?cb=20081121173456"
-  },
-  {
-    "year": "1993",
-    "name": "Zombot",
-    "series": "",
-    "color": "Blue Chrome Pink Gun",
-    "part": "3852",
-    "hw": "UH",
-    "cas": "N/A",
-    "image": "https://static.wikia.nocookie.net/hotwheels/images/9/9c/224_Zombot_1993_.JPG/revision/latest?cb=20111120120843"
-  },
-  {
-    "year": "1993",
-    "name": "Zender Fact 4",
-    "series": "",
-    "color": "Metallic Blue",
-    "part": "4407",
-    "hw": "UH",
-    "cas": "Zender Fact 4",
-    "image": "https://static.wikia.nocookie.net/hotwheels/images/2/26/Zender_fact_4_blue_metallic_tinted_glass_UH_wheels.JPG/revision/latest?cb=20120130203629"
-  },
-  {
-    "year": "1993",
-    "name": "Lamborghini Countach",
-    "series": "",
-    "color": "Red",
-    "part": "4384",
-    "hw": "UH",
-    "cas": "White, Black \"Countach\"",
-    "image": "https://static.wikia.nocookie.net/hotwheels/images/5/5d/Lamborghini_Countach_RedStrp.JPG/revision/latest?cb=20091002161145"
-  },
-  {
-    "year": "1993",
-    "name": "Lamborghini Countach",
-    "series": "",
-    "color": "White",
-    "part": "4384",
-    "hw": "5DOT",
-    "cas": "N/A",
-    "image": "https://static.wikia.nocookie.net/hotwheels/images/6/6a/Lamborghini_Countach_package_front.png/revision/latest?cb=20161104115429"
-  },
-  {
-    "year": "1993",
-    "name": "Swingfire",
-    "series": "",
-    "color": "Metalflake Dark Blue",
-    "part": "4312",
-    "hw": "WWBW",
-    "cas": "Yellow & White deco on hood",
-    "image": "https://static.wikia.nocookie.net/hotwheels/images/a/a4/Swingfire_package_front.png/revision/latest?cb=20160112173938"
-  },
-  {
-    "year": "1993",
-    "name": "Auburn 852",
-    "series": "",
-    "color": "Red",
-    "part": "4314",
-    "hw": "WWBW",
-    "cas": "N/A",
-    "image": "https://static.wikia.nocookie.net/hotwheels/images/1/11/Auburn_852_%282%29_package_front.png/revision/latest?cb=20160112173235"
-  },
-  {
-    "year": "1993",
-    "name": "Pontiac Banshee",
-    "series": "",
-    "color": "Red",
-    "part": "1796",
-    "hw": "UH Gold",
-    "cas": "No tampos",
-    "image": "https://static.wikia.nocookie.net/hotwheels/images/f/f6/Pontiac_Banshee_RdgldUHpL.JPG/revision/latest?cb=20090925143029"
-  },
-  {
-    "year": "1993",
-    "name": "XT-3",
-    "series": "",
-    "color": "White",
-    "part": "4544",
-    "hw": "BW & MC1",
-    "cas": "White, Red and Yellow flames",
-    "image": "https://static.wikia.nocookie.net/hotwheels/images/0/08/XT-3_Wht.JPG/revision/latest?cb=20090109041554"
-  },
-  {
-    "year": "1993",
-    "name": "Mazda MX-5 Miata",
-    "series": "",
-    "color": "Yellow",
-    "part": "0454",
-    "hw": "BW",
-    "cas": "Pink triangles, Blue \"Miata\"",
-    "image": "https://static.wikia.nocookie.net/hotwheels/images/8/80/Mazda_Miata_YelBW.JPG/revision/latest?cb=20090115215124"
-  },
-  {
-    "year": "1993",
-    "name": "Mercedes 380 SEL",
-    "series": "",
-    "color": "Pink with Red glitter",
-    "part": "4408",
-    "hw": "UH",
-    "cas": "No tampo",
-    "image": "https://static.wikia.nocookie.net/hotwheels/images/2/27/Mercedes_380_Pnk.JPG/revision/latest?cb=20090314153600"
-  },
-  {
-    "year": "1993",
-    "name": "Troop Convoy",
-    "series": "",
-    "color": "Gray-Brown",
-    "part": "4921",
-    "hw": "Black BW",
-    "cas": "White star and \"US Army\" on hood, Black, Brown, White Camouflage on cover",
-    "image": "https://static.wikia.nocookie.net/hotwheels/images/4/42/Troop_Convoy_GryBrn.JPG/revision/latest?cb=20091115143037"
-  },
-  {
-    "year": "1993",
-    "name": "Ferrari 348",
-    "series": "",
-    "color": "Bright Pink",
-    "part": "4348",
-    "hw": "UH",
-    "cas": "Black, White, Yellow \"Ferrari 348\" on hood",
-    "image": "https://static.wikia.nocookie.net/hotwheels/images/0/09/Ferrari_348_05.JPG/revision/latest?cb=20140519150627"
-  },
-  {
-    "year": "1993",
-    "name": "Toyota MR2",
-    "series": "",
-    "color": "White",
-    "part": "4609",
-    "hw": "UH",
-    "cas": "Red, Purple, Pink \"34\"",
-    "image": "https://static.wikia.nocookie.net/hotwheels/images/a/a7/Toyota_Rally_WhtUH.JPG/revision/latest?cb=20090117172429"
-  },
-  {
-    "year": "1993",
-    "name": "Purple Passion",
-    "series": "",
-    "color": "Metallic Purple",
-    "part": "2173",
-    "hw": "WW",
-    "cas": "Yellow Flames Outlined in Blue on Sides & Hood",
-    "image": "https://static.wikia.nocookie.net/hotwheels/images/b/b9/Passion_AGENTAIR_3.jpg/revision/latest?cb=20080906015854"
-  },
-  {
-    "year": "1993",
-    "name": "Path Beater",
-    "series": "",
-    "color": "Pearl White",
-    "part": "2781",
-    "hw": "CT",
-    "cas": "Orange & Pink spots, gray stripes",
-    "image": "https://static.wikia.nocookie.net/hotwheels/images/4/4d/Bywayman_WtBluCT.JPG/revision/latest?cb=20090101184208"
-  },
-  {
-    "year": "1993",
-    "name": "Bywayman",
-    "series": "",
-    "color": "Fluorescent Yellow",
-    "part": "2781",
-    "hw": "CT",
-    "cas": "Blue, Red &, White \"Ecology Center\" & \"Recycle\"",
-    "image": "https://static.wikia.nocookie.net/hotwheels/images/2/28/Power_Plower_BetGrnCT.JPG/revision/latest?cb=20081222032853"
-  },
-  {
-    "year": "1993",
-    "name": "Street Roader",
-    "series": "",
-    "color": "Metalflake Green",
-    "part": "4318",
-    "hw": "CT",
-    "cas": "Magenta, Blue & Red tampos, \"4x4\"",
-    "image": "https://static.wikia.nocookie.net/hotwheels/images/8/89/Street_Roader_Grn.JPG/revision/latest?cb=20090301185810"
-  },
-  {
-    "year": "1993",
-    "name": "Gulch Stepper",
-    "series": "",
-    "color": "Flourescent Yellow",
-    "part": "4320",
-    "hw": "CT",
-    "cas": "Red Orange, Black, \"15\" racing decals",
-    "image": "https://static.wikia.nocookie.net/hotwheels/images/4/40/Gulch_Stepper_BrtYel.JPG/revision/latest?cb=20090111005419"
-  },
-  {
-    "year": "1993",
-    "name": "Blazer 4×4",
-    "series": "",
-    "color": "Blue w/ Red Glitter",
-    "part": "4324",
-    "hw": "CT",
-    "cas": "No tampo",
-    "image": "https://static.wikia.nocookie.net/hotwheels/images/f/f9/Blazer_4x4_BluGltr.JPG/revision/latest?cb=20090109153449"
-  },
-  {
-    "year": "1993",
-    "name": "Baja Bug",
-    "series": "",
-    "color": "Red with Red Glitter",
-    "part": "4325",
-    "hw": "BW",
-    "cas": "",
-    "image": "https://static.wikia.nocookie.net/hotwheels/images/d/dd/Baja_Bug_RedGltr.JPG/revision/latest?cb=20091018130703"
-  },
-  {
-    "year": "1993",
-    "name": "Zombot",
-    "series": "",
-    "color": "Blue Chrome",
-    "part": "4346",
-    "hw": "UH",
-    "cas": "Pink",
-    "image": "https://static.wikia.nocookie.net/hotwheels/images/5/57/Zombot_Blu.JPG/revision/latest?cb=20090113013446"
-  },
-  {
-    "year": "1993",
-    "name": "Double Demon",
-    "series": "",
-    "color": "Bright Yellow",
-    "part": "2850",
-    "hw": "UH",
-    "cas": "Green Spots",
-    "image": "https://static.wikia.nocookie.net/hotwheels/images/9/9b/Double_Demon_YelUH.JPG/revision/latest?cb=20090113051234"
-  },
-  {
-    "year": "1993",
-    "name": "Mercedes-Benz Unimog",
-    "series": "",
-    "color": "Tan",
-    "part": "4643",
-    "hw": "WCT",
-    "cas": "Brown, Black & Orange Camouflage",
-    "image": "https://static.wikia.nocookie.net/hotwheels/images/6/64/Mercedes_Benz_Unimog_TanCTW.JPG/revision/latest?cb=20090108184715"
-  },
-  {
-    "year": "1993",
-    "name": "Good Humor Truck",
-    "series": "",
-    "color": "Fluorescent Yellow / Neon Yellow",
-    "part": "3206",
-    "hw": "Green BW",
-    "cas": "Orange, Green & Black graphics, \"SKATEBOARD\", \"COOL!\", \"RENTAL\"",
-    "image": "https://static.wikia.nocookie.net/hotwheels/images/f/f5/Good_Humor_Truck_LimeGrn.JPG/revision/latest?cb=20091118021815"
-  },
-  {
-    "year": "1993",
-    "name": "Tractor",
-    "series": "",
-    "color": "Red",
-    "part": "2075",
-    "hw": "CT",
-    "cas": "No tampos",
-    "image": "https://static.wikia.nocookie.net/hotwheels/images/b/b5/Tractor_Red.JPG/revision/latest?cb=20081220203728"
-  },
-  {
-    "year": "1993",
-    "name": "Ford Stake Bed Truck",
-    "series": "",
-    "color": "Red",
-    "part": "4641",
-    "hw": "BW",
-    "cas": "Red, Yellow and White \"RAPID DELIVERY\"",
-    "image": "https://static.wikia.nocookie.net/hotwheels/images/5/58/StakebedRFred91.jpg/revision/latest?cb=20081212043313"
-  },
-  {
-    "year": "1993",
-    "name": "'57 Chevy",
-    "series": "",
-    "color": "Teal",
-    "part": "4311",
-    "hw": "5SP",
-    "cas": "Yellow, Purple & Orange tampos, stripes on sides  Yellow HW logo in right door only",
-    "image": "https://static.wikia.nocookie.net/hotwheels/images/a/ad/M1992-01.jpg/revision/latest?cb=20190521161647"
-  },
-  {
-    "year": "1993",
-    "name": "Auburn 852",
-    "series": "",
-    "color": "Red w/ Black fenders",
-    "part": "4314",
-    "hw": "White Wall BW",
-    "cas": "None",
-    "image": "https://static.wikia.nocookie.net/hotwheels/images/b/b4/Auburn_852_MtRedWW.JPG/revision/latest?cb=20091002135952"
-  },
-  {
-    "year": "1993",
-    "name": "3-Window '34",
-    "series": "",
-    "color": "White & Purple",
-    "part": "2334",
-    "hw": "BW",
-    "cas": "Black, Purple, Orange lines",
-    "image": "https://static.wikia.nocookie.net/hotwheels/images/e/ef/3_Window_34_WhtPrpBW.JPG/revision/latest?cb=20091017041825"
-  },
-  {
-    "year": "1993",
-    "name": "Baja Breaker",
-    "series": "Open Wide",
-    "color": "Maroon with fading Yellow front",
-    "part": "3490",
-    "hw": "BW",
-    "cas": "Black, Yellow, Red, White mouth with fangs",
-    "image": "https://static.wikia.nocookie.net/hotwheels/images/b/b6/Baja_Breaker_OpenWide.jpg/revision/latest?cb=20090314134557"
-  },
-  {
-    "year": "1993",
-    "name": "BMW 323",
-    "series": "Skull Rider",
-    "color": "Metallic Pink",
-    "part": "3492",
-    "hw": "BW",
-    "cas": "Black & White Skulls, Green & Black Snakes",
-    "image": "https://static.wikia.nocookie.net/hotwheels/images/6/60/BMW_323_-_Tattoo_Machines.jpg/revision/latest?cb=20151026224346"
-  },
-  {
-    "year": "1993",
-    "name": "BMW M1",
-    "series": "Street Dog",
-    "color": "Metallic Blue",
-    "part": "",
-    "hw": "BW",
-    "cas": "Purple, Blue and Red dogs",
-    "image": "https://static.wikia.nocookie.net/hotwheels/images/3/35/BMW_M1_Dog.JPG/revision/latest?cb=20090314163606"
-  },
-  {
-    "year": "1993",
-    "name": "Monster Vette",
-    "series": "Street Beast",
-    "color": "Yellow",
-    "part": "3716",
-    "hw": "CTS",
-    "cas": "Black, Orange, White, tigers & stripes",
-    "image": "https://static.wikia.nocookie.net/hotwheels/images/7/7f/Monster_Vette_StrtBst_R.JPG/revision/latest?cb=20090924131953"
-  },
-  {
-    "year": "1993",
-    "name": "Porsche 959",
-    "series": "Eye-Gor",
-    "color": "Yellow & Light Green",
-    "part": "3493",
-    "hw": "BW",
-    "cas": "Red, Black , Blue Eyes",
-    "image": "https://static.wikia.nocookie.net/hotwheels/images/e/e2/Porsche_959_Eyegor.JPG/revision/latest?cb=20090120021643"
-  },
-  {
-    "year": "1993",
-    "name": "Race Bait 308",
-    "series": "Hot Wheels",
-    "color": "Blue",
-    "part": "3494",
-    "hw": "BW",
-    "cas": "White, Red, Yellow, Hot Wheels Logos",
-    "image": "https://static.wikia.nocookie.net/hotwheels/images/1/1a/Hot_Wheels_Frri.JPG/revision/latest?cb=20090215210440"
-  },
-  {
-    "year": "1993",
-    "name": "Rapid Transit",
-    "series": "Bus Boys",
-    "color": "White",
-    "part": "3502",
-    "hw": "BW",
-    "cas": "Brown, Orange, Green covered in words",
-    "image": "https://static.wikia.nocookie.net/hotwheels/images/7/73/Rapid_Transit_WhtTat.JPG/revision/latest?cb=20090218220350"
-  },
-  {
-    "year": "1993",
-    "name": "Rapid Transit",
-    "series": "Bus Boys",
-    "color": "Yellow",
-    "part": "3502",
-    "hw": "BW",
-    "cas": "Brown, Orange, Green covered in words",
-    "image": "https://static.wikia.nocookie.net/hotwheels/images/e/eb/Rapid_Transit_YelTat1.JPG/revision/latest?cb=20090215181612"
-  },
-  {
-    "year": "1993",
-    "name": "Science Friction",
-    "series": "Lightning Storm",
-    "color": "Blue",
-    "part": "",
-    "hw": "BW",
-    "cas": "Blue, Pink, Light Green, lightning bolts",
-    "image": "https://static.wikia.nocookie.net/hotwheels/images/e/eb/Lightning_Storm_L.JPG/revision/latest?cb=20091004030500"
-  },
-  {
-    "year": "1993",
-    "name": "Speed Blaster",
-    "series": "Dragon Wagon",
-    "color": "Green with fading Yellow rear",
-    "part": "",
-    "hw": "BW",
-    "cas": "Yellow, Green, Red, dragon",
-    "image": "https://static.wikia.nocookie.net/hotwheels/images/7/72/Speed_Blaster_grnBW.JPG/revision/latest?cb=20091002001135"
-  },
-  {
-    "year": "1993",
-    "name": "Sting Rod",
-    "series": "Ammo",
-    "color": "Metallic Silver",
-    "part": "3527",
-    "hw": "CTS Black",
-    "cas": "Yellow, Black, Green, Red markings",
-    "image": "https://static.wikia.nocookie.net/hotwheels/images/b/b2/Ammo.JPG/revision/latest?cb=20090208235151"
-  },
-  {
-    "year": "1993",
-    "name": "Talbot Lago",
-    "series": "Spiderider",
-    "color": "White",
-    "part": "3479",
-    "hw": "WW",
-    "cas": "Black and Red Spiders",
-    "image": "https://static.wikia.nocookie.net/hotwheels/images/c/cc/Talbot_Lago_Spdr.JPG/revision/latest?cb=20090319202521"
-  },
-  {
-    "year": "1993",
-    "name": "Road Pirate",
-    "series": "Road Pirate",
-    "color": "Red",
-    "part": "",
-    "hw": "BW",
-    "cas": "Yellow, Black, White, skull, treasure map, sword",
-    "image": "https://static.wikia.nocookie.net/hotwheels/images/9/97/Road_Pirate.JPG/revision/latest?cb=20091006022436"
-  },
-  {
-    "year": "1993",
-    "name": "",
-    "series": "1/9",
-    "color": "",
-    "part": "10566",
-    "hw": "",
-    "cas": "",
-    "image": "https://static.wikia.nocookie.net/hotwheels/images/0/0d/Oldsmobile_Aurora_Gry.JPG/revision/latest?cb=20081215173514"
-  },
-  {
-    "year": "1993",
-    "name": "",
-    "series": "2/9",
-    "color": "",
-    "part": "11082",
-    "hw": "",
-    "cas": "",
-    "image": "https://static.wikia.nocookie.net/hotwheels/images/4/4c/Olds_442_W-30_Red.JPG/revision/latest?cb=20081220073846"
-  },
-  {
-    "year": "1993",
-    "name": "",
-    "series": "3/9",
-    "color": "",
-    "part": "11083",
-    "hw": "",
-    "cas": "",
-    "image": "https://static.wikia.nocookie.net/hotwheels/images/a/a1/GM_Ultralite_Deman.JPG/revision/latest?cb=20081208183833"
-  },
-  {
-    "year": "1993",
-    "name": "",
-    "series": "4/9",
-    "color": "",
-    "part": "11084",
-    "hw": "",
-    "cas": "",
-    "image": "https://static.wikia.nocookie.net/hotwheels/images/5/50/GM_Lean_Machine_Demo.JPG/revision/latest?cb=20090104060842"
-  },
-  {
-    "year": "1993",
-    "name": "",
-    "series": "5/9",
-    "color": "",
-    "part": "11085",
-    "hw": "",
-    "cas": "",
-    "image": "https://static.wikia.nocookie.net/hotwheels/images/e/e7/Corvette_Stingray_III_-_93_Demolition_Man.jpg/revision/latest?cb=20081203092048"
-  },
-  {
-    "year": "1993",
-    "name": "",
-    "series": "6/9",
-    "color": "",
-    "part": "11087",
-    "hw": "",
-    "cas": "",
-    "image": "https://static.wikia.nocookie.net/hotwheels/images/2/2d/Pontiac_Salsa_orgBWO2.JPG/revision/latest?cb=20081210042541"
-  },
-  {
-    "year": "1993",
-    "name": "",
-    "series": "7/9",
-    "color": "",
-    "part": "11088",
-    "hw": "",
-    "cas": "",
-    "image": "https://static.wikia.nocookie.net/hotwheels/images/7/72/Pontiac_Banshee_RedDemoMan.jpg/revision/latest?cb=20081119233208"
-  },
-  {
-    "year": "1993",
-    "name": "",
-    "series": "8/9",
-    "color": "",
-    "part": "11089",
-    "hw": "",
-    "cas": "",
-    "image": "https://static.wikia.nocookie.net/hotwheels/images/3/39/Buick_Wildcat_CRedBW.JPG/revision/latest?cb=20090104210913"
-  },
-  {
-    "year": "1993",
-    "name": "",
-    "series": "9/9",
-    "color": "",
-    "part": "11090",
-    "hw": "",
-    "cas": "",
-    "image": "https://static.wikia.nocookie.net/hotwheels/images/a/a7/93_Camaro_ACC.jpg/revision/latest?cb=20090107172111"
-  },
-  {
-    "year": "1993",
-    "name": "",
-    "series": "",
-    "color": "Metalflake Bright Red",
-    "part": "5700",
-    "hw": "RL",
-    "cas": "",
-    "image": "https://static.wikia.nocookie.net/hotwheels/images/8/8f/Red_Baron-25th_Bright_Red.jpg/revision/latest?cb=20130324115517"
-  },
-  {
-    "year": "1993",
-    "name": "",
-    "series": "",
-    "color": "Metallic Brown / Matte Black",
-    "part": "5707",
-    "hw": "RL",
-    "cas": "",
-    "image": "https://static.wikia.nocookie.net/hotwheels/images/1/1a/Paddy_Wagon-25th_Brown.jpg/revision/latest?cb=20130324120040"
-  },
-  {
-    "year": "1993",
-    "name": "",
-    "series": "",
-    "color": "Metallic Brown",
-    "part": "5708",
-    "hw": "RL",
-    "cas": "",
-    "image": "https://static.wikia.nocookie.net/hotwheels/images/c/c9/Splittin%27_Image-25th_Brown.jpg/revision/latest?cb=20130324115817"
-  },
-  {
-    "year": "1993",
-    "name": "",
-    "series": "",
-    "color": "Metallic Pink",
-    "part": "5709",
-    "hw": "RL",
-    "cas": "",
-    "image": "https://static.wikia.nocookie.net/hotwheels/images/e/ef/Twin_Mill-25th_Pink_.jpg/revision/latest?cb=20130324113855"
-  },
-  {
-    "year": "1993",
-    "name": "",
-    "series": "",
-    "color": "Metallic Lime Green",
-    "part": "5714",
-    "hw": "RL",
-    "cas": "",
-    "image": "https://static.wikia.nocookie.net/hotwheels/images/4/48/Beatnik_Bandit-25th_Lime_Green.jpg/revision/latest?cb=20130324114820"
-  },
-  {
-    "year": "1993",
-    "name": "",
-    "series": "",
-    "color": "Metallic Light Green",
-    "part": "5715",
-    "hw": "RL",
-    "cas": "",
-    "image": "https://static.wikia.nocookie.net/hotwheels/images/5/53/Silhouet25LtGrn.JPG/revision/latest?cb=20180123232858"
-  },
-  {
-    "year": "1993",
-    "name": "",
-    "series": "",
-    "color": "Metallic Turquoise",
-    "part": "5730",
-    "hw": "RL",
-    "cas": "",
-    "image": "https://static.wikia.nocookie.net/hotwheels/images/0/00/The_Demon-25th_Turquoise.jpg/revision/latest?cb=20130324120557"
-  },
-  {
-    "year": "1993",
-    "name": "",
-    "series": "",
-    "color": "Metallic Violet",
-    "part": "5743",
-    "hw": "RL",
-    "cas": "",
-    "image": "https://static.wikia.nocookie.net/hotwheels/images/3/39/Classic_Nomad-25th_Violet.jpg/revision/latest?cb=20130324120301"
-  },
-  {
-    "year": "1992",
-    "name": "Chevy Lumina",
-    "series": "",
-    "color": "Red",
-    "part": "5675",
-    "hw": "BW",
-    "cas": "",
-    "image": "https://static.wikia.nocookie.net/hotwheels/images/6/6b/Chevy_Lumina_Red.JPG/revision/latest?cb=20081220184511"
-  },
-  {
-    "year": "1992",
-    "name": "'56 Flashsider",
-    "series": "",
-    "color": "Teal",
-    "part": "2029",
-    "hw": "UH",
-    "cas": "",
-    "image": "https://static.wikia.nocookie.net/hotwheels/images/3/33/%2756_Flashsider_-_6407df.jpg/revision/latest?cb=20081113105505"
-  },
-  {
-    "year": "1992",
-    "name": "Bulldozer",
-    "series": "",
-    "color": "Yellow",
-    "part": "3765",
-    "hw": "MW",
-    "cas": "",
-    "image": "https://static.wikia.nocookie.net/hotwheels/images/c/cb/Bulldozer.JPG/revision/latest?cb=20090109063021"
-  },
-  {
-    "year": "1992",
-    "name": "Flashfire",
-    "series": "",
-    "color": "Black",
-    "part": "3156",
-    "hw": "GHO",
-    "cas": "",
-    "image": "https://static.wikia.nocookie.net/hotwheels/images/6/60/Flashfire_BlkSho.JPG/revision/latest?cb=20090202040905"
-  },
-  {
-    "year": "1992",
-    "name": "Goodyear Blimp",
-    "series": "",
-    "color": "Gray",
-    "part": "1384",
-    "hw": "N/A",
-    "cas": "",
-    "image": "https://static.wikia.nocookie.net/hotwheels/images/e/e7/Blimp_GY.JPG/revision/latest?cb=20090319210758"
-  },
-  {
-    "year": "1992",
-    "name": "Hiway Hauler",
-    "series": "",
-    "color": "Red",
-    "part": "3782",
-    "hw": "BW",
-    "cas": "",
-    "image": "https://static.wikia.nocookie.net/hotwheels/images/d/d7/Hiway_Hauler_KlAid.JPG/revision/latest?cb=20090219001350"
-  },
-  {
-    "year": "1992",
-    "name": "Hummer",
-    "series": "",
-    "color": "Light Brown",
-    "part": "0773",
-    "hw": "CT",
-    "cas": "",
-    "image": "https://static.wikia.nocookie.net/hotwheels/images/7/70/Hummer_ltBrnMet.JPG/revision/latest?cb=20090207051810"
-  },
-  {
-    "year": "1992",
-    "name": "Oshkosh Cement Mixer",
-    "series": "1992 Hot Wheels",
-    "color": "White with Blue fenders and Red mixer",
-    "part": "2074",
-    "hw": "BW",
-    "cas": "",
-    "image": "https://static.wikia.nocookie.net/hotwheels/images/8/8f/Oshkosh_Cement_Mixer_Wht.JPG/revision/latest?cb=20090108183128"
-  },
-  {
-    "year": "1992",
-    "name": "Recycling Truck",
-    "series": "",
-    "color": "Orange",
-    "part": "2073",
-    "hw": "BW",
-    "cas": "",
-    "image": "https://static.wikia.nocookie.net/hotwheels/images/d/d8/Recycling_Truck_Orgbw.JPG/revision/latest?cb=20090203154532"
-  },
-  {
-    "year": "1992",
-    "name": "Shock Factor",
-    "series": "",
-    "color": "Black & Pink",
-    "part": "3164",
-    "hw": "CT",
-    "cas": "",
-    "image": "https://static.wikia.nocookie.net/hotwheels/images/9/92/Shock_Factor_BlkPk.JPG/revision/latest?cb=20090201224356"
-  },
-  {
-    "year": "1992",
-    "name": "Tractor",
-    "series": "",
-    "color": "Yellow w/Yellow Plastic Top",
-    "part": "2075",
-    "hw": "Yellow Tractor Wheel & Yellow CT",
-    "cas": "",
-    "image": "https://static.wikia.nocookie.net/hotwheels/images/b/bc/Tractor_YelYel.JPG/revision/latest?cb=20081220203550"
-  },
-  {
-    "year": "1992",
-    "name": "Tank Truck",
-    "series": "",
-    "color": "Red with Chrome plastic tank",
-    "part": "2076",
-    "hw": "BW",
-    "cas": "",
-    "image": "https://static.wikia.nocookie.net/hotwheels/images/6/69/Tank_Truck_RedBW.JPG/revision/latest?cb=20090228212319"
-  },
-  {
-    "year": "1992",
-    "name": "Road Roller",
-    "series": "",
-    "color": "Yellow",
-    "part": "3853",
-    "hw": "CR1",
-    "cas": "",
-    "image": "https://static.wikia.nocookie.net/hotwheels/images/1/19/Hot_Wheels_Road_Roller_1992_-_07181df.jpg/revision/latest?cb=20170719231848"
-  },
-  {
-    "year": "1992",
-    "name": "School Bus",
-    "series": "Workhorses",
-    "color": "Yellow",
-    "part": "1795",
-    "hw": "BW",
-    "cas": "",
-    "image": "https://static.wikia.nocookie.net/hotwheels/images/7/77/School_Bus_-_3030cf2.jpg/revision/latest?cb=20170705013036"
-  },
-  {
-    "year": "1992",
-    "name": "Fire-Eater",
-    "series": "Workhorses",
-    "color": "Red",
-    "part": "9640",
-    "hw": "BW",
-    "cas": "",
-    "image": "https://static.wikia.nocookie.net/hotwheels/images/6/64/FIRE-EATER_9640_4.jpg/revision/latest?cb=20211229142858"
-  },
-  {
-    "year": "1992",
-    "name": "Thunderstreak",
-    "series": "",
-    "color": "Yellow",
-    "part": "3999",
-    "hw": "BW",
-    "cas": "",
-    "image": "https://static.wikia.nocookie.net/hotwheels/images/9/98/Thunderstreak_Penzl.JPG/revision/latest?cb=20090201164457"
-  },
-  {
-    "year": "1992",
-    "name": "Vampyra",
-    "series": "",
-    "color": "Black",
-    "part": "0444",
-    "hw": "BW",
-    "cas": "",
-    "image": "https://static.wikia.nocookie.net/hotwheels/images/c/c2/Vampyra_BlkBW.JPG/revision/latest?cb=20090102210155"
-  },
-  {
-    "year": "1992",
-    "name": "Sol-Aire CX-4",
-    "series": "",
-    "color": "Blue",
-    "part": "5902",
-    "hw": "UH",
-    "cas": "",
-    "image": "https://static.wikia.nocookie.net/hotwheels/images/0/0e/Sol-Aire_CX4_-_92_HW.jpg/revision/latest?cb=20090126045843"
-  },
-  {
-    "year": "1992",
-    "name": "Path Beater",
-    "series": "Off Road",
-    "color": "Fluorescent Lime",
-    "part": "2781",
-    "hw": "ORSB",
-    "cas": "",
-    "image": "https://static.wikia.nocookie.net/hotwheels/images/b/b5/Image_Not_Available.jpg/revision/latest?cb=20151025125428"
-  },
-  {
-    "year": "1992",
-    "name": "Jaguar XJ220",
-    "series": "Gold Medal Speed",
-    "color": "Metalflake Dark Blue",
-    "part": "13579",
-    "hw": "GLW",
-    "cas": "",
-    "image": "https://static.wikia.nocookie.net/hotwheels/images/b/b5/Image_Not_Available.jpg/revision/latest?cb=20151025125428"
-  },
-  {
-    "year": "1992",
-    "name": "Mercedes-Benz Unimog",
-    "series": "Workhorses",
-    "color": "Tan",
-    "part": "4643",
-    "hw": "ORSB",
-    "cas": "",
-    "image": "https://static.wikia.nocookie.net/hotwheels/images/0/0f/Mercedes_Benz_Unimog_TanSBW.JPG/revision/latest?cb=20090108184733"
-  },
-  {
-    "year": "1992",
-    "name": "Big Bertha",
-    "series": "",
-    "color": "Light Grey",
-    "part": "13192",
-    "hw": "Black MGW",
-    "cas": "",
-    "image": "https://static.wikia.nocookie.net/hotwheels/images/7/70/Big_Bertha_gryL.JPG/revision/latest?cb=20100723020736"
-  },
-  {
-    "year": "1992",
-    "name": "Gleamer Patrol",
-    "series": "",
-    "color": "Chrome",
-    "part": "",
-    "hw": "BW",
-    "cas": "",
-    "image": "https://static.wikia.nocookie.net/hotwheels/images/b/bf/Sheriff_Patrol_glmrLt.JPG/revision/latest?cb=20091030152009"
-  },
-  {
-    "year": "1992",
-    "name": "'57 T-Bird",
-    "series": "",
-    "color": "Gold Chrome",
-    "part": "",
-    "hw": "BW",
-    "cas": "",
-    "image": "https://static.wikia.nocookie.net/hotwheels/images/b/bf/57_T-Bird_GldGT.JPG/revision/latest?cb=20091117064542"
-  },
-  {
-    "year": "1992",
-    "name": "Aeroflash",
-    "series": "",
-    "color": "Chrome Pink",
-    "part": "1781",
-    "hw": "UH",
-    "cas": "",
-    "image": "https://static.wikia.nocookie.net/hotwheels/images/c/cc/Aeroflash_PnkUH.JPG/revision/latest?cb=20090219225324"
-  },
-  {
-    "year": "1992",
-    "name": "Corvette Stingray",
-    "series": "",
-    "color": "Gold",
-    "part": "1793",
-    "hw": "BW",
-    "cas": "",
-    "image": "https://static.wikia.nocookie.net/hotwheels/images/0/08/Corvette_Stingray_GrnGlmTm.JPG/revision/latest?cb=20091116230317"
-  },
-  {
-    "year": "1992",
-    "name": "Porsche 959",
-    "series": "",
-    "color": "Pink Chrome",
-    "part": "1794",
-    "hw": "UH",
-    "cas": "",
-    "image": "https://static.wikia.nocookie.net/hotwheels/images/3/31/Porsche_959_GTPnk.JPG/revision/latest?cb=20090120021719"
-  },
-  {
-    "year": "1991",
-    "name": "Buick Stocker",
-    "series": "Roses Department Store Promo",
-    "color": "Blue",
-    "part": "9258",
-    "hw": "BW",
-    "cas": "",
-    "image": "https://static.wikia.nocookie.net/hotwheels/images/4/4c/Buick_Stocker_Roses6.JPG/revision/latest?cb=20081210022303"
-  },
-  {
-    "year": "1991",
-    "name": "Holden Commodore",
-    "series": "International",
-    "color": "White",
-    "part": "9713",
-    "hw": "BW",
-    "cas": "",
-    "image": "https://static.wikia.nocookie.net/hotwheels/images/8/89/Holden_Commodore.jpg/revision/latest?cb=20090612191330"
-  },
-  {
-    "year": "1991",
-    "name": "Mercedes-Benz SL",
-    "series": "International",
-    "color": "Chrome with Black beltline",
-    "part": "9770",
-    "hw": "Chrome HO",
-    "cas": "",
-    "image": "https://static.wikia.nocookie.net/hotwheels/images/2/26/Mercedes-Benz_SL_CrmSho.JPG/revision/latest?cb=20081219193056"
-  },
-  {
-    "year": "1991",
-    "name": "Peugeot 405",
-    "series": "",
-    "color": "Black",
-    "part": "5670",
-    "hw": "BW",
-    "cas": "",
-    "image": "https://static.wikia.nocookie.net/hotwheels/images/2/2c/Peugeot_405_Blk.JPG/revision/latest?cb=20090213150137"
-  },
-  {
-    "year": "1991",
-    "name": "Peugeot 405",
-    "series": "International",
-    "color": "Blue",
-    "part": "3204",
-    "hw": "BW",
-    "cas": "",
-    "image": "https://static.wikia.nocookie.net/hotwheels/images/3/38/Peugeot_405_Blu.JPG/revision/latest?cb=20090213150113"
-  },
-  {
-    "year": "1991",
-    "name": "Porsche 930",
-    "series": "",
-    "color": "Met. Dark Red",
-    "part": "7607",
-    "hw": "BW",
-    "cas": "",
-    "image": "https://static.wikia.nocookie.net/hotwheels/images/1/1d/Porsche_930_MtRed.JPG/revision/latest?cb=20090311023033"
-  },
-  {
-    "year": "1991",
-    "name": "Renault 5 Turbo",
-    "series": "",
-    "color": "Blue",
-    "part": "9749",
-    "hw": "BW",
-    "cas": "",
-    "image": "https://static.wikia.nocookie.net/hotwheels/images/e/eb/Renault_5_Turbo_Blu.JPG/revision/latest?cb=20090116180531"
-  },
-  {
-    "year": "1991",
-    "name": "Renault 5 Turbo",
-    "series": "International",
-    "color": "White",
-    "part": "9749",
-    "hw": "BW",
-    "cas": "",
-    "image": "https://static.wikia.nocookie.net/hotwheels/images/c/c7/Renault_5_Turbo_Wht.JPG/revision/latest?cb=20090116180550"
-  },
-  {
-    "year": "1991",
-    "name": "Speed Shark",
-    "series": "Heroes on Hot Wheels",
-    "color": "White",
-    "part": "",
-    "hw": "BW",
-    "cas": "",
-    "image": "https://static.wikia.nocookie.net/hotwheels/images/c/c1/Speed_Shark_Wht.JPG/revision/latest?cb=20090124023858"
-  },
-  {
-    "year": "1991",
-    "name": "VW Golf",
-    "series": "",
-    "color": "Red",
-    "part": "9557",
-    "hw": "BW",
-    "cas": "Black & White stripes, Yellow \"GTi\"",
-    "image": "https://static.wikia.nocookie.net/hotwheels/images/2/28/VW_Golf_Red.JPG/revision/latest?cb=20090121152800"
-  },
-  {
-    "year": "1991",
-    "name": "Ramp Truck",
-    "series": "",
-    "color": "White",
-    "part": "5343",
-    "hw": "BW",
-    "cas": "Blue, Yellow and Red \"International Dream Cars Racing Team\" tampos",
-    "image": "https://static.wikia.nocookie.net/hotwheels/images/3/39/Ramp_Truck_Wht.JPG/revision/latest?cb=20090219140257"
-  },
-  {
-    "year": "1991",
-    "name": "Trailbuster",
-    "series": "",
-    "color": "Turquoise",
-    "part": "5636",
-    "hw": "CT",
-    "cas": "Blue, Yellow, Pink splotches",
-    "image": "https://static.wikia.nocookie.net/hotwheels/images/f/f7/Trailbuster_Turq.JPG/revision/latest?cb=20090206213955"
-  },
-  {
-    "year": "1991",
-    "name": "Street Beast",
-    "series": "",
-    "color": "White & Turquoise",
-    "part": "5637",
-    "hw": "WW",
-    "cas": "Blue & Pink Spikes on hood",
-    "image": "https://static.wikia.nocookie.net/hotwheels/images/4/40/Street_Beast_WhtTrq.JPG/revision/latest?cb=20090106152729"
-  },
-  {
-    "year": "1991",
-    "name": "Limozeen",
-    "series": "",
-    "color": "White",
-    "part": "5638",
-    "hw": "WW",
-    "cas": "Orange and Pink \"Classic Limo\"",
-    "image": "https://static.wikia.nocookie.net/hotwheels/images/4/4a/Limozeen_Wht.JPG/revision/latest?cb=20090113023840"
-  },
-  {
-    "year": "1991",
-    "name": "Speed Shark",
-    "series": "",
-    "color": "Purple",
-    "part": "5640",
-    "hw": "BW",
-    "cas": "Yellow, White, Purple slashes",
-    "image": "https://static.wikia.nocookie.net/hotwheels/images/5/5f/Speed_Shark_LtPrp.JPG/revision/latest?cb=20090124023710"
-  },
-  {
-    "year": "1991",
-    "name": "Mazda MX-5 Miata",
-    "series": "",
-    "color": "Red",
-    "part": "2920",
-    "hw": "BW",
-    "cas": "Yellow \"Miata\" on hood",
-    "image": "https://static.wikia.nocookie.net/hotwheels/images/e/e0/Mazda_Miata_Red.JPG/revision/latest?cb=20090115215217"
-  },
-  {
-    "year": "1991",
-    "name": "Ferrari 250",
-    "series": "",
-    "color": "Yellow",
-    "part": "5665",
-    "hw": "BW",
-    "cas": "Red \"Ferrari\", Black \"7\"",
-    "image": "https://static.wikia.nocookie.net/hotwheels/images/4/44/Ferrari_250_YelBWcrm.JPG/revision/latest?cb=20090115232655"
-  },
-  {
-    "year": "1991",
-    "name": "Ferrari 348",
-    "series": "",
-    "color": "Yellow",
-    "part": "5666",
-    "hw": "UH",
-    "cas": "Blue, White, Red \"Ferrari 348\" on hood",
-    "image": "https://static.wikia.nocookie.net/hotwheels/images/a/a2/Ferrari_348_Yel.JPG/revision/latest?cb=20090118174737"
-  },
-  {
-    "year": "1991",
-    "name": "Toyota MR-2 Rally",
-    "series": "",
-    "color": "White",
-    "part": "5669",
-    "hw": "UH",
-    "cas": "Red, Orange, Yellow \"MR-2\" \"TOYOTA\"",
-    "image": "https://static.wikia.nocookie.net/hotwheels/images/7/76/Toyota_Rally_WhUH.JPG/revision/latest?cb=20090117172446"
-  },
-  {
-    "year": "1991",
-    "name": "Lamborghini Diablo",
-    "series": "",
-    "color": "Red",
-    "part": "5672",
-    "hw": "UH",
-    "cas": "Yellow \"Diablo\" on sides",
-    "image": "https://static.wikia.nocookie.net/hotwheels/images/6/6e/Lamborghini_Diablo_RedUH.JPG/revision/latest?cb=20091010222005"
-  },
-  {
-    "year": "1991",
-    "name": "Zender Fact 4",
-    "series": "",
-    "color": "Silver",
-    "part": "5674",
-    "hw": "UH",
-    "cas": "White \"ZENDER\", Yellow \"Fact 4\"",
-    "image": "https://static.wikia.nocookie.net/hotwheels/images/a/a7/Zender_Fact_4_SlvUH.JPG/revision/latest?cb=20090203150224"
-  },
-  {
-    "year": "1991",
-    "name": "Porsche 930",
-    "series": "",
-    "color": "Red",
-    "part": "7607",
-    "hw": "BW",
-    "cas": "Yellow, Black, \"TURBO\", White \"PORSCHE 930\"",
-    "image": "https://static.wikia.nocookie.net/hotwheels/images/1/11/Porsche_930_Red.JPG/revision/latest?cb=20090311023405"
-  },
-  {
-    "year": "1991",
-    "name": "Porsche 930",
-    "series": "",
-    "color": "Light Purple",
-    "part": "7607",
-    "hw": "BW",
-    "cas": "Yellow, Black, \"TURBO\", White \"PORSCHE 930\"",
-    "image": "https://static.wikia.nocookie.net/hotwheels/images/9/9d/Porsche_930_Prpl.JPG/revision/latest?cb=20090311023525"
-  },
-  {
-    "year": "1991",
-    "name": "BMW 850i",
-    "series": "",
-    "color": "Blue",
-    "part": "5667",
-    "hw": "UH",
-    "cas": "Pink, Blue, Yellow, White, markings",
-    "image": "https://static.wikia.nocookie.net/hotwheels/images/9/97/BMW_850_BluUH.JPG/revision/latest?cb=20090120001302"
-  },
-  {
-    "year": "1991",
-    "name": "Ford Aerostar",
-    "series": "",
-    "color": "Metalflake Purple",
-    "part": "4695",
-    "hw": "BW",
-    "cas": "Yellow spots",
-    "image": "https://static.wikia.nocookie.net/hotwheels/images/6/6c/Ford_Aerostar_Purple.jpg/revision/latest?cb=20081112192014"
-  },
-  {
-    "year": "1991",
-    "name": "'59 Caddy",
-    "series": "",
-    "color": "White",
-    "part": "2097",
-    "hw": "WW",
-    "cas": "N/A",
-    "image": "https://static.wikia.nocookie.net/hotwheels/images/0/0f/59_Caddy_Wht.JPG/revision/latest?cb=20090919231834"
-  },
-  {
-    "year": "1991",
-    "name": "Mercedes-Benz Unimog",
-    "series": "",
-    "color": "White and Red",
-    "part": "5673",
-    "hw": "CT",
-    "cas": "Red \"Castrol\", Black \"RESEARCH TEAM\" and Green",
-    "image": "https://static.wikia.nocookie.net/hotwheels/images/7/7b/Mercedes_Benz_Unimog_Wht.JPG/revision/latest?cb=20090108184800"
-  },
-  {
-    "year": "1991",
-    "name": "Sheriff Patrol",
-    "series": "",
-    "color": "Black & White",
-    "part": "1549",
-    "hw": "BW",
-    "cas": "Yellow/Blue Tampo, Police, 123 and Star On Sides, Star on Hood, Police & 123 on roof",
-    "image": "https://static.wikia.nocookie.net/hotwheels/images/2/25/Sheriff_Patrol_BlkWht7SP.JPG/revision/latest?cb=20091030152013"
-  },
-  {
-    "year": "1991",
-    "name": "Porsche 959",
-    "series": "",
-    "color": "Red",
-    "part": "4631",
-    "hw": "UH",
-    "cas": "Turquoise, Yellow \"59\" Grey \"PORSCHE 959\"",
-    "image": "https://static.wikia.nocookie.net/hotwheels/images/d/d0/Porsche_959_Red59Tq.JPG/revision/latest?cb=20090120022156"
-  },
-  {
-    "year": "1991",
-    "name": "Surf Patrol",
-    "series": "",
-    "color": "Yellow",
-    "part": "5348",
-    "hw": "CT",
-    "cas": "Red, White, Black \"Radio Dispatched\" \"Rescue\" \"Emergency Support Vehicle\"",
-    "image": "https://static.wikia.nocookie.net/hotwheels/images/a/a6/91_Surf_Patrol_102.jpg/revision/latest?cb=20090110103915"
-  },
-  {
-    "year": "1991",
-    "name": "Suzuki Quadracer",
-    "series": "",
-    "color": "White",
-    "part": "3209",
-    "hw": "YCT",
-    "cas": "N/A",
-    "image": "https://static.wikia.nocookie.net/hotwheels/images/9/9c/1991_white_with_Yellow_CT_blue_seat.jpg/revision/latest?cb=20130215012823"
-  },
-  {
-    "year": "1991",
-    "name": "Suzuki Quadracer",
-    "series": "",
-    "color": "White",
-    "part": "3209",
-    "hw": "CT",
-    "cas": "N/A",
-    "image": "https://static.wikia.nocookie.net/hotwheels/images/c/c7/1991_white_CT_Quad.jpg/revision/latest?cb=20130215034627"
-  },
-  {
-    "year": "1991",
-    "name": "School Bus",
-    "series": "",
-    "color": "Yellow",
-    "part": "1795",
-    "hw": "BW",
-    "cas": "Black \"School Bus,\" Thick Black stripe on sides",
-    "image": "https://static.wikia.nocookie.net/hotwheels/images/c/cf/Hot_Wheels_School_Bus_1991_-_3030lf.jpg/revision/latest?cb=20170721122500"
-  },
-  {
-    "year": "1991",
-    "name": "Ford Stake Bed Truck",
-    "series": "",
-    "color": "Met. Blue",
-    "part": "1561",
-    "hw": "BW",
-    "cas": "Yellow, White, Red \"RAPID DELIVERY\"",
-    "image": "https://static.wikia.nocookie.net/hotwheels/images/0/0e/Ford_Stake_tBlubw.JPG/revision/latest?cb=20091021154531"
-  },
-  {
-    "year": "1991",
-    "name": "Nissan Custom \"Z\"",
-    "series": "",
-    "color": "Metallic Dark Red",
-    "part": "7609",
-    "hw": "UH",
-    "cas": "Yellow stripe, \"300ZX\" on top and hood",
-    "image": "https://static.wikia.nocookie.net/hotwheels/images/b/b7/Nissan_Custom_Z_RedUH.JPG/revision/latest?cb=20090114210930"
-  },
-  {
-    "year": "1991",
-    "name": "Pontiac Fiero 2M4",
-    "series": "",
-    "color": "Black",
-    "part": "7527",
-    "hw": "UH",
-    "cas": "Red, Blue and Yellow on sides, Red, White and Blue \"Fiero\" on hood",
-    "image": "https://static.wikia.nocookie.net/hotwheels/images/4/49/Fiero_BlkUH.JPG/revision/latest?cb=20090114182825"
-  },
-  {
-    "year": "1991",
-    "name": "Turbo Streak",
-    "series": "",
-    "color": "Bright Red",
-    "part": "9520",
-    "hw": "BW",
-    "cas": "Pink emblem on side, Pink emblem on wing; White \"1\" \"Tuneup Master\"",
-    "image": "https://static.wikia.nocookie.net/hotwheels/images/a/a2/Turbo_Streak-20934.jpg/revision/latest?cb=20150104033749"
-  },
-  {
-    "year": "1991",
-    "name": "Camaro Z28",
-    "series": "",
-    "color": "Red",
-    "part": "9532",
-    "hw": "GHO",
-    "cas": "Black, Blue and yellow stip on side.",
-    "image": "https://static.wikia.nocookie.net/hotwheels/images/d/d0/Camaroz28.uh.jpg/revision/latest?cb=20090622164401"
-  },
-  {
-    "year": "1991",
-    "name": "VW Bug",
-    "series": "",
-    "color": "Enamel Cherry Red",
-    "part": "",
-    "hw": "BW",
-    "cas": "White & Yellow flames with Dark Blue edges",
-    "image": "https://static.wikia.nocookie.net/hotwheels/images/1/18/Hot_Wheels_VW_Bug_1991_Mainline_Enamel_Cherry_Red.png/revision/latest?cb=20221211021149"
-  },
-  {
-    "year": "1991",
-    "name": "T-Bird Stocker",
-    "series": "",
-    "color": "White, Red and Black",
-    "part": "",
-    "hw": "UH",
-    "cas": "Red, Black, White and Yellow \"Havoline\" \"28\" racing tampos",
-    "image": "https://static.wikia.nocookie.net/hotwheels/images/a/a4/T-Brd_Stocker_WhtBlk.JPG/revision/latest?cb=20090217050227"
-  },
-  {
-    "year": "1991",
-    "name": "Fire Eater",
-    "series": "",
-    "color": "Red",
-    "part": "",
-    "hw": "BW",
-    "cas": "",
-    "image": "https://static.wikia.nocookie.net/hotwheels/images/b/b5/Image_Not_Available.jpg/revision/latest?cb=20151025125428"
-  },
-  {
-    "year": "1991",
-    "name": "'32 Ford Delivery",
-    "series": "",
-    "color": "White & Turquoise",
-    "part": "",
-    "hw": "BW",
-    "cas": "",
-    "image": "https://static.wikia.nocookie.net/hotwheels/images/1/11/32_Ford_Delivery_TrqwhtBW.JPG/revision/latest?cb=20091021221623"
-  },
-  {
-    "year": "1991",
-    "name": "'37 Bugatti",
-    "series": "",
-    "color": "Blue & Gray",
-    "part": "",
-    "hw": "WW",
-    "cas": "",
-    "image": "https://static.wikia.nocookie.net/hotwheels/images/c/c7/37_Bugatti_Bluww.JPG/revision/latest?cb=20091021215143"
-  },
-  {
-    "year": "1991",
-    "name": "Auburn 852",
-    "series": "",
-    "color": "Red",
-    "part": "",
-    "hw": "WW",
-    "cas": "",
-    "image": "https://static.wikia.nocookie.net/hotwheels/images/9/92/Auburn_852_-_5376ef.jpg/revision/latest?cb=20110405173733"
-  },
-  {
-    "year": "1991",
-    "name": "Fat Fendered '40",
-    "series": "",
-    "color": "Purple",
-    "part": "",
-    "hw": "BW",
-    "cas": "",
-    "image": ""
-  },
-  {
-    "year": "1991",
-    "name": "Sharkruiser",
-    "series": "",
-    "color": "Gray",
-    "part": "3286",
-    "hw": "UH",
-    "cas": "",
-    "image": "https://static.wikia.nocookie.net/hotwheels/images/7/7e/Sharkruiser_PrpUH.JPG/revision/latest?cb=20090113054003"
-  },
-  {
-    "year": "1991",
-    "name": "Zombot",
-    "series": "",
-    "color": "Gold Chrome",
-    "part": "3852",
-    "hw": "Chrome GHO",
-    "cas": "",
-    "image": "https://static.wikia.nocookie.net/hotwheels/images/8/8c/Zombot_GldHO.JPG/revision/latest?cb=20090113013404"
-  },
-  {
-    "year": "1991",
-    "name": "Vampyra",
-    "series": "",
-    "color": "Purple",
-    "part": "2060",
-    "hw": "BW",
-    "cas": "",
-    "image": "https://static.wikia.nocookie.net/hotwheels/images/0/0a/Vampyra_-_Basic_Wheels.jpg/revision/latest?cb=20150222002054"
-  },
-  {
-    "year": "1991",
-    "name": "Ratmobile",
-    "series": "",
-    "color": "White",
-    "part": "5028",
-    "hw": "UH",
-    "cas": "",
-    "image": "https://static.wikia.nocookie.net/hotwheels/images/b/b5/Image_Not_Available.jpg/revision/latest?cb=20151025125428"
-  },
-  {
-    "year": "1991",
-    "name": "Trailbuster",
-    "series": "",
-    "color": "Olive",
-    "part": "9560",
-    "hw": "Black CT",
-    "cas": "",
-    "image": "https://static.wikia.nocookie.net/hotwheels/images/e/e4/Trailbuster_OlvCT.JPG/revision/latest?cb=20091028154339"
-  },
-  {
-    "year": "1991",
-    "name": "'57 T-Bird",
-    "series": "",
-    "color": "Turquoise",
-    "part": "1610",
-    "hw": "BW",
-    "cas": "",
-    "image": "https://static.wikia.nocookie.net/hotwheels/images/6/6e/HW_57_T-BIRD_1610_1_C.jpg/revision/latest?cb=20190805181305"
-  },
-  {
-    "year": "1991",
-    "name": "'55 Nomad",
-    "series": "",
-    "color": "Bright Pink",
-    "part": "10153",
-    "hw": "TW Pink",
-    "cas": "",
-    "image": "https://static.wikia.nocookie.net/hotwheels/images/3/37/55nomad.orangecc.jpg/revision/latest?cb=20090614153638"
-  },
-  {
-    "year": "1991",
-    "name": "'57 Chevy",
-    "series": "",
-    "color": "Bright Orange",
-    "part": "1297",
-    "hw": "TW",
-    "cas": "",
-    "image": "https://static.wikia.nocookie.net/hotwheels/images/1/18/57_Chevy_CalCustTW.JPG/revision/latest?cb=20090309022604"
-  },
-  {
-    "year": "1991",
-    "name": "'59 Caddy",
-    "series": "",
-    "color": "Pink",
-    "part": "2097",
-    "hw": "WW",
-    "cas": "",
-    "image": "https://static.wikia.nocookie.net/hotwheels/images/6/62/59_CADDY_pink_CC.JPG/revision/latest?cb=20090815015940"
-  },
-  {
-    "year": "1991",
-    "name": "'67 Camaro",
-    "series": "",
-    "color": "Met. Blue",
-    "part": "",
-    "hw": "TW",
-    "cas": "",
-    "image": "https://static.wikia.nocookie.net/hotwheels/images/f/f8/%2767_Camaro_CalCust.jpg/revision/latest?cb=20081231051423"
-  },
-  {
-    "year": "1991",
-    "name": "Custom Corvette",
-    "series": "",
-    "color": "Bright Orange",
-    "part": "1301",
-    "hw": "TW",
-    "cas": "",
-    "image": "https://static.wikia.nocookie.net/hotwheels/images/a/ab/Custom_Corvette_CCtw.JPG/revision/latest?cb=20091010204911"
-  },
-  {
-    "year": "1991",
-    "name": "Ferrari Testarossa",
-    "series": "",
-    "color": "Bright Pink",
-    "part": "1897",
-    "hw": "RR Yellow",
-    "cas": "",
-    "image": "https://static.wikia.nocookie.net/hotwheels/images/8/80/Ferrari_Testarossa_BrtRed.JPG/revision/latest?cb=20081222052828"
-  },
-  {
-    "year": "1991",
-    "name": "Ferrari Testarossa",
-    "series": "",
-    "color": "Bright Pink",
-    "part": "1897",
-    "hw": "TW",
-    "cas": "",
-    "image": "https://static.wikia.nocookie.net/hotwheels/images/b/b4/Ferrari_Testarossa_BrtRedTW.JPG/revision/latest?cb=20081222052854"
-  },
-  {
-    "year": "1991",
-    "name": "Porsche 911",
-    "series": "",
-    "color": "Pink Chrome",
-    "part": "2108",
-    "hw": "TW Yellow",
-    "cas": "",
-    "image": "https://static.wikia.nocookie.net/hotwheels/images/3/3e/P-911_CalCstm.JPG/revision/latest?cb=20090313132325"
-  },
-  {
-    "year": "1991",
-    "name": "Street Roader",
-    "series": "",
-    "color": "Bright Orange",
-    "part": "1470",
-    "hw": "CT",
-    "cas": "",
-    "image": "https://static.wikia.nocookie.net/hotwheels/images/b/be/Street_Roader_OrgClCst.jpg/revision/latest?cb=20081123211617"
-  },
-  {
-    "year": "1991",
-    "name": "Street Roader",
-    "series": "",
-    "color": "Bright Orange & Pink",
-    "part": "1470",
-    "hw": "CT",
-    "cas": "",
-    "image": "https://static.wikia.nocookie.net/hotwheels/images/5/5b/Street_Roader_OrgPkClCst.jpg/revision/latest?cb=20081123211738"
-  },
-  {
-    "year": "1991",
-    "name": "Stutz Blackhawk",
-    "series": "",
-    "color": "Fluorescent Red",
-    "part": "2106",
-    "hw": "TW Yellow",
-    "cas": "",
-    "image": "https://static.wikia.nocookie.net/hotwheels/images/f/fe/Stutz_Blackhawk_CalC.JPG/revision/latest?cb=20090118035542"
-  },
-  {
-    "year": 1990,
-    "name": "T-Bird Stocker (1990)",
-    "series": "",
-    "color": "Red",
-    "part": "5900",
-    "hw": "88",
-    "cas": "",
-    "image": "https://static.wikia.nocookie.net/hotwheels/images/d/dc/T-Bird_Stocker_Red.JPG/revision/latest"
-  },
-  {
-    "year": 1990,
-    "name": "Range Rover",
-    "series": "",
-    "color": "White",
-    "part": "9738",
-    "hw": "103",
-    "cas": "",
-    "image": "https://static.wikia.nocookie.net/hotwheels/images/f/f5/Range_Rover_Wht.JPG/revision/latest"
-  },
-  {
-    "year": 1990,
-    "name": "Propper Chopper",
-    "series": "",
-    "color": "White",
-    "part": "9112",
-    "hw": "86",
-    "cas": "",
-    "image": "https://static.wikia.nocookie.net/hotwheels/images/7/71/Propper_Chopper_Wht.JPG/revision/latest"
-  },
-  {
-    "year": 1990,
-    "name": "Probe Funny Car",
-    "series": "",
-    "color": "Red",
-    "part": "7608",
-    "hw": "84",
-    "cas": "",
-    "image": "https://static.wikia.nocookie.net/hotwheels/images/1/16/Probe_Funny_Car_Motrcrft.JPG/revision/latest"
-  },
-  {
-    "year": 1990,
-    "name": "Purple Passion",
-    "series": "",
-    "color": "Light Green Scallops Outlined in Dark Green",
-    "part": "2173",
-    "hw": "87",
-    "cas": "",
-    "image": "https://static.wikia.nocookie.net/hotwheels/images/3/37/Passion_AGENTAIR_1.jpg/revision/latest"
-  },
-  {
-    "year": 1990,
-    "name": "Nissan Custom \"Z\"",
-    "series": "",
-    "color": "Metalflake Dark red",
-    "part": "7609",
-    "hw": "98",
-    "cas": "",
-    "image": "https://static.wikia.nocookie.net/hotwheels/images/b/b7/Nissan_Custom_Z_RedUH.JPG/revision/latest"
-  },
-  {
-    "year": 1990,
-    "name": "Minitruck",
-    "series": "",
-    "color": "Turquoise",
-    "part": "2099",
-    "hw": "89",
-    "cas": "",
-    "image": "https://static.wikia.nocookie.net/hotwheels/images/8/83/Minitruck_TurqUH.JPG/revision/latest"
-  },
-  {
-    "year": 1990,
-    "name": "BMW 323",
-    "series": "",
-    "color": "Black",
-    "part": "9723",
-    "hw": "150",
-    "cas": "",
-    "image": "https://static.wikia.nocookie.net/hotwheels/images/d/d4/BMW_323_-_6359df.jpg/revision/latest"
-  },
-  {
-    "year": 1990,
-    "name": "Baja Bug",
-    "series": "",
-    "color": "Red",
-    "part": "",
-    "hw": "",
-    "cas": "",
-    "image": "https://static.wikia.nocookie.net/hotwheels/images/2/2f/Baja_Bug_Red_BW.JPG/revision/latest"
-  },
-  {
-    "year": 1990,
-    "name": "Custom Corvette",
-    "series": "",
-    "color": "White",
-    "part": "7670",
-    "hw": "",
-    "cas": "",
-    "image": "https://static.wikia.nocookie.net/hotwheels/images/e/e0/CustomCorvette90Cereal.jpg/revision/latest"
-  },
-  {
-    "year": 1990,
-    "name": "Fire Chaser",
-    "series": "",
-    "color": "Red",
-    "part": "4005",
-    "hw": "",
-    "cas": "",
-    "image": "https://static.wikia.nocookie.net/hotwheels/images/a/a0/Fire_Chief_1990.jpg/revision/latest"
-  },
-  {
-    "year": 1990,
-    "name": "GT Racer",
-    "series": "",
-    "color": "Purple",
-    "part": "",
-    "hw": "",
-    "cas": "",
-    "image": "https://static.wikia.nocookie.net/hotwheels/images/b/b5/Image_Not_Available.jpg/revision/latest"
-  },
-  {
-    "year": 1990,
-    "name": "VW Bug",
-    "series": "",
-    "color": "Turquoise",
-    "part": "7671",
-    "hw": "",
-    "cas": "",
-    "image": "https://static.wikia.nocookie.net/hotwheels/images/8/82/VWBug_TrqBluL.JPG/revision/latest"
-  },
-  {
-    "year": 1990,
-    "name": "Jeep CJ-7",
-    "series": "",
-    "color": "Olive green",
-    "part": "9375",
-    "hw": "",
-    "cas": "",
-    "image": "https://static.wikia.nocookie.net/hotwheels/images/a/ad/IMG_8681.JPG/revision/latest"
-  },
-  {
-    "year": 1990,
-    "name": "CAT Wheel Loader",
-    "series": "",
-    "color": "Yellow",
-    "part": "1173",
-    "hw": "",
-    "cas": "",
-    "image": "https://static.wikia.nocookie.net/hotwheels/images/b/b5/Image_Not_Available.jpg/revision/latest"
-  },
-  {
-    "year": 1990,
-    "name": "Ambulance",
-    "series": "",
-    "color": "White",
-    "part": "1792",
-    "hw": "",
-    "cas": "",
-    "image": "https://static.wikia.nocookie.net/hotwheels/images/b/b5/Image_Not_Available.jpg/revision/latest"
-  },
-  {
-    "year": 1990,
-    "name": "Rescue Ranger",
-    "series": "",
-    "color": "Red",
-    "part": "",
-    "hw": "",
-    "cas": "",
-    "image": "https://static.wikia.nocookie.net/hotwheels/images/b/b5/Image_Not_Available.jpg/revision/latest"
-  },
-  {
-    "year": 1990,
-    "name": "Gulch Stepper",
-    "series": "",
-    "color": "Red",
-    "part": "1516",
-    "hw": "",
-    "cas": "",
-    "image": "https://static.wikia.nocookie.net/hotwheels/images/2/2e/Gulch_Stepper_RedCTS.JPG/revision/latest"
-  },
-  {
-    "year": 1990,
-    "name": "Super Scraper",
-    "series": "",
-    "color": "Enamel Purple",
-    "part": "9580",
-    "hw": "",
-    "cas": "",
-    "image": "https://static.wikia.nocookie.net/hotwheels/images/3/3e/Power_Plower_Prpl.JPG/revision/latest"
-  },
-  {
-    "year": 1990,
-    "name": "Mercedes 540K",
-    "series": "",
-    "color": "White",
-    "part": "9592",
-    "hw": "",
-    "cas": "",
-    "image": "https://static.wikia.nocookie.net/hotwheels/images/2/29/Mercedes_540K_wht.JPG/revision/latest"
-  },
-  {
-    "year": 1990,
-    "name": "Tough Customer",
-    "series": "",
-    "color": "Dark Green",
-    "part": "",
-    "hw": "",
-    "cas": "",
-    "image": "https://static.wikia.nocookie.net/hotwheels/images/3/3a/5_bb_dk_green_shiney_olive_.jpg/revision/latest"
-  },
-  {
-    "year": 1990,
-    "name": "Tank Gunner",
-    "series": "Action Command",
-    "color": "Olive",
-    "part": "9374",
-    "hw": "",
-    "cas": "",
-    "image": "https://static.wikia.nocookie.net/hotwheels/images/b/be/Gun_bucket_bbw.JPG/revision/latest"
-  },
-  {
-    "year": 1990,
-    "name": "Delivery Truck",
-    "series": "",
-    "color": "White",
-    "part": "1578",
-    "hw": "",
-    "cas": "",
-    "image": "https://static.wikia.nocookie.net/hotwheels/images/e/e1/1990_deliv_truck_mobile_tune_up.jpg/revision/latest"
-  },
-  {
-    "year": 1990,
-    "name": "'31 Doozie",
-    "series": "",
-    "color": "Maroon w/ Maroon plastic fenders",
-    "part": "2533",
-    "hw": "",
-    "cas": "",
-    "image": "https://static.wikia.nocookie.net/hotwheels/images/e/e3/31_Doozie_Mrn.JPG/revision/latest"
-  },
-  {
-    "year": 1990,
-    "name": "Hot Bird",
-    "series": "",
-    "color": "White",
-    "part": "2014",
-    "hw": "",
-    "cas": "",
-    "image": "https://static.wikia.nocookie.net/hotwheels/images/d/da/3684.JPG/revision/latest"
-  },
-  {
-    "year": 1990,
-    "name": "Shadow Jet",
-    "series": "",
-    "color": "Yellow",
-    "part": "4699",
-    "hw": "",
-    "cas": "",
-    "image": "https://static.wikia.nocookie.net/hotwheels/images/4/49/Shadow_Jet_YelBlu.JPG/revision/latest"
-  },
-  {
-    "year": 1990,
-    "name": "Thunderstreak",
-    "series": "",
-    "color": "Blue & Yellow",
-    "part": "3915",
-    "hw": "",
-    "cas": "",
-    "image": "https://static.wikia.nocookie.net/hotwheels/images/b/b5/Image_Not_Available.jpg/revision/latest"
-  },
-  {
-    "year": 1990,
-    "name": "XT-3",
-    "series": "",
-    "color": "Purple",
-    "part": "1484",
-    "hw": "",
-    "cas": "",
-    "image": "https://static.wikia.nocookie.net/hotwheels/images/9/98/XT-3_PrpRd.JPG/revision/latest"
-  },
-  {
-    "year": 1990,
-    "name": "'80s Firebird",
-    "series": "",
-    "color": "Black",
-    "part": "5128",
-    "hw": "",
-    "cas": "",
-    "image": "https://static.wikia.nocookie.net/hotwheels/images/b/b5/Image_Not_Available.jpg/revision/latest"
-  },
-  {
-    "year": 1990,
-    "name": "'80s Firebird",
-    "series": "",
-    "color": "Yellow",
-    "part": "5128",
-    "hw": "",
-    "cas": "",
-    "image": "https://static.wikia.nocookie.net/hotwheels/images/b/b5/Image_Not_Available.jpg/revision/latest"
-  },
-  {
-    "year": 1990,
-    "name": "GT Racer",
-    "series": "",
-    "color": "Purple",
-    "part": "1789",
-    "hw": "",
-    "cas": "",
-    "image": "https://static.wikia.nocookie.net/hotwheels/images/b/b9/GT_Racer_Prpl.JPG/revision/latest"
-  },
-  {
-    "year": 1990,
-    "name": "Hiway Hauler",
-    "series": "",
-    "color": "Turquoise",
-    "part": "4969",
-    "hw": "",
-    "cas": "",
-    "image": "https://static.wikia.nocookie.net/hotwheels/images/b/be/Hiway_Hauler_OP.JPG/revision/latest"
-  },
-  {
-    "year": 1990,
-    "name": "Good Humor Truck",
-    "series": "",
-    "color": "Red",
-    "part": "5904",
-    "hw": "",
-    "cas": "",
-    "image": "https://static.wikia.nocookie.net/hotwheels/images/b/b5/Image_Not_Available.jpg/revision/latest"
-  },
-  {
-    "year": 1990,
-    "name": "Rescue Ranger",
-    "series": "",
-    "color": "Red",
-    "part": "",
-    "hw": "",
-    "cas": "",
-    "image": "https://static.wikia.nocookie.net/hotwheels/images/b/b5/Image_Not_Available.jpg/revision/latest"
-  },
-  {
-    "year": 1990,
-    "name": "CAT Road Roller",
-    "series": "",
-    "color": "Yellow",
-    "part": "",
-    "hw": "",
-    "cas": "",
-    "image": "https://static.wikia.nocookie.net/hotwheels/images/b/b5/Image_Not_Available.jpg/revision/latest"
-  },
-  {
-    "year": 1990,
-    "name": "CAT Dump Truck",
-    "series": "",
-    "color": "Yellow",
-    "part": "",
-    "hw": "",
-    "cas": "",
-    "image": "https://static.wikia.nocookie.net/hotwheels/images/c/c1/CAT_Dump_NoTmpo.JPG/revision/latest"
-  },
-  {
-    "year": 1990,
-    "name": "Peterbilt Dump Truck",
-    "series": "",
-    "color": "Red",
-    "part": "1560",
-    "hw": "",
-    "cas": "",
-    "image": "https://static.wikia.nocookie.net/hotwheels/images/4/4a/Peterbilt_Dump_RedBW.JPG/revision/latest"
-  },
-  {
-    "year": 1990,
-    "name": "Peterbilt Cement Mixer",
-    "series": "",
-    "color": "Red with White Plastic mixer",
-    "part": "1169",
-    "hw": "",
-    "cas": "",
-    "image": "https://static.wikia.nocookie.net/hotwheels/images/f/fe/X172-4%2C49-2%2C15.jpg/revision/latest"
-  },
-  {
-    "year": 1990,
-    "name": "Oshkosh Snow Plow",
-    "series": "",
-    "color": "Green",
-    "part": "2198",
-    "hw": "",
-    "cas": "",
-    "image": "https://static.wikia.nocookie.net/hotwheels/images/5/5d/Oshkosh_Snowplow_GrnCTS.JPG/revision/latest"
-  },
-  {
-    "year": 1990,
-    "name": "Tall Ryder",
-    "series": "",
-    "color": "Metalflake Silver",
-    "part": "7530",
-    "hw": "",
-    "cas": "",
-    "image": "https://static.wikia.nocookie.net/hotwheels/images/f/fa/Tall_Ryder-13204.jpg/revision/latest"
-  },
-  {
-    "year": 1990,
-    "name": "'32 Ford Delivery",
-    "series": "",
-    "color": "Yellow",
-    "part": "7672",
-    "hw": "",
-    "cas": "",
-    "image": "https://static.wikia.nocookie.net/hotwheels/images/0/0a/32_Ford_Delivery_Yelblu.JPG/revision/latest"
-  },
-  {
-    "year": 1990,
-    "name": "Talbot Lago",
-    "series": "Classics",
-    "color": "White",
-    "part": "4741",
-    "hw": "",
-    "cas": "",
-    "image": "https://static.wikia.nocookie.net/hotwheels/images/b/b5/Image_Not_Available.jpg/revision/latest"
-  },
-  {
-    "year": 1990,
-    "name": "Big Rig",
-    "series": "",
-    "color": "Black",
-    "part": "1790",
-    "hw": "",
-    "cas": "",
-    "image": "https://static.wikia.nocookie.net/hotwheels/images/5/55/Big_Rig_BlkBWRO.JPG/revision/latest"
-  },
-  {
-    "year": 1990,
-    "name": "Battle Tank",
-    "series": "",
-    "color": "Olive Green",
-    "part": "9371",
-    "hw": "",
-    "cas": "",
-    "image": "https://static.wikia.nocookie.net/hotwheels/images/b/b5/Image_Not_Available.jpg/revision/latest"
-  },
-  {
-    "year": 1990,
-    "name": "Suzuki QuadRacer",
-    "series": "",
-    "color": "Yellow",
-    "part": "3209",
-    "hw": "",
-    "cas": "",
-    "image": "https://static.wikia.nocookie.net/hotwheels/images/6/67/Suzuki_QuadracerCTY.JPG/revision/latest"
-  },
-  {
-    "year": 1990,
-    "name": "Power Plower",
-    "series": "",
-    "color": "Black",
-    "part": "5113",
-    "hw": "",
-    "cas": "",
-    "image": "https://static.wikia.nocookie.net/hotwheels/images/7/7f/Power_Plower_BlkCT.JPG/revision/latest"
-  },
-  {
-    "year": 1990,
-    "name": "Power Plower",
-    "series": "",
-    "color": "Metallic Purple",
-    "part": "9580",
-    "hw": "",
-    "cas": "",
-    "image": "https://static.wikia.nocookie.net/hotwheels/images/9/99/Power_Plower_MtPrpl.JPG/revision/latest"
-  },
-  {
-    "year": 1990,
-    "name": "Bywayman",
-    "series": "",
-    "color": "Maroon",
-    "part": "1518",
-    "hw": "",
-    "cas": "",
-    "image": "https://static.wikia.nocookie.net/hotwheels/images/9/93/Bywayman-12081.jpg/revision/latest"
-  },
-  {
-    "year": 1990,
-    "name": "Bywayman",
-    "series": "",
-    "color": "Black",
-    "part": "",
-    "hw": "",
-    "cas": "",
-    "image": "https://static.wikia.nocookie.net/hotwheels/images/9/9f/Bywayman_Blk.JPG/revision/latest"
-  },
-  {
-    "year": 1990,
-    "name": "Baja Breaker",
-    "series": "",
-    "color": "White",
-    "part": "1517",
-    "hw": "",
-    "cas": "",
-    "image": "https://static.wikia.nocookie.net/hotwheels/images/f/fd/Baja_Breaker_WhtCT.JPG/revision/latest"
-  },
-  {
-    "year": 1990,
-    "name": "Bronco 4-Wheeler",
-    "series": "",
-    "color": "White",
-    "part": "1520",
-    "hw": "",
-    "cas": "",
-    "image": "https://static.wikia.nocookie.net/hotwheels/images/f/f8/Bronco-4-Wheeler_WhtCTBlk.JPG/revision/latest"
-  },
-  {
-    "year": 1990,
-    "name": "Bronco 4-Wheeler",
-    "series": "",
-    "color": "Turquoise",
-    "part": "4355",
-    "hw": "",
-    "cas": "",
-    "image": "https://static.wikia.nocookie.net/hotwheels/images/7/73/Bronco-4-Wheeler_Trq.JPG/revision/latest"
-  },
-  {
-    "year": 1990,
-    "name": "Street Roader",
-    "series": "",
-    "color": "White",
-    "part": "1470",
-    "hw": "",
-    "cas": "",
-    "image": "https://static.wikia.nocookie.net/hotwheels/images/5/54/Street_Roader_WhtBlk.JPG/revision/latest"
-  },
-  {
-    "year": 1990,
-    "name": "Monster Vette",
-    "series": "",
-    "color": "Purple",
-    "part": "3716",
-    "hw": "",
-    "cas": "",
-    "image": "https://static.wikia.nocookie.net/hotwheels/images/8/8b/Monster_Vette_PrplCTS.JPG/revision/latest"
-  },
-  {
-    "year": 1990,
-    "name": "Alien",
-    "series": "",
-    "color": "Red & Metalflake Silver",
-    "part": "5026",
-    "hw": "",
-    "cas": "",
-    "image": "https://static.wikia.nocookie.net/hotwheels/images/7/72/Alien_redUH.JPG/revision/latest"
-  },
-  {
-    "year": 1990,
-    "name": "T-Bucket",
-    "series": "",
-    "color": "Yellow",
-    "part": "7673",
-    "hw": "",
-    "cas": "",
-    "image": "https://static.wikia.nocookie.net/hotwheels/images/4/4a/T-Bucket_Yel.JPG/revision/latest"
-  },
-  {
-    "year": 1990,
-    "name": "Rocketank",
-    "series": "",
-    "color": "Olive",
-    "part": "9380",
-    "hw": "",
-    "cas": "",
-    "image": "https://static.wikia.nocookie.net/hotwheels/images/a/aa/Rocketank_-_6010df.jpg/revision/latest"
-  },
-  {
-    "year": 1990,
-    "name": "Tail Gunner",
-    "series": "",
-    "color": "Olive",
-    "part": "4059",
-    "hw": "",
-    "cas": "",
-    "image": "https://static.wikia.nocookie.net/hotwheels/images/4/43/Tail_Gunner_GrnCT.JPG/revision/latest"
-  },
-  {
-    "year": 1990,
-    "name": "Family Camper",
-    "series": "The Simpsons",
-    "color": "Blue",
-    "part": "9113",
-    "hw": "",
-    "cas": "",
-    "image": "https://static.wikia.nocookie.net/hotwheels/images/e/ed/Baja_Breaker_BluCTY.JPG/revision/latest"
-  },
-  {
-    "year": 1990,
-    "name": "Homer's Nuclear Waste Van",
-    "series": "The Simpsons",
-    "color": "Yellow",
-    "part": "9114",
-    "hw": "",
-    "cas": "",
-    "image": "https://static.wikia.nocookie.net/hotwheels/images/7/7d/Simpson%27s_Delivery_Truck_-_6182df.jpg/revision/latest"
-  },
-  {
-    "year": 1990,
-    "name": "3-Window '34",
-    "series": "",
-    "color": "Metalflake Blue",
-    "part": "1299",
-    "hw": "",
-    "cas": "",
-    "image": "https://static.wikia.nocookie.net/hotwheels/images/3/30/3-Window_%2734_CCBlu.JPG/revision/latest"
-  },
-  {
-    "year": 1990,
-    "name": "3-Window '34",
-    "series": "",
-    "color": "Bright Lime",
-    "part": "1299",
-    "hw": "",
-    "cas": "",
-    "image": "https://static.wikia.nocookie.net/hotwheels/images/9/99/3-Window_%2734_BrtRR.JPG/revision/latest"
-  },
-  {
-    "year": 1990,
-    "name": "3-Window '34",
-    "series": "",
-    "color": "Bright Lime",
-    "part": "1299",
-    "hw": "",
-    "cas": "",
-    "image": "https://static.wikia.nocookie.net/hotwheels/images/e/e3/3-Window_%2734_BrtYW.JPG/revision/latest"
-  },
-  {
-    "year": 1990,
-    "name": "'35 Classic Caddy",
-    "series": "",
-    "color": "Gold Chrome w/ Dark Blue Plastic fenders",
-    "part": "3371",
-    "hw": "",
-    "cas": "",
-    "image": "https://static.wikia.nocookie.net/hotwheels/images/a/a5/%2735_Classic_Caddy_GldBlk.jpg/revision/latest"
-  },
-  {
-    "year": 1990,
-    "name": "'35 Classic Caddy",
-    "series": "",
-    "color": "Gold Chrome w/ Gold Chrome Plastic fenders",
-    "part": "3371",
-    "hw": "",
-    "cas": "",
-    "image": "https://static.wikia.nocookie.net/hotwheels/images/9/9d/%2735_Classic_Caddy_Gld.JPG/revision/latest"
-  },
-  {
-    "year": 1990,
-    "name": "'40's Woodie",
-    "series": "",
-    "color": "Turquoise with Pink wood grain panels",
-    "part": "1229",
-    "hw": "",
-    "cas": "",
-    "image": "https://static.wikia.nocookie.net/hotwheels/images/d/dd/California_Customs_%2740%27s_Woodie_-_6185df.jpg/revision/latest"
-  },
-  {
-    "year": 1990,
-    "name": "'57 Chevy",
-    "series": "",
-    "color": "Bright Orange",
-    "part": "1297",
-    "hw": "",
-    "cas": "",
-    "image": "https://static.wikia.nocookie.net/hotwheels/images/9/9d/57_Chevy_CalCustRR.JPG/revision/latest"
-  },
-  {
-    "year": 1990,
-    "name": "'63 Split Window Corvette",
-    "series": "",
-    "color": "Purple Chrome",
-    "part": "1305",
-    "hw": "",
-    "cas": "",
-    "image": "https://static.wikia.nocookie.net/hotwheels/images/f/f7/Th_63corvette009.jpg/revision/latest"
-  },
-  {
-    "year": 1990,
-    "name": "'65 Mustang Convertible",
-    "series": "",
-    "color": "Fluorescent Green",
-    "part": "1241",
-    "hw": "",
-    "cas": "",
-    "image": "https://static.wikia.nocookie.net/hotwheels/images/d/d1/%2765_Mustang_CalCust_RR.jpg/revision/latest"
-  },
-  {
-    "year": 1990,
-    "name": "'65 Mustang Convertible",
-    "series": "",
-    "color": "Fluorescent Green",
-    "part": "1241",
-    "hw": "",
-    "cas": "",
-    "image": "https://static.wikia.nocookie.net/hotwheels/images/6/63/GreenBlackCC.jpg/revision/latest"
-  },
-  {
-    "year": 1990,
-    "name": "'65 Mustang Convertible",
-    "series": "",
-    "color": "Fluorescent Green",
-    "part": "1241",
-    "hw": "",
-    "cas": "",
-    "image": "https://static.wikia.nocookie.net/hotwheels/images/c/c9/GreenCCTW.jpg/revision/latest"
-  },
-  {
-    "year": 1990,
-    "name": "Baja Bug",
-    "series": "",
-    "color": "Pink",
-    "part": "1238",
-    "hw": "",
-    "cas": "",
-    "image": "https://static.wikia.nocookie.net/hotwheels/images/a/ad/Baja_Bug_PnkCCRR.JPG/revision/latest"
-  },
-  {
-    "year": 1990,
-    "name": "Baja Bug",
-    "series": "",
-    "color": "Pink",
-    "part": "1238",
-    "hw": "",
-    "cas": "",
-    "image": "https://static.wikia.nocookie.net/hotwheels/images/0/0a/Baja_Bug_PnkCCbw.JPG/revision/latest"
-  },
-  {
-    "year": 1990,
-    "name": "Blown Camaro",
-    "series": "",
-    "color": "White",
-    "part": "1289",
-    "hw": "",
-    "cas": "",
-    "image": "https://static.wikia.nocookie.net/hotwheels/images/0/07/Blown_Camaro_CCrr.JPG/revision/latest"
-  },
-  {
-    "year": 1990,
-    "name": "Blown Camaro",
-    "series": "",
-    "color": "White",
-    "part": "1289",
-    "hw": "",
-    "cas": "",
-    "image": "https://static.wikia.nocookie.net/hotwheels/images/5/58/Blown_Camaro_CCtw.JPG/revision/latest"
-  },
-  {
-    "year": 1990,
-    "name": "Camaro Wind",
-    "series": "",
-    "color": "Bright Yellow",
-    "part": "2104",
-    "hw": "",
-    "cas": "",
-    "image": "https://static.wikia.nocookie.net/hotwheels/images/6/65/Camaro_Wind_AGENTAIR_2.jpg/revision/latest"
-  },
-  {
-    "year": 1990,
-    "name": "Classic Cobra",
-    "series": "",
-    "color": "White",
-    "part": "1296",
-    "hw": "",
-    "cas": "",
-    "image": "https://static.wikia.nocookie.net/hotwheels/images/9/9f/Classic_Cobra_CalCus.JPG/revision/latest"
-  },
-  {
-    "year": 1990,
-    "name": "Classic Cobra",
-    "series": "",
-    "color": "White",
-    "part": "1296",
-    "hw": "",
-    "cas": "",
-    "image": "https://static.wikia.nocookie.net/hotwheels/images/2/2e/Cobra_calrr.JPG/revision/latest"
-  },
-  {
-    "year": 1990,
-    "name": "Corvette Funny",
-    "series": "",
-    "color": "White",
-    "part": "2102",
-    "hw": "",
-    "cas": "",
-    "image": "https://static.wikia.nocookie.net/hotwheels/images/b/bd/Corvette_Funny.jpg/revision/latest"
-  },
-  {
-    "year": 1990,
-    "name": "Custom Corvette",
-    "series": "",
-    "color": "Blue Chrome",
-    "part": "1301",
-    "hw": "",
-    "cas": "",
-    "image": "https://static.wikia.nocookie.net/hotwheels/images/2/27/Custom_Corvette_BluCCRR.JPG/revision/latest"
-  },
-  {
-    "year": 1990,
-    "name": "Custom Corvette",
-    "series": "",
-    "color": "Blue Chrome",
-    "part": "1301",
-    "hw": "",
-    "cas": "",
-    "image": "https://static.wikia.nocookie.net/hotwheels/images/b/b8/Custom_Corvette_BluCC.JPG/revision/latest"
-  },
-  {
-    "year": 1990,
-    "name": "Ferrari Testarossa",
-    "series": "",
-    "color": "Chrome Pink",
-    "part": "1302",
-    "hw": "",
-    "cas": "",
-    "image": "https://static.wikia.nocookie.net/hotwheels/images/a/a1/Ferrari_Testarrosa_PkCrm.JPG/revision/latest"
-  },
-  {
-    "year": 1990,
-    "name": "Mercedes 380 SEL",
-    "series": "",
-    "color": "Chrome",
-    "part": "3368",
-    "hw": "",
-    "cas": "",
-    "image": "https://static.wikia.nocookie.net/hotwheels/images/7/73/Mercedes_380_Chrm.JPG/revision/latest"
-  },
-  {
-    "year": 1990,
-    "name": "Pontiac Banshee",
-    "series": "",
-    "color": "Gold Chrome with RED top insert and RED hood",
-    "part": "1303",
-    "hw": "",
-    "cas": "",
-    "image": "https://static.wikia.nocookie.net/hotwheels/images/6/6d/Pontiac_Banshee_GldRdCal.jpg/revision/latest"
-  },
-  {
-    "year": 1990,
-    "name": "Pontiac Banshee",
-    "series": "",
-    "color": "Gold Chrome with Orange top insert and Black hood",
-    "part": "1303",
-    "hw": "",
-    "cas": "",
-    "image": "https://static.wikia.nocookie.net/hotwheels/images/e/e1/IMG_7060.jpg/revision/latest"
-  },
-  {
-    "year": 1990,
-    "name": "Street Roader",
-    "series": "",
-    "color": "White & Blue",
-    "part": "1287",
-    "hw": "",
-    "cas": "",
-    "image": "https://static.wikia.nocookie.net/hotwheels/images/4/43/Street_Roader_WhtBluOCC.JPG/revision/latest"
-  },
-  {
-    "year": 1990,
-    "name": "Street Roader",
-    "series": "",
-    "color": "White & Blue",
-    "part": "1287",
-    "hw": "",
-    "cas": "",
-    "image": "https://static.wikia.nocookie.net/hotwheels/images/5/58/Street_Roader_WhtBluCC.JPG/revision/latest"
-  },
-,{
+
+  
+    {
+        "year": "1994",
+        "name": "Driven To The Max",
+        "series": "",
+        "color": "Bright Orange & Grey wing",
+        "part": "11847",
+        "hw": "BW",
+        "cas": "",
+        "image": "https://static.wikia.nocookie.net/hotwheels/images/3/36/Dragster_Org.JPG/revision/latest?cb=20090331010645"
+    },
+    {
+        "year": "1994",
+        "name": "Shadow Jet II",
+        "series": "",
+        "color": "Chrome",
+        "part": "11848",
+        "hw": "UH",
+        "cas": "",
+        "image": "https://static.wikia.nocookie.net/hotwheels/images/7/7b/Shadow_Jet_II_Crm.JPG/revision/latest?cb=20090213154346"
+    },
+    {
+        "year": "1994",
+        "name": "Rigor Motor",
+        "series": "",
+        "color": "Burgundy",
+        "part": "11849",
+        "hw": "BW",
+        "cas": "",
+        "image": "https://static.wikia.nocookie.net/hotwheels/images/2/2a/Rigor_Motor_MtRed.JPG/revision/latest?cb=20090321044506"
+    },
+    {
+        "year": "1994",
+        "name": "Splittin' Image II",
+        "series": "",
+        "color": "Metallic Dark Purple",
+        "part": "11850",
+        "hw": "PUH",
+        "cas": "",
+        "image": "https://static.wikia.nocookie.net/hotwheels/images/9/9e/Splittin%27_Image_II_PrplUHpnkRt.JPG/revision/latest?cb=20090102232125"
+    },
+    {
+        "year": "1994",
+        "name": "Vector \"Avtech\" WX-3",
+        "series": "",
+        "color": "Metalflake Lavender",
+        "part": "3050",
+        "hw": "UH",
+        "cas": "",
+        "image": "https://static.wikia.nocookie.net/hotwheels/images/a/a5/Vector_Avtech_PrpUH.JPG/revision/latest?cb=20090110181931"
+    },
+    {
+        "year": "1994",
+        "name": "Vector \"Avtech\" WX-3",
+        "series": "",
+        "color": "Metalflake Lavender",
+        "part": "3050",
+        "hw": "5SP",
+        "cas": "",
+        "image": "https://static.wikia.nocookie.net/hotwheels/images/d/d3/Vector_Avtech_Prp5SP.JPG/revision/latest?cb=20090110181902"
+    },
+    {
+        "year": "1994",
+        "name": "Sol-Aire CX-4",
+        "series": "",
+        "color": "Metallic Blue",
+        "part": "",
+        "hw": "UH",
+        "cas": "",
+        "image": "https://static.wikia.nocookie.net/hotwheels/images/5/5a/Sol_Aire_BluUH.JPG/revision/latest?cb=20091018113649"
+    },
+    {
+        "year": "1994",
+        "name": "BMW 850i",
+        "series": "",
+        "color": "Metalflake Dark Blue",
+        "part": "5667",
+        "hw": "UH",
+        "cas": "",
+        "image": "https://static.wikia.nocookie.net/hotwheels/images/6/6d/BMW_850_MtBluUH1.JPG/revision/latest?cb=20090120001518"
+    },
+    {
+        "year": "1994",
+        "name": "BMW 850i",
+        "series": "",
+        "color": "Metalflake Dark Blue",
+        "part": "5667",
+        "hw": "GUH",
+        "cas": "",
+        "image": "https://static.wikia.nocookie.net/hotwheels/images/6/6a/BMW_850_MtBluUHG.JPG/revision/latest?cb=20090120001542"
+    },
+    {
+        "year": "1994",
+        "name": "Lamborghini Countach",
+        "series": "",
+        "color": "Red",
+        "part": "4384",
+        "hw": "GUH",
+        "cas": "",
+        "image": "https://static.wikia.nocookie.net/hotwheels/images/f/f2/Cod64.jpg/revision/latest?cb=20081031024723"
+    },
+    {
+        "year": "1994",
+        "name": "Nissan Custom \"Z\"",
+        "series": "",
+        "color": "Metalflake Purple",
+        "part": "13584",
+        "hw": "UH",
+        "cas": "",
+        "image": "https://static.wikia.nocookie.net/hotwheels/images/d/d9/Nissan_Custom_Z_PrpUH.JPG/revision/latest?cb=20090114211028"
+    },
+    {
+        "year": "1994",
+        "name": "Road Roller",
+        "series": "1994 INTL",
+        "color": "Yellow",
+        "part": "3853",
+        "hw": "Roller",
+        "cas": "",
+        "image": "https://static.wikia.nocookie.net/hotwheels/images/b/b5/Image_Not_Available.jpg/revision/latest?cb=20151025125428"
+    },
+    {
+        "year": "1994",
+        "name": "Tough Customer",
+        "series": "",
+        "color": "Light Grey",
+        "part": "13192",
+        "hw": "Black MGW",
+        "cas": "",
+        "image": "https://static.wikia.nocookie.net/hotwheels/images/7/70/Big_Bertha_gryL.JPG/revision/latest?cb=20100723020736"
+    },
+    {
+        "year": "1994",
+        "name": "Corvette Stingray",
+        "series": "",
+        "color": "White",
+        "part": "12925",
+        "hw": "5SP",
+        "cas": "",
+        "image": "https://static.wikia.nocookie.net/hotwheels/images/6/63/Corvette_Stingray_Wht5SP.JPG/revision/latest?cb=20081208171104"
+    },
+    {
+        "year": "1993",
+        "name": "'93 Camaro",
+        "series": "",
+        "color": "Purple",
+        "part": "3021",
+        "hw": "UH",
+        "cas": "",
+        "image": "https://static.wikia.nocookie.net/hotwheels/images/f/f7/%2793_Camaro_Prp.JPG/revision/latest?cb=20090206215334"
+    },
+    {
+        "year": "1993",
+        "name": "Jaguar XJ220",
+        "series": "",
+        "color": "Metallic Silver",
+        "part": "3026",
+        "hw": "UH",
+        "cas": "",
+        "image": "https://static.wikia.nocookie.net/hotwheels/images/4/4e/Jaguar_XJ220_-_Silver.JPG/revision/latest?cb=20080910053157"
+    },
+    {
+        "year": "1993",
+        "name": "Oscar Mayer Wienermobile",
+        "series": "",
+        "color": "Red, Yellow and Tan",
+        "part": "3029",
+        "hw": "BW Black",
+        "cas": "",
+        "image": "https://static.wikia.nocookie.net/hotwheels/images/3/38/Oscar_Mayer_Wienermobile_BBW.JPG/revision/latest?cb=20090203005838"
+    },
+    {
+        "year": "1993",
+        "name": "Pipe Jammer",
+        "series": "",
+        "color": "Yellow",
+        "part": "3036",
+        "hw": "UH",
+        "cas": "",
+        "image": "https://static.wikia.nocookie.net/hotwheels/images/b/be/Pipe_Jammer_Yel.JPG/revision/latest?cb=20090110192556"
+    },
+    {
+        "year": "1993",
+        "name": "Avus Quattro",
+        "series": "",
+        "color": "Met. Silver",
+        "part": "5250",
+        "hw": "UH",
+        "cas": "",
+        "image": "https://static.wikia.nocookie.net/hotwheels/images/b/bc/Avus_Quatro_SilvUH.JPG/revision/latest?cb=20090113011549"
+    },
+    {
+        "year": "1993",
+        "name": "Lexus SC400",
+        "series": "",
+        "color": "Metalflake Black",
+        "part": "5263",
+        "hw": "BW",
+        "cas": "",
+        "image": "https://static.wikia.nocookie.net/hotwheels/images/b/bf/Lexus_SC400_Blkbw.JPG/revision/latest?cb=20091118224734"
+    },
+    {
+        "year": "1993",
+        "name": "Dodge Viper RT/10",
+        "series": "",
+        "color": "Red",
+        "part": "5265",
+        "hw": "UH",
+        "cas": "",
+        "image": "https://static.wikia.nocookie.net/hotwheels/images/9/91/Viper_RT10_-_30th_Anni.JPG/revision/latest?cb=20090102204532"
+    },
+    {
+        "year": "1993",
+        "name": "Silhouette II",
+        "series": "",
+        "color": "Met. Purple w/Chrome Engine",
+        "part": "5267",
+        "hw": "UH",
+        "cas": "",
+        "image": "https://static.wikia.nocookie.net/hotwheels/images/1/18/Silouette_II_PrpUH.JPG/revision/latest?cb=20090102173214"
+    },
+    {
+        "year": "1993",
+        "name": "Treadator",
+        "series": "",
+        "color": "Red & Chrome",
+        "part": "3035",
+        "hw": "Black track with tiny rollers",
+        "cas": "",
+        "image": "https://static.wikia.nocookie.net/hotwheels/images/c/c3/Treadator_Red.JPG/revision/latest?cb=20090131152944"
+    },
+    {
+        "year": "1993",
+        "name": "Twin Mill II",
+        "series": "",
+        "color": "Bright Yellow-Green",
+        "part": "5266",
+        "hw": "UH",
+        "cas": "",
+        "image": "https://static.wikia.nocookie.net/hotwheels/images/6/63/Twin_Mill_II_BrtYel.JPG/revision/latest?cb=20090321044827"
+    },
+    {
+        "year": "1993",
+        "name": "BMW 850i",
+        "series": "",
+        "color": "Blue",
+        "part": "5667",
+        "hw": "HO",
+        "cas": "",
+        "image": "https://static.wikia.nocookie.net/hotwheels/images/5/59/BMW_850_BluHO.JPG/revision/latest?cb=20090120001246"
+    },
+    {
+        "year": "1993",
+        "name": "BMW 850i",
+        "series": "",
+        "color": "Blue",
+        "part": "5667",
+        "hw": "LIW",
+        "cas": "",
+        "image": "https://static.wikia.nocookie.net/hotwheels/images/9/98/BMW_850_BluGrn.JPG/revision/latest?cb=20090120001219"
+    },
+    {
+        "year": "1993",
+        "name": "Corvette Split Window",
+        "series": "",
+        "color": "Blue",
+        "part": "3092",
+        "hw": "WW",
+        "cas": "",
+        "image": "https://static.wikia.nocookie.net/hotwheels/images/1/1c/Th_63corvette016.jpg/revision/latest?cb=20080821193148"
+    },
+    {
+        "year": "1993",
+        "name": "Gleamer Patrol",
+        "series": "",
+        "color": "Textured Chrome",
+        "part": "1691",
+        "hw": "BW",
+        "cas": "",
+        "image": "https://static.wikia.nocookie.net/hotwheels/images/b/bf/Sheriff_Patrol_glmrLt.JPG/revision/latest?cb=20091030152009"
+    },
+    {
+        "year": "1993",
+        "name": "Corvette Convertible",
+        "series": "",
+        "color": "White",
+        "part": "2898",
+        "hw": "UH",
+        "cas": "",
+        "image": "https://static.wikia.nocookie.net/hotwheels/images/e/e7/Custom_Corvette_WhtUH.JPG/revision/latest?cb=20081121173456"
+    },
+    {
+        "year": "1993",
+        "name": "Zombot",
+        "series": "",
+        "color": "Blue Chrome Pink Gun",
+        "part": "3852",
+        "hw": "UH",
+        "cas": "",
+        "image": "https://static.wikia.nocookie.net/hotwheels/images/9/9c/224_Zombot_1993_.JPG/revision/latest?cb=20111120120843"
+    },
+    {
+        "year": "1993",
+        "name": "Zender Fact 4",
+        "series": "",
+        "color": "Metallic Blue",
+        "part": "4407",
+        "hw": "UH",
+        "cas": "",
+        "image": "https://static.wikia.nocookie.net/hotwheels/images/2/26/Zender_fact_4_blue_metallic_tinted_glass_UH_wheels.JPG/revision/latest?cb=20120130203629"
+    },
+    {
+        "year": "1993",
+        "name": "Lamborghini Countach",
+        "series": "",
+        "color": "Red",
+        "part": "4384",
+        "hw": "UH",
+        "cas": "",
+        "image": "https://static.wikia.nocookie.net/hotwheels/images/5/5d/Lamborghini_Countach_RedStrp.JPG/revision/latest?cb=20091002161145"
+    },
+    {
+        "year": "1993",
+        "name": "Lamborghini Countach",
+        "series": "",
+        "color": "White",
+        "part": "4384",
+        "hw": "5DOT",
+        "cas": "",
+        "image": "https://static.wikia.nocookie.net/hotwheels/images/6/6a/Lamborghini_Countach_package_front.png/revision/latest?cb=20161104115429"
+    },
+    {
+        "year": "1993",
+        "name": "Swingfire",
+        "series": "",
+        "color": "Metalflake Dark Blue",
+        "part": "4312",
+        "hw": "WWBW",
+        "cas": "",
+        "image": "https://static.wikia.nocookie.net/hotwheels/images/a/a4/Swingfire_package_front.png/revision/latest?cb=20160112173938"
+    },
+    {
+        "year": "1993",
+        "name": "Auburn 852",
+        "series": "",
+        "color": "Red",
+        "part": "4314",
+        "hw": "WWBW",
+        "cas": "",
+        "image": "https://static.wikia.nocookie.net/hotwheels/images/1/11/Auburn_852_%282%29_package_front.png/revision/latest?cb=20160112173235"
+    },
+    {
+        "year": "1993",
+        "name": "Pontiac Banshee",
+        "series": "",
+        "color": "Red",
+        "part": "1796",
+        "hw": "UH Gold",
+        "cas": "",
+        "image": "https://static.wikia.nocookie.net/hotwheels/images/f/f6/Pontiac_Banshee_RdgldUHpL.JPG/revision/latest?cb=20090925143029"
+    },
+    {
+        "year": "1993",
+        "name": "XT-3",
+        "series": "",
+        "color": "White",
+        "part": "4544",
+        "hw": "BW & MC1",
+        "cas": "",
+        "image": "https://static.wikia.nocookie.net/hotwheels/images/0/08/XT-3_Wht.JPG/revision/latest?cb=20090109041554"
+    },
+    {
+        "year": "1993",
+        "name": "Mazda MX-5 Miata",
+        "series": "",
+        "color": "Yellow",
+        "part": "0454",
+        "hw": "BW",
+        "cas": "",
+        "image": "https://static.wikia.nocookie.net/hotwheels/images/8/80/Mazda_Miata_YelBW.JPG/revision/latest?cb=20090115215124"
+    },
+    {
+        "year": "1993",
+        "name": "Mercedes 380 SEL",
+        "series": "",
+        "color": "Pink with Red glitter",
+        "part": "4408",
+        "hw": "UH",
+        "cas": "",
+        "image": "https://static.wikia.nocookie.net/hotwheels/images/2/27/Mercedes_380_Pnk.JPG/revision/latest?cb=20090314153600"
+    },
+    {
+        "year": "1993",
+        "name": "Troop Convoy",
+        "series": "",
+        "color": "Gray-Brown",
+        "part": "4921",
+        "hw": "Black BW",
+        "cas": "",
+        "image": "https://static.wikia.nocookie.net/hotwheels/images/4/42/Troop_Convoy_GryBrn.JPG/revision/latest?cb=20091115143037"
+    },
+    {
+        "year": "1993",
+        "name": "Ferrari 348",
+        "series": "",
+        "color": "Bright Pink",
+        "part": "4348",
+        "hw": "UH",
+        "cas": "",
+        "image": "https://static.wikia.nocookie.net/hotwheels/images/0/09/Ferrari_348_05.JPG/revision/latest?cb=20140519150627"
+    },
+    {
+        "year": "1993",
+        "name": "Toyota MR2",
+        "series": "",
+        "color": "White",
+        "part": "4609",
+        "hw": "UH",
+        "cas": "",
+        "image": "https://static.wikia.nocookie.net/hotwheels/images/a/a7/Toyota_Rally_WhtUH.JPG/revision/latest?cb=20090117172429"
+    },
+    {
+        "year": "1993",
+        "name": "Purple Passion",
+        "series": "",
+        "color": "Metallic Purple",
+        "part": "2173",
+        "hw": "WW",
+        "cas": "",
+        "image": "https://static.wikia.nocookie.net/hotwheels/images/b/b9/Passion_AGENTAIR_3.jpg/revision/latest?cb=20080906015854"
+    },
+    {
+        "year": "1993",
+        "name": "Path Beater",
+        "series": "",
+        "color": "Pearl White",
+        "part": "2781",
+        "hw": "CT",
+        "cas": "",
+        "image": "https://static.wikia.nocookie.net/hotwheels/images/4/4d/Bywayman_WtBluCT.JPG/revision/latest?cb=20090101184208"
+    },
+    {
+        "year": "1993",
+        "name": "Bywayman",
+        "series": "",
+        "color": "Fluorescent Yellow",
+        "part": "2781",
+        "hw": "CT",
+        "cas": "",
+        "image": "https://static.wikia.nocookie.net/hotwheels/images/2/28/Power_Plower_BetGrnCT.JPG/revision/latest?cb=20081222032853"
+    },
+    {
+        "year": "1993",
+        "name": "Street Roader",
+        "series": "",
+        "color": "Metalflake Green",
+        "part": "4318",
+        "hw": "CT",
+        "cas": "",
+        "image": "https://static.wikia.nocookie.net/hotwheels/images/8/89/Street_Roader_Grn.JPG/revision/latest?cb=20090301185810"
+    },
+    {
+        "year": "1993",
+        "name": "Gulch Stepper",
+        "series": "",
+        "color": "Flourescent Yellow",
+        "part": "4320",
+        "hw": "CT",
+        "cas": "",
+        "image": "https://static.wikia.nocookie.net/hotwheels/images/4/40/Gulch_Stepper_BrtYel.JPG/revision/latest?cb=20090111005419"
+    },
+    {
+        "year": "1993",
+        "name": "Blazer 4×4",
+        "series": "",
+        "color": "Blue w/ Red Glitter",
+        "part": "4324",
+        "hw": "CT",
+        "cas": "",
+        "image": "https://static.wikia.nocookie.net/hotwheels/images/f/f9/Blazer_4x4_BluGltr.JPG/revision/latest?cb=20090109153449"
+    },
+    {
+        "year": "1993",
+        "name": "Baja Bug",
+        "series": "",
+        "color": "Red with Red Glitter",
+        "part": "4325",
+        "hw": "BW",
+        "cas": "",
+        "image": "https://static.wikia.nocookie.net/hotwheels/images/d/dd/Baja_Bug_RedGltr.JPG/revision/latest?cb=20091018130703"
+    },
+    {
+        "year": "1993",
+        "name": "Zombot",
+        "series": "",
+        "color": "Blue Chrome",
+        "part": "4346",
+        "hw": "UH",
+        "cas": "",
+        "image": "https://static.wikia.nocookie.net/hotwheels/images/5/57/Zombot_Blu.JPG/revision/latest?cb=20090113013446"
+    },
+    {
+        "year": "1993",
+        "name": "Double Demon",
+        "series": "",
+        "color": "Bright Yellow",
+        "part": "2850",
+        "hw": "UH",
+        "cas": "",
+        "image": "https://static.wikia.nocookie.net/hotwheels/images/9/9b/Double_Demon_YelUH.JPG/revision/latest?cb=20090113051234"
+    },
+    {
+        "year": "1993",
+        "name": "Mercedes-Benz Unimog",
+        "series": "",
+        "color": "Tan",
+        "part": "4643",
+        "hw": "WCT",
+        "cas": "",
+        "image": "https://static.wikia.nocookie.net/hotwheels/images/6/64/Mercedes_Benz_Unimog_TanCTW.JPG/revision/latest?cb=20090108184715"
+    },
+    {
+        "year": "1993",
+        "name": "Good Humor Truck",
+        "series": "",
+        "color": "Fluorescent Yellow / Neon Yellow",
+        "part": "3206",
+        "hw": "Green BW",
+        "cas": "",
+        "image": "https://static.wikia.nocookie.net/hotwheels/images/f/f5/Good_Humor_Truck_LimeGrn.JPG/revision/latest?cb=20091118021815"
+    },
+    {
+        "year": "1993",
+        "name": "Tractor",
+        "series": "",
+        "color": "Red",
+        "part": "2075",
+        "hw": "CT",
+        "cas": "",
+        "image": "https://static.wikia.nocookie.net/hotwheels/images/b/b5/Tractor_Red.JPG/revision/latest?cb=20081220203728"
+    },
+    {
+        "year": "1993",
+        "name": "Ford Stake Bed Truck",
+        "series": "",
+        "color": "Red",
+        "part": "4641",
+        "hw": "BW",
+        "cas": "",
+        "image": "https://static.wikia.nocookie.net/hotwheels/images/5/58/StakebedRFred91.jpg/revision/latest?cb=20081212043313"
+    },
+    {
+        "year": "1993",
+        "name": "'57 Chevy",
+        "series": "",
+        "color": "Teal",
+        "part": "4311",
+        "hw": "5SP",
+        "cas": "",
+        "image": "https://static.wikia.nocookie.net/hotwheels/images/a/ad/M1992-01.jpg/revision/latest?cb=20190521161647"
+    },
+    {
+        "year": "1993",
+        "name": "Auburn 852",
+        "series": "",
+        "color": "Red w/ Black fenders",
+        "part": "4314",
+        "hw": "White Wall BW",
+        "cas": "",
+        "image": "https://static.wikia.nocookie.net/hotwheels/images/b/b4/Auburn_852_MtRedWW.JPG/revision/latest?cb=20091002135952"
+    },
+    {
+        "year": "1993",
+        "name": "3-Window '34",
+        "series": "",
+        "color": "White & Purple",
+        "part": "2334",
+        "hw": "BW",
+        "cas": "",
+        "image": "https://static.wikia.nocookie.net/hotwheels/images/e/ef/3_Window_34_WhtPrpBW.JPG/revision/latest?cb=20091017041825"
+    },
+    {
+        "year": "1993",
+        "name": "Baja Breaker",
+        "series": "Open Wide",
+        "color": "Maroon with fading Yellow front",
+        "part": "3490",
+        "hw": "BW",
+        "cas": "",
+        "image": "https://static.wikia.nocookie.net/hotwheels/images/b/b6/Baja_Breaker_OpenWide.jpg/revision/latest?cb=20090314134557"
+    },
+    {
+        "year": "1993",
+        "name": "BMW 323",
+        "series": "Skull Rider",
+        "color": "Metallic Pink",
+        "part": "3492",
+        "hw": "BW",
+        "cas": "",
+        "image": "https://static.wikia.nocookie.net/hotwheels/images/6/60/BMW_323_-_Tattoo_Machines.jpg/revision/latest?cb=20151026224346"
+    },
+    {
+        "year": "1993",
+        "name": "BMW M1",
+        "series": "Street Dog",
+        "color": "Metallic Blue",
+        "part": "",
+        "hw": "BW",
+        "cas": "",
+        "image": "https://static.wikia.nocookie.net/hotwheels/images/3/35/BMW_M1_Dog.JPG/revision/latest?cb=20090314163606"
+    },
+    {
+        "year": "1993",
+        "name": "Monster Vette",
+        "series": "Street Beast",
+        "color": "Yellow",
+        "part": "3716",
+        "hw": "CTS",
+        "cas": "",
+        "image": "https://static.wikia.nocookie.net/hotwheels/images/7/7f/Monster_Vette_StrtBst_R.JPG/revision/latest?cb=20090924131953"
+    },
+    {
+        "year": "1993",
+        "name": "Porsche 959",
+        "series": "Eye-Gor",
+        "color": "Yellow & Light Green",
+        "part": "3493",
+        "hw": "BW",
+        "cas": "",
+        "image": "https://static.wikia.nocookie.net/hotwheels/images/e/e2/Porsche_959_Eyegor.JPG/revision/latest?cb=20090120021643"
+    },
+    {
+        "year": "1993",
+        "name": "Race Bait 308",
+        "series": "Hot Wheels",
+        "color": "Blue",
+        "part": "3494",
+        "hw": "BW",
+        "cas": "",
+        "image": "https://static.wikia.nocookie.net/hotwheels/images/1/1a/Hot_Wheels_Frri.JPG/revision/latest?cb=20090215210440"
+    },
+    {
+        "year": "1993",
+        "name": "Rapid Transit",
+        "series": "Bus Boys",
+        "color": "White",
+        "part": "3502",
+        "hw": "BW",
+        "cas": "",
+        "image": "https://static.wikia.nocookie.net/hotwheels/images/7/73/Rapid_Transit_WhtTat.JPG/revision/latest?cb=20090218220350"
+    },
+    {
+        "year": "1993",
+        "name": "Rapid Transit",
+        "series": "Bus Boys",
+        "color": "Yellow",
+        "part": "3502",
+        "hw": "BW",
+        "cas": "",
+        "image": "https://static.wikia.nocookie.net/hotwheels/images/e/eb/Rapid_Transit_YelTat1.JPG/revision/latest?cb=20090215181612"
+    },
+    {
+        "year": "1993",
+        "name": "Science Friction",
+        "series": "Lightning Storm",
+        "color": "Blue",
+        "part": "",
+        "hw": "BW",
+        "cas": "",
+        "image": "https://static.wikia.nocookie.net/hotwheels/images/e/eb/Lightning_Storm_L.JPG/revision/latest?cb=20091004030500"
+    },
+    {
+        "year": "1993",
+        "name": "Speed Blaster",
+        "series": "Dragon Wagon",
+        "color": "",
+        "part": "",
+        "hw": "BW",
+        "cas": "",
+        "image": "https://static.wikia.nocookie.net/hotwheels/images/7/72/Speed_Blaster_grnBW.JPG/revision/latest?cb=20091002001135"
+    },
+    {
+        "year": "1993",
+        "name": "Sting Rod",
+        "series": "Ammo",
+        "color": "Metallic Silver",
+        "part": "3527",
+        "hw": "CTS Black",
+        "cas": "",
+        "image": "https://static.wikia.nocookie.net/hotwheels/images/b/b2/Ammo.JPG/revision/latest?cb=20090208235151"
+    },
+    {
+        "year": "1993",
+        "name": "Talbot Lago",
+        "series": "Spiderider",
+        "color": "White",
+        "part": "3479",
+        "hw": "WW",
+        "cas": "",
+        "image": "https://static.wikia.nocookie.net/hotwheels/images/c/cc/Talbot_Lago_Spdr.JPG/revision/latest?cb=20090319202521"
+    },
+    {
+        "year": "1993",
+        "name": "Road Pirate",
+        "series": "Road Pirate",
+        "color": "Red",
+        "part": "",
+        "hw": "BW",
+        "cas": "",
+        "image": "https://static.wikia.nocookie.net/hotwheels/images/9/97/Road_Pirate.JPG/revision/latest?cb=20091006022436"
+    },
+    {
+        "year": "1993",
+        "name": "",
+        "series": "1/9",
+        "color": "",
+        "part": "10566",
+        "hw": "",
+        "cas": "",
+        "image": "https://static.wikia.nocookie.net/hotwheels/images/0/0d/Oldsmobile_Aurora_Gry.JPG/revision/latest?cb=20081215173514"
+    },
+    {
+        "year": "1993",
+        "name": "",
+        "series": "2/9",
+        "color": "",
+        "part": "11082",
+        "hw": "",
+        "cas": "",
+        "image": "https://static.wikia.nocookie.net/hotwheels/images/4/4c/Olds_442_W-30_Red.JPG/revision/latest?cb=20081220073846"
+    },
+    {
+        "year": "1993",
+        "name": "",
+        "series": "3/9",
+        "color": "",
+        "part": "11083",
+        "hw": "",
+        "cas": "",
+        "image": "https://static.wikia.nocookie.net/hotwheels/images/a/a1/GM_Ultralite_Deman.JPG/revision/latest?cb=20081208183833"
+    },
+    {
+        "year": "1993",
+        "name": "",
+        "series": "4/9",
+        "color": "",
+        "part": "11084",
+        "hw": "",
+        "cas": "",
+        "image": "https://static.wikia.nocookie.net/hotwheels/images/5/50/GM_Lean_Machine_Demo.JPG/revision/latest?cb=20090104060842"
+    },
+    {
+        "year": "1993",
+        "name": "",
+        "series": "5/9",
+        "color": "",
+        "part": "11085",
+        "hw": "",
+        "cas": "",
+        "image": "https://static.wikia.nocookie.net/hotwheels/images/e/e7/Corvette_Stingray_III_-_93_Demolition_Man.jpg/revision/latest?cb=20081203092048"
+    },
+    {
+        "year": "1993",
+        "name": "",
+        "series": "6/9",
+        "color": "",
+        "part": "11087",
+        "hw": "",
+        "cas": "",
+        "image": "https://static.wikia.nocookie.net/hotwheels/images/2/2d/Pontiac_Salsa_orgBWO2.JPG/revision/latest?cb=20081210042541"
+    },
+    {
+        "year": "1993",
+        "name": "",
+        "series": "7/9",
+        "color": "",
+        "part": "11088",
+        "hw": "",
+        "cas": "",
+        "image": "https://static.wikia.nocookie.net/hotwheels/images/7/72/Pontiac_Banshee_RedDemoMan.jpg/revision/latest?cb=20081119233208"
+    },
+    {
+        "year": "1993",
+        "name": "",
+        "series": "8/9",
+        "color": "",
+        "part": "11089",
+        "hw": "",
+        "cas": "",
+        "image": "https://static.wikia.nocookie.net/hotwheels/images/3/39/Buick_Wildcat_CRedBW.JPG/revision/latest?cb=20090104210913"
+    },
+    {
+        "year": "1993",
+        "name": "",
+        "series": "9/9",
+        "color": "",
+        "part": "11090",
+        "hw": "",
+        "cas": "",
+        "image": "https://static.wikia.nocookie.net/hotwheels/images/a/a7/93_Camaro_ACC.jpg/revision/latest?cb=20090107172111"
+    },
+    {
+        "year": "1993",
+        "name": "",
+        "series": "",
+        "color": "Metalflake Bright Red",
+        "part": "5700",
+        "hw": "RL",
+        "cas": "",
+        "image": "https://static.wikia.nocookie.net/hotwheels/images/8/8f/Red_Baron-25th_Bright_Red.jpg/revision/latest?cb=20130324115517"
+    },
+    {
+        "year": "1993",
+        "name": "",
+        "series": "",
+        "color": "Metallic Brown / Matte Black",
+        "part": "5707",
+        "hw": "RL",
+        "cas": "",
+        "image": "https://static.wikia.nocookie.net/hotwheels/images/1/1a/Paddy_Wagon-25th_Brown.jpg/revision/latest?cb=20130324120040"
+    },
+    {
+        "year": "1993",
+        "name": "",
+        "series": "",
+        "color": "Metallic Brown",
+        "part": "5708",
+        "hw": "RL",
+        "cas": "",
+        "image": "https://static.wikia.nocookie.net/hotwheels/images/c/c9/Splittin%27_Image-25th_Brown.jpg/revision/latest?cb=20130324115817"
+    },
+    {
+        "year": "1993",
+        "name": "",
+        "series": "",
+        "color": "Metallic Pink",
+        "part": "5709",
+        "hw": "RL",
+        "cas": "",
+        "image": "https://static.wikia.nocookie.net/hotwheels/images/e/ef/Twin_Mill-25th_Pink_.jpg/revision/latest?cb=20130324113855"
+    },
+    {
+        "year": "1993",
+        "name": "",
+        "series": "",
+        "color": "Metallic Lime Green",
+        "part": "5714",
+        "hw": "RL",
+        "cas": "",
+        "image": "https://static.wikia.nocookie.net/hotwheels/images/4/48/Beatnik_Bandit-25th_Lime_Green.jpg/revision/latest?cb=20130324114820"
+    },
+    {
+        "year": "1993",
+        "name": "",
+        "series": "",
+        "color": "Metallic Light Green",
+        "part": "5715",
+        "hw": "RL",
+        "cas": "",
+        "image": "https://static.wikia.nocookie.net/hotwheels/images/5/53/Silhouet25LtGrn.JPG/revision/latest?cb=20180123232858"
+    },
+    {
+        "year": "1993",
+        "name": "",
+        "series": "",
+        "color": "Metallic Turquoise",
+        "part": "5730",
+        "hw": "RL",
+        "cas": "",
+        "image": "https://static.wikia.nocookie.net/hotwheels/images/0/00/The_Demon-25th_Turquoise.jpg/revision/latest?cb=20130324120557"
+    },
+    {
+        "year": "1993",
+        "name": "",
+        "series": "",
+        "color": "Metallic Violet",
+        "part": "5743",
+        "hw": "RL",
+        "cas": "",
+        "image": "https://static.wikia.nocookie.net/hotwheels/images/3/39/Classic_Nomad-25th_Violet.jpg/revision/latest?cb=20130324120301"
+    },
+    {
+        "year": "1992",
+        "name": "Chevy Lumina",
+        "series": "",
+        "color": "Red",
+        "part": "5675",
+        "hw": "BW",
+        "cas": "",
+        "image": "https://static.wikia.nocookie.net/hotwheels/images/6/6b/Chevy_Lumina_Red.JPG/revision/latest?cb=20081220184511"
+    },
+    {
+        "year": "1992",
+        "name": "'56 Flashsider",
+        "series": "",
+        "color": "Teal",
+        "part": "2029",
+        "hw": "UH",
+        "cas": "",
+        "image": "https://static.wikia.nocookie.net/hotwheels/images/3/33/%2756_Flashsider_-_6407df.jpg/revision/latest?cb=20081113105505"
+    },
+    {
+        "year": "1992",
+        "name": "Bulldozer",
+        "series": "",
+        "color": "Yellow",
+        "part": "3765",
+        "hw": "MW",
+        "cas": "",
+        "image": "https://static.wikia.nocookie.net/hotwheels/images/c/cb/Bulldozer.JPG/revision/latest?cb=20090109063021"
+    },
+    {
+        "year": "1992",
+        "name": "Flashfire",
+        "series": "",
+        "color": "Black",
+        "part": "3156",
+        "hw": "GHO",
+        "cas": "",
+        "image": "https://static.wikia.nocookie.net/hotwheels/images/6/60/Flashfire_BlkSho.JPG/revision/latest?cb=20090202040905"
+    },
+    {
+        "year": "1992",
+        "name": "Goodyear Blimp",
+        "series": "",
+        "color": "Gray",
+        "part": "1384",
+        "hw": "N/A",
+        "cas": "",
+        "image": "https://static.wikia.nocookie.net/hotwheels/images/e/e7/Blimp_GY.JPG/revision/latest?cb=20090319210758"
+    },
+    {
+        "year": "1992",
+        "name": "Hiway Hauler",
+        "series": "",
+        "color": "Red",
+        "part": "3782",
+        "hw": "BW",
+        "cas": "",
+        "image": "https://static.wikia.nocookie.net/hotwheels/images/d/d7/Hiway_Hauler_KlAid.JPG/revision/latest?cb=20090219001350"
+    },
+    {
+        "year": "1992",
+        "name": "Hummer",
+        "series": "",
+        "color": "Light Brown",
+        "part": "0773",
+        "hw": "CT",
+        "cas": "",
+        "image": "https://static.wikia.nocookie.net/hotwheels/images/7/70/Hummer_ltBrnMet.JPG/revision/latest?cb=20090207051810"
+    },
+    {
+        "year": "1992",
+        "name": "Oshkosh Cement Mixer",
+        "series": "1992 Hot Wheels",
+        "color": "White with Blue fenders and Red mixer",
+        "part": "2074",
+        "hw": "BW",
+        "cas": "",
+        "image": "https://static.wikia.nocookie.net/hotwheels/images/8/8f/Oshkosh_Cement_Mixer_Wht.JPG/revision/latest?cb=20090108183128"
+    },
+    {
+        "year": "1992",
+        "name": "Recycling Truck",
+        "series": "",
+        "color": "Orange",
+        "part": "2073",
+        "hw": "BW",
+        "cas": "",
+        "image": "https://static.wikia.nocookie.net/hotwheels/images/d/d8/Recycling_Truck_Orgbw.JPG/revision/latest?cb=20090203154532"
+    },
+    {
+        "year": "1992",
+        "name": "Shock Factor",
+        "series": "",
+        "color": "Black & Pink",
+        "part": "3164",
+        "hw": "CT",
+        "cas": "",
+        "image": "https://static.wikia.nocookie.net/hotwheels/images/9/92/Shock_Factor_BlkPk.JPG/revision/latest?cb=20090201224356"
+    },
+    {
+        "year": "1992",
+        "name": "Tractor",
+        "series": "",
+        "color": "Yellow w/Yellow Plastic Top",
+        "part": "2075",
+        "hw": "Yellow Tractor Wheel & Yellow CT",
+        "cas": "",
+        "image": "https://static.wikia.nocookie.net/hotwheels/images/b/bc/Tractor_YelYel.JPG/revision/latest?cb=20081220203550"
+    },
+    {
+        "year": "1992",
+        "name": "Tank Truck",
+        "series": "",
+        "color": "Red with Chrome plastic tank",
+        "part": "2076",
+        "hw": "BW",
+        "cas": "",
+        "image": "https://static.wikia.nocookie.net/hotwheels/images/6/69/Tank_Truck_RedBW.JPG/revision/latest?cb=20090228212319"
+    },
+    {
+        "year": "1992",
+        "name": "Road Roller",
+        "series": "",
+        "color": "Yellow",
+        "part": "3853",
+        "hw": "CR1",
+        "cas": "",
+        "image": "https://static.wikia.nocookie.net/hotwheels/images/1/19/Hot_Wheels_Road_Roller_1992_-_07181df.jpg/revision/latest?cb=20170719231848"
+    },
+    {
+        "year": "1992",
+        "name": "School Bus",
+        "series": "Workhorses",
+        "color": "Yellow",
+        "part": "1795",
+        "hw": "BW",
+        "cas": "",
+        "image": "https://static.wikia.nocookie.net/hotwheels/images/7/77/School_Bus_-_3030cf2.jpg/revision/latest?cb=20170705013036"
+    },
+    {
+        "year": "1992",
+        "name": "Fire-Eater",
+        "series": "Workhorses",
+        "color": "Red",
+        "part": "9640",
+        "hw": "BW",
+        "cas": "",
+        "image": "https://static.wikia.nocookie.net/hotwheels/images/6/64/FIRE-EATER_9640_4.jpg/revision/latest?cb=20211229142858"
+    },
+    {
+        "year": "1992",
+        "name": "Thunderstreak",
+        "series": "",
+        "color": "Yellow",
+        "part": "3999",
+        "hw": "BW",
+        "cas": "",
+        "image": "https://static.wikia.nocookie.net/hotwheels/images/9/98/Thunderstreak_Penzl.JPG/revision/latest?cb=20090201164457"
+    },
+    {
+        "year": "1992",
+        "name": "Vampyra",
+        "series": "",
+        "color": "Black",
+        "part": "0444",
+        "hw": "BW",
+        "cas": "",
+        "image": "https://static.wikia.nocookie.net/hotwheels/images/c/c2/Vampyra_BlkBW.JPG/revision/latest?cb=20090102210155"
+    },
+    {
+        "year": "1992",
+        "name": "Sol-Aire CX-4",
+        "series": "",
+        "color": "Blue",
+        "part": "5902",
+        "hw": "UH",
+        "cas": "",
+        "image": "https://static.wikia.nocookie.net/hotwheels/images/0/0e/Sol-Aire_CX4_-_92_HW.jpg/revision/latest?cb=20090126045843"
+    },
+    {
+        "year": "1992",
+        "name": "Path Beater",
+        "series": "Off Road",
+        "color": "Fluorescent Lime",
+        "part": "2781",
+        "hw": "ORSB",
+        "cas": "",
+        "image": "https://static.wikia.nocookie.net/hotwheels/images/b/b5/Image_Not_Available.jpg/revision/latest?cb=20151025125428"
+    },
+    {
+        "year": "1992",
+        "name": "Jaguar XJ220",
+        "series": "Gold Medal Speed",
+        "color": "Metalflake Dark Blue",
+        "part": "13579",
+        "hw": "GLW",
+        "cas": "",
+        "image": "https://static.wikia.nocookie.net/hotwheels/images/b/b5/Image_Not_Available.jpg/revision/latest?cb=20151025125428"
+    },
+    {
+        "year": "1992",
+        "name": "Mercedes-Benz Unimog",
+        "series": "Workhorses",
+        "color": "Tan",
+        "part": "4643",
+        "hw": "ORSB",
+        "cas": "",
+        "image": "https://static.wikia.nocookie.net/hotwheels/images/0/0f/Mercedes_Benz_Unimog_TanSBW.JPG/revision/latest?cb=20090108184733"
+    },
+    {
+        "year": "1992",
+        "name": "Big Bertha",
+        "series": "",
+        "color": "Light Grey",
+        "part": "13192",
+        "hw": "Black MGW",
+        "cas": "",
+        "image": "https://static.wikia.nocookie.net/hotwheels/images/7/70/Big_Bertha_gryL.JPG/revision/latest?cb=20100723020736"
+    },
+    {
+        "year": "1992",
+        "name": "Gleamer Patrol",
+        "series": "",
+        "color": "Chrome",
+        "part": "",
+        "hw": "BW",
+        "cas": "",
+        "image": "https://static.wikia.nocookie.net/hotwheels/images/b/bf/Sheriff_Patrol_glmrLt.JPG/revision/latest?cb=20091030152009"
+    },
+    {
+        "year": "1992",
+        "name": "'57 T-Bird",
+        "series": "",
+        "color": "Gold Chrome",
+        "part": "",
+        "hw": "BW",
+        "cas": "",
+        "image": "https://static.wikia.nocookie.net/hotwheels/images/b/bf/57_T-Bird_GldGT.JPG/revision/latest?cb=20091117064542"
+    },
+    {
+        "year": "1992",
+        "name": "Aeroflash",
+        "series": "",
+        "color": "Chrome Pink",
+        "part": "1781",
+        "hw": "UH",
+        "cas": "",
+        "image": "https://static.wikia.nocookie.net/hotwheels/images/c/cc/Aeroflash_PnkUH.JPG/revision/latest?cb=20090219225324"
+    },
+    {
+        "year": "1992",
+        "name": "Corvette Stingray",
+        "series": "",
+        "color": "Gold",
+        "part": "1793",
+        "hw": "BW",
+        "cas": "",
+        "image": "https://static.wikia.nocookie.net/hotwheels/images/0/08/Corvette_Stingray_GrnGlmTm.JPG/revision/latest?cb=20091116230317"
+    },
+    {
+        "year": "1992",
+        "name": "Porsche 959",
+        "series": "",
+        "color": "Pink Chrome",
+        "part": "1794",
+        "hw": "UH",
+        "cas": "",
+        "image": "https://static.wikia.nocookie.net/hotwheels/images/3/31/Porsche_959_GTPnk.JPG/revision/latest?cb=20090120021719"
+    },
+    {
+        "year": "1991",
+        "name": "Buick Stocker",
+        "series": "Roses Department Store Promo",
+        "color": "Blue",
+        "part": "9258",
+        "hw": "BW",
+        "cas": "",
+        "image": "https://static.wikia.nocookie.net/hotwheels/images/4/4c/Buick_Stocker_Roses6.JPG/revision/latest?cb=20081210022303"
+    },
+    {
+        "year": "1991",
+        "name": "Holden Commodore",
+        "series": "International",
+        "color": "White",
+        "part": "9713",
+        "hw": "BW",
+        "cas": "",
+        "image": "https://static.wikia.nocookie.net/hotwheels/images/8/89/Holden_Commodore.jpg/revision/latest?cb=20090612191330"
+    },
+    {
+        "year": "1991",
+        "name": "Mercedes-Benz SL",
+        "series": "International",
+        "color": "Chrome with Black beltline",
+        "part": "9770",
+        "hw": "Chrome HO",
+        "cas": "",
+        "image": "https://static.wikia.nocookie.net/hotwheels/images/2/26/Mercedes-Benz_SL_CrmSho.JPG/revision/latest?cb=20081219193056"
+    },
+    {
+        "year": "1991",
+        "name": "Peugeot 405",
+        "series": "",
+        "color": "Black",
+        "part": "5670",
+        "hw": "BW",
+        "cas": "",
+        "image": "https://static.wikia.nocookie.net/hotwheels/images/2/2c/Peugeot_405_Blk.JPG/revision/latest?cb=20090213150137"
+    },
+    {
+        "year": "1991",
+        "name": "Peugeot 405",
+        "series": "International",
+        "color": "Blue",
+        "part": "3204",
+        "hw": "BW",
+        "cas": "",
+        "image": "https://static.wikia.nocookie.net/hotwheels/images/3/38/Peugeot_405_Blu.JPG/revision/latest?cb=20090213150113"
+    },
+    {
+        "year": "1991",
+        "name": "Porsche 930",
+        "series": "",
+        "color": "Met. Dark Red",
+        "part": "7607",
+        "hw": "BW",
+        "cas": "",
+        "image": "https://static.wikia.nocookie.net/hotwheels/images/1/1d/Porsche_930_MtRed.JPG/revision/latest?cb=20090311023033"
+    },
+    {
+        "year": "1991",
+        "name": "Renault 5 Turbo",
+        "series": "",
+        "color": "Blue",
+        "part": "9749",
+        "hw": "BW",
+        "cas": "",
+        "image": "https://static.wikia.nocookie.net/hotwheels/images/e/eb/Renault_5_Turbo_Blu.JPG/revision/latest?cb=20090116180531"
+    },
+    {
+        "year": "1991",
+        "name": "Renault 5 Turbo",
+        "series": "International",
+        "color": "White",
+        "part": "9749",
+        "hw": "BW",
+        "cas": "",
+        "image": "https://static.wikia.nocookie.net/hotwheels/images/c/c7/Renault_5_Turbo_Wht.JPG/revision/latest?cb=20090116180550"
+    },
+    {
+        "year": "1991",
+        "name": "Speed Shark",
+        "series": "Heroes on Hot Wheels",
+        "color": "White",
+        "part": "",
+        "hw": "BW",
+        "cas": "",
+        "image": "https://static.wikia.nocookie.net/hotwheels/images/c/c1/Speed_Shark_Wht.JPG/revision/latest?cb=20090124023858"
+    },
+    {
+        "year": "1991",
+        "name": "VW Golf",
+        "series": "",
+        "color": "Red",
+        "part": "9557",
+        "hw": "BW",
+        "cas": "",
+        "image": "https://static.wikia.nocookie.net/hotwheels/images/2/28/VW_Golf_Red.JPG/revision/latest?cb=20090121152800"
+    },
+    {
+        "year": "1991",
+        "name": "Ramp Truck",
+        "series": "",
+        "color": "White",
+        "part": "5343",
+        "hw": "BW",
+        "cas": "",
+        "image": "https://static.wikia.nocookie.net/hotwheels/images/3/39/Ramp_Truck_Wht.JPG/revision/latest?cb=20090219140257"
+    },
+    {
+        "year": "1991",
+        "name": "Trailbuster",
+        "series": "",
+        "color": "Turquoise",
+        "part": "5636",
+        "hw": "CT",
+        "cas": "",
+        "image": "https://static.wikia.nocookie.net/hotwheels/images/f/f7/Trailbuster_Turq.JPG/revision/latest?cb=20090206213955"
+    },
+    {
+        "year": "1991",
+        "name": "Street Beast",
+        "series": "",
+        "color": "White & Turquoise",
+        "part": "5637",
+        "hw": "WW",
+        "cas": "",
+        "image": "https://static.wikia.nocookie.net/hotwheels/images/4/40/Street_Beast_WhtTrq.JPG/revision/latest?cb=20090106152729"
+    },
+    {
+        "year": "1991",
+        "name": "Limozeen",
+        "series": "",
+        "color": "White",
+        "part": "5638",
+        "hw": "WW",
+        "cas": "",
+        "image": "https://static.wikia.nocookie.net/hotwheels/images/4/4a/Limozeen_Wht.JPG/revision/latest?cb=20090113023840"
+    },
+    {
+        "year": "1991",
+        "name": "Speed Shark",
+        "series": "",
+        "color": "Purple",
+        "part": "5640",
+        "hw": "BW",
+        "cas": "",
+        "image": "https://static.wikia.nocookie.net/hotwheels/images/5/5f/Speed_Shark_LtPrp.JPG/revision/latest?cb=20090124023710"
+    },
+    {
+        "year": "1991",
+        "name": "Mazda MX-5 Miata",
+        "series": "",
+        "color": "Red",
+        "part": "2920",
+        "hw": "BW",
+        "cas": "",
+        "image": "https://static.wikia.nocookie.net/hotwheels/images/e/e0/Mazda_Miata_Red.JPG/revision/latest?cb=20090115215217"
+    },
+    {
+        "year": "1991",
+        "name": "Ferrari 250",
+        "series": "",
+        "color": "Yellow",
+        "part": "5665",
+        "hw": "BW",
+        "cas": "",
+        "image": "https://static.wikia.nocookie.net/hotwheels/images/4/44/Ferrari_250_YelBWcrm.JPG/revision/latest?cb=20090115232655"
+    },
+    {
+        "year": "1991",
+        "name": "Ferrari 348",
+        "series": "",
+        "color": "Yellow",
+        "part": "5666",
+        "hw": "UH",
+        "cas": "",
+        "image": "https://static.wikia.nocookie.net/hotwheels/images/a/a2/Ferrari_348_Yel.JPG/revision/latest?cb=20090118174737"
+    },
+    {
+        "year": "1991",
+        "name": "Toyota MR-2 Rally",
+        "series": "",
+        "color": "White",
+        "part": "5669",
+        "hw": "UH",
+        "cas": "",
+        "image": "https://static.wikia.nocookie.net/hotwheels/images/7/76/Toyota_Rally_WhUH.JPG/revision/latest?cb=20090117172446"
+    },
+    {
+        "year": "1991",
+        "name": "Lamborghini Diablo",
+        "series": "",
+        "color": "Red",
+        "part": "5672",
+        "hw": "UH",
+        "cas": "",
+        "image": "https://static.wikia.nocookie.net/hotwheels/images/6/6e/Lamborghini_Diablo_RedUH.JPG/revision/latest?cb=20091010222005"
+    },
+    {
+        "year": "1991",
+        "name": "Zender Fact 4",
+        "series": "",
+        "color": "Silver",
+        "part": "5674",
+        "hw": "UH",
+        "cas": "",
+        "image": "https://static.wikia.nocookie.net/hotwheels/images/a/a7/Zender_Fact_4_SlvUH.JPG/revision/latest?cb=20090203150224"
+    },
+    {
+        "year": "1991",
+        "name": "Porsche 930",
+        "series": "",
+        "color": "Red",
+        "part": "7607",
+        "hw": "BW",
+        "cas": "",
+        "image": "https://static.wikia.nocookie.net/hotwheels/images/1/11/Porsche_930_Red.JPG/revision/latest?cb=20090311023405"
+    },
+    {
+        "year": "1991",
+        "name": "Porsche 930",
+        "series": "",
+        "color": "Light Purple",
+        "part": "7607",
+        "hw": "BW",
+        "cas": "",
+        "image": "https://static.wikia.nocookie.net/hotwheels/images/9/9d/Porsche_930_Prpl.JPG/revision/latest?cb=20090311023525"
+    },
+    {
+        "year": "1991",
+        "name": "BMW 850i",
+        "series": "",
+        "color": "Blue",
+        "part": "5667",
+        "hw": "UH",
+        "cas": "",
+        "image": "https://static.wikia.nocookie.net/hotwheels/images/9/97/BMW_850_BluUH.JPG/revision/latest?cb=20090120001302"
+    },
+    {
+        "year": "1991",
+        "name": "Ford Aerostar",
+        "series": "",
+        "color": "Metalflake Purple",
+        "part": "4695",
+        "hw": "BW",
+        "cas": "",
+        "image": "https://static.wikia.nocookie.net/hotwheels/images/6/6c/Ford_Aerostar_Purple.jpg/revision/latest?cb=20081112192014"
+    },
+    {
+        "year": "1991",
+        "name": "'59 Caddy",
+        "series": "",
+        "color": "White",
+        "part": "2097",
+        "hw": "WW",
+        "cas": "",
+        "image": "https://static.wikia.nocookie.net/hotwheels/images/0/0f/59_Caddy_Wht.JPG/revision/latest?cb=20090919231834"
+    },
+    {
+        "year": "1991",
+        "name": "Mercedes-Benz Unimog",
+        "series": "",
+        "color": "White and Red",
+        "part": "5673",
+        "hw": "CT",
+        "cas": "",
+        "image": "https://static.wikia.nocookie.net/hotwheels/images/7/7b/Mercedes_Benz_Unimog_Wht.JPG/revision/latest?cb=20090108184800"
+    },
+    {
+        "year": "1991",
+        "name": "Sheriff Patrol",
+        "series": "",
+        "color": "Black & White",
+        "part": "1549",
+        "hw": "BW",
+        "cas": "",
+        "image": "https://static.wikia.nocookie.net/hotwheels/images/2/25/Sheriff_Patrol_BlkWht7SP.JPG/revision/latest?cb=20091030152013"
+    },
+    {
+        "year": "1991",
+        "name": "Porsche 959",
+        "series": "",
+        "color": "Red",
+        "part": "4631",
+        "hw": "UH",
+        "cas": "",
+        "image": "https://static.wikia.nocookie.net/hotwheels/images/d/d0/Porsche_959_Red59Tq.JPG/revision/latest?cb=20090120022156"
+    },
+    {
+        "year": "1991",
+        "name": "Surf Patrol",
+        "series": "",
+        "color": "Yellow",
+        "part": "5348",
+        "hw": "CT",
+        "cas": "",
+        "image": "https://static.wikia.nocookie.net/hotwheels/images/a/a6/91_Surf_Patrol_102.jpg/revision/latest?cb=20090110103915"
+    },
+    {
+        "year": "1991",
+        "name": "Suzuki Quadracer",
+        "series": "",
+        "color": "White",
+        "part": "3209",
+        "hw": "YCT",
+        "cas": "",
+        "image": "https://static.wikia.nocookie.net/hotwheels/images/9/9c/1991_white_with_Yellow_CT_blue_seat.jpg/revision/latest?cb=20130215012823"
+    },
+    {
+        "year": "1991",
+        "name": "Suzuki Quadracer",
+        "series": "",
+        "color": "White",
+        "part": "3209",
+        "hw": "CT",
+        "cas": "",
+        "image": "https://static.wikia.nocookie.net/hotwheels/images/c/c7/1991_white_CT_Quad.jpg/revision/latest?cb=20130215034627"
+    },
+    {
+        "year": "1991",
+        "name": "School Bus",
+        "series": "",
+        "color": "Yellow",
+        "part": "1795",
+        "hw": "BW",
+        "cas": "",
+        "image": "https://static.wikia.nocookie.net/hotwheels/images/c/cf/Hot_Wheels_School_Bus_1991_-_3030lf.jpg/revision/latest?cb=20170721122500"
+    },
+    {
+        "year": "1991",
+        "name": "Ford Stake Bed Truck",
+        "series": "",
+        "color": "Met. Blue",
+        "part": "1561",
+        "hw": "BW",
+        "cas": "",
+        "image": "https://static.wikia.nocookie.net/hotwheels/images/0/0e/Ford_Stake_tBlubw.JPG/revision/latest?cb=20091021154531"
+    },
+    {
+        "year": "1991",
+        "name": "Nissan Custom \"Z\"",
+        "series": "",
+        "color": "Metallic Dark Red",
+        "part": "7609",
+        "hw": "UH",
+        "cas": "",
+        "image": "https://static.wikia.nocookie.net/hotwheels/images/b/b7/Nissan_Custom_Z_RedUH.JPG/revision/latest?cb=20090114210930"
+    },
+    {
+        "year": "1991",
+        "name": "Pontiac Fiero 2M4",
+        "series": "",
+        "color": "Black",
+        "part": "7527",
+        "hw": "UH",
+        "cas": "",
+        "image": "https://static.wikia.nocookie.net/hotwheels/images/4/49/Fiero_BlkUH.JPG/revision/latest?cb=20090114182825"
+    },
+    {
+        "year": "1991",
+        "name": "Turbo Streak",
+        "series": "",
+        "color": "Bright Red",
+        "part": "9520",
+        "hw": "BW",
+        "cas": "",
+        "image": "https://static.wikia.nocookie.net/hotwheels/images/a/a2/Turbo_Streak-20934.jpg/revision/latest?cb=20150104033749"
+    },
+    {
+        "year": "1991",
+        "name": "Camaro Z28",
+        "series": "",
+        "color": "Red",
+        "part": "9532",
+        "hw": "GHO",
+        "cas": "",
+        "image": "https://static.wikia.nocookie.net/hotwheels/images/d/d0/Camaroz28.uh.jpg/revision/latest?cb=20090622164401"
+    },
+    {
+        "year": "1991",
+        "name": "VW Bug",
+        "series": "",
+        "color": "Enamel Cherry Red",
+        "part": "",
+        "hw": "BW",
+        "cas": "",
+        "image": "https://static.wikia.nocookie.net/hotwheels/images/1/18/Hot_Wheels_VW_Bug_1991_Mainline_Enamel_Cherry_Red.png/revision/latest?cb=20221211021149"
+    },
+    {
+        "year": "1991",
+        "name": "T-Bird Stocker",
+        "series": "",
+        "color": "White, Red and Black",
+        "part": "",
+        "hw": "UH",
+        "cas": "",
+        "image": "https://static.wikia.nocookie.net/hotwheels/images/a/a4/T-Brd_Stocker_WhtBlk.JPG/revision/latest?cb=20090217050227"
+    },
+    {
+        "year": "1991",
+        "name": "Fire Eater",
+        "series": "",
+        "color": "Red",
+        "part": "",
+        "hw": "BW",
+        "cas": "",
+        "image": "https://static.wikia.nocookie.net/hotwheels/images/b/b5/Image_Not_Available.jpg/revision/latest?cb=20151025125428"
+    },
+    {
+        "year": "1991",
+        "name": "'32 Ford Delivery",
+        "series": "",
+        "color": "White & Turquoise",
+        "part": "",
+        "hw": "BW",
+        "cas": "",
+        "image": "https://static.wikia.nocookie.net/hotwheels/images/1/11/32_Ford_Delivery_TrqwhtBW.JPG/revision/latest?cb=20091021221623"
+    },
+    {
+        "year": "1991",
+        "name": "'37 Bugatti",
+        "series": "",
+        "color": "Blue & Gray",
+        "part": "",
+        "hw": "WW",
+        "cas": "",
+        "image": "https://static.wikia.nocookie.net/hotwheels/images/c/c7/37_Bugatti_Bluww.JPG/revision/latest?cb=20091021215143"
+    },
+    {
+        "year": "1991",
+        "name": "Auburn 852",
+        "series": "",
+        "color": "Red",
+        "part": "",
+        "hw": "WW",
+        "cas": "",
+        "image": "https://static.wikia.nocookie.net/hotwheels/images/9/92/Auburn_852_-_5376ef.jpg/revision/latest?cb=20110405173733"
+    },
+    {
+        "year": "1991",
+        "name": "Fat Fendered '40",
+        "series": "",
+        "color": "Purple",
+        "part": "",
+        "hw": "BW",
+        "cas": "",
+        "image": ""
+    },
+    {
+        "year": "1991",
+        "name": "Sharkruiser",
+        "series": "",
+        "color": "Gray",
+        "part": "3286",
+        "hw": "UH",
+        "cas": "",
+        "image": "https://static.wikia.nocookie.net/hotwheels/images/7/7e/Sharkruiser_PrpUH.JPG/revision/latest?cb=20090113054003"
+    },
+    {
+        "year": "1991",
+        "name": "Zombot",
+        "series": "",
+        "color": "Gold Chrome",
+        "part": "3852",
+        "hw": "Chrome GHO",
+        "cas": "",
+        "image": "https://static.wikia.nocookie.net/hotwheels/images/8/8c/Zombot_GldHO.JPG/revision/latest?cb=20090113013404"
+    },
+    {
+        "year": "1991",
+        "name": "Vampyra",
+        "series": "",
+        "color": "Purple",
+        "part": "2060",
+        "hw": "BW",
+        "cas": "",
+        "image": "https://static.wikia.nocookie.net/hotwheels/images/0/0a/Vampyra_-_Basic_Wheels.jpg/revision/latest?cb=20150222002054"
+    },
+    {
+        "year": "1991",
+        "name": "Ratmobile",
+        "series": "",
+        "color": "White",
+        "part": "5028",
+        "hw": "UH",
+        "cas": "",
+        "image": "https://static.wikia.nocookie.net/hotwheels/images/b/b5/Image_Not_Available.jpg/revision/latest?cb=20151025125428"
+    },
+    {
+        "year": "1991",
+        "name": "Trailbuster",
+        "series": "",
+        "color": "Olive",
+        "part": "9560",
+        "hw": "Black CT",
+        "cas": "",
+        "image": "https://static.wikia.nocookie.net/hotwheels/images/e/e4/Trailbuster_OlvCT.JPG/revision/latest?cb=20091028154339"
+    },
+    {
+        "year": "1991",
+        "name": "'57 T-Bird",
+        "series": "",
+        "color": "Turquoise",
+        "part": "1610",
+        "hw": "BW",
+        "cas": "",
+        "image": "https://static.wikia.nocookie.net/hotwheels/images/6/6e/HW_57_T-BIRD_1610_1_C.jpg/revision/latest?cb=20190805181305"
+    },
+    {
+        "year": "1991",
+        "name": "'55 Nomad",
+        "series": "",
+        "color": "Bright Pink",
+        "part": "10153",
+        "hw": "TW Pink",
+        "cas": "",
+        "image": "https://static.wikia.nocookie.net/hotwheels/images/3/37/55nomad.orangecc.jpg/revision/latest?cb=20090614153638"
+    },
+    {
+        "year": "1991",
+        "name": "'57 Chevy",
+        "series": "",
+        "color": "Bright Orange",
+        "part": "1297",
+        "hw": "TW",
+        "cas": "",
+        "image": "https://static.wikia.nocookie.net/hotwheels/images/1/18/57_Chevy_CalCustTW.JPG/revision/latest?cb=20090309022604"
+    },
+    {
+        "year": "1991",
+        "name": "'59 Caddy",
+        "series": "",
+        "color": "Pink",
+        "part": "2097",
+        "hw": "WW",
+        "cas": "",
+        "image": "https://static.wikia.nocookie.net/hotwheels/images/6/62/59_CADDY_pink_CC.JPG/revision/latest?cb=20090815015940"
+    },
+    {
+        "year": "1991",
+        "name": "'67 Camaro",
+        "series": "",
+        "color": "Met. Blue",
+        "part": "",
+        "hw": "TW",
+        "cas": "",
+        "image": "https://static.wikia.nocookie.net/hotwheels/images/f/f8/%2767_Camaro_CalCust.jpg/revision/latest?cb=20081231051423"
+    },
+    {
+        "year": "1991",
+        "name": "Custom Corvette",
+        "series": "",
+        "color": "Bright Orange",
+        "part": "1301",
+        "hw": "TW",
+        "cas": "",
+        "image": "https://static.wikia.nocookie.net/hotwheels/images/a/ab/Custom_Corvette_CCtw.JPG/revision/latest?cb=20091010204911"
+    },
+    {
+        "year": "1991",
+        "name": "Ferrari Testarossa",
+        "series": "",
+        "color": "Bright Pink",
+        "part": "1897",
+        "hw": "RR Yellow",
+        "cas": "",
+        "image": "https://static.wikia.nocookie.net/hotwheels/images/8/80/Ferrari_Testarossa_BrtRed.JPG/revision/latest?cb=20081222052828"
+    },
+    {
+        "year": "1991",
+        "name": "Ferrari Testarossa",
+        "series": "",
+        "color": "Bright Pink",
+        "part": "1897",
+        "hw": "TW",
+        "cas": "",
+        "image": "https://static.wikia.nocookie.net/hotwheels/images/b/b4/Ferrari_Testarossa_BrtRedTW.JPG/revision/latest?cb=20081222052854"
+    },
+    {
+        "year": "1991",
+        "name": "Porsche 911",
+        "series": "",
+        "color": "Pink Chrome",
+        "part": "2108",
+        "hw": "TW Yellow",
+        "cas": "",
+        "image": "https://static.wikia.nocookie.net/hotwheels/images/3/3e/P-911_CalCstm.JPG/revision/latest?cb=20090313132325"
+    },
+    {
+        "year": "1991",
+        "name": "Street Roader",
+        "series": "",
+        "color": "Bright Orange",
+        "part": "1470",
+        "hw": "CT",
+        "cas": "",
+        "image": "https://static.wikia.nocookie.net/hotwheels/images/b/be/Street_Roader_OrgClCst.jpg/revision/latest?cb=20081123211617"
+    },
+    {
+        "year": "1991",
+        "name": "Street Roader",
+        "series": "",
+        "color": "Bright Orange & Pink",
+        "part": "1470",
+        "hw": "CT",
+        "cas": "",
+        "image": "https://static.wikia.nocookie.net/hotwheels/images/5/5b/Street_Roader_OrgPkClCst.jpg/revision/latest?cb=20081123211738"
+    },
+    {
+        "year": "1991",
+        "name": "Stutz Blackhawk",
+        "series": "",
+        "color": "Fluorescent Red",
+        "part": "2106",
+        "hw": "TW Yellow",
+        "cas": "",
+        "image": "https://static.wikia.nocookie.net/hotwheels/images/f/fe/Stutz_Blackhawk_CalC.JPG/revision/latest?cb=20090118035542"
+    },
+    {
+        "year": 1990,
+        "name": "T-Bird Stocker (1990)",
+        "series": "",
+        "color": "Red",
+        "part": "5900",
+        "hw": "88",
+        "cas": "",
+        "image": "https://static.wikia.nocookie.net/hotwheels/images/d/dc/T-Bird_Stocker_Red.JPG/revision/latest"
+    },
+    {
+        "year": 1990,
+        "name": "Range Rover",
+        "series": "",
+        "color": "White",
+        "part": "9738",
+        "hw": "103",
+        "cas": "",
+        "image": "https://static.wikia.nocookie.net/hotwheels/images/f/f5/Range_Rover_Wht.JPG/revision/latest"
+    },
+    {
+        "year": 1990,
+        "name": "Propper Chopper",
+        "series": "",
+        "color": "White",
+        "part": "9112",
+        "hw": "86",
+        "cas": "",
+        "image": "https://static.wikia.nocookie.net/hotwheels/images/7/71/Propper_Chopper_Wht.JPG/revision/latest"
+    },
+    {
+        "year": 1990,
+        "name": "Probe Funny Car",
+        "series": "",
+        "color": "Red",
+        "part": "7608",
+        "hw": "84",
+        "cas": "",
+        "image": "https://static.wikia.nocookie.net/hotwheels/images/1/16/Probe_Funny_Car_Motrcrft.JPG/revision/latest"
+    },
+    {
+        "year": 1990,
+        "name": "Purple Passion",
+        "series": "",
+        "color": "Light Green Scallops Outlined in Dark Green",
+        "part": "2173",
+        "hw": "87",
+        "cas": "",
+        "image": "https://static.wikia.nocookie.net/hotwheels/images/3/37/Passion_AGENTAIR_1.jpg/revision/latest"
+    },
+    {
+        "year": 1990,
+        "name": "Nissan Custom \"Z\"",
+        "series": "",
+        "color": "Metalflake Dark red",
+        "part": "7609",
+        "hw": "98",
+        "cas": "",
+        "image": "https://static.wikia.nocookie.net/hotwheels/images/b/b7/Nissan_Custom_Z_RedUH.JPG/revision/latest"
+    },
+    {
+        "year": 1990,
+        "name": "Minitruck",
+        "series": "",
+        "color": "Turquoise",
+        "part": "2099",
+        "hw": "89",
+        "cas": "",
+        "image": "https://static.wikia.nocookie.net/hotwheels/images/8/83/Minitruck_TurqUH.JPG/revision/latest"
+    },
+    {
+        "year": 1990,
+        "name": "BMW 323",
+        "series": "",
+        "color": "Black",
+        "part": "9723",
+        "hw": "150",
+        "cas": "",
+        "image": "https://static.wikia.nocookie.net/hotwheels/images/d/d4/BMW_323_-_6359df.jpg/revision/latest"
+    },
+    {
+        "year": 1990,
+        "name": "Baja Bug",
+        "series": "",
+        "color": "Red",
+        "part": "",
+        "hw": "",
+        "cas": "",
+        "image": "https://static.wikia.nocookie.net/hotwheels/images/2/2f/Baja_Bug_Red_BW.JPG/revision/latest"
+    },
+    {
+        "year": 1990,
+        "name": "Custom Corvette",
+        "series": "",
+        "color": "White",
+        "part": "7670",
+        "hw": "",
+        "cas": "",
+        "image": "https://static.wikia.nocookie.net/hotwheels/images/e/e0/CustomCorvette90Cereal.jpg/revision/latest"
+    },
+    {
+        "year": 1990,
+        "name": "Fire Chaser",
+        "series": "",
+        "color": "Red",
+        "part": "4005",
+        "hw": "",
+        "cas": "",
+        "image": "https://static.wikia.nocookie.net/hotwheels/images/a/a0/Fire_Chief_1990.jpg/revision/latest"
+    },
+    {
+        "year": 1990,
+        "name": "GT Racer",
+        "series": "",
+        "color": "Purple",
+        "part": "",
+        "hw": "",
+        "cas": "",
+        "image": "https://static.wikia.nocookie.net/hotwheels/images/b/b5/Image_Not_Available.jpg/revision/latest"
+    },
+    {
+        "year": 1990,
+        "name": "VW Bug",
+        "series": "",
+        "color": "Turquoise",
+        "part": "7671",
+        "hw": "",
+        "cas": "",
+        "image": "https://static.wikia.nocookie.net/hotwheels/images/8/82/VWBug_TrqBluL.JPG/revision/latest"
+    },
+    {
+        "year": 1990,
+        "name": "Jeep CJ-7",
+        "series": "",
+        "color": "Olive green",
+        "part": "9375",
+        "hw": "",
+        "cas": "",
+        "image": "https://static.wikia.nocookie.net/hotwheels/images/a/ad/IMG_8681.JPG/revision/latest"
+    },
+    {
+        "year": 1990,
+        "name": "CAT Wheel Loader",
+        "series": "",
+        "color": "Yellow",
+        "part": "1173",
+        "hw": "",
+        "cas": "",
+        "image": "https://static.wikia.nocookie.net/hotwheels/images/b/b5/Image_Not_Available.jpg/revision/latest"
+    },
+    {
+        "year": 1990,
+        "name": "Ambulance",
+        "series": "",
+        "color": "White",
+        "part": "1792",
+        "hw": "",
+        "cas": "",
+        "image": "https://static.wikia.nocookie.net/hotwheels/images/b/b5/Image_Not_Available.jpg/revision/latest"
+    },
+    {
+        "year": 1990,
+        "name": "Rescue Ranger",
+        "series": "",
+        "color": "Red",
+        "part": "",
+        "hw": "",
+        "cas": "",
+        "image": "https://static.wikia.nocookie.net/hotwheels/images/b/b5/Image_Not_Available.jpg/revision/latest"
+    },
+    {
+        "year": 1990,
+        "name": "Gulch Stepper",
+        "series": "",
+        "color": "Red",
+        "part": "1516",
+        "hw": "",
+        "cas": "",
+        "image": "https://static.wikia.nocookie.net/hotwheels/images/2/2e/Gulch_Stepper_RedCTS.JPG/revision/latest"
+    },
+    {
+        "year": 1990,
+        "name": "Super Scraper",
+        "series": "",
+        "color": "Enamel Purple",
+        "part": "9580",
+        "hw": "",
+        "cas": "",
+        "image": "https://static.wikia.nocookie.net/hotwheels/images/3/3e/Power_Plower_Prpl.JPG/revision/latest"
+    },
+    {
+        "year": 1990,
+        "name": "Mercedes 540K",
+        "series": "",
+        "color": "White",
+        "part": "9592",
+        "hw": "",
+        "cas": "",
+        "image": "https://static.wikia.nocookie.net/hotwheels/images/2/29/Mercedes_540K_wht.JPG/revision/latest"
+    },
+    {
+        "year": 1990,
+        "name": "Tough Customer",
+        "series": "",
+        "color": "Dark Green",
+        "part": "",
+        "hw": "",
+        "cas": "",
+        "image": "https://static.wikia.nocookie.net/hotwheels/images/3/3a/5_bb_dk_green_shiney_olive_.jpg/revision/latest"
+    },
+    {
+        "year": 1990,
+        "name": "Tank Gunner",
+        "series": "Action Command",
+        "color": "Olive",
+        "part": "9374",
+        "hw": "",
+        "cas": "",
+        "image": "https://static.wikia.nocookie.net/hotwheels/images/b/be/Gun_bucket_bbw.JPG/revision/latest"
+    },
+    {
+        "year": 1990,
+        "name": "Delivery Truck",
+        "series": "",
+        "color": "White",
+        "part": "1578",
+        "hw": "",
+        "cas": "",
+        "image": "https://static.wikia.nocookie.net/hotwheels/images/e/e1/1990_deliv_truck_mobile_tune_up.jpg/revision/latest"
+    },
+    {
+        "year": 1990,
+        "name": "'31 Doozie",
+        "series": "",
+        "color": "Maroon w/ Maroon plastic fenders",
+        "part": "2533",
+        "hw": "",
+        "cas": "",
+        "image": "https://static.wikia.nocookie.net/hotwheels/images/e/e3/31_Doozie_Mrn.JPG/revision/latest"
+    },
+    {
+        "year": 1990,
+        "name": "Hot Bird",
+        "series": "",
+        "color": "White",
+        "part": "2014",
+        "hw": "",
+        "cas": "",
+        "image": "https://static.wikia.nocookie.net/hotwheels/images/d/da/3684.JPG/revision/latest"
+    },
+    {
+        "year": 1990,
+        "name": "Shadow Jet",
+        "series": "",
+        "color": "Yellow",
+        "part": "4699",
+        "hw": "",
+        "cas": "",
+        "image": "https://static.wikia.nocookie.net/hotwheels/images/4/49/Shadow_Jet_YelBlu.JPG/revision/latest"
+    },
+    {
+        "year": 1990,
+        "name": "Thunderstreak",
+        "series": "",
+        "color": "Blue & Yellow",
+        "part": "3915",
+        "hw": "",
+        "cas": "",
+        "image": "https://static.wikia.nocookie.net/hotwheels/images/b/b5/Image_Not_Available.jpg/revision/latest"
+    },
+    {
+        "year": 1990,
+        "name": "XT-3",
+        "series": "",
+        "color": "Purple",
+        "part": "1484",
+        "hw": "",
+        "cas": "",
+        "image": "https://static.wikia.nocookie.net/hotwheels/images/9/98/XT-3_PrpRd.JPG/revision/latest"
+    },
+    {
+        "year": 1990,
+        "name": "'80s Firebird",
+        "series": "",
+        "color": "Black",
+        "part": "5128",
+        "hw": "",
+        "cas": "",
+        "image": "https://static.wikia.nocookie.net/hotwheels/images/b/b5/Image_Not_Available.jpg/revision/latest"
+    },
+    {
+        "year": 1990,
+        "name": "'80s Firebird",
+        "series": "",
+        "color": "Yellow",
+        "part": "5128",
+        "hw": "",
+        "cas": "",
+        "image": "https://static.wikia.nocookie.net/hotwheels/images/b/b5/Image_Not_Available.jpg/revision/latest"
+    },
+    {
+        "year": 1990,
+        "name": "GT Racer",
+        "series": "",
+        "color": "Purple",
+        "part": "1789",
+        "hw": "",
+        "cas": "",
+        "image": "https://static.wikia.nocookie.net/hotwheels/images/b/b9/GT_Racer_Prpl.JPG/revision/latest"
+    },
+    {
+        "year": 1990,
+        "name": "Hiway Hauler",
+        "series": "",
+        "color": "Turquoise",
+        "part": "4969",
+        "hw": "",
+        "cas": "",
+        "image": "https://static.wikia.nocookie.net/hotwheels/images/b/be/Hiway_Hauler_OP.JPG/revision/latest"
+    },
+    {
+        "year": 1990,
+        "name": "Good Humor Truck",
+        "series": "",
+        "color": "Red",
+        "part": "5904",
+        "hw": "",
+        "cas": "",
+        "image": "https://static.wikia.nocookie.net/hotwheels/images/b/b5/Image_Not_Available.jpg/revision/latest"
+    },
+    {
+        "year": 1990,
+        "name": "Rescue Ranger",
+        "series": "",
+        "color": "Red",
+        "part": "",
+        "hw": "",
+        "cas": "",
+        "image": "https://static.wikia.nocookie.net/hotwheels/images/b/b5/Image_Not_Available.jpg/revision/latest"
+    },
+    {
+        "year": 1990,
+        "name": "CAT Road Roller",
+        "series": "",
+        "color": "Yellow",
+        "part": "",
+        "hw": "",
+        "cas": "",
+        "image": "https://static.wikia.nocookie.net/hotwheels/images/b/b5/Image_Not_Available.jpg/revision/latest"
+    },
+    {
+        "year": 1990,
+        "name": "CAT Dump Truck",
+        "series": "",
+        "color": "Yellow",
+        "part": "",
+        "hw": "",
+        "cas": "",
+        "image": "https://static.wikia.nocookie.net/hotwheels/images/c/c1/CAT_Dump_NoTmpo.JPG/revision/latest"
+    },
+    {
+        "year": 1990,
+        "name": "Peterbilt Dump Truck",
+        "series": "",
+        "color": "Red",
+        "part": "1560",
+        "hw": "",
+        "cas": "",
+        "image": "https://static.wikia.nocookie.net/hotwheels/images/4/4a/Peterbilt_Dump_RedBW.JPG/revision/latest"
+    },
+    {
+        "year": 1990,
+        "name": "Peterbilt Cement Mixer",
+        "series": "",
+        "color": "Red with White Plastic mixer",
+        "part": "1169",
+        "hw": "",
+        "cas": "",
+        "image": "https://static.wikia.nocookie.net/hotwheels/images/f/fe/X172-4%2C49-2%2C15.jpg/revision/latest"
+    },
+    {
+        "year": 1990,
+        "name": "Oshkosh Snow Plow",
+        "series": "",
+        "color": "Green",
+        "part": "2198",
+        "hw": "",
+        "cas": "",
+        "image": "https://static.wikia.nocookie.net/hotwheels/images/5/5d/Oshkosh_Snowplow_GrnCTS.JPG/revision/latest"
+    },
+    {
+        "year": 1990,
+        "name": "Tall Ryder",
+        "series": "",
+        "color": "Metalflake Silver",
+        "part": "7530",
+        "hw": "",
+        "cas": "",
+        "image": "https://static.wikia.nocookie.net/hotwheels/images/f/fa/Tall_Ryder-13204.jpg/revision/latest"
+    },
+    {
+        "year": 1990,
+        "name": "'32 Ford Delivery",
+        "series": "",
+        "color": "Yellow",
+        "part": "7672",
+        "hw": "",
+        "cas": "",
+        "image": "https://static.wikia.nocookie.net/hotwheels/images/0/0a/32_Ford_Delivery_Yelblu.JPG/revision/latest"
+    },
+    {
+        "year": 1990,
+        "name": "Talbot Lago",
+        "series": "Classics",
+        "color": "White",
+        "part": "4741",
+        "hw": "",
+        "cas": "",
+        "image": "https://static.wikia.nocookie.net/hotwheels/images/b/b5/Image_Not_Available.jpg/revision/latest"
+    },
+    {
+        "year": 1990,
+        "name": "Big Rig",
+        "series": "",
+        "color": "Black",
+        "part": "1790",
+        "hw": "",
+        "cas": "",
+        "image": "https://static.wikia.nocookie.net/hotwheels/images/5/55/Big_Rig_BlkBWRO.JPG/revision/latest"
+    },
+    {
+        "year": 1990,
+        "name": "Battle Tank",
+        "series": "",
+        "color": "Olive Green",
+        "part": "9371",
+        "hw": "",
+        "cas": "",
+        "image": "https://static.wikia.nocookie.net/hotwheels/images/b/b5/Image_Not_Available.jpg/revision/latest"
+    },
+    {
+        "year": 1990,
+        "name": "Suzuki QuadRacer",
+        "series": "",
+        "color": "Yellow",
+        "part": "3209",
+        "hw": "",
+        "cas": "",
+        "image": "https://static.wikia.nocookie.net/hotwheels/images/6/67/Suzuki_QuadracerCTY.JPG/revision/latest"
+    },
+    {
+        "year": 1990,
+        "name": "Power Plower",
+        "series": "",
+        "color": "Black",
+        "part": "5113",
+        "hw": "",
+        "cas": "",
+        "image": "https://static.wikia.nocookie.net/hotwheels/images/7/7f/Power_Plower_BlkCT.JPG/revision/latest"
+    },
+    {
+        "year": 1990,
+        "name": "Power Plower",
+        "series": "",
+        "color": "Metallic Purple",
+        "part": "9580",
+        "hw": "",
+        "cas": "",
+        "image": "https://static.wikia.nocookie.net/hotwheels/images/9/99/Power_Plower_MtPrpl.JPG/revision/latest"
+    },
+    {
+        "year": 1990,
+        "name": "Bywayman",
+        "series": "",
+        "color": "Maroon",
+        "part": "1518",
+        "hw": "",
+        "cas": "",
+        "image": "https://static.wikia.nocookie.net/hotwheels/images/9/93/Bywayman-12081.jpg/revision/latest"
+    },
+    {
+        "year": 1990,
+        "name": "Bywayman",
+        "series": "",
+        "color": "Black",
+        "part": "",
+        "hw": "",
+        "cas": "",
+        "image": "https://static.wikia.nocookie.net/hotwheels/images/9/9f/Bywayman_Blk.JPG/revision/latest"
+    },
+    {
+        "year": 1990,
+        "name": "Baja Breaker",
+        "series": "",
+        "color": "White",
+        "part": "1517",
+        "hw": "",
+        "cas": "",
+        "image": "https://static.wikia.nocookie.net/hotwheels/images/f/fd/Baja_Breaker_WhtCT.JPG/revision/latest"
+    },
+    {
+        "year": 1990,
+        "name": "Bronco 4-Wheeler",
+        "series": "",
+        "color": "White",
+        "part": "1520",
+        "hw": "",
+        "cas": "",
+        "image": "https://static.wikia.nocookie.net/hotwheels/images/f/f8/Bronco-4-Wheeler_WhtCTBlk.JPG/revision/latest"
+    },
+    {
+        "year": 1990,
+        "name": "Bronco 4-Wheeler",
+        "series": "",
+        "color": "Turquoise",
+        "part": "4355",
+        "hw": "",
+        "cas": "",
+        "image": "https://static.wikia.nocookie.net/hotwheels/images/7/73/Bronco-4-Wheeler_Trq.JPG/revision/latest"
+    },
+    {
+        "year": 1990,
+        "name": "Street Roader",
+        "series": "",
+        "color": "White",
+        "part": "1470",
+        "hw": "",
+        "cas": "",
+        "image": "https://static.wikia.nocookie.net/hotwheels/images/5/54/Street_Roader_WhtBlk.JPG/revision/latest"
+    },
+    {
+        "year": 1990,
+        "name": "Monster Vette",
+        "series": "",
+        "color": "Purple",
+        "part": "3716",
+        "hw": "",
+        "cas": "",
+        "image": "https://static.wikia.nocookie.net/hotwheels/images/8/8b/Monster_Vette_PrplCTS.JPG/revision/latest"
+    },
+    {
+        "year": 1990,
+        "name": "Alien",
+        "series": "",
+        "color": "Red & Metalflake Silver",
+        "part": "5026",
+        "hw": "",
+        "cas": "",
+        "image": "https://static.wikia.nocookie.net/hotwheels/images/7/72/Alien_redUH.JPG/revision/latest"
+    },
+    {
+        "year": 1990,
+        "name": "T-Bucket",
+        "series": "",
+        "color": "Yellow",
+        "part": "7673",
+        "hw": "",
+        "cas": "",
+        "image": "https://static.wikia.nocookie.net/hotwheels/images/4/4a/T-Bucket_Yel.JPG/revision/latest"
+    },
+    {
+        "year": 1990,
+        "name": "Rocketank",
+        "series": "",
+        "color": "Olive",
+        "part": "9380",
+        "hw": "",
+        "cas": "",
+        "image": "https://static.wikia.nocookie.net/hotwheels/images/a/aa/Rocketank_-_6010df.jpg/revision/latest"
+    },
+    {
+        "year": 1990,
+        "name": "Tail Gunner",
+        "series": "",
+        "color": "Olive",
+        "part": "4059",
+        "hw": "",
+        "cas": "",
+        "image": "https://static.wikia.nocookie.net/hotwheels/images/4/43/Tail_Gunner_GrnCT.JPG/revision/latest"
+    },
+    {
+        "year": 1990,
+        "name": "Family Camper",
+        "series": "The Simpsons",
+        "color": "Blue",
+        "part": "9113",
+        "hw": "",
+        "cas": "",
+        "image": "https://static.wikia.nocookie.net/hotwheels/images/e/ed/Baja_Breaker_BluCTY.JPG/revision/latest"
+    },
+    {
+        "year": 1990,
+        "name": "Homer's Nuclear Waste Van",
+        "series": "The Simpsons",
+        "color": "Yellow",
+        "part": "9114",
+        "hw": "",
+        "cas": "",
+        "image": "https://static.wikia.nocookie.net/hotwheels/images/7/7d/Simpson%27s_Delivery_Truck_-_6182df.jpg/revision/latest"
+    },
+    {
+        "year": 1990,
+        "name": "3-Window '34",
+        "series": "",
+        "color": "Metalflake Blue",
+        "part": "1299",
+        "hw": "",
+        "cas": "",
+        "image": "https://static.wikia.nocookie.net/hotwheels/images/3/30/3-Window_%2734_CCBlu.JPG/revision/latest"
+    },
+    {
+        "year": 1990,
+        "name": "3-Window '34",
+        "series": "",
+        "color": "Bright Lime",
+        "part": "1299",
+        "hw": "",
+        "cas": "",
+        "image": "https://static.wikia.nocookie.net/hotwheels/images/9/99/3-Window_%2734_BrtRR.JPG/revision/latest"
+    },
+    {
+        "year": 1990,
+        "name": "3-Window '34",
+        "series": "",
+        "color": "Bright Lime",
+        "part": "1299",
+        "hw": "",
+        "cas": "",
+        "image": "https://static.wikia.nocookie.net/hotwheels/images/e/e3/3-Window_%2734_BrtYW.JPG/revision/latest"
+    },
+    {
+        "year": 1990,
+        "name": "'35 Classic Caddy",
+        "series": "",
+        "color": "Gold Chrome w/ Dark Blue Plastic fenders",
+        "part": "3371",
+        "hw": "",
+        "cas": "",
+        "image": "https://static.wikia.nocookie.net/hotwheels/images/a/a5/%2735_Classic_Caddy_GldBlk.jpg/revision/latest"
+    },
+    {
+        "year": 1990,
+        "name": "'35 Classic Caddy",
+        "series": "",
+        "color": "Gold Chrome w/ Gold Chrome Plastic fenders",
+        "part": "3371",
+        "hw": "",
+        "cas": "",
+        "image": "https://static.wikia.nocookie.net/hotwheels/images/9/9d/%2735_Classic_Caddy_Gld.JPG/revision/latest"
+    },
+    {
+        "year": 1990,
+        "name": "'40's Woodie",
+        "series": "",
+        "color": "Turquoise with Pink wood grain panels",
+        "part": "1229",
+        "hw": "",
+        "cas": "",
+        "image": "https://static.wikia.nocookie.net/hotwheels/images/d/dd/California_Customs_%2740%27s_Woodie_-_6185df.jpg/revision/latest"
+    },
+    {
+        "year": 1990,
+        "name": "'57 Chevy",
+        "series": "",
+        "color": "Bright Orange",
+        "part": "1297",
+        "hw": "",
+        "cas": "",
+        "image": "https://static.wikia.nocookie.net/hotwheels/images/9/9d/57_Chevy_CalCustRR.JPG/revision/latest"
+    },
+    {
+        "year": 1990,
+        "name": "'63 Split Window Corvette",
+        "series": "",
+        "color": "Purple Chrome",
+        "part": "1305",
+        "hw": "",
+        "cas": "",
+        "image": "https://static.wikia.nocookie.net/hotwheels/images/f/f7/Th_63corvette009.jpg/revision/latest"
+    },
+    {
+        "year": 1990,
+        "name": "'65 Mustang Convertible",
+        "series": "",
+        "color": "Fluorescent Green",
+        "part": "1241",
+        "hw": "",
+        "cas": "",
+        "image": "https://static.wikia.nocookie.net/hotwheels/images/d/d1/%2765_Mustang_CalCust_RR.jpg/revision/latest"
+    },
+    {
+        "year": 1990,
+        "name": "'65 Mustang Convertible",
+        "series": "",
+        "color": "Fluorescent Green",
+        "part": "1241",
+        "hw": "",
+        "cas": "",
+        "image": "https://static.wikia.nocookie.net/hotwheels/images/6/63/GreenBlackCC.jpg/revision/latest"
+    },
+    {
+        "year": 1990,
+        "name": "'65 Mustang Convertible",
+        "series": "",
+        "color": "Fluorescent Green",
+        "part": "1241",
+        "hw": "",
+        "cas": "",
+        "image": "https://static.wikia.nocookie.net/hotwheels/images/c/c9/GreenCCTW.jpg/revision/latest"
+    },
+    {
+        "year": 1990,
+        "name": "Baja Bug",
+        "series": "",
+        "color": "Pink",
+        "part": "1238",
+        "hw": "",
+        "cas": "",
+        "image": "https://static.wikia.nocookie.net/hotwheels/images/a/ad/Baja_Bug_PnkCCRR.JPG/revision/latest"
+    },
+    {
+        "year": 1990,
+        "name": "Baja Bug",
+        "series": "",
+        "color": "Pink",
+        "part": "1238",
+        "hw": "",
+        "cas": "",
+        "image": "https://static.wikia.nocookie.net/hotwheels/images/0/0a/Baja_Bug_PnkCCbw.JPG/revision/latest"
+    },
+    {
+        "year": 1990,
+        "name": "Blown Camaro",
+        "series": "",
+        "color": "White",
+        "part": "1289",
+        "hw": "",
+        "cas": "",
+        "image": "https://static.wikia.nocookie.net/hotwheels/images/0/07/Blown_Camaro_CCrr.JPG/revision/latest"
+    },
+    {
+        "year": 1990,
+        "name": "Blown Camaro",
+        "series": "",
+        "color": "White",
+        "part": "1289",
+        "hw": "",
+        "cas": "",
+        "image": "https://static.wikia.nocookie.net/hotwheels/images/5/58/Blown_Camaro_CCtw.JPG/revision/latest"
+    },
+    {
+        "year": 1990,
+        "name": "Camaro Wind",
+        "series": "",
+        "color": "Bright Yellow",
+        "part": "2104",
+        "hw": "",
+        "cas": "",
+        "image": "https://static.wikia.nocookie.net/hotwheels/images/6/65/Camaro_Wind_AGENTAIR_2.jpg/revision/latest"
+    },
+    {
+        "year": 1990,
+        "name": "Classic Cobra",
+        "series": "",
+        "color": "White",
+        "part": "1296",
+        "hw": "",
+        "cas": "",
+        "image": "https://static.wikia.nocookie.net/hotwheels/images/9/9f/Classic_Cobra_CalCus.JPG/revision/latest"
+    },
+    {
+        "year": 1990,
+        "name": "Classic Cobra",
+        "series": "",
+        "color": "White",
+        "part": "1296",
+        "hw": "",
+        "cas": "",
+        "image": "https://static.wikia.nocookie.net/hotwheels/images/2/2e/Cobra_calrr.JPG/revision/latest"
+    },
+    {
+        "year": 1990,
+        "name": "Corvette Funny",
+        "series": "",
+        "color": "White",
+        "part": "2102",
+        "hw": "",
+        "cas": "",
+        "image": "https://static.wikia.nocookie.net/hotwheels/images/b/bd/Corvette_Funny.jpg/revision/latest"
+    },
+    {
+        "year": 1990,
+        "name": "Custom Corvette",
+        "series": "",
+        "color": "Blue Chrome",
+        "part": "1301",
+        "hw": "",
+        "cas": "",
+        "image": "https://static.wikia.nocookie.net/hotwheels/images/2/27/Custom_Corvette_BluCCRR.JPG/revision/latest"
+    },
+    {
+        "year": 1990,
+        "name": "Custom Corvette",
+        "series": "",
+        "color": "Blue Chrome",
+        "part": "1301",
+        "hw": "",
+        "cas": "",
+        "image": "https://static.wikia.nocookie.net/hotwheels/images/b/b8/Custom_Corvette_BluCC.JPG/revision/latest"
+    },
+    {
+        "year": 1990,
+        "name": "Ferrari Testarossa",
+        "series": "",
+        "color": "Chrome Pink",
+        "part": "1302",
+        "hw": "",
+        "cas": "",
+        "image": "https://static.wikia.nocookie.net/hotwheels/images/a/a1/Ferrari_Testarrosa_PkCrm.JPG/revision/latest"
+    },
+    {
+        "year": 1990,
+        "name": "Mercedes 380 SEL",
+        "series": "",
+        "color": "Chrome",
+        "part": "3368",
+        "hw": "",
+        "cas": "",
+        "image": "https://static.wikia.nocookie.net/hotwheels/images/7/73/Mercedes_380_Chrm.JPG/revision/latest"
+    },
+    {
+        "year": 1990,
+        "name": "Pontiac Banshee",
+        "series": "",
+        "color": "Gold Chrome with RED top insert and RED hood",
+        "part": "1303",
+        "hw": "",
+        "cas": "",
+        "image": "https://static.wikia.nocookie.net/hotwheels/images/6/6d/Pontiac_Banshee_GldRdCal.jpg/revision/latest"
+    },
+    {
+        "year": 1990,
+        "name": "Pontiac Banshee",
+        "series": "",
+        "color": "Gold Chrome with Orange top insert and Black hood",
+        "part": "1303",
+        "hw": "",
+        "cas": "",
+        "image": "https://static.wikia.nocookie.net/hotwheels/images/e/e1/IMG_7060.jpg/revision/latest"
+    },
+    {
+        "year": 1990,
+        "name": "Street Roader",
+        "series": "",
+        "color": "White & Blue",
+        "part": "1287",
+        "hw": "",
+        "cas": "",
+        "image": "https://static.wikia.nocookie.net/hotwheels/images/4/43/Street_Roader_WhtBluOCC.JPG/revision/latest"
+    },
+    {
+        "year": 1990,
+        "name": "Street Roader",
+        "series": "",
+        "color": "White & Blue",
+        "part": "1287",
+        "hw": "",
+        "cas": "",
+        "image": "https://static.wikia.nocookie.net/hotwheels/images/5/58/Street_Roader_WhtBluCC.JPG/revision/latest"
+    },
+    {
         "year": 2026,
         "name": "Bone Shaker",
         "series": "Blue and Gold (1/6)",
@@ -115329,7 +115331,7 @@ export const RAW = [
         "cas": "",
         "image": "https://static.wikia.nocookie.net/hotwheels/images/e/ef/%E9%A2%A8%E7%81%AB%E8%BC%AA_%2767_Ford_Bronco_%E7%A6%8F%E7%89%B9_%E8%B6%8A%E9%87%8E%E8%BB%8A_6-6_Pantone_26MIX2_%E9%8A%80%E6%A8%99-1.jpg"
     },
-{
+    {
         "year": 2026,
         "name": "Ford Focus RS",
         "series": "Neon Speeders (1/8)",
@@ -116179,7 +116181,7 @@ export const RAW = [
         "cas": "",
         "image": "https://static.wikia.nocookie.net/hotwheels/images/7/75/JLB26_r2.jpg"
     },
-{
+    {
         "year": 2026,
         "name": "'70 Dodge Charger R/T",
         "series": "Fast & Furious (Chrome)",
@@ -132030,3 +132032,4 @@ export const RAW = [
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/NA_GXY02_Standard_Kart.jpg"
     }
 ]
+  
