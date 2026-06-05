@@ -8,7 +8,7 @@ R2_SECRET_KEY = "2d5578d6495312b694a3d7d61e175339b7bf2242699c7b4eb11d60b7a4ff17e
 R2_BUCKET_NAME = "garagemhw-db"
 
 # Pasta onde suas imagens estão salvas
-pasta_imagens = os.path.join("public", "assets", "img", "imagens_kaido")
+pasta_imagens = os.path.join("imagens_miniaturas")
 
 s3_client = boto3.client(
     's3',
