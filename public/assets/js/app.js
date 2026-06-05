@@ -112,7 +112,6 @@ window.changePage = function (newPageType) {
 
   pageType = newPageType;
 
-  // Atualiza a URL dinamicamente para o navegador não ficar preso no refresh
   if (!isPublicView) {
     const urlAtual = new URL(window.location.href);
     urlAtual.searchParams.set('type', newPageType);
@@ -129,8 +128,8 @@ window.changePage = function (newPageType) {
   const kaidoArea = document.getElementById('kaido-view');
   const statsRow = document.querySelector('.stats-row');
   const statsArea = document.getElementById('stats-view');
-  // Declara a nova área de Sorteios
   const sorteiosArea = document.getElementById('sorteios-view');
+  const encomendasArea = document.getElementById('encomendas-view'); // 👈 Nova área registrada
 
   if (pageType === 'kaido' || pageType === 'kaido-owned' || pageType === 'kaido-wishlist') {
     updateSidebarVisibility('kaido');
@@ -152,10 +151,10 @@ window.changePage = function (newPageType) {
     if (kaidoArea) kaidoArea.style.display = 'none';
     if (statsRow) statsRow.style.display = 'none';
     if (statsArea) statsArea.style.display = 'none';
-    if (sorteiosArea) sorteiosArea.style.display = 'none'; // Esconde Sorteios
+    if (sorteiosArea) sorteiosArea.style.display = 'none';
+    if (encomendasArea) encomendasArea.style.display = 'none';
 
     if (missionsArea) missionsArea.style.display = 'block';
-
     document.getElementById('dynamic-title').innerHTML = 'Garagem <span>VIP</span>';
     document.getElementById('dynamic-badge').style.display = 'none';
     if (window.renderMissions) window.renderMissions();
@@ -171,10 +170,10 @@ window.changePage = function (newPageType) {
     if (kaidoArea) kaidoArea.style.display = 'none';
     if (statsRow) statsRow.style.display = 'none';
     if (statsArea) statsArea.style.display = 'none';
-    if (sorteiosArea) sorteiosArea.style.display = 'none'; // Esconde Sorteios
+    if (sorteiosArea) sorteiosArea.style.display = 'none';
+    if (encomendasArea) encomendasArea.style.display = 'none';
 
     if (rewardsArea) rewardsArea.style.display = 'block';
-
     document.getElementById('dynamic-title').innerHTML = 'Loja de <span>RPMs</span>';
     document.getElementById('dynamic-badge').style.display = 'none';
     if (window.renderRewards) window.renderRewards();
@@ -190,10 +189,10 @@ window.changePage = function (newPageType) {
     if (rewardsArea) rewardsArea.style.display = 'none';
     if (statsRow) statsRow.style.display = 'none';
     if (statsArea) statsArea.style.display = 'none';
-    if (sorteiosArea) sorteiosArea.style.display = 'none'; // Esconde Sorteios
+    if (sorteiosArea) sorteiosArea.style.display = 'none';
+    if (encomendasArea) encomendasArea.style.display = 'none';
 
     if (kaidoArea) kaidoArea.style.display = 'block';
-
     if (pageType === 'kaido-owned') {
       document.getElementById('dynamic-title').innerHTML = isPublicView ? `Kaidos de <span>${publicOwnerName}</span>` : 'Minha Coleção <span>Kaido</span>';
     } else if (pageType === 'kaido-wishlist') {
@@ -201,9 +200,7 @@ window.changePage = function (newPageType) {
     } else {
       document.getElementById('dynamic-title').innerHTML = 'Kaido <span>House</span>';
     }
-
     document.getElementById('dynamic-badge').style.display = 'none';
-
     if (window.renderKaido) window.renderKaido(pageType);
     return;
 
@@ -217,16 +214,16 @@ window.changePage = function (newPageType) {
     if (rewardsArea) rewardsArea.style.display = 'none';
     if (kaidoArea) kaidoArea.style.display = 'none';
     if (statsRow) statsRow.style.display = 'none';
-    if (sorteiosArea) sorteiosArea.style.display = 'none'; // Esconde Sorteios
+    if (sorteiosArea) sorteiosArea.style.display = 'none';
+    if (encomendasArea) encomendasArea.style.display = 'none';
 
     if (statsArea) statsArea.style.display = 'block';
-
     document.getElementById('dynamic-title').innerHTML = 'Meu <span>Dashboard</span>';
     document.getElementById('dynamic-badge').style.display = 'none';
     if (window.renderStats) window.renderStats();
     return;
 
-  } else if (pageType === 'sorteios') { // === NOVA ABA DE SORTEIOS ===
+  } else if (pageType === 'sorteios') {
     if (tableArea) tableArea.style.display = 'none';
     if (sortHeader) sortHeader.style.display = 'none';
     if (controlsArea) controlsArea.style.display = 'none';
@@ -237,12 +234,31 @@ window.changePage = function (newPageType) {
     if (kaidoArea) kaidoArea.style.display = 'none';
     if (statsRow) statsRow.style.display = 'none';
     if (statsArea) statsArea.style.display = 'none';
+    if (encomendasArea) encomendasArea.style.display = 'none';
 
-    if (sorteiosArea) sorteiosArea.style.display = 'block'; // Mostra os Sorteios!
-
+    if (sorteiosArea) sorteiosArea.style.display = 'block';
     document.getElementById('dynamic-title').innerHTML = 'Rifas & <span>Sorteios</span>';
     document.getElementById('dynamic-badge').style.display = 'none';
     if (window.renderSorteios) window.renderSorteios();
+    return;
+
+  } else if (pageType === 'encomendas') { // 👈 NOVA ROTA OFICIAL DE ENCOMENDAS AQUI!
+    if (tableArea) tableArea.style.display = 'none';
+    if (sortHeader) sortHeader.style.display = 'none';
+    if (controlsArea) controlsArea.style.display = 'none';
+    if (countArea) countArea.style.display = 'none';
+    if (pagArea) pagArea.style.display = 'none';
+    if (missionsArea) missionsArea.style.display = 'none';
+    if (rewardsArea) rewardsArea.style.display = 'none';
+    if (kaidoArea) kaidoArea.style.display = 'none';
+    if (statsRow) statsRow.style.display = 'none';
+    if (statsArea) statsArea.style.display = 'none';
+    if (sorteiosArea) sorteiosArea.style.display = 'none';
+
+    if (encomendasArea) encomendasArea.style.display = 'block';
+    document.getElementById('dynamic-title').innerHTML = 'Minhas <span>Encomendas</span>';
+    document.getElementById('dynamic-badge').style.display = 'none';
+    if (window.renderEncomendas) window.renderEncomendas();
     return;
 
   } else {
@@ -256,7 +272,8 @@ window.changePage = function (newPageType) {
     if (rewardsArea) rewardsArea.style.display = 'none';
     if (kaidoArea) kaidoArea.style.display = 'none';
     if (statsArea) statsArea.style.display = 'none';
-    if (sorteiosArea) sorteiosArea.style.display = 'none'; // Esconde Sorteios
+    if (sorteiosArea) sorteiosArea.style.display = 'none';
+    if (encomendasArea) encomendasArea.style.display = 'none';
 
     if (statsRow) statsRow.style.display = 'flex';
   }
@@ -267,7 +284,6 @@ window.changePage = function (newPageType) {
   updateCounts();
   render();
 }
-
 
 
 
@@ -456,7 +472,6 @@ function render() {
     const dot = getColor(r.color);
     const has = isOwned(r);
 
-
     const card = document.createElement('div');
     card.className = `car-card ${has ? 'owned-card' : ''}`;
 
@@ -467,6 +482,9 @@ function render() {
     const qty = getQty(r);
     const repetidos = qty > 1 ? qty - 1 : 0;
     const isEditingAllowed = !isPublicView;
+
+    // 👇 NOVA LÓGICA: Verifica se o Admin/Gerente selecionou um cliente no topo
+    const isVendedorEditandoCliente = (isAdmin || isManager) && targetUid && targetUid !== 'ME' && targetUid !== sessionUid;
 
     let controlesHTML = '';
     let optionsHTML = '';
@@ -491,7 +509,12 @@ function render() {
         </div>`;
     }
 
-    // Cria a etiqueta (badge) do Lote se existir, posicionada no canto superior direito
+    // 👇 NOVO BOTÃO DE ENCOMENDA LOGÍSTICA
+    let btnVenderHTML = '';
+    if (isVendedorEditandoCliente) {
+      btnVenderHTML = `<button onclick="window.venderCarroVisual('${r.id}', event)" style="margin-top: 10px; width: 100%; background: #38bdf8; color: #000; border: none; padding: 8px; border-radius: 6px; font-weight: bold; font-family: 'Bebas Neue', sans-serif; font-size: 16px; cursor: pointer; display: flex; align-items: center; justify-content: center; gap: 5px; box-shadow: 0 4px 6px rgba(56,189,248,0.2);">📦 Encomendar para Garagem</button>`;
+    }
+
     const loteBadge = r.cas
       ? `<span style="position: absolute; top: 8px; right: 8px; background: #334155; color: #f8fafc; padding: 4px 8px; border-radius: 4px; font-size: 11px; font-weight: bold; border: 1px solid #475569; z-index: 2; box-shadow: 0 2px 4px rgba(0,0,0,0.5);">LOTE ${r.cas}</span>`
       : '';
@@ -517,17 +540,16 @@ function render() {
         </div>
         <div class="car-controls">
             ${controlesHTML}
+            ${btnVenderHTML}
         </div>
       </div>
     `;
-
 
     if (card.querySelector('.car-image-container') && r.image) {
       card.querySelector('.car-image-container').addEventListener('click', () => openLb(globalIdx));
     }
 
     tbody.appendChild(card);
-
 
     if (isEditingAllowed) {
       const inputElement = card.querySelector('.qty-input');
@@ -581,6 +603,29 @@ onAuthStateChanged(auth, async (user) => {
   if (user) {
     sessionUid = user.uid;
 
+    const pendingInvite = localStorage.getItem('pendingInvite');
+    if (pendingInvite) {
+      try {
+        const uRef = doc(db, 'users', user.uid);
+        const uSnap = await getDoc(uRef);
+        if (uSnap.exists()) {
+          let currentLojas = uSnap.data().lojaId || '';
+          let lojasArray = currentLojas.split(',').map(s => s.trim()).filter(Boolean);
+
+          // Se o cliente ainda não faz parte dessa loja, adiciona!
+          if (!lojasArray.includes(pendingInvite)) {
+            lojasArray.push(pendingInvite);
+            await setDoc(uRef, { lojaId: lojasArray.join(', ') }, { merge: true });
+            alert(`🎉 Sucesso! Você agora é um membro VIP da loja: ${pendingInvite}`);
+          }
+        }
+      } catch (e) {
+        console.error("Erro ao processar convite:", e);
+      }
+      // Limpa a memória para não repetir o alerta no futuro
+      localStorage.removeItem('pendingInvite');
+    }
+
     const emailEl = document.getElementById('user-email');
     if (emailEl) emailEl.textContent = user.email;
 
@@ -590,13 +635,14 @@ onAuthStateChanged(auth, async (user) => {
 
       if (userDoc.exists()) {
         const userRole = userDoc.data().role;
-        const myLojaId = userDoc.data().lojaId || '';
 
+        // Isola a loja principal do gerente/admin
+        const myLojaIdRaw = userDoc.data().lojaId || '';
+        const myLojaId = myLojaIdRaw.split(',')[0].trim();
+        const minhaLojaFiltro = myLojaId.toLowerCase();
 
         if (userRole === 'admin') isAdmin = true;
         if (userRole === 'gerente') isManager = true;
-
-
 
         if ((isAdmin || isManager) && menuAdminItem) {
           menuAdminItem.style.display = 'block';
@@ -604,20 +650,24 @@ onAuthStateChanged(auth, async (user) => {
           menuAdminItem.style.display = 'none';
         }
 
-
         const adminSelector = document.getElementById('admin-client-selector');
         const clientSelect = document.getElementById('client-select');
 
         if ((isAdmin || isManager) && adminSelector && clientSelect) {
           adminSelector.style.display = 'flex';
 
+          // Limpa as opções antes de carregar
+          clientSelect.innerHTML = '<option value="ME">Minha Conta</option>';
+
           const usersSnap = await getDocs(collection(db, 'users'));
           usersSnap.forEach(docSnap => {
             const uData = docSnap.data();
 
+            // Puxa o array de lojas do cliente em minúsculo
+            const clientLojas = (uData.lojaId || '').split(',').map(s => s.trim().toLowerCase());
 
-            const isMyClient = isAdmin || (isManager && uData.lojaId === myLojaId);
-
+            // Libera se for Admin OU se for gerente e a loja dele estiver na lista do cliente
+            const isMyClient = clientLojas.includes(minhaLojaFiltro);
 
             if (docSnap.id !== user.uid && uData.role === 'cliente' && isMyClient) {
               const opt = document.createElement('option');
@@ -626,7 +676,6 @@ onAuthStateChanged(auth, async (user) => {
               clientSelect.appendChild(opt);
             }
           });
-
 
           clientSelect.addEventListener('change', async (e) => {
             targetUid = e.target.value === 'ME' ? null : e.target.value;
@@ -649,15 +698,12 @@ onAuthStateChanged(auth, async (user) => {
   } else {
 
     if (isPublicView) {
-
       console.log("Visitante acessando garagem pública.");
       if (typeof window.loadCollection === 'function') window.loadCollection();
     } else {
-
       window.location.href = 'index.html';
     }
   }
-
 
   const isVip = (targetRole === 'cliente' || targetRole === 'admin' || isManager);
   const pointsContainer = document.getElementById('points-container');
@@ -665,7 +711,6 @@ onAuthStateChanged(auth, async (user) => {
   if (pointsContainer) {
     pointsContainer.style.display = isVip ? 'flex' : 'none';
   }
-
 
   document.querySelectorAll('[data-page="missions"], [data-page="rewards"], [data-page="sorteios"]').forEach(el => {
     if (isAdmin || isManager || targetRole === 'cliente') {
@@ -728,8 +773,8 @@ window.loadCollection = async function () {
       window.lojaIdAtual = currentLojaId; // ✅ Salva a loja globalmente para usar nas rifas
 
       if (targetRole === 'admin' || targetRole === 'gerente') {
-          const btnSorteador = document.getElementById('menu-sorteador-item');
-          if (btnSorteador) btnSorteador.style.display = 'block';
+        const btnSorteador = document.getElementById('menu-sorteador-item');
+        if (btnSorteador) btnSorteador.style.display = 'block';
       }
 
       if (typeof isPublicView !== 'undefined' && isPublicView) {
@@ -757,31 +802,43 @@ window.loadCollection = async function () {
       targetRole = 'user';
     }
 
-    // 🔒 3. Puxa as Recompensas e as RIFAS da loja atrelada
-    // 🔒 3. Puxa as Recompensas, RIFAS e o WHATSAPP da loja atrelada
     if (!isPublicView) {
       try {
-        const lojaRef = doc(db, 'lojas', currentLojaId);
-        const lojaSnap = await getDoc(lojaRef);
-        if (lojaSnap.exists()) {
-          LISTA_RECOMPENSAS = lojaSnap.data().recompensas || [];
-          window.LISTA_RIFAS = lojaSnap.data().rifas || []; 
-          window.lojaWhatsapp = lojaSnap.data().whatsapp || "5548999999999"; // ✅ Puxa o número da Loja (ou usa um padrão)
-        } else {
-          LISTA_RECOMPENSAS = [];
-          window.LISTA_RIFAS = [];
-          window.lojaWhatsapp = "5548999999999";
-        }
-      } catch (e) {
-        console.error("Erro ao carregar dados da loja:", e);
+        const lojasArray = currentLojaId.split(',').map(s => s.trim()).filter(Boolean);
+        window.minhasLojasArray = lojasArray; // Salva as lojas globalmente
         LISTA_RECOMPENSAS = [];
         window.LISTA_RIFAS = [];
-        window.lojaWhatsapp = "5548999999999";
+
+        window.userPointsMap = snap.data().pointsMap || {};
+        if (typeof snap.data().points === 'number' && Object.keys(window.userPointsMap).length === 0) {
+          window.userPointsMap[lojasArray[0] || 'default'] = snap.data().points;
+        }
+
+        if (!window.lojaAtiva || !lojasArray.includes(window.lojaAtiva)) {
+          window.lojaAtiva = lojasArray[0] || "";
+        }
+
+        // Busca os dados no banco
+        for (const lId of lojasArray) {
+          const lojaRef = doc(db, 'lojas', lId);
+          const lojaSnap = await getDoc(lojaRef);
+          if (lojaSnap.exists()) {
+            const wpp = lojaSnap.data().whatsapp || "5548999999999";
+            const rews = lojaSnap.data().recompensas || [];
+            const rifs = lojaSnap.data().rifas || [];
+
+            rews.forEach(r => LISTA_RECOMPENSAS.push({ ...r, wppOrigem: wpp, lojaOrigem: lId }));
+            rifs.forEach(r => window.LISTA_RIFAS.push({ ...r, wppOrigem: wpp, lojaOrigem: lId }));
+          }
+        }
+      } catch (e) {
+        console.error("Erro ao carregar dados das lojas:", e);
+        LISTA_RECOMPENSAS = [];
+        window.LISTA_RIFAS = [];
       }
     } else {
       LISTA_RECOMPENSAS = [];
       window.LISTA_RIFAS = [];
-      window.lojaWhatsapp = "";
     }
 
     const pointsEl = document.getElementById('user-points');
@@ -1060,7 +1117,7 @@ const LISTA_MISSOES = [
   }
 ];
 
-window.renderMissions = function() {
+window.renderMissions = function () {
   const container = document.getElementById('missions-view');
   if (!container) return;
 
@@ -1166,28 +1223,54 @@ window.claimMission = async function (missionId, rewardPoints) {
 
 let LISTA_RECOMPENSAS = [];
 
-window.renderRewards = async function() {
+window.renderRewards = async function () {
   const container = document.getElementById('rewards-view');
   if (!container) return;
 
+  const premiosDestaLoja = typeof LISTA_RECOMPENSAS !== 'undefined'
+    ? LISTA_RECOMPENSAS.filter(item => item.lojaOrigem === window.lojaAtiva)
+    : [];
+
+  const saldoNestaLoja = window.userPointsMap[window.lojaAtiva] || 0;
+
+  const pointsEl = document.getElementById('user-points');
+  if (pointsEl) pointsEl.textContent = saldoNestaLoja;
+
+  // 👇 GERA O MENU DE VENDEDORES APENAS SE ELE ESTIVER EM VÁRIAS LOJAS
+  let menuHTML = '';
+  if (window.minhasLojasArray && window.minhasLojasArray.length > 1) {
+    const options = window.minhasLojasArray.map(loja => `<option value="${loja}" ${window.lojaAtiva === loja ? 'selected' : ''}>${loja}</option>`).join('');
+    menuHTML = `
+        <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 20px; background: rgba(250, 204, 21, 0.15); padding: 12px; border-radius: 8px; border: 1px solid #facc15;">
+          <span style="font-family: 'Bebas Neue', sans-serif; font-size: 18px; color: #facc15; letter-spacing: 1px;">ESCOLHER VENDEDOR:</span>
+          <select onchange="window.mudarLojaAtiva(this.value)" style="background: var(--surface2); color: #fff; border: 1px solid #facc15; padding: 8px; border-radius: 4px; font-family: 'Barlow', sans-serif; font-size: 14px; outline: none; cursor: pointer; flex-grow: 1;">
+            ${options}
+          </select>
+        </div>
+      `;
+  }
+
   let cardsHTML = '';
-  if (typeof LISTA_RECOMPENSAS !== 'undefined' && LISTA_RECOMPENSAS.length > 0) {
-      LISTA_RECOMPENSAS.forEach(item => {
-        const canAfford = userPoints >= item.custo;
-        cardsHTML += `
-          <div class="reward-card">
+  if (premiosDestaLoja.length > 0) {
+    premiosDestaLoja.forEach(item => {
+      const canAfford = saldoNestaLoja >= item.custo;
+      cardsHTML += `
+          <div class="reward-card" style="position: relative;">
+              <span style="position: absolute; top: 10px; right: 10px; background: #334155; color: #cbd5e1; font-size: 10px; font-weight: bold; padding: 4px 8px; border-radius: 4px; text-transform: uppercase;">
+                  ${item.lojaOrigem}
+              </span>
               <div class="reward-icon">${item.icone}</div>
               <h3>${item.titulo}</h3>
               <p>${item.desc}</p>
               <div class="reward-cost">🪙 ${item.custo} RPMs</div>
-              <button class="btn-redeem" ${!canAfford ? 'disabled' : ''} onclick="window.redeemReward('${item.id}', ${item.custo}, '${item.titulo}')">
+              <button class="btn-redeem" ${!canAfford ? 'disabled' : ''} onclick="window.redeemReward('${item.id}', ${item.custo}, '${item.titulo}', '${item.wppOrigem}', '${item.lojaOrigem}')">
                 ${canAfford ? 'Resgatar Prêmio' : 'Pontos Insuficientes'}
               </button>
           </div>
         `;
-      });
+    });
   } else {
-      cardsHTML = `<div style="color: #94a3b8; text-align: center; width: 100%; padding: 20px;">Nenhuma recompensa disponível na loja no momento.</div>`;
+    cardsHTML = `<div style="color: #94a3b8; text-align: center; width: 100%; padding: 20px;">Nenhuma recompensa disponível nesta loja no momento.</div>`;
   }
 
   let cuponsHTML = '';
@@ -1200,60 +1283,24 @@ window.renderRewards = async function() {
         <td style="padding: 12px;"><span style="background: rgba(34, 197, 94, 0.15); color: var(--green); border: 1px solid rgba(34, 197, 94, 0.3); padding: 3px 8px; border-radius: 4px; font-size: 11px; font-weight: 700; text-transform: uppercase;">${resgate.status}</span></td>
       </tr>
     `).join('');
-
-    cuponsHTML = `
-      <div style="margin-top: 40px; background: var(--surface); border: 1px solid var(--border); border-radius: 12px; padding: 24px;">
-        <h3 style="font-family: 'Bebas Neue', sans-serif; font-size: 26px; color: #fff; margin-bottom: 16px;">🎟️ Meus Cupons</h3>
-        <table style="width: 100%; border-collapse: collapse;">
-            <thead><tr style="border-bottom: 2px solid var(--border); color: var(--muted); font-size: 11px;">
-                <th style="padding: 12px; text-transform: uppercase;">Data</th>
-                <th style="padding: 12px; text-transform: uppercase;">Prêmio</th>
-                <th style="padding: 12px; text-transform: uppercase;">Código</th>
-                <th style="padding: 12px; text-transform: uppercase;">Status</th>
-            </tr></thead>
-            <tbody>${linhasCupons}</tbody>
-        </table>
-      </div>
-    `;
-  }
-
-  let extratoHTML = '';
-  if (typeof userHistory !== 'undefined' && userHistory && userHistory.length > 0) {
-    let linhasExtrato = userHistory.map(item => `
-      <tr style="border-bottom: 1px solid var(--border);">
-        <td style="padding: 10px; color: var(--muted); font-size: 13px;">${item.date}</td>
-        <td style="padding: 10px; color: #fff; font-size: 14px;">${item.desc}</td>
-        <td style="padding: 10px; font-weight: bold; color: ${item.type === 'earning' ? 'var(--green)' : 'var(--red)'}; text-align: right; font-family: 'Barlow Condensed', sans-serif;">
-            ${item.type === 'earning' ? '+' : '-'}${item.amount}
-        </td>
-      </tr>
-    `).join('');
-
-    extratoHTML = `
-      <div style="margin-top: 40px; background: var(--surface); border: 1px solid var(--border); border-radius: 12px; padding: 24px;">
-        <h3 style="font-family: 'Bebas Neue', sans-serif; font-size: 26px; color: #fff; margin-bottom: 16px;">📊 Extrato de RPMs</h3>
-        <table style="width: 100%; border-collapse: collapse;">
-            <tbody>${linhasExtrato}</tbody>
-        </table>
-      </div>
-    `;
+    cuponsHTML = `<div style="margin-top: 40px; background: var(--surface); border: 1px solid var(--border); border-radius: 12px; padding: 24px;"><h3 style="font-family: 'Bebas Neue', sans-serif; font-size: 26px; color: #fff; margin-bottom: 16px;">🎟️ Meus Cupons</h3><table style="width: 100%; border-collapse: collapse;"><thead><tr style="border-bottom: 2px solid var(--border); color: var(--muted); font-size: 11px;"><th style="padding: 12px; text-transform: uppercase;">Data</th><th style="padding: 12px; text-transform: uppercase;">Prêmio</th><th style="padding: 12px; text-transform: uppercase;">Código</th><th style="padding: 12px; text-transform: uppercase;">Status</th></tr></thead><tbody>${linhasCupons}</tbody></table></div>`;
   }
 
   container.innerHTML = `
-    <div class="mission-header">
-        <h2>Troque seus Pontos</h2>
-        <p>Seu saldo atual é de <strong style="color: var(--yellow); font-size: 18px;">🪙 ${typeof userPoints !== 'undefined' ? userPoints : 0} RPMs</strong>.</p>
-    </div>
+    ${menuHTML}
     <div class="reward-grid">
         ${cardsHTML}
     </div>
     ${cuponsHTML}
-    ${extratoHTML}
   `;
 }
 
-
-
+// COLE ESTA NOVA FUNÇÃO NO FINAL DO SEU ARQUIVO APP.JS
+window.mudarLojaAtiva = function (novaLoja) {
+  window.lojaAtiva = novaLoja;
+  renderRewards();
+  if (typeof renderSorteios === 'function') renderSorteios();
+}
 
 function showModal(type, options) {
   const existingModal = document.getElementById('hw-custom-modal');
@@ -1878,14 +1925,14 @@ window.renderSorteios = function () {
       // Controles de edição para o Admin
       let adminControls = '';
       let btnSortearDireto = '';
-      
+
       if (targetRole === 'admin' || targetRole === 'gerente') {
         // Previne quebra de aspas se o título tiver apóstrofos
         const safeTitle = r.titulo.replace(/'/g, "\\'");
-        
+
         // BOTÃO DE SORTEIO SÓ APARECE SE A RIFA ESTIVER ATIVA
         if (!isConcluida) {
-            btnSortearDireto = `<button onclick="abrirSorteadorDaRifa('${safeTitle}')" style="background: #10b981; color: #000; border: none; padding: 10px 15px; border-radius: 6px; cursor: pointer; font-family: 'Bebas Neue', sans-serif; font-size: 18px; letter-spacing: 1px; transition: 0.2s; box-shadow: 0 4px 10px rgba(16,185,129,0.3);">🎲 Sortear</button>`;
+          btnSortearDireto = `<button onclick="abrirSorteadorDaRifa('${safeTitle}')" style="background: #10b981; color: #000; border: none; padding: 10px 15px; border-radius: 6px; cursor: pointer; font-family: 'Bebas Neue', sans-serif; font-size: 18px; letter-spacing: 1px; transition: 0.2s; box-shadow: 0 4px 10px rgba(16,185,129,0.3);">🎲 Sortear</button>`;
         }
 
         // Botões Admin (Editar, Excluir e Concluir)
@@ -1938,57 +1985,57 @@ window.renderSorteios = function () {
 // FUNÇÃO PARA MARCAR RIFA COMO CONCLUÍDA
 // =========================================================
 window.concluirRifa = async function (index) {
-    if (!confirm('Deseja marcar esta rifa como CONCLUÍDA?\n\nEla não aceitará mais novas reservas e mudará visualmente para Encerrada.')) return;
+  if (!confirm('Deseja marcar esta rifa como CONCLUÍDA?\n\nEla não aceitará mais novas reservas e mudará visualmente para Encerrada.')) return;
 
-    try {
-        const { doc, setDoc } = await import("https://www.gstatic.com/firebasejs/12.13.0/firebase-firestore.js");
-        
-        // Atualiza o status no objeto local
-        window.LISTA_RIFAS[index].status = 'Concluído';
-        
-        // Salva a alteração no banco de dados (na mesma loja)
-        await setDoc(doc(db, 'lojas', window.lojaIdAtual), { rifas: window.LISTA_RIFAS }, { merge: true });
-        
-        // Renderiza a tela de novo para o Admin ver a mudança instantaneamente
-        window.renderSorteios();
-    } catch (e) {
-        console.error("Erro ao concluir rifa:", e);
-        alert('Erro ao atualizar o status da rifa.');
-    }
+  try {
+    const { doc, setDoc } = await import("https://www.gstatic.com/firebasejs/12.13.0/firebase-firestore.js");
+
+    // Atualiza o status no objeto local
+    window.LISTA_RIFAS[index].status = 'Concluído';
+
+    // Salva a alteração no banco de dados (na mesma loja)
+    await setDoc(doc(db, 'lojas', window.lojaIdAtual), { rifas: window.LISTA_RIFAS }, { merge: true });
+
+    // Renderiza a tela de novo para o Admin ver a mudança instantaneamente
+    window.renderSorteios();
+  } catch (e) {
+    console.error("Erro ao concluir rifa:", e);
+    alert('Erro ao atualizar o status da rifa.');
+  }
 };
 
 // =========================================================
 // FUNÇÃO PARA ABRIR O SORTEADOR PERSONALIZADO PARA A RIFA
 // =========================================================
-window.abrirSorteadorDaRifa = function(tituloDaRifa = 'Sorteio da Rifa') {
-    const modal = document.getElementById('modal-sorteador');
-    if (modal) {
-        // Altera o título da janela para exibir o nome do prêmio sendo sorteado
-        const titleH2 = modal.querySelector('h2');
-        if (titleH2) {
-            titleH2.innerHTML = tituloDaRifa !== 'Sorteio da Rifa' 
-                ? `SORTEIO: <span style="color: #fff; font-size: 32px; display:block; margin-top: 4px;">${tituloDaRifa}</span>` 
-                : 'Sorteio da Rifa';
-        }
-        
-        // Limpa os dados do sorteio anterior
-        const resultEl = document.getElementById('sort-result');
-        const winnerEl = document.getElementById('sort-winner-name');
-        const participantsEl = document.getElementById('sort-participants');
-        
-        if (resultEl) {
-            resultEl.textContent = '000';
-            resultEl.style.color = '#fff';
-            resultEl.style.transform = 'scale(1)';
-        }
-        if (winnerEl) {
-            winnerEl.textContent = '';
-            winnerEl.style.opacity = '0';
-        }
-        if (participantsEl) participantsEl.value = '';
-        
-        modal.style.display = 'flex';
+window.abrirSorteadorDaRifa = function (tituloDaRifa = 'Sorteio da Rifa') {
+  const modal = document.getElementById('modal-sorteador');
+  if (modal) {
+    // Altera o título da janela para exibir o nome do prêmio sendo sorteado
+    const titleH2 = modal.querySelector('h2');
+    if (titleH2) {
+      titleH2.innerHTML = tituloDaRifa !== 'Sorteio da Rifa'
+        ? `SORTEIO: <span style="color: #fff; font-size: 32px; display:block; margin-top: 4px;">${tituloDaRifa}</span>`
+        : 'Sorteio da Rifa';
     }
+
+    // Limpa os dados do sorteio anterior
+    const resultEl = document.getElementById('sort-result');
+    const winnerEl = document.getElementById('sort-winner-name');
+    const participantsEl = document.getElementById('sort-participants');
+
+    if (resultEl) {
+      resultEl.textContent = '000';
+      resultEl.style.color = '#fff';
+      resultEl.style.transform = 'scale(1)';
+    }
+    if (winnerEl) {
+      winnerEl.textContent = '';
+      winnerEl.style.opacity = '0';
+    }
+    if (participantsEl) participantsEl.value = '';
+
+    modal.style.display = 'flex';
+  }
 }
 
 
@@ -2044,7 +2091,7 @@ window.salvarRifa = async function () {
 
   try {
     const { doc, setDoc } = await import("https://www.gstatic.com/firebasejs/12.13.0/firebase-firestore.js");
-    
+
     // ✅ Salva a Rifa na Loja do Admin, liberando para todos os VIPs dele!
     await setDoc(doc(db, 'lojas', window.lojaIdAtual), { rifas: window.LISTA_RIFAS }, { merge: true });
 
@@ -2072,93 +2119,449 @@ window.excluirRifa = async function (index) {
 }
 
 window.concluirRifa = async function (index) {
-    if (!confirm('Deseja marcar esta rifa como CONCLUÍDA? Ela não aceitará mais novas reservas e mudará visualmente para Encerrada.')) return;
+  if (!confirm('Deseja marcar esta rifa como CONCLUÍDA? Ela não aceitará mais novas reservas e mudará visualmente para Encerrada.')) return;
 
-    try {
-        window.LISTA_RIFAS[index].status = 'Concluído';
-        const { doc, setDoc } = await import("https://www.gstatic.com/firebasejs/12.13.0/firebase-firestore.js");
-        
-        await setDoc(doc(db, 'lojas', window.lojaIdAtual), { rifas: window.LISTA_RIFAS }, { merge: true });
-        window.renderSorteios();
-    } catch (e) {
-        console.error("Erro ao concluir rifa:", e);
-        alert('Erro ao atualizar o status da rifa.');
-    }
+  try {
+    window.LISTA_RIFAS[index].status = 'Concluído';
+    const { doc, setDoc } = await import("https://www.gstatic.com/firebasejs/12.13.0/firebase-firestore.js");
+
+    await setDoc(doc(db, 'lojas', window.lojaIdAtual), { rifas: window.LISTA_RIFAS }, { merge: true });
+    window.renderSorteios();
+  } catch (e) {
+    console.error("Erro ao concluir rifa:", e);
+    alert('Erro ao atualizar o status da rifa.');
+  }
 };
 
 // =========================================================
 // O SORTEADOR VIRTUAL (ANIMAÇÃO COM NÚMEROS E NOMES)
 // =========================================================
-window.realizarSorteioVirtual = function() {
-    const minVal = parseInt(document.getElementById('sort-min').value);
-    const maxVal = parseInt(document.getElementById('sort-max').value);
-    const participantsText = document.getElementById('sort-participants').value.trim();
-    
-    const resultEl = document.getElementById('sort-result');
-    const nameEl = document.getElementById('sort-winner-name'); // Onde vai o nome do ganhador
+window.realizarSorteioVirtual = function () {
+  const minVal = parseInt(document.getElementById('sort-min').value);
+  const maxVal = parseInt(document.getElementById('sort-max').value);
+  const participantsText = document.getElementById('sort-participants').value.trim();
 
-    let participants = [];
-    
-    // Se o admin colou a lista, nós a separamos linha por linha
-    if (participantsText) {
-        const lines = participantsText.split('\n');
-        lines.forEach(line => {
-            if(line.trim() !== '') {
-                // Inteligência para separar Número do Nome (Ex: "15 - Gabriel", "03. Eduarda", "10 Joao")
-                const match = line.match(/^(\d+)[\s\-\.\:]+(.+)$/);
-                if(match) {
-                    participants.push({ num: match[1], name: match[2].trim() });
-                } else {
-                    // Se não tiver número claro, salva só o nome
-                    participants.push({ num: '?', name: line.trim() });
-                }
-            }
-        });
+  const resultEl = document.getElementById('sort-result');
+  const nameEl = document.getElementById('sort-winner-name'); // Onde vai o nome do ganhador
+
+  let participants = [];
+
+  // Se o admin colou a lista, nós a separamos linha por linha
+  if (participantsText) {
+    const lines = participantsText.split('\n');
+    lines.forEach(line => {
+      if (line.trim() !== '') {
+        // Inteligência para separar Número do Nome (Ex: "15 - Gabriel", "03. Eduarda", "10 Joao")
+        const match = line.match(/^(\d+)[\s\-\.\:]+(.+)$/);
+        if (match) {
+          participants.push({ num: match[1], name: match[2].trim() });
+        } else {
+          // Se não tiver número claro, salva só o nome
+          participants.push({ num: '?', name: line.trim() });
+        }
+      }
+    });
+  }
+
+  // Validação de segurança
+  if (participants.length === 0 && (isNaN(minVal) || isNaN(maxVal) || minVal >= maxVal)) {
+    alert("Preencha a lista de participantes ou defina um intervalo numérico válido!");
+    return;
+  }
+
+  // Reseta o visual para começar a girar
+  resultEl.style.color = '#fff';
+  resultEl.style.transform = 'scale(1)';
+  nameEl.textContent = '';
+  nameEl.style.opacity = '0';
+  let counter = 0;
+
+  // Roda a animação super rápida por ~3 segundos
+  const interval = setInterval(() => {
+    // Durante o giro, mostra números aleatórios
+    if (participants.length > 0) {
+      const randomP = participants[Math.floor(Math.random() * participants.length)];
+      resultEl.textContent = randomP.num !== '?' ? randomP.num : Math.floor(Math.random() * 99);
+    } else {
+      resultEl.textContent = Math.floor(Math.random() * (maxVal - minVal + 1)) + minVal;
     }
 
-    // Validação de segurança
-    if (participants.length === 0 && (isNaN(minVal) || isNaN(maxVal) || minVal >= maxVal)) {
-        alert("Preencha a lista de participantes ou defina um intervalo numérico válido!"); 
+    counter++;
+
+    // Fim do sorteio
+    if (counter > 60) {
+      clearInterval(interval);
+
+      if (participants.length > 0) {
+        // Sorteia o grande vencedor da lista!
+        const finalWinner = participants[Math.floor(Math.random() * participants.length)];
+        resultEl.textContent = finalWinner.num !== '?' ? finalWinner.num : '🏆';
+        nameEl.textContent = finalWinner.name; // Aparece o nome!
+        nameEl.style.opacity = '1';
+      } else {
+        // Sorteia apenas o número
+        const finalResult = Math.floor(Math.random() * (maxVal - minVal + 1)) + minVal;
+        resultEl.textContent = finalResult;
+      }
+
+      resultEl.style.color = '#10b981'; // Fica verde
+      resultEl.style.transform = 'scale(1.2)'; // Dá um "pulo" de comemoração
+    }
+  }, 50);
+};
+
+
+const conviteParams = new URLSearchParams(window.location.search); // <-- Mudei o nome aqui
+const inviteLoja = conviteParams.get('loja'); // <-- E aqui
+
+if (inviteLoja) {
+  localStorage.setItem('pendingInvite', inviteLoja);
+  window.history.replaceState({}, document.title, window.location.pathname);
+}
+
+
+
+window.renderEncomendas = async function () {
+  const container = document.getElementById('encomendas-view');
+  if (!container) return;
+
+  container.innerHTML = '<p style="color: #cbd5e1; text-align: center; margin-top: 40px; font-style: italic;">Buscando suas encomendas no banco de dados...</p>';
+
+  try {
+    // 👇 Lê o cliente diretamente da caixa de seleção (ou pega a própria conta)
+    const clientSelect = document.getElementById('client-select');
+    const clienteSelecionado = (clientSelect && clientSelect.value !== 'ME') ? clientSelect.value : null;
+
+    // Usa as variáveis limpas, sem o "window." na frente
+    const uidToUse = clienteSelecionado || targetUid || sessionUid;
+
+    if (!uidToUse) {
+      container.innerHTML = '<p style="color: var(--red); text-align: center; margin-top: 40px;">Erro: Não foi possível identificar o usuário.</p>';
+      return;
+    }
+
+    const snap = await getDoc(doc(db, 'collections', uidToUse));
+    const data = snap.exists() ? snap.data() : {};
+    const garagemLoja = data.garagemLoja || [];
+
+    if (garagemLoja.length === 0) {
+      container.innerHTML = `
+                <div style="text-align: center; padding: 60px 20px; background: var(--surface); border: 1px solid var(--border); border-radius: 12px; margin-top: 20px;">
+                    <h2 style="color: #94a3b8; font-family: 'Bebas Neue', sans-serif; font-size: 28px; letter-spacing: 1px;">Nenhuma encomenda por aqui!</h2>
+                    <p style="color: #64748b; font-size: 15px; margin-top: 10px;">Você ainda não tem nenhum item retido nas garagens dos vendedores.</p>
+                </div>`;
+      return;
+    }
+
+    let html = `
+            <h2 style="font-family: 'Bebas Neue', sans-serif; color: #60a5fa; font-size: 32px; letter-spacing: 1px; margin-bottom: 5px;">📦 Minhas Encomendas</h2>
+            <p style="color: #94a3b8; font-size: 15px; margin-bottom: 25px;">Acompanhe o status dos itens que você adquiriu e estão guardados nas garagens das lojas.</p>
+            <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 16px;">
+        `;
+
+    // Ordena para os mais recentes ficarem no topo (invertendo o array)
+    const encomendasOrdenadas = [...garagemLoja].reverse();
+
+    encomendasOrdenadas.forEach(pedido => {
+        let carName = pedido.carId;
+        let carImg = 'assets/img/placeholder.png';
+        
+        // 1. Tenta pegar o preço exato que foi salvo no pedido. Inicia em 0 se não existir.
+        let precoUnitario = parseFloat(pedido.preco || pedido.valor || 0);
+
+        // 2. Tenta puxar a imagem e o nome da base de dados local (RAW)
+        if (typeof RAW !== 'undefined') {
+            const carObj = RAW.find(c => c.id === pedido.carId);
+            if (carObj) {
+                carName = `${carObj.name} <br><small style="color: var(--yellow);">${carObj.year} | SKU: ${carObj.part}</small>`;
+                carImg = carObj.image || carImg;
+                
+                // 3. Se o pedido não tinha preço salvo, tenta puxar do catálogo
+                if (precoUnitario === 0 && carObj.price) {
+                    precoUnitario = parseFloat(carObj.price);
+                }
+            }
+        }
+
+        // Calcula o preço final da encomenda
+        const valorTotalPedido = pedido.qty * precoUnitario;
+
+  
+        // ✏️ Botão de Editar Preço (Bloqueado para clientes)
+        let btnEditarPreco = '';
+
+        // 👇 Substitua 'window.isAdmin' pela variável ou condição que você usa para identificar o administrador no seu app.
+        // Exemplo alternativo: if (sessionUid === 'SEU_UID_DE_ADMIN_AQUI') {
+        if (window.isAdmin) { 
+            btnEditarPreco = `
+                <button onclick="window.editarPrecoPedido('${pedido.pedidoId}', ${precoUnitario})" 
+                    style="background: transparent; color: #94a3b8; border: 1px dashed #475569; padding: 4px 8px; border-radius: 4px; font-size: 10px; cursor: pointer; margin-left: 8px; transition: 0.2s;"
+                    onmouseover="this.style.color='#fff'; this.style.borderColor='#fff'" 
+                    onmouseout="this.style.color='#94a3b8'; this.style.borderColor='#475569'">
+                    ✏️ Definir Preço
+                </button>`;
+        }
+
+        // 🟢 DECLARAÇÃO DO STATUS BADGE (Garante que a variável existe antes do HTML)
+        let statusBadge = '';
+
+        if (pedido.status === 'pago') {
+            statusBadge = '<span style="background: rgba(34, 197, 94, 0.15); color: var(--green); border: 1px solid var(--green); padding: 4px 8px; border-radius: 4px; font-weight: bold; font-size: 11px; text-transform: uppercase;">🟢 Pago (Na Garagem)</span>';
+        } else if (pedido.status === 'enviado') {
+            statusBadge = '<span style="background: rgba(56, 189, 248, 0.15); color: #38bdf8; border: 1px solid #38bdf8; padding: 4px 8px; border-radius: 4px; font-weight: bold; font-size: 11px; text-transform: uppercase;">📦 Enviado / Retirado</span>';
+        } else {
+            // Se não tá pago nem enviado, vê se tem preço para exibir o botão do MP
+            if (valorTotalPedido > 0) {
+                statusBadge = `
+                    <div style="display: flex; align-items: center;">
+                        <button onclick="window.iniciarCheckout('${pedido.pedidoId}', ${valorTotalPedido}, '${pedido.lojaId}')" 
+                            style="background: #009ee3; color: #fff; border: none; padding: 6px 12px; border-radius: 6px; font-weight: bold; cursor: pointer; font-size: 11px; font-family: 'Bebas Neue', sans-serif; letter-spacing: 0.5px; display: flex; align-items: center; gap: 4px; box-shadow: 0 4px 6px rgba(0,158,227,0.2);">
+                            💳 Pagar R$ ${valorTotalPedido.toFixed(2)}
+                        </button>
+                        ${btnEditarPreco}
+                    </div>`;
+            } else {
+                statusBadge = `
+                    <div style="display: flex; align-items: center;">
+                        <span style="color: #ef4444; font-size: 11px; font-weight: bold;">⚠️ Preço Indefinido</span>
+                        ${btnEditarPreco}
+                    </div>`;
+            }
+        }
+
+        // Monta o Card HTML final
+        html += `
+            <div style="background: var(--surface); border: 1px solid var(--border); border-radius: 12px; padding: 16px; display: flex; gap: 16px; align-items: center; position: relative; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);">
+                <span style="position: absolute; top: 12px; right: 12px; font-size: 10px; background: #334155; color: #cbd5e1; padding: 4px 8px; border-radius: 4px; font-weight: bold; text-transform: uppercase; border: 1px solid #475569;">
+                    🏢 ${pedido.lojaId}
+                </span>
+                
+                <img src="${carImg}" style="width: 80px; height: 80px; object-fit: contain; background: #fff; border-radius: 8px;" onerror="this.src='assets/img/placeholder.png';">
+                
+                <div style="flex: 1; margin-top: 15px;">
+                    <div style="color: #e2e8f0; font-weight: 600; font-size: 15px; margin-bottom: 8px; line-height: 1.3;">${carName}</div>
+                    <div style="color: #94a3b8; font-size: 13px; margin-bottom: 12px; font-family: 'Barlow', sans-serif;">
+                        Unidades: <b style="color: #fff;">${pedido.qty}</b> &nbsp;|&nbsp; Data: ${pedido.data}
+                    </div>
+                    <div>${statusBadge}</div>
+                </div>
+            </div>
+        `;
+    });
+
+    html += '</div>';
+    container.innerHTML = html;
+
+  } catch (e) {
+    console.error("Erro ao buscar encomendas:", e);
+    container.innerHTML = '<p style="color: var(--red); text-align: center; margin-top: 40px;">Erro ao carregar as encomendas. Verifique sua conexão.</p>';
+  }
+}
+
+// Intercepta os cliques no menu para carregar a tela de Encomendas automaticamente
+document.addEventListener('click', (e) => {
+  // Se o cliente clicou no menu "Minhas Encomendas"
+  if (e.target && e.target.getAttribute('data-page') === 'encomendas') {
+    e.preventDefault();
+
+    // Esconde todas as outras telas, textos vazios e contadores
+    const viewsParaEsconder = [
+      document.getElementById('table-body'),
+      document.getElementById('empty-msg'), // <-- Esconde a mensagem vazia
+      document.querySelector('.stats-row'), // <-- Esconde as estatísticas superiores (0, 0, 0, 0)
+      document.querySelector('.controls'),
+      document.querySelector('.count-bar'),
+      document.querySelector('.pagination-container'),
+      document.getElementById('missions-view'),
+      document.getElementById('rewards-view'),
+      document.getElementById('stats-view'),
+      document.getElementById('sorteios-view'),
+      document.getElementById('kaido-view')
+    ];
+
+    viewsParaEsconder.forEach(view => {
+      if (view) view.style.display = 'none';
+    });
+
+    // Esconde o título "Sua Garagem" e o filtro de ordenação
+    const mobileSort = document.getElementById('mobile-sort');
+    if (mobileSort && mobileSort.parentElement) {
+      mobileSort.parentElement.style.display = 'none';
+    }
+
+    // Atualiza o título azul no topo do aplicativo
+    const titleEl = document.getElementById('dynamic-title');
+    if (titleEl) titleEl.innerHTML = 'Minhas <span>Encomendas</span>';
+
+    // Mostra a tela de encomendas e chama a função para buscar no banco
+    const encomendasView = document.getElementById('encomendas-view');
+    if (encomendasView) {
+      encomendasView.style.display = 'block';
+      window.renderEncomendas();
+    }
+
+    // Fecha o menu lateral no celular
+    const sidebar = document.getElementById('sidebar');
+    const overlay = document.getElementById('sidebar-overlay');
+    if (sidebar) sidebar.classList.remove('open');
+    if (overlay) overlay.classList.remove('open');
+  }
+});
+
+
+// ===================================================================
+// SISTEMA DE VENDA VISUAL (ADICIONAR À GARAGEM VIA APP.HTML)
+// ===================================================================
+window.venderCarroVisual = async function (carId, event) {
+  // Evita que o clique abra a foto em tela cheia sem querer
+  if (event) event.stopPropagation();
+
+  // Lê o cliente diretamente da caixa de seleção
+  const clientSelect = document.getElementById('client-select');
+  const clienteSelecionado = clientSelect ? clientSelect.value : 'ME';
+
+  if (!clienteSelecionado || clienteSelecionado === 'ME') {
+    alert("⚠️ Selecione um cliente na barra superior antes de encomendar!");
+    return;
+  }
+
+  const qtyInput = prompt("Quantas unidades deste carrinho você está encomendando para o cliente?", "1");
+  if (!qtyInput) return; // Se cancelar o prompt, não faz nada
+
+  const qty = parseInt(qtyInput);
+  if (qty <= 0 || isNaN(qty)) {
+    alert("Quantidade inválida.");
+    return;
+  }
+
+  const PONTOS_POR_CARRO = 100;
+
+  try {
+    const adminDoc = await getDoc(doc(db, 'users', sessionUid));
+    const adminLojaRaw = adminDoc.exists() ? (adminDoc.data().lojaId || '') : '';
+    const minhaLojaAtual = adminLojaRaw.split(',')[0].trim() || 'default';
+
+    const dRef = doc(db, 'collections', clienteSelecionado);
+    const snap = await getDoc(dRef);
+    const dataSnap = snap.exists() ? snap.data() : {};
+
+    let garagemLoja = dataSnap.garagemLoja || [];
+    let pointsMap = dataSnap.pointsMap || {};
+    let history = dataSnap.history || [];
+    let pontosGerais = dataSnap.points || 0;
+
+    const ptsGanhos = qty * PONTOS_POR_CARRO;
+
+    // Garante que o cliente tem a carteira da loja iniciada
+    if (typeof dataSnap.points === 'number' && Object.keys(pointsMap).length === 0) {
+      pointsMap[minhaLojaAtual] = dataSnap.points;
+    }
+
+    // Soma os pontos na carteira da sua loja E na conta global do cliente
+    pointsMap[minhaLojaAtual] = (pointsMap[minhaLojaAtual] || 0) + ptsGanhos;
+    pontosGerais += ptsGanhos;
+
+    history.unshift({
+      date: new Date().toLocaleDateString('pt-BR'),
+      desc: `Venda via Catálogo (${minhaLojaAtual})`,
+      amount: ptsGanhos,
+      type: "earning"
+    });
+
+    // Adiciona a ficha na logística (Minhas Encomendas)
+    garagemLoja.push({
+      pedidoId: 'ped_' + Date.now(),
+      carId: carId,
+      qty: qty,
+      status: 'pendente',
+      lojaId: minhaLojaAtual,
+      data: new Date().toLocaleDateString('pt-BR')
+    });
+
+    // 👇 SALVA NO BANCO (Agora com o campo 'points' atualizado corretamente)
+    await setDoc(dRef, {
+      garagemLoja: garagemLoja,
+      pointsMap: pointsMap,
+      points: pontosGerais,
+      history: history
+    }, { merge: true });
+
+    // 👇 ATUALIZA A TELA IMEDIATAMENTE (Sem precisar dar F5)
+    if (typeof userPoints !== 'undefined') userPoints = pontosGerais;
+    const pointsEl = document.getElementById('user-points');
+    if (pointsEl) pointsEl.textContent = pontosGerais;
+
+    alert(`✅ Encomenda registrada com sucesso!\nO item foi para "Minhas Encomendas" e o cliente ganhou +${ptsGanhos} RPMs.`);
+
+  } catch (e) {
+    console.error("Erro ao vender carro via catálogo:", e);
+    alert("Erro ao registrar a encomenda. Verifique a conexão.");
+  }
+}
+
+window.iniciarCheckout = async function(pedidoId, valor, lojaDoPedido) {
+    try {
+        // 🚀 URL OFICIAL DO SEU SERVIDOR NO RENDER:
+        const URL_BACKEND = "https://servidor-pagamentos-hw.onrender.com/checkout";
+
+        const response = await fetch(URL_BACKEND, {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({
+                pedidoId: pedidoId,
+                valor: valor,
+                clienteId: sessionUid,
+                lojaId: lojaDoPedido
+            })
+        });
+
+        const resData = await response.json();
+
+        if (resData.init_point) {
+            // Sucesso! Redireciona o usuário para a tela azul do Mercado Pago
+            window.location.href = resData.init_point;
+        } else if (resData.error) {
+            alert("Erro do Servidor: " + resData.error);
+        }
+    } catch (e) {
+        console.error("Erro ao conectar com a API de checkout:", e);
+        alert("Não foi possível gerar a tela de pagamento. Verifique a conexão.");
+    }
+}
+
+window.editarPrecoPedido = async function(pedidoId, precoAtual) {
+    // 1. Pergunta o novo valor (já mostra o atual caso exista)
+    const novoPrecoStr = prompt(`Digite o novo preço unitário para este item (Atual: R$ ${precoAtual.toFixed(2)}):\nUse ponto ou vírgula para os centavos.`, precoAtual);
+    
+    // Se clicar em cancelar ou deixar vazio, encerra
+    if (novoPrecoStr === null || novoPrecoStr.trim() === "") return; 
+    
+    // 2. Converte o texto para número de forma segura (trocando vírgula por ponto)
+    const novoPreco = parseFloat(novoPrecoStr.replace(',', '.'));
+    
+    if (isNaN(novoPreco) || novoPreco <= 0) {
+        alert("Preço inválido. Digite um número maior que zero.");
         return;
     }
 
-    // Reseta o visual para começar a girar
-    resultEl.style.color = '#fff';
-    resultEl.style.transform = 'scale(1)';
-    nameEl.textContent = ''; 
-    nameEl.style.opacity = '0';
-    let counter = 0;
-    
-    // Roda a animação super rápida por ~3 segundos
-    const interval = setInterval(() => {
-        // Durante o giro, mostra números aleatórios
-        if (participants.length > 0) {
-            const randomP = participants[Math.floor(Math.random() * participants.length)];
-            resultEl.textContent = randomP.num !== '?' ? randomP.num : Math.floor(Math.random() * 99);
-        } else {
-            resultEl.textContent = Math.floor(Math.random() * (maxVal - minVal + 1)) + minVal;
-        }
+    try {
+        const { doc, updateDoc } = await import("https://www.gstatic.com/firebasejs/12.13.0/firebase-firestore.js");
         
-        counter++;
+        // ⚠️ ATENÇÃO: Se a sua coleção no Firebase se chamar "carrinhos" ou "encomendas", troque "pedidos" abaixo:
+        const pedidoRef = doc(db, 'pedidos', pedidoId); 
         
-        // Fim do sorteio
-        if (counter > 60) {
-            clearInterval(interval);
-            
-            if (participants.length > 0) {
-                // Sorteia o grande vencedor da lista!
-                const finalWinner = participants[Math.floor(Math.random() * participants.length)];
-                resultEl.textContent = finalWinner.num !== '?' ? finalWinner.num : '🏆';
-                nameEl.textContent = finalWinner.name; // Aparece o nome!
-                nameEl.style.opacity = '1';
-            } else {
-                // Sorteia apenas o número
-                const finalResult = Math.floor(Math.random() * (maxVal - minVal + 1)) + minVal;
-                resultEl.textContent = finalResult;
-            }
-            
-            resultEl.style.color = '#10b981'; // Fica verde
-            resultEl.style.transform = 'scale(1.2)'; // Dá um "pulo" de comemoração
-        }
-    }, 50);
-};
+        // 3. Atualiza o banco de dados
+        await updateDoc(pedidoRef, {
+            preco: novoPreco
+        });
+
+        alert("Preço atualizado com sucesso!");
+        
+        // 4. Recarrega a página para o botão azul já aparecer com o valor novo calculado
+        location.reload(); 
+        
+    } catch (error) {
+        console.error("Erro ao atualizar preço:", error);
+        alert("Erro ao atualizar o banco de dados. Verifique o console.");
+    }
+}

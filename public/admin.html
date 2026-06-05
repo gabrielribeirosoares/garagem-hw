@@ -330,7 +330,7 @@
 </head>
 
 <body>
-    <<div class="header-admin">
+    <div class="header-admin">
         <h1>Painel de Controle</h1>
         <div style="display: flex; gap: 10px; flex-wrap: wrap;">
             <button id="btn-my-store-rewards" class="btn-back"
@@ -339,249 +339,263 @@
 
             <button id="btn-new-client" class="btn-back" style="background: #10b981; cursor: pointer; border: none;">➕
                 Novo Cliente</button>
+            <button id="btn-copy-invite" class="btn-back"
+                style="background: #2563eb; color: white; cursor: pointer; border: none; display: none;">🔗 Link de
+                Convite</button>
             <button id="btn-pending-lots" class="btn-back"
                 style="background: #fcd34d; color: black; cursor: pointer; border: none;">📦 Lotes Pendentes</button>
+            <button id="btn-logistica"
+                style="background: #10b981; color: white; border: none; padding: 8px 12px; border-radius: 4px; cursor: pointer; font-weight: bold; margin-left: 10px;">📦
+                Logística / Garagens</button>
             <a href="home.html" class="btn-back">← Voltar ao Início</a>
         </div>
+    </div>
+
+    <div id="main-dashboard-view">
+        <table id="users-table">
+            <thead>
+                <tr>
+                    <th>Nome</th>
+                    <th>E-mail</th>
+                    <th>Telefone</th>
+                    <th>Nascimento</th>
+                    <th>Cargo/Função</th>
+                    <th>Ações</th>
+                </tr>
+            </thead>
+            <tbody id="users-tbody">
+                <tr>
+                    <td colspan="6" style="text-align:center;">Carregando usuários...</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div
+            style="background: var(--surface); border: 1px solid var(--border); border-radius: 12px; padding: 24px; max-width: 500px; margin: 20px auto; color: white; font-family: 'Barlow', sans-serif;">
+            <h2
+                style="font-family: 'Bebas Neue', sans-serif; font-size: 32px; color: var(--yellow); letter-spacing: 1px; margin-bottom: 10px;">
+                🔍 Validar Cupom VIP</h2>
+            <p style="color: var(--muted); font-size: 14px; margin-bottom: 20px;">Digite o código enviado pelo
+                cliente para verificar a autenticidade e dar baixa no prêmio.</p>
+            <div style="display: flex; gap: 10px; margin-bottom: 20px;">
+                <input type="text" id="cupom-input" placeholder="Ex: HW-82F3A"
+                    style="flex: 1; background: var(--surface2); border: 1px solid var(--border); color: var(--yellow); font-family: monospace; font-size: 18px; padding: 12px; border-radius: 6px; text-transform: uppercase; outline: none;">
+                <button onclick="validarCupom()"
+                    style="background: var(--yellow); color: black; font-family: 'Bebas Neue', sans-serif; font-size: 20px; padding: 0 24px; border: none; border-radius: 6px; cursor: pointer;">Buscar</button>
+            </div>
+            <div id="cupom-result"></div>
         </div>
+    </div>
 
-        <div id="main-dashboard-view">
-            <table id="users-table">
-                <thead>
-                    <tr>
-                        <th>Nome</th>
-                        <th>E-mail</th>
-                        <th>Telefone</th>
-                        <th>Nascimento</th>
-                        <th>Cargo/Função</th>
-                        <th>Ações</th>
-                    </tr>
-                </thead>
-                <tbody id="users-tbody">
-                    <tr>
-                        <td colspan="6" style="text-align:center;">Carregando usuários...</td>
-                    </tr>
-                </tbody>
-            </table>
-
-            <div
-                style="background: var(--surface); border: 1px solid var(--border); border-radius: 12px; padding: 24px; max-width: 500px; margin: 20px auto; color: white; font-family: 'Barlow', sans-serif;">
-                <h2
-                    style="font-family: 'Bebas Neue', sans-serif; font-size: 32px; color: var(--yellow); letter-spacing: 1px; margin-bottom: 10px;">
-                    🔍 Validar Cupom VIP</h2>
-                <p style="color: var(--muted); font-size: 14px; margin-bottom: 20px;">Digite o código enviado pelo
-                    cliente para verificar a autenticidade e dar baixa no prêmio.</p>
-                <div style="display: flex; gap: 10px; margin-bottom: 20px;">
-                    <input type="text" id="cupom-input" placeholder="Ex: HW-82F3A"
-                        style="flex: 1; background: var(--surface2); border: 1px solid var(--border); color: var(--yellow); font-family: monospace; font-size: 18px; padding: 12px; border-radius: 6px; text-transform: uppercase; outline: none;">
-                    <button onclick="validarCupom()"
-                        style="background: var(--yellow); color: black; font-family: 'Bebas Neue', sans-serif; font-size: 20px; padding: 0 24px; border: none; border-radius: 6px; cursor: pointer;">Buscar</button>
-                </div>
-                <div id="cupom-result"></div>
+    <div id="pending-lots-view" style="display: none;">
+        <div
+            style="display:flex; justify-content:space-between; align-items:center; margin-bottom: 25px; flex-wrap: wrap; gap: 15px;">
+            <h2
+                style="font-family: 'Bebas Neue', sans-serif; color: #fff; font-size: 32px; margin: 0; letter-spacing: 1px;">
+                Cadastrar Lotes</h2>
+            <div>
+                <button id="btn-back-dashboard" class="btn-cancel" style="padding: 10px 16px; margin-right: 10px;">←
+                    Voltar à Tabela</button>
+                <button onclick="window.gerarCodigoLotes()"
+                    style="background: #10b981; color: #000; border: none; padding: 10px 20px; border-radius: 6px; font-weight: bold; cursor: pointer;">✅
+                    Gerar Código</button>
             </div>
         </div>
 
-        <div id="pending-lots-view" style="display: none;">
-            <div
-                style="display:flex; justify-content:space-between; align-items:center; margin-bottom: 25px; flex-wrap: wrap; gap: 15px;">
-                <h2
-                    style="font-family: 'Bebas Neue', sans-serif; color: #fff; font-size: 32px; margin: 0; letter-spacing: 1px;">
-                    Cadastrar Lotes</h2>
-                <div>
-                    <button id="btn-back-dashboard" class="btn-cancel" style="padding: 10px 16px; margin-right: 10px;">←
-                        Voltar à Tabela</button>
-                    <button onclick="window.gerarCodigoLotes()"
-                        style="background: #10b981; color: #000; border: none; padding: 10px 20px; border-radius: 6px; font-weight: bold; cursor: pointer;">✅
-                        Gerar Código</button>
-                </div>
-            </div>
+        <p style="color: var(--muted); margin-bottom: 20px; font-size: 15px;">Abaixo estão os carros que não têm
+            lote ("cas") preenchido. Digite a letra e clique no botão verde acima.</p>
 
-            <p style="color: var(--muted); margin-bottom: 20px; font-size: 15px;">Abaixo estão os carros que não têm
-                lote ("cas") preenchido. Digite a letra e clique no botão verde acima.</p>
+        <div id="pending-lots-grid"
+            style="display: grid; gap: 15px; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));"></div>
 
-            <div id="pending-lots-grid"
-                style="display: grid; gap: 15px; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));"></div>
-
-            <div id="export-area"
-                style="display: none; margin-top: 30px; background: #0f172a; padding: 20px; border-radius: 8px; border: 1px solid #334155;">
-                <h3 style="color: #10b981; margin-top: 0;">Código Gerado com Sucesso!</h3>
-                <p style="color: var(--muted); font-size: 14px;">Copie todo o bloco abaixo e cole logo no <b>topo do seu
-                        arquivo app.js</b>.</p>
-                <textarea id="export-textarea"
-                    style="width: 100%; height: 250px; background: #1e293b; color: #cbd5e1; font-family: monospace; padding: 10px; border: 1px solid #475569; border-radius: 6px; outline: none; margin-top: 10px;"
-                    readonly></textarea>
-            </div>
+        <div id="export-area"
+            style="display: none; margin-top: 30px; background: #0f172a; padding: 20px; border-radius: 8px; border: 1px solid #334155;">
+            <h3 style="color: #10b981; margin-top: 0;">Código Gerado com Sucesso!</h3>
+            <p style="color: var(--muted); font-size: 14px;">Copie todo o bloco abaixo e cole logo no <b>topo do seu
+                    arquivo app.js</b>.</p>
+            <textarea id="export-textarea"
+                style="width: 100%; height: 250px; background: #1e293b; color: #cbd5e1; font-family: monospace; padding: 10px; border: 1px solid #475569; border-radius: 6px; outline: none; margin-top: 10px;"
+                readonly></textarea>
         </div>
-        </div>
+    </div>
+    <div id="logistica-view" style="display: none; padding: 20px; max-width: 1000px; margin: 0 auto;">
+        <h2
+            style="font-family: 'Bebas Neue', sans-serif; color: #10b981; font-size: 32px; letter-spacing: 1px; margin-bottom: 5px;">
+            📦 Gestão Logística das Garagens</h2>
+        <p style="color: #94a3b8; font-size: 14px; margin-bottom: 25px;">Acompanhe os pagamentos e envios dos itens que
+            estão guardados com você.</p>
 
-        <div id="edit-modal" class="modal">
-            <div class="modal-content">
-                <h3>Editar Perfil do Usuário</h3>
-                <form id="edit-user-form">
-                    <input type="hidden" id="edit-uid">
-                    <div class="form-group">
-                        <label>Nome Completo</label>
-                        <input type="text" id="edit-name" required>
-                    </div>
-                    <div class="form-group">
-                        <label>Telefone / WhatsApp</label>
-                        <input type="text" id="edit-phone" required>
-                    </div>
-                    <div class="form-group">
-                        <label>Nível de Acesso</label>
-                        <select id="edit-role">
-                            <option value="user">Usuário</option>
-                            <option value="cliente">Cliente da Loja (VIP)</option>
-                            <option value="gerente">Gerente</option>
-                            <option value="admin">Administrador</option>
-                        </select>
-                    </div>
-                    <div class="form-group">
-                        <label>ID da Loja</label>
-                        <input type="text" id="edit-lojaId" placeholder="Ex: garagem_do_pedro">
-                    </div>
-                    <div class="modal-actions">
-                        <button type="button" class="btn-cancel" id="btn-close-modal">Cancelar</button>
-                        <button type="submit" class="btn-save">Salvar Alterações</button>
-                    </div>
-                </form>
-            </div>
+        <div id="logistica-container">
         </div>
+    </div>
 
-        <div id="cars-modal" class="custom-modal-overlay" style="display: none; z-index: 10000;">
-            <div class="custom-modal-box" style="max-width: 600px; text-align: left;">
-                <h2
-                    style="font-family: 'Bebas Neue', sans-serif; color: var(--yellow); font-size: 28px; margin-bottom: 5px;">
-                    🚗 Adicionar na Garagem</h2>
-                <p style="color: var(--muted); font-size: 14px; margin-bottom: 20px;">Adicionando miniaturas para: <b
-                        id="manage-user-name" style="color: #fff;"></b></p>
-                <div style="margin-bottom: 20px;">
-                    <label
-                        style="color: var(--muted); font-size: 13px; text-transform: uppercase; font-family: 'Barlow Condensed', sans-serif;">1.
-                        Buscar Carrinho na Base (RAW):</label>
-                    <input type="text" id="car-search-input" list="car-datalist"
-                        placeholder="Digite ano, nome ou série para buscar..."
-                        style="width: 100%; padding: 12px; background: var(--surface2); border: 1px solid var(--border); color: #fff; border-radius: 6px; margin-top: 5px; font-family: 'Barlow', sans-serif; outline: none;">
-                    <datalist id="car-datalist"></datalist>
-                </div>
-                <div style="display: flex; gap: 15px; align-items: flex-end; margin-bottom: 30px;">
-                    <div style="flex: 1;">
-                        <label
-                            style="color: var(--muted); font-size: 13px; text-transform: uppercase; font-family: 'Barlow Condensed', sans-serif;">2.
-                            Quantidade Final na Coleção:</label>
-                        <input type="number" id="car-qty-input" min="0" value="1"
-                            style="width: 100%; padding: 12px; background: var(--surface2); border: 1px solid var(--border); color: var(--yellow); font-weight: bold; font-size: 18px; border-radius: 6px; margin-top: 5px; text-align: center; outline: none;">
-                    </div>
-                    <button id="btn-save-car"
-                        style="background: var(--green); color: #000; font-family: 'Bebas Neue', sans-serif; font-size: 20px; padding: 12px 24px; border: none; border-radius: 6px; cursor: pointer; transition: 0.2s;">➕
-                        Adicionar</button>
-                </div>
-                <div style="text-align: center; border-top: 1px solid var(--border); padding-top: 20px;">
-                    <button class="btn-clear" onclick="document.getElementById('cars-modal').style.display = 'none'"
-                        style="font-size: 16px;">Fechar Painel</button>
-                </div>
-            </div>
-        </div>
+    </div>
 
-        <div id="rifa-modal" class="custom-modal-overlay" style="display: none; z-index: 10001;">
-            <div class="custom-modal-box" style="max-width: 450px; text-align: left;">
-                <h2
-                    style="font-family: 'Bebas Neue', sans-serif; color: var(--yellow); font-size: 28px; margin-bottom: 5px;">
-                    🎟️ Lançar Pontos de Rifa</h2>
-                <p style="color: var(--muted); font-size: 14px; margin-bottom: 20px;">Creditando pontos para: <b
-                        id="rifa-user-name" style="color: #fff;"></b></p>
-                <div class="form-group" style="margin-bottom: 20px;">
-                    <label
-                        style="color: var(--muted); font-size: 13px; text-transform: uppercase; font-family: 'Barlow Condensed', sans-serif; display:block; margin-bottom: 6px;">Quantidade
-                        de Números Comprados:</label>
-                    <input type="number" id="rifa-qty-input" min="1" value="1"
-                        style="width: 100%; padding: 12px; background: var(--surface2); border: 1px solid var(--border); color: #fff; border-radius: 6px; outline: none; font-family: 'Barlow', sans-serif; font-size: 16px;">
-                </div>
-                <div class="form-group" style="margin-bottom: 25px;">
-                    <label
-                        style="color: var(--muted); font-size: 13px; text-transform: uppercase; font-family: 'Barlow Condensed', sans-serif; display:block; margin-bottom: 6px;">Pontos
-                        por cada Número:</label>
-                    <input type="number" id="rifa-points-per-num" min="1" value="50"
-                        style="width: 100%; padding: 12px; background: var(--surface2); border: 1px solid var(--border); color: var(--yellow); font-weight: bold; border-radius: 6px; outline: none; font-family: 'Barlow', sans-serif; font-size: 16px;">
-                </div>
-                <button id="btn-save-rifa"
-                    style="width: 100%; background: var(--green); color: #000; font-family: 'Bebas Neue', sans-serif; font-size: 20px; padding: 12px; border: none; border-radius: 6px; cursor: pointer; font-weight: bold;">🪙
-                    Creditar Pontos</button>
-                <div
-                    style="text-align: center; border-top: 1px solid var(--border); padding-top: 20px; margin-top: 20px;">
-                    <button class="btn-clear" onclick="document.getElementById('rifa-modal').style.display = 'none'"
-                        style="font-size: 16px;">Cancelar</button>
-                </div>
-            </div>
-        </div>
-
-        <div id="loja-modal" class="custom-modal-overlay" style="display: none; z-index: 10001;">
-            <div class="custom-modal-box" style="max-width: 600px; text-align: left;">
-                <h2
-                    style="font-family: 'Bebas Neue', sans-serif; color: var(--yellow); font-size: 28px; margin-bottom: 5px;">
-                    🎁 Gerenciar Prêmios</h2>
-                <p style="color: var(--muted); font-size: 14px; margin-bottom: 20px;">Loja: <b id="loja-alvo-nome"
-                        style="color: #fff;"></b></p>
-                <div style="background: var(--surface2); padding: 15px; border-radius: 8px; margin-bottom: 20px;">
-                    <div class="form-group">
-                        <label style="color: var(--muted); font-size: 13px;">Ícone (Emoji)</label>
-                        <input type="text" id="rew-icone" placeholder="Ex: 🧢"
-                            style="width: 100%; padding: 10px; background: #0f172a; border: 1px solid #475569; color: white; border-radius: 4px; box-sizing: border-box;">
-                    </div>
-                    <div class="form-group">
-                        <label style="color: var(--muted); font-size: 13px;">Título do Prêmio</label>
-                        <input type="text" id="rew-titulo" placeholder="Ex: Boné Oficial"
-                            style="width: 100%; padding: 10px; background: #0f172a; border: 1px solid #475569; color: white; border-radius: 4px; box-sizing: border-box;">
-                    </div>
-                    <div class="form-group">
-                        <label style="color: var(--muted); font-size: 13px;">Descrição</label>
-                        <input type="text" id="rew-desc" placeholder="Ex: Boné preto com logo"
-                            style="width: 100%; padding: 10px; background: #0f172a; border: 1px solid #475569; color: white; border-radius: 4px; box-sizing: border-box;">
-                    </div>
-                    <div class="form-group">
-                        <label style="color: var(--muted); font-size: 13px;">Custo (RPMs)</label>
-                        <input type="number" id="rew-custo" placeholder="Ex: 500"
-                            style="width: 100%; padding: 10px; background: #0f172a; border: 1px solid #475569; color: white; border-radius: 4px; box-sizing: border-box;">
-                    </div>
-                    <button id="btn-add-rew"
-                        style="background: var(--green); color: black; font-family: 'Bebas Neue', sans-serif; font-size: 18px; padding: 10px 15px; border: none; border-radius: 6px; cursor: pointer; width: 100%; margin-top: 10px;">➕
-                        Adicionar à Loja</button>
-                </div>
-                <div id="recompensas-list"></div>
-                <div
-                    style="text-align: center; border-top: 1px solid var(--border); padding-top: 20px; margin-top: 20px;">
-                    <button class="btn-clear" onclick="document.getElementById('loja-modal').style.display = 'none'"
-                        style="font-size: 16px;">Fechar Painel</button>
-                </div>
-            </div>
-        </div>
-
-        <div id="new-client-modal" class="modal" style="display: none; z-index: 10001;">
-            <div class="modal-content" style="max-width: 400px;">
-                <h3>➕ Novo Cliente</h3>
+    <div id="edit-modal" class="modal">
+        <div class="modal-content">
+            <h3>Editar Perfil do Usuário</h3>
+            <form id="edit-user-form">
+                <input type="hidden" id="edit-uid">
                 <div class="form-group">
                     <label>Nome Completo</label>
-                    <input type="text" id="new-client-name" placeholder="Ex: João da Silva">
+                    <input type="text" id="edit-name" required>
                 </div>
                 <div class="form-group">
-                    <label>E-mail (Login)</label>
-                    <input type="email" id="new-client-email" placeholder="joao@email.com">
+                    <label>Telefone / WhatsApp</label>
+                    <input type="text" id="edit-phone" required>
                 </div>
                 <div class="form-group">
-                    <label>Senha Provisória</label>
-                    <input type="text" id="new-client-password" placeholder="Mínimo 6 caracteres">
+                    <label>Nível de Acesso</label>
+                    <select id="edit-role">
+                        <option value="user">Usuário</option>
+                        <option value="cliente">Cliente da Loja (VIP)</option>
+                        <option value="gerente">Gerente</option>
+                        <option value="admin">Administrador</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>ID da Loja</label>
+                    <input type="text" id="edit-lojaId" placeholder="Ex: garagem_do_pedro">
                 </div>
                 <div class="modal-actions">
-                    <button id="btn-save-new-client" class="btn-save" style="width: 100%; margin-bottom: 10px;">Criar
-                        Conta do Cliente</button>
-                    <button class="btn-cancel"
-                        onclick="document.getElementById('new-client-modal').style.display='none'"
-                        style="width: 100%;">Cancelar</button>
+                    <button type="button" class="btn-cancel" id="btn-close-modal">Cancelar</button>
+                    <button type="submit" class="btn-save">Salvar Alterações</button>
                 </div>
+            </form>
+        </div>
+    </div>
+
+    <div id="cars-modal" class="custom-modal-overlay" style="display: none; z-index: 10000;">
+        <div class="custom-modal-box" style="max-width: 600px; text-align: left;">
+            <h2
+                style="font-family: 'Bebas Neue', sans-serif; color: var(--yellow); font-size: 28px; margin-bottom: 5px;">
+                🚗 Adicionar na Garagem</h2>
+            <p style="color: var(--muted); font-size: 14px; margin-bottom: 20px;">Adicionando miniaturas para: <b
+                    id="manage-user-name" style="color: #fff;"></b></p>
+            <div style="margin-bottom: 20px;">
+                <label
+                    style="color: var(--muted); font-size: 13px; text-transform: uppercase; font-family: 'Barlow Condensed', sans-serif;">1.
+                    Buscar Carrinho na Base (RAW):</label>
+                <input type="text" id="car-search-input" list="car-datalist"
+                    placeholder="Digite ano, nome ou série para buscar..."
+                    style="width: 100%; padding: 12px; background: var(--surface2); border: 1px solid var(--border); color: #fff; border-radius: 6px; margin-top: 5px; font-family: 'Barlow', sans-serif; outline: none;">
+                <datalist id="car-datalist"></datalist>
+            </div>
+            <div style="display: flex; gap: 15px; align-items: flex-end; margin-bottom: 30px;">
+                <div style="flex: 1;">
+                    <label
+                        style="color: var(--muted); font-size: 13px; text-transform: uppercase; font-family: 'Barlow Condensed', sans-serif;">2.
+                        Quantidade Final na Coleção:</label>
+                    <input type="number" id="car-qty-input" min="0" value="1"
+                        style="width: 100%; padding: 12px; background: var(--surface2); border: 1px solid var(--border); color: var(--yellow); font-weight: bold; font-size: 18px; border-radius: 6px; margin-top: 5px; text-align: center; outline: none;">
+                </div>
+                <button id="btn-save-car"
+                    style="background: var(--green); color: #000; font-family: 'Bebas Neue', sans-serif; font-size: 20px; padding: 12px 24px; border: none; border-radius: 6px; cursor: pointer; transition: 0.2s;">➕
+                    Adicionar</button>
+            </div>
+            <div style="text-align: center; border-top: 1px solid var(--border); padding-top: 20px;">
+                <button class="btn-clear" onclick="document.getElementById('cars-modal').style.display = 'none'"
+                    style="font-size: 16px;">Fechar Painel</button>
             </div>
         </div>
+    </div>
 
-        <script type="module" src="assets/js/admin.js?v=7"></script>
+    <div id="rifa-modal" class="custom-modal-overlay" style="display: none; z-index: 10001;">
+        <div class="custom-modal-box" style="max-width: 450px; text-align: left;">
+            <h2
+                style="font-family: 'Bebas Neue', sans-serif; color: var(--yellow); font-size: 28px; margin-bottom: 5px;">
+                🎟️ Lançar Pontos de Rifa</h2>
+            <p style="color: var(--muted); font-size: 14px; margin-bottom: 20px;">Creditando pontos para: <b
+                    id="rifa-user-name" style="color: #fff;"></b></p>
+            <div class="form-group" style="margin-bottom: 20px;">
+                <label
+                    style="color: var(--muted); font-size: 13px; text-transform: uppercase; font-family: 'Barlow Condensed', sans-serif; display:block; margin-bottom: 6px;">Quantidade
+                    de Números Comprados:</label>
+                <input type="number" id="rifa-qty-input" min="1" value="1"
+                    style="width: 100%; padding: 12px; background: var(--surface2); border: 1px solid var(--border); color: #fff; border-radius: 6px; outline: none; font-family: 'Barlow', sans-serif; font-size: 16px;">
+            </div>
+            <div class="form-group" style="margin-bottom: 25px;">
+                <label
+                    style="color: var(--muted); font-size: 13px; text-transform: uppercase; font-family: 'Barlow Condensed', sans-serif; display:block; margin-bottom: 6px;">Pontos
+                    por cada Número:</label>
+                <input type="number" id="rifa-points-per-num" min="1" value="50"
+                    style="width: 100%; padding: 12px; background: var(--surface2); border: 1px solid var(--border); color: var(--yellow); font-weight: bold; border-radius: 6px; outline: none; font-family: 'Barlow', sans-serif; font-size: 16px;">
+            </div>
+            <button id="btn-save-rifa"
+                style="width: 100%; background: var(--green); color: #000; font-family: 'Bebas Neue', sans-serif; font-size: 20px; padding: 12px; border: none; border-radius: 6px; cursor: pointer; font-weight: bold;">🪙
+                Creditar Pontos</button>
+            <div style="text-align: center; border-top: 1px solid var(--border); padding-top: 20px; margin-top: 20px;">
+                <button class="btn-clear" onclick="document.getElementById('rifa-modal').style.display = 'none'"
+                    style="font-size: 16px;">Cancelar</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="loja-modal" class="custom-modal-overlay" style="display: none; z-index: 10001;">
+        <div class="custom-modal-box" style="max-width: 600px; text-align: left;">
+            <h2
+                style="font-family: 'Bebas Neue', sans-serif; color: var(--yellow); font-size: 28px; margin-bottom: 5px;">
+                🎁 Gerenciar Prêmios</h2>
+            <p style="color: var(--muted); font-size: 14px; margin-bottom: 20px;">Loja: <b id="loja-alvo-nome"
+                    style="color: #fff;"></b></p>
+            <div style="background: var(--surface2); padding: 15px; border-radius: 8px; margin-bottom: 20px;">
+                <div class="form-group">
+                    <label style="color: var(--muted); font-size: 13px;">Ícone (Emoji)</label>
+                    <input type="text" id="rew-icone" placeholder="Ex: 🧢"
+                        style="width: 100%; padding: 10px; background: #0f172a; border: 1px solid #475569; color: white; border-radius: 4px; box-sizing: border-box;">
+                </div>
+                <div class="form-group">
+                    <label style="color: var(--muted); font-size: 13px;">Título do Prêmio</label>
+                    <input type="text" id="rew-titulo" placeholder="Ex: Boné Oficial"
+                        style="width: 100%; padding: 10px; background: #0f172a; border: 1px solid #475569; color: white; border-radius: 4px; box-sizing: border-box;">
+                </div>
+                <div class="form-group">
+                    <label style="color: var(--muted); font-size: 13px;">Descrição</label>
+                    <input type="text" id="rew-desc" placeholder="Ex: Boné preto com logo"
+                        style="width: 100%; padding: 10px; background: #0f172a; border: 1px solid #475569; color: white; border-radius: 4px; box-sizing: border-box;">
+                </div>
+                <div class="form-group">
+                    <label style="color: var(--muted); font-size: 13px;">Custo (RPMs)</label>
+                    <input type="number" id="rew-custo" placeholder="Ex: 500"
+                        style="width: 100%; padding: 10px; background: #0f172a; border: 1px solid #475569; color: white; border-radius: 4px; box-sizing: border-box;">
+                </div>
+                <button id="btn-add-rew"
+                    style="background: var(--green); color: black; font-family: 'Bebas Neue', sans-serif; font-size: 18px; padding: 10px 15px; border: none; border-radius: 6px; cursor: pointer; width: 100%; margin-top: 10px;">➕
+                    Adicionar à Loja</button>
+            </div>
+            <div id="recompensas-list"></div>
+            <div style="text-align: center; border-top: 1px solid var(--border); padding-top: 20px; margin-top: 20px;">
+                <button class="btn-clear" onclick="document.getElementById('loja-modal').style.display = 'none'"
+                    style="font-size: 16px;">Fechar Painel</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="new-client-modal" class="modal" style="display: none; z-index: 10001;">
+        <div class="modal-content" style="max-width: 400px;">
+            <h3>➕ Novo Cliente</h3>
+            <div class="form-group">
+                <label>Nome Completo</label>
+                <input type="text" id="new-client-name" placeholder="Ex: João da Silva">
+            </div>
+            <div class="form-group">
+                <label>E-mail (Login)</label>
+                <input type="email" id="new-client-email" placeholder="joao@email.com">
+            </div>
+            <div class="form-group">
+                <label>Senha Provisória</label>
+                <input type="text" id="new-client-password" placeholder="Mínimo 6 caracteres">
+            </div>
+            <div class="modal-actions">
+                <button id="btn-save-new-client" class="btn-save" style="width: 100%; margin-bottom: 10px;">Criar
+                    Conta do Cliente</button>
+                <button class="btn-cancel" onclick="document.getElementById('new-client-modal').style.display='none'"
+                    style="width: 100%;">Cancelar</button>
+            </div>
+        </div>
+    </div>
+
+    <script type="module" src="assets/js/admin.js?v=7"></script>
 </body>
 
 </html>

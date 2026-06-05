@@ -1,0 +1,26 @@
+{
+  "name": "hotwheels",
+  "version": "1.0.0",
+  "description": "Uma aplicação web (Single Page Application - SPA) desenvolvida para colecionadores de Hot Wheels gerenciarem, visualizarem e organizarem os seus acervos de forma rápida, intuitiva e totalmente sincronizada na nuvem.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gabrielribeirosoares/garagem-hw.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/gabrielribeirosoares/garagem-hw/issues"
+  },
+  "homepage": "https://github.com/gabrielribeirosoares/garagem-hw#readme",
+  "dependencies": {
+    "cors": "^2.8.6",
+    "express": "^5.2.1",
+    "mercadopago": "^3.0.0"
+  }
+}
