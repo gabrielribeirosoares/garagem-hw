@@ -1529,3 +1529,230 @@ td {
 .car-card:hover {
   border-color: #c084fc;
 }
+
+.holographic, .holographic-kaido {
+  position: relative;
+  overflow: hidden;
+}
+
+.holographic {
+  box-shadow: 0 0 12px rgba(250, 204, 21, 0.5);
+  border-color: #facc15 !important;
+}
+
+.holographic-kaido {
+  box-shadow: 0 0 12px rgba(192, 132, 252, 0.5);
+  border-color: #c084fc !important;
+}
+
+.holographic::after, .holographic-kaido::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(to right, rgba(255,255,255,0) 0%, rgba(255,255,255,0.4) 50%, rgba(255,255,255,0) 100%);
+  transform: skewX(-20deg);
+  animation: reflexo 3.5s infinite;
+  pointer-events: none;
+  z-index: 10;
+}
+
+@keyframes reflexo {
+  0% { left: -100%; }
+  15% { left: 200%; }
+  100% { left: 200%; }
+}
+
+.skeleton-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 0;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  animation: pulse 1.5s infinite ease-in-out;
+}
+
+.skeleton-img {
+  width: 100%;
+  height: 180px;
+  background: #1e293b;
+}
+
+.skeleton-info {
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.skeleton-line {
+  height: 14px;
+  background: #1e293b;
+  border-radius: 4px;
+}
+
+.skeleton-line.title {
+  width: 80%;
+  height: 22px;
+}
+
+.skeleton-line.short {
+  width: 50%;
+}
+
+.skeleton-line.button {
+  width: 100%;
+  height: 36px;
+  margin-top: 8px;
+  border-radius: 6px;
+}
+
+@keyframes pulse {
+  0% { opacity: 0.5; }
+  50% { opacity: 1; }
+  100% { opacity: 0.5; }
+}
+
+#table-body,
+#missions-view,
+#rewards-view,
+#kaido-view,
+#stats-view,
+#sorteios-view,
+#encomendas-view {
+  animation: fadeInContainer 0.3s ease-out forwards;
+}
+
+@keyframes fadeInContainer {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.car-card {
+  opacity: 0;
+  animation: cardEnter 0.8s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
+}
+
+@keyframes cardEnter {
+  from {
+    opacity: 0;
+    transform: scale(0.92);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.lb-card {
+  display: flex;
+  flex-direction: row;
+  background: #1e293b;
+  border: 2px solid #3b82f6;
+  border-radius: 16px;
+  overflow: hidden;
+  max-width: 900px;
+  width: 95%;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.9);
+  position: relative;
+}
+
+@media (max-width: 768px) {
+  .lb-card { flex-direction: column; }
+}
+
+.lb-img-area {
+  flex: 1.5;
+  background: #0f172a;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 30px;
+  overflow: hidden;
+}
+
+.lb-img-area img {
+  width: 100%;
+  height: 100%;
+  max-height: 400px;
+  object-fit: contain;
+  transition: transform 0.3s ease;
+  cursor: zoom-in;
+}
+
+.lb-img-area img:hover {
+  transform: scale(1.6);
+}
+
+.lb-info {
+  flex: 1;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background: #1e293b;
+}
+
+.lb-nav {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 40%;
+  background: rgba(15, 23, 42, 0.95);
+  padding: 12px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top-left-radius: 16px;
+}
+
+@media (max-width: 768px) {
+  .lb-nav { width: 100%; position: relative; border-radius: 0; }
+}
+
+.lb-details-title {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 32px;
+  color: #fff;
+  margin-bottom: 20px;
+  line-height: 1.1;
+}
+
+.lb-stat-row {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid #334155;
+  padding: 12px 0;
+  font-family: 'Barlow', sans-serif;
+  font-size: 14px;
+}
+
+.lb-stat-label {
+  color: #94a3b8;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.lb-stat-value {
+  color: #fff;
+  font-weight: 500;
+  text-align: right;
+}
+
+.lb-status-badge {
+  margin-top: 25px;
+  padding: 10px;
+  border-radius: 6px;
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 22px;
+  text-align: center;
+  margin-bottom: 40px;
+}

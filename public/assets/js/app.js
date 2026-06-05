@@ -472,8 +472,9 @@ function render() {
     const dot = getColor(r.color);
     const has = isOwned(r);
 
+    const isSth = r.series && r.series.toLowerCase().includes('super');
     const card = document.createElement('div');
-    card.className = `car-card ${has ? 'owned-card' : ''}`;
+    card.className = `car-card ${has ? 'owned-card' : ''} ${isSth ? 'holographic' : ''}`;
 
     const imgCell = r.image
       ? `<img src="${r.image}" loading="lazy">`
@@ -597,11 +598,76 @@ function updateCounts() {
   if (ownCountEl) ownCountEl.textContent = owned;
   if (misCountEl) misCountEl.textContent = missing;
   if (dupCountEl) dupCountEl.textContent = dups;
+
+  let totalGlobal = 0;
+  Object.values(userCollection).forEach(q => { if (q > 0) totalGlobal += q; });
+  Object.values(userKaidoCollection).forEach(q => { if (q > 0) totalGlobal += q; });
+
+  let nivelText = 'Piloto Novato 🥉';
+  let nivelColor = '#cd7f32';
+  let rgbColor = '205, 127, 50';
+
+  if (totalGlobal >= 300) {
+    nivelText = 'Magnata Diecast 💎';
+    nivelColor = '#06b6d4';
+    rgbColor = '6, 182, 212';
+  } else if (totalGlobal >= 150) {
+    nivelText = 'Garagem de Elite 🥇';
+    nivelColor = '#fbbf24';
+    rgbColor = '251, 191, 36';
+  } else if (totalGlobal >= 50) {
+    nivelText = 'Colecionador Pro 🥈';
+    nivelColor = '#94a3b8';
+    rgbColor = '148, 163, 184';
+  }
+
+  let badgeEl = document.getElementById('user-level-badge');
+  if (!badgeEl) {
+    badgeEl = document.createElement('div');
+    badgeEl.id = 'user-level-badge';
+    badgeEl.style.cssText = 'display: none; align-items: center; gap: 4px; padding: 6px 10px; border-radius: 8px; font-family: "Bebas Neue", sans-serif; font-size: 18px; white-space: nowrap; margin-right: 10px;';
+
+    const pointsContainer = document.getElementById('points-container');
+    if (pointsContainer && pointsContainer.parentNode) {
+      pointsContainer.parentNode.insertBefore(badgeEl, pointsContainer);
+    }
+  }
+
+  badgeEl.style.background = `rgba(${rgbColor}, 0.1)`;
+  badgeEl.style.border = `1px solid rgba(${rgbColor}, 0.3)`;
+  badgeEl.style.color = nivelColor;
+  badgeEl.textContent = nivelText;
+
+  if (sessionUid && !isPublicView) {
+    badgeEl.style.display = 'flex';
+  }
 }
+
+window.renderSkeleton = function (containerId, count = 12) {
+  const container = document.getElementById(containerId);
+  if (!container) return;
+
+  let html = '';
+  for (let i = 0; i < count; i++) {
+    html += `
+      <div class="skeleton-card">
+        <div class="skeleton-img"></div>
+        <div class="skeleton-info">
+          <div class="skeleton-line title"></div>
+          <div class="skeleton-line"></div>
+          <div class="skeleton-line short"></div>
+          <div class="skeleton-line button"></div>
+        </div>
+      </div>
+    `;
+  }
+  container.innerHTML = html;
+};
 
 onAuthStateChanged(auth, async (user) => {
   if (user) {
     sessionUid = user.uid;
+    renderSkeleton('table-body');
 
     const pendingInvite = localStorage.getItem('pendingInvite');
     if (pendingInvite) {
@@ -698,6 +764,7 @@ onAuthStateChanged(auth, async (user) => {
   } else {
 
     if (isPublicView) {
+      renderSkeleton('table-body');
       console.log("Visitante acessando garagem pública.");
       if (typeof window.loadCollection === 'function') window.loadCollection();
     } else {
@@ -944,15 +1011,55 @@ window.saveKaidoData = async function (codigo, qty) {
 
 function openLb(index) {
   lbIndex = index;
-
-
   const listaAtual = window.currentFilteredData || PAGE_DATA;
   const r = listaAtual[lbIndex];
 
   if (!r) return;
-  document.getElementById('lb-img').src = r.image;
-  document.getElementById('lb-title').textContent = r.name;
-  document.getElementById('lb-meta').textContent = `${r.year} | ${r.series} | ${r.color}`;
+
+  const qty = (typeof userCollection !== 'undefined' ? userCollection[r.id] : 0) || 0;
+  const kaidoQty = (typeof userKaidoCollection !== 'undefined' ? userKaidoCollection[r.codigo] : 0) || 0;
+  const hasItem = qty > 0 || kaidoQty > 0;
+
+  const badgeColor = hasItem ? '#16a34a' : '#ef4444';
+  const badgeText = hasItem ? 'Na Garagem' : 'Faltando';
+  const badgeBg = hasItem ? 'rgba(22, 163, 74, 0.15)' : 'rgba(239, 68, 68, 0.15)';
+
+  const isKaido = !!r.codigo;
+  const nomeCarro = r.name || r.modelo;
+  const imgCarro = r.image || r.caminho_imagem;
+  const seriesOrBrand = isKaido ? (r.fabricante || 'Kaido House') : (r.series || 'Sem Série');
+  const partOrCode = isKaido ? r.codigo : (r.part || 'N/A');
+  const carYear = isKaido ? (r.ano || 'N/A') : r.year;
+  const colorVal = isKaido ? (r.cor || 'N/A') : (r.color || 'N/A');
+
+  document.getElementById('lb-img').src = imgCarro;
+
+  const lbInfo = document.querySelector('.lb-info');
+  if (lbInfo) {
+    lbInfo.innerHTML = `
+      <div class="lb-details-title">${nomeCarro}</div>
+      <div class="lb-stat-row">
+        <span class="lb-stat-label">Série / Marca</span>
+        <span class="lb-stat-value">${seriesOrBrand}</span>
+      </div>
+      <div class="lb-stat-row">
+        <span class="lb-stat-label">Ano</span>
+        <span class="lb-stat-value">${carYear}</span>
+      </div>
+      <div class="lb-stat-row">
+        <span class="lb-stat-label">Cor</span>
+        <span class="lb-stat-value">${colorVal}</span>
+      </div>
+      <div class="lb-stat-row">
+        <span class="lb-stat-label">Lote / SKU</span>
+        <span class="lb-stat-value">${partOrCode}</span>
+      </div>
+      <div class="lb-status-badge" style="color: ${badgeColor}; background: ${badgeBg}; border: 1px solid ${badgeColor};">
+        ${badgeText}
+      </div>
+    `;
+  }
+
   document.getElementById('lb-counter').textContent = `${lbIndex + 1} de ${listaAtual.length}`;
   document.getElementById('lightbox').style.display = 'flex';
 }
@@ -1353,6 +1460,16 @@ function showModal(type, options) {
     const whatsappNumber = window.lojaWhatsapp;
     const msgWpp = encodeURIComponent(`Fala mestre! Acabei de resgatar o prêmio "${options.title}" lá no site. Meu cupom é: ${options.code}`);
 
+    if (typeof confetti === 'function') {
+      confetti({
+        particleCount: 150,
+        spread: 80,
+        origin: { y: 0.6 },
+        colors: ['#facc15', '#3b82f6', '#10b981', '#a855f7'],
+        zIndex: 10005
+      });
+    }
+    
     innerHTML = `
       <div class="custom-modal-box">
         <div class="custom-modal-icon">🎉</div>
@@ -1732,7 +1849,7 @@ window.renderKaidoGrid = function () {
     const has = qty > 0;
 
     const card = document.createElement('div');
-    card.className = `car-card ${has ? 'owned-card' : ''}`;
+    card.className = `car-card ${has ? 'owned-card' : ''} holographic-kaido`;
 
     let optionsHTML = '';
     for (let i = 0; i <= 50; i++) {
@@ -1851,12 +1968,26 @@ window.renderStats = function () {
   if (!container) return;
 
   let totalHW = 0, totalKaido = 0, totalWishlist = 0;
+  let anosCount = {};
 
-  Object.values(userCollection).forEach(qty => { if (qty > 0) totalHW += qty; });
+  Object.keys(userCollection).forEach(carId => {
+    let qty = userCollection[carId];
+    if (qty > 0) {
+      totalHW += qty;
+      let car = RAW.find(r => r.id === carId);
+      if (car && car.year) {
+        anosCount[car.year] = (anosCount[car.year] || 0) + qty;
+      }
+    }
+  });
+
   Object.values(userKaidoCollection).forEach(qty => { if (qty > 0) totalKaido += qty; });
   Object.values(userWishlist).forEach(wished => { if (wished) totalWishlist++; });
 
   const pctHW = Math.round((Object.keys(userCollection).filter(k => userCollection[k] > 0).length / PAGE_DATA.length) * 100) || 0;
+
+  let anosOrdenados = Object.keys(anosCount).sort((a, b) => anosCount[b] - anosCount[a]).slice(0, 5);
+  let valoresAnos = anosOrdenados.map(ano => anosCount[ano]);
 
   container.innerHTML = `
     <div style="margin-bottom: 30px;">
@@ -1882,7 +2013,7 @@ window.renderStats = function () {
         </div>
     </div>
 
-    <div style="background: var(--surface); padding: 24px; border-radius: 12px; border: 1px solid var(--border);">
+    <div style="background: var(--surface); padding: 24px; border-radius: 12px; border: 1px solid var(--border); margin-bottom: 30px;">
         <h3 style="color: #fff; margin-top: 0; margin-bottom: 15px; font-family: 'Bebas Neue'; font-size: 24px;">Progresso da Coleção (HW)</h3>
         <div style="display: flex; justify-content: space-between; margin-bottom: 8px; font-size: 14px; color: #cbd5e1; font-weight: bold;">
             <span>Completude do Catálogo</span>
@@ -1892,11 +2023,79 @@ window.renderStats = function () {
             <div style="width: ${pctHW}%; background: linear-gradient(90deg, #facc15, #f59e0b); height: 100%; border-radius: 10px;"></div>
         </div>
     </div>
+
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px;">
+        <div style="background: var(--surface); padding: 20px; border-radius: 12px; border: 1px solid var(--border); display: flex; flex-direction: column; align-items: center;">
+            <h3 style="color: #cbd5e1; margin-top: 0; margin-bottom: 20px; font-size: 16px; font-family: 'Barlow Condensed'; text-transform: uppercase;">Proporção da Coleção</h3>
+            <div style="position: relative; width: 100%; max-width: 250px; aspect-ratio: 1;">
+                <canvas id="chartMarcas"></canvas>
+            </div>
+        </div>
+        
+        <div style="background: var(--surface); padding: 20px; border-radius: 12px; border: 1px solid var(--border); display: flex; flex-direction: column; align-items: center;">
+            <h3 style="color: #cbd5e1; margin-top: 0; margin-bottom: 20px; font-size: 16px; font-family: 'Barlow Condensed'; text-transform: uppercase;">Top 5 Anos (HW)</h3>
+            <div style="position: relative; width: 100%; height: 250px;">
+                <canvas id="chartAnos"></canvas>
+            </div>
+        </div>
+    </div>
   `;
+
+  setTimeout(() => {
+    Chart.defaults.color = '#94a3b8';
+    Chart.defaults.font.family = "'Barlow', sans-serif";
+
+    new Chart(document.getElementById('chartMarcas'), {
+      type: 'doughnut',
+      data: {
+        labels: ['Hot Wheels', 'Kaido House'],
+        datasets: [{
+          data: [totalHW, totalKaido],
+          backgroundColor: ['#facc15', '#c084fc'],
+          borderColor: '#1e293b',
+          borderWidth: 4,
+          hoverOffset: 10
+        }]
+      },
+      options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        plugins: {
+          legend: { position: 'bottom' }
+        }
+      }
+    });
+
+    new Chart(document.getElementById('chartAnos'), {
+      type: 'bar',
+      data: {
+        labels: anosOrdenados.length > 0 ? anosOrdenados : ['N/A'],
+        datasets: [{
+          label: 'Qtd de Miniaturas',
+          data: valoresAnos.length > 0 ? valoresAnos : [0],
+          backgroundColor: 'rgba(56, 189, 248, 0.8)',
+          borderColor: '#38bdf8',
+          borderWidth: 1,
+          borderRadius: 6
+        }]
+      },
+      options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        plugins: { legend: { display: false } },
+        scales: {
+          y: {
+            beginAtZero: true,
+            grid: { color: 'rgba(255, 255, 255, 0.05)' }
+          },
+          x: {
+            grid: { display: false }
+          }
+        }
+      }
+    });
+  }, 100);
 };
-
-
-
 
 window.renderSorteios = function () {
   const view = document.getElementById('sorteios-view');
