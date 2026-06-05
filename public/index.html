@@ -18,7 +18,7 @@
   <link rel="manifest" href="manifest.json">
   <meta name="theme-color" content="#f59e0b">
   <link rel="apple-touch-icon" href="assets/img/icon-192.png">
-    <link rel="manifest" href="manifest.json">
+  <link rel="manifest" href="manifest.json">
   <meta name="theme-color" content="#f59e0b">
   <link rel="apple-touch-icon" href="assets/img/icon-192.png">
   <meta name="apple-mobile-web-app-capable" content="yes">
@@ -191,24 +191,25 @@
     </div>
   </div>
 
-<script type="module" src="assets/js/firebase-config.js"></script>
+  <script type="module" src="assets/js/firebase-config.js"></script>
   <script type="module" src="assets/js/auth.js?v=6"></script>
   <script>
-    // DESTRUIDOR DE CACHE PARA O SAFARI
+
     if ('serviceWorker' in navigator) {
-      caches.keys().then(function(names) {
+      caches.keys().then(function (names) {
         for (let name of names) caches.delete(name);
       });
-      navigator.serviceWorker.getRegistrations().then(function(registrations) {
-        for(let registration of registrations) {
+      navigator.serviceWorker.getRegistrations().then(function (registrations) {
+        for (let registration of registrations) {
           registration.unregister();
         }
       });
-      // Registra o Service Worker limpo em seguida
+
       window.addEventListener('load', () => {
         navigator.serviceWorker.register('/sw.js');
       });
     }
   </script>
 </body>
+
 </html>

@@ -90,7 +90,7 @@ async function loadUsersList() {
       const minhaLojaFiltro = window.minhaLojaId.toLowerCase();
 
       if (myRole === 'gerente') {
-        // Mostra o usuário se ele tiver a loja do gerente na lista E não for um admin
+        
         if (userData.role === 'admin' || userData.role === 'gerente' || !clientLojas.includes(minhaLojaFiltro)) {
           return;
         }
@@ -390,14 +390,14 @@ if (btnSaveRifa) {
       const currentData = snap.exists() ? snap.data() : { history: [] };
       const history = currentData.history || [];
 
-      // Puxa o mapa de pontos. Se o cliente for antigo, migra os pontos velhos para a loja atual.
+      
       let pointsMap = currentData.pointsMap || {};
       if (typeof currentData.points === 'number' && Object.keys(pointsMap).length === 0) {
         pointsMap[window.minhaLojaId || 'default'] = currentData.points;
       }
 
       const ganhou = qty * pts;
-      // Adiciona os pontos EXCLUSIVAMENTE na loja do Admin que está logado
+      
       pointsMap[window.minhaLojaId || 'default'] = (pointsMap[window.minhaLojaId || 'default'] || 0) + ganhou;
 
       history.unshift({
@@ -407,7 +407,7 @@ if (btnSaveRifa) {
         type: "earning"
       });
 
-      // Salva no banco o pointsMap atualizado
+      
       await setDoc(uRef, { pointsMap: pointsMap, history: history }, { merge: true });
       alert(`+${ganhou} RPMs creditados na conta! (Loja: ${window.minhaLojaId})`);
 
@@ -474,7 +474,7 @@ if (btnSaveCar) {
       const dRef = doc(db, 'collections', currentTargetUid);
       const snap = await getDoc(dRef);
 
-      // Nova estrutura: Área isolada para a Garagem da Loja
+      
       let garagemLoja = snap.exists() ? snap.data().garagemLoja || [] : [];
       let pointsMap = snap.exists() ? snap.data().pointsMap || {} : {};
       let history = snap.exists() ? snap.data().history || [] : [];
@@ -483,7 +483,7 @@ if (btnSaveCar) {
       const uSnap = await getDoc(uRef);
       const userRole = uSnap.exists() ? uSnap.data().role : 'user';
 
-      // Verifica se é cliente e bonifica com RPMs
+      
       if (userRole === 'cliente' && qtyInput > 0) {
         const ptsGanhos = qtyInput * PONTOS_POR_CARRO;
 
@@ -491,7 +491,7 @@ if (btnSaveCar) {
           pointsMap[window.minhaLojaId || 'default'] = snap.data().points;
         }
 
-        // Adiciona os pontos na carteira da sua loja
+        
         pointsMap[window.minhaLojaId || 'default'] = (pointsMap[window.minhaLojaId || 'default'] || 0) + ptsGanhos;
 
         history.unshift({
@@ -502,7 +502,7 @@ if (btnSaveCar) {
         });
       }
 
-      // Adiciona o carrinho na fila logística com ID único do pedido
+      
       garagemLoja.push({
         pedidoId: 'ped_' + Date.now(),
         carId: carId,
@@ -512,7 +512,7 @@ if (btnSaveCar) {
         data: new Date().toLocaleDateString('pt-BR')
       });
 
-      // Salva no Firebase (não toca na coleção pessoal dele!)
+      
       await setDoc(dRef, { garagemLoja: garagemLoja, pointsMap: pointsMap, history: history }, { merge: true });
       
       alert(`✅ Sucesso! Carro retido na Garagem da Loja e pontos creditados.`);
@@ -655,7 +655,7 @@ if (btnNewClient && modalNewClient) {
   });
 }
 
-// Salva o usuário no Firebase
+
 if (btnSaveNewClient) {
   btnSaveNewClient.addEventListener('click', async () => {
     const name = document.getElementById('new-client-name').value.trim();
@@ -672,28 +672,28 @@ if (btnSaveNewClient) {
     btnSaveNewClient.disabled = true;
 
     try {
-      // Cria a conta do usuário no Auth secundário
+      
       const userCredential = await createUserWithEmailAndPassword(secondaryAuth, email, pass);
       const newUid = userCredential.user.uid;
 
       await signOut(secondaryAuth);
 
-     // Descobre qual é a loja do Admin logado e pega APENAS a loja matriz (a primeira)
+     
       const myDoc = await getDoc(doc(db, 'users', auth.currentUser.uid));
       const myLojaIdRaw = myDoc.exists() ? (myDoc.data().lojaId || '') : '';
       const targetLojaId = myLojaIdRaw.split(',')[0].trim();
 
-      // Salva o perfil do Cliente atrelado à loja do Admin
+      
       await setDoc(doc(db, 'users', newUid), {
         name: name,
         email: email,
-        phone: '', // Pode ser editado depois pelo Admin
+        phone: '', 
         role: 'cliente',
         lojaId: targetLojaId,
         createdAt: new Date().toLocaleDateString('pt-BR')
       });
 
-      // Cria a Garagem vazia para o Cliente
+      
       await setDoc(doc(db, 'collections', newUid), {
         items: {},
         points: 0,
@@ -705,14 +705,14 @@ if (btnSaveNewClient) {
         }]
       });
 
-      // Atualiza estatísticas globais
+      
       const configRef = doc(db, 'config', 'app');
       await updateDoc(configRef, { cadastrados: increment(1) }).catch(() => { });
 
       modalNewClient.style.display = 'none';
       alert('✅ Cliente VIP cadastrado e vinculado à sua loja com sucesso!');
 
-      // Recarrega a tabela para exibir o cliente recém criado
+      
       loadUsersList();
 
     } catch (error) {
@@ -798,9 +798,9 @@ if (createForm) {
   });
 }
 
-// ===================================================================
-// SISTEMA DE PREENCHIMENTO RÁPIDO DE LOTES
-// ===================================================================
+
+
+
 
 const btnPendingLots = document.getElementById('btn-pending-lots');
 const btnBackDashboard = document.getElementById('btn-back-dashboard');
@@ -893,13 +893,13 @@ window.gerarCodigoLotes = function () {
 };
 
 
-// ===================================================================
-// ABRIR OS PRÊMIOS DA PRÓPRIA LOJA (GLOBAL PARA ADMIN E GERENTES)
-// ===================================================================
+
+
+
 const btnMyStoreRewards = document.getElementById('btn-my-store-rewards');
 if (btnMyStoreRewards) {
   btnMyStoreRewards.addEventListener('click', async () => {
-    // Puxa o ID da loja da pessoa que está logada
+    
     lojaIdParaEditar = window.minhaLojaId || 'default';
 
     const lojaNomeEl = document.getElementById('loja-alvo-nome');
@@ -908,20 +908,20 @@ if (btnMyStoreRewards) {
     const lojaModal = document.getElementById('loja-modal');
     if (lojaModal) lojaModal.style.display = 'flex';
 
-    // Renderiza a lista usando a função que já existe no seu código
+    
     await renderAdminRewards();
   });
 }
 
-// ===================================================================
-// GERADOR DE LINK DE CONVITE
-// ===================================================================
+
+
+
 const btnCopyInviteAction = document.getElementById('btn-copy-invite');
 if (btnCopyInviteAction) {
   btnCopyInviteAction.addEventListener('click', () => {
     const minhaLoja = window.minhaLojaId || 'default';
 
-    // Monta o link apontando direto para o app.html com a variável da loja
+    
     const baseUrl = window.location.href.split('admin.html')[0];
     const inviteLink = `${baseUrl}app.html?loja=${encodeURIComponent(minhaLoja)}`;
 
@@ -933,9 +933,9 @@ if (btnCopyInviteAction) {
   });
 }
 
-// ===================================================================
-// SISTEMA DE GESTÃO LOGÍSTICA (GARAGENS, PAGAMENTOS E ENVIOS)
-// ===================================================================
+
+
+
 const btnLogistica = document.getElementById('btn-logistica');
 const logisticaView = document.getElementById('logistica-view');
 const mainDashboardRef = document.getElementById('main-dashboard-view');
@@ -951,7 +951,7 @@ if (btnLogistica) {
     });
 }
 
-// Garante que o botão de voltar também esconda a logística
+
 if (btnBackDashboardRef) {
     btnBackDashboardRef.addEventListener('click', () => {
         if (logisticaView) logisticaView.style.display = 'none';
@@ -992,10 +992,10 @@ window.renderLogistica = async function() {
             const colData = colSnap.data();
             const garagemLoja = colData.garagemLoja || [];
             
-            // Filtra para pegar apenas os carros retidos na SUA loja
+            
             const meusPedidos = garagemLoja.filter(p => p.lojaId === (window.minhaLojaId || 'default'));
 
-            if (meusPedidos.length === 0) continue; // Pula o cliente se a garagem da loja estiver vazia
+            if (meusPedidos.length === 0) continue; 
 
             html += `
             <div style="background: var(--surface); border: 1px solid var(--border); border-radius: 8px; margin-bottom: 25px; padding: 20px; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);">
@@ -1015,7 +1015,7 @@ window.renderLogistica = async function() {
                     <tbody>
             `;
 
-            // Percorre os pedidos feitos e salvos na garagem
+            
             meusPedidos.forEach(pedido => {
                 let carName = pedido.carId;
                 if (typeof RAW !== 'undefined') {
@@ -1078,13 +1078,13 @@ window.updateItemStatus = async function(uid, pedidoId, newStatus) {
         if (snap.exists()) {
             let garagemLoja = snap.data().garagemLoja || [];
             
-            // Procura o pedido exato pelo ID e atualiza o status
+            
             let index = garagemLoja.findIndex(p => p.pedidoId === pedidoId);
             if (index !== -1) {
                 garagemLoja[index].status = newStatus;
                 await updateDoc(docRef, { garagemLoja: garagemLoja });
                 
-                // Recarrega a tela para atualizar as cores e painel
+                
                 window.renderLogistica();
             }
         }

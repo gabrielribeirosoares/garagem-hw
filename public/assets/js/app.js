@@ -62,7 +62,7 @@ const isPublicView = !!publicGarageUid;
 if (urlParams.has('type')) {
   pageType = urlParams.get('type');
 
-  // Limpa a URL silenciosamente para não ficar preso no F5
+
   const cleanUrl = window.location.pathname + (isPublicView ? `?garagem=${publicGarageUid}` : '');
   window.history.replaceState({}, '', cleanUrl);
 }
@@ -73,7 +73,7 @@ function updatePageData() {
     if (pageType === 'all' || pageType === 'owned') return true;
     if (pageType === 'sth' && r.series && r.series.toLowerCase().includes('super')) return true;
     if (pageType === 'th' && r.series && !r.series.toLowerCase().includes('super')) return true;
-    // Ensina o sistema a mostrar os carros curtidos na página da wishlist
+
     if (pageType === 'wishlist' && userWishlist[r.id]) return true;
     return false;
   });
@@ -129,7 +129,7 @@ window.changePage = function (newPageType) {
   const statsRow = document.querySelector('.stats-row');
   const statsArea = document.getElementById('stats-view');
   const sorteiosArea = document.getElementById('sorteios-view');
-  const encomendasArea = document.getElementById('encomendas-view'); // 👈 Nova área registrada
+  const encomendasArea = document.getElementById('encomendas-view');
 
   if (pageType === 'kaido' || pageType === 'kaido-owned' || pageType === 'kaido-wishlist') {
     updateSidebarVisibility('kaido');
@@ -137,9 +137,9 @@ window.changePage = function (newPageType) {
     updateSidebarVisibility('hw');
   }
 
-  // ==========================================
-  // ROTEAMENTO DE PÁGINAS
-  // ==========================================
+
+
+
 
   if (pageType === 'missions') {
     if (tableArea) tableArea.style.display = 'none';
@@ -242,7 +242,7 @@ window.changePage = function (newPageType) {
     if (window.renderSorteios) window.renderSorteios();
     return;
 
-  } else if (pageType === 'encomendas') { // 👈 NOVA ROTA OFICIAL DE ENCOMENDAS AQUI!
+  } else if (pageType === 'encomendas') {
     if (tableArea) tableArea.style.display = 'none';
     if (sortHeader) sortHeader.style.display = 'none';
     if (controlsArea) controlsArea.style.display = 'none';
@@ -262,7 +262,7 @@ window.changePage = function (newPageType) {
     return;
 
   } else {
-    // === PADRÃO: GARAGEM HOT WHEELS ===
+
     if (tableArea) tableArea.style.display = 'grid';
     if (sortHeader) sortHeader.style.display = 'flex';
     if (controlsArea) controlsArea.style.display = 'flex';
@@ -389,19 +389,19 @@ function getFilteredData() {
     let vA = a[sortCol];
     let vB = b[sortCol];
 
-    // Limpa espaços acidentais (.trim) e ignora maiúsculas/minúsculas
+
     if (sortCol === 'name' || sortCol === 'series' || sortCol === 'color' || sortCol === 'part' || sortCol === 'cas') {
       vA = String(vA || '').trim().toLowerCase();
       vB = String(vB || '').trim().toLowerCase();
     }
 
-    // 🔒 REGRA ESPECIAL PARA ORDENAÇÃO DE LOTE
+
     if (sortCol === 'cas') {
-      // 1. Se um carro não tem lote, joga ele para o final da lista
+
       if (vA === '' && vB !== '') return 1;
       if (vA !== '' && vB === '') return -1;
 
-      // 2. Se os dois carros são do MESMO lote, desempata pelo Nome do Carro (A-Z)
+
       if (vA === vB) {
         let nA = String(a.name || '').trim().toLowerCase();
         let nB = String(b.name || '').trim().toLowerCase();
@@ -411,7 +411,7 @@ function getFilteredData() {
       }
     }
 
-    // Ordenação padrão para os outros filtros
+
     if (vA < vB) return sortDesc ? 1 : -1;
     if (vA > vB) return sortDesc ? -1 : 1;
     return 0;
@@ -468,7 +468,7 @@ function render() {
   if (emptyMsg) emptyMsg.style.display = 'none';
 
   dataToRender.forEach((r) => {
-    const globalIdx = PAGE_DATA.indexOf(r);
+    const filteredIdx = fullData.indexOf(r);
     const dot = getColor(r.color);
     const has = isOwned(r);
 
@@ -483,7 +483,7 @@ function render() {
     const repetidos = qty > 1 ? qty - 1 : 0;
     const isEditingAllowed = !isPublicView;
 
-    // 👇 NOVA LÓGICA: Verifica se o Admin/Gerente selecionou um cliente no topo
+
     const isVendedorEditandoCliente = (isAdmin || isManager) && targetUid && targetUid !== 'ME' && targetUid !== sessionUid;
 
     let controlesHTML = '';
@@ -509,7 +509,7 @@ function render() {
         </div>`;
     }
 
-    // 👇 NOVO BOTÃO DE ENCOMENDA LOGÍSTICA
+
     let btnVenderHTML = '';
     if (isVendedorEditandoCliente) {
       btnVenderHTML = `<button onclick="window.venderCarroVisual('${r.id}', event)" style="margin-top: 10px; width: 100%; background: #38bdf8; color: #000; border: none; padding: 8px; border-radius: 6px; font-weight: bold; font-family: 'Bebas Neue', sans-serif; font-size: 16px; cursor: pointer; display: flex; align-items: center; justify-content: center; gap: 5px; box-shadow: 0 4px 6px rgba(56,189,248,0.2);">📦 Encomendar para Garagem</button>`;
@@ -546,7 +546,7 @@ function render() {
     `;
 
     if (card.querySelector('.car-image-container') && r.image) {
-      card.querySelector('.car-image-container').addEventListener('click', () => openLb(globalIdx));
+      card.querySelector('.car-image-container').addEventListener('click', () => openLb(filteredIdx));
     }
 
     tbody.appendChild(card);
@@ -612,7 +612,7 @@ onAuthStateChanged(auth, async (user) => {
           let currentLojas = uSnap.data().lojaId || '';
           let lojasArray = currentLojas.split(',').map(s => s.trim()).filter(Boolean);
 
-          // Se o cliente ainda não faz parte dessa loja, adiciona!
+
           if (!lojasArray.includes(pendingInvite)) {
             lojasArray.push(pendingInvite);
             await setDoc(uRef, { lojaId: lojasArray.join(', ') }, { merge: true });
@@ -622,7 +622,7 @@ onAuthStateChanged(auth, async (user) => {
       } catch (e) {
         console.error("Erro ao processar convite:", e);
       }
-      // Limpa a memória para não repetir o alerta no futuro
+
       localStorage.removeItem('pendingInvite');
     }
 
@@ -636,7 +636,7 @@ onAuthStateChanged(auth, async (user) => {
       if (userDoc.exists()) {
         const userRole = userDoc.data().role;
 
-        // Isola a loja principal do gerente/admin
+
         const myLojaIdRaw = userDoc.data().lojaId || '';
         const myLojaId = myLojaIdRaw.split(',')[0].trim();
         const minhaLojaFiltro = myLojaId.toLowerCase();
@@ -656,17 +656,17 @@ onAuthStateChanged(auth, async (user) => {
         if ((isAdmin || isManager) && adminSelector && clientSelect) {
           adminSelector.style.display = 'flex';
 
-          // Limpa as opções antes de carregar
+
           clientSelect.innerHTML = '<option value="ME">Minha Conta</option>';
 
           const usersSnap = await getDocs(collection(db, 'users'));
           usersSnap.forEach(docSnap => {
             const uData = docSnap.data();
 
-            // Puxa o array de lojas do cliente em minúsculo
+
             const clientLojas = (uData.lojaId || '').split(',').map(s => s.trim().toLowerCase());
 
-            // Libera se for Admin OU se for gerente e a loja dele estiver na lista do cliente
+
             const isMyClient = clientLojas.includes(minhaLojaFiltro);
 
             if (docSnap.id !== user.uid && uData.role === 'cliente' && isMyClient) {
@@ -740,7 +740,7 @@ window.loadCollection = async function () {
   if (!uidToLoad) return;
 
   try {
-    // 1. Carrega os carrinhos
+
     const dRef = doc(db, 'collections', uidToLoad);
     const snap = await getDoc(dRef);
     if (snap.exists()) {
@@ -761,7 +761,7 @@ window.loadCollection = async function () {
       userWishlist = {};
     }
 
-    // 2. Carrega os dados do Usuário
+
     const uRef = doc(db, 'users', uidToLoad);
     const uSnap = await getDoc(uRef);
 
@@ -770,7 +770,7 @@ window.loadCollection = async function () {
     if (uSnap.exists()) {
       targetRole = uSnap.data().role || 'user';
       currentLojaId = uSnap.data().lojaId || 'default';
-      window.lojaIdAtual = currentLojaId; // ✅ Salva a loja globalmente para usar nas rifas
+      window.lojaIdAtual = currentLojaId;
 
       if (targetRole === 'admin' || targetRole === 'gerente') {
         const btnSorteador = document.getElementById('menu-sorteador-item');
@@ -805,7 +805,7 @@ window.loadCollection = async function () {
     if (!isPublicView) {
       try {
         const lojasArray = currentLojaId.split(',').map(s => s.trim()).filter(Boolean);
-        window.minhasLojasArray = lojasArray; // Salva as lojas globalmente
+        window.minhasLojasArray = lojasArray;
         LISTA_RECOMPENSAS = [];
         window.LISTA_RIFAS = [];
 
@@ -818,7 +818,7 @@ window.loadCollection = async function () {
           window.lojaAtiva = lojasArray[0] || "";
         }
 
-        // Busca os dados no banco
+
         for (const lId of lojasArray) {
           const lojaRef = doc(db, 'lojas', lId);
           const lojaSnap = await getDoc(lojaRef);
@@ -944,12 +944,16 @@ window.saveKaidoData = async function (codigo, qty) {
 
 function openLb(index) {
   lbIndex = index;
-  const r = PAGE_DATA[lbIndex];
+
+
+  const listaAtual = window.currentFilteredData || PAGE_DATA;
+  const r = listaAtual[lbIndex];
+
   if (!r) return;
   document.getElementById('lb-img').src = r.image;
   document.getElementById('lb-title').textContent = r.name;
   document.getElementById('lb-meta').textContent = `${r.year} | ${r.series} | ${r.color}`;
-  document.getElementById('lb-counter').textContent = `${lbIndex + 1} de ${PAGE_DATA.length}`;
+  document.getElementById('lb-counter').textContent = `${lbIndex + 1} de ${listaAtual.length}`;
   document.getElementById('lightbox').style.display = 'flex';
 }
 
@@ -962,20 +966,27 @@ if (lbCloseBtn) lbCloseBtn.addEventListener('click', closeLb);
 
 const lbPrevBtn = document.getElementById('lb-prev');
 if (lbPrevBtn) {
-  lbPrevBtn.addEventListener('click', () => { if (lbIndex > 0) openLb(lbIndex - 1); });
+  lbPrevBtn.addEventListener('click', () => {
+    if (lbIndex > 0) openLb(lbIndex - 1);
+  });
 }
 
 const lbNextBtn = document.getElementById('lb-next');
 if (lbNextBtn) {
-  lbNextBtn.addEventListener('click', () => { if (lbIndex < PAGE_DATA.length - 1) openLb(lbIndex + 1); });
+  lbNextBtn.addEventListener('click', () => {
+    const listaAtual = window.currentFilteredData || PAGE_DATA;
+    if (lbIndex < listaAtual.length - 1) openLb(lbIndex + 1);
+  });
 }
 
 document.addEventListener('keydown', (e) => {
   const lightbox = document.getElementById('lightbox');
   if (lightbox && lightbox.style.display === 'flex') {
+    const listaAtual = window.currentFilteredData || PAGE_DATA;
+
     if (e.key === 'Escape') closeLb();
     if (e.key === 'ArrowLeft' && lbIndex > 0) openLb(lbIndex - 1);
-    if (e.key === 'ArrowRight' && lbIndex < PAGE_DATA.length - 1) openLb(lbIndex + 1);
+    if (e.key === 'ArrowRight' && lbIndex < listaAtual.length - 1) openLb(lbIndex + 1);
   }
 });
 
@@ -1236,7 +1247,7 @@ window.renderRewards = async function () {
   const pointsEl = document.getElementById('user-points');
   if (pointsEl) pointsEl.textContent = saldoNestaLoja;
 
-  // 👇 GERA O MENU DE VENDEDORES APENAS SE ELE ESTIVER EM VÁRIAS LOJAS
+
   let menuHTML = '';
   if (window.minhasLojasArray && window.minhasLojasArray.length > 1) {
     const options = window.minhasLojasArray.map(loja => `<option value="${loja}" ${window.lojaAtiva === loja ? 'selected' : ''}>${loja}</option>`).join('');
@@ -1295,7 +1306,7 @@ window.renderRewards = async function () {
   `;
 }
 
-// COLE ESTA NOVA FUNÇÃO NO FINAL DO SEU ARQUIVO APP.JS
+
 window.mudarLojaAtiva = function (novaLoja) {
   window.lojaAtiva = novaLoja;
   renderRewards();
@@ -1524,7 +1535,7 @@ let showingOnlyOwnedKaido = false;
 let showingOnlyWishlistKaido = false;
 
 window.renderKaido = function (currentPageType = 'kaido') {
-  // Define os filtros com base na página que veio do menu
+
   showingOnlyOwnedKaido = (currentPageType === 'kaido-owned');
   showingOnlyWishlistKaido = (currentPageType === 'kaido-wishlist');
 
@@ -1567,10 +1578,10 @@ window.renderKaido = function (currentPageType = 'kaido') {
       </div>
     `;
 
-    // ==========================================
-    // 🛡️ TRAVAS DE SEGURANÇA ADICIONADAS AQUI 
-    // (Só tenta colocar clique se o botão existir)
-    // ==========================================
+
+
+
+
     const btnOwned = document.getElementById('kaido-filter-owned');
     if (btnOwned) {
       btnOwned.addEventListener('click', (e) => {
@@ -1593,7 +1604,7 @@ window.renderKaido = function (currentPageType = 'kaido') {
       });
     }
 
-    // EVENTOS DA BARRA DE PESQUISA
+
     const searchInput = document.getElementById('kaido-search');
     if (searchInput) {
       searchInput.addEventListener('input', () => {
@@ -1602,7 +1613,7 @@ window.renderKaido = function (currentPageType = 'kaido') {
       });
     }
 
-    // EVENTOS DA PAGINAÇÃO
+
     const selectPage = document.getElementById('kaido-per-page-select');
     if (selectPage) {
       selectPage.addEventListener('change', (e) => {
@@ -1659,32 +1670,32 @@ window.renderKaidoGrid = function () {
   if (!grid || !searchInput) return;
 
   const query = searchInput.value.toLowerCase().trim();
-  grid.innerHTML = ''; // Limpa a tela para os novos resultados
+  grid.innerHTML = '';
 
-  // 1. TRAVAS DE SEGURANÇA PARA AS VARIÁVEIS
+
   const ownedKaidos = (typeof userKaidoCollection !== 'undefined' && userKaidoCollection) ? userKaidoCollection : {};
   const wishKaidos = (typeof userWishlist !== 'undefined' && userWishlist) ? userWishlist : {};
   const isOwnedActive = (typeof showingOnlyOwnedKaido !== 'undefined') ? showingOnlyOwnedKaido : false;
   const isWishActive = (typeof showingOnlyWishlistKaido !== 'undefined') ? showingOnlyWishlistKaido : false;
 
-  // 2. APLICA TODOS OS FILTROS AO MESMO TEMPO
+
   const filteredData = KAIDO_DATA.filter(car => {
-    // Pesquisa por texto
+
     const matchesSearch = !query ||
       (car.modelo && car.modelo.toLowerCase().includes(query)) ||
       (car.codigo && car.codigo.toLowerCase().includes(query)) ||
       (car.marca && car.marca.toLowerCase().includes(query));
 
-    // Filtro "Minha Coleção" (mostra apenas se a quantidade for maior que zero)
+
     const matchesOwned = !isOwnedActive || (ownedKaidos[car.codigo] > 0);
 
-    // Filtro "Lista de Desejos" (mostra apenas se tiver coração)
+
     const matchesWish = !isWishActive || wishKaidos[car.codigo];
 
     return matchesSearch && matchesOwned && matchesWish;
   });
 
-  // 3. APLICA A PAGINAÇÃO
+
   let dataToRender = filteredData;
   let totalPages = 1;
   let itemsPerPage = (typeof window.kaidoItemsPerPage !== 'undefined') ? window.kaidoItemsPerPage : 25;
@@ -1699,7 +1710,7 @@ window.renderKaidoGrid = function () {
     dataToRender = filteredData.slice(start, start + itemsPerPage);
   }
 
-  // 4. ATUALIZA TEXTOS E INDICADORES DA TELA
+
   const pageIndicator = document.getElementById('kaido-page-indicator');
   const btnPrev = document.getElementById('kaido-btn-prev');
   const btnNext = document.getElementById('kaido-btn-next');
@@ -1714,7 +1725,7 @@ window.renderKaidoGrid = function () {
   if (allCount) allCount.textContent = filteredData.length;
   if (badge) badge.textContent = `${filteredData.length} Modelos`;
 
-  // 5. DESENHA AS MINIATURAS NA TELA
+
   dataToRender.forEach(car => {
     const qty = ownedKaidos[car.codigo] || 0;
     const repetidos = qty > 1 ? qty - 1 : 0;
@@ -1813,7 +1824,7 @@ window.toggleWishlist = async function (carId) {
         render();
       }, 50);
     } else if (typeof pageType !== 'undefined' && pageType === 'kaido-wishlist') {
-      // Recarrega o grid da Kaido instantaneamente
+
       setTimeout(() => window.renderKaidoGrid(), 50);
     }
   }
@@ -1884,17 +1895,17 @@ window.renderStats = function () {
   `;
 };
 
-// =========================================================
-// MÓDULO: RIFAS E SORTEIOS (TELA, CRIAÇÃO E EDIÇÃO)
-// =========================================================
+
+
+
 window.renderSorteios = function () {
   const view = document.getElementById('sorteios-view');
   if (!view) return;
 
-  // Puxa o WhatsApp dinâmico da loja em vez do fixo
+
   const whatsappNumber = window.lojaWhatsapp;
 
-  // Botões administrativos Globais (Só aparecem para Admin/Gerente)
+
   let adminButtons = '';
   if (targetRole === 'admin' || targetRole === 'gerente') {
     adminButtons = `
@@ -1919,23 +1930,23 @@ window.renderSorteios = function () {
     html += `<div style="grid-column: 1 / -1; background: #1e293b; padding: 30px; text-align: center; border-radius: 12px; border: 1px dashed #475569; color: #94a3b8;">Nenhum sorteio ativo no momento. Fique de olho!</div>`;
   } else {
     window.LISTA_RIFAS.forEach((r, index) => {
-      // Verifica se a rifa já foi encerrada
+
       const isConcluida = r.status === 'Concluído';
 
-      // Controles de edição para o Admin
+
       let adminControls = '';
       let btnSortearDireto = '';
 
       if (targetRole === 'admin' || targetRole === 'gerente') {
-        // Previne quebra de aspas se o título tiver apóstrofos
+
         const safeTitle = r.titulo.replace(/'/g, "\\'");
 
-        // BOTÃO DE SORTEIO SÓ APARECE SE A RIFA ESTIVER ATIVA
+
         if (!isConcluida) {
           btnSortearDireto = `<button onclick="abrirSorteadorDaRifa('${safeTitle}')" style="background: #10b981; color: #000; border: none; padding: 10px 15px; border-radius: 6px; cursor: pointer; font-family: 'Bebas Neue', sans-serif; font-size: 18px; letter-spacing: 1px; transition: 0.2s; box-shadow: 0 4px 10px rgba(16,185,129,0.3);">🎲 Sortear</button>`;
         }
 
-        // Botões Admin (Editar, Excluir e Concluir)
+
         adminControls = `
             <div style="display: flex; gap: 8px; margin-top: 15px;">
                 <button onclick="editarRifa(${index})" style="flex: 1; background: #3b82f6; color: white; border: none; padding: 8px; border-radius: 4px; cursor: pointer; font-size: 13px; font-weight: bold;">✏️ Editar</button>
@@ -1945,7 +1956,7 @@ window.renderSorteios = function () {
         `;
       }
 
-      // Muda o botão principal caso a rifa esteja encerrada
+
       const btnCompra = !isConcluida
         ? `<a href="https://wa.me/${whatsappNumber}?text=Olá! Gostaria de reservar números para a rifa: ${r.titulo}" target="_blank" style="background: #a855f7; color: #fff; text-decoration: none; padding: 10px 15px; border-radius: 6px; font-family: 'Bebas Neue', sans-serif; font-size: 16px; letter-spacing: 1px; transition: 0.2s; display: flex; align-items: center;">Comprar</a>`
         : `<span style="background: #475569; color: #fff; padding: 10px 15px; border-radius: 6px; font-family: 'Bebas Neue', sans-serif; font-size: 16px; letter-spacing: 1px; display: flex; align-items: center; cursor: not-allowed;">Encerrada</span>`;
@@ -1981,22 +1992,22 @@ window.renderSorteios = function () {
   view.innerHTML = html;
 };
 
-// =========================================================
-// FUNÇÃO PARA MARCAR RIFA COMO CONCLUÍDA
-// =========================================================
+
+
+
 window.concluirRifa = async function (index) {
   if (!confirm('Deseja marcar esta rifa como CONCLUÍDA?\n\nEla não aceitará mais novas reservas e mudará visualmente para Encerrada.')) return;
 
   try {
     const { doc, setDoc } = await import("https://www.gstatic.com/firebasejs/12.13.0/firebase-firestore.js");
 
-    // Atualiza o status no objeto local
+
     window.LISTA_RIFAS[index].status = 'Concluído';
 
-    // Salva a alteração no banco de dados (na mesma loja)
+
     await setDoc(doc(db, 'lojas', window.lojaIdAtual), { rifas: window.LISTA_RIFAS }, { merge: true });
 
-    // Renderiza a tela de novo para o Admin ver a mudança instantaneamente
+
     window.renderSorteios();
   } catch (e) {
     console.error("Erro ao concluir rifa:", e);
@@ -2004,13 +2015,13 @@ window.concluirRifa = async function (index) {
   }
 };
 
-// =========================================================
-// FUNÇÃO PARA ABRIR O SORTEADOR PERSONALIZADO PARA A RIFA
-// =========================================================
+
+
+
 window.abrirSorteadorDaRifa = function (tituloDaRifa = 'Sorteio da Rifa') {
   const modal = document.getElementById('modal-sorteador');
   if (modal) {
-    // Altera o título da janela para exibir o nome do prêmio sendo sorteado
+
     const titleH2 = modal.querySelector('h2');
     if (titleH2) {
       titleH2.innerHTML = tituloDaRifa !== 'Sorteio da Rifa'
@@ -2018,7 +2029,7 @@ window.abrirSorteadorDaRifa = function (tituloDaRifa = 'Sorteio da Rifa') {
         : 'Sorteio da Rifa';
     }
 
-    // Limpa os dados do sorteio anterior
+
     const resultEl = document.getElementById('sort-result');
     const winnerEl = document.getElementById('sort-winner-name');
     const participantsEl = document.getElementById('sort-participants');
@@ -2039,12 +2050,12 @@ window.abrirSorteadorDaRifa = function (tituloDaRifa = 'Sorteio da Rifa') {
 }
 
 
-// =========================================================
-// FUNÇÕES DE CRUD (Criar, Editar, Salvar e Excluir Rifas)
-// =========================================================
-// =========================================================
-// FUNÇÕES DE CRUD (Criar, Editar, Salvar, Excluir e Concluir Rifas)
-// =========================================================
+
+
+
+
+
+
 window.abrirModalRifa = function () {
   document.getElementById('rifa-edit-index').value = -1;
   document.getElementById('rifa-form-titulo').value = '';
@@ -2092,7 +2103,7 @@ window.salvarRifa = async function () {
   try {
     const { doc, setDoc } = await import("https://www.gstatic.com/firebasejs/12.13.0/firebase-firestore.js");
 
-    // ✅ Salva a Rifa na Loja do Admin, liberando para todos os VIPs dele!
+
     await setDoc(doc(db, 'lojas', window.lojaIdAtual), { rifas: window.LISTA_RIFAS }, { merge: true });
 
     document.getElementById('modal-rifa-form').style.display = 'none';
@@ -2133,52 +2144,52 @@ window.concluirRifa = async function (index) {
   }
 };
 
-// =========================================================
-// O SORTEADOR VIRTUAL (ANIMAÇÃO COM NÚMEROS E NOMES)
-// =========================================================
+
+
+
 window.realizarSorteioVirtual = function () {
   const minVal = parseInt(document.getElementById('sort-min').value);
   const maxVal = parseInt(document.getElementById('sort-max').value);
   const participantsText = document.getElementById('sort-participants').value.trim();
 
   const resultEl = document.getElementById('sort-result');
-  const nameEl = document.getElementById('sort-winner-name'); // Onde vai o nome do ganhador
+  const nameEl = document.getElementById('sort-winner-name');
 
   let participants = [];
 
-  // Se o admin colou a lista, nós a separamos linha por linha
+
   if (participantsText) {
     const lines = participantsText.split('\n');
     lines.forEach(line => {
       if (line.trim() !== '') {
-        // Inteligência para separar Número do Nome (Ex: "15 - Gabriel", "03. Eduarda", "10 Joao")
+
         const match = line.match(/^(\d+)[\s\-\.\:]+(.+)$/);
         if (match) {
           participants.push({ num: match[1], name: match[2].trim() });
         } else {
-          // Se não tiver número claro, salva só o nome
+
           participants.push({ num: '?', name: line.trim() });
         }
       }
     });
   }
 
-  // Validação de segurança
+
   if (participants.length === 0 && (isNaN(minVal) || isNaN(maxVal) || minVal >= maxVal)) {
     alert("Preencha a lista de participantes ou defina um intervalo numérico válido!");
     return;
   }
 
-  // Reseta o visual para começar a girar
+
   resultEl.style.color = '#fff';
   resultEl.style.transform = 'scale(1)';
   nameEl.textContent = '';
   nameEl.style.opacity = '0';
   let counter = 0;
 
-  // Roda a animação super rápida por ~3 segundos
+
   const interval = setInterval(() => {
-    // Durante o giro, mostra números aleatórios
+
     if (participants.length > 0) {
       const randomP = participants[Math.floor(Math.random() * participants.length)];
       resultEl.textContent = randomP.num !== '?' ? randomP.num : Math.floor(Math.random() * 99);
@@ -2188,31 +2199,31 @@ window.realizarSorteioVirtual = function () {
 
     counter++;
 
-    // Fim do sorteio
+
     if (counter > 60) {
       clearInterval(interval);
 
       if (participants.length > 0) {
-        // Sorteia o grande vencedor da lista!
+
         const finalWinner = participants[Math.floor(Math.random() * participants.length)];
         resultEl.textContent = finalWinner.num !== '?' ? finalWinner.num : '🏆';
-        nameEl.textContent = finalWinner.name; // Aparece o nome!
+        nameEl.textContent = finalWinner.name;
         nameEl.style.opacity = '1';
       } else {
-        // Sorteia apenas o número
+
         const finalResult = Math.floor(Math.random() * (maxVal - minVal + 1)) + minVal;
         resultEl.textContent = finalResult;
       }
 
-      resultEl.style.color = '#10b981'; // Fica verde
-      resultEl.style.transform = 'scale(1.2)'; // Dá um "pulo" de comemoração
+      resultEl.style.color = '#10b981';
+      resultEl.style.transform = 'scale(1.2)';
     }
   }, 50);
 };
 
 
-const conviteParams = new URLSearchParams(window.location.search); // <-- Mudei o nome aqui
-const inviteLoja = conviteParams.get('loja'); // <-- E aqui
+const conviteParams = new URLSearchParams(window.location.search);
+const inviteLoja = conviteParams.get('loja');
 
 if (inviteLoja) {
   localStorage.setItem('pendingInvite', inviteLoja);
@@ -2228,11 +2239,11 @@ window.renderEncomendas = async function () {
   container.innerHTML = '<p style="color: #cbd5e1; text-align: center; margin-top: 40px; font-style: italic;">Buscando suas encomendas no banco de dados...</p>';
 
   try {
-    // 👇 Lê o cliente diretamente da caixa de seleção (ou pega a própria conta)
+
     const clientSelect = document.getElementById('client-select');
     const clienteSelecionado = (clientSelect && clientSelect.value !== 'ME') ? clientSelect.value : null;
 
-    // Usa as variáveis limpas, sem o "window." na frente
+
     const uidToUse = clienteSelecionado || targetUid || sessionUid;
 
     if (!uidToUse) {
@@ -2259,60 +2270,60 @@ window.renderEncomendas = async function () {
             <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 16px;">
         `;
 
-    // Ordena para os mais recentes ficarem no topo (invertendo o array)
+
     const encomendasOrdenadas = [...garagemLoja].reverse();
 
     encomendasOrdenadas.forEach(pedido => {
-        let carName = pedido.carId;
-        let carImg = 'assets/img/placeholder.png';
-        
-        // 1. Tenta pegar o preço exato que foi salvo no pedido. Inicia em 0 se não existir.
-        let precoUnitario = parseFloat(pedido.preco || pedido.valor || 0);
+      let carName = pedido.carId;
+      let carImg = 'assets/img/placeholder.png';
 
-        // 2. Tenta puxar a imagem e o nome da base de dados local (RAW)
-        if (typeof RAW !== 'undefined') {
-            const carObj = RAW.find(c => c.id === pedido.carId);
-            if (carObj) {
-                carName = `${carObj.name} <br><small style="color: var(--yellow);">${carObj.year} | SKU: ${carObj.part}</small>`;
-                carImg = carObj.image || carImg;
-                
-                // 3. Se o pedido não tinha preço salvo, tenta puxar do catálogo
-                if (precoUnitario === 0 && carObj.price) {
-                    precoUnitario = parseFloat(carObj.price);
-                }
-            }
+
+      let precoUnitario = parseFloat(pedido.preco || pedido.valor || 0);
+
+
+      if (typeof RAW !== 'undefined') {
+        const carObj = RAW.find(c => c.id === pedido.carId);
+        if (carObj) {
+          carName = `${carObj.name} <br><small style="color: var(--yellow);">${carObj.year} | SKU: ${carObj.part}</small>`;
+          carImg = carObj.image || carImg;
+
+
+          if (precoUnitario === 0 && carObj.price) {
+            precoUnitario = parseFloat(carObj.price);
+          }
         }
+      }
 
-        // Calcula o preço final da encomenda
-        const valorTotalPedido = pedido.qty * precoUnitario;
 
-  
-        // ✏️ Botão de Editar Preço (Bloqueado para clientes)
-        let btnEditarPreco = '';
+      const valorTotalPedido = pedido.qty * precoUnitario;
 
-        // 👇 Substitua 'window.isAdmin' pela variável ou condição que você usa para identificar o administrador no seu app.
-        // Exemplo alternativo: if (sessionUid === 'SEU_UID_DE_ADMIN_AQUI') {
-        if (window.isAdmin) { 
-            btnEditarPreco = `
+
+
+      let btnEditarPreco = '';
+
+
+
+      if (window.isAdmin) {
+        btnEditarPreco = `
                 <button onclick="window.editarPrecoPedido('${pedido.pedidoId}', ${precoUnitario})" 
                     style="background: transparent; color: #94a3b8; border: 1px dashed #475569; padding: 4px 8px; border-radius: 4px; font-size: 10px; cursor: pointer; margin-left: 8px; transition: 0.2s;"
                     onmouseover="this.style.color='#fff'; this.style.borderColor='#fff'" 
                     onmouseout="this.style.color='#94a3b8'; this.style.borderColor='#475569'">
                     ✏️ Definir Preço
                 </button>`;
-        }
+      }
 
-        // 🟢 DECLARAÇÃO DO STATUS BADGE (Garante que a variável existe antes do HTML)
-        let statusBadge = '';
 
-        if (pedido.status === 'pago') {
-            statusBadge = '<span style="background: rgba(34, 197, 94, 0.15); color: var(--green); border: 1px solid var(--green); padding: 4px 8px; border-radius: 4px; font-weight: bold; font-size: 11px; text-transform: uppercase;">🟢 Pago (Na Garagem)</span>';
-        } else if (pedido.status === 'enviado') {
-            statusBadge = '<span style="background: rgba(56, 189, 248, 0.15); color: #38bdf8; border: 1px solid #38bdf8; padding: 4px 8px; border-radius: 4px; font-weight: bold; font-size: 11px; text-transform: uppercase;">📦 Enviado / Retirado</span>';
-        } else {
-            // Se não tá pago nem enviado, vê se tem preço para exibir o botão do MP
-            if (valorTotalPedido > 0) {
-                statusBadge = `
+      let statusBadge = '';
+
+      if (pedido.status === 'pago') {
+        statusBadge = '<span style="background: rgba(34, 197, 94, 0.15); color: var(--green); border: 1px solid var(--green); padding: 4px 8px; border-radius: 4px; font-weight: bold; font-size: 11px; text-transform: uppercase;">🟢 Pago (Na Garagem)</span>';
+      } else if (pedido.status === 'enviado') {
+        statusBadge = '<span style="background: rgba(56, 189, 248, 0.15); color: #38bdf8; border: 1px solid #38bdf8; padding: 4px 8px; border-radius: 4px; font-weight: bold; font-size: 11px; text-transform: uppercase;">📦 Enviado / Retirado</span>';
+      } else {
+
+        if (valorTotalPedido > 0) {
+          statusBadge = `
                     <div style="display: flex; align-items: center;">
                         <button onclick="window.iniciarCheckout('${pedido.pedidoId}', ${valorTotalPedido}, '${pedido.lojaId}')" 
                             style="background: #009ee3; color: #fff; border: none; padding: 6px 12px; border-radius: 6px; font-weight: bold; cursor: pointer; font-size: 11px; font-family: 'Bebas Neue', sans-serif; letter-spacing: 0.5px; display: flex; align-items: center; gap: 4px; box-shadow: 0 4px 6px rgba(0,158,227,0.2);">
@@ -2320,17 +2331,17 @@ window.renderEncomendas = async function () {
                         </button>
                         ${btnEditarPreco}
                     </div>`;
-            } else {
-                statusBadge = `
+        } else {
+          statusBadge = `
                     <div style="display: flex; align-items: center;">
                         <span style="color: #ef4444; font-size: 11px; font-weight: bold;">⚠️ Preço Indefinido</span>
                         ${btnEditarPreco}
                     </div>`;
-            }
         }
+      }
 
-        // Monta o Card HTML final
-        html += `
+
+      html += `
             <div style="background: var(--surface); border: 1px solid var(--border); border-radius: 12px; padding: 16px; display: flex; gap: 16px; align-items: center; position: relative; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);">
                 <span style="position: absolute; top: 12px; right: 12px; font-size: 10px; background: #334155; color: #cbd5e1; padding: 4px 8px; border-radius: 4px; font-weight: bold; text-transform: uppercase; border: 1px solid #475569;">
                     🏢 ${pedido.lojaId}
@@ -2358,17 +2369,17 @@ window.renderEncomendas = async function () {
   }
 }
 
-// Intercepta os cliques no menu para carregar a tela de Encomendas automaticamente
+
 document.addEventListener('click', (e) => {
-  // Se o cliente clicou no menu "Minhas Encomendas"
+
   if (e.target && e.target.getAttribute('data-page') === 'encomendas') {
     e.preventDefault();
 
-    // Esconde todas as outras telas, textos vazios e contadores
+
     const viewsParaEsconder = [
       document.getElementById('table-body'),
-      document.getElementById('empty-msg'), // <-- Esconde a mensagem vazia
-      document.querySelector('.stats-row'), // <-- Esconde as estatísticas superiores (0, 0, 0, 0)
+      document.getElementById('empty-msg'),
+      document.querySelector('.stats-row'),
       document.querySelector('.controls'),
       document.querySelector('.count-bar'),
       document.querySelector('.pagination-container'),
@@ -2383,24 +2394,24 @@ document.addEventListener('click', (e) => {
       if (view) view.style.display = 'none';
     });
 
-    // Esconde o título "Sua Garagem" e o filtro de ordenação
+
     const mobileSort = document.getElementById('mobile-sort');
     if (mobileSort && mobileSort.parentElement) {
       mobileSort.parentElement.style.display = 'none';
     }
 
-    // Atualiza o título azul no topo do aplicativo
+
     const titleEl = document.getElementById('dynamic-title');
     if (titleEl) titleEl.innerHTML = 'Minhas <span>Encomendas</span>';
 
-    // Mostra a tela de encomendas e chama a função para buscar no banco
+
     const encomendasView = document.getElementById('encomendas-view');
     if (encomendasView) {
       encomendasView.style.display = 'block';
       window.renderEncomendas();
     }
 
-    // Fecha o menu lateral no celular
+
     const sidebar = document.getElementById('sidebar');
     const overlay = document.getElementById('sidebar-overlay');
     if (sidebar) sidebar.classList.remove('open');
@@ -2409,14 +2420,14 @@ document.addEventListener('click', (e) => {
 });
 
 
-// ===================================================================
-// SISTEMA DE VENDA VISUAL (ADICIONAR À GARAGEM VIA APP.HTML)
-// ===================================================================
+
+
+
 window.venderCarroVisual = async function (carId, event) {
-  // Evita que o clique abra a foto em tela cheia sem querer
+
   if (event) event.stopPropagation();
 
-  // Lê o cliente diretamente da caixa de seleção
+
   const clientSelect = document.getElementById('client-select');
   const clienteSelecionado = clientSelect ? clientSelect.value : 'ME';
 
@@ -2426,7 +2437,7 @@ window.venderCarroVisual = async function (carId, event) {
   }
 
   const qtyInput = prompt("Quantas unidades deste carrinho você está encomendando para o cliente?", "1");
-  if (!qtyInput) return; // Se cancelar o prompt, não faz nada
+  if (!qtyInput) return;
 
   const qty = parseInt(qtyInput);
   if (qty <= 0 || isNaN(qty)) {
@@ -2452,12 +2463,12 @@ window.venderCarroVisual = async function (carId, event) {
 
     const ptsGanhos = qty * PONTOS_POR_CARRO;
 
-    // Garante que o cliente tem a carteira da loja iniciada
+
     if (typeof dataSnap.points === 'number' && Object.keys(pointsMap).length === 0) {
       pointsMap[minhaLojaAtual] = dataSnap.points;
     }
 
-    // Soma os pontos na carteira da sua loja E na conta global do cliente
+
     pointsMap[minhaLojaAtual] = (pointsMap[minhaLojaAtual] || 0) + ptsGanhos;
     pontosGerais += ptsGanhos;
 
@@ -2468,7 +2479,7 @@ window.venderCarroVisual = async function (carId, event) {
       type: "earning"
     });
 
-    // Adiciona a ficha na logística (Minhas Encomendas)
+
     garagemLoja.push({
       pedidoId: 'ped_' + Date.now(),
       carId: carId,
@@ -2478,7 +2489,7 @@ window.venderCarroVisual = async function (carId, event) {
       data: new Date().toLocaleDateString('pt-BR')
     });
 
-    // 👇 SALVA NO BANCO (Agora com o campo 'points' atualizado corretamente)
+
     await setDoc(dRef, {
       garagemLoja: garagemLoja,
       pointsMap: pointsMap,
@@ -2486,7 +2497,7 @@ window.venderCarroVisual = async function (carId, event) {
       history: history
     }, { merge: true });
 
-    // 👇 ATUALIZA A TELA IMEDIATAMENTE (Sem precisar dar F5)
+
     if (typeof userPoints !== 'undefined') userPoints = pontosGerais;
     const pointsEl = document.getElementById('user-points');
     if (pointsEl) pointsEl.textContent = pontosGerais;
@@ -2499,69 +2510,69 @@ window.venderCarroVisual = async function (carId, event) {
   }
 }
 
-window.iniciarCheckout = async function(pedidoId, valor, lojaDoPedido) {
-    try {
-        // 🚀 URL OFICIAL DO SEU SERVIDOR NO RENDER:
-        const URL_BACKEND = "https://servidor-pagamentos-hw.onrender.com/checkout";
+window.iniciarCheckout = async function (pedidoId, valor, lojaDoPedido) {
+  try {
 
-        const response = await fetch(URL_BACKEND, {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({
-                pedidoId: pedidoId,
-                valor: valor,
-                clienteId: sessionUid,
-                lojaId: lojaDoPedido
-            })
-        });
+    const URL_BACKEND = "https://servidor-pagamentos-hw.onrender.com/checkout";
 
-        const resData = await response.json();
+    const response = await fetch(URL_BACKEND, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        pedidoId: pedidoId,
+        valor: valor,
+        clienteId: sessionUid,
+        lojaId: lojaDoPedido
+      })
+    });
 
-        if (resData.init_point) {
-            // Sucesso! Redireciona o usuário para a tela azul do Mercado Pago
-            window.location.href = resData.init_point;
-        } else if (resData.error) {
-            alert("Erro do Servidor: " + resData.error);
-        }
-    } catch (e) {
-        console.error("Erro ao conectar com a API de checkout:", e);
-        alert("Não foi possível gerar a tela de pagamento. Verifique a conexão.");
+    const resData = await response.json();
+
+    if (resData.init_point) {
+
+      window.location.href = resData.init_point;
+    } else if (resData.error) {
+      alert("Erro do Servidor: " + resData.error);
     }
+  } catch (e) {
+    console.error("Erro ao conectar com a API de checkout:", e);
+    alert("Não foi possível gerar a tela de pagamento. Verifique a conexão.");
+  }
 }
 
-window.editarPrecoPedido = async function(pedidoId, precoAtual) {
-    // 1. Pergunta o novo valor (já mostra o atual caso exista)
-    const novoPrecoStr = prompt(`Digite o novo preço unitário para este item (Atual: R$ ${precoAtual.toFixed(2)}):\nUse ponto ou vírgula para os centavos.`, precoAtual);
-    
-    // Se clicar em cancelar ou deixar vazio, encerra
-    if (novoPrecoStr === null || novoPrecoStr.trim() === "") return; 
-    
-    // 2. Converte o texto para número de forma segura (trocando vírgula por ponto)
-    const novoPreco = parseFloat(novoPrecoStr.replace(',', '.'));
-    
-    if (isNaN(novoPreco) || novoPreco <= 0) {
-        alert("Preço inválido. Digite um número maior que zero.");
-        return;
-    }
+window.editarPrecoPedido = async function (pedidoId, precoAtual) {
 
-    try {
-        const { doc, updateDoc } = await import("https://www.gstatic.com/firebasejs/12.13.0/firebase-firestore.js");
-        
-        // ⚠️ ATENÇÃO: Se a sua coleção no Firebase se chamar "carrinhos" ou "encomendas", troque "pedidos" abaixo:
-        const pedidoRef = doc(db, 'pedidos', pedidoId); 
-        
-        // 3. Atualiza o banco de dados
-        await updateDoc(pedidoRef, {
-            preco: novoPreco
-        });
+  const novoPrecoStr = prompt(`Digite o novo preço unitário para este item (Atual: R$ ${precoAtual.toFixed(2)}):\nUse ponto ou vírgula para os centavos.`, precoAtual);
 
-        alert("Preço atualizado com sucesso!");
-        
-        // 4. Recarrega a página para o botão azul já aparecer com o valor novo calculado
-        location.reload(); 
-        
-    } catch (error) {
-        console.error("Erro ao atualizar preço:", error);
-        alert("Erro ao atualizar o banco de dados. Verifique o console.");
-    }
+
+  if (novoPrecoStr === null || novoPrecoStr.trim() === "") return;
+
+
+  const novoPreco = parseFloat(novoPrecoStr.replace(',', '.'));
+
+  if (isNaN(novoPreco) || novoPreco <= 0) {
+    alert("Preço inválido. Digite um número maior que zero.");
+    return;
+  }
+
+  try {
+    const { doc, updateDoc } = await import("https://www.gstatic.com/firebasejs/12.13.0/firebase-firestore.js");
+
+
+    const pedidoRef = doc(db, 'pedidos', pedidoId);
+
+
+    await updateDoc(pedidoRef, {
+      preco: novoPreco
+    });
+
+    alert("Preço atualizado com sucesso!");
+
+
+    location.reload();
+
+  } catch (error) {
+    console.error("Erro ao atualizar preço:", error);
+    alert("Erro ao atualizar o banco de dados. Verifique o console.");
+  }
 }

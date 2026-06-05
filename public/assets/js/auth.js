@@ -20,7 +20,7 @@ const isIOSStandalone = window.navigator.standalone === true ||
   window.matchMedia('(display-mode: standalone)').matches;
 
 function redirectParaGaragem(user) {
-  // TRAVA DE SEGURANÇA: Se a URL já for a home ou o app, aborta para não dar loop.
+
   if (window.location.pathname.includes('home.html') || window.location.pathname.includes('app.html')) {
     return;
   }
@@ -30,7 +30,7 @@ function redirectParaGaragem(user) {
   if (welcomeOverlay && welcomeMessage) {
     welcomeMessage.textContent = `Olá ${firstName}, seja muito bem-vindo(a)!`;
     welcomeOverlay.classList.add('active');
-    // REDIRECIONA PARA A HOME.HTML AGORA
+
     setTimeout(() => { window.location.replace('home.html'); }, 1500);
   } else {
     window.location.replace('home.html');
@@ -44,9 +44,9 @@ onAuthStateChanged(auth, (user) => {
   }
 });
 
-// ==========================================
-// LOGIN COM E-MAIL E SENHA
-// ==========================================
+
+
+
 if (loginForm) {
   loginForm.addEventListener('submit', async (e) => {
     e.preventDefault();
@@ -75,9 +75,9 @@ if (loginForm) {
   });
 }
 
-// ==========================================
-// CLICK DO BOTÃO DO GOOGLE
-// ==========================================
+
+
+
 if (btnGoogle) {
   btnGoogle.addEventListener('click', () => {
     if (isIOSStandalone) {
@@ -90,9 +90,9 @@ if (btnGoogle) {
   });
 }
 
-// ==========================================
-// CAPTURA RETORNO DO REDIRECIONAMENTO GOOGLE
-// ==========================================
+
+
+
 getRedirectResult(auth).then((result) => {
   if (result) {
     const user = result.user;
@@ -123,9 +123,9 @@ getRedirectResult(auth).then((result) => {
   }
 });
 
-// ==========================================
-// RECUPERAÇÃO DE SENHA
-// ==========================================
+
+
+
 const forgotPasswordLink = document.getElementById('forgot-password-link');
 const forgotPasswordModal = document.getElementById('forgot-password-modal');
 const btnCloseReset = document.getElementById('btn-close-reset');

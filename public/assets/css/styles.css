@@ -807,7 +807,7 @@ td {
   box-shadow: 4px 0 15px rgba(0, 0, 0, 0.8);
   overflow-y: auto;
   max-height: 100vh;
-  padding-bottom: 30px; 
+  padding-bottom: 30px;
 }
 
 .sidebar.open {
@@ -1509,23 +1509,23 @@ td {
   border-top: 1px solid #334155;
 }
 
-/* Ajuste para a grade da Kaido House */
+
 .car-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-    gap: 15px;
-    margin-top: 20px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 15px;
+  margin-top: 20px;
 }
 
-/* Garante que o cartão seja consistente */
+
 .car-card {
-    background: #1e293b;
-    border-radius: 8px;
-    padding: 10px;
-    border: 1px solid #334155;
-    transition: transform 0.2s;
+  background: #1e293b;
+  border-radius: 8px;
+  padding: 10px;
+  border: 1px solid #334155;
+  transition: transform 0.2s;
 }
 
 .car-card:hover {
-    border-color: #c084fc;
+  border-color: #c084fc;
 }
