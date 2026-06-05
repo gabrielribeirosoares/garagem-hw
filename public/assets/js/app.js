@@ -33,6 +33,8 @@ let sessionUid = null;
 let userCollection = {};
 let publicOwnerName = "Colecionador";
 let userKaidoCollection = {};
+let userPrices = {};
+let userKaidoPrices = {};
 let sortCol = 'year';
 let sortDesc = true;
 let userPoints = 0;
@@ -468,7 +470,7 @@ function render() {
   if (emptyMsg) emptyMsg.style.display = 'none';
 
   dataToRender.forEach((r) => {
-    const filteredIdx = fullData.indexOf(r);
+    const globalIdx = PAGE_DATA.indexOf(r);
     const dot = getColor(r.color);
     const has = isOwned(r);
 
@@ -484,22 +486,16 @@ function render() {
     const repetidos = qty > 1 ? qty - 1 : 0;
     const isEditingAllowed = !isPublicView;
 
-
     const isVendedorEditandoCliente = (isAdmin || isManager) && targetUid && targetUid !== 'ME' && targetUid !== sessionUid;
 
     let controlesHTML = '';
-    let optionsHTML = '';
-    for (let i = 0; i <= 50; i++) {
-      optionsHTML += `<option value="${i}" ${i === qty ? 'selected' : ''}>${i}</option>`;
-    }
 
     if (isEditingAllowed) {
       controlesHTML = `
         <div style="display: flex; gap: 8px; align-items: center; width: 100%;">
-          <select class="qty-input" style="width: 100%; max-width: 65px; padding: 8px; background: #0f172a; border: 1px solid #475569; color: var(--yellow); border-radius: 6px; font-weight: bold; font-size: 16px; outline: none; cursor: pointer; appearance: none; -webkit-appearance: none; text-align-last: center;">
-            ${optionsHTML}
-          </select>
-          <button class="btn-save" style="display: none; flex: 1; padding: 8px; background: #16a34a; color: white; border: none; border-radius: 6px; font-weight: bold; cursor: pointer;">Salvar</button>
+          <button class="btn-minus" style="padding: 8px 15px; background: #334155; color: white; border: 1px solid #475569; border-radius: 6px; font-weight: bold; cursor: pointer; font-size: 18px;" ${qty === 0 ? 'disabled style="opacity: 0.5;"' : ''}>-</button>
+          <div style="flex: 1; text-align: center; background: #0f172a; border: 1px solid #475569; color: var(--yellow); border-radius: 6px; padding: 8px; font-weight: bold; font-size: 16px;">${qty}</div>
+          <button class="btn-plus" style="padding: 8px 15px; background: #16a34a; color: white; border: none; border-radius: 6px; font-weight: bold; cursor: pointer; font-size: 18px;">+</button>
           ${repetidos > 0 ? `<span class="rep-badge" style="background: #ffedd5; color: #ea580c; padding: 4px 8px; border-radius: 6px; font-weight: bold; font-size: 11px;">+${repetidos}</span>` : ''}
         </div>`;
     } else {
@@ -509,7 +505,6 @@ function render() {
           ${repetidos > 0 ? `<span class="rep-badge" style="background: #ffedd5; color: #ea580c; padding: 4px 8px; border-radius: 6px; font-weight: bold; font-size: 11px;">+${repetidos}</span>` : ''}
         </div>`;
     }
-
 
     let btnVenderHTML = '';
     if (isVendedorEditandoCliente) {
@@ -521,7 +516,7 @@ function render() {
       : '';
 
     card.innerHTML = `
-      <div class="car-image-container" style="position: relative;">
+      <div class="car-image-container" style="position: relative; cursor: pointer;">
         <span class="year-badge">${r.year}</span>
         ${loteBadge}
         ${imgCell}
@@ -547,31 +542,39 @@ function render() {
     `;
 
     if (card.querySelector('.car-image-container') && r.image) {
-      card.querySelector('.car-image-container').addEventListener('click', () => openLb(filteredIdx));
+      card.querySelector('.car-image-container').addEventListener('click', () => {
+        window.currentFilteredData = fullData;
+        openLb(fullData.indexOf(r));
+      });
     }
 
     tbody.appendChild(card);
 
     if (isEditingAllowed) {
-      const inputElement = card.querySelector('.qty-input');
-      const saveBtn = card.querySelector('.btn-save');
-      inputElement.addEventListener('change', (e) => {
-        let newVal = parseInt(e.target.value) || 0;
-        saveBtn.style.display = newVal !== getQty(r) ? 'block' : 'none';
-      });
-      saveBtn.addEventListener('click', () => {
-        saveData(r.id, parseInt(inputElement.value) || 0);
-        saveBtn.style.display = 'none';
-        updateCounts();
-        if ((pageType === 'owned') && parseInt(inputElement.value) === 0) render();
-      });
+      const btnMinus = card.querySelector('.btn-minus');
+      const btnPlus = card.querySelector('.btn-plus');
+
+      if (btnMinus) {
+        btnMinus.addEventListener('click', () => {
+          if (qty > 0) {
+            saveData(r.id, qty - 1);
+            updateCounts();
+            setTimeout(() => render(), 50);
+          }
+        });
+      }
+
+      if (btnPlus) {
+        btnPlus.addEventListener('click', () => {
+          saveData(r.id, qty + 1);
+          updateCounts();
+          setTimeout(() => render(), 50);
+        });
+      }
     }
   });
   window.currentFilteredData = fullData;
 }
-
-
-
 
 function updateCounts() {
   const total = PAGE_DATA.length;
@@ -818,6 +821,8 @@ window.loadCollection = async function () {
       userRewards = snap.data().rewards || [];
       userHistory = snap.data().history || [];
       userWishlist = snap.data().wishlist || {};
+      userPrices = snap.data().prices || {};
+      userKaidoPrices = snap.data().kaidoPrices || {};
     } else {
       userCollection = {};
       userKaidoCollection = {};
@@ -826,6 +831,8 @@ window.loadCollection = async function () {
       userRewards = [];
       userHistory = [];
       userWishlist = {};
+      userPrices = {};
+      userKaidoPrices = {};
     }
 
 
@@ -930,10 +937,24 @@ const PONTOS_POR_CARRO = 100;
 
 async function saveData(carId, qty) {
   const oldQty = userCollection[carId] || 0;
-  userCollection[carId] = qty;
   const uidToSave = targetUid || sessionUid;
-
   const isVendedorEditandoCliente = (isAdmin || isManager) && targetUid && targetUid !== sessionUid;
+
+  if (qty > oldQty) {
+    const addedQty = qty - oldQty;
+    const priceInput = prompt(`Adicionando ${addedQty} unidade(s).\nQual foi o valor pago POR UNIDADE? (Ex: 25.50)`, "25.00");
+
+    if (priceInput !== null) {
+      const newPrice = parseFloat(priceInput.replace(',', '.')) || 0;
+      const currentAvg = userPrices[carId] || 0;
+      const currentTotal = oldQty * currentAvg;
+      const addedTotal = addedQty * newPrice;
+
+      userPrices[carId] = (currentTotal + addedTotal) / qty;
+    }
+  }
+
+  userCollection[carId] = qty;
 
   if (isVendedorEditandoCliente && targetRole === 'cliente' && qty > oldQty) {
     const diff = qty - oldQty;
@@ -956,26 +977,43 @@ async function saveData(carId, qty) {
     }
   }
 
-
   if (saveTimeout) clearTimeout(saveTimeout);
   saveTimeout = setTimeout(async () => {
     if (!uidToSave) return;
     try {
       const dRef = doc(db, 'collections', uidToSave);
-
-      await setDoc(dRef, { items: userCollection, points: userPoints, wishlist: userWishlist }, { merge: true });
+      await setDoc(dRef, {
+        items: userCollection,
+        points: userPoints,
+        wishlist: userWishlist,
+        prices: userPrices
+      }, { merge: true });
     } catch (e) {
-      console.error("Erro save:", e);
+      console.error(e);
     }
   }, 1000);
 }
 
 window.saveKaidoData = async function (codigo, qty) {
   const oldQty = userKaidoCollection[codigo] || 0;
-  userKaidoCollection[codigo] = qty;
   const uidToSave = targetUid || sessionUid;
-
   const isVendedorEditandoCliente = (isAdmin || isManager) && targetUid && targetUid !== sessionUid;
+
+  if (qty > oldQty) {
+    const addedQty = qty - oldQty;
+    const priceInput = prompt(`Adicionando ${addedQty} unidade(s) Kaido.\nQual foi o valor pago POR UNIDADE? (Ex: 180.00)`, "180.00");
+
+    if (priceInput !== null) {
+      const newPrice = parseFloat(priceInput.replace(',', '.')) || 0;
+      const currentAvg = userKaidoPrices[codigo] || 0;
+      const currentTotal = oldQty * currentAvg;
+      const addedTotal = addedQty * newPrice;
+
+      userKaidoPrices[codigo] = (currentTotal + addedTotal) / qty;
+    }
+  }
+
+  userKaidoCollection[codigo] = qty;
 
   if (isVendedorEditandoCliente && targetRole === 'cliente' && qty > oldQty) {
     const diff = qty - oldQty;
@@ -1000,14 +1038,17 @@ window.saveKaidoData = async function (codigo, qty) {
     if (!uidToSave) return;
     try {
       const dRef = doc(db, 'collections', uidToSave);
-
-      await setDoc(dRef, { kaidoItems: userKaidoCollection, points: userPoints, wishlist: userWishlist }, { merge: true });
+      await setDoc(dRef, {
+        kaidoItems: userKaidoCollection,
+        points: userPoints,
+        wishlist: userWishlist,
+        kaidoPrices: userKaidoPrices
+      }, { merge: true });
     } catch (e) {
-      console.error("Erro ao salvar Kaido:", e);
+      console.error(e);
     }
   }, 1000);
 };
-
 
 function openLb(index) {
   lbIndex = index;
@@ -1030,7 +1071,15 @@ function openLb(index) {
   const seriesOrBrand = isKaido ? (r.fabricante || 'Kaido House') : (r.series || 'Sem Série');
   const partOrCode = isKaido ? r.codigo : (r.part || 'N/A');
   const carYear = isKaido ? (r.ano || 'N/A') : r.year;
+  const itemId = isKaido ? r.codigo : r.id;
   const colorVal = isKaido ? (r.cor || 'N/A') : (r.color || 'N/A');
+
+  let valorUnitario = isKaido ? userKaidoPrices[r.codigo] : userPrices[r.id];
+  if (typeof valorUnitario === 'undefined') {
+    valorUnitario = isKaido ? 180 : (r.series && r.series.toLowerCase().includes('super') ? 150 : 25);
+  }
+
+  const valorFormatado = valorUnitario.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
 
   document.getElementById('lb-img').src = imgCarro;
 
@@ -1054,7 +1103,16 @@ function openLb(index) {
         <span class="lb-stat-label">Lote / SKU</span>
         <span class="lb-stat-value">${partOrCode}</span>
       </div>
-      <div class="lb-status-badge" style="color: ${badgeColor}; background: ${badgeBg}; border: 1px solid ${badgeColor};">
+      <div class="lb-stat-row">
+        <span class="lb-stat-label">Preço Pago (Unid)</span>
+        <span class="lb-stat-value" style="color: #10b981; font-weight: bold;">${valorFormatado}</span>
+      </div>
+      ${hasItem ? `
+        <button onclick="window.alterarPrecoItem('${itemId}', ${isKaido})" style="margin-top: 15px; background: #475569; color: #fff; border: 1px solid #64748b; padding: 8px 12px; border-radius: 6px; font-family: 'Barlow', sans-serif; font-size: 13px; cursor: pointer; transition: 0.2s; font-weight: 500;">
+          Editar Preço Pago
+        </button>
+      ` : ''}
+      <div class="lb-status-badge" style="color: ${badgeColor}; background: ${badgeBg}; border: 1px solid ${badgeColor}; margin-top: 20px; margin-bottom: 20px;">
         ${badgeText}
       </div>
     `;
@@ -1469,7 +1527,7 @@ function showModal(type, options) {
         zIndex: 10005
       });
     }
-    
+
     innerHTML = `
       <div class="custom-modal-box">
         <div class="custom-modal-icon">🎉</div>
@@ -1858,15 +1916,14 @@ window.renderKaidoGrid = function () {
 
     let controlesHTML = `
       <div style="display: flex; gap: 8px; align-items: center; width: 100%;">
-        <select class="qty-input" style="width: 100%; max-width: 65px; padding: 8px; background: #0f172a; border: 1px solid #475569; color: var(--yellow); border-radius: 6px; font-weight: bold; font-size: 16px; outline: none; cursor: pointer; appearance: none; -webkit-appearance: none; text-align-last: center;">
-          ${optionsHTML}
-        </select>
-        <button class="btn-save-kaido" style="display: none; flex: 1; padding: 8px; background: #16a34a; color: white; border: none; border-radius: 6px; font-weight: bold; cursor: pointer;">Salvar</button>
+        <button class="btn-minus-kaido" style="padding: 8px 15px; background: #334155; color: white; border: 1px solid #475569; border-radius: 6px; font-weight: bold; cursor: pointer; font-size: 18px;" ${qty === 0 ? 'disabled style="opacity: 0.5;"' : ''}>-</button>
+        <div style="flex: 1; text-align: center; background: #0f172a; border: 1px solid #475569; color: var(--yellow); border-radius: 6px; padding: 8px; font-weight: bold; font-size: 16px;">${qty}</div>
+        <button class="btn-plus-kaido" style="padding: 8px 15px; background: #16a34a; color: white; border: none; border-radius: 6px; font-weight: bold; cursor: pointer; font-size: 18px;">+</button>
         ${repetidos > 0 ? `<span class="rep-badge" style="background: #ffedd5; color: #ea580c; padding: 4px 8px; border-radius: 6px; font-weight: bold; font-size: 11px;">+${repetidos}</span>` : ''}
       </div>`;
 
     card.innerHTML = `
-      <div class="car-image-container" style="position: relative;">
+      <div class="car-image-container" style="position: relative; cursor: pointer;">
         <span class="year-badge" style="background: #c084fc; color: #fff; font-family: 'Barlow', sans-serif;">${car.codigo}</span>
         <img src="${car.caminho_imagem}" loading="lazy" alt="${car.modelo}" onerror="this.src='assets/img/placeholder.png';">
       </div>
@@ -1890,19 +1947,31 @@ window.renderKaidoGrid = function () {
 
     grid.appendChild(card);
 
-    const inputElement = card.querySelector('.qty-input');
-    const saveBtn = card.querySelector('.btn-save-kaido');
+    if (card.querySelector('.car-image-container')) {
+      card.querySelector('.car-image-container').addEventListener('click', () => {
+        window.currentFilteredData = filteredData;
+        openLb(filteredData.indexOf(car));
+      });
+    }
 
-    inputElement.addEventListener('change', (e) => {
-      let newVal = parseInt(e.target.value) || 0;
-      saveBtn.style.display = newVal !== qty ? 'block' : 'none';
-    });
+    const btnMinus = card.querySelector('.btn-minus-kaido');
+    const btnPlus = card.querySelector('.btn-plus-kaido');
 
-    saveBtn.addEventListener('click', () => {
-      if (window.saveKaidoData) window.saveKaidoData(car.codigo, parseInt(inputElement.value) || 0);
-      saveBtn.style.display = 'none';
-      setTimeout(() => window.renderKaidoGrid(), 50);
-    });
+    if (btnMinus) {
+      btnMinus.addEventListener('click', () => {
+        if (qty > 0) {
+          if (window.saveKaidoData) window.saveKaidoData(car.codigo, qty - 1);
+          setTimeout(() => window.renderKaidoGrid(), 50);
+        }
+      });
+    }
+
+    if (btnPlus) {
+      btnPlus.addEventListener('click', () => {
+        if (window.saveKaidoData) window.saveKaidoData(car.codigo, qty + 1);
+        setTimeout(() => window.renderKaidoGrid(), 50);
+      });
+    }
   });
 
   if (filteredData.length === 0) {
@@ -1969,30 +2038,68 @@ window.renderStats = function () {
 
   let totalHW = 0, totalKaido = 0, totalWishlist = 0;
   let anosCount = {};
+  let patrimonioEstimado = 0;
 
   Object.keys(userCollection).forEach(carId => {
     let qty = userCollection[carId];
     if (qty > 0) {
       totalHW += qty;
       let car = RAW.find(r => r.id === carId);
-      if (car && car.year) {
-        anosCount[car.year] = (anosCount[car.year] || 0) + qty;
+
+      let valorUnitario = userPrices[carId];
+      if (typeof valorUnitario === 'undefined') {
+        valorUnitario = 25;
+        if (car) {
+          if (car.year) anosCount[car.year] = (anosCount[car.year] || 0) + qty;
+          if (car.series && car.series.toLowerCase().includes('super')) valorUnitario = 150;
+          if (car.price) valorUnitario = parseFloat(car.price);
+        }
+      } else {
+        if (car && car.year) anosCount[car.year] = (anosCount[car.year] || 0) + qty;
       }
+      patrimonioEstimado += (valorUnitario * qty);
     }
   });
 
-  Object.values(userKaidoCollection).forEach(qty => { if (qty > 0) totalKaido += qty; });
+  Object.keys(userKaidoCollection).forEach(codigo => {
+    let qty = userKaidoCollection[codigo];
+    if (qty > 0) {
+      totalKaido += qty;
+      let valorKaido = userKaidoPrices[codigo];
+      if (typeof valorKaido === 'undefined') valorKaido = 180;
+      patrimonioEstimado += (valorKaido * qty);
+    }
+  });
+
   Object.values(userWishlist).forEach(wished => { if (wished) totalWishlist++; });
 
-  const pctHW = Math.round((Object.keys(userCollection).filter(k => userCollection[k] > 0).length / PAGE_DATA.length) * 100) || 0;
+  const hwPossuidos = Object.keys(userCollection).filter(k => userCollection[k] > 0).length;
+  const pctHW = RAW.length > 0 ? ((hwPossuidos / RAW.length) * 100).toFixed(2) : 0;
 
   let anosOrdenados = Object.keys(anosCount).sort((a, b) => anosCount[b] - anosCount[a]).slice(0, 5);
   let valoresAnos = anosOrdenados.map(ano => anosCount[ano]);
 
+  const valorFormatado = patrimonioEstimado.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
+
   container.innerHTML = `
-    <div style="margin-bottom: 30px;">
-        <h2 style="font-family: 'Bebas Neue', sans-serif; color: #fff; font-size: 32px; margin: 0; letter-spacing: 1px;">Visão Geral da Garagem</h2>
-        <p style="color: var(--muted); font-size: 14px;">Acompanhe o crescimento do seu império diecast.</p>
+    <div style="display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 30px; flex-wrap: wrap; gap: 15px;">
+        <div>
+            <h2 style="font-family: 'Bebas Neue', sans-serif; color: #fff; font-size: 32px; margin: 0; letter-spacing: 1px;">Visão Geral da Garagem</h2>
+            <p style="color: var(--muted); font-size: 14px;">Acompanhe o crescimento e a valorização do seu império diecast.</p>
+        </div>
+        <button onclick="window.gerarInfografico()" style="background: #3b82f6; color: #fff; border: none; padding: 10px 20px; border-radius: 8px; font-family: 'Bebas Neue', sans-serif; font-size: 18px; cursor: pointer; letter-spacing: 1px; display: flex; align-items: center; gap: 8px; box-shadow: 0 4px 12px rgba(59, 130, 246, 0.4);">
+            📸 Compartilhar Status
+        </button>
+    </div>
+
+    <div style="background: linear-gradient(135deg, #1e293b, #0f172a); padding: 25px; border-radius: 12px; border: 1px solid #10b981; margin-bottom: 25px; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 15px;">
+        <div>
+            <div style="color: #10b981; font-family: 'Bebas Neue', sans-serif; font-size: 20px; letter-spacing: 1px;">Patrimônio Estimado</div>
+            <div style="color: #fff; font-size: 36px; font-weight: bold; font-family: 'Bebas Neue', sans-serif;">${valorFormatado}</div>
+        </div>
+        <div style="background: rgba(16, 185, 129, 0.15); padding: 10px 20px; border-radius: 8px; color: #10b981; font-weight: bold; font-size: 14px; border: 1px solid rgba(16, 185, 129, 0.3);">
+            📈 Base de Cálculo: Preços Registrados
+        </div>
     </div>
 
     <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 15px; margin-bottom: 30px;">
@@ -2016,7 +2123,7 @@ window.renderStats = function () {
     <div style="background: var(--surface); padding: 24px; border-radius: 12px; border: 1px solid var(--border); margin-bottom: 30px;">
         <h3 style="color: #fff; margin-top: 0; margin-bottom: 15px; font-family: 'Bebas Neue'; font-size: 24px;">Progresso da Coleção (HW)</h3>
         <div style="display: flex; justify-content: space-between; margin-bottom: 8px; font-size: 14px; color: #cbd5e1; font-weight: bold;">
-            <span>Completude do Catálogo</span>
+            <span>Percentual completo do catálogo</span>
             <span style="color: var(--yellow);">${pctHW}%</span>
         </div>
         <div style="width: 100%; background: #0f172a; border-radius: 10px; height: 12px; overflow: hidden; border: 1px solid #334155;">
@@ -2775,3 +2882,121 @@ window.editarPrecoPedido = async function (pedidoId, precoAtual) {
     alert("Erro ao atualizar o banco de dados. Verifique o console.");
   }
 }
+
+window.gerarInfografico = function () {
+  let totalHW = 0, totalKaido = 0;
+  let patrimonioEstimado = 0;
+
+  Object.keys(userCollection).forEach(carId => {
+    let qty = userCollection[carId];
+    if (qty > 0) {
+      totalHW += qty;
+      let valorUnitario = userPrices[carId];
+      if (typeof valorUnitario === 'undefined') {
+        valorUnitario = 25;
+        let car = RAW.find(r => r.id === carId);
+        if (car) {
+          if (car.series && car.series.toLowerCase().includes('super')) valorUnitario = 150;
+          if (car.price) valorUnitario = parseFloat(car.price);
+        }
+      }
+      patrimonioEstimado += (valorUnitario * qty);
+    }
+  });
+
+  Object.keys(userKaidoCollection).forEach(codigo => {
+    let qty = userKaidoCollection[codigo];
+    if (qty > 0) {
+      totalKaido += qty;
+      let valorKaido = userKaidoPrices[codigo];
+      if (typeof valorKaido === 'undefined') valorKaido = 180;
+      patrimonioEstimado += (valorKaido * qty);
+    }
+  });
+
+  const totalCarros = totalHW + totalKaido;
+  const valorFormatado = patrimonioEstimado.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
+
+  let nivelText = 'Piloto Novato 🥉';
+  if (totalCarros >= 300) nivelText = 'Magnata Diecast 💎';
+  else if (totalCarros >= 150) nivelText = 'Garagem de Elite 🥇';
+  else if (totalCarros >= 50) nivelText = 'Colecionador Pro 🥈';
+
+  const infoDiv = document.createElement('div');
+  infoDiv.id = 'render-export';
+  infoDiv.style.cssText = `
+    position: fixed; top: -9999px; left: -9999px;
+    width: 1080px; height: 1920px;
+    background: linear-gradient(135deg, #0f172a, #1e293b);
+    display: flex; flex-direction: column; align-items: center; justify-content: center;
+    font-family: 'Barlow', sans-serif; color: #fff; z-index: -1;
+  `;
+
+  infoDiv.innerHTML = `
+    <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: radial-gradient(circle at 50% 20%, rgba(59, 130, 246, 0.2) 0%, transparent 60%);"></div>
+    <div style="z-index: 2; text-align: center; width: 80%;">
+        <div style="font-family: 'Bebas Neue', sans-serif; font-size: 100px; color: #facc15; margin-bottom: 20px; text-shadow: 0 4px 20px rgba(250, 204, 21, 0.4);">DIECAST MANAGER</div>
+        <div style="background: rgba(255,255,255,0.1); padding: 15px 40px; border-radius: 50px; font-size: 35px; display: inline-block; margin-bottom: 80px; border: 2px solid rgba(255,255,255,0.2);">${nivelText}</div>
+        
+        <div style="display: flex; flex-direction: column; gap: 40px;">
+            <div style="background: rgba(15, 23, 42, 0.8); border: 4px solid #3b82f6; border-radius: 30px; padding: 60px; box-shadow: 0 10px 40px rgba(0,0,0,0.5);">
+                <div style="font-size: 40px; color: #94a3b8; text-transform: uppercase; font-family: 'Bebas Neue', sans-serif;">Coleção Atual</div>
+                <div style="font-size: 140px; font-weight: bold; color: #fff; font-family: 'Bebas Neue', sans-serif; margin: 20px 0;">${totalCarros}</div>
+                <div style="font-size: 35px; color: #cbd5e1;">Miniaturas na Garagem</div>
+            </div>
+            
+            <div style="background: rgba(15, 23, 42, 0.8); border: 4px solid #10b981; border-radius: 30px; padding: 60px; box-shadow: 0 10px 40px rgba(0,0,0,0.5);">
+                <div style="font-size: 40px; color: #94a3b8; text-transform: uppercase; font-family: 'Bebas Neue', sans-serif;">Patrimônio Estimado</div>
+                <div style="font-size: 110px; font-weight: bold; color: #10b981; font-family: 'Bebas Neue', sans-serif; margin: 30px 0;">${valorFormatado}</div>
+            </div>
+        </div>
+        
+        <div style="margin-top: 100px; font-size: 30px; color: #64748b;">Acesse e crie sua garagem também!</div>
+    </div>
+  `;
+
+  document.body.appendChild(infoDiv);
+
+  setTimeout(() => {
+    html2canvas(infoDiv, { scale: 1, useCORS: true, backgroundColor: '#0f172a' }).then(canvas => {
+      const link = document.createElement('a');
+      link.download = 'minha_colecao_hw.jpg';
+      link.href = canvas.toDataURL('image/jpeg', 0.9);
+      link.click();
+      document.body.removeChild(infoDiv);
+    });
+  }, 500);
+};
+
+window.alterarPrecoItem = async function (id, isKaido) {
+  const currentPrice = isKaido ? (userKaidoPrices[id] || 180) : (userPrices[id] || 25);
+  const priceInput = prompt(`Digite o novo valor pago por unidade:`, currentPrice);
+
+  if (priceInput !== null) {
+    const newPrice = parseFloat(priceInput.replace(',', '.')) || 0;
+    if (isKaido) {
+      userKaidoPrices[id] = newPrice;
+    } else {
+      userPrices[id] = newPrice;
+    }
+
+    const uidToSave = targetUid || sessionUid;
+    if (uidToSave) {
+      try {
+        const { doc, setDoc } = await import("https://www.gstatic.com/firebasejs/12.13.0/firebase-firestore.js");
+        const dRef = doc(db, 'collections', uidToSave);
+        await setDoc(dRef, {
+          prices: userPrices,
+          kaidoPrices: userKaidoPrices
+        }, { merge: true });
+      } catch (e) {
+        console.error(e);
+      }
+    }
+
+    const listaAtual = window.currentFilteredData || PAGE_DATA;
+    const index = listaAtual.findIndex(r => (isKaido ? r.codigo : r.id) === id);
+    if (index !== -1) openLb(index);
+    if (typeof updateCounts === 'function') updateCounts();
+  }
+};
