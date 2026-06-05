@@ -111646,7 +111646,7 @@ export const RAW = [
     "color": "Dark Blue Enamel",
     "part": "11243",
     "hw": "BW",
-    "cas": "White, Red, Yellow Hot Wheels Logo, \"JACK BALDWIN\" & Red Chevy logo on roof, Black \"1\"",
+    "cas": "",
     "image": "https://static.wikia.nocookie.net/hotwheels/images/9/9d/93_Camaro_EnamelBlue.JPG/revision/latest?cb=20081126031841"
   },
   {
@@ -111656,7 +111656,7 @@ export const RAW = [
     "color": "Black",
     "part": "11846",
     "hw": "BW",
-    "cas": "White, Red \"NO FEAR\" \"1\" \"RACER\"",
+    "cas": "",
     "image": "https://static.wikia.nocookie.net/hotwheels/images/8/81/No_Fear_Race_Car_BlkBW.JPG/revision/latest?cb=20090207030713"
   },
   {
@@ -116799,7 +116799,6 @@ export const RAW = [
         "cas": "",
         "image": "https://static.wikia.nocookie.net/hotwheels/images/f/fa/CorvetteGrandSport.jpg"
     },
-    [
     {
         "year": 2016,
         "name": "'71 Datsun 510 Wagon",
@@ -116807,7 +116806,7 @@ export const RAW = [
         "color": "",
         "part": "DJF81",
         "hw": "Black",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2016_DJF81__71_Datsun_510_Wagon.jpg"
     },
     {
@@ -116817,7 +116816,7 @@ export const RAW = [
         "color": "",
         "part": "DJF82",
         "hw": "White",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2016_DJF82_Nissan_Skyline_2000GT_R.jpg"
     },
     {
@@ -116827,7 +116826,7 @@ export const RAW = [
         "color": "",
         "part": "DJF80",
         "hw": "Off-White",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2016_DJF80_Nissan_Skyline_HT_2000GT_X.jpg"
     },
     {
@@ -116837,7 +116836,7 @@ export const RAW = [
         "color": "",
         "part": "DJF79",
         "hw": "Yellow",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2016_DJF79_Toyota_2000_GT.jpg"
     },
     {
@@ -116847,7 +116846,7 @@ export const RAW = [
         "color": "",
         "part": "DJF78",
         "hw": "Purple",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2016_DJF78_Mazda_RX_3.jpg"
     },
     {
@@ -116857,7 +116856,7 @@ export const RAW = [
         "color": "",
         "part": "DJF86",
         "hw": "Black",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2016_DJF86_Porsche_993_GT2.jpg"
     },
     {
@@ -116867,7 +116866,7 @@ export const RAW = [
         "color": "",
         "part": "DJF85",
         "hw": "Pearl White",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2016_DJF85_Porsche_911_GT3_RS.jpg"
     },
     {
@@ -116877,7 +116876,7 @@ export const RAW = [
         "color": "",
         "part": "DJF84",
         "hw": "White",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2016_DJF84__92_BMW_M3.jpg"
     },
     {
@@ -116887,7 +116886,7 @@ export const RAW = [
         "color": "",
         "part": "DJF83",
         "hw": "Metalflake Blue",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2016_DJF83_Volkswagen_Golf_Mk7.jpg"
     },
     {
@@ -116897,7 +116896,7 @@ export const RAW = [
         "color": "",
         "part": "DJF87",
         "hw": "Red",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2016_DJF87_Fiat_500.jpg"
     },
     {
@@ -116907,7 +116906,7 @@ export const RAW = [
         "color": "",
         "part": "DYN96",
         "hw": "Metalflake Blue",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2016_DYN96_Ford_F_250.jpg"
     },
     {
@@ -116917,7 +116916,7 @@ export const RAW = [
         "color": "",
         "part": "DJF88",
         "hw": "Pearl Dark Red",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2016_DJF88__72_Ford_Ranchero.jpg"
     },
     {
@@ -116927,7 +116926,7 @@ export const RAW = [
         "color": "",
         "part": "DJF89",
         "hw": "Unpainted",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2016_DJF89_Subaru_BRAT.jpg"
     },
     {
@@ -116937,7 +116936,7 @@ export const RAW = [
         "color": "",
         "part": "DJF91",
         "hw": "Yellow",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2016_DJF91_Chevy_Silverado.jpg"
     },
     {
@@ -116947,7 +116946,7 @@ export const RAW = [
         "color": "",
         "part": "DJF92",
         "hw": "Aqua",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2016_DJF92_Datsun_620.jpg"
     },
     {
@@ -116957,7 +116956,7 @@ export const RAW = [
         "color": "",
         "part": "DJF93",
         "hw": "Metalflake Dark Gray",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2016_DJF93_Porsche_964.jpg"
     },
     {
@@ -116967,7 +116966,7 @@ export const RAW = [
         "color": "",
         "part": "DJF94",
         "hw": "Metalflake Dark Red",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2016_DJF94__78_Porsche_935.jpg"
     },
     {
@@ -116977,7 +116976,7 @@ export const RAW = [
         "color": "",
         "part": "DJF95",
         "hw": "Pearl White",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2016_DJF95__70_Chevy_Chevelle.jpg"
     },
     {
@@ -116987,7 +116986,7 @@ export const RAW = [
         "color": "",
         "part": "DJF96",
         "hw": "Metalflake Aqua",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2016_DJF96_Volkswagen_Karmann_Ghia.jpg"
     },
     {
@@ -116997,7 +116996,7 @@ export const RAW = [
         "color": "",
         "part": "DJF97",
         "hw": "Maroon",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2016_DJF97_Datsun_Bluebird_510.jpg"
     },
     {
@@ -117007,7 +117006,7 @@ export const RAW = [
         "color": "",
         "part": "DWH82",
         "hw": "Red",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2017_DWH82__68_Mercury_Cougar.jpg"
     },
     {
@@ -117017,7 +117016,7 @@ export const RAW = [
         "color": "",
         "part": "DWH83",
         "hw": "Metalflake White",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2017_DWH83__70_Dodge_Charger_R_T.jpg"
     },
     {
@@ -117027,7 +117026,7 @@ export const RAW = [
         "color": "",
         "part": "DWH85",
         "hw": "Blue",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2017_DWH85__68_COPO_Camaro.jpg"
     },
     {
@@ -117037,7 +117036,7 @@ export const RAW = [
         "color": "",
         "part": "DWH84",
         "hw": "Red",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2017_DWH84__55_Chevy_Bel_Air_Gasser.jpg"
     },
     {
@@ -117047,7 +117046,7 @@ export const RAW = [
         "color": "",
         "part": "FBX25",
         "hw": "Yellow",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2017_FBX25__69_Corvette_Racer.jpg"
     },
     {
@@ -117057,7 +117056,7 @@ export const RAW = [
         "color": "",
         "part": "DWH73",
         "hw": "White",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2017_DWH73_Custom_Volkswagen_Beetle.jpg"
     },
     {
@@ -117067,7 +117066,7 @@ export const RAW = [
         "color": "",
         "part": "DWH75",
         "hw": "Light Gray",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2017_DWH75_Custom_69_Volkswagen_Squareback.jpg"
     },
     {
@@ -117077,7 +117076,7 @@ export const RAW = [
         "color": "",
         "part": "DWH72",
         "hw": "Dark Blue",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2017_DWH72_Porsche_356A_Outlaw.jpg"
     },
     {
@@ -117087,7 +117086,7 @@ export const RAW = [
         "color": "",
         "part": "DWH74",
         "hw": "Yellow",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2017_DWH74_Volkswagen_SP2.jpg"
     },
     {
@@ -117097,7 +117096,7 @@ export const RAW = [
         "color": "",
         "part": "DWH71",
         "hw": "Pearl White",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2017_DWH71__60s_Fiat_500D_Modificado.jpg"
     },
     {
@@ -117107,7 +117106,7 @@ export const RAW = [
         "color": "",
         "part": "DWH78",
         "hw": "Red",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2017_DWH78__78_Porsche_935_78.jpg"
     },
     {
@@ -117117,7 +117116,7 @@ export const RAW = [
         "color": "",
         "part": "DWH77",
         "hw": "Yellow",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2017_DWH77_Mazda_RX_3.jpg"
     },
     {
@@ -117127,7 +117126,7 @@ export const RAW = [
         "color": "",
         "part": "DWH80",
         "hw": "Red",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2017_DWH80_Porsche_914_6.jpg"
     },
     {
@@ -117137,7 +117136,7 @@ export const RAW = [
         "color": "",
         "part": "DWH76",
         "hw": "White",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2017_DWH76_Porsche_962.jpg"
     },
     {
@@ -117147,7 +117146,7 @@ export const RAW = [
         "color": "",
         "part": "DWH79",
         "hw": "Black",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2017_DWH79_Acura_NSX.jpg"
     },
     {
@@ -117157,7 +117156,7 @@ export const RAW = [
         "color": "",
         "part": "DWH70",
         "hw": "Dark Blue",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2017_DWH70__92_BMW_M3.jpg"
     },
     {
@@ -117167,7 +117166,7 @@ export const RAW = [
         "color": "",
         "part": "FPM80",
         "hw": "Orange & Black",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2017_FPM80__85_Honda_CR_X.jpg"
     },
     {
@@ -117177,7 +117176,7 @@ export const RAW = [
         "color": "",
         "part": "DWH67",
         "hw": "Black",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2017_DWH67_Porsche_964.jpg"
     },
     {
@@ -117187,7 +117186,7 @@ export const RAW = [
         "color": "",
         "part": "DWH69",
         "hw": "Blue",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2017_DWH69_Renault_5_Turbo.jpg"
     },
     {
@@ -117197,7 +117196,7 @@ export const RAW = [
         "color": "",
         "part": "DWH66",
         "hw": "Black",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2017_DWH66_Mercedes_Benz_190E_2_5_16_EVO_II.jpg"
     },
     {
@@ -117207,7 +117206,7 @@ export const RAW = [
         "color": "",
         "part": "DWH90",
         "hw": "Orange",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2017_DWH90_McLaren_P1.jpg"
     },
     {
@@ -117217,7 +117216,7 @@ export const RAW = [
         "color": "",
         "part": "DWH88",
         "hw": "White",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2017_DWH88_Custom_Datsun_240Z.jpg"
     },
     {
@@ -117227,7 +117226,7 @@ export const RAW = [
         "color": "",
         "part": "DWH87",
         "hw": "Silver",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2017_DWH87_Alfa_Romeo_Giulia_Sprint_GTA.jpg"
     },
     {
@@ -117237,7 +117236,7 @@ export const RAW = [
         "color": "",
         "part": "DWH86",
         "hw": "White",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2017_DWH86_BMW_M1_Procar.jpg"
     },
     {
@@ -117247,7 +117246,7 @@ export const RAW = [
         "color": "",
         "part": "DWH89",
         "hw": "Blue",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2017_DWH89_Subaru_Impreza_WRX.jpg"
     },
     {
@@ -117257,7 +117256,7 @@ export const RAW = [
         "color": "",
         "part": "FPW87",
         "hw": "Metalflake Purple",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2017_FPW87__65_Mercury_Comet_Cyclone.jpg"
     },
     {
@@ -117267,7 +117266,7 @@ export const RAW = [
         "color": "",
         "part": "FPW88",
         "hw": "Yellow",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2017_FPW88__65_Volkswagen_Fastback.jpg"
     },
     {
@@ -117277,7 +117276,7 @@ export const RAW = [
         "color": "",
         "part": "FPW89",
         "hw": "Blue & White",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2017_FPW89_BRE_Datsun_Bluebird_510.jpg"
     },
     {
@@ -117287,7 +117286,7 @@ export const RAW = [
         "color": "",
         "part": "FPW91",
         "hw": "Light Blue",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2017_FPW91__13_COPO_Camaro.jpg"
     },
     {
@@ -117297,7 +117296,7 @@ export const RAW = [
         "color": "",
         "part": "FPW90",
         "hw": "White",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2017_FPW90__84_Mustang_SVO.jpg"
     },
     {
@@ -117307,7 +117306,7 @@ export const RAW = [
         "color": "",
         "part": "FLC09",
         "hw": "Silver",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2018_FLC09_Datsun_Bluebird_510.jpg"
     },
     {
@@ -117317,7 +117316,7 @@ export const RAW = [
         "color": "",
         "part": "FLC07",
         "hw": "Metalflake Orange",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2018_FLC07_Mazda_RX_3.jpg"
     },
     {
@@ -117327,7 +117326,7 @@ export const RAW = [
         "color": "",
         "part": "FLC08",
         "hw": "Yellow",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2018_FLC08_Nissan_Fairlady_Z.jpg"
     },
     {
@@ -117337,7 +117336,7 @@ export const RAW = [
         "color": "",
         "part": "FLC05",
         "hw": "Metalflake Dark Green",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2018_FLC05_Nissan_Laurel_2000_SGX.jpg"
     },
     {
@@ -117347,7 +117346,7 @@ export const RAW = [
         "color": "",
         "part": "FLC06",
         "hw": "Purple",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2018_FLC06_Nissan_Skyline_C210.jpg"
     },
     {
@@ -117357,7 +117356,7 @@ export const RAW = [
         "color": "",
         "part": "FLC14",
         "hw": "Yellow",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2018_FLC14_Volkswagen_T1_Panel_Bus.jpg"
     },
     {
@@ -117367,7 +117366,7 @@ export const RAW = [
         "color": "",
         "part": "FLC13",
         "hw": "Light Blue",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2018_FLC13_Ford_Transit_Super_Van.jpg"
     },
     {
@@ -117377,7 +117376,7 @@ export const RAW = [
         "color": "",
         "part": "FLC12",
         "hw": "Beige",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2018_FLC12_Volkswagen_Sunagon.jpg"
     },
     {
@@ -117387,7 +117386,7 @@ export const RAW = [
         "color": "",
         "part": "FLC10",
         "hw": "Light Green",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2018_FLC10_Nissan_C10_Skyline_Wagon.jpg"
     },
     {
@@ -117397,7 +117396,7 @@ export const RAW = [
         "color": "",
         "part": "FLC11",
         "hw": "Metalflake Maroon",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2018_FLC11_Honda_Odyssey.jpg"
     },
     {
@@ -117407,7 +117406,7 @@ export const RAW = [
         "color": "",
         "part": "FLC19",
         "hw": "Light Green",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2018_FLC19_Alfa_Romeo_Giulia_Sprint_GTA.jpg"
     },
     {
@@ -117417,7 +117416,7 @@ export const RAW = [
         "color": "",
         "part": "FLC16",
         "hw": "Black",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2018_FLC16_BMW_M1_Procar.jpg"
     },
     {
@@ -117427,7 +117426,7 @@ export const RAW = [
         "color": "",
         "part": "FLC18",
         "hw": "Black",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2018_FLC18_Mercedes_Benz_190E_2_5_16.jpg"
     },
     {
@@ -117437,7 +117436,7 @@ export const RAW = [
         "color": "",
         "part": "FLC17",
         "hw": "Silver",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2018_FLC17_Porsche_993_GT2.jpg"
     },
     {
@@ -117447,7 +117446,7 @@ export const RAW = [
         "color": "",
         "part": "FLC15",
         "hw": "White",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2018_FLC15_Audi_R8_LMS.jpg"
     },
     {
@@ -117457,7 +117456,7 @@ export const RAW = [
         "color": "",
         "part": "FLC20",
         "hw": "Unpainted",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2018_FLC20_Custom_62_Chevy_Pickup.jpg"
     },
     {
@@ -117467,7 +117466,7 @@ export const RAW = [
         "color": "",
         "part": "FLC21",
         "hw": "Beige",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2018_FLC21_Volkswagen_Caddy.jpg"
     },
     {
@@ -117477,7 +117476,7 @@ export const RAW = [
         "color": "",
         "part": "FLC22",
         "hw": "Black",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2018_FLC22__83_Chevy_Silverado.jpg"
     },
     {
@@ -117487,7 +117486,7 @@ export const RAW = [
         "color": "",
         "part": "FLC23",
         "hw": "Yellow",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2018_FLC23_Subaru_BRAT.jpg"
     },
     {
@@ -117497,7 +117496,7 @@ export const RAW = [
         "color": "",
         "part": "FLC24",
         "hw": "Matte Red",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2018_FLC24__60s_Ford_Econoline_Pickup.jpg"
     },
     {
@@ -117507,7 +117506,7 @@ export const RAW = [
         "color": "",
         "part": "FLC28",
         "hw": "Blue",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2018_FLC28_Shelby_Cobra_Daytona_Coupe.jpg"
     },
     {
@@ -117517,7 +117516,7 @@ export const RAW = [
         "color": "",
         "part": "FLC27",
         "hw": "Yellow",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2018_FLC27__69_COPO_Corvette.jpg"
     },
     {
@@ -117527,7 +117526,7 @@ export const RAW = [
         "color": "",
         "part": "FLC29",
         "hw": "Black",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2018_FLC29_Porsche_962.jpg"
     },
     {
@@ -117537,7 +117536,7 @@ export const RAW = [
         "color": "",
         "part": "FLC26",
         "hw": "Blue & Red",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2018_FLC26__16_Ford_GT_Race.jpg"
     },
     {
@@ -117547,7 +117546,7 @@ export const RAW = [
         "color": "",
         "part": "FLC25",
         "hw": "White",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2018_FLC25_Mazda_787B.jpg"
     },
     {
@@ -117557,7 +117556,7 @@ export const RAW = [
         "color": "",
         "part": "FVN69",
         "hw": "Green",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2018_FVN69__55_Chevy_Bel_Air_Gasser.jpg"
     },
     {
@@ -117567,7 +117566,7 @@ export const RAW = [
         "color": "",
         "part": "FVN73",
         "hw": "Red",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2018_FVN73__63_Chevy_Nova.jpg"
     },
     {
@@ -117577,7 +117576,7 @@ export const RAW = [
         "color": "",
         "part": "FVN72",
         "hw": "Yellow",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2018_FVN72__65_Dodge_Coronet.jpg"
     },
     {
@@ -117587,7 +117586,7 @@ export const RAW = [
         "color": "",
         "part": "FVN71",
         "hw": "White",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2018_FVN71__65_Mercury_Comet_Cyclone.jpg"
     },
     {
@@ -117597,7 +117596,7 @@ export const RAW = [
         "color": "",
         "part": "FVN70",
         "hw": "Blue",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2018_FVN70__66_Super_Nova.jpg"
     },
     {
@@ -117607,7 +117606,7 @@ export const RAW = [
         "color": "",
         "part": "FYN57",
         "hw": "Light Blue",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2019_FYN57__60s_Fiat_500D_Modificado.jpg"
     },
     {
@@ -117617,7 +117616,7 @@ export const RAW = [
         "color": "",
         "part": "GFY03",
         "hw": "Light Blue",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2019_GFY03__69_Ford_Mustang_Boss_302.jpg"
     },
     {
@@ -117627,7 +117626,7 @@ export const RAW = [
         "color": "",
         "part": "FYN58",
         "hw": "Light Blue",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2019_FYN58_Nissan_Laurel_2000_SGX.jpg"
     },
     {
@@ -117637,7 +117636,7 @@ export const RAW = [
         "color": "",
         "part": "FYN56",
         "hw": "Light Blue",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2019_FYN56_Volkswagen_Golf_Mk7.jpg"
     },
     {
@@ -117647,7 +117646,7 @@ export const RAW = [
         "color": "",
         "part": "FYN55",
         "hw": "Blue",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2019_FYN55_McLaren_F1_GTR.jpg"
     },
     {
@@ -117657,7 +117656,7 @@ export const RAW = [
         "color": "",
         "part": "FYN60",
         "hw": "Blue & Turquoise",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2019_FYN60_Nissan_Skyline_GT_R.jpg"
     },
     {
@@ -117667,7 +117666,7 @@ export const RAW = [
         "color": "",
         "part": "FYN61",
         "hw": "Red",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2019_FYN61_Mercedes_Benz_190E_2_5_16.jpg"
     },
     {
@@ -117677,7 +117676,7 @@ export const RAW = [
         "color": "",
         "part": "FYN62",
         "hw": "Gray",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2019_FYN62__16_Mercedes_AMG_GT3.jpg"
     },
     {
@@ -117687,7 +117686,7 @@ export const RAW = [
         "color": "",
         "part": "FYN63",
         "hw": "Light Blue",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2019_FYN63_Acura_NSX_GT3.jpg"
     },
     {
@@ -117697,7 +117696,7 @@ export const RAW = [
         "color": "",
         "part": "FYN64",
         "hw": "White",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2019_FYN64_Audi_R8_LMS.jpg"
     },
     {
@@ -117707,7 +117706,7 @@ export const RAW = [
         "color": "",
         "part": "FYN69",
         "hw": "Metallic Copper",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2019_FYN69__76_Chevy_Monza.jpg"
     },
     {
@@ -117717,7 +117716,7 @@ export const RAW = [
         "color": "",
         "part": "FYN65",
         "hw": "Light Blue",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2019_FYN65__76_Greenwood_Corvette.jpg"
     },
     {
@@ -117727,7 +117726,7 @@ export const RAW = [
         "color": "",
         "part": "FYN67",
         "hw": "White",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2019_FYN67__78_Porsche_935_78.jpg"
     },
     {
@@ -117737,7 +117736,7 @@ export const RAW = [
         "color": "",
         "part": "FYN68",
         "hw": "Matte Black",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2019_FYN68_RWB_Porsche_930.jpg"
     },
     {
@@ -117747,7 +117746,7 @@ export const RAW = [
         "color": "",
         "part": "FYN66",
         "hw": "Red",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2019_FYN66_Nissan_Skyline_Silhouette.jpg"
     },
     {
@@ -117757,7 +117756,7 @@ export const RAW = [
         "color": "",
         "part": "FYN79",
         "hw": "White",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2019_FYN79_Nissan_Silvia_S15_.jpg"
     },
     {
@@ -117767,7 +117766,7 @@ export const RAW = [
         "color": "",
         "part": "FYN75",
         "hw": "Yellow",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2019_FYN75__95_Mazda_RX_7.jpg"
     },
     {
@@ -117777,7 +117776,7 @@ export const RAW = [
         "color": "",
         "part": "FYN78",
         "hw": "Black",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2019_FYN78__96_Nissan_180SX_Type_X.jpg"
     },
     {
@@ -117787,7 +117786,7 @@ export const RAW = [
         "color": "",
         "part": "FYN77",
         "hw": "Silver",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2019_FYN77_Honda_S2000.jpg"
     },
     {
@@ -117797,7 +117796,7 @@ export const RAW = [
         "color": "",
         "part": "FYN76",
         "hw": "Blue",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2019_FYN76_Pandem_Subaru_BRZ.jpg"
     },
     {
@@ -117807,7 +117806,7 @@ export const RAW = [
         "color": "",
         "part": "FYN74",
         "hw": "Red",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2019_FYN74__70_Oldsmobile_442.jpg"
     },
     {
@@ -117817,7 +117816,7 @@ export const RAW = [
         "color": "",
         "part": "FYN73",
         "hw": "White",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2019_FYN73__80_Dodge_Macho_Power_Wagon.jpg"
     },
     {
@@ -117827,7 +117826,7 @@ export const RAW = [
         "color": "",
         "part": "FYN70",
         "hw": "Aqua",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2019_FYN70__88_Jeep_Grand_Wagoneer.jpg"
     },
     {
@@ -117837,7 +117836,7 @@ export const RAW = [
         "color": "",
         "part": "FYN71",
         "hw": "Black",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2019_FYN71__17_Ford_F_150_Raptor.jpg"
     },
     {
@@ -117847,7 +117846,7 @@ export const RAW = [
         "color": "",
         "part": "FYN72",
         "hw": "Light Green",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2019_FYN72_Volkswagen_Baja_Bug_.jpg"
     },
     {
@@ -117857,7 +117856,7 @@ export const RAW = [
         "color": "",
         "part": "FYN81",
         "hw": "Red",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2019_FYN81_Toyota_Supra.jpg"
     },
     {
@@ -117867,7 +117866,7 @@ export const RAW = [
         "color": "",
         "part": "FYN82",
         "hw": "Blue",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2019_FYN82__69_Chevelle_SS_396.jpg"
     },
     {
@@ -117877,7 +117876,7 @@ export const RAW = [
         "color": "",
         "part": "FYN83",
         "hw": "Orange",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2019_FYN83_2014_Custom_Mustang.jpg"
     },
     {
@@ -117887,7 +117886,7 @@ export const RAW = [
         "color": "",
         "part": "FYN84",
         "hw": "Light Blue",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2019_FYN84_Custom_93_Nissan_Hardbody_D21_.jpg"
     },
     {
@@ -117897,7 +117896,7 @@ export const RAW = [
         "color": "",
         "part": "FYN80",
         "hw": "Gold",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2019_FYN80_Volkswagen_Classic_Bug_.jpg"
     },
     {
@@ -117907,7 +117906,7 @@ export const RAW = [
         "color": "",
         "part": "GJP76",
         "hw": "White",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2020_GJP76__71_Porsche_911.jpg"
     },
     {
@@ -117917,7 +117916,7 @@ export const RAW = [
         "color": "",
         "part": "GJP78",
         "hw": "Red",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2020_GJP78_Alfa_Romeo_Giulia_Sprint_GTA.jpg"
     },
     {
@@ -117927,7 +117926,7 @@ export const RAW = [
         "color": "",
         "part": "GJP77",
         "hw": "White",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2020_GJP77__71_Datsun_510.jpg"
     },
     {
@@ -117937,7 +117936,7 @@ export const RAW = [
         "color": "",
         "part": "GJP79",
         "hw": "White",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2020_GJP79_BMW_2002.jpg"
     },
     {
@@ -117947,7 +117946,7 @@ export const RAW = [
         "color": "",
         "part": "GJP80",
         "hw": "Metalflake Dark Blue",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2020_GJP80__70_Ford_Escort_RS1600.jpg"
     },
     {
@@ -117957,7 +117956,7 @@ export const RAW = [
         "color": "",
         "part": "GJP84",
         "hw": "Red",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2020_GJP84_Nissan_Skyline_RS_KDR30_.jpg"
     },
     {
@@ -117967,7 +117966,7 @@ export const RAW = [
         "color": "",
         "part": "GJP83",
         "hw": "Gloss Orange",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2020_GJP83__85_Honda_City_Turbo_II.jpg"
     },
     {
@@ -117977,7 +117976,7 @@ export const RAW = [
         "color": "",
         "part": "GJP85",
         "hw": "Silvia Gold",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2020_GJP85_Nissan_Silvia_CSP311_.jpg"
     },
     {
@@ -117987,7 +117986,7 @@ export const RAW = [
         "color": "",
         "part": "GJP81",
         "hw": "Yellow",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2020_GJP81__75_Datsun_Sunny_Truck_B120_.jpg"
     },
     {
@@ -117997,7 +117996,7 @@ export const RAW = [
         "color": "",
         "part": "GJP82",
         "hw": "White",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2020_GJP82__68_Mazda_Cosmo_Sport.jpg"
     },
     {
@@ -118007,7 +118006,7 @@ export const RAW = [
         "color": "",
         "part": "GJP90",
         "hw": "White",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2020_GJP90__88_Mercedes_Unimog_U1300.jpg"
     },
     {
@@ -118017,7 +118016,7 @@ export const RAW = [
         "color": "",
         "part": "GJP88",
         "hw": "Black",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2020_GJP88__85_Ford_Bronco.jpg"
     },
     {
@@ -118027,7 +118026,7 @@ export const RAW = [
         "color": "",
         "part": "GJP89",
         "hw": "White",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2020_GJP89__67_Off_Road_Camaro.jpg"
     },
     {
@@ -118037,7 +118036,7 @@ export const RAW = [
         "color": "",
         "part": "GJP86",
         "hw": "Light Yellow",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2020_GJP86_Land_Rover_Defender_110_Hard_Top.jpg"
     },
     {
@@ -118047,7 +118046,7 @@ export const RAW = [
         "color": "",
         "part": "GJP87",
         "hw": "White",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2020_GJP87_Porsche_959_1986_.jpg"
     },
     {
@@ -118057,7 +118056,7 @@ export const RAW = [
         "color": "",
         "part": "GJP94",
         "hw": "White",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2020_GJP94_Audi_Sport_quattro.jpg"
     },
     {
@@ -118067,7 +118066,7 @@ export const RAW = [
         "color": "",
         "part": "GJP95",
         "hw": "White",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2020_GJP95_Porsche_934_5.jpg"
     },
     {
@@ -118077,7 +118076,7 @@ export const RAW = [
         "color": "",
         "part": "GJP91",
         "hw": "White",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2020_GJP91_Ford_RS_200.jpg"
     },
     {
@@ -118087,7 +118086,7 @@ export const RAW = [
         "color": "",
         "part": "GJP93",
         "hw": "White",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2020_GJP93_Lancia_037.jpg"
     },
     {
@@ -118097,7 +118096,7 @@ export const RAW = [
         "color": "",
         "part": "GJP92",
         "hw": "Light Grey",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2020_GJP92_Volkswagen_ID_R.jpg"
     },
     {
@@ -118107,7 +118106,7 @@ export const RAW = [
         "color": "",
         "part": "GJR00",
         "hw": "Pink",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2020_GJR00_Honda_Civic_EG.jpg"
     },
     {
@@ -118117,7 +118116,7 @@ export const RAW = [
         "color": "",
         "part": "GJP96",
         "hw": "Metalflake Blue",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2020_GJP96__98_Subaru_Impreza_22B_STi_Version.jpg"
     },
     {
@@ -118127,7 +118126,7 @@ export const RAW = [
         "color": "",
         "part": "GJP99",
         "hw": "White",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2020_GJP99_Nissan_Silvia_S14_.jpg"
     },
     {
@@ -118137,7 +118136,7 @@ export const RAW = [
         "color": "",
         "part": "GJP98",
         "hw": "Red",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2020_GJP98_Volkswagen_Jetta_MK3.jpg"
     },
     {
@@ -118147,7 +118146,7 @@ export const RAW = [
         "color": "",
         "part": "GJP97",
         "hw": "Metalflake Dark Blue",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2020_GJP97__72_Mercedes_Benz_280_SEL_4_5.jpg"
     },
     {
@@ -118157,7 +118156,7 @@ export const RAW = [
         "color": "",
         "part": "GJR05",
         "hw": "Black",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2020_GJR05_Plymouth_Barracuda_Hemi.jpg"
     },
     {
@@ -118167,7 +118166,7 @@ export const RAW = [
         "color": "",
         "part": "GJR02",
         "hw": "Metalflake White",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2020_GJR02__87_Buick_Regal_GNX.jpg"
     },
     {
@@ -118177,7 +118176,7 @@ export const RAW = [
         "color": "",
         "part": "GJR03",
         "hw": "Metalflake Purple",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2020_GJR03_Custom_72_Chevy_LUV.jpg"
     },
     {
@@ -118187,7 +118186,7 @@ export const RAW = [
         "color": "",
         "part": "GJR04",
         "hw": "Black",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2020_GJR04__18_Dodge_Challenger_SRT_Demon.jpg"
     },
     {
@@ -118197,7 +118196,7 @@ export const RAW = [
         "color": "",
         "part": "GJR01",
         "hw": "Red",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2020_GJR01_1991_GMC_Syclone.jpg"
     },
     {
@@ -118207,7 +118206,7 @@ export const RAW = [
         "color": "",
         "part": "GRJ62",
         "hw": "Light Blue",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2021_GRJ62_McLaren_F1_GTR.jpg"
     },
     {
@@ -118217,7 +118216,7 @@ export const RAW = [
         "color": "",
         "part": "GRJ60",
         "hw": "White",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2021_GRJ60_Jaguar_Lightweight_E_Type.jpg"
     },
     {
@@ -118227,7 +118226,7 @@ export const RAW = [
         "color": "",
         "part": "GRJ59",
         "hw": "Orange",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2021_GRJ59_Morris_Mini.jpg"
     },
     {
@@ -118237,7 +118236,7 @@ export const RAW = [
         "color": "",
         "part": "GRJ61",
         "hw": "Yellow",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2021_GRJ61_Lotus_Esprit_S1.jpg"
     },
     {
@@ -118247,7 +118246,7 @@ export const RAW = [
         "color": "",
         "part": "GRJ63",
         "hw": "Olive Green",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2021_GRJ63_Land_Rover_Defender_110_Hard_Top.jpg"
     },
     {
@@ -118257,7 +118256,7 @@ export const RAW = [
         "color": "",
         "part": "GRJ68",
         "hw": "Red",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2021_GRJ68__69_Nissan_Skyline_Van.jpg"
     },
     {
@@ -118267,7 +118266,7 @@ export const RAW = [
         "color": "",
         "part": "GRJ66",
         "hw": "Metalflake Steel Blue",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2021_GRJ66__64_Chevy_Nova_Panel.jpg"
     },
     {
@@ -118277,7 +118276,7 @@ export const RAW = [
         "color": "",
         "part": "GRJ64",
         "hw": "Dark Green",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2021_GRJ64_Volvo_P220_Amazon_Wagon.jpg"
     },
     {
@@ -118287,7 +118286,7 @@ export const RAW = [
         "color": "",
         "part": "GRJ67",
         "hw": "Light Yellow",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2021_GRJ67_Volvo_850_Estate.jpg"
     },
     {
@@ -118297,7 +118296,7 @@ export const RAW = [
         "color": "",
         "part": "GRJ65",
         "hw": "Dark Grey",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2021_GRJ65__17_Audi_RS_6_Avant.jpg"
     },
     {
@@ -118307,7 +118306,7 @@ export const RAW = [
         "color": "",
         "part": "GRJ72",
         "hw": "Laguna Seca Blue",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2021_GRJ72_BMW_M3_E46.jpg"
     },
     {
@@ -118317,7 +118316,7 @@ export const RAW = [
         "color": "",
         "part": "GRJ71",
         "hw": "Red",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2021_GRJ71_Volkswagen_T1_Panel_Bus.jpg"
     },
     {
@@ -118327,7 +118326,7 @@ export const RAW = [
         "color": "",
         "part": "GRJ70",
         "hw": "White",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2021_GRJ70_Porsche_959_1986_.jpg"
     },
     {
@@ -118337,7 +118336,7 @@ export const RAW = [
         "color": "",
         "part": "GRJ73",
         "hw": "Red",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2021_GRJ73_Mercedes_Benz_300_SEL_6_8_AMG.jpg"
     },
     {
@@ -118347,7 +118346,7 @@ export const RAW = [
         "color": "",
         "part": "GRJ69",
         "hw": "Nogaro Blue",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2021_GRJ69_Audi_S4_quattro.jpg"
     },
     {
@@ -118357,7 +118356,7 @@ export const RAW = [
         "color": "",
         "part": "GRJ78",
         "hw": "Dove Grey",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2021_GRJ78_McLaren_Senna.jpg"
     },
     {
@@ -118367,7 +118366,7 @@ export const RAW = [
         "color": "",
         "part": "GRJ77",
         "hw": "Volcanic Orange",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2021_GRJ77_Aston_Martin_Vulcan.jpg"
     },
     {
@@ -118377,7 +118376,7 @@ export const RAW = [
         "color": "",
         "part": "GRJ75",
         "hw": "Lava Red",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2021_GRJ75_Aston_Martin_Valhalla_Concept.jpg"
     },
     {
@@ -118387,7 +118386,7 @@ export const RAW = [
         "color": "",
         "part": "GRJ76",
         "hw": "French Racing Blue",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2021_GRJ76__16_Bugatti_Chiron.jpg"
     },
     {
@@ -118397,7 +118396,7 @@ export const RAW = [
         "color": "",
         "part": "GRJ74",
         "hw": "Verde Ithaca",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2021_GRJ74_Lamborghini_Hurac_n_LP_610_4.jpg"
     },
     {
@@ -118407,7 +118406,7 @@ export const RAW = [
         "color": "",
         "part": "GRJ82",
         "hw": "White",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2021_GRJ82_Nissan_Silvia_S14_.jpg"
     },
     {
@@ -118417,7 +118416,7 @@ export const RAW = [
         "color": "",
         "part": "GRJ79",
         "hw": "White",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2021_GRJ79__20_Toyota_GR_Supra.jpg"
     },
     {
@@ -118427,7 +118426,7 @@ export const RAW = [
         "color": "",
         "part": "GRJ83",
         "hw": "White",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2021_GRJ83_Toyota_AE86_Sprinter_Trueno.jpg"
     },
     {
@@ -118437,7 +118436,7 @@ export const RAW = [
         "color": "",
         "part": "GRJ81",
         "hw": "Blue",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2021_GRJ81_Pandem_Subaru_BRZ.jpg"
     },
     {
@@ -118447,7 +118446,7 @@ export const RAW = [
         "color": "",
         "part": "GRJ80",
         "hw": "Black",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2021_GRJ80__20_Ford_Mustang_RTR_Spec_5.jpg"
     },
     {
@@ -118457,7 +118456,7 @@ export const RAW = [
         "color": "",
         "part": "GRJ88",
         "hw": "Metalflake Silver",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2021_GRJ88__99_Ford_F_150_SVT_Lightning.jpg"
     },
     {
@@ -118467,7 +118466,7 @@ export const RAW = [
         "color": "",
         "part": "GRJ84",
         "hw": "White",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2021_GRJ84_Baja_Bouncer.jpg"
     },
     {
@@ -118477,7 +118476,7 @@ export const RAW = [
         "color": "",
         "part": "GRJ86",
         "hw": "Metalflake Forest Green",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2021_GRJ86__20_Jeep_Gladiator.jpg"
     },
     {
@@ -118487,7 +118486,7 @@ export const RAW = [
         "color": "",
         "part": "GRJ85",
         "hw": "Glossy Black",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2021_GRJ85_Ford_Bronco_R.jpg"
     },
     {
@@ -118497,7 +118496,7 @@ export const RAW = [
         "color": "",
         "part": "GRJ87",
         "hw": "White",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2021_GRJ87__75_Datsun_Sunny_Truck_B120_.jpg"
     },
     {
@@ -118507,7 +118506,7 @@ export const RAW = [
         "color": "",
         "part": "GRJ93",
         "hw": "Yellow",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2021_GRJ93_Nissan_300ZX_Twin_Turbo.jpg"
     },
     {
@@ -118517,7 +118516,7 @@ export const RAW = [
         "color": "",
         "part": "GRJ92",
         "hw": "Black",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2021_GRJ92__92_BMW_M3.jpg"
     },
     {
@@ -118527,7 +118526,7 @@ export const RAW = [
         "color": "",
         "part": "GRJ91",
         "hw": "Metalflake silver",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2021_GRJ91__98_Honda_Prelude.jpg"
     },
     {
@@ -118537,7 +118536,7 @@ export const RAW = [
         "color": "",
         "part": "GRJ89",
         "hw": "Metalflake blue",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2021_GRJ89_Mitsubishi_Lancer_Evolution_VI.jpg"
     },
     {
@@ -118547,7 +118546,7 @@ export const RAW = [
         "color": "",
         "part": "GRJ90",
         "hw": "Red",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2021_GRJ90_Mitsubishi_3000GT_VR_4.jpg"
     },
     {
@@ -118557,7 +118556,7 @@ export const RAW = [
         "color": "",
         "part": "GRJ96",
         "hw": "White",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2021_GRJ96_Toyota_Supra.jpg"
     },
     {
@@ -118567,7 +118566,7 @@ export const RAW = [
         "color": "",
         "part": "GRJ97",
         "hw": "Blue",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2021_GRJ97__87_Toyota_Pickup_Truck.jpg"
     },
     {
@@ -118577,7 +118576,7 @@ export const RAW = [
         "color": "",
         "part": "GRJ98",
         "hw": "White",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2021_GRJ98_Toyota_2000_GT.jpg"
     },
     {
@@ -118587,7 +118586,7 @@ export const RAW = [
         "color": "",
         "part": "GRJ95",
         "hw": "Red",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2021_GRJ95__81_Toyota_Starlet_KP61.jpg"
     },
     {
@@ -118597,7 +118596,7 @@ export const RAW = [
         "color": "",
         "part": "GRJ94",
         "hw": "Tan",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2021_GRJ94_Toyota_LandCruiser_FJ60.jpg"
     },
     {
@@ -118607,7 +118606,7 @@ export const RAW = [
         "color": "",
         "part": "HCK03",
         "hw": "Metalflake White",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2022_HCK03_Corvette_C8_R.jpg"
     },
     {
@@ -118617,7 +118616,7 @@ export const RAW = [
         "color": "",
         "part": "HCJ83",
         "hw": "Orange",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2022_HCJ83__69_Chevelle_SS_396.jpg"
     },
     {
@@ -118627,7 +118626,7 @@ export const RAW = [
         "color": "",
         "part": "HCK05",
         "hw": "Aqua",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2022_HCK05_Ford_Bronco_R.jpg"
     },
     {
@@ -118637,7 +118636,7 @@ export const RAW = [
         "color": "",
         "part": "HCK04",
         "hw": "Acid Green",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2022_HCK04__20_Dodge_Charger_Hellcat.jpg"
     },
     {
@@ -118647,7 +118646,7 @@ export const RAW = [
         "color": "",
         "part": "HCK02",
         "hw": "Silver",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2022_HCK02_Tesla_Roadster.jpg"
     },
     {
@@ -118657,7 +118656,7 @@ export const RAW = [
         "color": "",
         "part": "HCK06",
         "hw": "Black",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2022_HCK06_Corvette_C8_R.jpg"
     },
     {
@@ -118667,7 +118666,7 @@ export const RAW = [
         "color": "",
         "part": "HCJ96",
         "hw": "Metalflake Olive",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2022_HCJ96_Mercedes_Benz_Sprinter.jpg"
     },
     {
@@ -118677,7 +118676,7 @@ export const RAW = [
         "color": "",
         "part": "HCJ95",
         "hw": "Yellow",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2022_HCJ95_Audi_S4_quattro.jpg"
     },
     {
@@ -118687,7 +118686,7 @@ export const RAW = [
         "color": "",
         "part": "HCJ94",
         "hw": "Sky Blue",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2022_HCJ94_Porsche_911_GT3_RS.jpg"
     },
     {
@@ -118697,7 +118696,7 @@ export const RAW = [
         "color": "",
         "part": "HCJ79",
         "hw": "Red",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2022_HCJ79__12_Mercedes_Benz_C63_AMG_Coupe_Black_Series.jpg"
     },
     {
@@ -118707,7 +118706,7 @@ export const RAW = [
         "color": "",
         "part": "HCJ80",
         "hw": "Metalflake Silver",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2022_HCJ80_1994_AMG_Mercedes_C_Class_DTM_Touring_Car.jpg"
     },
     {
@@ -118717,7 +118716,7 @@ export const RAW = [
         "color": "",
         "part": "HCJ97",
         "hw": "Black",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2022_HCJ97__12_Mercedes_Benz_C63_AMG_Coupe_Black_Series.jpg"
     },
     {
@@ -118727,7 +118726,7 @@ export const RAW = [
         "color": "",
         "part": "HCJ99",
         "hw": "White",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2022_HCJ99_Toyota_AE86_Sprinter_Trueno.jpg"
     },
     {
@@ -118737,7 +118736,7 @@ export const RAW = [
         "color": "",
         "part": "HCJ98",
         "hw": "Metalflake Royal Blue",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2022_HCJ98_Mitsubishi_3000GT_VR_4.jpg"
     },
     {
@@ -118747,7 +118746,7 @@ export const RAW = [
         "color": "",
         "part": "HCK00",
         "hw": "Championship White",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2022_HCK00__03_Honda_NSX_Type_R.jpg"
     },
     {
@@ -118757,7 +118756,7 @@ export const RAW = [
         "color": "",
         "part": "HCJ81",
         "hw": "Red",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2022_HCJ81_LB_ER34_Super_Silhouette_Nissan_Skyline.jpg"
     },
     {
@@ -118767,7 +118766,7 @@ export const RAW = [
         "color": "",
         "part": "HCJ82",
         "hw": "Super Bright Yellow",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2022_HCJ82__95_Toyota_Celica_GT_Four.jpg"
     },
     {
@@ -118777,7 +118776,7 @@ export const RAW = [
         "color": "",
         "part": "HCK01",
         "hw": "Black",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2022_HCK01_LB_ER34_Super_Silhouette_Nissan_Skyline.jpg"
     },
     {
@@ -118787,7 +118786,7 @@ export const RAW = [
         "color": "",
         "part": "HCJ91",
         "hw": "Giallo Prototipo",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2022_HCJ91__69_Alfa_Romeo_33_Stradale.jpg"
     },
     {
@@ -118797,7 +118796,7 @@ export const RAW = [
         "color": "",
         "part": "HCJ92",
         "hw": "Frozen Diamond Silver",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2022_HCJ92_McLaren_Speedtail.jpg"
     },
     {
@@ -118807,7 +118806,7 @@ export const RAW = [
         "color": "",
         "part": "HCJ90",
         "hw": "Candy Red",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2022_HCJ90_Koenigsegg_Agera_R.jpg"
     },
     {
@@ -118817,7 +118816,7 @@ export const RAW = [
         "color": "",
         "part": "HCJ89",
         "hw": "French Racing Blue",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2022_HCJ89__94_Bugatti_EB110.jpg"
     },
     {
@@ -118827,7 +118826,7 @@ export const RAW = [
         "color": "",
         "part": "HCJ29",
         "hw": "Two-tone Verde Selvans and Nero Aldebaran",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2022_HCJ29_Lamborghini_Essenza_SCV12.jpg"
     },
     {
@@ -118837,7 +118836,7 @@ export const RAW = [
         "color": "",
         "part": "HCJ93",
         "hw": "Nero Aldebaran",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2022_HCJ93_Lamborghini_Essenza_SCV12.jpg"
     },
     {
@@ -118847,7 +118846,7 @@ export const RAW = [
         "color": "",
         "part": "HCK07",
         "hw": "Red",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2022_HCK07_Mercedes_Benz_300_SL.jpg"
     },
     {
@@ -118857,7 +118856,7 @@ export const RAW = [
         "color": "",
         "part": "HCK08",
         "hw": "Jet Black",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2022_HCK08_McLaren_F1.jpg"
     },
     {
@@ -118867,7 +118866,7 @@ export const RAW = [
         "color": "",
         "part": "HCJ84",
         "hw": "White",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2022_HCJ84__66_Chevrolet_Corvair_Yenko_Stinger.jpg"
     },
     {
@@ -118877,7 +118876,7 @@ export const RAW = [
         "color": "",
         "part": "HCK09",
         "hw": "Rosso Siviglia",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2022_HCK09_Lamborghini_Countach_LP_5000_QV.jpg"
     },
     {
@@ -118887,7 +118886,7 @@ export const RAW = [
         "color": "",
         "part": "HCJ85",
         "hw": "ZAMAC",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2022_HCJ85_Jay_Leno_Tank_Car.jpg"
     },
     {
@@ -118897,7 +118896,7 @@ export const RAW = [
         "color": "",
         "part": "HCK10",
         "hw": "Nero Tenebre",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2022_HCK10_Lamborghini_Countach_LP_5000_QV.jpg"
     },
     {
@@ -118907,7 +118906,7 @@ export const RAW = [
         "color": "",
         "part": "HCK18",
         "hw": "Metalflake Forest Green",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2022_HCK18__72_Mercedes_Benz_280_SEL_4_5.jpg"
     },
     {
@@ -118917,7 +118916,7 @@ export const RAW = [
         "color": "",
         "part": "HCK19",
         "hw": "Imola Red",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2022_HCK19_BMW_M3_E46_.jpg"
     },
     {
@@ -118927,7 +118926,7 @@ export const RAW = [
         "color": "",
         "part": "HCK16",
         "hw": "Arancio Borealis",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2022_HCK16_Lamborghini_Urus.jpg"
     },
     {
@@ -118937,7 +118936,7 @@ export const RAW = [
         "color": "",
         "part": "HCJ87",
         "hw": "Teal",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2022_HCJ87__73_Volvo_142_GL.jpg"
     },
     {
@@ -118947,7 +118946,7 @@ export const RAW = [
         "color": "",
         "part": "HCK17",
         "hw": "Alpine Blue",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2022_HCK17_Alpine_A110.jpg"
     },
     {
@@ -118957,7 +118956,7 @@ export const RAW = [
         "color": "",
         "part": "HCK20",
         "hw": "Black",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2022_HCK20__73_Volvo_142_GL.jpg"
     },
     {
@@ -118967,7 +118966,7 @@ export const RAW = [
         "color": "",
         "part": "HCK13",
         "hw": "Navy blue",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2022_HCK13__95_Mazda_RX7.jpg"
     },
     {
@@ -118977,7 +118976,7 @@ export const RAW = [
         "color": "",
         "part": "HCK12",
         "hw": "Red",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2022_HCK12_Nissan_300ZX_Twin_Turbo.jpg"
     },
     {
@@ -118987,7 +118986,7 @@ export const RAW = [
         "color": "",
         "part": "HCK11",
         "hw": "Purple",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2022_HCK11__81_Toyota_Starlet_KP61.jpg"
     },
     {
@@ -118997,7 +118996,7 @@ export const RAW = [
         "color": "",
         "part": "HCK14",
         "hw": "Orange",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2022_HCK14__98_Subaru_Impreza_22B_STi_Version.jpg"
     },
     {
@@ -119007,7 +119006,7 @@ export const RAW = [
         "color": "",
         "part": "HCJ86",
         "hw": "White",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2022_HCJ86_Mazda_RX7_FC_Pandem.jpg"
     },
     {
@@ -119017,7 +119016,7 @@ export const RAW = [
         "color": "",
         "part": "HCK15",
         "hw": "Black",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2022_HCK15_Mazda_RX7_FC_Pandem.jpg"
     },
     {
@@ -119027,7 +119026,7 @@ export const RAW = [
         "color": "",
         "part": "HCK24",
         "hw": "White",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2022_HCK24__65_Dodge_Coronet.jpg"
     },
     {
@@ -119037,7 +119036,7 @@ export const RAW = [
         "color": "",
         "part": "HCK23",
         "hw": "Metalflake white",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2022_HCK23_Volkswagen_Classic_Bug_.jpg"
     },
     {
@@ -119047,7 +119046,7 @@ export const RAW = [
         "color": "",
         "part": "HCK21",
         "hw": "Metalflake powder blue",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2022_HCK21__64_Chevy_Nova_Gasser.jpg"
     },
     {
@@ -119057,7 +119056,7 @@ export const RAW = [
         "color": "",
         "part": "HCK22",
         "hw": "Purple",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2022_HCK22__73_Plymouth_Duster.jpg"
     },
     {
@@ -119067,7 +119066,7 @@ export const RAW = [
         "color": "",
         "part": "HCJ88",
         "hw": "Matte anodized desert sand",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2022_HCJ88__33_Willys.jpg"
     },
     {
@@ -119077,7 +119076,7 @@ export const RAW = [
         "color": "",
         "part": "HCK25",
         "hw": "Black",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2022_HCK25__33_Willys.jpg"
     },
     {
@@ -119087,7 +119086,7 @@ export const RAW = [
         "color": "",
         "part": "HKC44",
         "hw": "Shark Blue",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2023_HKC44_Porsche_911_GT3.jpg"
     },
     {
@@ -119097,7 +119096,7 @@ export const RAW = [
         "color": "",
         "part": "HKC43",
         "hw": "Ventura Orange",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2023_HKC43_McLaren_720S.jpg"
     },
     {
@@ -119107,7 +119106,7 @@ export const RAW = [
         "color": "",
         "part": "HKC42",
         "hw": "Argento Liquido",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2023_HKC42_Pagani_Zonda_R.jpg"
     },
     {
@@ -119117,7 +119116,7 @@ export const RAW = [
         "color": "",
         "part": "HKC46",
         "hw": "Centennial White",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2023_HKC46_Ford_GT.jpg"
     },
     {
@@ -119127,7 +119126,7 @@ export const RAW = [
         "color": "",
         "part": "HKC41",
         "hw": "Rosso Mars",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2023_HKC41_Lamborghini_Veneno.jpg"
     },
     {
@@ -119137,7 +119136,7 @@ export const RAW = [
         "color": "",
         "part": "HKC45",
         "hw": "Jet Black",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2023_HKC45_Porsche_911_GT3.jpg"
     },
     {
@@ -119147,7 +119146,7 @@ export const RAW = [
         "color": "",
         "part": "HKC48",
         "hw": "White",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2023_HKC48_Alfa_Romeo_155_V6_TI.jpg"
     },
     {
@@ -119157,7 +119156,7 @@ export const RAW = [
         "color": "",
         "part": "HKC49",
         "hw": "Monza Red",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2023_HKC49_Lancia_Stratos.jpg"
     },
     {
@@ -119167,7 +119166,7 @@ export const RAW = [
         "color": "",
         "part": "HKC47",
         "hw": "Giallo Sole",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2023_HKC47_Lamborghini_Countach_LP_5000_QV.jpg"
     },
     {
@@ -119177,7 +119176,7 @@ export const RAW = [
         "color": "",
         "part": "HKC40",
         "hw": "Bianco Siderale",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2023_HKC40_Lamborghini_Countach_LPI_800_4.jpg"
     },
     {
@@ -119187,7 +119186,7 @@ export const RAW = [
         "color": "",
         "part": "HKC50",
         "hw": "White",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2023_HKC50_Alfa_Romeo_Giulia_Sprint_GTA.jpg"
     },
     {
@@ -119197,7 +119196,7 @@ export const RAW = [
         "color": "",
         "part": "HKC51",
         "hw": "Nero Maia",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2023_HKC51_Lamborghini_Countach_LPI_800_4.jpg"
     },
     {
@@ -119207,7 +119206,7 @@ export const RAW = [
         "color": "",
         "part": "HKC52",
         "hw": "Red",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2023_HKC52__01_BMW_M5.jpg"
     },
     {
@@ -119217,7 +119216,7 @@ export const RAW = [
         "color": "",
         "part": "HKC54",
         "hw": "White",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2023_HKC54__87_Ford_Sierra_Cosworth.jpg"
     },
     {
@@ -119227,7 +119226,7 @@ export const RAW = [
         "color": "",
         "part": "HKC56",
         "hw": "Blue",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2023_HKC56__89_Porsche_944_Turbo.jpg"
     },
     {
@@ -119237,7 +119236,7 @@ export const RAW = [
         "color": "",
         "part": "HKC53",
         "hw": "Orange",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2023_HKC53__73_Volvo_142_GL.jpg"
     },
     {
@@ -119247,7 +119246,7 @@ export const RAW = [
         "color": "",
         "part": "HKC55",
         "hw": "Silver",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2023_HKC55_Mercedes_Benz_500_E.jpg"
     },
     {
@@ -119257,7 +119256,7 @@ export const RAW = [
         "color": "",
         "part": "HKC57",
         "hw": "Black",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2023_HKC57_Mercedes_Benz_500_E.jpg"
     },
     {
@@ -119267,7 +119266,7 @@ export const RAW = [
         "color": "",
         "part": "HKC59",
         "hw": "White",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2023_HKC59_Porsche_935.jpg"
     },
     {
@@ -119277,7 +119276,7 @@ export const RAW = [
         "color": "",
         "part": "HKC60",
         "hw": "Lime Essence",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2023_HKC60_Aston_Martin_Vantage_GTE.jpg"
     },
     {
@@ -119287,7 +119286,7 @@ export const RAW = [
         "color": "",
         "part": "HKC61",
         "hw": "White",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2023_HKC61_Audi_R8_LMS.jpg"
     },
     {
@@ -119297,7 +119296,7 @@ export const RAW = [
         "color": "",
         "part": "HKC58",
         "hw": "White",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2023_HKC58_Ford_Capri_Gr_5.jpg"
     },
     {
@@ -119307,7 +119306,7 @@ export const RAW = [
         "color": "",
         "part": "HKC62",
         "hw": "Yellow",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2023_HKC62__94_AMG_Mercedes_C_Class_DTM_Touring_Car.jpg"
     },
     {
@@ -119317,7 +119316,7 @@ export const RAW = [
         "color": "",
         "part": "HKC63",
         "hw": "Black",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2023_HKC63_Porsche_935.jpg"
     },
     {
@@ -119327,7 +119326,7 @@ export const RAW = [
         "color": "",
         "part": "HKC67",
         "hw": "Yellow",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2023_HKC67_Honda_Civic_EG.jpg"
     },
     {
@@ -119337,7 +119336,7 @@ export const RAW = [
         "color": "",
         "part": "HKC66",
         "hw": "Silver",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2023_HKC66__98_Toyota_Altezza.jpg"
     },
     {
@@ -119347,7 +119346,7 @@ export const RAW = [
         "color": "",
         "part": "HKC64",
         "hw": "Red",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2023_HKC64_Fiat_131_Abarth.jpg"
     },
     {
@@ -119357,7 +119356,7 @@ export const RAW = [
         "color": "",
         "part": "HKC65",
         "hw": "Royal violet",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2023_HKC65_Volkswagen_Corrado_VR6.jpg"
     },
     {
@@ -119367,7 +119366,7 @@ export const RAW = [
         "color": "",
         "part": "HKC68",
         "hw": "Artichoke green",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2023_HKC68__91_Mazda_MX_5_Miata.jpg"
     },
     {
@@ -119377,7 +119376,7 @@ export const RAW = [
         "color": "",
         "part": "HKC69",
         "hw": "Black",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2023_HKC69__98_Toyota_Altezza.jpg"
     },
     {
@@ -119387,7 +119386,7 @@ export const RAW = [
         "color": "",
         "part": "HKC70",
         "hw": "Metalflake Gray",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2023_HKC70_2005_Toyota_Land_Cruiser_Prado.jpg"
     },
     {
@@ -119397,7 +119396,7 @@ export const RAW = [
         "color": "",
         "part": "HKC73",
         "hw": "Cavalry Blue",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2023_HKC73_2018_Toyota_4Runner.jpg"
     },
     {
@@ -119407,7 +119406,7 @@ export const RAW = [
         "color": "",
         "part": "HKC72",
         "hw": "Black",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2023_HKC72_1993_Mercedes_Benz_G_Class.jpg"
     },
     {
@@ -119417,7 +119416,7 @@ export const RAW = [
         "color": "",
         "part": "HKC74",
         "hw": "Two-tone white and turquoise",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2023_HKC74_Big_Air_Bel_Air.jpg"
     },
     {
@@ -119427,7 +119426,7 @@ export const RAW = [
         "color": "",
         "part": "HKC71",
         "hw": "Yellow",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2023_HKC71_Range_Rover_Classic.jpg"
     },
     {
@@ -119437,7 +119436,7 @@ export const RAW = [
         "color": "",
         "part": "HKC75",
         "hw": "Black",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2023_HKC75_2005_Toyota_Land_Cruiser_Prado.jpg"
     },
     {
@@ -119447,7 +119446,7 @@ export const RAW = [
         "color": "",
         "part": "HKC80",
         "hw": "Yellow",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2024_HKC80__71_Porsche_911.jpg"
     },
     {
@@ -119457,7 +119456,7 @@ export const RAW = [
         "color": "",
         "part": "HKC76",
         "hw": "Arancio Argos",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2024_HKC76_Lamborghini_Revent_n_Roadster.jpg"
     },
     {
@@ -119467,7 +119466,7 @@ export const RAW = [
         "color": "",
         "part": "HKC79",
         "hw": "Red",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2024_HKC79_BMW_M1_Procar.jpg"
     },
     {
@@ -119477,7 +119476,7 @@ export const RAW = [
         "color": "",
         "part": "HKC78",
         "hw": "British Racing Green",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2024_HKC78_Aston_Martin_V12_Speedster.jpg"
     },
     {
@@ -119487,7 +119486,7 @@ export const RAW = [
         "color": "",
         "part": "HKC77",
         "hw": "Dark Burgundy",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2024_HKC77_McLaren_F1.jpg"
     },
     {
@@ -119497,7 +119496,7 @@ export const RAW = [
         "color": "",
         "part": "HKC81",
         "hw": "Black",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2024_HKC81__71_Porsche_911.jpg"
     },
     {
@@ -119507,7 +119506,7 @@ export const RAW = [
         "color": "",
         "part": "HKC86",
         "hw": "Black",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2024_HKC86_2023_Nissan_Z.jpg"
     },
     {
@@ -119517,7 +119516,7 @@ export const RAW = [
         "color": "",
         "part": "HKC84",
         "hw": "Glossy gray",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2024_HKC84_LB_WORKS_Lamborghini_Hurac_n.jpg"
     },
     {
@@ -119527,7 +119526,7 @@ export const RAW = [
         "color": "",
         "part": "HKC82",
         "hw": "Yellow",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2024_HKC82_2023_Toyota_GR_Corolla.jpg"
     },
     {
@@ -119537,7 +119536,7 @@ export const RAW = [
         "color": "",
         "part": "HKC83",
         "hw": "Gray",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2024_HKC83_Nissan_240SX_S14_.jpg"
     },
     {
@@ -119547,7 +119546,7 @@ export const RAW = [
         "color": "",
         "part": "HKC85",
         "hw": "Leadfoot Gray",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2024_HKC85_2018_Ford_Mustang_RTR_Spec_5.jpg"
     },
     {
@@ -119557,7 +119556,7 @@ export const RAW = [
         "color": "",
         "part": "HKC87",
         "hw": "Black",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2024_HKC87_2023_Toyota_GR_Corolla.jpg"
     },
     {
@@ -119567,7 +119566,7 @@ export const RAW = [
         "color": "",
         "part": "HRV80",
         "hw": "Rosso Alfa",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2024_HRV80_Alfa_Romeo_GTV6_3_0.jpg"
     },
     {
@@ -119577,7 +119576,7 @@ export const RAW = [
         "color": "",
         "part": "HRV97",
         "hw": "White",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2024_HRV97__82_Toyota_Supra.jpg"
     },
     {
@@ -119587,7 +119586,7 @@ export const RAW = [
         "color": "",
         "part": "HRV79",
         "hw": "Mystic Blue Pearl",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2024_HRV79_Volkswagen_Golf_Mk7.jpg"
     },
     {
@@ -119597,7 +119596,7 @@ export const RAW = [
         "color": "",
         "part": "HRV82",
         "hw": "Harlequin",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2024_HRV82_Volkswagen_Bras_lia.jpg"
     },
     {
@@ -119607,7 +119606,7 @@ export const RAW = [
         "color": "",
         "part": "HRV81",
         "hw": "Light Silver Metallic",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2024_HRV81_Audi_S4_quattro.jpg"
     },
     {
@@ -119617,7 +119616,7 @@ export const RAW = [
         "color": "",
         "part": "HRV83",
         "hw": "Black",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2024_HRV83_Alfa_Romeo_GTV6_3_0.jpg"
     },
     {
@@ -119627,7 +119626,7 @@ export const RAW = [
         "color": "",
         "part": "HRV70",
         "hw": "Blue",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2024_HRV70__64_Prince_Skyline_GT.jpg"
     },
     {
@@ -119637,7 +119636,7 @@ export const RAW = [
         "color": "",
         "part": "HRV69",
         "hw": "Orange",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2024_HRV69__72_Toyota_Corolla_Levin.jpg"
     },
     {
@@ -119647,7 +119646,7 @@ export const RAW = [
         "color": "",
         "part": "HRV86",
         "hw": "Dark blue",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2024_HRV86_Nissan_Fairlady_Z.jpg"
     },
     {
@@ -119657,7 +119656,7 @@ export const RAW = [
         "color": "",
         "part": "HRV85",
         "hw": "Burnt red",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2024_HRV85__73_Honda_Civic_Custom.jpg"
     },
     {
@@ -119667,7 +119666,7 @@ export const RAW = [
         "color": "",
         "part": "HRV84",
         "hw": "Yellow",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2024_HRV84_Mazda_RX_3.jpg"
     },
     {
@@ -119677,7 +119676,7 @@ export const RAW = [
         "color": "",
         "part": "HRV87",
         "hw": "Black",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2024_HRV87__64_Prince_Skyline_GT.jpg"
     },
     {
@@ -119687,7 +119686,7 @@ export const RAW = [
         "color": "",
         "part": "HRV90",
         "hw": "Brushed silver",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2024_HRV90_Hummer_H1.jpg"
     },
     {
@@ -119697,7 +119696,7 @@ export const RAW = [
         "color": "",
         "part": "HRV91",
         "hw": "Metalflake blue",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2024_HRV91_2020_Jeep_Gladiator.jpg"
     },
     {
@@ -119707,7 +119706,7 @@ export const RAW = [
         "color": "",
         "part": "HRV71",
         "hw": "White",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2024_HRV71_Datsun_King_Cab_Baja_Custom.jpg"
     },
     {
@@ -119717,7 +119716,7 @@ export const RAW = [
         "color": "",
         "part": "HRV88",
         "hw": "Dark green",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2024_HRV88_Toyota_Land_Cruiser_FJ60.jpg"
     },
     {
@@ -119727,7 +119726,7 @@ export const RAW = [
         "color": "",
         "part": "HRV89",
         "hw": "Red",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2024_HRV89_Mitsubishi_Pajero_Evolution.jpg"
     },
     {
@@ -119737,7 +119736,7 @@ export const RAW = [
         "color": "",
         "part": "HRV92",
         "hw": "Black",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2024_HRV92_Datsun_King_Cab_Baja_Custom.jpg"
     },
     {
@@ -119747,7 +119746,7 @@ export const RAW = [
         "color": "",
         "part": "HRV72",
         "hw": "Green",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2024_HRV72__Rexy_Porsche_911_GT3_R_992_.jpg"
     },
     {
@@ -119757,7 +119756,7 @@ export const RAW = [
         "color": "",
         "part": "HRV95",
         "hw": "Silver",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2024_HRV95_Corvette_C8_R.jpg"
     },
     {
@@ -119767,7 +119766,7 @@ export const RAW = [
         "color": "",
         "part": "HRV93",
         "hw": "White",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2024_HRV93_2018_Bentley_Continental_GT3.jpg"
     },
     {
@@ -119777,7 +119776,7 @@ export const RAW = [
         "color": "",
         "part": "HRV73",
         "hw": "White",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2024_HRV73_2023_Nissan_Z_GT4.jpg"
     },
     {
@@ -119787,7 +119786,7 @@ export const RAW = [
         "color": "",
         "part": "HRV94",
         "hw": "Orange",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2024_HRV94_BMW_320_Group_5.jpg"
     },
     {
@@ -119797,7 +119796,7 @@ export const RAW = [
         "color": "",
         "part": "HRV96",
         "hw": "Pink",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2024_HRV96__Roxy_Porsche_911_GT3_R_992_.jpg"
     },
     {
@@ -119807,7 +119806,7 @@ export const RAW = [
         "color": "",
         "part": "HRV68",
         "hw": "White",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2024_HRV68_Nissan_Skyline_GT_R_R32_Pandem.jpg"
     },
     {
@@ -119817,7 +119816,7 @@ export const RAW = [
         "color": "",
         "part": "HRV98",
         "hw": "ZAMAC",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2024_HRV98_1990_Mercedes_Benz_190_E_2_5_16_Evolution_II.jpg"
     },
     {
@@ -119827,7 +119826,7 @@ export const RAW = [
         "color": "",
         "part": "HRV75",
         "hw": "Metalflake Impact Blue",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2024_HRV75_Nissan_SilEighty.jpg"
     },
     {
@@ -119837,7 +119836,7 @@ export const RAW = [
         "color": "",
         "part": "HRV99",
         "hw": "White",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2024_HRV99_Nissan_Skyline_GT_R_BCNR33_.jpg"
     },
     {
@@ -119847,7 +119846,7 @@ export const RAW = [
         "color": "",
         "part": "HRV74",
         "hw": "WR Blue Mica",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2024_HRV74_Subaru_Forester_STi.jpg"
     },
     {
@@ -119857,7 +119856,7 @@ export const RAW = [
         "color": "",
         "part": "HRW01",
         "hw": "Black",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2024_HRW01_Nissan_Skyline_GT_R_R32_Pandem.jpg"
     },
     {
@@ -119867,7 +119866,7 @@ export const RAW = [
         "color": "",
         "part": "HRW06",
         "hw": "White",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2025_HRW06_Bugatti_Veyron.jpg"
     },
     {
@@ -119877,7 +119876,7 @@ export const RAW = [
         "color": "",
         "part": "HRV77",
         "hw": "Burnt orange",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2025_HRV77_Lancia_Stratos_Zero.jpg"
     },
     {
@@ -119887,7 +119886,7 @@ export const RAW = [
         "color": "",
         "part": "HRW09",
         "hw": "Metalflake blue",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2025_HRW09_MG_Metro_6R4.jpg"
     },
     {
@@ -119897,7 +119896,7 @@ export const RAW = [
         "color": "",
         "part": "HRW07",
         "hw": "Yellow",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2025_HRW07_Porsche_911_Carrera_RS_2_7.jpg"
     },
     {
@@ -119907,7 +119906,7 @@ export const RAW = [
         "color": "",
         "part": "HRW08",
         "hw": "Matte black",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2025_HRW08_Mazda_787B.jpg"
     },
     {
@@ -119917,7 +119916,7 @@ export const RAW = [
         "color": "",
         "part": "HRW10",
         "hw": "Black",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2025_HRW10_Lancia_Stratos_Zero.jpg"
     },
     {
@@ -119927,7 +119926,7 @@ export const RAW = [
         "color": "",
         "part": "JBK59",
         "hw": "White",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2025_JBK59_LB_ER34_Super_Silhouette_Nissan_Skyline.jpg"
     },
     {
@@ -119937,7 +119936,7 @@ export const RAW = [
         "color": "",
         "part": "JBK47",
         "hw": "Belize Blue",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2025_JBK47_LB_WORKS_McLaren_720S.jpg"
     },
     {
@@ -119947,7 +119946,7 @@ export const RAW = [
         "color": "",
         "part": "JBK61",
         "hw": "Calsonic Blue",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2025_JBK61_Nissan_300ZX.jpg"
     },
     {
@@ -119957,7 +119956,7 @@ export const RAW = [
         "color": "",
         "part": "JBK60",
         "hw": "Sky blue",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2025_JBK60_Mazda_RX7_FC_Pandem.jpg"
     },
     {
@@ -119967,7 +119966,7 @@ export const RAW = [
         "color": "",
         "part": "JBK58",
         "hw": "White",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2025_JBK58_RWB_Porsche_930.jpg"
     },
     {
@@ -119977,7 +119976,7 @@ export const RAW = [
         "color": "",
         "part": "JBK62",
         "hw": "Onyx Black",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2025_JBK62_LB_WORKS_McLaren_720S.jpg"
     },
     {
@@ -119987,7 +119986,7 @@ export const RAW = [
         "color": "",
         "part": "JBK73",
         "hw": "Red",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2025_JBK73_1987_Toyota_Pickup_Truck.jpg"
     },
     {
@@ -119997,7 +119996,7 @@ export const RAW = [
         "color": "",
         "part": "JBK74",
         "hw": "Yellow",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2025_JBK74_Land_Rover_Defender_90.jpg"
     },
     {
@@ -120007,7 +120006,7 @@ export const RAW = [
         "color": "",
         "part": "JBK72",
         "hw": "Metalflake apple green",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2025_JBK72_Subaru_BRAT.jpg"
     },
     {
@@ -120017,7 +120016,7 @@ export const RAW = [
         "color": "",
         "part": "JBK70",
         "hw": "Metalflake flax",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2025_JBK70_2017_Ford_F_150_Raptor.jpg"
     },
     {
@@ -120027,7 +120026,7 @@ export const RAW = [
         "color": "",
         "part": "JBK52",
         "hw": "Heritage Blue",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2025_JBK52_2024_Toyota_Land_Cruiser.jpg"
     },
     {
@@ -120037,7 +120036,7 @@ export const RAW = [
         "color": "",
         "part": "JBK75",
         "hw": "Black",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2025_JBK75_2024_Toyota_Land_Cruiser.jpg"
     },
     {
@@ -120047,7 +120046,7 @@ export const RAW = [
         "color": "",
         "part": "JBK51",
         "hw": "Arkona White",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2025_JBK51_Audi_RS_6_Avant.jpg"
     },
     {
@@ -120057,7 +120056,7 @@ export const RAW = [
         "color": "",
         "part": "JBK67",
         "hw": "Yellow",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2025_JBK67__70_Chevelle_SS_Wagon.jpg"
     },
     {
@@ -120067,7 +120066,7 @@ export const RAW = [
         "color": "",
         "part": "JBK68",
         "hw": "White",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2025_JBK68_Volvo_850_Estate.jpg"
     },
     {
@@ -120077,7 +120076,7 @@ export const RAW = [
         "color": "",
         "part": "JBK69",
         "hw": "Red",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2025_JBK69_Mercedes_Benz_E_36_AMG.jpg"
     },
     {
@@ -120087,7 +120086,7 @@ export const RAW = [
         "color": "",
         "part": "JBK87",
         "hw": "Crystal Grey Metallic",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2025_JBK87_Subaru_Forester_STi.jpg"
     },
     {
@@ -120097,7 +120096,7 @@ export const RAW = [
         "color": "",
         "part": "JBK71",
         "hw": "Mythos Black",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2025_JBK71_Audi_RS_6_Avant.jpg"
     },
     {
@@ -120107,7 +120106,7 @@ export const RAW = [
         "color": "",
         "part": "JBK48",
         "hw": "Black",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2025_JBK48_2024_Ford_Mustang_RTR_Spec_5_FD.jpg"
     },
     {
@@ -120117,7 +120116,7 @@ export const RAW = [
         "color": "",
         "part": "JBK49",
         "hw": "Rosso Corsa",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2025_JBK49_Ferrari_499P.jpg"
     },
     {
@@ -120127,7 +120126,7 @@ export const RAW = [
         "color": "",
         "part": "JBK63",
         "hw": "Red",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2025_JBK63_Porsche_917KH.jpg"
     },
     {
@@ -120137,7 +120136,7 @@ export const RAW = [
         "color": "",
         "part": "JBK64",
         "hw": "White",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2025_JBK64_Pandem_Subaru_BRZ.jpg"
     },
     {
@@ -120147,7 +120146,7 @@ export const RAW = [
         "color": "",
         "part": "JBK65",
         "hw": "Gulf Racing Blue",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2025_JBK65_Porsche_911_GT3_R_992_.jpg"
     },
     {
@@ -120157,7 +120156,7 @@ export const RAW = [
         "color": "",
         "part": "JBK66",
         "hw": "Nero",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2025_JBK66_Ferrari_499P.jpg"
     },
     {
@@ -120167,7 +120166,7 @@ export const RAW = [
         "color": "",
         "part": "JBK79",
         "hw": "Metalflake Midnight Blue",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2025_JBK79_Bugatti_Bolide.jpg"
     },
     {
@@ -120177,7 +120176,7 @@ export const RAW = [
         "color": "",
         "part": "JBK76",
         "hw": "Phantom Grey",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2025_JBK76_Aston_Martin_Vantage_GTE.jpg"
     },
     {
@@ -120187,7 +120186,7 @@ export const RAW = [
         "color": "",
         "part": "JBK55",
         "hw": "Rosso Corsa",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2025_JBK55_LaFerrari.jpg"
     },
     {
@@ -120197,7 +120196,7 @@ export const RAW = [
         "color": "",
         "part": "JBK78",
         "hw": "Volcano Orange",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2025_JBK78_McLaren_Solus_GT.jpg"
     },
     {
@@ -120207,7 +120206,7 @@ export const RAW = [
         "color": "",
         "part": "JBK77",
         "hw": "Verde Paradiso",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2025_JBK77_Automobili_Pininfarina_Battista.jpg"
     },
     {
@@ -120217,7 +120216,7 @@ export const RAW = [
         "color": "",
         "part": "JBK80",
         "hw": "Black",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2025_JBK80_Bugatti_Bolide.jpg"
     },
     {
@@ -120227,7 +120226,7 @@ export const RAW = [
         "color": "",
         "part": "JBK88",
         "hw": "Yellow",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2025_JBK88_Nissan_Skyline_GT_R_R32_Pandem.jpg"
     },
     {
@@ -120237,7 +120236,7 @@ export const RAW = [
         "color": "",
         "part": "JBK53",
         "hw": "Championship White",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2025_JBK53__07_Honda_Civic_Type_R.jpg"
     },
     {
@@ -120247,7 +120246,7 @@ export const RAW = [
         "color": "",
         "part": "JBK50",
         "hw": "Light blue",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2025_JBK50_Mad_Mike_Mazda_RX_3_Wagon.jpg"
     },
     {
@@ -120257,7 +120256,7 @@ export const RAW = [
         "color": "",
         "part": "JBK86",
         "hw": "Metalflake gunmetal gray",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2025_JBK86_Lancer_Evolution_IX.jpg"
     },
     {
@@ -120267,7 +120266,7 @@ export const RAW = [
         "color": "",
         "part": "JBK90",
         "hw": "Red",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2025_JBK90__89_Toyota_Supra.jpg"
     },
     {
@@ -120277,7 +120276,7 @@ export const RAW = [
         "color": "",
         "part": "JBK89",
         "hw": "Crystal Black Pearl",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2025_JBK89__07_Honda_Civic_Type_R.jpg"
     },
     {
@@ -120287,7 +120286,7 @@ export const RAW = [
         "color": "",
         "part": "JBK56",
         "hw": "Rosso Barchetta",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2025_JBK56_Ferrari_F50.jpg"
     },
     {
@@ -120297,7 +120296,7 @@ export const RAW = [
         "color": "",
         "part": "JBK93",
         "hw": "Pansy Purple",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2025_JBK93_Koenigsegg_Agera_R.jpg"
     },
     {
@@ -120307,7 +120306,7 @@ export const RAW = [
         "color": "",
         "part": "JBK91",
         "hw": "Fayence Yellow",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2025_JBK91_Porsche_Carrera_GT.jpg"
     },
     {
@@ -120317,7 +120316,7 @@ export const RAW = [
         "color": "",
         "part": "JBK92",
         "hw": "Bayside Blue",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2025_JBK92_Nissan_Skyline_GT_R_V_Spec_II_BNR34_.jpg"
     },
     {
@@ -120327,7 +120326,7 @@ export const RAW = [
         "color": "",
         "part": "JBK57",
         "hw": "Whitest White",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2025_JBK57_Lexus_LFA.jpg"
     },
     {
@@ -120337,7 +120336,7 @@ export const RAW = [
         "color": "",
         "part": "JBK94",
         "hw": "Black Pearl",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2025_JBK94_Nissan_Skyline_GT_R_V_Spec_II_BNR34_.jpg"
     },
     {
@@ -120347,7 +120346,7 @@ export const RAW = [
         "color": "",
         "part": "JKF11",
         "hw": "Metalflake dark blue",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JKF11_Nissan_Skyline_2000GT_R_LBWK.jpg"
     },
     {
@@ -120357,7 +120356,7 @@ export const RAW = [
         "color": "",
         "part": "JKF10",
         "hw": "Metalflake orange",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JKF10_Toyota_AE86_Sprinter_Trueno.jpg"
     },
     {
@@ -120367,7 +120366,7 @@ export const RAW = [
         "color": "",
         "part": "JKD98",
         "hw": "Metalflake slate",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JKD98__77_Toyota_Celica.jpg"
     },
     {
@@ -120377,7 +120376,7 @@ export const RAW = [
         "color": "",
         "part": "JKF12",
         "hw": "Tan",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JKF12_Datsun_620.jpg"
     },
     {
@@ -120387,7 +120386,7 @@ export const RAW = [
         "color": "",
         "part": "JKF13",
         "hw": "Silver",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JKF13__88_Honda_CRX.jpg"
     },
     {
@@ -120397,7 +120396,7 @@ export const RAW = [
         "color": "",
         "part": "JKF14",
         "hw": "Gold",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JKF14_Datsun_510_Wagon.jpg"
     },
     {
@@ -120407,7 +120406,7 @@ export const RAW = [
         "color": "",
         "part": "JKF21",
         "hw": "Sonic Yellow",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JKF21_Subaru_Impreza_WRX.jpg"
     },
     {
@@ -120417,7 +120416,7 @@ export const RAW = [
         "color": "",
         "part": "JKF22",
         "hw": "White",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JKF22_Porsche_914_Safari.jpg"
     },
     {
@@ -120427,7 +120426,7 @@ export const RAW = [
         "color": "",
         "part": "JKF19",
         "hw": "Red",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JKF19_Mitsubishi_Lancer_Evolution_VI.jpg"
     },
     {
@@ -120437,7 +120436,7 @@ export const RAW = [
         "color": "",
         "part": "JKF01",
         "hw": "White",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JKF01_Lancia_Delta_S4.jpg"
     },
     {
@@ -120447,7 +120446,7 @@ export const RAW = [
         "color": "",
         "part": "JKF20",
         "hw": "Black",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JKF20_Mercedes_Benz_300_SEL_6_8_AMG.jpg"
     },
     {
@@ -120457,7 +120456,7 @@ export const RAW = [
         "color": "",
         "part": "JKF27",
         "hw": "Gold",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JKF27__55_Chevy_Bel_Air_Gasser.jpg"
     },
     {
@@ -120467,7 +120466,7 @@ export const RAW = [
         "color": "",
         "part": "JKF30",
         "hw": "Oxford Green",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JKF30_BMW_M3.jpg"
     },
     {
@@ -120477,7 +120476,7 @@ export const RAW = [
         "color": "",
         "part": "JKF33",
         "hw": "Raven Black",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JKF33__99_Ford_F_150_SVT_Lightning.jpg"
     },
     {
@@ -120487,7 +120486,7 @@ export const RAW = [
         "color": "",
         "part": "JKF29",
         "hw": "Arctic White",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JKF29_2008_Mercedes_Benz_CLK_63_AMG_Black_Series.jpg"
     },
     {
@@ -120497,7 +120496,7 @@ export const RAW = [
         "color": "",
         "part": "JKF31",
         "hw": "Silver Metallic",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JKF31__84_Mustang_SVO.jpg"
     },
     {
@@ -120507,7 +120506,7 @@ export const RAW = [
         "color": "",
         "part": "JKF28",
         "hw": "Velvet Red",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JKF28_2019_Jeep_Grand_Cherokee_Trackhawk.jpg"
     },
     {
@@ -120517,7 +120516,7 @@ export const RAW = [
         "color": "",
         "part": "JKF32",
         "hw": "Gold",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JKF32__92_BMW_M3.jpg"
     },
     {
@@ -120527,7 +120526,7 @@ export const RAW = [
         "color": "",
         "part": "JKD99",
         "hw": "Black",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JKD99_1994_NISMO_270R_S14_.jpg"
     },
     {
@@ -120537,7 +120536,7 @@ export const RAW = [
         "color": "",
         "part": "JKF00",
         "hw": "Rosso Corsa",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JKF00_Ferrari_Testarossa.jpg"
     },
     {
@@ -120547,7 +120546,7 @@ export const RAW = [
         "color": "",
         "part": "JKF15",
         "hw": "Silver",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JKF15_Toyota_Soarer.jpg"
     },
     {
@@ -120557,7 +120556,7 @@ export const RAW = [
         "color": "",
         "part": "JKF16",
         "hw": "Silver",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JKF16_Porsche_993_GT2.jpg"
     },
     {
@@ -120567,7 +120566,7 @@ export const RAW = [
         "color": "",
         "part": "JKF17",
         "hw": "White",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JKF17_Mazda_323_GTR.jpg"
     },
     {
@@ -120577,7 +120576,7 @@ export const RAW = [
         "color": "",
         "part": "JKF18",
         "hw": "Gold",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JKF18_Mercedes_Benz_190_E_2_5_16_Evo_II.jpg"
     },
     {
@@ -120587,7 +120586,7 @@ export const RAW = [
         "color": "",
         "part": "JKF02",
         "hw": "British Racing Green",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JKF02_Jaguar_XJS.jpg"
     },
     {
@@ -120597,7 +120596,7 @@ export const RAW = [
         "color": "",
         "part": "JKF03",
         "hw": "Gulf Racing Blue",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JKF03_Porsche_917K.jpg"
     },
     {
@@ -120607,7 +120606,7 @@ export const RAW = [
         "color": "",
         "part": "JKF24",
         "hw": "Red",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JKF24__76_Greenwood_Corvette.jpg"
     },
     {
@@ -120617,7 +120616,7 @@ export const RAW = [
         "color": "",
         "part": "JKF25",
         "hw": "Bianco",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JKF25_Ferrari_250_GTO.jpg"
     },
     {
@@ -120627,7 +120626,7 @@ export const RAW = [
         "color": "",
         "part": "JKF26",
         "hw": "White",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JKF26_Lancia_Stratos.jpg"
     },
     {
@@ -120637,7 +120636,7 @@ export const RAW = [
         "color": "",
         "part": "JKF23",
         "hw": "Gold",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JKF23_Nissan_Skyline_GT_R_BNR32_.jpg"
     },
     {
@@ -120647,7 +120646,7 @@ export const RAW = [
         "color": "",
         "part": "JKF05",
         "hw": "White",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JKF05_LB_Kaido_Works_Nissan_R32_Skyline_GT_R.jpg"
     },
     {
@@ -120657,7 +120656,7 @@ export const RAW = [
         "color": "",
         "part": "JKF04",
         "hw": "Black",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JKF04_2008_Audi_A4_Touring_Car.jpg"
     },
     {
@@ -120667,7 +120666,7 @@ export const RAW = [
         "color": "",
         "part": "JKF34",
         "hw": "White",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JKF34_LB_Super_Silhouette_Nissan_Silvia_S15_.jpg"
     },
     {
@@ -120677,7 +120676,7 @@ export const RAW = [
         "color": "",
         "part": "JKF35",
         "hw": "Gloss Blue",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JKF35_Lexus_RC_F_GT3.jpg"
     },
     {
@@ -120687,7 +120686,7 @@ export const RAW = [
         "color": "",
         "part": "JKF37",
         "hw": "Matte olive",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JKF37_Custom_70_Chevy_Nova.jpg"
     },
     {
@@ -120697,7 +120696,7 @@ export const RAW = [
         "color": "",
         "part": "JKF36",
         "hw": "Gold",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JKF36_LB_ER34_Super_Silhouette_Nissan_Skyline.jpg"
     },
     {
@@ -120707,7 +120706,7 @@ export const RAW = [
         "color": "",
         "part": "JKF06",
         "hw": "Pale green",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JKF06_Land_Rover_S2.jpg"
     },
     {
@@ -120717,7 +120716,7 @@ export const RAW = [
         "color": "",
         "part": "JKF07",
         "hw": "Atlantic Blue Pearl",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JKF07_Subaru_Legacy_GT_BP_.jpg"
     },
     {
@@ -120727,7 +120726,7 @@ export const RAW = [
         "color": "",
         "part": "JKF38",
         "hw": "Steel blue",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JKF38_1993_Mercedes_Benz_G_Class.jpg"
     },
     {
@@ -120737,7 +120736,7 @@ export const RAW = [
         "color": "",
         "part": "JKF39",
         "hw": "Black",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JKF39__64_Chevy_Nova_Station_Wagon.jpg"
     },
     {
@@ -120747,7 +120746,7 @@ export const RAW = [
         "color": "",
         "part": "JKF40",
         "hw": "Supersonic Red",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JKF40_2024_Toyota_Tacoma_TRD_Pro.jpg"
     },
     {
@@ -120757,7 +120756,7 @@ export const RAW = [
         "color": "",
         "part": "JKF41",
         "hw": "Gold",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JKF41_2018_Toyota_4Runner.jpg"
     },
     {
@@ -120767,7 +120766,7 @@ export const RAW = [
         "color": "",
         "part": "JKF08",
         "hw": "Moonlight White Magno",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JKF08_2025_Mercedes_AMG_GT_63_Pro.jpg"
     },
     {
@@ -120777,7 +120776,7 @@ export const RAW = [
         "color": "",
         "part": "JKF09",
         "hw": "Isle of Man Green",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JKF09_2025_BMW_M5.jpg"
     },
     {
@@ -120787,7 +120786,7 @@ export const RAW = [
         "color": "",
         "part": "JKF42",
         "hw": "Racing Yellow",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JKF42_Porsche_718_Cayman_GT4.jpg"
     },
     {
@@ -120797,7 +120796,7 @@ export const RAW = [
         "color": "",
         "part": "JKF43",
         "hw": "Ultra Blue",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JKF43_2020_Audi_RS_6_Avant.jpg"
     },
     {
@@ -120807,7 +120806,7 @@ export const RAW = [
         "color": "",
         "part": "JKF44",
         "hw": "Pure White",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JKF44_Volkswagen_Golf_Mk7.jpg"
     },
     {
@@ -120817,7 +120816,7 @@ export const RAW = [
         "color": "",
         "part": "JKF45",
         "hw": "Gold",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JKF45_Porsche_911_GT3_R_992_.jpg"
     },
     {
@@ -120827,7 +120826,7 @@ export const RAW = [
         "color": "",
         "part": "FLF61",
         "hw": "Metallic Gray",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2018_FLF61_Volkswagen_Transporter_T1_Pickup.jpg"
     },
     {
@@ -120837,7 +120836,7 @@ export const RAW = [
         "color": "",
         "part": "FLF59",
         "hw": "White & Orange",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2018_FLF59_Sakura_Sprinter.jpg"
     },
     {
@@ -120847,7 +120846,7 @@ export const RAW = [
         "color": "",
         "part": "FVL00",
         "hw": "Black",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2018_FVL00_Carry_On.jpg"
     },
     {
@@ -120857,7 +120856,7 @@ export const RAW = [
         "color": "",
         "part": "FLF57",
         "hw": "Yellow",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2018_FLF57_Retro_Rig.jpg"
     },
     {
@@ -120867,7 +120866,7 @@ export const RAW = [
         "color": "",
         "part": "FLF58",
         "hw": "Red",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2018_FLF58_Retro_Rig.jpg"
     },
     {
@@ -120877,7 +120876,7 @@ export const RAW = [
         "color": "",
         "part": "FLF60",
         "hw": "Red",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2018_FLF60_Fleet_Flyer.jpg"
     },
     {
@@ -120887,7 +120886,7 @@ export const RAW = [
         "color": "",
         "part": "FYT09",
         "hw": "Black",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2019_FYT09_Retro_Rig.jpg"
     },
     {
@@ -120897,7 +120896,7 @@ export const RAW = [
         "color": "",
         "part": "FYT04",
         "hw": "White & Red",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2019_FYT04_Sakura_Sprinter.jpg"
     },
     {
@@ -120907,7 +120906,7 @@ export const RAW = [
         "color": "",
         "part": "FYT12",
         "hw": "White & Blue",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2019_FYT12_Fleet_Flyer.jpg"
     },
     {
@@ -120917,7 +120916,7 @@ export const RAW = [
         "color": "",
         "part": "FYT08",
         "hw": "Green",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2019_FYT08_Fleet_Flyer.jpg"
     },
     {
@@ -120927,7 +120926,7 @@ export const RAW = [
         "color": "",
         "part": "FYT14",
         "hw": "White",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2019_FYT14_Sakura_Sprinter.jpg"
     },
     {
@@ -120937,7 +120936,7 @@ export const RAW = [
         "color": "",
         "part": "FYT10",
         "hw": "Silver & Black",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2019_FYT10_Aero_Lift.jpg"
     },
     {
@@ -120947,7 +120946,7 @@ export const RAW = [
         "color": "",
         "part": "FYT06",
         "hw": "Silver",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2019_FYT06_Volkswagen_Transporter_T1_Pickup.jpg"
     },
     {
@@ -120957,7 +120956,7 @@ export const RAW = [
         "color": "",
         "part": "FYT13",
         "hw": "Green & White",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2019_FYT13_Carry_On.jpg"
     },
     {
@@ -120967,7 +120966,7 @@ export const RAW = [
         "color": "",
         "part": "FYT15",
         "hw": "Blue & White",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2019_FYT15_Ford_C_800.jpg"
     },
     {
@@ -120977,7 +120976,7 @@ export const RAW = [
         "color": "",
         "part": "GJY52",
         "hw": "Red",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2019_GJY52_Fleet_Flyer.jpg"
     },
     {
@@ -120987,7 +120986,7 @@ export const RAW = [
         "color": "",
         "part": "GJT36",
         "hw": "Green",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2020_GJT36_Sakura_Sprinter.jpg"
     },
     {
@@ -120997,7 +120996,7 @@ export const RAW = [
         "color": "",
         "part": "GJT37",
         "hw": "Purple",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2020_GJT37_Aero_Lift.jpg"
     },
     {
@@ -121007,7 +121006,7 @@ export const RAW = [
         "color": "",
         "part": "FYT07",
         "hw": "Blue",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2020_FYT07_Wide_Open.jpg"
     },
     {
@@ -121017,7 +121016,7 @@ export const RAW = [
         "color": "",
         "part": "GJT38",
         "hw": "Blue",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2020_GJT38_Retro_Rig.jpg"
     },
     {
@@ -121027,7 +121026,7 @@ export const RAW = [
         "color": "",
         "part": "GJT40",
         "hw": "White, Green & Red",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2020_GJT40_Ford_C_800.jpg"
     },
     {
@@ -121037,7 +121036,7 @@ export const RAW = [
         "color": "",
         "part": "GJT43",
         "hw": "Silver & Black",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2020_GJT43_Euro_Hauler.jpg"
     },
     {
@@ -121047,7 +121046,7 @@ export const RAW = [
         "color": "",
         "part": "GJT42",
         "hw": "Yellow",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2020_GJT42_Volkswagen_Transporter_T1_Pickup.jpg"
     },
     {
@@ -121057,7 +121056,7 @@ export const RAW = [
         "color": "",
         "part": "GJT44",
         "hw": "White",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2020_GJT44_Wide_Open.jpg"
     },
     {
@@ -121067,7 +121066,7 @@ export const RAW = [
         "color": "",
         "part": "GJT41",
         "hw": "Blue & White",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2020_GJT41_Fleet_Flyer.jpg"
     },
     {
@@ -121077,7 +121076,7 @@ export const RAW = [
         "color": "",
         "part": "GJT39",
         "hw": "Pink",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2020_GJT39_Horizon_Hauler.jpg"
     },
     {
@@ -121087,7 +121086,7 @@ export const RAW = [
         "color": "",
         "part": "GRK49",
         "hw": "Light blue & orange",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2021_GRK49_Euro_Hauler.jpg"
     },
     {
@@ -121097,7 +121096,7 @@ export const RAW = [
         "color": "",
         "part": "GRK55",
         "hw": "Black & Red",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2021_GRK55_Sakura_Sprinter.jpg"
     },
     {
@@ -121107,7 +121106,7 @@ export const RAW = [
         "color": "",
         "part": "GRK59",
         "hw": "Red",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2021_GRK59_Ford_C_800.jpg"
     },
     {
@@ -121117,7 +121116,7 @@ export const RAW = [
         "color": "",
         "part": "GRK57",
         "hw": "Red",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2021_GRK57_Aero_Lift.jpg"
     },
     {
@@ -121127,7 +121126,7 @@ export const RAW = [
         "color": "",
         "part": "GRK51",
         "hw": "Blue",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2021_GRK51_Retro_Rig.jpg"
     },
     {
@@ -121137,7 +121136,7 @@ export const RAW = [
         "color": "",
         "part": "GRK61",
         "hw": "Orange",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2021_GRK61_Horizon_Hauler.jpg"
     },
     {
@@ -121147,7 +121146,7 @@ export const RAW = [
         "color": "",
         "part": "GRK53",
         "hw": "Sky Blue",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2021_GRK53_Speed_Waze.jpg"
     },
     {
@@ -121157,7 +121156,7 @@ export const RAW = [
         "color": "",
         "part": "'32 Ford",
         "hw": "Base code(s): P04",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2021_32Ford_RRLD.jpg"
     },
     {
@@ -121167,7 +121166,7 @@ export const RAW = [
         "color": "",
         "part": "GTT28",
         "hw": "White",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2021_GTT28_Rally_Van.jpg"
     },
     {
@@ -121177,7 +121176,7 @@ export const RAW = [
         "color": "",
         "part": "GRK63",
         "hw": "Red",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2021_GRK63_Horizon_Hauler.jpg"
     },
     {
@@ -121187,7 +121186,7 @@ export const RAW = [
         "color": "",
         "part": "GRK69",
         "hw": "Black",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2021_GRK69_Aero_Lift.jpg"
     },
     {
@@ -121197,7 +121196,7 @@ export const RAW = [
         "color": "",
         "part": "GRK67",
         "hw": "Two-tone gray and yellow",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2021_GRK67_Carry_On.jpg"
     },
     {
@@ -121207,7 +121206,7 @@ export const RAW = [
         "color": "",
         "part": "GRK65",
         "hw": "White",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2021_GRK65_Aero_Lift.jpg"
     },
     {
@@ -121217,7 +121216,7 @@ export const RAW = [
         "color": "",
         "part": "GRL85",
         "hw": "Yellow",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2021_GRL85_Carry_On.jpg"
     },
     {
@@ -121227,7 +121226,7 @@ export const RAW = [
         "color": "",
         "part": "HCR33",
         "hw": "White",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2022_HCR33_Ford_C_800.jpg"
     },
     {
@@ -121237,7 +121236,7 @@ export const RAW = [
         "color": "",
         "part": "HCR32",
         "hw": "Yellow",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2022_HCR32_Fleet_Flyer.jpg"
     },
     {
@@ -121247,7 +121246,7 @@ export const RAW = [
         "color": "",
         "part": "HCR35",
         "hw": "Red",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2022_HCR35_Aero_Lift.jpg"
     },
     {
@@ -121257,7 +121256,7 @@ export const RAW = [
         "color": "",
         "part": "HCR36",
         "hw": "Orange",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2022_HCR36_Fleet_Flyer.jpg"
     },
     {
@@ -121267,7 +121266,7 @@ export const RAW = [
         "color": "",
         "part": "HCR37",
         "hw": "Red",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2022_HCR37_Sakura_Sprinter.jpg"
     },
     {
@@ -121277,7 +121276,7 @@ export const RAW = [
         "color": "",
         "part": "HCR38",
         "hw": "Red",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2022_HCR38_Wide_Open.jpg"
     },
     {
@@ -121287,7 +121286,7 @@ export const RAW = [
         "color": "",
         "part": "HCN54",
         "hw": "Red",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2022_HCN54_Fleet_Street.jpg"
     },
     {
@@ -121297,7 +121296,7 @@ export const RAW = [
         "color": "",
         "part": "HCR34",
         "hw": "Yellow",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2022_HCR34_Sakura_Sprinter.jpg"
     },
     {
@@ -121307,7 +121306,7 @@ export const RAW = [
         "color": "",
         "part": "HCR40",
         "hw": "White",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2022_HCR40_Retro_Rig.jpg"
     },
     {
@@ -121317,7 +121316,7 @@ export const RAW = [
         "color": "",
         "part": "HCR29",
         "hw": "Yellow",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2022_HCR29_HW_Rally_Hauler.jpg"
     },
     {
@@ -121327,7 +121326,7 @@ export const RAW = [
         "color": "",
         "part": "HCR31",
         "hw": "Navy blue",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2022_HCR31_Speed_Waze.jpg"
     },
     {
@@ -121337,7 +121336,7 @@ export const RAW = [
         "color": "",
         "part": "HHL50",
         "hw": "Yellow",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2022_HHL50_Horizon_Hauler.jpg"
     },
     {
@@ -121347,7 +121346,7 @@ export const RAW = [
         "color": "",
         "part": "HKF39",
         "hw": "Matte black",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2023_HKF39_Aero_Lift.jpg"
     },
     {
@@ -121357,7 +121356,7 @@ export const RAW = [
         "color": "",
         "part": "HKF38",
         "hw": "Royal blue",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2023_HKF38_Retro_Rig.jpg"
     },
     {
@@ -121367,7 +121366,7 @@ export const RAW = [
         "color": "",
         "part": "HKF41",
         "hw": "Metalflake gunmetal gray",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2023_HKF41_Sakura_Sprinter.jpg"
     },
     {
@@ -121377,7 +121376,7 @@ export const RAW = [
         "color": "",
         "part": "HKF42",
         "hw": "Red",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2023_HKF42_Fleet_Flyer.jpg"
     },
     {
@@ -121387,7 +121386,7 @@ export const RAW = [
         "color": "",
         "part": "HKF40",
         "hw": "Red",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2023_HKF40__72_Chevy_Ramp_Truck.jpg"
     },
     {
@@ -121397,7 +121396,7 @@ export const RAW = [
         "color": "",
         "part": "HKF45",
         "hw": "White",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2023_HKF45_HW_Rally_Hauler.jpg"
     },
     {
@@ -121407,7 +121406,7 @@ export const RAW = [
         "color": "",
         "part": "HKF37",
         "hw": "White",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2023_HKF37_Flipsider_Hauler.jpg"
     },
     {
@@ -121417,7 +121416,7 @@ export const RAW = [
         "color": "",
         "part": "HKF43",
         "hw": "Gulf Racing Blue",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2023_HKF43_Second_Story_Lorry.jpg"
     },
     {
@@ -121427,7 +121426,7 @@ export const RAW = [
         "color": "",
         "part": "HKF44",
         "hw": "Orange",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2023_HKF44_Sakura_Sprinter.jpg"
     },
     {
@@ -121437,7 +121436,7 @@ export const RAW = [
         "color": "",
         "part": "HKF46",
         "hw": "Black",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2023_HKF46_Fleet_Street.jpg"
     },
     {
@@ -121447,7 +121446,7 @@ export const RAW = [
         "color": "",
         "part": "HKF48",
         "hw": "Black",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2023_HKF48_Speed_Waze.jpg"
     },
     {
@@ -121457,7 +121456,7 @@ export const RAW = [
         "color": "",
         "part": "HKF47",
         "hw": "White",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2023_HKF47_Euro_Hauler.jpg"
     },
     {
@@ -121467,7 +121466,7 @@ export const RAW = [
         "color": "",
         "part": "HPX97",
         "hw": "Sky blue",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2023_HPX97_Carry_On.jpg"
     },
     {
@@ -121477,7 +121476,7 @@ export const RAW = [
         "color": "",
         "part": "HPG19",
         "hw": "Metalflake Silver",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2023_HPG19_Fleet_Street.jpg"
     },
     {
@@ -121487,7 +121486,7 @@ export const RAW = [
         "color": "",
         "part": "HRV43",
         "hw": "Navy blue",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2024_HRV43_Second_Story_Lorry.jpg"
     },
     {
@@ -121497,7 +121496,7 @@ export const RAW = [
         "color": "",
         "part": "HRV38",
         "hw": "Navy blue",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2024_HRV38_Sakura_Sprinter.jpg"
     },
     {
@@ -121507,7 +121506,7 @@ export const RAW = [
         "color": "",
         "part": "HRV40",
         "hw": "Blue",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2024_HRV40__72_Chevy_Ramp_Truck.jpg"
     },
     {
@@ -121517,7 +121516,7 @@ export const RAW = [
         "color": "",
         "part": "HRV46",
         "hw": "Black",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2024_HRV46_Fleet_Street.jpg"
     },
     {
@@ -121527,7 +121526,7 @@ export const RAW = [
         "color": "",
         "part": "HRV47",
         "hw": "White",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2024_HRV47_Carry_On.jpg"
     },
     {
@@ -121537,7 +121536,7 @@ export const RAW = [
         "color": "",
         "part": "HRV41",
         "hw": "Black",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2024_HRV41_Fleet_Flyer.jpg"
     },
     {
@@ -121547,7 +121546,7 @@ export const RAW = [
         "color": "",
         "part": "HRV42",
         "hw": "White",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2024_HRV42__88_Chevy_Silverado_3500.jpg"
     },
     {
@@ -121557,7 +121556,7 @@ export const RAW = [
         "color": "",
         "part": "HRV45",
         "hw": "Sky blue",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2024_HRV45_Fleet_Flyer.jpg"
     },
     {
@@ -121567,7 +121566,7 @@ export const RAW = [
         "color": "",
         "part": "HRV48",
         "hw": "Blue",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2024_HRV48__55_Mercedes_Benz_Blaues_Wunder.jpg"
     },
     {
@@ -121577,7 +121576,7 @@ export const RAW = [
         "color": "",
         "part": "HRV39",
         "hw": "White",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2024_HRV39_Fleet_Street.jpg"
     },
     {
@@ -121587,7 +121586,7 @@ export const RAW = [
         "color": "",
         "part": "HRV37",
         "hw": "Lunar Rock",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2024_HRV37__18_Toyota_4Runner.jpg"
     },
     {
@@ -121597,7 +121596,7 @@ export const RAW = [
         "color": "",
         "part": "HRV44",
         "hw": "Red",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2024_HRV44_Euro_Hauler.jpg"
     },
     {
@@ -121607,7 +121606,7 @@ export const RAW = [
         "color": "",
         "part": "HWV66",
         "hw": "Black",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2024_HWV66_Aero_Lift.jpg"
     },
     {
@@ -121617,7 +121616,7 @@ export const RAW = [
         "color": "",
         "part": "JBM29",
         "hw": "Silicon Silver",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2025_JBM29_2023_Land_Rover_Defender_110.jpg"
     },
     {
@@ -121627,7 +121626,7 @@ export const RAW = [
         "color": "",
         "part": "JBM34",
         "hw": "Yellow",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2025_JBM34_Sakura_Sprinter.jpg"
     },
     {
@@ -121637,7 +121636,7 @@ export const RAW = [
         "color": "",
         "part": "JBM31",
         "hw": "Black",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2025_JBM31_Flipsider_Hauler.jpg"
     },
     {
@@ -121647,7 +121646,7 @@ export const RAW = [
         "color": "",
         "part": "JBM30",
         "hw": "Silver",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2025_JBM30_Fleet_Flyer.jpg"
     },
     {
@@ -121657,7 +121656,7 @@ export const RAW = [
         "color": "",
         "part": "JBM35",
         "hw": "White",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2025_JBM35_HW_Rally_Hauler.jpg"
     },
     {
@@ -121667,7 +121666,7 @@ export const RAW = [
         "color": "",
         "part": "JBM32",
         "hw": "White",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2025_JBM32_Kousoku_Hauler.jpg"
     },
     {
@@ -121677,7 +121676,7 @@ export const RAW = [
         "color": "",
         "part": "JBM36",
         "hw": "White",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2025_JBM36_Aero_Lift.jpg"
     },
     {
@@ -121687,7 +121686,7 @@ export const RAW = [
         "color": "",
         "part": "JBM33",
         "hw": "Black",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2025_JBM33_Horizon_Hauler.jpg"
     },
     {
@@ -121697,7 +121696,7 @@ export const RAW = [
         "color": "",
         "part": "JBM38",
         "hw": "Red",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2025_JBM38_Second_Story_Lorry.jpg"
     },
     {
@@ -121707,7 +121706,7 @@ export const RAW = [
         "color": "",
         "part": "JBM37",
         "hw": "Rosso Cina",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2025_JBM37_Fiat_642_RN2_Bartoletti_Transporter.jpg"
     },
     {
@@ -121717,7 +121716,7 @@ export const RAW = [
         "color": "",
         "part": "JBM40",
         "hw": "Red",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2025_JBM40_Fleet_Street.jpg"
     },
     {
@@ -121727,7 +121726,7 @@ export const RAW = [
         "color": "",
         "part": "JBM39",
         "hw": "Black",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2025_JBM39_Euro_Hauler.jpg"
     },
     {
@@ -121737,7 +121736,7 @@ export const RAW = [
         "color": "",
         "part": "JFM93",
         "hw": "Yellow",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2025_JFM93_HW_Rally_Hauler.jpg"
     },
     {
@@ -121747,7 +121746,7 @@ export const RAW = [
         "color": "",
         "part": "BMW M3",
         "hw": "Base code(s): U08A, U10A",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2025_BMWM3_RR10SPM.jpg"
     },
     {
@@ -121757,7 +121756,7 @@ export const RAW = [
         "color": "",
         "part": "JHX87",
         "hw": "Burnt yellow",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JHX87_Fleet_Street.jpg"
     },
     {
@@ -121767,7 +121766,7 @@ export const RAW = [
         "color": "",
         "part": "JHX88",
         "hw": "White",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JHX88_Horizon_Hauler.jpg"
     },
     {
@@ -121777,7 +121776,7 @@ export const RAW = [
         "color": "",
         "part": "JHX89",
         "hw": "Blue",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JHX89_Fleet_Flyer.jpg"
     },
     {
@@ -121787,7 +121786,7 @@ export const RAW = [
         "color": "",
         "part": "JHX90",
         "hw": "Silver",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JHX90_Mercedes_Benz_Renntransporter.jpg"
     },
     {
@@ -121797,7 +121796,7 @@ export const RAW = [
         "color": "",
         "part": "JHX92",
         "hw": "Black",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JHX92_Aero_Lift.jpg"
     },
     {
@@ -121807,7 +121806,7 @@ export const RAW = [
         "color": "",
         "part": "JHX91",
         "hw": "White",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JHX91__72_Chevy_Ramp_Truck.jpg"
     },
     {
@@ -121817,7 +121816,7 @@ export const RAW = [
         "color": "",
         "part": "JHX93",
         "hw": "Silver",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JHX93_Terra_Torque.jpg"
     },
     {
@@ -121827,7 +121826,7 @@ export const RAW = [
         "color": "",
         "part": "JHX94",
         "hw": "White",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JHX94_Kousoku_Hauler.jpg"
     },
     {
@@ -121837,7 +121836,7 @@ export const RAW = [
         "color": "",
         "part": "JHX95",
         "hw": "White",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JHX95_Retro_Rig.jpg"
     },
     {
@@ -121847,7 +121846,7 @@ export const RAW = [
         "color": "",
         "part": "JHX96",
         "hw": "Basalt Black Metallic",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JHX96_2003_Porsche_Cayenne.jpg"
     },
     {
@@ -121857,7 +121856,7 @@ export const RAW = [
         "color": "",
         "part": "JHX97",
         "hw": "Oxford White Metallic",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JHX97__17_Ford_F_150_Raptor.jpg"
     },
     {
@@ -121867,7 +121866,7 @@ export const RAW = [
         "color": "",
         "part": "JHX98",
         "hw": "White",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JHX98_Fleet_Flyer.jpg"
     },
     {
@@ -121877,7 +121876,7 @@ export const RAW = [
         "color": "",
         "part": "JMN15",
         "hw": "White",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JMN15_Kousoku_Hauler.jpg"
     },
     {
@@ -121887,7 +121886,7 @@ export const RAW = [
         "color": "",
         "part": "W4638",
         "hw": "Gold top & Beige sides",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2012_W4638_1934_Chrysler_Airflow.jpg"
     },
     {
@@ -121897,7 +121896,7 @@ export const RAW = [
         "color": "",
         "part": "W4645",
         "hw": "Red",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2012_W4645_1955_Corvette.jpg"
     },
     {
@@ -121907,7 +121906,7 @@ export const RAW = [
         "color": "",
         "part": "W4593",
         "hw": "Matte Black",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2012_W4593_Buick_Grand_National.jpg"
     },
     {
@@ -121917,7 +121916,7 @@ export const RAW = [
         "color": "",
         "part": "W4600",
         "hw": "Zamac",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2012_W4600_DeLorean_DMC_12.jpg"
     },
     {
@@ -121927,7 +121926,7 @@ export const RAW = [
         "color": "",
         "part": "W4647",
         "hw": "Red top & Matte Black lower",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2012_W4647_Ferrari_F40.jpg"
     },
     {
@@ -121937,7 +121936,7 @@ export const RAW = [
         "color": "",
         "part": "W4607",
         "hw": "Red & Flat Metallic Silver",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2012_W4607_Golden_Submarine.jpg"
     },
     {
@@ -121947,7 +121946,7 @@ export const RAW = [
         "color": "",
         "part": "W4614",
         "hw": "Pearl White with orange flames",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2012_W4614_Phantastique.jpg"
     },
     {
@@ -121957,7 +121956,7 @@ export const RAW = [
         "color": "",
         "part": "W4621",
         "hw": "Red",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2012_W4621_Pontiac_Fiero_2M4.jpg"
     },
     {
@@ -121967,7 +121966,7 @@ export const RAW = [
         "color": "",
         "part": "W4586",
         "hw": "Copper",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2012_W4586_Tucker_Torpedo.jpg"
     },
     {
@@ -121977,7 +121976,7 @@ export const RAW = [
         "color": "",
         "part": "W4631",
         "hw": "Red",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2012_W4631_Vector_W8_Twinturbo.jpg"
     },
     {
@@ -121987,7 +121986,7 @@ export const RAW = [
         "color": "",
         "part": "W4610",
         "hw": "Yellow",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2012_W4610__32_Ford.jpg"
     },
     {
@@ -121997,7 +121996,7 @@ export const RAW = [
         "color": "",
         "part": "W4601",
         "hw": "Pearl White",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2012_W4601__55_Lincoln_Futura_Concept.jpg"
     },
     {
@@ -122007,7 +122006,7 @@ export const RAW = [
         "color": "",
         "part": "W4597",
         "hw": "Pearl Orange",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2012_W4597__57_Chevy_Bel_Air.jpg"
     },
     {
@@ -122017,7 +122016,7 @@ export const RAW = [
         "color": "",
         "part": "W4649",
         "hw": "Matte Metallic Grey & White",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2012_W4649__64_Pontiac_GTO.jpg"
     },
     {
@@ -122027,7 +122026,7 @@ export const RAW = [
         "color": "",
         "part": "W4589",
         "hw": "White",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2012_W4589__65_Chevy_Impala.jpg"
     },
     {
@@ -122037,7 +122036,7 @@ export const RAW = [
         "color": "",
         "part": "W4603",
         "hw": "Metalflake Copper",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2012_W4603__65_Mustang.jpg"
     },
     {
@@ -122047,7 +122046,7 @@ export const RAW = [
         "color": "",
         "part": "W4618",
         "hw": "Turquoise",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2012_W4618__68_Olds_442.jpg"
     },
     {
@@ -122057,7 +122056,7 @@ export const RAW = [
         "color": "",
         "part": "W4641",
         "hw": "Metallic Blue",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2012_W4641__69_Chevy_Camaro.jpg"
     },
     {
@@ -122067,7 +122066,7 @@ export const RAW = [
         "color": "",
         "part": "W4625",
         "hw": "Black",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2012_W4625__77_Pontiac_Firebird.jpg"
     },
     {
@@ -122077,7 +122076,7 @@ export const RAW = [
         "color": "",
         "part": "W4582",
         "hw": "Pearl Yellow",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2012_W4582_A_OK.jpg"
     },
     {
@@ -122087,7 +122086,7 @@ export const RAW = [
         "color": "",
         "part": "W4640",
         "hw": "Copper and Beige",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2012_W4640_Custom_56_Ford_Truck.jpg"
     },
     {
@@ -122097,7 +122096,7 @@ export const RAW = [
         "color": "",
         "part": "W4604",
         "hw": "Slate Blue, Dark Blue",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2012_W4604_Dodge_Caravan.jpg"
     },
     {
@@ -122107,7 +122106,7 @@ export const RAW = [
         "color": "",
         "part": "W4611",
         "hw": "Turquoise",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2012_W4611_Honda_Civic_Coupe.jpg"
     },
     {
@@ -122117,7 +122116,7 @@ export const RAW = [
         "color": "",
         "part": "W4634",
         "hw": "Green",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2012_W4634_Honda_Civic_Si.jpg"
     },
     {
@@ -122127,7 +122126,7 @@ export const RAW = [
         "color": "",
         "part": "W4651",
         "hw": "Red and Black",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2012_W4651_Pontiac_GTO_Wagon.jpg"
     },
     {
@@ -122137,7 +122136,7 @@ export const RAW = [
         "color": "",
         "part": "W4648",
         "hw": "Yellow",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2012_W4648_T_Bucket.jpg"
     },
     {
@@ -122147,7 +122146,7 @@ export const RAW = [
         "color": "",
         "part": "W4596",
         "hw": "Green, White",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2012_W4596_Volkswagen_Beetle.jpg"
     },
     {
@@ -122157,7 +122156,7 @@ export const RAW = [
         "color": "",
         "part": "W4612",
         "hw": "Matte Lavender w",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2012_W4612__51_Le_Sabre_Concept.jpg"
     },
     {
@@ -122167,7 +122166,7 @@ export const RAW = [
         "color": "",
         "part": "W4615",
         "hw": "Metalflake Copper",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2012_W4615__63_Chrysler_Turbine.jpg"
     },
     {
@@ -122177,7 +122176,7 @@ export const RAW = [
         "color": "",
         "part": "W4627",
         "hw": "Burgundy & Gold",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2012_W4627__63_Ford_Mustang_II_Concept.jpg"
     },
     {
@@ -122187,7 +122186,7 @@ export const RAW = [
         "color": "",
         "part": "W4606",
         "hw": "Metalflake Red",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2012_W4606__09_Corvette_Stingray_Concept.jpg"
     },
     {
@@ -122197,7 +122196,7 @@ export const RAW = [
         "color": "",
         "part": "W4591",
         "hw": "White & Red",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2012_W4591_Chevy_Camaro_Concept.jpg"
     },
     {
@@ -122207,7 +122206,7 @@ export const RAW = [
         "color": "",
         "part": "W4584",
         "hw": "Black",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2012_W4584_Chrysler_Pronto.jpg"
     },
     {
@@ -122217,7 +122216,7 @@ export const RAW = [
         "color": "",
         "part": "W4598",
         "hw": "Metallic Yellow",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2012_W4598_Ford_GTX1.jpg"
     },
     {
@@ -122227,7 +122226,7 @@ export const RAW = [
         "color": "",
         "part": "W4620",
         "hw": "Satin Silver",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2012_W4620_Ford_Shelby_GR_1_Concept.jpg"
     },
     {
@@ -122237,7 +122236,7 @@ export const RAW = [
         "color": "",
         "part": "W4636",
         "hw": "Dark Blue",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2012_W4636_Mustang_GT_Concept.jpg"
     },
     {
@@ -122247,7 +122246,7 @@ export const RAW = [
         "color": "",
         "part": "W4624",
         "hw": "Grey & Black",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2012_W4624__41_Willys.jpg"
     },
     {
@@ -122257,7 +122256,7 @@ export const RAW = [
         "color": "",
         "part": "W4623",
         "hw": "White with Gold",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2012_W4623__49_Drag_Merc.jpg"
     },
     {
@@ -122267,7 +122266,7 @@ export const RAW = [
         "color": "",
         "part": "W4587",
         "hw": "White & Blue",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2012_W4587__52_Hudson_Hornet.jpg"
     },
     {
@@ -122277,7 +122276,7 @@ export const RAW = [
         "color": "",
         "part": "W4632",
         "hw": "Light Blue and White",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2012_W4632__56_Mercury.jpg"
     },
     {
@@ -122287,7 +122286,7 @@ export const RAW = [
         "color": "",
         "part": "W4602",
         "hw": "Metalflake White",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2012_W4602__58_Edsel.jpg"
     },
     {
@@ -122297,7 +122296,7 @@ export const RAW = [
         "color": "",
         "part": "W4646",
         "hw": "Grey with light blue roof",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2012_W4646__63_Studebaker.jpg"
     },
     {
@@ -122307,7 +122306,7 @@ export const RAW = [
         "color": "",
         "part": "W4633",
         "hw": "Orange body with white top",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2012_W4633__67_Pontiac_Firebird.jpg"
     },
     {
@@ -122317,7 +122316,7 @@ export const RAW = [
         "color": "",
         "part": "W4581",
         "hw": "Metalflake Orange",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2012_W4581__70_Pontiac_GTO_Judge.jpg"
     },
     {
@@ -122327,7 +122326,7 @@ export const RAW = [
         "color": "",
         "part": "W4652",
         "hw": "White",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2012_W4652_AMC_Rebel_Machine.jpg"
     },
     {
@@ -122337,7 +122336,7 @@ export const RAW = [
         "color": "",
         "part": "W4639",
         "hw": "Black",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2012_W4639_Austin_Healey.jpg"
     },
     {
@@ -122347,7 +122346,7 @@ export const RAW = [
         "color": "",
         "part": "10001",
         "hw": "Black",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2012_10001_Classic_Packard.jpg"
     },
     {
@@ -122357,7 +122356,7 @@ export const RAW = [
         "color": "",
         "part": "W4609",
         "hw": "Purle with green top",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2012_W4609_Metrorail_Nash_Metropolitan.jpg"
     },
     {
@@ -122367,7 +122366,7 @@ export const RAW = [
         "color": "",
         "part": "W4595",
         "hw": "Metalflake Dark Gray",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2012_W4595_Plymouth_AAR_Cuda.jpg"
     },
     {
@@ -122377,7 +122376,7 @@ export const RAW = [
         "color": "",
         "part": "W4616",
         "hw": "Red and Black",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2012_W4616_Plymouth_Duster_Thruster.jpg"
     },
     {
@@ -122387,7 +122386,7 @@ export const RAW = [
         "color": "",
         "part": "W4617",
         "hw": "Magenta",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2012_W4617_Triumph_TR6.jpg"
     },
     {
@@ -122397,7 +122396,7 @@ export const RAW = [
         "color": "",
         "part": "W4626",
         "hw": "Black",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2012_W4626_Copper_Stopper.jpg"
     },
     {
@@ -122407,7 +122406,7 @@ export const RAW = [
         "color": "",
         "part": "W4590",
         "hw": "Blue",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2012_W4590_Double_Demon.jpg"
     },
     {
@@ -122417,7 +122416,7 @@ export const RAW = [
         "color": "",
         "part": "W4605",
         "hw": "Metallic Purple",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2012_W4605_Dune_Daddy.jpg"
     },
     {
@@ -122427,7 +122426,7 @@ export const RAW = [
         "color": "",
         "part": "W4583",
         "hw": "White",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2012_W4583_Fangula.jpg"
     },
     {
@@ -122437,7 +122436,7 @@ export const RAW = [
         "color": "",
         "part": "W4592",
         "hw": "Brown",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2012_W4592_Gangster_Grin.jpg"
     },
     {
@@ -122447,7 +122446,7 @@ export const RAW = [
         "color": "",
         "part": "W4642",
         "hw": "Metalflake Brown",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2012_W4642_Hot_Tub.jpg"
     },
     {
@@ -122457,7 +122456,7 @@ export const RAW = [
         "color": "",
         "part": "W4619",
         "hw": "Red",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2012_W4619_Red_Baron.jpg"
     },
     {
@@ -122467,7 +122466,7 @@ export const RAW = [
         "color": "",
         "part": "W4635",
         "hw": "Metalflake Red w",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2012_W4635_Rigor_Motor.jpg"
     },
     {
@@ -122477,7 +122476,7 @@ export const RAW = [
         "color": "",
         "part": "W4650",
         "hw": "Green",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2012_W4650_Twin_Mill.jpg"
     },
     {
@@ -122487,7 +122486,7 @@ export const RAW = [
         "color": "",
         "part": "W4643",
         "hw": "Satin Blue",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2012_W4643__64_Ford_Falcon_Sprint.jpg"
     },
     {
@@ -122497,7 +122496,7 @@ export const RAW = [
         "color": "",
         "part": "W4585",
         "hw": "Blue",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2012_W4585__70_Ford_Torino.jpg"
     },
     {
@@ -122507,7 +122506,7 @@ export const RAW = [
         "color": "",
         "part": "W4594",
         "hw": "Yellow",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2012_W4594__78_Ford_Mustang_II.jpg"
     },
     {
@@ -122517,7 +122516,7 @@ export const RAW = [
         "color": "",
         "part": "W4608",
         "hw": "Metallic Brown",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2012_W4608_Amphicar.jpg"
     },
     {
@@ -122527,7 +122526,7 @@ export const RAW = [
         "color": "",
         "part": "W4613",
         "hw": "Metallic Gray",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2012_W4613_Custom_V_8_Vega.jpg"
     },
     {
@@ -122537,7 +122536,7 @@ export const RAW = [
         "color": "",
         "part": "W4599",
         "hw": "Matte Black",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2012_W4599_Packin_Pacer.jpg"
     },
     {
@@ -122547,7 +122546,7 @@ export const RAW = [
         "color": "",
         "part": "W4622",
         "hw": "Orange",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2012_W4622_Porsche_914_6.jpg"
     },
     {
@@ -122557,7 +122556,7 @@ export const RAW = [
         "color": "",
         "part": "W4622",
         "hw": "Orange",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2012_W4622_Porsche_914_6.jpg"
     },
     {
@@ -122567,7 +122566,7 @@ export const RAW = [
         "color": "",
         "part": "W4637",
         "hw": "White & Blue",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2012_W4637_Vairy_8.jpg"
     },
     {
@@ -122577,7 +122576,7 @@ export const RAW = [
         "color": "",
         "part": "W4644",
         "hw": "Dark Olive Green",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2012_W4644_Volkswagen_Type_181.jpg"
     },
     {
@@ -122587,7 +122586,7 @@ export const RAW = [
         "color": "",
         "part": "W4628",
         "hw": "Matte Red & White",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2012_W4628_Whatta_Drag.jpg"
     },
     {
@@ -122597,7 +122596,7 @@ export const RAW = [
         "color": "",
         "part": "W9600",
         "hw": "Metalflake Purple",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2012_W9600_Fangula.jpg"
     },
     {
@@ -122607,7 +122606,7 @@ export const RAW = [
         "color": "",
         "part": "Amphicar",
         "hw": "Base code(s):",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2012_Amphicar_Metalflake_Dark_Gray_Metalflake_Red.jpg"
     },
     {
@@ -122617,7 +122616,7 @@ export const RAW = [
         "color": "",
         "part": "X8289",
         "hw": "Pearl White",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2013_X8289__55_Corvette.jpg"
     },
     {
@@ -122627,7 +122626,7 @@ export const RAW = [
         "color": "",
         "part": "X8236",
         "hw": "Sea Foam Green",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2013_X8236__71_Datsun_Bluebird_510_Wagon.jpg"
     },
     {
@@ -122637,7 +122636,7 @@ export const RAW = [
         "color": "",
         "part": "X8302",
         "hw": "Flat Metalflake Grey & Metalflake Orange",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2013_X8302__84_Pontiac_Fiero.jpg"
     },
     {
@@ -122647,7 +122646,7 @@ export const RAW = [
         "color": "",
         "part": "X8288",
         "hw": "Metalflake Grey",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2013_X8288_Nissan_Skyline_H_T_2000GT_X.jpg"
     },
     {
@@ -122657,7 +122656,7 @@ export const RAW = [
         "color": "",
         "part": "X8244",
         "hw": "Metalflake Green",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2013_X8244_Renault_5_Turbo.jpg"
     },
     {
@@ -122667,7 +122666,7 @@ export const RAW = [
         "color": "",
         "part": "X8296",
         "hw": "Flat White",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2013_X8296__66_Chevelle.jpg"
     },
     {
@@ -122677,7 +122676,7 @@ export const RAW = [
         "color": "",
         "part": "X8297",
         "hw": "Black",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2013_X8297__84_Hurst_Olds.jpg"
     },
     {
@@ -122687,7 +122686,7 @@ export const RAW = [
         "color": "",
         "part": "X8243",
         "hw": "Yellow & Flat Black",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2013_X8243__85_Honda_CR_X.jpg"
     },
     {
@@ -122697,7 +122696,7 @@ export const RAW = [
         "color": "",
         "part": "X8294",
         "hw": "Blue",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2013_X8294__12_Ford_Fiesta.jpg"
     },
     {
@@ -122707,7 +122706,7 @@ export const RAW = [
         "color": "",
         "part": "X8293",
         "hw": "Flat Black",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2013_X8293_Long_Gone.jpg"
     },
     {
@@ -122717,7 +122716,7 @@ export const RAW = [
         "color": "",
         "part": "X8238",
         "hw": "Red",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2013_X8238__58_Plymouth_Belvedere.jpg"
     },
     {
@@ -122727,7 +122726,7 @@ export const RAW = [
         "color": "",
         "part": "X8242",
         "hw": "Red",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2013_X8242__84_Mustang_SVO.jpg"
     },
     {
@@ -122737,7 +122736,7 @@ export const RAW = [
         "color": "",
         "part": "X8237",
         "hw": "Flat Black & Gloss Dark Red",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2013_X8237__85_Chevy_Astro_Van.jpg"
     },
     {
@@ -122747,7 +122746,7 @@ export const RAW = [
         "color": "",
         "part": "X8292",
         "hw": "Yellow",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2013_X8292_Ford_GT.jpg"
     },
     {
@@ -122757,7 +122756,7 @@ export const RAW = [
         "color": "",
         "part": "X8291",
         "hw": "Olive Green",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2013_X8291_Subaru_BRAT.jpg"
     },
     {
@@ -122767,7 +122766,7 @@ export const RAW = [
         "color": "",
         "part": "X8290",
         "hw": "Metalflake Light Blue",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2013_X8290__63_Corvette.jpg"
     },
     {
@@ -122777,7 +122776,7 @@ export const RAW = [
         "color": "",
         "part": "X8241",
         "hw": "Beige & Blue",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2013_X8241__85_Ford_Bronco_4_4.jpg"
     },
     {
@@ -122787,7 +122786,7 @@ export const RAW = [
         "color": "",
         "part": "X8239",
         "hw": "Black",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2013_X8239_1988_Jeep_Wagoneer.jpg"
     },
     {
@@ -122797,7 +122796,7 @@ export const RAW = [
         "color": "",
         "part": "X8299",
         "hw": "Anodized Silver",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2013_X8299_Corvette_C6R.jpg"
     },
     {
@@ -122807,7 +122806,7 @@ export const RAW = [
         "color": "",
         "part": "X8240",
         "hw": "Yellow",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2013_X8240_Porsche_993_GT2.jpg"
     },
     {
@@ -122817,7 +122816,7 @@ export const RAW = [
         "color": "",
         "part": "GJT71",
         "hw": "Black",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2020_GJT71_Bone_Shaker.jpg"
     },
     {
@@ -122827,7 +122826,7 @@ export const RAW = [
         "color": "",
         "part": "GJT73",
         "hw": "Silver",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2020_GJT73_Nissan_Skyline_GT_R_BCNR33_.jpg"
     },
     {
@@ -122837,7 +122836,7 @@ export const RAW = [
         "color": "",
         "part": "GJT70",
         "hw": "White with blue stripes, b",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2020_GJT70_Volkswagen_T1_Panel_Bus.jpg"
     },
     {
@@ -122847,7 +122846,7 @@ export const RAW = [
         "color": "",
         "part": "GJT69",
         "hw": "Metalflake Gold",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2020_GJT69__67_Camaro.jpg"
     },
     {
@@ -122857,7 +122856,7 @@ export const RAW = [
         "color": "",
         "part": "GJT72",
         "hw": "Metalflake Blue",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2020_GJT72__83_Chevy_Silverado_4x4.jpg"
     },
     {
@@ -122867,7 +122866,7 @@ export const RAW = [
         "color": "",
         "part": "GJT74",
         "hw": "Yellow",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2020_GJT74_Porsche_356_Outlaw.jpg"
     },
     {
@@ -122877,7 +122876,7 @@ export const RAW = [
         "color": "",
         "part": "GJT75",
         "hw": "Red",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2020_GJT75_Nissan_Silvia_S15_.jpg"
     },
     {
@@ -122887,7 +122886,7 @@ export const RAW = [
         "color": "",
         "part": "GRB46",
         "hw": "Red",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2020_GRB46_Nissan_Silvia_S15_.jpg"
     },
     {
@@ -122897,7 +122896,7 @@ export const RAW = [
         "color": "",
         "part": "GJT77",
         "hw": "Silver & Dark Red",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2020_GJT77_Custom_62_Chevy_Pickup.jpg"
     },
     {
@@ -122907,7 +122906,7 @@ export const RAW = [
         "color": "",
         "part": "GJT76",
         "hw": "Crush Orange",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2020_GJT76__18_COPO_Camaro_SS.jpg"
     },
     {
@@ -122917,7 +122916,7 @@ export const RAW = [
         "color": "",
         "part": "GJT85",
         "hw": "White & Black",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2020_GJT85_Koenigsegg_Agera_R.jpg"
     },
     {
@@ -122927,7 +122926,7 @@ export const RAW = [
         "color": "",
         "part": "GJT82",
         "hw": "Grey",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2020_GJT82__55_Chevy_Bel_Air_Gasser.jpg"
     },
     {
@@ -122937,7 +122936,7 @@ export const RAW = [
         "color": "",
         "part": "GJT81",
         "hw": "Metalflake Grey over Red",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2020_GJT81__66_Pontiac_GTO.jpg"
     },
     {
@@ -122947,7 +122946,7 @@ export const RAW = [
         "color": "",
         "part": "GJT83",
         "hw": "Grey",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2020_GJT83_Ford_GT.jpg"
     },
     {
@@ -122957,7 +122956,7 @@ export const RAW = [
         "color": "",
         "part": "GJT80",
         "hw": "White",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2020_GJT80_Volkswagen_Baja_Bug_.jpg"
     },
     {
@@ -122967,7 +122966,7 @@ export const RAW = [
         "color": "",
         "part": "GJT79",
         "hw": "Metalflake Silver",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2020_GJT79_1991_Mercedes_Benz_G_Class.jpg"
     },
     {
@@ -122977,7 +122976,7 @@ export const RAW = [
         "color": "",
         "part": "GJT88",
         "hw": "Metallic Blue",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2020_GJT88_Twin_Mill.jpg"
     },
     {
@@ -122987,7 +122986,7 @@ export const RAW = [
         "color": "",
         "part": "GJT88",
         "hw": "Metallic Blue",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2020_GJT88_Twin_Mill.jpg"
     },
     {
@@ -122997,7 +122996,7 @@ export const RAW = [
         "color": "",
         "part": "GJT86",
         "hw": "Yellow",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2020_GJT86_Kool_Kombi.jpg"
     },
     {
@@ -123007,7 +123006,7 @@ export const RAW = [
         "color": "",
         "part": "GJR77",
         "hw": "White + Black Hood",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2020_GJR77_Toyota_AE86_Sprinter_Trueno.jpg"
     },
     {
@@ -123017,7 +123016,7 @@ export const RAW = [
         "color": "",
         "part": "GJT78",
         "hw": "Red",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2020_GJT78__69_Alfa_Romeo_33_Stradale.jpg"
     },
     {
@@ -123027,7 +123026,7 @@ export const RAW = [
         "color": "",
         "part": "GJT84",
         "hw": "Black",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2020_GJT84_Nissan_Skyline_C210.jpg"
     },
     {
@@ -123037,7 +123036,7 @@ export const RAW = [
         "color": "",
         "part": "GRL99",
         "hw": "Metalflake Purple",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2021_GRL99__63_Chevy_Nova.jpg"
     },
     {
@@ -123047,7 +123046,7 @@ export const RAW = [
         "color": "",
         "part": "GRM00",
         "hw": "White",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2021_GRM00_1968_Mazda_Cosmo_Sport.jpg"
     },
     {
@@ -123057,7 +123056,7 @@ export const RAW = [
         "color": "",
         "part": "GRL95",
         "hw": "Metalflake Red",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2021_GRL95__64_Buick_Riviera.jpg"
     },
     {
@@ -123067,7 +123066,7 @@ export const RAW = [
         "color": "",
         "part": "GRL97",
         "hw": "Metalflake WR Blue Pearl",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2021_GRL97_2019_Subaru_WRX_STI.jpg"
     },
     {
@@ -123077,7 +123076,7 @@ export const RAW = [
         "color": "",
         "part": "GRL93",
         "hw": "Yellow",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2021_GRL93_Volkswagen_Drag_Bus.jpg"
     },
     {
@@ -123087,7 +123086,7 @@ export const RAW = [
         "color": "",
         "part": "GRL96",
         "hw": "Metalflake Blue",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2021_GRL96_Corvette_Z06_Drag_Racer.jpg"
     },
     {
@@ -123097,7 +123096,7 @@ export const RAW = [
         "color": "",
         "part": "GRL98",
         "hw": "ZAMAC",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2021_GRL98_Custom_67_Pontiac_Firebird.jpg"
     },
     {
@@ -123107,7 +123106,7 @@ export const RAW = [
         "color": "",
         "part": "GRM10",
         "hw": "Olive Green",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2021_GRM10_Porsche_964.jpg"
     },
     {
@@ -123117,7 +123116,7 @@ export const RAW = [
         "color": "",
         "part": "GRM01",
         "hw": "White",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2021_GRM01_Lancia_Stratos_Group_5.jpg"
     },
     {
@@ -123127,7 +123126,7 @@ export const RAW = [
         "color": "",
         "part": "GRL94",
         "hw": "Metalflake Dark Gray",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2021_GRL94__87_Buick_Regal_GNX.jpg"
     },
     {
@@ -123137,7 +123136,7 @@ export const RAW = [
         "color": "",
         "part": "GRM03",
         "hw": "Candy Apple Magenta",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2021_GRM03_Volkswagen_Classic_Bug_.jpg"
     },
     {
@@ -123147,7 +123146,7 @@ export const RAW = [
         "color": "",
         "part": "GRM02",
         "hw": "Pale Metallic Blue",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2021_GRM02__66_Pontiac_GTO.jpg"
     },
     {
@@ -123157,7 +123156,7 @@ export const RAW = [
         "color": "",
         "part": "GRM06",
         "hw": "Yellow",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2021_GRM06__70_Plymouth_Superbird.jpg"
     },
     {
@@ -123167,7 +123166,7 @@ export const RAW = [
         "color": "",
         "part": "HCM79",
         "hw": "ZAMAC",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2021_HCM79_DMC_DeLorean.jpg"
     },
     {
@@ -123177,7 +123176,7 @@ export const RAW = [
         "color": "",
         "part": "GRM04",
         "hw": "Anodized Matte Gray",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2021_GRM04_Custom_70_Chevy_Nova.jpg"
     },
     {
@@ -123187,7 +123186,7 @@ export const RAW = [
         "color": "",
         "part": "GRM08",
         "hw": "White",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2021_GRM08__18_Toyota_4Runner.jpg"
     },
     {
@@ -123197,7 +123196,7 @@ export const RAW = [
         "color": "",
         "part": "GTT27",
         "hw": "Silver",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2021_GTT27_1997_Mercedes_Benz_CLK_GTR.jpg"
     },
     {
@@ -123207,7 +123206,7 @@ export const RAW = [
         "color": "",
         "part": "GRM09",
         "hw": "Black",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2021_GRM09_Custom_93_Nissan_Hardbody_D21_.jpg"
     },
     {
@@ -123217,7 +123216,7 @@ export const RAW = [
         "color": "",
         "part": "GRM11",
         "hw": "Tan",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2021_GRM11_Volkswagen_Kafer_Racer.jpg"
     },
     {
@@ -123227,7 +123226,7 @@ export const RAW = [
         "color": "",
         "part": "GRM05",
         "hw": "Silver",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2021_GRM05_Honda_Civic_EG_Custom_Version.jpg"
     },
     {
@@ -123237,7 +123236,7 @@ export const RAW = [
         "color": "",
         "part": "HCR23",
         "hw": "White",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2022_HCR23_Acura_NSX_GT3.jpg"
     },
     {
@@ -123247,7 +123246,7 @@ export const RAW = [
         "color": "",
         "part": "HCR15",
         "hw": "Red",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2022_HCR15_Volkswagen_Drag_Bus.jpg"
     },
     {
@@ -123257,7 +123256,7 @@ export const RAW = [
         "color": "",
         "part": "HCR08",
         "hw": "White",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2022_HCR08_Baja_Bouncer.jpg"
     },
     {
@@ -123267,7 +123266,7 @@ export const RAW = [
         "color": "",
         "part": "HCR01",
         "hw": "Blue",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2022_HCR01_Volkswagen_Deluxe_Station_Wagon.jpg"
     },
     {
@@ -123277,7 +123276,7 @@ export const RAW = [
         "color": "",
         "part": "HCR09",
         "hw": "Blue-Grey",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2022_HCR09_Nissan_Laurel_2000_SGX.jpg"
     },
     {
@@ -123287,7 +123286,7 @@ export const RAW = [
         "color": "",
         "part": "HCR11",
         "hw": "Red",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2022_HCR11__75_BRE_Datsun_Sunny_Truck_B120_.jpg"
     },
     {
@@ -123297,7 +123296,7 @@ export const RAW = [
         "color": "",
         "part": "HCR10",
         "hw": "Metalflake Cherry Red",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2022_HCR10_Land_Rover_Defender_90.jpg"
     },
     {
@@ -123307,7 +123306,7 @@ export const RAW = [
         "color": "",
         "part": "HCR03",
         "hw": "British Racing Green",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2022_HCR03__67_Austin_Mini_Pickup.jpg"
     },
     {
@@ -123317,7 +123316,7 @@ export const RAW = [
         "color": "",
         "part": "HCR19",
         "hw": "Glossy Black",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2022_HCR19_Lykan_HyperSport.jpg"
     },
     {
@@ -123327,7 +123326,7 @@ export const RAW = [
         "color": "",
         "part": "HCR13",
         "hw": "Cream Yellow",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2022_HCR13_Volvo_P220_Amazon_Estate.jpg"
     },
     {
@@ -123337,7 +123336,7 @@ export const RAW = [
         "color": "",
         "part": "HCR12",
         "hw": "Metalflake dark blue",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2022_HCR12__12_Corvette_Z06_Drag_Racer.jpg"
     },
     {
@@ -123347,7 +123346,7 @@ export const RAW = [
         "color": "",
         "part": "HCR16",
         "hw": "Pearl White",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2022_HCR16__20_Toyota_GR_Supra.jpg"
     },
     {
@@ -123357,7 +123356,7 @@ export const RAW = [
         "color": "",
         "part": "HCR02",
         "hw": "Metalflake Indy Orange",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2022_HCR02__73_Holden_Monaro_GTS.jpg"
     },
     {
@@ -123367,7 +123366,7 @@ export const RAW = [
         "color": "",
         "part": "HCR14",
         "hw": "Metalflake gray",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2022_HCR14_Mercedes_Benz_300_SEL_6_8_AMG.jpg"
     },
     {
@@ -123377,7 +123376,7 @@ export const RAW = [
         "color": "",
         "part": "HCP34",
         "hw": "Rosso Alfa",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2022_HCP34_Alfa_Romeo_155_V6_Ti.jpg"
     },
     {
@@ -123387,7 +123386,7 @@ export const RAW = [
         "color": "",
         "part": "HCR21",
         "hw": "Matte black",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2022_HCR21__71_Mustang_Mach_1.jpg"
     },
     {
@@ -123397,7 +123396,7 @@ export const RAW = [
         "color": "",
         "part": "HCR17",
         "hw": "White",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2022_HCR17__78_Ford_Escort_RS_1800_MK2.jpg"
     },
     {
@@ -123407,7 +123406,7 @@ export const RAW = [
         "color": "",
         "part": "HCR18",
         "hw": "Black",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2022_HCR18_Toyota_4Runner.jpg"
     },
     {
@@ -123417,7 +123416,7 @@ export const RAW = [
         "color": "",
         "part": "HCR04",
         "hw": "Red",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2022_HCR04_De_Tomaso_Pantera_Gruppo_4.jpg"
     },
     {
@@ -123427,7 +123426,7 @@ export const RAW = [
         "color": "",
         "part": "HCR05",
         "hw": "Black",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2022_HCR05_Mercedes_Benz_AMG_E_36_Estate_Special_Edition.jpg"
     },
     {
@@ -123437,7 +123436,7 @@ export const RAW = [
         "color": "",
         "part": "HCR20",
         "hw": "Black",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2022_HCR20__18_Ford_Mustang_RTR_Spec_5.jpg"
     },
     {
@@ -123447,7 +123446,7 @@ export const RAW = [
         "color": "",
         "part": "HCR00",
         "hw": "Red",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2022_HCR00__70_Rover_P6_Group_2.jpg"
     },
     {
@@ -123457,7 +123456,7 @@ export const RAW = [
         "color": "",
         "part": "HCR07",
         "hw": "Metalflake silver",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2022_HCR07__16_Subaru_WRX_STI.jpg"
     },
     {
@@ -123467,7 +123466,7 @@ export const RAW = [
         "color": "",
         "part": "HCR06",
         "hw": "ZAMAC",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2022_HCR06_Aero_Sculpt.jpg"
     },
     {
@@ -123477,7 +123476,7 @@ export const RAW = [
         "color": "",
         "part": "HCR22",
         "hw": "Metalflake green",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2022_HCR22_Custom_70_Chevy_Nova.jpg"
     },
     {
@@ -123487,7 +123486,7 @@ export const RAW = [
         "color": "",
         "part": "HKF14",
         "hw": "Oxford White",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2023_HKF14__20_Ford_Shelby_GT500.jpg"
     },
     {
@@ -123497,7 +123496,7 @@ export const RAW = [
         "color": "",
         "part": "HKF13",
         "hw": "Red",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2023_HKF13_Volkswagen_Caddy.jpg"
     },
     {
@@ -123507,7 +123506,7 @@ export const RAW = [
         "color": "",
         "part": "HKF15",
         "hw": "Black",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2023_HKF15_Dodge_Van.jpg"
     },
     {
@@ -123517,7 +123516,7 @@ export const RAW = [
         "color": "",
         "part": "HKF16",
         "hw": "Metalflake yellow",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2023_HKF16__98_Subaru_Impreza_22B_STi_Version.jpg"
     },
     {
@@ -123527,7 +123526,7 @@ export const RAW = [
         "color": "",
         "part": "HKF21",
         "hw": "White",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2023_HKF21_LB_ER34_Super_Silhouette_Nissan_Skyline.jpg"
     },
     {
@@ -123537,7 +123536,7 @@ export const RAW = [
         "color": "",
         "part": "HKF17",
         "hw": "Diamond White",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2023_HKF17__93_Ford_Escort_RS_Cosworth.jpg"
     },
     {
@@ -123547,7 +123546,7 @@ export const RAW = [
         "color": "",
         "part": "HKF18",
         "hw": "Teal",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2023_HKF18_Volkswagen_T1_Panel_Bus.jpg"
     },
     {
@@ -123557,7 +123556,7 @@ export const RAW = [
         "color": "",
         "part": "HKF19",
         "hw": "Championship White",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2023_HKF19__99_Honda_Civic_Type_R_EK9_.jpg"
     },
     {
@@ -123567,7 +123566,7 @@ export const RAW = [
         "color": "",
         "part": "HKF20",
         "hw": "Black",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2023_HKF20__96_Chevy_Impala_SS.jpg"
     },
     {
@@ -123577,7 +123576,7 @@ export const RAW = [
         "color": "",
         "part": "HKF22",
         "hw": "Classic Red",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2023_HKF22__04_Mazda_Mazdaspeed_Miata.jpg"
     },
     {
@@ -123587,7 +123586,7 @@ export const RAW = [
         "color": "",
         "part": "HKF23",
         "hw": "Solarbeam Yellow",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2023_HKF23__12_Mercedes_Benz_C_63_AMG_Coupe_Black_Series.jpg"
     },
     {
@@ -123597,7 +123596,7 @@ export const RAW = [
         "color": "",
         "part": "HKF12",
         "hw": "White",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2023_HKF12__77_Holden_Torana_A9X.jpg"
     },
     {
@@ -123607,7 +123606,7 @@ export const RAW = [
         "color": "",
         "part": "HKF28",
         "hw": "Black",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2023_HKF28_Toyota_AE86_Sprinter_Trueno.jpg"
     },
     {
@@ -123617,7 +123616,7 @@ export const RAW = [
         "color": "",
         "part": "HKF26",
         "hw": "Red",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2023_HKF26_Mitsubishi_Lancer_Evolution_VI.jpg"
     },
     {
@@ -123627,7 +123626,7 @@ export const RAW = [
         "color": "",
         "part": "HKF24",
         "hw": "Celeste",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2023_HKF24__91_GMC_Syclone.jpg"
     },
     {
@@ -123637,7 +123636,7 @@ export const RAW = [
         "color": "",
         "part": "HKF30",
         "hw": "Pearlescent White",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2023_HKF30_Audi_S4_quattro.jpg"
     },
     {
@@ -123647,7 +123646,7 @@ export const RAW = [
         "color": "",
         "part": "HKF34",
         "hw": "Yellow",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2023_HKF34_Porsche_911_Turbo_930_.jpg"
     },
     {
@@ -123657,7 +123656,7 @@ export const RAW = [
         "color": "",
         "part": "HKF25",
         "hw": "Black",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2023_HKF25__70_Dodge_Hemi_Challenger.jpg"
     },
     {
@@ -123667,7 +123666,7 @@ export const RAW = [
         "color": "",
         "part": "HWW12",
         "hw": "Evergreen",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2023_HWW12_Mercedes_Benz_190_E_2_5_16.jpg"
     },
     {
@@ -123677,7 +123676,7 @@ export const RAW = [
         "color": "",
         "part": "HKF31",
         "hw": "Silver",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2023_HKF31_Nissan_Silvia_S15_NISMO_R_Tune_Proto_.jpg"
     },
     {
@@ -123687,7 +123686,7 @@ export const RAW = [
         "color": "",
         "part": "HKF32",
         "hw": "Pearl blue",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2023_HKF32__67_Ford_Anglia_Racer.jpg"
     },
     {
@@ -123697,7 +123696,7 @@ export const RAW = [
         "color": "",
         "part": "HKF36",
         "hw": "Red",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2023_HKF36_Porsche_935.jpg"
     },
     {
@@ -123707,7 +123706,7 @@ export const RAW = [
         "color": "",
         "part": "HKF27",
         "hw": "Red",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2023_HKF27__96_Honda_Accord.jpg"
     },
     {
@@ -123717,7 +123716,7 @@ export const RAW = [
         "color": "",
         "part": "HKF33",
         "hw": "White",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2023_HKF33__95_Toyota_Celica_GT_Four.jpg"
     },
     {
@@ -123727,7 +123726,7 @@ export const RAW = [
         "color": "",
         "part": "HYF05",
         "hw": "Seiran Blue",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2023_HYF05__23_Nissan_Z.jpg"
     },
     {
@@ -123737,7 +123736,7 @@ export const RAW = [
         "color": "",
         "part": "HRT64",
         "hw": "White",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2024_HRT64_LB_Super_Silhouette_Nissan_Silvia_S15_.jpg"
     },
     {
@@ -123747,7 +123746,7 @@ export const RAW = [
         "color": "",
         "part": "HRT67",
         "hw": "Black",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2024_HRT67_MBK_Van.jpg"
     },
     {
@@ -123757,7 +123756,7 @@ export const RAW = [
         "color": "",
         "part": "HRT71",
         "hw": "Miami Blue",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2024_HRT71_Porsche_718_Cayman_GT4.jpg"
     },
     {
@@ -123767,7 +123766,7 @@ export const RAW = [
         "color": "",
         "part": "HRT66",
         "hw": "Black",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2024_HRT66_Nissan_Skyline_RS_KDR30_.jpg"
     },
     {
@@ -123777,7 +123776,7 @@ export const RAW = [
         "color": "",
         "part": "HRT69",
         "hw": "White",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2024_HRT69__66_Chevrolet_Corvair_Yenko_Stinger.jpg"
     },
     {
@@ -123787,7 +123786,7 @@ export const RAW = [
         "color": "",
         "part": "HRT56",
         "hw": "Metalflake dark gray",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2024_HRT56_2021_Toyota_GR_Supra.jpg"
     },
     {
@@ -123797,7 +123796,7 @@ export const RAW = [
         "color": "",
         "part": "HRT65",
         "hw": "Seafoam",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2024_HRT65__60s_Fiat_500_D_Modificado.jpg"
     },
     {
@@ -123807,7 +123806,7 @@ export const RAW = [
         "color": "",
         "part": "HRT68",
         "hw": "Emerald green",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2024_HRT68_Mitsubishi_3000GT_VR_4.jpg"
     },
     {
@@ -123817,7 +123816,7 @@ export const RAW = [
         "color": "",
         "part": "HRT74",
         "hw": "White",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2024_HRT74_Nissan_Skyline_GT_R_BNR32_.jpg"
     },
     {
@@ -123827,7 +123826,7 @@ export const RAW = [
         "color": "",
         "part": "HRT70",
         "hw": "Blu Uranus",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2024_HRT70_Lamborghini_Countach_LPI_800_4.jpg"
     },
     {
@@ -123837,7 +123836,7 @@ export const RAW = [
         "color": "",
         "part": "HRT58",
         "hw": "Matte teal",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2024_HRT58_1955_Plymouth_Savoy.jpg"
     },
     {
@@ -123847,7 +123846,7 @@ export const RAW = [
         "color": "",
         "part": "HRT60",
         "hw": "Ultramarine",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2024_HRT60__99_Ford_F_150_SVT_Lightning.jpg"
     },
     {
@@ -123857,7 +123856,7 @@ export const RAW = [
         "color": "",
         "part": "HRT73",
         "hw": "Aqua",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2024_HRT73_Porsche_964.jpg"
     },
     {
@@ -123867,7 +123866,7 @@ export const RAW = [
         "color": "",
         "part": "HRT72",
         "hw": "Purple",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2024_HRT72__86_Ford_Thunderbird_Pro_Stock.jpg"
     },
     {
@@ -123877,7 +123876,7 @@ export const RAW = [
         "color": "",
         "part": "HRT61",
         "hw": "Yellow",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2024_HRT61__24_Honda_Civic_Type_R.jpg"
     },
     {
@@ -123887,7 +123886,7 @@ export const RAW = [
         "color": "",
         "part": "HRT59",
         "hw": "White",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2024_HRT59_Mazda_323_GTR.jpg"
     },
     {
@@ -123897,7 +123896,7 @@ export const RAW = [
         "color": "",
         "part": "HRT77",
         "hw": "Metalflake purple",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2024_HRT77_Custom_01_Acura_Integra_GSR.jpg"
     },
     {
@@ -123907,7 +123906,7 @@ export const RAW = [
         "color": "",
         "part": "HRT57",
         "hw": "Metalflake gold",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2024_HRT57_Meyers_Manx.jpg"
     },
     {
@@ -123917,7 +123916,7 @@ export const RAW = [
         "color": "",
         "part": "HRT76",
         "hw": "Metalflake copper",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2024_HRT76_Ford_Transit_SuperVan.jpg"
     },
     {
@@ -123927,7 +123926,7 @@ export const RAW = [
         "color": "",
         "part": "HRT75",
         "hw": "Yellow",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2024_HRT75_De_Tomaso_Pantera_Gruppo_4.jpg"
     },
     {
@@ -123937,7 +123936,7 @@ export const RAW = [
         "color": "",
         "part": "HRT79",
         "hw": "Black",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2024_HRT79__73_Volvo_142_GL.jpg"
     },
     {
@@ -123947,7 +123946,7 @@ export const RAW = [
         "color": "",
         "part": "JFM94",
         "hw": "Matte olive",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2024_JFM94__32_Ford.jpg"
     },
     {
@@ -123957,7 +123956,7 @@ export const RAW = [
         "color": "",
         "part": "HRT78",
         "hw": "Pearlescent metalflake white",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2024_HRT78_Mercedes_Benz_E_36_AMG.jpg"
     },
     {
@@ -123967,7 +123966,7 @@ export const RAW = [
         "color": "",
         "part": "HRT62",
         "hw": "Orange",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2024_HRT62_1967_Volkswagen_Samba_Bus.jpg"
     },
     {
@@ -123977,7 +123976,7 @@ export const RAW = [
         "color": "",
         "part": "HRT80",
         "hw": "Phoenix Yellow",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2024_HRT80_BMW_M3.jpg"
     },
     {
@@ -123987,7 +123986,7 @@ export const RAW = [
         "color": "",
         "part": "JDJ23",
         "hw": "Championship White",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2024_JDJ23__99_Honda_Civic_Type_R_EK9_.jpg"
     },
     {
@@ -123997,7 +123996,7 @@ export const RAW = [
         "color": "",
         "part": "JDJ24",
         "hw": "White",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2024_JDJ24_LB_ER34_Super_Silhouette_Nissan_Skyline.jpg"
     },
     {
@@ -124007,7 +124006,7 @@ export const RAW = [
         "color": "",
         "part": "JDJ25",
         "hw": "Metalflake silver",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2024_JDJ25__16_Subaru_WRX_STI.jpg"
     },
     {
@@ -124017,7 +124016,7 @@ export const RAW = [
         "color": "",
         "part": "JDJ26",
         "hw": "White",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2024_JDJ26__18_Toyota_4Runner.jpg"
     },
     {
@@ -124027,7 +124026,7 @@ export const RAW = [
         "color": "",
         "part": "JDJ27",
         "hw": "Metalflake silver",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2024_JDJ27_1997_Mercedes_Benz_CLK_GTR.jpg"
     },
     {
@@ -124037,7 +124036,7 @@ export const RAW = [
         "color": "",
         "part": "JBL17",
         "hw": "Black",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2025_JBL17_Porsche_935.jpg"
     },
     {
@@ -124047,7 +124046,7 @@ export const RAW = [
         "color": "",
         "part": "JBL18",
         "hw": "Red",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2025_JBL18_Lancia_Delta_Integrale.jpg"
     },
     {
@@ -124057,7 +124056,7 @@ export const RAW = [
         "color": "",
         "part": "JBL24",
         "hw": "White",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2025_JBL24__91_BMW_M5.jpg"
     },
     {
@@ -124067,7 +124066,7 @@ export const RAW = [
         "color": "",
         "part": "JBL25",
         "hw": "Yellow",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2025_JBL25_Toyota_Land_Cruiser_FJ43.jpg"
     },
     {
@@ -124077,7 +124076,7 @@ export const RAW = [
         "color": "",
         "part": "JBL16",
         "hw": "White",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2025_JBL16_Alfa_Romeo_GTV6_3_0.jpg"
     },
     {
@@ -124087,7 +124086,7 @@ export const RAW = [
         "color": "",
         "part": "JBL19",
         "hw": "Black",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2025_JBL19_Porsche_911_Carrera_RS_2_7.jpg"
     },
     {
@@ -124097,7 +124096,7 @@ export const RAW = [
         "color": "",
         "part": "JBL30",
         "hw": "Black",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2025_JBL30__16_Bugatti_Chiron.jpg"
     },
     {
@@ -124107,7 +124106,7 @@ export const RAW = [
         "color": "",
         "part": "JBL20",
         "hw": "Orange",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2025_JBL20__69_Ford_Mustang_Boss_302.jpg"
     },
     {
@@ -124117,7 +124116,7 @@ export const RAW = [
         "color": "",
         "part": "JBL21",
         "hw": "Yellow",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2025_JBL21_Datsun_510_Wagon.jpg"
     },
     {
@@ -124127,7 +124126,7 @@ export const RAW = [
         "color": "",
         "part": "JBL22",
         "hw": "Green",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2025_JBL22_Meyers_Manx.jpg"
     },
     {
@@ -124137,7 +124136,7 @@ export const RAW = [
         "color": "",
         "part": "JBL07",
         "hw": "Diamond Silver Metallic",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2025_JBL07_2008_Mercedes_Benz_CLK_63_AMG_Black_Series.jpg"
     },
     {
@@ -124147,7 +124146,7 @@ export const RAW = [
         "color": "",
         "part": "JBL11",
         "hw": "Bianco Audace",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2025_JBL11_Maserati_MC20.jpg"
     },
     {
@@ -124157,7 +124156,7 @@ export const RAW = [
         "color": "",
         "part": "JBL08",
         "hw": "Mudbath",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2025_JBL08_2024_Toyota_Tacoma_TRD_Pro.jpg"
     },
     {
@@ -124167,7 +124166,7 @@ export const RAW = [
         "color": "",
         "part": "JBL23",
         "hw": "Yellow",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2025_JBL23__98_Toyota_Altezza.jpg"
     },
     {
@@ -124177,7 +124176,7 @@ export const RAW = [
         "color": "",
         "part": "JBL15",
         "hw": "Holman Moody Gold",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2025_JBL15__17_Ford_GT.jpg"
     },
     {
@@ -124187,7 +124186,7 @@ export const RAW = [
         "color": "",
         "part": "HRT63",
         "hw": "Silver",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2025_HRT63__80_Mercedes_Benz_500_SLC_Rallye.jpg"
     },
     {
@@ -124197,7 +124196,7 @@ export const RAW = [
         "color": "",
         "part": "JBL13",
         "hw": "Giallo Corona",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2025_JBL13__95_Lamborghini_Diablo_SV.jpg"
     },
     {
@@ -124207,7 +124206,7 @@ export const RAW = [
         "color": "",
         "part": "JBL26",
         "hw": "White",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2025_JBL26_Mitsubishi_Pajero_Evolution.jpg"
     },
     {
@@ -124217,7 +124216,7 @@ export const RAW = [
         "color": "",
         "part": "JBL28",
         "hw": "White",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2025_JBL28__77_Pontiac_Firebird_TA.jpg"
     },
     {
@@ -124227,7 +124226,7 @@ export const RAW = [
         "color": "",
         "part": "JBL31",
         "hw": "Metalflake green",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2025_JBL31__94_Nissan_Primera.jpg"
     },
     {
@@ -124237,7 +124236,7 @@ export const RAW = [
         "color": "",
         "part": "JHW26",
         "hw": "Speed Yellow Clearcoat",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2025_JHW26_Ford_GT.jpg"
     },
     {
@@ -124247,7 +124246,7 @@ export const RAW = [
         "color": "",
         "part": "JBL10",
         "hw": "Midnight Blue Metallic with Charcoal Gray trim",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2025_JBL10_Nissan_Laurel_C33.jpg"
     },
     {
@@ -124257,7 +124256,7 @@ export const RAW = [
         "color": "",
         "part": "JBL12",
         "hw": "Pearl Glen Green",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2025_JBL12__75_Ford_Bronco.jpg"
     },
     {
@@ -124267,7 +124266,7 @@ export const RAW = [
         "color": "",
         "part": "JBL09",
         "hw": "Verde Mercurius",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2025_JBL09_Lamborghini_Temerario.jpg"
     },
     {
@@ -124277,7 +124276,7 @@ export const RAW = [
         "color": "",
         "part": "JBL29",
         "hw": "Red",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2025_JBL29_Ford_RS200.jpg"
     },
     {
@@ -124287,7 +124286,7 @@ export const RAW = [
         "color": "",
         "part": "JHW25",
         "hw": "Metalflake silver",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JHW25_Nissan_300ZX_Twin_Turbo.jpg"
     },
     {
@@ -124297,7 +124296,7 @@ export const RAW = [
         "color": "",
         "part": "JHW30",
         "hw": "Metalflake silver",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JHW30_BMW_M3_GTR.jpg"
     },
     {
@@ -124307,7 +124306,7 @@ export const RAW = [
         "color": "",
         "part": "JHW17",
         "hw": "Sunset Orange Metallic",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JHW17_2002_Pontiac_Firebird.jpg"
     },
     {
@@ -124317,7 +124316,7 @@ export const RAW = [
         "color": "",
         "part": "JHW18",
         "hw": "Garnet",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JHW18_1993_Toyota_4Runner.jpg"
     },
     {
@@ -124327,7 +124326,7 @@ export const RAW = [
         "color": "",
         "part": "JHW27",
         "hw": "White",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JHW27_1978_Dodge_Li_l_Red_Express_Truck.jpg"
     },
     {
@@ -124337,7 +124336,7 @@ export const RAW = [
         "color": "",
         "part": "JHW19",
         "hw": "Platinum White Pearl",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JHW19_Toyota_GR_Yaris.jpg"
     },
     {
@@ -124347,7 +124346,7 @@ export const RAW = [
         "color": "",
         "part": "JHW28",
         "hw": "Otto blue",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JHW28__69_Ford_Torino_Talladega.jpg"
     },
     {
@@ -124357,7 +124356,7 @@ export const RAW = [
         "color": "",
         "part": "JHW33",
         "hw": "Verde Mantis",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JHW33_Lamborghini_Gallardo_LP_570_4_Superleggera.jpg"
     },
     {
@@ -124367,7 +124366,7 @@ export const RAW = [
         "color": "",
         "part": "JHW40",
         "hw": "Metalflake dark red",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JHW40__67_Custom_Mustang.jpg"
     },
     {
@@ -124377,7 +124376,7 @@ export const RAW = [
         "color": "",
         "part": "JHW41",
         "hw": "Black",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JHW41_Nissan_Skyline_GT_R_R32_Pandem.jpg"
     },
     {
@@ -124387,7 +124386,7 @@ export const RAW = [
         "color": "",
         "part": "JHW20",
         "hw": "Black",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JHW20_2015_Toyota_Alphard.jpg"
     },
     {
@@ -124397,7 +124396,7 @@ export const RAW = [
         "color": "",
         "part": "JHW21",
         "hw": "Moon Silver",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JHW21_Koenigsegg_CC850.jpg"
     },
     {
@@ -124407,7 +124406,7 @@ export const RAW = [
         "color": "",
         "part": "JHW32",
         "hw": "Black",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JHW32_Datsun_King_Cab_Baja_Custom.jpg"
     },
     {
@@ -124417,7 +124416,7 @@ export const RAW = [
         "color": "",
         "part": "JHW29",
         "hw": "Orange",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JHW29_1967_Jeepster_Commando.jpg"
     },
     {
@@ -124427,7 +124426,7 @@ export const RAW = [
         "color": "",
         "part": "JHW34",
         "hw": "Petty Racing Blue",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JHW34_2021_Toyota_GR_Supra.jpg"
     },
     {
@@ -124437,7 +124436,7 @@ export const RAW = [
         "color": "",
         "part": "JHW22",
         "hw": "Rosso Corsa",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JHW22_Enzo_Ferrari.jpg"
     },
     {
@@ -124447,7 +124446,7 @@ export const RAW = [
         "color": "",
         "part": "JHW35",
         "hw": "Yellow",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JHW35__66_Chevy_Super_Nova.jpg"
     },
     {
@@ -124457,7 +124456,7 @@ export const RAW = [
         "color": "",
         "part": "JHW36",
         "hw": "British Racing Green",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JHW36_Aston_Martin_DBS.jpg"
     },
     {
@@ -124467,7 +124466,7 @@ export const RAW = [
         "color": "",
         "part": "JHW37",
         "hw": "White",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JHW37_1989_Mercedes_Benz_560_SEC_AMG.jpg"
     },
     {
@@ -124477,7 +124476,7 @@ export const RAW = [
         "color": "",
         "part": "JHW38",
         "hw": "Silver",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JHW38__71_El_Camino.jpg"
     },
     {
@@ -124487,7 +124486,7 @@ export const RAW = [
         "color": "",
         "part": "JHW23",
         "hw": "Sky blue",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JHW23_1995_Chevy_Tahoe.jpg"
     },
     {
@@ -124497,7 +124496,7 @@ export const RAW = [
         "color": "",
         "part": "JHW24",
         "hw": "Arancio Apodis",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JHW24_Lamborghini_Revuelto.jpg"
     },
     {
@@ -124507,7 +124506,7 @@ export const RAW = [
         "color": "",
         "part": "JBL27",
         "hw": "Black",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JBL27_BMW_M3_GT2.jpg"
     },
     {
@@ -124517,7 +124516,7 @@ export const RAW = [
         "color": "",
         "part": "JHW31",
         "hw": "Orange",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JHW31_Datsun_240Z.jpg"
     },
     {
@@ -124527,7 +124526,7 @@ export const RAW = [
         "color": "",
         "part": "JHW39",
         "hw": "Tan",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JHW39__49_Ford_F1.jpg"
     },
     {
@@ -124537,7 +124536,7 @@ export const RAW = [
         "color": "",
         "part": "X8313",
         "hw": "Black",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2013_X8313_Spoiler_Sport.jpg"
     },
     {
@@ -124547,7 +124546,7 @@ export const RAW = [
         "color": "",
         "part": "X8308",
         "hw": "White and Metalflake Blue",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2013_X8308_Dream_Van_XGW.jpg"
     },
     {
@@ -124557,7 +124556,7 @@ export const RAW = [
         "color": "",
         "part": "X8315",
         "hw": "Green",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2013_X8315_Funny_Money.jpg"
     },
     {
@@ -124567,7 +124566,7 @@ export const RAW = [
         "color": "",
         "part": "X8319",
         "hw": "Golden-Yellow",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2013_X8319__10_Pro_Stock_Camaro.jpg"
     },
     {
@@ -124577,7 +124576,7 @@ export const RAW = [
         "color": "",
         "part": "X8336",
         "hw": "Yellow & White",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2013_X8336_Custom_69_Volkswagen_Squareback.jpg"
     },
     {
@@ -124587,7 +124586,7 @@ export const RAW = [
         "color": "",
         "part": "X8340",
         "hw": "Light blue",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2013_X8340_Dairy_Delivery.jpg"
     },
     {
@@ -124597,7 +124596,7 @@ export const RAW = [
         "color": "",
         "part": "X8311",
         "hw": "Pearl White & Red Metalflake",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2013_X8311_Dairy_Delivery.jpg"
     },
     {
@@ -124607,7 +124606,7 @@ export const RAW = [
         "color": "",
         "part": "X8318",
         "hw": "Pearl Pink and White",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2013_X8318__59_Chevy_Delivery.jpg"
     },
     {
@@ -124617,7 +124616,7 @@ export const RAW = [
         "color": "",
         "part": "X8321",
         "hw": "Beige",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2013_X8321_Baja_Breaker.jpg"
     },
     {
@@ -124627,7 +124626,7 @@ export const RAW = [
         "color": "",
         "part": "X8322",
         "hw": "Light Blue",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2013_X8322_Super_Van.jpg"
     },
     {
@@ -124637,7 +124636,7 @@ export const RAW = [
         "color": "",
         "part": "X8323",
         "hw": "Metalflake Orange & Black",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2013_X8323_Midnight_Otto.jpg"
     },
     {
@@ -124647,7 +124646,7 @@ export const RAW = [
         "color": "",
         "part": "X8350",
         "hw": "Maroon & Metalflake Grey",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2013_X8350__34_Ford_Sedan_Delivery.jpg"
     },
     {
@@ -124657,7 +124656,7 @@ export const RAW = [
         "color": "",
         "part": "X8326",
         "hw": "Yellow",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2013_X8326_Volkswagen_T1_Drag_Bus.jpg"
     },
     {
@@ -124667,7 +124666,7 @@ export const RAW = [
         "color": "",
         "part": "X8327",
         "hw": "Metalflake Purple",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2013_X8327__65_Volkswagen_Fastback.jpg"
     },
     {
@@ -124677,7 +124676,7 @@ export const RAW = [
         "color": "",
         "part": "X8324",
         "hw": "Cream & Brown, Grey stripes on sides, Red stripes on roof",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2013_X8324__56_Chevy_Nomad_Delivery.jpg"
     },
     {
@@ -124687,7 +124686,7 @@ export const RAW = [
         "color": "",
         "part": "X8325",
         "hw": "White",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2013_X8325__52_Chevy.jpg"
     },
     {
@@ -124697,7 +124696,7 @@ export const RAW = [
         "color": "",
         "part": "X8328",
         "hw": "Flat Olive Green",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2013_X8328_GMC_Motorhome.jpg"
     },
     {
@@ -124707,7 +124706,7 @@ export const RAW = [
         "color": "",
         "part": "X8309",
         "hw": "Pearl White & Yellow",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2013_X8309_Haulin_Gas.jpg"
     },
     {
@@ -124717,7 +124716,7 @@ export const RAW = [
         "color": "",
         "part": "X8335",
         "hw": "Matte Black, Catwoman deco on sides & rear",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2013_X8335_Cool_One.jpg"
     },
     {
@@ -124727,7 +124726,7 @@ export const RAW = [
         "color": "",
         "part": "X8331",
         "hw": "Pearl Lt. Blue, White roof, White stripes on sides, Superman deco on sides, rear, & roof",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2013_X8331__56_Ford_F_100_Panel.jpg"
     },
     {
@@ -124737,7 +124736,7 @@ export const RAW = [
         "color": "",
         "part": "X8332",
         "hw": "Antifreeze & Metalflake Teal",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2013_X8332_8_Crate_Delivery.jpg"
     },
     {
@@ -124747,7 +124746,7 @@ export const RAW = [
         "color": "",
         "part": "X8316",
         "hw": "Red, White roof, White stripes on sides & hood, Joker deco on sides, rear, & bedcover",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2013_X8316__63_Studebaker_Champ.jpg"
     },
     {
@@ -124757,7 +124756,7 @@ export const RAW = [
         "color": "",
         "part": "X8353",
         "hw": "Mtflk. Grey, Batman deco on sides, hood, & rear, Black Interior",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2013_X8353__55_Chevy_Panel.jpg"
     },
     {
@@ -124767,7 +124766,7 @@ export const RAW = [
         "color": "",
         "part": "X8338",
         "hw": "Red & White, Red, Black, Blue, & Silver graphics, Harley Quinn deco on sides & roof",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2013_X8338__67_Austin_Mini_Van.jpg"
     },
     {
@@ -124777,7 +124776,7 @@ export const RAW = [
         "color": "",
         "part": "X8312",
         "hw": "Silver and Metalflake Blue, Pillsbury deco on sides and rear",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2013_X8312_Quick_D_Livery.jpg"
     },
     {
@@ -124787,7 +124786,7 @@ export const RAW = [
         "color": "",
         "part": "X8317",
         "hw": "Metalflake Red, Totino's deco on sides and hood",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2013_X8317__77_Packin_Pacer.jpg"
     },
     {
@@ -124797,7 +124796,7 @@ export const RAW = [
         "color": "",
         "part": "X8329",
         "hw": "White, w",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2013_X8329_Haulin_Gas.jpg"
     },
     {
@@ -124807,7 +124806,7 @@ export const RAW = [
         "color": "",
         "part": "X8333",
         "hw": "Yellow, w",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2013_X8333_Custom_52_Chevy.jpg"
     },
     {
@@ -124817,7 +124816,7 @@ export const RAW = [
         "color": "",
         "part": "X8339",
         "hw": "Orange, Kix deco on sides and rear",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2013_X8339__49_Ford_C_O_E_.jpg"
     },
     {
@@ -124827,7 +124826,7 @@ export const RAW = [
         "color": "",
         "part": "X8368",
         "hw": "Yellow, Red roof, Old El Paso deco on sides and rear",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2013_X8368_Super_Van.jpg"
     },
     {
@@ -124837,7 +124836,7 @@ export const RAW = [
         "color": "",
         "part": "X8320",
         "hw": "Metalflake Gray",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2013_X8320_Convoy_Custom.jpg"
     },
     {
@@ -124847,7 +124846,7 @@ export const RAW = [
         "color": "",
         "part": "X8343",
         "hw": "Orange and Black",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2013_X8343_Hiway_Hauler.jpg"
     },
     {
@@ -124857,7 +124856,7 @@ export const RAW = [
         "color": "",
         "part": "X8342",
         "hw": "Metalflake Pearl White, Black roof",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2013_X8342_A_OK.jpg"
     },
     {
@@ -124867,7 +124866,7 @@ export const RAW = [
         "color": "",
         "part": "X8344",
         "hw": "Metalflake Dark Red",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2013_X8344_Dream_Van_XGW.jpg"
     },
     {
@@ -124877,7 +124876,7 @@ export const RAW = [
         "color": "",
         "part": "X8341",
         "hw": "Metalflake Blue and Red",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2013_X8341_Fat_Fendered_40.jpg"
     },
     {
@@ -124887,7 +124886,7 @@ export const RAW = [
         "color": "",
         "part": "X8345",
         "hw": "Metalflake White, Blue and Red",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2013_X8345_Smokin_Grille.jpg"
     },
     {
@@ -124897,7 +124896,7 @@ export const RAW = [
         "color": "",
         "part": "X8355",
         "hw": "Red, Black fenders, Dracula deco on sides, Bat deco on hood & rear",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2013_X8355_Neet_Streeter.jpg"
     },
     {
@@ -124907,7 +124906,7 @@ export const RAW = [
         "color": "",
         "part": "X8356",
         "hw": "Beige, Metaflake Gold fenders, The Mummy deco on sides & roof",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2013_X8356__34_Chrysler_Airflow.jpg"
     },
     {
@@ -124917,7 +124916,7 @@ export const RAW = [
         "color": "",
         "part": "X8352",
         "hw": "Mtflk. Grey, Metaflake Black roof, Frankenstein deco on sides, roof, & rear",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2013_X8352_Double_Demon_Delivery.jpg"
     },
     {
@@ -124927,7 +124926,7 @@ export const RAW = [
         "color": "",
         "part": "X8348",
         "hw": "Olive Green, Bright Yellow fenders, Creature from the Black Lagoon deco on sides & roof",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2013_X8348_Low_Flow.jpg"
     },
     {
@@ -124937,7 +124936,7 @@ export const RAW = [
         "color": "",
         "part": "X8354",
         "hw": "Mtflk. Purple, Burgundy roof, The Bride of Frankenstein deco on sides",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2013_X8354__59_Cadillac_Funny_Car.jpg"
     },
     {
@@ -124947,7 +124946,7 @@ export const RAW = [
         "color": "",
         "part": "X8337",
         "hw": "Mtflk. Dk. Blue, The Wolfman deco on sides & roof",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2013_X8337_Volkswagen_T1_Panel_Bus.jpg"
     },
     {
@@ -124957,7 +124956,7 @@ export const RAW = [
         "color": "",
         "part": "X8351",
         "hw": "Pearl White & Red, Betty & Veronica deco on sides & rear, Pink hearts on roof",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2013_X8351__40_Ford_Coupe.jpg"
     },
     {
@@ -124967,7 +124966,7 @@ export const RAW = [
         "color": "",
         "part": "X8346",
         "hw": "Yellow & Pearl White, Archie deco on sides & roof, Orange & White stripes on sides, hood, & roof",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2013_X8346__67_Ford_Bronco.jpg"
     },
     {
@@ -124977,7 +124976,7 @@ export const RAW = [
         "color": "",
         "part": "X8349",
         "hw": "Black & Silver, Reggie deco on sides, Orange stripes on sides & hood",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2013_X8349__70_Chevy_Blazer.jpg"
     },
     {
@@ -124987,7 +124986,7 @@ export const RAW = [
         "color": "",
         "part": "X8334",
         "hw": "Pearl White & Pearl Pink, Betty deco on right side, Veronica deco Left side. Archie logo on rear",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2013_X8334_Sweet_Streets.jpg"
     },
     {
@@ -124997,7 +124996,7 @@ export const RAW = [
         "color": "",
         "part": "X8364",
         "hw": "White & Mtflk. Copper, Jughead deco on sides, Archie Comic logo on hood, White & Orange fenders",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2013_X8364_La_Troca.jpg"
     },
     {
@@ -125007,7 +125006,7 @@ export const RAW = [
         "color": "",
         "part": "X8347",
         "hw": "Metalflake Dark Blue & Metalflake Blue, Veronica, Archie & Betty deco on sides, Archie Comic logo on roof, Blue & White stripes on sides & roof",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2013_X8347_Super_Van.jpg"
     },
     {
@@ -125017,7 +125016,7 @@ export const RAW = [
         "color": "",
         "part": "X8357",
         "hw": "Beige, Sky Blue roof & fenders, Dove Chocolate deco on sides & rear",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2013_X8357__29_Ford_Pickup.jpg"
     },
     {
@@ -125027,7 +125026,7 @@ export const RAW = [
         "color": "",
         "part": "X8361",
         "hw": "Metal flake Silver, 3 Musketeers deco on sides & roof",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2013_X8361__70_Chevelle_Delivery.jpg"
     },
     {
@@ -125037,7 +125036,7 @@ export const RAW = [
         "color": "",
         "part": "X8359",
         "hw": "Brown & Pearl White, Snickers deco on sides & rear",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2013_X8359_Anglia_Panel_Truck.jpg"
     },
     {
@@ -125047,7 +125046,7 @@ export const RAW = [
         "color": "",
         "part": "X8358",
         "hw": "Metal flake Dark Green, Brown roof, Milky Way deco on sides & rear",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2013_X8358_Bread_Box.jpg"
     },
     {
@@ -125057,7 +125056,7 @@ export const RAW = [
         "color": "",
         "part": "X8360",
         "hw": "Red, Yellow fenders, Skittles deco on sides & rear",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2013_X8360_Deco_Delivery.jpg"
     },
     {
@@ -125067,7 +125066,7 @@ export const RAW = [
         "color": "",
         "part": "X8362",
         "hw": "Brown, M&M's deco on sides & rear",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2013_X8362_Smokin_Grille.jpg"
     },
     {
@@ -125077,7 +125076,7 @@ export const RAW = [
         "color": "",
         "part": "X8310",
         "hw": "Beige Brown Fenders,Yogi Bear deco on sides & roof",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2013_X8310__49_Ford_F1.jpg"
     },
     {
@@ -125087,7 +125086,7 @@ export const RAW = [
         "color": "",
         "part": "X8367",
         "hw": "Mint Green, Beige stake bed, Top Cat deco on sides",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2013_X8367_1951_GMC_COE.jpg"
     },
     {
@@ -125097,7 +125096,7 @@ export const RAW = [
         "color": "",
         "part": "X8363",
         "hw": "Yellow, Red roof, Captain Caveman deco on sides & hood",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2013_X8363__64_GMC_Panel.jpg"
     },
     {
@@ -125107,7 +125106,7 @@ export const RAW = [
         "color": "",
         "part": "X8365",
         "hw": "Sublime & Pearl White, Magilla Gorilla deco on sides & sleeper rear",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2013_X8365_Convoy_Custom.jpg"
     },
     {
@@ -125117,7 +125116,7 @@ export const RAW = [
         "color": "",
         "part": "X8330",
         "hw": "Sky Blue, Scooby-Doo! deco on sides & rear",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2013_X8330_Quick_D_Livery.jpg"
     },
     {
@@ -125127,7 +125126,7 @@ export const RAW = [
         "color": "",
         "part": "X8366",
         "hw": "Pearl Lt. Blue, The Flintstones deco on sides & rear",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2013_X8366_Haulin_Gas.jpg"
     },
     {
@@ -125137,7 +125136,7 @@ export const RAW = [
         "color": "",
         "part": "BDR83",
         "hw": "Metaflake Dark Red, Black Hood & Roof",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2014_BDR83__71_Plymouth_Satellite.jpg"
     },
     {
@@ -125147,7 +125146,7 @@ export const RAW = [
         "color": "",
         "part": "BDT06",
         "hw": "Pearl Dark Yellow & Metaflake Light Gold",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2014_BDT06_Customized_C3500.jpg"
     },
     {
@@ -125157,7 +125156,7 @@ export const RAW = [
         "color": "",
         "part": "BDT10",
         "hw": "Matte Olive Green, Beige camper shell",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2014_BDT10__85_Ford_Bronco.jpg"
     },
     {
@@ -125167,7 +125166,7 @@ export const RAW = [
         "color": "",
         "part": "BDR81",
         "hw": "Pearl Pink",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2014_BDR81__40_Ford.jpg"
     },
     {
@@ -125177,7 +125176,7 @@ export const RAW = [
         "color": "",
         "part": "BDT09",
         "hw": "Black",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2014_BDT09__75_Kenworth_W900.jpg"
     },
     {
@@ -125187,7 +125186,7 @@ export const RAW = [
         "color": "",
         "part": "BDR76",
         "hw": "Metalflake Blue & Green",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2014_BDR76_Volkswagen_T1_Drag_Bus.jpg"
     },
     {
@@ -125197,7 +125196,7 @@ export const RAW = [
         "color": "",
         "part": "BDR60",
         "hw": "Black with flames on sides & hood, Hot Tamales deco on sides & rear",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2014_BDR60__56_Ford_F_100_Panel.jpg"
     },
     {
@@ -125207,7 +125206,7 @@ export const RAW = [
         "color": "",
         "part": "BDR69",
         "hw": "Pearl Yellow, White roof & hood, Peeps deco on sides & hood",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2014_BDR69_Custom_69_Volkswagen_Squareback.jpg"
     },
     {
@@ -125217,7 +125216,7 @@ export const RAW = [
         "color": "",
         "part": "BDR73",
         "hw": "Pearl White with Silver roof, Peeps deco on sides & hood",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2014_BDR73__56_Chevy_Nomad_Delivery.jpg"
     },
     {
@@ -125227,7 +125226,7 @@ export const RAW = [
         "color": "",
         "part": "BDR88",
         "hw": "Metalflake Green with White roof, White stripes on hood, Mike and Ike deco on sides",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2014_BDR88__71_El_Camino.jpg"
     },
     {
@@ -125237,7 +125236,7 @@ export const RAW = [
         "color": "",
         "part": "BDR93",
         "hw": "Metalflake Dark Red with flames on sides & hood, Hot Tamales deco on sides & rear",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2014_BDR93_Long_Gone.jpg"
     },
     {
@@ -125247,7 +125246,7 @@ export const RAW = [
         "color": "",
         "part": "BDR94",
         "hw": "Metalflake Blue with White roof, Mike and Ike deco on sides",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2014_BDR94__85_Chevy_Astro_Van.jpg"
     },
     {
@@ -125257,7 +125256,7 @@ export const RAW = [
         "color": "",
         "part": "BDR66",
         "hw": "Red with Black Roof",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2014_BDR66_Midnight_Otto.jpg"
     },
     {
@@ -125267,7 +125266,7 @@ export const RAW = [
         "color": "",
         "part": "BDR63",
         "hw": "Metal Flake Aqua w",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2014_BDR63__49_Ford_C_O_E_.jpg"
     },
     {
@@ -125277,7 +125276,7 @@ export const RAW = [
         "color": "",
         "part": "BDR58",
         "hw": "Metal Flake Pale Blue",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2014_BDR58_Custom_52_Chevy.jpg"
     },
     {
@@ -125287,7 +125286,7 @@ export const RAW = [
         "color": "",
         "part": "BDR77",
         "hw": "Metal Flake Copper & Dark Yellow",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2014_BDR77__38_Dodge_Airflow.jpg"
     },
     {
@@ -125297,7 +125296,7 @@ export const RAW = [
         "color": "",
         "part": "BDT15",
         "hw": "Metal Flake Pink, Silver Roof",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2014_BDT15_1988_Jeep_Wagoneer.jpg"
     },
     {
@@ -125307,7 +125306,7 @@ export const RAW = [
         "color": "",
         "part": "BDR78",
         "hw": "Metal Flake Green",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2014_BDR78__59_Chevy_Delivery.jpg"
     },
     {
@@ -125317,7 +125316,7 @@ export const RAW = [
         "color": "",
         "part": "BDR72",
         "hw": "Yellow Bottom Orange Top",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2014_BDR72_Volkswagen_Baja_Beetle.jpg"
     },
     {
@@ -125327,7 +125326,7 @@ export const RAW = [
         "color": "",
         "part": "BDR95",
         "hw": "Lime Green",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2014_BDR95_Dream_Van_XGW_Panel.jpg"
     },
     {
@@ -125337,7 +125336,7 @@ export const RAW = [
         "color": "",
         "part": "BDT01",
         "hw": "Black & Metalflake Gold",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2014_BDT01_Volkswagen_T1_Panel_Bus.jpg"
     },
     {
@@ -125347,7 +125346,7 @@ export const RAW = [
         "color": "",
         "part": "BDT04",
         "hw": "Red, Blue & some Pink lower bottom",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2014_BDT04_Grateful_Dead_Truck.jpg"
     },
     {
@@ -125357,7 +125356,7 @@ export const RAW = [
         "color": "",
         "part": "BDT05",
         "hw": "Beige",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2014_BDT05_Dairy_Delivery.jpg"
     },
     {
@@ -125367,7 +125366,7 @@ export const RAW = [
         "color": "",
         "part": "BDT14",
         "hw": "Dark Blue & Gold",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2014_BDT14_Volkswagen_Drag_Truck.jpg"
     },
     {
@@ -125377,7 +125376,7 @@ export const RAW = [
         "color": "",
         "part": "BDR61",
         "hw": "Pearl White",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2014_BDR61_Cool_One.jpg"
     },
     {
@@ -125387,7 +125386,7 @@ export const RAW = [
         "color": "",
         "part": "BDR68",
         "hw": "Lime Green & Purple Top",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2014_BDR68__70_Chevelle_Delivery.jpg"
     },
     {
@@ -125397,7 +125396,7 @@ export const RAW = [
         "color": "",
         "part": "BDR87",
         "hw": "Metalflake Copper, Blue Box",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2014_BDR87_Hiway_Hauler.jpg"
     },
     {
@@ -125407,7 +125406,7 @@ export const RAW = [
         "color": "",
         "part": "BDR90",
         "hw": "Metalflake Light Blue",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2014_BDR90__65_Ford_Ranchero.jpg"
     },
     {
@@ -125417,7 +125416,7 @@ export const RAW = [
         "color": "",
         "part": "BDT02",
         "hw": "Pearl White & Red top",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2014_BDT02_Anglia_Panel_Truck.jpg"
     },
     {
@@ -125427,7 +125426,7 @@ export const RAW = [
         "color": "",
         "part": "BDT03",
         "hw": "Metalflake Pale Blue, Dark Green fenders",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2014_BDT03_Deco_Delivery.jpg"
     },
     {
@@ -125437,7 +125436,7 @@ export const RAW = [
         "color": "",
         "part": "BDR59",
         "hw": "Light Blue w",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2014_BDR59__40_Ford_Coupe.jpg"
     },
     {
@@ -125447,7 +125446,7 @@ export const RAW = [
         "color": "",
         "part": "BDR89",
         "hw": "Black & Yellow, Red roof",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2014_BDR89__67_Ford_Bronco_Roadster.jpg"
     },
     {
@@ -125457,7 +125456,7 @@ export const RAW = [
         "color": "",
         "part": "BDR91",
         "hw": "Yellow and Black",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2014_BDR91_8_Crate_Delivery.jpg"
     },
     {
@@ -125467,7 +125466,7 @@ export const RAW = [
         "color": "",
         "part": "BDR92",
         "hw": "Mtflk. Olive green, Black running boards and fenders",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2014_BDR92__34_Dodge_Delivery.jpg"
     },
     {
@@ -125477,7 +125476,7 @@ export const RAW = [
         "color": "",
         "part": "BDT12",
         "hw": "Two tone Red top Black bottom",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2014_BDT12__70_Chevy_Blazer.jpg"
     },
     {
@@ -125487,7 +125486,7 @@ export const RAW = [
         "color": "",
         "part": "BDT13",
         "hw": "Green, Yellow running boards and fenders",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2014_BDT13_A_OK.jpg"
     },
     {
@@ -125497,7 +125496,7 @@ export const RAW = [
         "color": "",
         "part": "BDR57",
         "hw": "Metalflake Blue & White",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2014_BDR57_Mig_Rig.jpg"
     },
     {
@@ -125507,7 +125506,7 @@ export const RAW = [
         "color": "",
         "part": "BDR62",
         "hw": "Pearl White with Orange roof",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2014_BDR62_Smokin_Grille.jpg"
     },
     {
@@ -125517,7 +125516,7 @@ export const RAW = [
         "color": "",
         "part": "BDR75",
         "hw": "Red",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2014_BDR75_Ford_F_150.jpg"
     },
     {
@@ -125527,7 +125526,7 @@ export const RAW = [
         "color": "",
         "part": "BDR98",
         "hw": "Metalflake Brown with Red roof",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2014_BDR98_Texas_Drive_Em.jpg"
     },
     {
@@ -125537,7 +125536,7 @@ export const RAW = [
         "color": "",
         "part": "BDT00",
         "hw": "Red, lime green & white roof",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2014_BDT00_Custom_62_Chevy.jpg"
     },
     {
@@ -125547,7 +125546,7 @@ export const RAW = [
         "color": "",
         "part": "BDT16",
         "hw": "Metalflake Purple",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2014_BDT16__59_Chevy_Delivery.jpg"
     },
     {
@@ -125557,7 +125556,7 @@ export const RAW = [
         "color": "",
         "part": "BDR65",
         "hw": "Beige with Black fenders",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2014_BDR65_Fat_Fendered_40.jpg"
     },
     {
@@ -125567,7 +125566,7 @@ export const RAW = [
         "color": "",
         "part": "BDR71",
         "hw": "White and Pink",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2014_BDR71__34_Chrysler_Airflow.jpg"
     },
     {
@@ -125577,7 +125576,7 @@ export const RAW = [
         "color": "",
         "part": "BDR79",
         "hw": "Metalflake Lime Green with White roof",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2014_BDR79_Volkswagen_T1_Panel_Bus.jpg"
     },
     {
@@ -125587,7 +125586,7 @@ export const RAW = [
         "color": "",
         "part": "BDR80",
         "hw": "Metalflake White and Metalflake Blue",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2014_BDR80__52_Chevy_Truck.jpg"
     },
     {
@@ -125597,7 +125596,7 @@ export const RAW = [
         "color": "",
         "part": "BDR85",
         "hw": "Unpainted",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2014_BDR85_Baja_Breaker.jpg"
     },
     {
@@ -125607,7 +125606,7 @@ export const RAW = [
         "color": "",
         "part": "BDR86",
         "hw": "Red with Matte Black fenders",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2014_BDR86__34_Ford_Sedan_Delivery.jpg"
     },
     {
@@ -125617,7 +125616,7 @@ export const RAW = [
         "color": "",
         "part": "BDR67",
         "hw": "White",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2014_BDR67_Soda_Popper.jpg"
     },
     {
@@ -125627,7 +125626,7 @@ export const RAW = [
         "color": "",
         "part": "BDR74",
         "hw": "Mustard",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2014_BDR74__51_GMC_C_O_E_.jpg"
     },
     {
@@ -125637,7 +125636,7 @@ export const RAW = [
         "color": "",
         "part": "BDR82",
         "hw": "Chrome & Green",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2014_BDR82__64_GMC_Panel.jpg"
     },
     {
@@ -125647,7 +125646,7 @@ export const RAW = [
         "color": "",
         "part": "BDR99",
         "hw": "Yellow",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2014_BDR99_Convoy_Custom.jpg"
     },
     {
@@ -125657,7 +125656,7 @@ export const RAW = [
         "color": "",
         "part": "BDT07",
         "hw": "Black & Orange",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2014_BDT07_Quick_D_Livery.jpg"
     },
     {
@@ -125667,7 +125666,7 @@ export const RAW = [
         "color": "",
         "part": "BDT11",
         "hw": "Metalflake Blue",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2014_BDT11__56_Ford_F_100_Panel.jpg"
     },
     {
@@ -125677,7 +125676,7 @@ export const RAW = [
         "color": "",
         "part": "CFP70",
         "hw": "Metalflake yellow w",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2015_CFP70_Hiway_Hauler.jpg"
     },
     {
@@ -125687,7 +125686,7 @@ export const RAW = [
         "color": "",
         "part": "CFP71",
         "hw": "Metalflake Purple top w",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2015_CFP71_Dairy_Delivery.jpg"
     },
     {
@@ -125697,7 +125696,7 @@ export const RAW = [
         "color": "",
         "part": "CFP72",
         "hw": "Metalflake Blue",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2015_CFP72__67_Ford_Bronco.jpg"
     },
     {
@@ -125707,7 +125706,7 @@ export const RAW = [
         "color": "",
         "part": "CFP73",
         "hw": "Yellow",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2015_CFP73__72_Ford_Ranchero.jpg"
     },
     {
@@ -125717,7 +125716,7 @@ export const RAW = [
         "color": "",
         "part": "CFP74",
         "hw": "Orange w",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2015_CFP74_Custom_52_Chevy.jpg"
     },
     {
@@ -125727,7 +125726,7 @@ export const RAW = [
         "color": "",
         "part": "CFP75",
         "hw": "Beige w",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2015_CFP75__34_Dodge_Delivery.jpg"
     },
     {
@@ -125737,7 +125736,7 @@ export const RAW = [
         "color": "",
         "part": "BDR64",
         "hw": "Yellow with brown roof",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2015_BDR64_Volkswagen_Drag_Bus.jpg"
     },
     {
@@ -125747,7 +125746,7 @@ export const RAW = [
         "color": "",
         "part": "BDR70",
         "hw": "Silver top &grey bottom",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2015_BDR70__55_Chevy_Panel.jpg"
     },
     {
@@ -125757,7 +125756,7 @@ export const RAW = [
         "color": "",
         "part": "BDR84",
         "hw": "Metalflake dark red",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2015_BDR84_Quick_D_Livery.jpg"
     },
     {
@@ -125767,7 +125766,7 @@ export const RAW = [
         "color": "",
         "part": "BDR96",
         "hw": "Red",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2015_BDR96__66_Dodge_A100.jpg"
     },
     {
@@ -125777,7 +125776,7 @@ export const RAW = [
         "color": "",
         "part": "BDR97",
         "hw": "Cream with light blue fenders",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2015_BDR97__49_Ford_F1.jpg"
     },
     {
@@ -125787,7 +125786,7 @@ export const RAW = [
         "color": "",
         "part": "BDT08",
         "hw": "Metalflake Champagne",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2015_BDT08_Combat_Medic.jpg"
     },
     {
@@ -125797,7 +125796,7 @@ export const RAW = [
         "color": "",
         "part": "CFP41",
         "hw": "Metalflake Green",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2015_CFP41_Volkswagen_Custom_Deluxe_Wagon.jpg"
     },
     {
@@ -125807,7 +125806,7 @@ export const RAW = [
         "color": "",
         "part": "CFP42",
         "hw": "Dark Blue and Yellow",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2015_CFP42__78_Corvette_Funny_Car.jpg"
     },
     {
@@ -125817,7 +125816,7 @@ export const RAW = [
         "color": "",
         "part": "CFP44",
         "hw": "White with a grey box",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2015_CFP44__49_Ford_COE.jpg"
     },
     {
@@ -125827,7 +125826,7 @@ export const RAW = [
         "color": "",
         "part": "CFP48",
         "hw": "Purple with white roof",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2015_CFP48_School_Busted.jpg"
     },
     {
@@ -125837,7 +125836,7 @@ export const RAW = [
         "color": "",
         "part": "CFP50",
         "hw": "Metalflake Purple",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2015_CFP50__70_Chevelle_Delivery.jpg"
     },
     {
@@ -125847,7 +125846,7 @@ export const RAW = [
         "color": "",
         "part": "CFP57",
         "hw": "Metalflake Black",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2015_CFP57_Ford_F_150.jpg"
     },
     {
@@ -125857,7 +125856,7 @@ export const RAW = [
         "color": "",
         "part": "CFP58",
         "hw": "Metalflake Olive Green",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2015_CFP58_Surfin_School_Bus.jpg"
     },
     {
@@ -125867,7 +125866,7 @@ export const RAW = [
         "color": "",
         "part": "CFP59",
         "hw": "Red & White",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2015_CFP59__38_Dodge_Airflow.jpg"
     },
     {
@@ -125877,7 +125876,7 @@ export const RAW = [
         "color": "",
         "part": "CFP60",
         "hw": "Metalflake Gold",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2015_CFP60__64_Chevy_Nova_Delivery.jpg"
     },
     {
@@ -125887,7 +125886,7 @@ export const RAW = [
         "color": "",
         "part": "CFP61",
         "hw": "Midnight Blue w",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2015_CFP61_Deco_Delivery.jpg"
     },
     {
@@ -125897,7 +125896,7 @@ export const RAW = [
         "color": "",
         "part": "CFP62",
         "hw": "Metalflake Yellow",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2015_CFP62_Bread_Box.jpg"
     },
     {
@@ -125907,7 +125906,7 @@ export const RAW = [
         "color": "",
         "part": "CFP63",
         "hw": "Unpainted",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2015_CFP63_Double_Demon_Delivery.jpg"
     },
     {
@@ -125917,7 +125916,7 @@ export const RAW = [
         "color": "",
         "part": "CFP39",
         "hw": "Black",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2015_CFP39_Spoiler_Sport.jpg"
     },
     {
@@ -125927,7 +125926,7 @@ export const RAW = [
         "color": "",
         "part": "CFP76",
         "hw": "Pearl White",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2015_CFP76_Dream_Van_XGW_Panel.jpg"
     },
     {
@@ -125937,7 +125936,7 @@ export const RAW = [
         "color": "",
         "part": "CFP77",
         "hw": "Light blue and white",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2015_CFP77_Quick_D_Livery.jpg"
     },
     {
@@ -125947,7 +125946,7 @@ export const RAW = [
         "color": "",
         "part": "CFP79",
         "hw": "Matte Orange",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2015_CFP79_Volkswagen_Drag_Truck.jpg"
     },
     {
@@ -125957,7 +125956,7 @@ export const RAW = [
         "color": "",
         "part": "CFP80",
         "hw": "Metalflake Gold",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2015_CFP80_Haulin_Gas.jpg"
     },
     {
@@ -125967,7 +125966,7 @@ export const RAW = [
         "color": "",
         "part": "CFP81",
         "hw": "White",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2015_CFP81_1985_Chevy_Astro_Van.jpg"
     },
     {
@@ -125977,7 +125976,7 @@ export const RAW = [
         "color": "",
         "part": "CFP86",
         "hw": "White & Light Blue",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2015_CFP86_Volkswagen_T1_Panel_Bus.jpg"
     },
     {
@@ -125987,7 +125986,7 @@ export const RAW = [
         "color": "",
         "part": "CFP89",
         "hw": "Yellow",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2015_CFP89_A_OK.jpg"
     },
     {
@@ -125997,7 +125996,7 @@ export const RAW = [
         "color": "",
         "part": "CFP78",
         "hw": "Black",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2015_CFP78_8_Crate_Delivery.jpg"
     },
     {
@@ -126007,7 +126006,7 @@ export const RAW = [
         "color": "",
         "part": "CFP87",
         "hw": "Dark red",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2015_CFP87_Cool_One.jpg"
     },
     {
@@ -126017,7 +126016,7 @@ export const RAW = [
         "color": "",
         "part": "CFP88",
         "hw": "Blue",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2015_CFP88_Dairy_Delivery.jpg"
     },
     {
@@ -126027,7 +126026,7 @@ export const RAW = [
         "color": "",
         "part": "CFP90",
         "hw": "Orange",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2015_CFP90_School_Busted.jpg"
     },
     {
@@ -126037,7 +126036,7 @@ export const RAW = [
         "color": "",
         "part": "DJG81",
         "hw": "Metalflake Orange",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2016_DJG81_Baja_Breaker.jpg"
     },
     {
@@ -126047,7 +126046,7 @@ export const RAW = [
         "color": "",
         "part": "DJG83",
         "hw": "Metalflake Silver w",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2016_DJG83_Quick_D_Livery.jpg"
     },
     {
@@ -126057,7 +126056,7 @@ export const RAW = [
         "color": "",
         "part": "DJG99",
         "hw": "Metalflake Burgandy w",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2016_DJG99_Deco_Delivery.jpg"
     },
     {
@@ -126067,7 +126066,7 @@ export const RAW = [
         "color": "",
         "part": "DJG82",
         "hw": "Metalflake Green",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2016_DJG82_Volkswagen_T1_Panel_Bus.jpg"
     },
     {
@@ -126077,7 +126076,7 @@ export const RAW = [
         "color": "",
         "part": "DJG79",
         "hw": "Metalflake Blue",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2016_DJG79__70_Chevelle_Delivery.jpg"
     },
     {
@@ -126087,7 +126086,7 @@ export const RAW = [
         "color": "",
         "part": "DJG78",
         "hw": "Metalflake Yellow",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2016_DJG78_Ford_Transit_SuperVan.jpg"
     },
     {
@@ -126097,7 +126096,7 @@ export const RAW = [
         "color": "",
         "part": "DJG84",
         "hw": "Orange",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2016_DJG84__55_Chevy_Panel.jpg"
     },
     {
@@ -126107,7 +126106,7 @@ export const RAW = [
         "color": "",
         "part": "DJG88",
         "hw": "Ice Blue ",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2016_DJG88_Haulin_Gas.jpg"
     },
     {
@@ -126117,7 +126116,7 @@ export const RAW = [
         "color": "",
         "part": "DJG97",
         "hw": "Sky Blue",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2016_DJG97_GMC_Motorhome.jpg"
     },
     {
@@ -126127,7 +126126,7 @@ export const RAW = [
         "color": "",
         "part": "DJG89",
         "hw": "Yellow",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2016_DJG89__66_Dodge_A100.jpg"
     },
     {
@@ -126137,7 +126136,7 @@ export const RAW = [
         "color": "",
         "part": "DJG86",
         "hw": "Metalflake Purple",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2016_DJG86__80_El_Camino.jpg"
     },
     {
@@ -126147,7 +126146,7 @@ export const RAW = [
         "color": "",
         "part": "DJG87",
         "hw": "Cornflower Blue",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2016_DJG87_Combat_Medic.jpg"
     },
     {
@@ -126157,7 +126156,7 @@ export const RAW = [
         "color": "",
         "part": "DJG75",
         "hw": "Gray w",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2016_DJG75__64_Ford_Falcon_Sprint.jpg"
     },
     {
@@ -126167,7 +126166,7 @@ export const RAW = [
         "color": "",
         "part": "DJG96",
         "hw": "Gray and white",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2016_DJG96_Dairy_Delivery.jpg"
     },
     {
@@ -126177,7 +126176,7 @@ export const RAW = [
         "color": "",
         "part": "DJG74",
         "hw": "Garnet",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2016_DJG74__64_Chevy_Nova_Delivery.jpg"
     },
     {
@@ -126187,7 +126186,7 @@ export const RAW = [
         "color": "",
         "part": "DJG73",
         "hw": "Silver",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2016_DJG73_Custom_Chevy_Greenbrier_Sports_Wagon.jpg"
     },
     {
@@ -126197,7 +126196,7 @@ export const RAW = [
         "color": "",
         "part": "DJG71",
         "hw": "Blue and white",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2016_DJG71_Convoy_Custom.jpg"
     },
     {
@@ -126207,7 +126206,7 @@ export const RAW = [
         "color": "",
         "part": "DJG76",
         "hw": "Yellow",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2016_DJG76__51_GMC_C_O_E_.jpg"
     },
     {
@@ -126217,7 +126216,7 @@ export const RAW = [
         "color": "",
         "part": "DJG90",
         "hw": "Black",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2016_DJG90__71_Chevy_El_Camino.jpg"
     },
     {
@@ -126227,7 +126226,7 @@ export const RAW = [
         "color": "",
         "part": "DJG94",
         "hw": "Dark Red",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2016_DJG94__34_Dodge_Delivery_Bus.jpg"
     },
     {
@@ -126237,7 +126236,7 @@ export const RAW = [
         "color": "",
         "part": "DJG95",
         "hw": "Light Blue",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2016_DJG95_Quick_D_Livery.jpg"
     },
     {
@@ -126247,7 +126246,7 @@ export const RAW = [
         "color": "",
         "part": "DJG93",
         "hw": "Red",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2016_DJG93_Volkswagen_T1_Panel.jpg"
     },
     {
@@ -126257,7 +126256,7 @@ export const RAW = [
         "color": "",
         "part": "DJG91",
         "hw": "Metalflake Steel Blue",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2016_DJG91_Custom_52_Chevy.jpg"
     },
     {
@@ -126267,7 +126266,7 @@ export const RAW = [
         "color": "",
         "part": "DJG77",
         "hw": "ZAMAC",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2016_DJG77_1980_Dodge_Macho_Power_Wagon.jpg"
     },
     {
@@ -126277,7 +126276,7 @@ export const RAW = [
         "color": "",
         "part": "DWH11",
         "hw": "Red & Green",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2016_DWH11_Deco_Delivery.jpg"
     },
     {
@@ -126287,7 +126286,7 @@ export const RAW = [
         "color": "",
         "part": "DWH12",
         "hw": "Light Blue",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2016_DWH12_Rolling_Thunder.jpg"
     },
     {
@@ -126297,7 +126296,7 @@ export const RAW = [
         "color": "",
         "part": "DWH13",
         "hw": "Silver",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2016_DWH13__66_Dodge_A100.jpg"
     },
     {
@@ -126307,7 +126306,7 @@ export const RAW = [
         "color": "",
         "part": "DWH14",
         "hw": "Electric Crimson",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2016_DWH14_Custom_Chevy_Greenbrier_Sport_Wagon.jpg"
     },
     {
@@ -126317,7 +126316,7 @@ export const RAW = [
         "color": "",
         "part": "DWH15",
         "hw": "White",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2016_DWH15__85_Chevy_Astro_Van.jpg"
     },
     {
@@ -126327,7 +126326,7 @@ export const RAW = [
         "color": "",
         "part": "DJH04",
         "hw": "White",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2016_DJH04__34_Chrysler_Airflow.jpg"
     },
     {
@@ -126337,7 +126336,7 @@ export const RAW = [
         "color": "",
         "part": "DJH05",
         "hw": "White",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2016_DJH05_Rolling_Thunder.jpg"
     },
     {
@@ -126347,7 +126346,7 @@ export const RAW = [
         "color": "",
         "part": "DJH03",
         "hw": "Silver",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2016_DJH03_Ford_Transit_SuperVan.jpg"
     },
     {
@@ -126357,7 +126356,7 @@ export const RAW = [
         "color": "",
         "part": "DJH06",
         "hw": "Black",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2016_DJH06__67_Ford_Bronco.jpg"
     },
     {
@@ -126367,7 +126366,7 @@ export const RAW = [
         "color": "",
         "part": "DJH07",
         "hw": "Metalflake Brown",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2016_DJH07__66_Dodge_A100.jpg"
     },
     {
@@ -126377,7 +126376,7 @@ export const RAW = [
         "color": "",
         "part": "DJG98",
         "hw": "Yellow",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2016_DJG98_Hiway_Hauler.jpg"
     },
     {
@@ -126387,7 +126386,7 @@ export const RAW = [
         "color": "",
         "part": "DWH20",
         "hw": "Light Blue",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2017_DWH20__34_Dodge_Delivery.jpg"
     },
     {
@@ -126397,7 +126396,7 @@ export const RAW = [
         "color": "",
         "part": "DWH16",
         "hw": "Metalflake Purple",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2017_DWH16__67_Ford_Bronco.jpg"
     },
     {
@@ -126407,7 +126406,7 @@ export const RAW = [
         "color": "",
         "part": "DWH17",
         "hw": "Metalflake Pink",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2017_DWH17_Custom_52_Chevy.jpg"
     },
     {
@@ -126417,7 +126416,7 @@ export const RAW = [
         "color": "",
         "part": "DWH18",
         "hw": "Yellow",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2017_DWH18_Power_Panel.jpg"
     },
     {
@@ -126427,7 +126426,7 @@ export const RAW = [
         "color": "",
         "part": "DWH19",
         "hw": "White",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2017_DWH19_Volkswagen_Deluxe_Station_Wagon.jpg"
     },
     {
@@ -126437,7 +126436,7 @@ export const RAW = [
         "color": "",
         "part": "DWH31",
         "hw": "Light Green",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2017_DWH31__67_Austin_Mini_Van.jpg"
     },
     {
@@ -126447,7 +126446,7 @@ export const RAW = [
         "color": "",
         "part": "DWH33",
         "hw": "Metalflake Red",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2017_DWH33_Dairy_Delivery.jpg"
     },
     {
@@ -126457,7 +126456,7 @@ export const RAW = [
         "color": "",
         "part": "DWH34",
         "hw": "Metalflake Dark Green",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2017_DWH34_Ford_Transit_SuperVan.jpg"
     },
     {
@@ -126467,7 +126466,7 @@ export const RAW = [
         "color": "",
         "part": "DWH35",
         "hw": "Yellow & Light Blue",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2017_DWH35_Haulin_Gas.jpg"
     },
     {
@@ -126477,7 +126476,7 @@ export const RAW = [
         "color": "",
         "part": "DWH32",
         "hw": "White",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2017_DWH32_Hiway_Hauler.jpg"
     },
     {
@@ -126487,7 +126486,7 @@ export const RAW = [
         "color": "",
         "part": "DWH27",
         "hw": "Sea Foam Green",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2017_DWH27_Bread_Box.jpg"
     },
     {
@@ -126497,7 +126496,7 @@ export const RAW = [
         "color": "",
         "part": "DWH29",
         "hw": "Red",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2017_DWH29_Combat_Medic.jpg"
     },
     {
@@ -126507,7 +126506,7 @@ export const RAW = [
         "color": "",
         "part": "DWH30",
         "hw": "White",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2017_DWH30_Custom_77_Dodge_Van.jpg"
     },
     {
@@ -126517,7 +126516,7 @@ export const RAW = [
         "color": "",
         "part": "DWH26",
         "hw": "Black",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2017_DWH26_Quick_D_Livery.jpg"
     },
     {
@@ -126527,7 +126526,7 @@ export const RAW = [
         "color": "",
         "part": "DWH28",
         "hw": "Metalflake Steel Blue w",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2017_DWH28_Volkswagen_T1_Panel.jpg"
     },
     {
@@ -126537,7 +126536,7 @@ export const RAW = [
         "color": "",
         "part": "DWH24",
         "hw": "Yellow & White",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2017_DWH24__64_Chevy_Nova_Panel.jpg"
     },
     {
@@ -126547,7 +126546,7 @@ export const RAW = [
         "color": "",
         "part": "DWH40",
         "hw": "Black",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2017_DWH40__66_Dodge_A100.jpg"
     },
     {
@@ -126557,7 +126556,7 @@ export const RAW = [
         "color": "",
         "part": "DWH37",
         "hw": "White",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2017_DWH37__66_Dodge_A100.jpg"
     },
     {
@@ -126567,7 +126566,7 @@ export const RAW = [
         "color": "",
         "part": "DWH25",
         "hw": "Light Green",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2017_DWH25__55_Chevy_Panel.jpg"
     },
     {
@@ -126577,7 +126576,7 @@ export const RAW = [
         "color": "",
         "part": "DWH36",
         "hw": "Light Blue",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2017_DWH36_Haulin_Gas.jpg"
     },
     {
@@ -126587,7 +126586,7 @@ export const RAW = [
         "color": "",
         "part": "DWH21",
         "hw": "Red",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2017_DWH21__60s_Ford_Econoline_Pickup.jpg"
     },
     {
@@ -126597,7 +126596,7 @@ export const RAW = [
         "color": "",
         "part": "DWH23",
         "hw": "Dark Green & Light Green",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2017_DWH23_Deco_Delivery.jpg"
     },
     {
@@ -126607,7 +126606,7 @@ export const RAW = [
         "color": "",
         "part": "DWH38",
         "hw": "Metalflake Silver",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2017_DWH38__70_Chevelle_Delivery.jpg"
     },
     {
@@ -126617,7 +126616,7 @@ export const RAW = [
         "color": "",
         "part": "DWH22",
         "hw": "Metalflake Steel Blue",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2017_DWH22_Chevy_Silverado_Off_Road.jpg"
     },
     {
@@ -126627,7 +126626,7 @@ export const RAW = [
         "color": "",
         "part": "DWH39",
         "hw": "Spectraflame Gold",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2017_DWH39__64_GMC_Panel.jpg"
     },
     {
@@ -126637,7 +126636,7 @@ export const RAW = [
         "color": "",
         "part": "FPC31",
         "hw": "Metalflake Grey",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2017_FPC31_Ford_Transit_Super_Van.jpg"
     },
     {
@@ -126647,7 +126646,7 @@ export const RAW = [
         "color": "",
         "part": "FDM72",
         "hw": "Turquoise",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2017_FDM72_The_Mystery_Machine.jpg"
     },
     {
@@ -126657,7 +126656,7 @@ export const RAW = [
         "color": "",
         "part": "FDM76",
         "hw": "Purple",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2017_FDM76_Hiway_Hauler.jpg"
     },
     {
@@ -126667,7 +126666,7 @@ export const RAW = [
         "color": "",
         "part": "FDM73",
         "hw": "Orange",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2017_FDM73__67_Austin_Mini_Van.jpg"
     },
     {
@@ -126677,7 +126676,7 @@ export const RAW = [
         "color": "",
         "part": "FDM75",
         "hw": "Maroon",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2017_FDM75__34_Dodge_Delivery.jpg"
     },
     {
@@ -126687,7 +126686,7 @@ export const RAW = [
         "color": "",
         "part": "FDM74",
         "hw": "Light Blue",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2017_FDM74_Volkswagen_T1_Panel.jpg"
     },
     {
@@ -126697,7 +126696,7 @@ export const RAW = [
         "color": "",
         "part": "FKY22",
         "hw": "Yellow",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2018_FKY22__71_Plymouth_Satellite.jpg"
     },
     {
@@ -126707,7 +126706,7 @@ export const RAW = [
         "color": "",
         "part": "FKY21",
         "hw": "Blue",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2018_FKY21__81_Ford_Fairmont.jpg"
     },
     {
@@ -126717,7 +126716,7 @@ export const RAW = [
         "color": "",
         "part": "FKY23",
         "hw": "Brown & White",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2018_FKY23__64_Chevy_Nova_Delivery.jpg"
     },
     {
@@ -126727,7 +126726,7 @@ export const RAW = [
         "color": "",
         "part": "FKY25",
         "hw": "Light Blue & Yellow",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2018_FKY25__65_Ford_Ranchero.jpg"
     },
     {
@@ -126737,7 +126736,7 @@ export const RAW = [
         "color": "",
         "part": "FKY24",
         "hw": "Orange",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2018_FKY24_Custom_GMC_Panel_Van.jpg"
     },
     {
@@ -126747,7 +126746,7 @@ export const RAW = [
         "color": "",
         "part": "FKY30",
         "hw": "Turquoise",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2018_FKY30_Volkswagen_T1_Panel.jpg"
     },
     {
@@ -126757,7 +126756,7 @@ export const RAW = [
         "color": "",
         "part": "FKY26",
         "hw": "Light Blue",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2018_FKY26_Haulin_Gas.jpg"
     },
     {
@@ -126767,7 +126766,7 @@ export const RAW = [
         "color": "",
         "part": "FKY27",
         "hw": "Gray",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2018_FKY27_Custom_77_Dodge_Van.jpg"
     },
     {
@@ -126777,7 +126776,7 @@ export const RAW = [
         "color": "",
         "part": "FKY29",
         "hw": "Gold",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2018_FKY29__67_Austin_Mini_Van.jpg"
     },
     {
@@ -126787,7 +126786,7 @@ export const RAW = [
         "color": "",
         "part": "FKY28",
         "hw": "Black",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2018_FKY28__66_Dodge_A100.jpg"
     },
     {
@@ -126797,7 +126796,7 @@ export const RAW = [
         "color": "",
         "part": "FKY34",
         "hw": "Dark Purple",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2018_FKY34_Volkswagen_T1_Panel.jpg"
     },
     {
@@ -126807,7 +126806,7 @@ export const RAW = [
         "color": "",
         "part": "FKY31",
         "hw": "Dark Blue",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2018_FKY31_Deco_Delivery.jpg"
     },
     {
@@ -126817,7 +126816,7 @@ export const RAW = [
         "color": "",
         "part": "FKY33",
         "hw": "Blue",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2018_FKY33__34_Dodge_Delivery.jpg"
     },
     {
@@ -126827,7 +126826,7 @@ export const RAW = [
         "color": "",
         "part": "FKY35",
         "hw": "Dark Brown",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2018_FKY35_Ford_Transit_SuperVan.jpg"
     },
     {
@@ -126837,7 +126836,7 @@ export const RAW = [
         "color": "",
         "part": "FKY32",
         "hw": "Light Green",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2018_FKY32__55_Chevy_Panel.jpg"
     },
     {
@@ -126847,7 +126846,7 @@ export const RAW = [
         "color": "",
         "part": "FKY39",
         "hw": "Black",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2018_FKY39_Volkswagen_Deluxe_Station_Wagon.jpg"
     },
     {
@@ -126857,7 +126856,7 @@ export const RAW = [
         "color": "",
         "part": "FKY38",
         "hw": "Dark Green",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2018_FKY38_Combat_Medic.jpg"
     },
     {
@@ -126867,7 +126866,7 @@ export const RAW = [
         "color": "",
         "part": "FKY36",
         "hw": "Unpainted",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2018_FKY36_3D_Livery.jpg"
     },
     {
@@ -126877,7 +126876,7 @@ export const RAW = [
         "color": "",
         "part": "FKY37",
         "hw": "Light Green",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2018_FKY37_Super_Van.jpg"
     },
     {
@@ -126887,7 +126886,7 @@ export const RAW = [
         "color": "",
         "part": "FKY40",
         "hw": "Light Blue",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2018_FKY40__66_Dodge_A100.jpg"
     },
     {
@@ -126897,7 +126896,7 @@ export const RAW = [
         "color": "",
         "part": "FKY42",
         "hw": "Yellow",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2018_FKY42_Ford_Transit_SuperVan.jpg"
     },
     {
@@ -126907,7 +126906,7 @@ export const RAW = [
         "color": "",
         "part": "FKY41",
         "hw": "Olive Green",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2018_FKY41__88_Mercedes_Unimog_U1300.jpg"
     },
     {
@@ -126917,7 +126916,7 @@ export const RAW = [
         "color": "",
         "part": "FKY44",
         "hw": "Orange",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2018_FKY44_Bread_Box.jpg"
     },
     {
@@ -126927,7 +126926,7 @@ export const RAW = [
         "color": "",
         "part": "FKY43",
         "hw": "Black",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2018_FKY43_Hiway_Hauler.jpg"
     },
     {
@@ -126937,7 +126936,7 @@ export const RAW = [
         "color": "",
         "part": "FKY45",
         "hw": "Light Purple",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2018_FKY45_Honda_Odyssey.jpg"
     },
     {
@@ -126947,7 +126946,7 @@ export const RAW = [
         "color": "",
         "part": "FYN87",
         "hw": "Dark Blue",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2019_FYN87__66_Dodge_A100.jpg"
     },
     {
@@ -126957,7 +126956,7 @@ export const RAW = [
         "color": "",
         "part": "FYN91",
         "hw": "Light Blue",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2019_FYN91_Bread_Box.jpg"
     },
     {
@@ -126967,7 +126966,7 @@ export const RAW = [
         "color": "",
         "part": "FYN89",
         "hw": "Blue",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2019_FYN89_Volkswagen_Deluxe_Station_Wagon.jpg"
     },
     {
@@ -126977,7 +126976,7 @@ export const RAW = [
         "color": "",
         "part": "FYN90",
         "hw": "Black",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2019_FYN90_Super_Van.jpg"
     },
     {
@@ -126987,7 +126986,7 @@ export const RAW = [
         "color": "",
         "part": "FYN88",
         "hw": "Orange",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2019_FYN88_3D_Livery.jpg"
     },
     {
@@ -126997,7 +126996,7 @@ export const RAW = [
         "color": "",
         "part": "FYN93",
         "hw": "Gray",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2019_FYN93__64_Chevy_Nova_Delivery.jpg"
     },
     {
@@ -127007,7 +127006,7 @@ export const RAW = [
         "color": "",
         "part": "FYN94",
         "hw": "Yellow",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2019_FYN94__71_Plymouth_Satellite.jpg"
     },
     {
@@ -127017,7 +127016,7 @@ export const RAW = [
         "color": "",
         "part": "FYN95",
         "hw": "Dark Blue",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2019_FYN95__49_Ford_COE.jpg"
     },
     {
@@ -127027,7 +127026,7 @@ export const RAW = [
         "color": "",
         "part": "FYN92",
         "hw": "Light Blue",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2019_FYN92_Combat_Medic.jpg"
     },
     {
@@ -127037,7 +127036,7 @@ export const RAW = [
         "color": "",
         "part": "FYN96",
         "hw": "Dark Red",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2019_FYN96_Nissan_Skyline_Van.jpg"
     },
     {
@@ -127047,7 +127046,7 @@ export const RAW = [
         "color": "",
         "part": "FYN99",
         "hw": "Black",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2019_FYN99_Quick_D_Livery.jpg"
     },
     {
@@ -127057,7 +127056,7 @@ export const RAW = [
         "color": "",
         "part": "GMP98",
         "hw": "White",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2019_GMP98_Custom_GMC_Panel_Van.jpg"
     },
     {
@@ -127067,7 +127066,7 @@ export const RAW = [
         "color": "",
         "part": "FYN97",
         "hw": "White",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2019_FYN97_Combat_Medic.jpg"
     },
     {
@@ -127077,7 +127076,7 @@ export const RAW = [
         "color": "",
         "part": "FYP06",
         "hw": "Yellow",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2019_FYP06_Deco_Delivery.jpg"
     },
     {
@@ -127087,7 +127086,7 @@ export const RAW = [
         "color": "",
         "part": "FYP00",
         "hw": "Gray",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2019_FYP00_Volkswagen_T1_Panel_Bus.jpg"
     },
     {
@@ -127097,7 +127096,7 @@ export const RAW = [
         "color": "",
         "part": "FYP01",
         "hw": "Yellow",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2019_FYP01_Super_Van.jpg"
     },
     {
@@ -127107,7 +127106,7 @@ export const RAW = [
         "color": "",
         "part": "FYP05",
         "hw": "Slate Blue",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2019_FYP05__88_Mercedes_Unimog_U1300.jpg"
     },
     {
@@ -127117,7 +127116,7 @@ export const RAW = [
         "color": "",
         "part": "FYP02",
         "hw": "Metalflake Gold",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2019_FYP02_Ford_Transit_SuperVan.jpg"
     },
     {
@@ -127127,7 +127126,7 @@ export const RAW = [
         "color": "",
         "part": "FYP04",
         "hw": "Green",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2019_FYP04_1985_Chevy_Astro_Van.jpg"
     },
     {
@@ -127137,7 +127136,7 @@ export const RAW = [
         "color": "",
         "part": "FYP03",
         "hw": "Steel Blue",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2019_FYP03_Dream_Van_XGW.jpg"
     },
     {
@@ -127147,7 +127146,7 @@ export const RAW = [
         "color": "",
         "part": "GJR14",
         "hw": "Silver",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2020_GJR14_Haulin_Gas.jpg"
     },
     {
@@ -127157,7 +127156,7 @@ export const RAW = [
         "color": "",
         "part": "GJR15",
         "hw": "Brown",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2020_GJR15_Super_Van.jpg"
     },
     {
@@ -127167,7 +127166,7 @@ export const RAW = [
         "color": "",
         "part": "GJR16",
         "hw": "White",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2020_GJR16_Combat_Medic.jpg"
     },
     {
@@ -127177,7 +127176,7 @@ export const RAW = [
         "color": "",
         "part": "GJR17",
         "hw": "Tan",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2020_GJR17__67_Austin_Mini_Van.jpg"
     },
     {
@@ -127187,7 +127186,7 @@ export const RAW = [
         "color": "",
         "part": "GJR18",
         "hw": "Red, White, & Blue",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2020_GJR18_Hiway_Hauler.jpg"
     },
     {
@@ -127197,7 +127196,7 @@ export const RAW = [
         "color": "",
         "part": "GJR29",
         "hw": "Blue",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2020_GJR29_Super_Van.jpg"
     },
     {
@@ -127207,7 +127206,7 @@ export const RAW = [
         "color": "",
         "part": "GJR23",
         "hw": "Purple",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2020_GJR23_Deco_Delivery.jpg"
     },
     {
@@ -127217,7 +127216,7 @@ export const RAW = [
         "color": "",
         "part": "GJR33",
         "hw": "Black",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2020_GJR33__59_Cadillac_Funny_Car.jpg"
     },
     {
@@ -127227,7 +127226,7 @@ export const RAW = [
         "color": "",
         "part": "GJR21",
         "hw": "Red",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2020_GJR21_Dream_Van_XGW.jpg"
     },
     {
@@ -127237,7 +127236,7 @@ export const RAW = [
         "color": "",
         "part": "GJR22",
         "hw": "Light Blue",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2020_GJR22_Custom_GMC_Panel_Van.jpg"
     },
     {
@@ -127247,7 +127246,7 @@ export const RAW = [
         "color": "",
         "part": "GJR30",
         "hw": "Gloss Black",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2020_GJR30__66_Dodge_A100.jpg"
     },
     {
@@ -127257,7 +127256,7 @@ export const RAW = [
         "color": "",
         "part": "GJR26",
         "hw": "Metalflake Orange",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2020_GJR26_Ford_Transit_Super_Van.jpg"
     },
     {
@@ -127267,7 +127266,7 @@ export const RAW = [
         "color": "",
         "part": "GJR32",
         "hw": "Black",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2020_GJR32_Super_Van.jpg"
     },
     {
@@ -127277,7 +127276,7 @@ export const RAW = [
         "color": "",
         "part": "GJR19",
         "hw": "Silver",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2020_GJR19_Volkswagen_Drag_Bus.jpg"
     },
     {
@@ -127287,7 +127286,7 @@ export const RAW = [
         "color": "",
         "part": "GJR28",
         "hw": "Metallic Light Blue",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2020_GJR28_Volkswagen_T1_Panel_Bus.jpg"
     },
     {
@@ -127297,7 +127296,7 @@ export const RAW = [
         "color": "",
         "part": "GRL37",
         "hw": "Red",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2020_GRL37_1937_Haulin_Gas.jpg"
     },
     {
@@ -127307,7 +127306,7 @@ export const RAW = [
         "color": "",
         "part": "GRL36",
         "hw": "Light blue",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2020_GRL36__83_Chevy_Silverado.jpg"
     },
     {
@@ -127317,7 +127316,7 @@ export const RAW = [
         "color": "",
         "part": "GRL35",
         "hw": "Yellow",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2020_GRL35__78_Dodge_Little_Red_Express.jpg"
     },
     {
@@ -127327,7 +127326,7 @@ export const RAW = [
         "color": "",
         "part": "GRL38",
         "hw": "White",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2020_GRL38__63_Studebaker_Champ.jpg"
     },
     {
@@ -127337,7 +127336,7 @@ export const RAW = [
         "color": "",
         "part": "GRL39",
         "hw": "Yellow",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2020_GRL39__38_Dodge_Airflow.jpg"
     },
     {
@@ -127347,7 +127346,7 @@ export const RAW = [
         "color": "",
         "part": "GRL30",
         "hw": "Purple",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2021_GRL30_Mercedes_Benz_Unimog_U_1300L.jpg"
     },
     {
@@ -127357,7 +127356,7 @@ export const RAW = [
         "color": "",
         "part": "GRL34",
         "hw": "Lime Green",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2021_GRL34_70s_Van.jpg"
     },
     {
@@ -127367,7 +127366,7 @@ export const RAW = [
         "color": "",
         "part": "GJR25",
         "hw": "Dark Green",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2021_GJR25_Bread_Box.jpg"
     },
     {
@@ -127377,7 +127376,7 @@ export const RAW = [
         "color": "",
         "part": "GRL32",
         "hw": "Blue",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2021_GRL32_Volkswagen_T1_Panel_Bus.jpg"
     },
     {
@@ -127387,7 +127386,7 @@ export const RAW = [
         "color": "",
         "part": "GRL33",
         "hw": "Maroon",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2021_GRL33__55_Chevy_Panel.jpg"
     },
     {
@@ -127397,7 +127396,7 @@ export const RAW = [
         "color": "",
         "part": "GRL42",
         "hw": "Black",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2021_GRL42_MBK_Van.jpg"
     },
     {
@@ -127407,7 +127406,7 @@ export const RAW = [
         "color": "",
         "part": "HBL44",
         "hw": "White",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2021_HBL44_Land_Rover_Defender_110_Hardtop.jpg"
     },
     {
@@ -127417,7 +127416,7 @@ export const RAW = [
         "color": "",
         "part": "GRL26",
         "hw": "Maroon",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2021_GRL26_Custom_77_Dodge_Van.jpg"
     },
     {
@@ -127427,7 +127426,7 @@ export const RAW = [
         "color": "",
         "part": "GRL28",
         "hw": "Gray",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2021_GRL28_Volkswagen_T1_Panel_Bus.jpg"
     },
     {
@@ -127437,7 +127436,7 @@ export const RAW = [
         "color": "",
         "part": "GRL25",
         "hw": "Blue",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2021_GRL25_Custom_GMC_Panel_Van.jpg"
     },
     {
@@ -127447,7 +127446,7 @@ export const RAW = [
         "color": "",
         "part": "GRL44",
         "hw": "White",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2021_GRL44_Volkswagen_T1_Drag_Bus.jpg"
     },
     {
@@ -127457,7 +127456,7 @@ export const RAW = [
         "color": "",
         "part": "GJR20",
         "hw": "Tan",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2021_GJR20_MBK_Van.jpg"
     },
     {
@@ -127467,7 +127466,7 @@ export const RAW = [
         "color": "",
         "part": "GRL27",
         "hw": "Yellow",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2021_GRL27_Combat_Medic.jpg"
     },
     {
@@ -127477,7 +127476,7 @@ export const RAW = [
         "color": "",
         "part": "GRL40",
         "hw": "Purple",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2021_GRL40_Hiway_Hauler_2.jpg"
     },
     {
@@ -127487,7 +127486,7 @@ export const RAW = [
         "color": "",
         "part": "GJR27",
         "hw": "Gray",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2021_GJR27_Land_Rover_Defender_110_Hard_Top.jpg"
     },
     {
@@ -127497,7 +127496,7 @@ export const RAW = [
         "color": "",
         "part": "GRL31",
         "hw": "Metalflake gold",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2021_GRL31_Mercedes_Benz_Sprinter_Tourer.jpg"
     },
     {
@@ -127507,7 +127506,7 @@ export const RAW = [
         "color": "",
         "part": "GRL43",
         "hw": "Black",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2021_GRL43_Kool_Kombi.jpg"
     },
     {
@@ -127517,7 +127516,7 @@ export const RAW = [
         "color": "",
         "part": "GJR24",
         "hw": "Red",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2021_GJR24_88_Mercedes_Unimog_U1300.jpg"
     },
     {
@@ -127527,7 +127526,7 @@ export const RAW = [
         "color": "",
         "part": "GJR52",
         "hw": "Navy blue",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2021_GJR52_HW_Tour_Bus.jpg"
     },
     {
@@ -127537,7 +127536,7 @@ export const RAW = [
         "color": "",
         "part": "GJR31",
         "hw": "Red",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2021_GJR31_Combat_Medic.jpg"
     },
     {
@@ -127547,7 +127546,7 @@ export const RAW = [
         "color": "",
         "part": "HCN86",
         "hw": "Yellow",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2022_HCN86__66_Dodge_A100.jpg"
     },
     {
@@ -127557,7 +127556,7 @@ export const RAW = [
         "color": "",
         "part": "HCN88",
         "hw": "Orange",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2022_HCN88__55_Chevy_Panel.jpg"
     },
     {
@@ -127567,7 +127566,7 @@ export const RAW = [
         "color": "",
         "part": "HCN89",
         "hw": "Blue",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2022_HCN89__70s_Van.jpg"
     },
     {
@@ -127577,7 +127576,7 @@ export const RAW = [
         "color": "",
         "part": "HCN90",
         "hw": "Red",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2022_HCN90_Custom_GMC_Panel_Van.jpg"
     },
     {
@@ -127587,7 +127586,7 @@ export const RAW = [
         "color": "",
         "part": "HCN93",
         "hw": "Purple",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2022_HCN93_Dream_Van_XGW.jpg"
     },
     {
@@ -127597,7 +127596,7 @@ export const RAW = [
         "color": "",
         "part": "HCN84",
         "hw": "Tan",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2022_HCN84__09_Custom_Ford_Transit_Connect.jpg"
     },
     {
@@ -127607,7 +127606,7 @@ export const RAW = [
         "color": "",
         "part": "HCN96",
         "hw": "Orange",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2022_HCN96__66_Dodge_A100.jpg"
     },
     {
@@ -127617,7 +127616,7 @@ export const RAW = [
         "color": "",
         "part": "HCN95",
         "hw": "Brown",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2022_HCN95_Land_Rover_Defender_110_Hard_Top.jpg"
     },
     {
@@ -127627,7 +127626,7 @@ export const RAW = [
         "color": "",
         "part": "HCN87",
         "hw": "Spanish gray",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2022_HCN87_MBK_Van.jpg"
     },
     {
@@ -127637,7 +127636,7 @@ export const RAW = [
         "color": "",
         "part": "HCN94",
         "hw": "Red",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2022_HCN94_Haulin_Gas.jpg"
     },
     {
@@ -127647,7 +127646,7 @@ export const RAW = [
         "color": "",
         "part": "HCN98",
         "hw": "Orange",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2022_HCN98_Bread_Box.jpg"
     },
     {
@@ -127657,7 +127656,7 @@ export const RAW = [
         "color": "",
         "part": "HCN97",
         "hw": "Two-tone black and red",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2022_HCN97_Mercedes_Benz_Unimog_U_1300_L.jpg"
     },
     {
@@ -127667,7 +127666,7 @@ export const RAW = [
         "color": "",
         "part": "HCN99",
         "hw": "Ivory",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2022_HCN99__38_Dodge_Airflow.jpg"
     },
     {
@@ -127677,7 +127676,7 @@ export const RAW = [
         "color": "",
         "part": "HCN92",
         "hw": "Tan",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2022_HCN92_Combat_Medic.jpg"
     },
     {
@@ -127687,7 +127686,7 @@ export const RAW = [
         "color": "",
         "part": "HCN91",
         "hw": "Silver",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2022_HCN91_HW_Tour_Bus.jpg"
     },
     {
@@ -127697,7 +127696,7 @@ export const RAW = [
         "color": "",
         "part": "HKC90",
         "hw": "Black",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2022_HKC90_1985_Chevy_Astro_Van.jpg"
     },
     {
@@ -127707,7 +127706,7 @@ export const RAW = [
         "color": "",
         "part": "HCP03",
         "hw": "White & Turquoise",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2022_HCP03_Kool_Kombi.jpg"
     },
     {
@@ -127717,7 +127716,7 @@ export const RAW = [
         "color": "",
         "part": "HCP01",
         "hw": "Forest Green",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2022_HCP01_Ford_Transit_SuperVan.jpg"
     },
     {
@@ -127727,7 +127726,7 @@ export const RAW = [
         "color": "",
         "part": "HCP00",
         "hw": "Yellow",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2022_HCP00_Quick_D_Livery.jpg"
     },
     {
@@ -127737,7 +127736,7 @@ export const RAW = [
         "color": "",
         "part": "HCP02",
         "hw": "Red, White, & Blue",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2022_HCP02_Volkswagen_T1_Panel_Bus.jpg"
     },
     {
@@ -127747,7 +127746,7 @@ export const RAW = [
         "color": "",
         "part": "HCN85",
         "hw": "Metalflake powder blue",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2023_HCN85_Citro_n_Type_H.jpg"
     },
     {
@@ -127757,7 +127756,7 @@ export const RAW = [
         "color": "",
         "part": "HKC89",
         "hw": "Metalflake powder blue",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2023_HKC89_Deco_Delivery.jpg"
     },
     {
@@ -127767,7 +127766,7 @@ export const RAW = [
         "color": "",
         "part": "HKC88",
         "hw": "Metalflake powder blue",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2023_HKC88_1985_Chevy_Astro_Van.jpg"
     },
     {
@@ -127777,7 +127776,7 @@ export const RAW = [
         "color": "",
         "part": "HKC92",
         "hw": "Metalflake powder blue",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2023_HKC92_Hiway_Hauler.jpg"
     },
     {
@@ -127787,7 +127786,7 @@ export const RAW = [
         "color": "",
         "part": "HKC91",
         "hw": "Metalflake powder blue",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2023_HKC91_Dream_Van_XGW.jpg"
     },
     {
@@ -127797,7 +127796,7 @@ export const RAW = [
         "color": "",
         "part": "HKC96",
         "hw": "Ochre",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2023_HKC96__59_Chevy_Delivery.jpg"
     },
     {
@@ -127807,7 +127806,7 @@ export const RAW = [
         "color": "",
         "part": "HKC95",
         "hw": "Matte powder blue",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2023_HKC95__71_El_Camino.jpg"
     },
     {
@@ -127817,7 +127816,7 @@ export const RAW = [
         "color": "",
         "part": "HKD04",
         "hw": "Orange",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2023_HKD04__70_Chevelle_Delivery.jpg"
     },
     {
@@ -127827,7 +127826,7 @@ export const RAW = [
         "color": "",
         "part": "HKC94",
         "hw": "Gray",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2023_HKC94__64_GMC_Panel.jpg"
     },
     {
@@ -127837,7 +127836,7 @@ export const RAW = [
         "color": "",
         "part": "HKC97",
         "hw": "Green",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2023_HKC97__66_Dodge_A100.jpg"
     },
     {
@@ -127847,7 +127846,7 @@ export const RAW = [
         "color": "",
         "part": "HKD01",
         "hw": "Green",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2023_HKD01_Volkswagen_T1_Panel_Bus.jpg"
     },
     {
@@ -127857,7 +127856,7 @@ export const RAW = [
         "color": "",
         "part": "HKD00",
         "hw": "Red",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2023_HKD00_Custom_62_Chevy_Pickup.jpg"
     },
     {
@@ -127867,7 +127866,7 @@ export const RAW = [
         "color": "",
         "part": "HKC98",
         "hw": "Black",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2023_HKC98_Combat_Medic.jpg"
     },
     {
@@ -127877,7 +127876,7 @@ export const RAW = [
         "color": "",
         "part": "HKD02",
         "hw": "Blue & White",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2023_HKD02_Haulin_Gas.jpg"
     },
     {
@@ -127887,7 +127886,7 @@ export const RAW = [
         "color": "",
         "part": "HKC99",
         "hw": "Red",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2023_HKC99_Datsun_620.jpg"
     },
     {
@@ -127897,7 +127896,7 @@ export const RAW = [
         "color": "",
         "part": "HKC93",
         "hw": "Yellow",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2023_HKC93_Dairy_Delivery.jpg"
     },
     {
@@ -127907,7 +127906,7 @@ export const RAW = [
         "color": "",
         "part": "HKD03",
         "hw": "White",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2023_HKD03_Kool_Kombi.jpg"
     },
     {
@@ -127917,7 +127916,7 @@ export const RAW = [
         "color": "",
         "part": "HKD05",
         "hw": "White",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2023_HKD05__69_Nissan_Skyline_Van.jpg"
     },
     {
@@ -127927,7 +127926,7 @@ export const RAW = [
         "color": "",
         "part": "HKD06",
         "hw": "White",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2023_HKD06__65_Mercury_Comet_Cyclone.jpg"
     },
     {
@@ -127937,7 +127936,7 @@ export const RAW = [
         "color": "",
         "part": "HKD07",
         "hw": "Black",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2023_HKD07_Volvo_P220_Amazon_Estate.jpg"
     },
     {
@@ -127947,7 +127946,7 @@ export const RAW = [
         "color": "",
         "part": "HKC23",
         "hw": "White",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2024_HKC23__78_Ford_Escort_RS_1800_MK2.jpg"
     },
     {
@@ -127957,7 +127956,7 @@ export const RAW = [
         "color": "",
         "part": "HKC37",
         "hw": "Black",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2024_HKC37_Custom_71_Datsun_240Z_Rotsun_.jpg"
     },
     {
@@ -127967,7 +127966,7 @@ export const RAW = [
         "color": "",
         "part": "HVJ53",
         "hw": "Light gray",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2024_HVJ53_ThunderCats_Thunder_Tank.jpg"
     },
     {
@@ -127977,7 +127976,7 @@ export const RAW = [
         "color": "",
         "part": "HXD96",
         "hw": "White & turquoise",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2024_HXD96_Kool_Kombi.jpg"
     },
     {
@@ -127987,7 +127986,7 @@ export const RAW = [
         "color": "",
         "part": "HXD99",
         "hw": "ZAMAC",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2024_HXD99_Back_to_the_Future_Time_Machine_50_s_Version.jpg"
     },
     {
@@ -127997,7 +127996,7 @@ export const RAW = [
         "color": "",
         "part": "HKC38",
         "hw": "Silver",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2024_HKC38_Nissan_Concept_2020_Vision_Gran_Turismo.jpg"
     },
     {
@@ -128007,7 +128006,7 @@ export const RAW = [
         "color": "",
         "part": "HVJ40",
         "hw": "Red",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2024_HVJ40_First_Batmobile.jpg"
     },
     {
@@ -128017,7 +128016,7 @@ export const RAW = [
         "color": "",
         "part": "HVJ41",
         "hw": "Orange",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2024_HVJ41_Hiway_Hauler.jpg"
     },
     {
@@ -128027,7 +128026,7 @@ export const RAW = [
         "color": "",
         "part": "HVJ42",
         "hw": "Red",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2024_HVJ42_Snoopy.jpg"
     },
     {
@@ -128037,7 +128036,7 @@ export const RAW = [
         "color": "",
         "part": "HVJ34",
         "hw": "White",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2024_HVJ34_Nissan_GT_R_NISMO_GT3.jpg"
     },
     {
@@ -128047,7 +128046,7 @@ export const RAW = [
         "color": "",
         "part": "HVJ35",
         "hw": "Tan",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2024_HVJ35_Mutt_Cutts_Van.jpg"
     },
     {
@@ -128057,7 +128056,7 @@ export const RAW = [
         "color": "",
         "part": "HVJ44",
         "hw": "Black",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2024_HVJ44_Dairy_Delivery.jpg"
     },
     {
@@ -128067,7 +128066,7 @@ export const RAW = [
         "color": "",
         "part": "HVJ43",
         "hw": "Dark green",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2024_HVJ43__77_Packin_Pacer.jpg"
     },
     {
@@ -128077,7 +128076,7 @@ export const RAW = [
         "color": "",
         "part": "HKC28",
         "hw": "White",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2024_HKC28_Nissan_Skyline_GT_R_BNR34_.jpg"
     },
     {
@@ -128087,7 +128086,7 @@ export const RAW = [
         "color": "",
         "part": "HVJ36",
         "hw": "Metalflake Cumberland Grey",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2024_HVJ36_Aston_Martin_V8.jpg"
     },
     {
@@ -128097,7 +128096,7 @@ export const RAW = [
         "color": "",
         "part": "HXF03",
         "hw": "Matte orange",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2024_HXF03_Plumber_Van.jpg"
     },
     {
@@ -128107,7 +128106,7 @@ export const RAW = [
         "color": "",
         "part": "HXD98",
         "hw": "White",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2024_HXD98_Lotus_Esprit_S1.jpg"
     },
     {
@@ -128117,7 +128116,7 @@ export const RAW = [
         "color": "",
         "part": "HVJ45",
         "hw": "Mint Green",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2024_HVJ45_Hiway_Hauler.jpg"
     },
     {
@@ -128127,7 +128126,7 @@ export const RAW = [
         "color": "",
         "part": "HVJ46",
         "hw": "Green",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2024_HVJ46_Volkswagen_Drag_Bus.jpg"
     },
     {
@@ -128137,7 +128136,7 @@ export const RAW = [
         "color": "",
         "part": "HVJ47",
         "hw": "White",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2024_HVJ47__17_Audi_RS_6_Avant.jpg"
     },
     {
@@ -128147,7 +128146,7 @@ export const RAW = [
         "color": "",
         "part": "HVJ48",
         "hw": "Black",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2024_HVJ48_1985_Chevy_Astro_Van.jpg"
     },
     {
@@ -128157,7 +128156,7 @@ export const RAW = [
         "color": "",
         "part": "HVJ51",
         "hw": "Barbie pink",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2024_HVJ51_Barbie_65th_Corvette_C8_R.jpg"
     },
     {
@@ -128167,7 +128166,7 @@ export const RAW = [
         "color": "",
         "part": "HXD97",
         "hw": "Tan",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2024_HXD97_The_Dark_Knight_Batmobile.jpg"
     },
     {
@@ -128177,7 +128176,7 @@ export const RAW = [
         "color": "",
         "part": "HXF04",
         "hw": "Yellow",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2024_HXF04_Party_Wagon.jpg"
     },
     {
@@ -128187,7 +128186,7 @@ export const RAW = [
         "color": "",
         "part": "HVJ37",
         "hw": "Light gray",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2024_HVJ37_F_A_18E_Super_Hornet.jpg"
     },
     {
@@ -128197,7 +128196,7 @@ export const RAW = [
         "color": "",
         "part": "HVJ39",
         "hw": "Black",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2024_HVJ39_Batman_Forever_Batmobile.jpg"
     },
     {
@@ -128207,7 +128206,7 @@ export const RAW = [
         "color": "",
         "part": "HVJ50",
         "hw": "Green",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2024_HVJ50_Action_Comics_1_Action_Sedan.jpg"
     },
     {
@@ -128217,7 +128216,7 @@ export const RAW = [
         "color": "",
         "part": "HXD95",
         "hw": "Metalflake Two-tone Gray & Black",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2024_HXD95_Porsche_911_Turbo_930_.jpg"
     },
     {
@@ -128227,7 +128226,7 @@ export const RAW = [
         "color": "",
         "part": "JBL55",
         "hw": "Tungsten Silver",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2025_JBL55_Aston_Martin_Vanquish.jpg"
     },
     {
@@ -128237,7 +128236,7 @@ export const RAW = [
         "color": "",
         "part": "JBL63",
         "hw": "Turquoise",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2025_JBL63_The_Mystery_Machine.jpg"
     },
     {
@@ -128247,7 +128246,7 @@ export const RAW = [
         "color": "",
         "part": "JBL66",
         "hw": "White",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2025_JBL66_1968_Mazda_Cosmo_Sport.jpg"
     },
     {
@@ -128257,7 +128256,7 @@ export const RAW = [
         "color": "",
         "part": "JBL68",
         "hw": "Red",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2025_JBL68_Kool_Kombi.jpg"
     },
     {
@@ -128267,7 +128266,7 @@ export const RAW = [
         "color": "",
         "part": "JBL71",
         "hw": "Black",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2025_JBL71_K_I_T_T_.jpg"
     },
     {
@@ -128277,7 +128276,7 @@ export const RAW = [
         "color": "",
         "part": "JBL65",
         "hw": "ZAMAC",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2025_JBL65_Back_to_the_Future_Time_Machine.jpg"
     },
     {
@@ -128287,7 +128286,7 @@ export const RAW = [
         "color": "",
         "part": "JBL74",
         "hw": "Yellow",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2025_JBL74_The_Beatles_Yellow_Submarine.jpg"
     },
     {
@@ -128297,7 +128296,7 @@ export const RAW = [
         "color": "",
         "part": "JBL79",
         "hw": "Barbie pink",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2025_JBL79_1956_Corvette.jpg"
     },
     {
@@ -128307,7 +128306,7 @@ export const RAW = [
         "color": "",
         "part": "JBL80",
         "hw": "Textured tan",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2025_JBL80_Mutt_Cutts_Van.jpg"
     },
     {
@@ -128317,7 +128316,7 @@ export const RAW = [
         "color": "",
         "part": "JBL81",
         "hw": "Black",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2025_JBL81_Ghost_Rider_Charger.jpg"
     },
     {
@@ -128327,7 +128326,7 @@ export const RAW = [
         "color": "",
         "part": "HVJ38",
         "hw": "Black",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2025_HVJ38_1979_Dodge_Ram_Van.jpg"
     },
     {
@@ -128337,7 +128336,7 @@ export const RAW = [
         "color": "",
         "part": "HKC28",
         "hw": "White",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2025_HKC28_Nissan_Skyline_GT_R_BNR34_.jpg"
     },
     {
@@ -128347,7 +128346,7 @@ export const RAW = [
         "color": "",
         "part": "JBL69",
         "hw": "Neon green",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2025_JBL69__66_Dodge_A100.jpg"
     },
     {
@@ -128357,7 +128356,7 @@ export const RAW = [
         "color": "",
         "part": "JBL70",
         "hw": "Red",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2025_JBL70_Deadpool_Scooter.jpg"
     },
     {
@@ -128367,7 +128366,7 @@ export const RAW = [
         "color": "",
         "part": "JBL82",
         "hw": "Black",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2025_JBL82_Ford_Super_De_Luxe.jpg"
     },
     {
@@ -128377,7 +128376,7 @@ export const RAW = [
         "color": "",
         "part": "JBL59",
         "hw": "Gray",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2025_JBL59__92_Jeep_Wrangler_Sahara.jpg"
     },
     {
@@ -128387,7 +128386,7 @@ export const RAW = [
         "color": "",
         "part": "HXF04",
         "hw": "Yellow",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2025_HXF04_Party_Wagon.jpg"
     },
     {
@@ -128397,7 +128396,7 @@ export const RAW = [
         "color": "",
         "part": "JBL62",
         "hw": "Silver",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2025_JBL62__71_Porsche_911.jpg"
     },
     {
@@ -128407,7 +128406,7 @@ export const RAW = [
         "color": "",
         "part": "JBL64",
         "hw": "Black",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2025_JBL64_HW_Tour_Bus.jpg"
     },
     {
@@ -128417,7 +128416,7 @@ export const RAW = [
         "color": "",
         "part": "JBL77",
         "hw": "Ivory",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2025_JBL77_Combat_Jet_Skystriker_Grumman_F_14_Tomcat_.jpg"
     },
     {
@@ -128427,7 +128426,7 @@ export const RAW = [
         "color": "",
         "part": "JBL58",
         "hw": "Singapore Grey Metallic",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2025_JBL58_2021_BMW_M5.jpg"
     },
     {
@@ -128437,7 +128436,7 @@ export const RAW = [
         "color": "",
         "part": "HVJ50",
         "hw": "Green",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2025_HVJ50_Action_Comics_1_Action_Sedan.jpg"
     },
     {
@@ -128447,7 +128446,7 @@ export const RAW = [
         "color": "",
         "part": "JBL67",
         "hw": "Black",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2025_JBL67_2016_Ford_GT_Race.jpg"
     },
     {
@@ -128457,7 +128456,7 @@ export const RAW = [
         "color": "",
         "part": "JBL75",
         "hw": "Metalflake Gold",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2025_JBL75_Lamborghini_Hurac_n_LP_620_2_Super_Trofeo.jpg"
     },
     {
@@ -128467,7 +128466,7 @@ export const RAW = [
         "color": "",
         "part": "JBL76",
         "hw": "Metalflake Silver",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2025_JBL76_Back_to_the_Future_Time_Machine_1955.jpg"
     },
     {
@@ -128477,7 +128476,7 @@ export const RAW = [
         "color": "",
         "part": "JBL56",
         "hw": "Black",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2025_JBL56_Airwolf_Helicopter.jpg"
     },
     {
@@ -128487,7 +128486,7 @@ export const RAW = [
         "color": "",
         "part": "JBL57",
         "hw": "Black",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2025_JBL57_Quadra_Turbo_R_V_Tech.jpg"
     },
     {
@@ -128497,7 +128496,7 @@ export const RAW = [
         "color": "",
         "part": "JBL78",
         "hw": "Purple",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2025_JBL78_Citro_n_Type_H.jpg"
     },
     {
@@ -128507,7 +128506,7 @@ export const RAW = [
         "color": "",
         "part": "JBL83",
         "hw": "Metalflake midnight blue",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2025_JBL83_TV_Series_Batmobile.jpg"
     },
     {
@@ -128517,7 +128516,7 @@ export const RAW = [
         "color": "",
         "part": "JBL84",
         "hw": "Red",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2025_JBL84_Snoopy.jpg"
     },
     {
@@ -128527,7 +128526,7 @@ export const RAW = [
         "color": "",
         "part": "JHW81",
         "hw": "Maroon",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JHW81_1983_BMW_733i.jpg"
     },
     {
@@ -128537,7 +128536,7 @@ export const RAW = [
         "color": "",
         "part": "JHW87",
         "hw": "Green",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JHW87_Reptar_Wagon.jpg"
     },
     {
@@ -128547,7 +128546,7 @@ export const RAW = [
         "color": "",
         "part": "JHW88",
         "hw": "Matte black",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JHW88_Batman_The_Animated_Series_Batmobile.jpg"
     },
     {
@@ -128557,7 +128556,7 @@ export const RAW = [
         "color": "",
         "part": "JHW89",
         "hw": "Black",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JHW89__64_Lincoln_Continental.jpg"
     },
     {
@@ -128567,7 +128566,7 @@ export const RAW = [
         "color": "",
         "part": "JHW90",
         "hw": "Off-white",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JHW90_Nissan_Skyline_GT_R_BNR34_.jpg"
     },
     {
@@ -128577,7 +128576,7 @@ export const RAW = [
         "color": "",
         "part": "JHW82",
         "hw": "White",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JHW82_2022_Porsche_911_GT3_RS.jpg"
     },
     {
@@ -128587,7 +128586,7 @@ export const RAW = [
         "color": "",
         "part": "JHW93",
         "hw": "White",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JHW93__84_Corvette.jpg"
     },
     {
@@ -128597,7 +128596,7 @@ export const RAW = [
         "color": "",
         "part": "JHW94",
         "hw": "Polished Silver",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JHW94_Back_to_the_Future_Time_Machine_1955.jpg"
     },
     {
@@ -128607,7 +128606,7 @@ export const RAW = [
         "color": "",
         "part": "JHW95",
         "hw": "Light Metallic Grey",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JHW95_Rick_s_Ship.jpg"
     },
     {
@@ -128617,7 +128616,7 @@ export const RAW = [
         "color": "",
         "part": "JHW83",
         "hw": "Matte Black",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JHW83_Cobra_H_I_S_S_.jpg"
     },
     {
@@ -128627,7 +128626,7 @@ export const RAW = [
         "color": "",
         "part": "JBL56",
         "hw": "Black",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JBL56_Airwolf_Helicopter.jpg"
     },
     {
@@ -128637,7 +128636,7 @@ export const RAW = [
         "color": "",
         "part": "JHW97",
         "hw": "Orange",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JHW97__66_Porsche_906_Carrera_6.jpg"
     },
     {
@@ -128647,7 +128646,7 @@ export const RAW = [
         "color": "",
         "part": "JHW98",
         "hw": "Blue",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JHW98_Custom_GMC_Panel_Van.jpg"
     },
     {
@@ -128657,7 +128656,7 @@ export const RAW = [
         "color": "",
         "part": "JHX06",
         "hw": "Matte Red",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JHX06_Spider_Mobile_Dead_Buggy.jpg"
     },
     {
@@ -128667,7 +128666,7 @@ export const RAW = [
         "color": "",
         "part": "JHX01",
         "hw": "Matte black",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JHX01_Kool_Kombi.jpg"
     },
     {
@@ -128677,7 +128676,7 @@ export const RAW = [
         "color": "",
         "part": "JHX05",
         "hw": "White",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JHX05_Audi_90_quattro.jpg"
     },
     {
@@ -128687,7 +128686,7 @@ export const RAW = [
         "color": "",
         "part": "JBL77",
         "hw": "Ivory",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JBL77_Combat_Jet_Skystriker_Grumman_F_14_Tomcat_.jpg"
     },
     {
@@ -128697,7 +128696,7 @@ export const RAW = [
         "color": "",
         "part": "JHW91",
         "hw": "Metalflake olive green",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JHW91_Masters_of_the_Universe_Wind_Raider.jpg"
     },
     {
@@ -128707,7 +128706,7 @@ export const RAW = [
         "color": "",
         "part": "JHX00",
         "hw": "Green",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JHX00_RC_Car.jpg"
     },
     {
@@ -128717,7 +128716,7 @@ export const RAW = [
         "color": "",
         "part": "JHW86",
         "hw": "Tan",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JHW86_1985_Chevrolet_K5_Blazer.jpg"
     },
     {
@@ -128727,7 +128726,7 @@ export const RAW = [
         "color": "",
         "part": "JHW96",
         "hw": "Gray",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JHW96_Pizza_Planet_Truck.jpg"
     },
     {
@@ -128737,7 +128736,7 @@ export const RAW = [
         "color": "",
         "part": "JHW99",
         "hw": "Matte indigo",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JHW99_Guinevere_Van.jpg"
     },
     {
@@ -128747,7 +128746,7 @@ export const RAW = [
         "color": "",
         "part": "JHX09",
         "hw": "Pink",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JHX09_The_Simpsons_Family_Car.jpg"
     },
     {
@@ -128757,7 +128756,7 @@ export const RAW = [
         "color": "Silver",
         "part": "GBW78",
         "hw": "Silver",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2019_GBW78_Nissan_Skyline_GT_R_BNR34_.jpg"
     },
     {
@@ -128767,7 +128766,7 @@ export const RAW = [
         "color": "Blue",
         "part": "GBW76",
         "hw": "Blue",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2019_GBW76_Nissan_Silvia_S15_.jpg"
     },
     {
@@ -128777,7 +128776,7 @@ export const RAW = [
         "color": "Blue",
         "part": "GBW80",
         "hw": "Blue",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2019_GBW80_1970_Ford_Escort_RS_1600.jpg"
     },
     {
@@ -128787,7 +128786,7 @@ export const RAW = [
         "color": "Yellow",
         "part": "GBW77",
         "hw": "Yellow",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2019_GBW77_Lamborghini_Gallardo_LP_570_4_Superleggera.jpg"
     },
     {
@@ -128797,7 +128796,7 @@ export const RAW = [
         "color": "Black",
         "part": "GBW79",
         "hw": "Black",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2019_GBW79_Nissan_Skyline_GT_R_BNR32_.jpg"
     },
     {
@@ -128807,7 +128806,7 @@ export const RAW = [
         "color": "Burgundy",
         "part": "GBW84",
         "hw": "Burgundy",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2019_GBW84_Nissan_240SX_S14_.jpg"
     },
     {
@@ -128817,7 +128816,7 @@ export const RAW = [
         "color": "Lime Green",
         "part": "GBW81",
         "hw": "Lime Green",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2019_GBW81__95_Mitsubishi_Eclipse.jpg"
     },
     {
@@ -128827,7 +128826,7 @@ export const RAW = [
         "color": "Red",
         "part": "GBW82",
         "hw": "Red",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2019_GBW82__95_Mazda_RX_7.jpg"
     },
     {
@@ -128837,7 +128836,7 @@ export const RAW = [
         "color": "White",
         "part": "GBW85",
         "hw": "White",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2019_GBW85_Volkswagen_Jetta_MK3.jpg"
     },
     {
@@ -128847,7 +128846,7 @@ export const RAW = [
         "color": "Yellow",
         "part": "GBW83",
         "hw": "Yellow",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2019_GBW83_Nissan_Skyline_GT_R_BCNR33_.jpg"
     },
     {
@@ -128857,7 +128856,7 @@ export const RAW = [
         "color": "Red",
         "part": "GBW90",
         "hw": "Red",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2019_GBW90_1970_Chevrolet_Chevelle_SS.jpg"
     },
     {
@@ -128867,7 +128866,7 @@ export const RAW = [
         "color": "Matte Gray",
         "part": "GBW86",
         "hw": "Matte Gray",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2019_GBW86_1970_Chevrolet_Chevelle_SS.jpg"
     },
     {
@@ -128877,7 +128876,7 @@ export const RAW = [
         "color": "Black",
         "part": "GBW88",
         "hw": "Black",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2019_GBW88__77_Pontiac_Firebird_T_A.jpg"
     },
     {
@@ -128887,7 +128886,7 @@ export const RAW = [
         "color": "Orange",
         "part": "GBW87",
         "hw": "Orange",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2019_GBW87__67_Chevrolet_Camaro.jpg"
     },
     {
@@ -128897,7 +128896,7 @@ export const RAW = [
         "color": "White",
         "part": "GBW89",
         "hw": "White",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2019_GBW89__69_Ford_Mustang_Boss_302.jpg"
     },
     {
@@ -128907,7 +128906,7 @@ export const RAW = [
         "color": "Dark Blue",
         "part": "GJC07",
         "hw": "Dark Blue",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2019_GJC07_Impreza_WRX_STI.jpg"
     },
     {
@@ -128917,7 +128916,7 @@ export const RAW = [
         "color": "Dark Green",
         "part": "GBW96",
         "hw": "Dark Green",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2019_GBW96__91_Mercedes_Benz_G_Class.jpg"
     },
     {
@@ -128927,7 +128926,7 @@ export const RAW = [
         "color": "Black",
         "part": "GBW97",
         "hw": "Black",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2019_GBW97_Land_Rover_Defender_110_Hard_Top.jpg"
     },
     {
@@ -128937,7 +128936,7 @@ export const RAW = [
         "color": "Silver",
         "part": "GBW99",
         "hw": "Silver",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2019_GBW99__67_Off_Road_Camaro.jpg"
     },
     {
@@ -128947,7 +128946,7 @@ export const RAW = [
         "color": "Tan",
         "part": "GBW98",
         "hw": "Tan",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2019_GBW98_Hummer_H1.jpg"
     },
     {
@@ -128957,7 +128956,7 @@ export const RAW = [
         "color": "Red",
         "part": "GHH20",
         "hw": "Red",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2019_GHH20_Mazda_RX_3.jpg"
     },
     {
@@ -128967,7 +128966,7 @@ export const RAW = [
         "color": "Yellow",
         "part": "GHH17",
         "hw": "Yellow",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2019_GHH17_Nissan_Skyline_C210_.jpg"
     },
     {
@@ -128977,7 +128976,7 @@ export const RAW = [
         "color": "Silver",
         "part": "GHH16",
         "hw": "Silver",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2019_GHH16_Nissan_Skyline_HT_2000GT_X.jpg"
     },
     {
@@ -128987,7 +128986,7 @@ export const RAW = [
         "color": "Black",
         "part": "GHH18",
         "hw": "Black",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2019_GHH18_Nissan_Fairlady_Z.jpg"
     },
     {
@@ -128997,7 +128996,7 @@ export const RAW = [
         "color": "Blue",
         "part": "GHH19",
         "hw": "Blue",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2019_GHH19_Nissan_Silvia_CSP311_.jpg"
     },
     {
@@ -129007,7 +129006,7 @@ export const RAW = [
         "color": "Red",
         "part": "GJR65",
         "hw": "Red",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2020_GJR65_Mazda_RX_7_FD.jpg"
     },
     {
@@ -129017,7 +129016,7 @@ export const RAW = [
         "color": "Black",
         "part": "GJR63",
         "hw": "Black",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2020_GJR63_Nissan_Silvia_S15_.jpg"
     },
     {
@@ -129027,7 +129026,7 @@ export const RAW = [
         "color": "Gold",
         "part": "GJR64",
         "hw": "Gold",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2020_GJR64_Nissan_240SX_S14_.jpg"
     },
     {
@@ -129037,7 +129036,7 @@ export const RAW = [
         "color": "Yellow",
         "part": "GJR67",
         "hw": "Yellow",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2020_GJR67_Honda_Civic_EG.jpg"
     },
     {
@@ -129047,7 +129046,7 @@ export const RAW = [
         "color": "White",
         "part": "GJR66",
         "hw": "White",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2020_GJR66_2016_Subaru_WRX_STI.jpg"
     },
     {
@@ -129057,7 +129056,7 @@ export const RAW = [
         "color": "Red",
         "part": "GJR68",
         "hw": "Red",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2020_GJR68_Ford_F_150_SVT_Lightning.jpg"
     },
     {
@@ -129067,7 +129066,7 @@ export const RAW = [
         "color": "Metalflake Green",
         "part": "GJR70",
         "hw": "Metalflake Green",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2020_GJR70__72_Ford_Gran_Torino_Sport.jpg"
     },
     {
@@ -129077,7 +129076,7 @@ export const RAW = [
         "color": "Black",
         "part": "GJR71",
         "hw": "Black",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2020_GJR71__87_Buick_Grand_National_GNX.jpg"
     },
     {
@@ -129087,7 +129086,7 @@ export const RAW = [
         "color": "Metalflake Gold",
         "part": "GJR72",
         "hw": "Metalflake Gold",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2020_GJR72__66_Chevy_Nova.jpg"
     },
     {
@@ -129097,7 +129096,7 @@ export const RAW = [
         "color": "Red",
         "part": "GJR69",
         "hw": "Red",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2020_GJR69__61_Impala.jpg"
     },
     {
@@ -129107,7 +129106,7 @@ export const RAW = [
         "color": "Red",
         "part": "GJR76",
         "hw": "Red",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2020_GJR76__95_Mazda_RX_7.jpg"
     },
     {
@@ -129117,7 +129116,7 @@ export const RAW = [
         "color": "Silver",
         "part": "GJR75",
         "hw": "Silver",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2020_GJR75__17_Acura_NSX.jpg"
     },
     {
@@ -129127,7 +129126,7 @@ export const RAW = [
         "color": "Black",
         "part": "GJR42",
         "hw": "Black",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2020_GJR42__71_Plymouth_GTX.jpg"
     },
     {
@@ -129137,7 +129136,7 @@ export const RAW = [
         "color": "Blue",
         "part": "GJR74",
         "hw": "Blue",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2020_GJR74_Jaguar_XE_SV_Project_8.jpg"
     },
     {
@@ -129147,7 +129146,7 @@ export const RAW = [
         "color": "Black",
         "part": "GJR73",
         "hw": "Black",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2020_GJR73__70_Dodge_Charger_R_T.jpg"
     },
     {
@@ -129157,7 +129156,7 @@ export const RAW = [
         "color": "Pink",
         "part": "GJR81",
         "hw": "Pink",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2020_GJR81_Honda_S2000.jpg"
     },
     {
@@ -129167,7 +129166,7 @@ export const RAW = [
         "color": "Blue & Silver",
         "part": "GJR79",
         "hw": "Blue & Silver",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2020_GJR79_Nissan_Skyline_GT_R_BCNR33_.jpg"
     },
     {
@@ -129177,7 +129176,7 @@ export const RAW = [
         "color": "Black",
         "part": "GJR80",
         "hw": "Black",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2020_GJR80_2003_Honda_NSX_Type_R.jpg"
     },
     {
@@ -129187,7 +129186,7 @@ export const RAW = [
         "color": "Black",
         "part": "GJR80",
         "hw": "Black",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2020_GJR80_2003_Honda_NSX_Type_R.jpg"
     },
     {
@@ -129197,7 +129196,7 @@ export const RAW = [
         "color": "Black",
         "part": "GJR82",
         "hw": "Black",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2020_GJR82__70_Plymouth_AAR_Cuda.jpg"
     },
     {
@@ -129207,7 +129206,7 @@ export const RAW = [
         "color": "Red",
         "part": "GJR78",
         "hw": "Red",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2020_GJR78__65_Corvette_Stingray_Coupe.jpg"
     },
     {
@@ -129217,7 +129216,7 @@ export const RAW = [
         "color": "Silver",
         "part": "GPK55",
         "hw": "Silver",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2021_GPK55_Aston_Martin_DB5.jpg"
     },
     {
@@ -129227,7 +129226,7 @@ export const RAW = [
         "color": "Metalflake Steel Blue",
         "part": "GPK54",
         "hw": "Metalflake Steel Blue",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2021_GPK54_McLaren_720S.jpg"
     },
     {
@@ -129237,7 +129236,7 @@ export const RAW = [
         "color": "Black",
         "part": "GXV65",
         "hw": "Black",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2021_GXV65_Lamborghini_Aventador_Coup_.jpg"
     },
     {
@@ -129247,7 +129246,7 @@ export const RAW = [
         "color": "Black",
         "part": "GPK53",
         "hw": "Black",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2021_GPK53_BMW_M3_E36.jpg"
     },
     {
@@ -129257,7 +129256,7 @@ export const RAW = [
         "color": "White",
         "part": "GPK52",
         "hw": "White",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2021_GPK52_BMW_M3_E46.jpg"
     },
     {
@@ -129267,7 +129266,7 @@ export const RAW = [
         "color": "Green",
         "part": "GRL73",
         "hw": "Green",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2021_GRL73_Mitsubishi_Eclipse.jpg"
     },
     {
@@ -129277,7 +129276,7 @@ export const RAW = [
         "color": "Metalflake cyan",
         "part": "GRL72",
         "hw": "Metalflake cyan",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2021_GRL72__92_Ford_Mustang.jpg"
     },
     {
@@ -129287,7 +129286,7 @@ export const RAW = [
         "color": "Metalflake gray",
         "part": "GRL74",
         "hw": "Metalflake gray",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2021_GRL74_Jeep_Grand_Cherokee_Trackhawk.jpg"
     },
     {
@@ -129297,7 +129296,7 @@ export const RAW = [
         "color": "Black",
         "part": "GRL71",
         "hw": "Black",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2021_GRL71_Dodge_Charger.jpg"
     },
     {
@@ -129307,7 +129306,7 @@ export const RAW = [
         "color": "Red",
         "part": "GRL70",
         "hw": "Red",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2021_GRL70_W_Motors_Lykan_HyperSport.jpg"
     },
     {
@@ -129317,7 +129316,7 @@ export const RAW = [
         "color": "Metalflake Blue",
         "part": "GRL84",
         "hw": "Metalflake Blue",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2021_GRL84_Nissan_Skyline_GTR_BNR34_.jpg"
     },
     {
@@ -129327,7 +129326,7 @@ export const RAW = [
         "color": "Matte Gray",
         "part": "GRL81",
         "hw": "Matte Gray",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2021_GRL81__70_Chevelle_SS.jpg"
     },
     {
@@ -129337,7 +129336,7 @@ export const RAW = [
         "color": "Black",
         "part": "GRL83",
         "hw": "Black",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2021_GRL83__70_Dodge_Charger.jpg"
     },
     {
@@ -129347,7 +129346,7 @@ export const RAW = [
         "color": "Metalflake Gray",
         "part": "GRK50",
         "hw": "Metalflake Gray",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2021_GRK50__70_Chevy_Nova_SS.jpg"
     },
     {
@@ -129357,7 +129356,7 @@ export const RAW = [
         "color": "Matte Orange",
         "part": "GRL80",
         "hw": "Matte Orange",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2021_GRL80_Toyota_GR_Supra.jpg"
     },
     {
@@ -129367,7 +129366,7 @@ export const RAW = [
         "color": "Black",
         "part": "GRK60",
         "hw": "Black",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2021_GRK60_Honda_S2000.jpg"
     },
     {
@@ -129377,7 +129376,7 @@ export const RAW = [
         "color": "Deep Impact Blue",
         "part": "GRK56",
         "hw": "Deep Impact Blue",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2021_GRK56_Custom_Mustang.jpg"
     },
     {
@@ -129387,7 +129386,7 @@ export const RAW = [
         "color": "Black",
         "part": "GRL82",
         "hw": "Black",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2021_GRL82_Dodge_Charger_SRT_Hellcat_Widebody.jpg"
     },
     {
@@ -129397,7 +129396,7 @@ export const RAW = [
         "color": "Silver",
         "part": "GRK52",
         "hw": "Silver",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2021_GRK52_Jeep_Gladiator.jpg"
     },
     {
@@ -129407,7 +129406,7 @@ export const RAW = [
         "color": "Glossy Black",
         "part": "GRK58",
         "hw": "Glossy Black",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2021_GRK58_Land_Rover_Defender_90.jpg"
     },
     {
@@ -129417,7 +129416,7 @@ export const RAW = [
         "color": "White",
         "part": "HKD22",
         "hw": "White",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2023_HKD22_Mazda_RX_7_FD.jpg"
     },
     {
@@ -129427,7 +129426,7 @@ export const RAW = [
         "color": "Matte Silver",
         "part": "HNW47",
         "hw": "Matte Silver",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2023_HNW47_1967_Chevy_Camaro_Offroad.jpg"
     },
     {
@@ -129437,7 +129436,7 @@ export const RAW = [
         "color": "Matte Gray",
         "part": "HNW48",
         "hw": "Matte Gray",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2023_HNW48_Jeep_Grand_Cherokee_Trackhawk.jpg"
     },
     {
@@ -129447,7 +129446,7 @@ export const RAW = [
         "color": "Carrara White",
         "part": "HKD20",
         "hw": "Carrara White",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2023_HKD20_Porsche_718_Cayman_GT4.jpg"
     },
     {
@@ -129457,7 +129456,7 @@ export const RAW = [
         "color": "Orange",
         "part": "HKD21",
         "hw": "Orange",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2023_HKD21_Nissan_Skyline_GT_R_BNR34_.jpg"
     },
     {
@@ -129467,7 +129466,7 @@ export const RAW = [
         "color": "Metalflake blue",
         "part": "HKD24",
         "hw": "Metalflake blue",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2023_HKD24_1969_Chevy_Camaro.jpg"
     },
     {
@@ -129477,7 +129476,7 @@ export const RAW = [
         "color": "Tan",
         "part": "HNW53",
         "hw": "Tan",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2023_HNW53_Toyota_Land_Cruiser_FJ60.jpg"
     },
     {
@@ -129487,7 +129486,7 @@ export const RAW = [
         "color": "Metalflake red",
         "part": "HNW49",
         "hw": "Metalflake red",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2023_HNW49_W_Motors_Lykan_HyperSport.jpg"
     },
     {
@@ -129497,7 +129496,7 @@ export const RAW = [
         "color": "Black",
         "part": "HNW55",
         "hw": "Black",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2023_HNW55_1971_Plymouth_GTX.jpg"
     },
     {
@@ -129507,7 +129506,7 @@ export const RAW = [
         "color": "Black",
         "part": "HNW50",
         "hw": "Black",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2023_HNW50_Dodge_Charger_SRT_Hellcat_Widebody.jpg"
     },
     {
@@ -129517,7 +129516,7 @@ export const RAW = [
         "color": "Light blue",
         "part": "HKD27",
         "hw": "Light blue",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2023_HKD27_Custom_Acura_Integra_Sedan_GSR.jpg"
     },
     {
@@ -129527,7 +129526,7 @@ export const RAW = [
         "color": "Dark blue",
         "part": "HKD23",
         "hw": "Dark blue",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2023_HKD23_1999_Nissan_Maxima.jpg"
     },
     {
@@ -129537,7 +129536,7 @@ export const RAW = [
         "color": "White",
         "part": "HNW52",
         "hw": "White",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2023_HNW52_BMW_M3_E46.jpg"
     },
     {
@@ -129547,7 +129546,7 @@ export const RAW = [
         "color": "Metalflake Deep Impact Blue",
         "part": "HNW51",
         "hw": "Metalflake Deep Impact Blue",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2023_HNW51_Custom_Mustang.jpg"
     },
     {
@@ -129557,7 +129556,7 @@ export const RAW = [
         "color": "Orange",
         "part": "HKD29",
         "hw": "Orange",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2023_HKD29_Alfa_Romeo_Giulia_Sprint_GTA.jpg"
     },
     {
@@ -129567,7 +129566,7 @@ export const RAW = [
         "color": "Silver",
         "part": "HKD25",
         "hw": "Silver",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2023_HKD25_Toyota_Supra.jpg"
     },
     {
@@ -129577,7 +129576,7 @@ export const RAW = [
         "color": "Matte Eastnor Green",
         "part": "HKD26",
         "hw": "Matte Eastnor Green",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2023_HKD26_Land_Rover_Defender_110.jpg"
     },
     {
@@ -129587,7 +129586,7 @@ export const RAW = [
         "color": "Silver",
         "part": "HNW54",
         "hw": "Silver",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2023_HNW54_1970_Chevrolet_Nova_SS.jpg"
     },
     {
@@ -129597,7 +129596,7 @@ export const RAW = [
         "color": "Black",
         "part": "HKD28",
         "hw": "Black",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2023_HKD28_1991_BMW_M5.jpg"
     },
     {
@@ -129607,7 +129606,7 @@ export const RAW = [
         "color": "Polished gold",
         "part": "HMG52",
         "hw": "Polished gold",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2023_HMG52_Lamborghini_Gallardo_LP_570_4_Superleggera.jpg"
     },
     {
@@ -129617,7 +129616,7 @@ export const RAW = [
         "color": "Red",
         "part": "HJC15",
         "hw": "Red",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2023_HJC15__70_Chevelle_SS.jpg"
     },
     {
@@ -129627,7 +129626,7 @@ export const RAW = [
         "color": "Metalflake gold",
         "part": "HKF07",
         "hw": "Metalflake gold",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2023_HKF07__66_Chevy_Nova.jpg"
     },
     {
@@ -129637,7 +129636,7 @@ export const RAW = [
         "color": "Burgundy",
         "part": "HKF08",
         "hw": "Burgundy",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2023_HKF08_Nissan_240SX_S14_.jpg"
     },
     {
@@ -129647,7 +129646,7 @@ export const RAW = [
         "color": "Gray",
         "part": "HVR61",
         "hw": "Gray",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2024_HVR61_Toyota_AE86_Sprinter_Trueno.jpg"
     },
     {
@@ -129657,7 +129656,7 @@ export const RAW = [
         "color": "White",
         "part": "HVR60",
         "hw": "White",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2024_HVR60_Ford_RS200.jpg"
     },
     {
@@ -129667,7 +129666,7 @@ export const RAW = [
         "color": "Black",
         "part": "HYP68",
         "hw": "Black",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2024_HYP68_1970_Plymouth_AAR_Cuda.jpg"
     },
     {
@@ -129677,7 +129676,7 @@ export const RAW = [
         "color": "Black",
         "part": "HYP69",
         "hw": "Black",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2024_HYP69_Nissan_Skyline_GT_R_BNR32_.jpg"
     },
     {
@@ -129687,7 +129686,7 @@ export const RAW = [
         "color": "Black",
         "part": "HYP67",
         "hw": "Black",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2024_HYP67_2003_Honda_NSX_R.jpg"
     },
     {
@@ -129697,7 +129696,7 @@ export const RAW = [
         "color": "Blue",
         "part": "HYP73",
         "hw": "Blue",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2024_HYP73_Nissan_Silvia_S15_.jpg"
     },
     {
@@ -129707,7 +129706,7 @@ export const RAW = [
         "color": "Red",
         "part": "HRT95",
         "hw": "Red",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2024_HRT95_Toyota_Soarer.jpg"
     },
     {
@@ -129717,7 +129716,7 @@ export const RAW = [
         "color": "Metalflake green",
         "part": "HYP72",
         "hw": "Metalflake green",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2024_HYP72_1972_Ford_Gran_Torino_Sport.jpg"
     },
     {
@@ -129727,7 +129726,7 @@ export const RAW = [
         "color": "White",
         "part": "HYP71",
         "hw": "White",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2024_HYP71_1969_Ford_Mustang_Boss_302.jpg"
     },
     {
@@ -129737,7 +129736,7 @@ export const RAW = [
         "color": "White",
         "part": "HYP70",
         "hw": "White",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2024_HYP70_BMW_M3.jpg"
     },
     {
@@ -129747,7 +129746,7 @@ export const RAW = [
         "color": "Light blue",
         "part": "JDJ13",
         "hw": "Light blue",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2024_JDJ13_Custom_Acura_Integra_Sedan_GSR.jpg"
     },
     {
@@ -129757,7 +129756,7 @@ export const RAW = [
         "color": "Silver",
         "part": "HRT94",
         "hw": "Silver",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2024_HRT94_Mercedes_Benz_500_SEL.jpg"
     },
     {
@@ -129767,7 +129766,7 @@ export const RAW = [
         "color": "Metalflake silver",
         "part": "HRT97",
         "hw": "Metalflake silver",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2024_HRT97_Porsche_911_Carrera_RS_3_8.jpg"
     },
     {
@@ -129777,7 +129776,7 @@ export const RAW = [
         "color": "Red",
         "part": "HRT96",
         "hw": "Red",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2024_HRT96_Toyota_Land_Cruiser_FJ43.jpg"
     },
     {
@@ -129787,7 +129786,7 @@ export const RAW = [
         "color": "Black",
         "part": "HYP74",
         "hw": "Black",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2024_HYP74_Land_Rover_Defender_90.jpg"
     },
     {
@@ -129797,7 +129796,7 @@ export const RAW = [
         "color": "Bright red",
         "part": "HYP75",
         "hw": "Bright red",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2024_HYP75_Ford_F_150_SVT_Lightning.jpg"
     },
     {
@@ -129807,7 +129806,7 @@ export const RAW = [
         "color": "Metalflake blue",
         "part": "HVR62",
         "hw": "Metalflake blue",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2024_HVR62_1996_Nissan_180SX_Type_X.jpg"
     },
     {
@@ -129817,7 +129816,7 @@ export const RAW = [
         "color": "Gray",
         "part": "HRT98",
         "hw": "Gray",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2024_HRT98_1987_Chevy_Caprice.jpg"
     },
     {
@@ -129827,7 +129826,7 @@ export const RAW = [
         "color": "White",
         "part": "HVR63",
         "hw": "White",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2024_HVR63_2018_Bentley_Continental_GT3.jpg"
     },
     {
@@ -129837,7 +129836,7 @@ export const RAW = [
         "color": "Matte black",
         "part": "HRT99",
         "hw": "Matte black",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2024_HRT99_Toyota_FJ_Cruiser.jpg"
     },
     {
@@ -129847,7 +129846,7 @@ export const RAW = [
         "color": "Matte gray",
         "part": "JBL94",
         "hw": "Matte gray",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2025_JBL94_1970_Chevelle_SS.jpg"
     },
     {
@@ -129857,7 +129856,7 @@ export const RAW = [
         "color": "Viper Red",
         "part": "JBL85",
         "hw": "Viper Red",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2025_JBL85_2003_Dodge_Viper_SRT_10.jpg"
     },
     {
@@ -129867,7 +129866,7 @@ export const RAW = [
         "color": "Silver",
         "part": "JBL91",
         "hw": "Silver",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2025_JBL91_Nissan_370Z.jpg"
     },
     {
@@ -129877,7 +129876,7 @@ export const RAW = [
         "color": "Matte black",
         "part": "JBL98",
         "hw": "Matte black",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2025_JBL98_Land_Rover_Defender_110.jpg"
     },
     {
@@ -129887,7 +129886,7 @@ export const RAW = [
         "color": "Delta Red",
         "part": "JBL92",
         "hw": "Delta Red",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2025_JBL92_McLaren_Senna.jpg"
     },
     {
@@ -129897,7 +129896,7 @@ export const RAW = [
         "color": "White",
         "part": "JBL93",
         "hw": "White",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2025_JBL93_Mazda_RX_7_FD.jpg"
     },
     {
@@ -129907,7 +129906,7 @@ export const RAW = [
         "color": "Black",
         "part": "JBL97",
         "hw": "Black",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2025_JBL97_Nissan_Skyline_GT_R_BNR32_.jpg"
     },
     {
@@ -129917,7 +129916,7 @@ export const RAW = [
         "color": "Gray",
         "part": "JBL96",
         "hw": "Gray",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2025_JBL96_2020_Dodge_Charger_Hellcat.jpg"
     },
     {
@@ -129927,7 +129926,7 @@ export const RAW = [
         "color": "Orange",
         "part": "JBM04",
         "hw": "Orange",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2025_JBM04_Alfa_Romeo_Giulia_Sprint_GTA.jpg"
     },
     {
@@ -129937,7 +129936,7 @@ export const RAW = [
         "color": "Lavender",
         "part": "JBL95",
         "hw": "Lavender",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2025_JBL95_1966_Chevy_Impala.jpg"
     },
     {
@@ -129947,7 +129946,7 @@ export const RAW = [
         "color": "Burgundy",
         "part": "JBL99",
         "hw": "Burgundy",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2025_JBL99_Nissan_240SX_S14_.jpg"
     },
     {
@@ -129957,7 +129956,7 @@ export const RAW = [
         "color": "Black",
         "part": "JBL86",
         "hw": "Black",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2025_JBL86_Lamborghini_LM002.jpg"
     },
     {
@@ -129967,7 +129966,7 @@ export const RAW = [
         "color": "Storm Black",
         "part": "JBL88",
         "hw": "Storm Black",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2025_JBL88_Koenigsegg_CCXR.jpg"
     },
     {
@@ -129977,7 +129976,7 @@ export const RAW = [
         "color": "Hemi Orange",
         "part": "JBL87",
         "hw": "Hemi Orange",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2025_JBL87_1970_Custom_Plymouth_Roadrunner.jpg"
     },
     {
@@ -129987,7 +129986,7 @@ export const RAW = [
         "color": "Glossy orange",
         "part": "JBM00",
         "hw": "Glossy orange",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2025_JBM00_2021_Toyota_GR_Supra.jpg"
     },
     {
@@ -129997,7 +129996,7 @@ export const RAW = [
         "color": "Black",
         "part": "JBL90",
         "hw": "Black",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2025_JBL90_1993_Honda_Civic_Coupe_EX_EJ1.jpg"
     },
     {
@@ -130007,7 +130006,7 @@ export const RAW = [
         "color": "Red",
         "part": "JBM02",
         "hw": "Red",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2025_JBM02_Lancer_Evolution_IX.jpg"
     },
     {
@@ -130017,7 +130016,7 @@ export const RAW = [
         "color": "Silver",
         "part": "JBM03",
         "hw": "Silver",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2025_JBM03_Porsche_911_Carrera_RS_3_8.jpg"
     },
     {
@@ -130027,7 +130026,7 @@ export const RAW = [
         "color": "Yellow",
         "part": "JBL89",
         "hw": "Yellow",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2025_JBL89_Toyota_Chaser_JZX_100.jpg"
     },
     {
@@ -130037,7 +130036,7 @@ export const RAW = [
         "color": "Polished gold",
         "part": "JBM01",
         "hw": "Polished gold",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2025_JBM01_Lamborghini_Gallardo_LP_570_4_Superleggera.jpg"
     },
     {
@@ -130047,7 +130046,7 @@ export const RAW = [
         "color": "Flat gray",
         "part": "JFL99",
         "hw": "Flat gray",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2025_JFL99_Nissan_350Z_Custom.jpg"
     },
     {
@@ -130057,7 +130056,7 @@ export const RAW = [
         "color": "Spectraflame green",
         "part": "JHW68",
         "hw": "Spectraflame green",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JHW68_1995_Mitsubishi_Eclipse.jpg"
     },
     {
@@ -130067,7 +130066,7 @@ export const RAW = [
         "color": "Silver",
         "part": "JHW67",
         "hw": "Silver",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JHW67_Mercedes_Benz_500_SEL.jpg"
     },
     {
@@ -130077,7 +130076,7 @@ export const RAW = [
         "color": "White",
         "part": "JHW72",
         "hw": "White",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JHW72_1969_Ford_Mustang_Boss_302.jpg"
     },
     {
@@ -130087,7 +130086,7 @@ export const RAW = [
         "color": "Red",
         "part": "JHW70",
         "hw": "Red",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JHW70_W_Motors_Lykan_HyperSport.jpg"
     },
     {
@@ -130097,7 +130096,7 @@ export const RAW = [
         "color": "Matte black",
         "part": "JHW69",
         "hw": "Matte black",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JHW69_Toyota_FJ_Cruiser.jpg"
     },
     {
@@ -130107,7 +130106,7 @@ export const RAW = [
         "color": "Spectraflame red",
         "part": "JHW71",
         "hw": "Spectraflame red",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JHW71_1995_Mazda_RX_7.jpg"
     },
     {
@@ -130117,7 +130116,7 @@ export const RAW = [
         "color": "Orange",
         "part": "JHW61",
         "hw": "Orange",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JHW61_1967_Chevy_Custom_C_10.jpg"
     },
     {
@@ -130127,7 +130126,7 @@ export const RAW = [
         "color": "Frost White",
         "part": "JHW63",
         "hw": "Frost White",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JHW63_1994_Honda_del_Sol.jpg"
     },
     {
@@ -130137,7 +130136,7 @@ export const RAW = [
         "color": "Red",
         "part": "JHW73",
         "hw": "Red",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JHW73_1970_Chevrolet_Chevelle_SS.jpg"
     },
     {
@@ -130147,7 +130146,7 @@ export const RAW = [
         "color": "Matte Nero Nemesis",
         "part": "JHW77",
         "hw": "Matte Nero Nemesis",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JHW77_Lamborghini_Aventador_Coup_.jpg"
     },
     {
@@ -130157,7 +130156,7 @@ export const RAW = [
         "color": "Spectraflame black",
         "part": "JHW74",
         "hw": "Spectraflame black",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JHW74_1970_Dodge_Charger_R_T.jpg"
     },
     {
@@ -130167,7 +130166,7 @@ export const RAW = [
         "color": "Hemi Orange",
         "part": "JHW64",
         "hw": "Hemi Orange",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JHW64_1970_Dodge_Challenger_R_T.jpg"
     },
     {
@@ -130177,7 +130176,7 @@ export const RAW = [
         "color": "Black",
         "part": "JHW75",
         "hw": "Black",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JHW75_2003_Honda_NSX_Type_R.jpg"
     },
     {
@@ -130187,7 +130186,7 @@ export const RAW = [
         "color": "Black",
         "part": "JHW62",
         "hw": "Black",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JHW62_2010_BMW_M5.jpg"
     },
     {
@@ -130197,7 +130196,7 @@ export const RAW = [
         "color": "Tan",
         "part": "JHW76",
         "hw": "Tan",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JHW76_Toyota_Land_Cruiser_FJ60.jpg"
     },
     {
@@ -130207,7 +130206,7 @@ export const RAW = [
         "color": "Red",
         "part": "JMN13",
         "hw": "Red",
-        "cas": "Premium",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JMN13_1999_Ford_F_150_SVT_Lightning.jpg"
     },
     {
@@ -130217,7 +130216,7 @@ export const RAW = [
         "color": "",
         "part": "GBG26",
         "hw": "Red",
-        "cas": "Mario Kart",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/NA_GBG26_Standard_Kart.jpg"
     },
     {
@@ -130227,7 +130226,7 @@ export const RAW = [
         "color": "",
         "part": "GBG27",
         "hw": "Blue",
-        "cas": "Mario Kart",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/NA_GBG27_Mach_8.jpg"
     },
     {
@@ -130237,7 +130236,7 @@ export const RAW = [
         "color": "",
         "part": "GBG28",
         "hw": "Light Pink",
-        "cas": "Mario Kart",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/NA_GBG28_Standard_Kart.jpg"
     },
     {
@@ -130247,7 +130246,7 @@ export const RAW = [
         "color": "",
         "part": "GBG29",
         "hw": "White",
-        "cas": "Mario Kart",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/NA_GBG29_B_Dasher.jpg"
     },
     {
@@ -130257,7 +130256,7 @@ export const RAW = [
         "color": "",
         "part": "GBG30",
         "hw": "Red & Blue",
-        "cas": "Mario Kart",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/NA_GBG30_Sneeker.jpg"
     },
     {
@@ -130267,7 +130266,7 @@ export const RAW = [
         "color": "",
         "part": "GBG31",
         "hw": "Pink",
-        "cas": "Mario Kart",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/NA_GBG31_Badwagon.jpg"
     },
     {
@@ -130277,7 +130276,7 @@ export const RAW = [
         "color": "",
         "part": "GBG32",
         "hw": "Yellow",
-        "cas": "Mario Kart",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/NA_GBG32_Standard_Kart.jpg"
     },
     {
@@ -130287,7 +130286,7 @@ export const RAW = [
         "color": "",
         "part": "GBG33",
         "hw": "Teal",
-        "cas": "Mario Kart",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/NA_GBG33_Standard_Kart.jpg"
     },
     {
@@ -130297,7 +130296,7 @@ export const RAW = [
         "color": "",
         "part": "GBG35",
         "hw": "Light Blue",
-        "cas": "Mario Kart",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/NA_GBG35_Standard_Kart.jpg"
     },
     {
@@ -130307,7 +130306,7 @@ export const RAW = [
         "color": "",
         "part": "GGV85",
         "hw": "Green",
-        "cas": "Mario Kart",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/NA_GGV85_Circuit_Special.jpg"
     },
     {
@@ -130317,7 +130316,7 @@ export const RAW = [
         "color": "",
         "part": "GJH54",
         "hw": "Pink",
-        "cas": "Mario Kart",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/NA_GJH54_Badwagon.jpg"
     },
     {
@@ -130327,7 +130326,7 @@ export const RAW = [
         "color": "",
         "part": "GJH55",
         "hw": "Brown",
-        "cas": "Mario Kart",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/NA_GJH55_Standard_Kart.jpg"
     },
     {
@@ -130337,7 +130336,7 @@ export const RAW = [
         "color": "",
         "part": "GJH57",
         "hw": "Yellow",
-        "cas": "Mario Kart",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/NA_GJH57_Sports_Coupe.jpg"
     },
     {
@@ -130347,7 +130346,7 @@ export const RAW = [
         "color": "",
         "part": "GJH58",
         "hw": "White",
-        "cas": "Mario Kart",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/NA_GJH58_P_Wing.jpg"
     },
     {
@@ -130357,7 +130356,7 @@ export const RAW = [
         "color": "",
         "part": "GJH59",
         "hw": "Purple",
-        "cas": "Mario Kart",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/NA_GJH59_Standard_Kart.jpg"
     },
     {
@@ -130367,7 +130366,7 @@ export const RAW = [
         "color": "",
         "part": "GJH61",
         "hw": "White",
-        "cas": "Mario Kart",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/NA_GJH61_B_Dasher.jpg"
     },
     {
@@ -130377,7 +130376,7 @@ export const RAW = [
         "color": "",
         "part": "GJH62",
         "hw": "White",
-        "cas": "Mario Kart",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/NA_GJH62_P_Wing.jpg"
     },
     {
@@ -130387,7 +130386,7 @@ export const RAW = [
         "color": "",
         "part": "GJH63",
         "hw": "Blue",
-        "cas": "Mario Kart",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/NA_GJH63_Standard_Kart.jpg"
     },
     {
@@ -130397,7 +130396,7 @@ export const RAW = [
         "color": "",
         "part": "GLP37",
         "hw": "Green",
-        "cas": "Mario Kart",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/NA_GLP37_Standard_Kart.jpg"
     },
     {
@@ -130407,7 +130406,7 @@ export const RAW = [
         "color": "",
         "part": "GLP38",
         "hw": "Green",
-        "cas": "Mario Kart",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/NA_GLP38_Standard_Kart.jpg"
     },
     {
@@ -130417,7 +130416,7 @@ export const RAW = [
         "color": "",
         "part": "GLP39",
         "hw": "Blue",
-        "cas": "Mario Kart",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/NA_GLP39_Mach_8.jpg"
     },
     {
@@ -130427,7 +130426,7 @@ export const RAW = [
         "color": "",
         "part": "GPD90",
         "hw": "Red",
-        "cas": "Mario Kart",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/NA_GPD90_Standard_Kart.jpg"
     },
     {
@@ -130437,7 +130436,7 @@ export const RAW = [
         "color": "",
         "part": "GRN12",
         "hw": "White",
-        "cas": "Mario Kart",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/NA_GRN12_B_Dasher.jpg"
     },
     {
@@ -130447,7 +130446,7 @@ export const RAW = [
         "color": "",
         "part": "GRN13",
         "hw": "Yellow",
-        "cas": "Mario Kart",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/NA_GRN13_Standard_Kart.jpg"
     },
     {
@@ -130457,7 +130456,7 @@ export const RAW = [
         "color": "",
         "part": "GRN14",
         "hw": "Orange",
-        "cas": "Mario Kart",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/NA_GRN14_Wild_Wing.jpg"
     },
     {
@@ -130467,7 +130466,7 @@ export const RAW = [
         "color": "",
         "part": "GRN15",
         "hw": "Orange",
-        "cas": "Mario Kart",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/NA_GRN15_Pipe_Frame.jpg"
     },
     {
@@ -130477,7 +130476,7 @@ export const RAW = [
         "color": "",
         "part": "GRN16",
         "hw": "Yellow",
-        "cas": "Mario Kart",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/NA_GRN16_Sports_Coupe.jpg"
     },
     {
@@ -130487,7 +130486,7 @@ export const RAW = [
         "color": "",
         "part": "GRN17",
         "hw": "Red",
-        "cas": "Mario Kart",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/NA_GRN17_Wild_Wing.jpg"
     },
     {
@@ -130497,7 +130496,7 @@ export const RAW = [
         "color": "",
         "part": "GRN18",
         "hw": "Light Green",
-        "cas": "Mario Kart",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/NA_GRN18_Circuit_Special.jpg"
     },
     {
@@ -130507,7 +130506,7 @@ export const RAW = [
         "color": "",
         "part": "GRN19",
         "hw": "Green",
-        "cas": "Mario Kart",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/NA_GRN19_Pipe_Frame.jpg"
     },
     {
@@ -130517,7 +130516,7 @@ export const RAW = [
         "color": "",
         "part": "GRN20",
         "hw": "Yellow",
-        "cas": "Mario Kart",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/NA_GRN20_Standard_Kart.jpg"
     },
     {
@@ -130527,7 +130526,7 @@ export const RAW = [
         "color": "",
         "part": "GRN21",
         "hw": "Light Blue",
-        "cas": "Mario Kart",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/NA_GRN21_Standard_Kart.jpg"
     },
     {
@@ -130537,7 +130536,7 @@ export const RAW = [
         "color": "",
         "part": "GRN22",
         "hw": "Pink",
-        "cas": "Mario Kart",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/NA_GRN22_Badwagon.jpg"
     },
     {
@@ -130547,7 +130546,7 @@ export const RAW = [
         "color": "",
         "part": "GRN23",
         "hw": "Blue",
-        "cas": "Mario Kart",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/NA_GRN23_Standard_Kart.jpg"
     },
     {
@@ -130557,7 +130556,7 @@ export const RAW = [
         "color": "",
         "part": "GRN24",
         "hw": "Brown",
-        "cas": "Mario Kart",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/NA_GRN24_Standard_Kart.jpg"
     },
     {
@@ -130567,7 +130566,7 @@ export const RAW = [
         "color": "",
         "part": "GRN25",
         "hw": "Black",
-        "cas": "Mario Kart",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/NA_GRN25_Standard_Kart.jpg"
     },
     {
@@ -130577,7 +130576,7 @@ export const RAW = [
         "color": "",
         "part": "HDB26",
         "hw": "Pink",
-        "cas": "Mario Kart",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/NA_HDB26_Birthday_Girl.jpg"
     },
     {
@@ -130587,7 +130586,7 @@ export const RAW = [
         "color": "",
         "part": "HDB27",
         "hw": "Green",
-        "cas": "Mario Kart",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/NA_HDB27_Flame_Flyer.jpg"
     },
     {
@@ -130597,7 +130596,7 @@ export const RAW = [
         "color": "",
         "part": "HDB28",
         "hw": "Red & Blue",
-        "cas": "Mario Kart",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/NA_HDB28_Sneeker.jpg"
     },
     {
@@ -130607,7 +130606,7 @@ export const RAW = [
         "color": "",
         "part": "HDB29",
         "hw": "Black",
-        "cas": "Mario Kart",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/NA_HDB29_Standard_Kart.jpg"
     },
     {
@@ -130617,7 +130616,7 @@ export const RAW = [
         "color": "",
         "part": "HDB30",
         "hw": "Pink",
-        "cas": "Mario Kart",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/NA_HDB30_Pipe_Frame.jpg"
     },
     {
@@ -130627,7 +130626,7 @@ export const RAW = [
         "color": "",
         "part": "HDB31",
         "hw": "Yellow",
-        "cas": "Mario Kart",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/NA_HDB31_Bumble_V.jpg"
     },
     {
@@ -130637,7 +130636,7 @@ export const RAW = [
         "color": "",
         "part": "HDB32",
         "hw": "Blue & Light Blue",
-        "cas": "Mario Kart",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/NA_HDB32_Birthday_Girl.jpg"
     },
     {
@@ -130647,7 +130646,7 @@ export const RAW = [
         "color": "",
         "part": "HDB34",
         "hw": "Red",
-        "cas": "Mario Kart",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/NA_HDB34_Pipe_Frame.jpg"
     },
     {
@@ -130657,7 +130656,7 @@ export const RAW = [
         "color": "",
         "part": "HDB35",
         "hw": "Blue",
-        "cas": "Mario Kart",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/NA_HDB35_Mach_8.jpg"
     },
     {
@@ -130667,7 +130666,7 @@ export const RAW = [
         "color": "",
         "part": "HDB36",
         "hw": "White",
-        "cas": "Mario Kart",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/NA_HDB36_Circuit_Special.jpg"
     },
     {
@@ -130677,7 +130676,7 @@ export const RAW = [
         "color": "",
         "part": "HGT99",
         "hw": "Pink Gold",
-        "cas": "Mario Kart",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/NA_HGT99_Standard_Kart.jpg"
     },
     {
@@ -130687,7 +130686,7 @@ export const RAW = [
         "color": "",
         "part": "JJP81",
         "hw": "Pink",
-        "cas": "Mario Kart",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/NA_JJP81_Badwagon.jpg"
     },
     {
@@ -130697,7 +130696,7 @@ export const RAW = [
         "color": "",
         "part": "HKD42",
         "hw": "Red",
-        "cas": "Mario Kart",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/NA_HKD42_Theatrical_Mario.jpg"
     },
     {
@@ -130707,7 +130706,7 @@ export const RAW = [
         "color": "",
         "part": "HKD58",
         "hw": "Blue",
-        "cas": "Mario Kart",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/NA_HKD58_Theatrical_Toad.jpg"
     },
     {
@@ -130717,7 +130716,7 @@ export const RAW = [
         "color": "",
         "part": "HKD59",
         "hw": "Black",
-        "cas": "Mario Kart",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/NA_HKD59_Theatrical_Koopa_Troopa.jpg"
     },
     {
@@ -130727,7 +130726,7 @@ export const RAW = [
         "color": "",
         "part": "HKD46",
         "hw": "Orange & Yellow",
-        "cas": "Mario Kart",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/NA_HKD46_Theatrical_Donkey_Kong.jpg"
     },
     {
@@ -130737,7 +130736,7 @@ export const RAW = [
         "color": "",
         "part": "HKD43(Pack #)",
         "hw": "Pink",
-        "cas": "Mario Kart",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/NA_HKD43Pack_Theatrical_Princess_Peach.jpg"
     },
     {
@@ -130747,7 +130746,7 @@ export const RAW = [
         "color": "",
         "part": "N/A",
         "hw": "SDCC",
-        "cas": "Mario Kart",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/NA_NA_Standard_Kart.jpg"
     },
     {
@@ -130757,7 +130756,7 @@ export const RAW = [
         "color": "",
         "part": "GDF95",
         "hw": "SDCC",
-        "cas": "Mario Kart",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/NA_GDF95_Standard_Kart.jpg"
     },
     {
@@ -130767,7 +130766,7 @@ export const RAW = [
         "color": "",
         "part": "GVD31",
         "hw": "1, 2, 3, 4, 6",
-        "cas": "Mario Kart",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/NA_GVD31_Standard_Kart.jpg"
     },
     {
@@ -130777,7 +130776,7 @@ export const RAW = [
         "color": "",
         "part": "GVD32",
         "hw": "1, 2, 4, 6, 8",
-        "cas": "Mario Kart",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/NA_GVD32_Sports_Coupe.jpg"
     },
     {
@@ -130787,7 +130786,7 @@ export const RAW = [
         "color": "",
         "part": "GVD33",
         "hw": "1, 2, 4, 5, 7",
-        "cas": "Mario Kart",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/NA_GVD33_Standard_Kart.jpg"
     },
     {
@@ -130797,7 +130796,7 @@ export const RAW = [
         "color": "",
         "part": "GVD34",
         "hw": "1, 3, 5, 7",
-        "cas": "Mario Kart",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/NA_GVD34_P_Wing.jpg"
     },
     {
@@ -130807,7 +130806,7 @@ export const RAW = [
         "color": "",
         "part": "GVD35",
         "hw": "2, 3, 5, 6, 7",
-        "cas": "Mario Kart",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/NA_GVD35_P_Wing.jpg"
     },
     {
@@ -130817,7 +130816,7 @@ export const RAW = [
         "color": "",
         "part": "GVD36",
         "hw": "2, 3, 5, 6",
-        "cas": "Mario Kart",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/NA_GVD36_B_Dasher.jpg"
     },
     {
@@ -130827,7 +130826,7 @@ export const RAW = [
         "color": "",
         "part": "GVD37",
         "hw": "3, 4, 6",
-        "cas": "Mario Kart",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/NA_GVD37_B_Dasher.jpg"
     },
     {
@@ -130837,7 +130836,7 @@ export const RAW = [
         "color": "",
         "part": "GVD38",
         "hw": "4",
-        "cas": "Mario Kart",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/NA_GVD38_Sports_Coupe.jpg"
     },
     {
@@ -130847,7 +130846,7 @@ export const RAW = [
         "color": "",
         "part": "HDB40",
         "hw": "5, 7, 8",
-        "cas": "Mario Kart",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/NA_HDB40_Pipe_Frame.jpg"
     },
     {
@@ -130857,7 +130856,7 @@ export const RAW = [
         "color": "",
         "part": "HDB41",
         "hw": "8",
-        "cas": "Mario Kart",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/NA_HDB41_Standard_Kart.jpg"
     },
     {
@@ -130867,7 +130866,7 @@ export const RAW = [
         "color": "",
         "part": "HDB42",
         "hw": "7, 8",
-        "cas": "Mario Kart",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/NA_HDB42_B_Dasher.jpg"
     },
     {
@@ -130877,7 +130876,7 @@ export const RAW = [
         "color": "",
         "part": "HDB43",
         "hw": "6, 8",
-        "cas": "Mario Kart",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/NA_HDB43_P_Wing.jpg"
     },
     {
@@ -130887,7 +130886,7 @@ export const RAW = [
         "color": "",
         "part": "HDB44",
         "hw": "5, 7",
-        "cas": "Mario Kart",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/NA_HDB44_Pipe_Frame.jpg"
     },
     {
@@ -130897,7 +130896,7 @@ export const RAW = [
         "color": "",
         "part": "HDB45",
         "hw": "7, 8",
-        "cas": "Mario Kart",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/NA_HDB45_Standard_Kart.jpg"
     },
     {
@@ -130907,7 +130906,7 @@ export const RAW = [
         "color": "",
         "part": "HDB46",
         "hw": "8",
-        "cas": "Mario Kart",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/NA_HDB46_B_Dasher.jpg"
     },
     {
@@ -130917,7 +130916,7 @@ export const RAW = [
         "color": "",
         "part": "HDB47",
         "hw": "6, 8",
-        "cas": "Mario Kart",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/NA_HDB47_Sports_Coupe.jpg"
     },
     {
@@ -130927,7 +130926,7 @@ export const RAW = [
         "color": "",
         "part": "GLN53",
         "hw": "White",
-        "cas": "Mario Kart",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/NA_GLN53_P_Wing.jpg"
     },
     {
@@ -130937,7 +130936,7 @@ export const RAW = [
         "color": "",
         "part": "Mario",
         "hw": "MK4S",
-        "cas": "Mario Kart",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/NA_Mario_Red.jpg"
     },
     {
@@ -130947,7 +130946,7 @@ export const RAW = [
         "color": "",
         "part": "Bowser",
         "hw": "MK4S",
-        "cas": "Mario Kart",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/NA_Bowser_Pink.jpg"
     },
     {
@@ -130957,7 +130956,7 @@ export const RAW = [
         "color": "",
         "part": "Luigi",
         "hw": "MK4S",
-        "cas": "Mario Kart",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/NA_Luigi_Blue.jpg"
     },
     {
@@ -130967,7 +130966,7 @@ export const RAW = [
         "color": "",
         "part": "GWB36",
         "hw": "Brown",
-        "cas": "Mario Kart",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/NA_GWB36_Standard_Kart.jpg"
     },
     {
@@ -130977,7 +130976,7 @@ export const RAW = [
         "color": "",
         "part": "Cat Peach",
         "hw": "MK4S",
-        "cas": "Mario Kart",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/NA_CatPeach_Yellow.jpg"
     },
     {
@@ -130987,7 +130986,7 @@ export const RAW = [
         "color": "",
         "part": "Toad",
         "hw": "MK4S",
-        "cas": "Mario Kart",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/NA_Toad_Red_Blue.jpg"
     },
     {
@@ -130997,7 +130996,7 @@ export const RAW = [
         "color": "",
         "part": "Toadette",
         "hw": "MK4S",
-        "cas": "Mario Kart",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/NA_Toadette_Pink.jpg"
     },
     {
@@ -131007,7 +131006,7 @@ export const RAW = [
         "color": "",
         "part": "GWB37",
         "hw": "Pink",
-        "cas": "Mario Kart",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/NA_GWB37_Badwagon.jpg"
     },
     {
@@ -131017,7 +131016,7 @@ export const RAW = [
         "color": "",
         "part": "Luigi",
         "hw": "MK4S",
-        "cas": "Mario Kart",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/NA_Luigi_Green.jpg"
     },
     {
@@ -131027,7 +131026,7 @@ export const RAW = [
         "color": "",
         "part": "Donkey Kong",
         "hw": "MKHub",
-        "cas": "Mario Kart",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/NA_DonkeyKong_Yellow.jpg"
     },
     {
@@ -131037,7 +131036,7 @@ export const RAW = [
         "color": "",
         "part": "Dry Bones",
         "hw": "MKHub",
-        "cas": "Mario Kart",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/NA_DryBones_Purple.jpg"
     },
     {
@@ -131047,7 +131046,7 @@ export const RAW = [
         "color": "",
         "part": "GWB38",
         "hw": "Orange",
-        "cas": "Mario Kart",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/NA_GWB38_Standard_Kart.jpg"
     },
     {
@@ -131057,7 +131056,7 @@ export const RAW = [
         "color": "",
         "part": "Mario",
         "hw": "MK4S",
-        "cas": "Mario Kart",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/NA_Mario_Red_Blue.jpg"
     },
     {
@@ -131067,7 +131066,7 @@ export const RAW = [
         "color": "",
         "part": "Princess Peach",
         "hw": "MKHub",
-        "cas": "Mario Kart",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/NA_PrincessPeach_White.jpg"
     },
     {
@@ -131077,7 +131076,7 @@ export const RAW = [
         "color": "",
         "part": "Yoshi",
         "hw": "MK4S",
-        "cas": "Mario Kart",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/NA_Yoshi_Blue.jpg"
     },
     {
@@ -131087,7 +131086,7 @@ export const RAW = [
         "color": "",
         "part": "GXX97",
         "hw": "White",
-        "cas": "Mario Kart",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/NA_GXX97_P_Wing.jpg"
     },
     {
@@ -131097,7 +131096,7 @@ export const RAW = [
         "color": "",
         "part": "Mario",
         "hw": "000",
-        "cas": "Mario Kart",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/NA_Mario_Red.jpg"
     },
     {
@@ -131107,7 +131106,7 @@ export const RAW = [
         "color": "",
         "part": "Rosalina",
         "hw": "MK4S",
-        "cas": "Mario Kart",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/NA_Rosalina_Teal.jpg"
     },
     {
@@ -131117,7 +131116,7 @@ export const RAW = [
         "color": "",
         "part": "Princess Peach",
         "hw": "MK4S",
-        "cas": "Mario Kart",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/NA_PrincessPeach_Pink.jpg"
     },
     {
@@ -131127,7 +131126,7 @@ export const RAW = [
         "color": "",
         "part": "GXX98",
         "hw": "Pink",
-        "cas": "Mario Kart",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/NA_GXX98_Badwagon.jpg"
     },
     {
@@ -131137,7 +131136,7 @@ export const RAW = [
         "color": "",
         "part": "Toad",
         "hw": "MK4S",
-        "cas": "Mario Kart",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/NA_Toad_Blue.jpg"
     },
     {
@@ -131147,7 +131146,7 @@ export const RAW = [
         "color": "",
         "part": "Light-Blue Yoshi",
         "hw": "MK4S",
-        "cas": "Mario Kart",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/NA_LightBlueYoshi_Light_Blue.jpg"
     },
     {
@@ -131157,7 +131156,7 @@ export const RAW = [
         "color": "",
         "part": "Diddy Kong",
         "hw": "MK4S",
-        "cas": "Mario Kart",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/NA_DiddyKong_Blue.jpg"
     },
     {
@@ -131167,7 +131166,7 @@ export const RAW = [
         "color": "",
         "part": "HDB22",
         "hw": "Red & Blue",
-        "cas": "Mario Kart",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/NA_HDB22_Sneeker.jpg"
     },
     {
@@ -131177,7 +131176,7 @@ export const RAW = [
         "color": "",
         "part": "Donkey Kong",
         "hw": "MKHub",
-        "cas": "Mario Kart",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/NA_DonkeyKong_Brown.jpg"
     },
     {
@@ -131187,7 +131186,7 @@ export const RAW = [
         "color": "",
         "part": "Diddy Kong",
         "hw": "MKHub",
-        "cas": "Mario Kart",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/NA_DiddyKong_Orange.jpg"
     },
     {
@@ -131197,7 +131196,7 @@ export const RAW = [
         "color": "",
         "part": "Orange Yoshi",
         "hw": "MKHub",
-        "cas": "Mario Kart",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/NA_OrangeYoshi_Orange.jpg"
     },
     {
@@ -131207,7 +131206,7 @@ export const RAW = [
         "color": "",
         "part": "HDB23",
         "hw": "Purple",
-        "cas": "Mario Kart",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/NA_HDB23_Standard_Kart.jpg"
     },
     {
@@ -131217,7 +131216,7 @@ export const RAW = [
         "color": "",
         "part": "Bowser",
         "hw": "MK4S",
-        "cas": "Mario Kart",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/NA_Bowser_Yellow.jpg"
     },
     {
@@ -131227,7 +131226,7 @@ export const RAW = [
         "color": "",
         "part": "Shy Guy",
         "hw": "MK4S",
-        "cas": "Mario Kart",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/NA_ShyGuy_White.jpg"
     },
     {
@@ -131237,7 +131236,7 @@ export const RAW = [
         "color": "",
         "part": "Koopa Troopa",
         "hw": "MK4S",
-        "cas": "Mario Kart",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/NA_KoopaTroopa_Blue.jpg"
     },
     {
@@ -131247,7 +131246,7 @@ export const RAW = [
         "color": "",
         "part": "HDB24",
         "hw": "Yellow",
-        "cas": "Mario Kart",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/NA_HDB24_Standard_Kart.jpg"
     },
     {
@@ -131257,7 +131256,7 @@ export const RAW = [
         "color": "",
         "part": "Mario",
         "hw": "MK4S",
-        "cas": "Mario Kart",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/NA_Mario_Red.jpg"
     },
     {
@@ -131267,7 +131266,7 @@ export const RAW = [
         "color": "",
         "part": "Waluigi",
         "hw": "MKHub",
-        "cas": "Mario Kart",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/NA_Waluigi_Pink.jpg"
     },
     {
@@ -131277,7 +131276,7 @@ export const RAW = [
         "color": "",
         "part": "Luigi",
         "hw": "MKHub",
-        "cas": "Mario Kart",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/NA_Luigi_Green.jpg"
     },
     {
@@ -131287,7 +131286,7 @@ export const RAW = [
         "color": "",
         "part": "HDB25",
         "hw": "Red",
-        "cas": "Mario Kart",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/NA_HDB25_Standard_Kart.jpg"
     },
     {
@@ -131297,7 +131296,7 @@ export const RAW = [
         "color": "",
         "part": "Bowser Jr.",
         "hw": "MKHub",
-        "cas": "Mario Kart",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/NA_BowserJr_Green.jpg"
     },
     {
@@ -131307,7 +131306,7 @@ export const RAW = [
         "color": "",
         "part": "Baby Peach",
         "hw": "MK4S",
-        "cas": "Mario Kart",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/NA_BabyPeach_Pink.jpg"
     },
     {
@@ -131317,7 +131316,7 @@ export const RAW = [
         "color": "",
         "part": "Baby Luigi",
         "hw": "MKHub",
-        "cas": "Mario Kart",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/NA_BabyLuigi_Red_Blue.jpg"
     },
     {
@@ -131327,7 +131326,7 @@ export const RAW = [
         "color": "",
         "part": "JCP72",
         "hw": "White",
-        "cas": "Mario Kart",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/NA_JCP72_Circuit_Special.jpg"
     },
     {
@@ -131337,7 +131336,7 @@ export const RAW = [
         "color": "",
         "part": "Bowser",
         "hw": "MK4S",
-        "cas": "Mario Kart",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/NA_Bowser_Pink.jpg"
     },
     {
@@ -131347,7 +131346,7 @@ export const RAW = [
         "color": "",
         "part": "Luigi",
         "hw": "MK4S",
-        "cas": "Mario Kart",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/NA_Luigi_Green.jpg"
     },
     {
@@ -131357,7 +131356,7 @@ export const RAW = [
         "color": "",
         "part": "Bowser Jr.",
         "hw": "MKHub",
-        "cas": "Mario Kart",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/NA_BowserJr_Green.jpg"
     },
     {
@@ -131367,7 +131366,7 @@ export const RAW = [
         "color": "",
         "part": "Theatrical Toad",
         "hw": "MKTT",
-        "cas": "Mario Kart",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/NA_TheatricalToad_Blue.jpg"
     },
     {
@@ -131377,7 +131376,7 @@ export const RAW = [
         "color": "",
         "part": "Theatrical Mario",
         "hw": "MKT",
-        "cas": "Mario Kart",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/NA_TheatricalMario_Red.jpg"
     },
     {
@@ -131387,7 +131386,7 @@ export const RAW = [
         "color": "",
         "part": "Theatrical Princess Peach",
         "hw": "000",
-        "cas": "Mario Kart",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/NA_TheatricalPrincessPeach_Pink.jpg"
     },
     {
@@ -131397,7 +131396,7 @@ export const RAW = [
         "color": "",
         "part": "GXY11",
         "hw": "Pink",
-        "cas": "Mario Kart",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/NA_GXY11_Badwagon.jpg"
     },
     {
@@ -131407,7 +131406,7 @@ export const RAW = [
         "color": "",
         "part": "Toad",
         "hw": "MK4S",
-        "cas": "Mario Kart",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/NA_Toad_Red_Blue.jpg"
     },
     {
@@ -131417,7 +131416,7 @@ export const RAW = [
         "color": "",
         "part": "Princess Peach",
         "hw": "MK4S",
-        "cas": "Mario Kart",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/NA_PrincessPeach_Light_pink.jpg"
     },
     {
@@ -131427,7 +131426,7 @@ export const RAW = [
         "color": "",
         "part": "Shy Guy",
         "hw": "MK4S",
-        "cas": "Mario Kart",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/NA_ShyGuy_White.jpg"
     },
     {
@@ -131437,7 +131436,7 @@ export const RAW = [
         "color": "",
         "part": "Luigi",
         "hw": "Grey MK4S",
-        "cas": "Mario Kart",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/NA_Luigi_Light_Green.jpg"
     },
     {
@@ -131447,7 +131446,7 @@ export const RAW = [
         "color": "",
         "part": "Bowser",
         "hw": "MK4S",
-        "cas": "Mario Kart",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/NA_Bowser_Yellow.jpg"
     },
     {
@@ -131457,7 +131456,7 @@ export const RAW = [
         "color": "",
         "part": "Mario",
         "hw": "MK4S",
-        "cas": "Mario Kart",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/NA_Mario_Red.jpg"
     },
     {
@@ -131467,7 +131466,7 @@ export const RAW = [
         "color": "",
         "part": "Red Yoshi",
         "hw": "MKHub",
-        "cas": "Mario Kart",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/NA_RedYoshi_White.jpg"
     },
     {
@@ -131477,7 +131476,7 @@ export const RAW = [
         "color": "",
         "part": "HMG76",
         "hw": "Orange",
-        "cas": "Mario Kart",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/NA_HMG76_Wild_Wing.jpg"
     },
     {
@@ -131487,7 +131486,7 @@ export const RAW = [
         "color": "",
         "part": "Toad",
         "hw": "MK4S",
-        "cas": "Mario Kart",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/NA_Toad_Red_Blue.jpg"
     },
     {
@@ -131497,7 +131496,7 @@ export const RAW = [
         "color": "",
         "part": "Princess Peach",
         "hw": "MK4S",
-        "cas": "Mario Kart",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/NA_PrincessPeach_Light_pink.jpg"
     },
     {
@@ -131507,7 +131506,7 @@ export const RAW = [
         "color": "",
         "part": "Shy Guy",
         "hw": "MK4S",
-        "cas": "Mario Kart",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/NA_ShyGuy_White.jpg"
     },
     {
@@ -131517,7 +131516,7 @@ export const RAW = [
         "color": "",
         "part": "Luigi",
         "hw": "Grey MK4S",
-        "cas": "Mario Kart",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/NA_Luigi_Light_Green.jpg"
     },
     {
@@ -131527,7 +131526,7 @@ export const RAW = [
         "color": "",
         "part": "Bowser",
         "hw": "MK4S",
-        "cas": "Mario Kart",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/NA_Bowser_Yellow.jpg"
     },
     {
@@ -131537,7 +131536,7 @@ export const RAW = [
         "color": "",
         "part": "Mario",
         "hw": "MK4S",
-        "cas": "Mario Kart",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/NA_Mario_Red.jpg"
     },
     {
@@ -131547,7 +131546,7 @@ export const RAW = [
         "color": "",
         "part": "Red Yoshi",
         "hw": "MKHub",
-        "cas": "Mario Kart",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/NA_RedYoshi_White.jpg"
     },
     {
@@ -131557,7 +131556,7 @@ export const RAW = [
         "color": "",
         "part": "HDB38",
         "hw": "White",
-        "cas": "Mario Kart",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/NA_HDB38_B_Dasher.jpg"
     },
     {
@@ -131567,7 +131566,7 @@ export const RAW = [
         "color": "",
         "part": "Yoshi",
         "hw": "MKHub",
-        "cas": "Mario Kart",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/NA_Yoshi_Yellow.jpg"
     },
     {
@@ -131577,7 +131576,7 @@ export const RAW = [
         "color": "",
         "part": "Mario",
         "hw": "MK4S",
-        "cas": "Mario Kart",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/NA_Mario_Red.jpg"
     },
     {
@@ -131587,7 +131586,7 @@ export const RAW = [
         "color": "",
         "part": "HDB39",
         "hw": "Yellow",
-        "cas": "Mario Kart",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/NA_HDB39_Sports_Coupe.jpg"
     },
     {
@@ -131597,7 +131596,7 @@ export const RAW = [
         "color": "",
         "part": "Bowser",
         "hw": "MK4S",
-        "cas": "Mario Kart",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/NA_Bowser_Yellow.jpg"
     },
     {
@@ -131607,7 +131606,7 @@ export const RAW = [
         "color": "",
         "part": "Princess Peach",
         "hw": "MK4S",
-        "cas": "Mario Kart",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/NA_PrincessPeach_White.jpg"
     },
     {
@@ -131617,7 +131616,7 @@ export const RAW = [
         "color": "",
         "part": "GCP27",
         "hw": "Green",
-        "cas": "Mario Kart",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/NA_GCP27_Standard_Kart.jpg"
     },
     {
@@ -131627,7 +131626,7 @@ export const RAW = [
         "color": "",
         "part": "GFY46",
         "hw": "Green",
-        "cas": "Mario Kart",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/NA_GFY46_Standard_Kart.jpg"
     },
     {
@@ -131637,7 +131636,7 @@ export const RAW = [
         "color": "",
         "part": "GHK15",
         "hw": "Red",
-        "cas": "Mario Kart",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/NA_GHK15_Standard_Kart.jpg"
     },
     {
@@ -131647,7 +131646,7 @@ export const RAW = [
         "color": "",
         "part": "GKY48",
         "hw": "Brown",
-        "cas": "Mario Kart",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/NA_GKY48_Standard_Kart.jpg"
     },
     {
@@ -131657,7 +131656,7 @@ export const RAW = [
         "color": "",
         "part": "GKY54",
         "hw": "Red & Blue",
-        "cas": "Mario Kart",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/NA_GKY54_Sneeker.jpg"
     },
     {
@@ -131667,7 +131666,7 @@ export const RAW = [
         "color": "",
         "part": "GNM22",
         "hw": "Blue",
-        "cas": "Mario Kart",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/NA_GNM22_Standard_Kart.jpg"
     },
     {
@@ -131677,7 +131676,7 @@ export const RAW = [
         "color": "",
         "part": "GNM23",
         "hw": "Black",
-        "cas": "Mario Kart",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/NA_GNM23_Standard_Kart.jpg"
     },
     {
@@ -131687,7 +131686,7 @@ export const RAW = [
         "color": "",
         "part": "GFY47",
         "hw": "Blue",
-        "cas": "Mario Kart",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/NA_GFY47_Mach_8.jpg"
     },
     {
@@ -131697,7 +131696,7 @@ export const RAW = [
         "color": "",
         "part": "GRH28",
         "hw": "Blue",
-        "cas": "Mario Kart",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/NA_GRH28_Mach_8.jpg"
     },
     {
@@ -131707,7 +131706,7 @@ export const RAW = [
         "color": "",
         "part": "GXX41",
         "hw": "GrayRed",
-        "cas": "Mario Kart",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/NA_GXX41_Standard_Kart.jpg"
     },
     {
@@ -131717,7 +131716,7 @@ export const RAW = [
         "color": "",
         "part": "HGK59",
         "hw": "Red",
-        "cas": "Mario Kart",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/NA_HGK59_Standard_Kart.jpg"
     },
     {
@@ -131727,7 +131726,7 @@ export const RAW = [
         "color": "",
         "part": "JHD24",
         "hw": "000",
-        "cas": "Mario Kart",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/NA_JHD24_Standard_Kart.jpg"
     },
     {
@@ -131737,7 +131736,7 @@ export const RAW = [
         "color": "",
         "part": "GLN43",
         "hw": "Chrome",
-        "cas": "Mario Kart",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/NA_GLN43_Green_Shell.jpg"
     },
     {
@@ -131747,7 +131746,7 @@ export const RAW = [
         "color": "",
         "part": "GLN43",
         "hw": "Chrome",
-        "cas": "Mario Kart",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/NA_GLN43_Banana.jpg"
     },
     {
@@ -131757,7 +131756,7 @@ export const RAW = [
         "color": "",
         "part": "GLN43",
         "hw": "Chrome",
-        "cas": "Mario Kart",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/NA_GLN43_Bullet_Bill.jpg"
     },
     {
@@ -131767,7 +131766,7 @@ export const RAW = [
         "color": "",
         "part": "GLN43",
         "hw": "Chrome",
-        "cas": "Mario Kart",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/NA_GLN43_Bob_omb.jpg"
     },
     {
@@ -131777,7 +131776,7 @@ export const RAW = [
         "color": "",
         "part": "GLN43",
         "hw": "Chrome",
-        "cas": "Mario Kart",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/NA_GLN43_Goomba.jpg"
     },
     {
@@ -131787,7 +131786,7 @@ export const RAW = [
         "color": "",
         "part": "GLN43",
         "hw": "Chrome",
-        "cas": "Mario Kart",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/NA_GLN43_Monty_Mole.jpg"
     },
     {
@@ -131797,7 +131796,7 @@ export const RAW = [
         "color": "",
         "part": "GLX73",
         "hw": "Gold",
-        "cas": "Mario Kart",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/NA_GLX73_Shell_Cup_Trophy.jpg"
     },
     {
@@ -131807,7 +131806,7 @@ export const RAW = [
         "color": "",
         "part": "GLN44",
         "hw": "Chrome",
-        "cas": "Mario Kart",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/NA_GLN44_Red_Shell.jpg"
     },
     {
@@ -131817,7 +131816,7 @@ export const RAW = [
         "color": "",
         "part": "GLN44",
         "hw": "Chrome",
-        "cas": "Mario Kart",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/NA_GLN44_Bullet_Bill.jpg"
     },
     {
@@ -131827,7 +131826,7 @@ export const RAW = [
         "color": "",
         "part": "GLN44",
         "hw": "Chrome",
-        "cas": "Mario Kart",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/NA_GLN44_Boo.jpg"
     },
     {
@@ -131837,7 +131836,7 @@ export const RAW = [
         "color": "",
         "part": "GLN44",
         "hw": "Chrome",
-        "cas": "Mario Kart",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/NA_GLN44_Bob_omb.jpg"
     },
     {
@@ -131847,7 +131846,7 @@ export const RAW = [
         "color": "",
         "part": "GLN44",
         "hw": "Chrome",
-        "cas": "Mario Kart",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/NA_GLN44_Monty_Mole.jpg"
     },
     {
@@ -131857,7 +131856,7 @@ export const RAW = [
         "color": "",
         "part": "GLN44",
         "hw": "Chrome",
-        "cas": "Mario Kart",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/NA_GLN44_Cow.jpg"
     },
     {
@@ -131867,7 +131866,7 @@ export const RAW = [
         "color": "",
         "part": "GLX74",
         "hw": "Gold",
-        "cas": "Mario Kart",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/NA_GLX74_Mushroom_Cup_Trophy.jpg"
     },
     {
@@ -131877,7 +131876,7 @@ export const RAW = [
         "color": "",
         "part": "GLN45",
         "hw": "Chrome",
-        "cas": "Mario Kart",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/NA_GLN45_Red_Shell.jpg"
     },
     {
@@ -131887,7 +131886,7 @@ export const RAW = [
         "color": "",
         "part": "GLN45",
         "hw": "Chrome",
-        "cas": "Mario Kart",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/NA_GLN45_Blue_Spiny_Shell.jpg"
     },
     {
@@ -131897,7 +131896,7 @@ export const RAW = [
         "color": "",
         "part": "GLN45",
         "hw": "Chrome",
-        "cas": "Mario Kart",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/NA_GLN45_Banana.jpg"
     },
     {
@@ -131907,7 +131906,7 @@ export const RAW = [
         "color": "",
         "part": "GLN45",
         "hw": "Chrome",
-        "cas": "Mario Kart",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/NA_GLN45_Boo.jpg"
     },
     {
@@ -131917,7 +131916,7 @@ export const RAW = [
         "color": "",
         "part": "GLN45",
         "hw": "Chrome",
-        "cas": "Mario Kart",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/NA_GLN45_Goomba.jpg"
     },
     {
@@ -131927,7 +131926,7 @@ export const RAW = [
         "color": "",
         "part": "GLN45",
         "hw": "Chrome",
-        "cas": "Mario Kart",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/NA_GLN45_Cheep_Cheep.jpg"
     },
     {
@@ -131937,7 +131936,7 @@ export const RAW = [
         "color": "",
         "part": "GLN45",
         "hw": "Chrome",
-        "cas": "Mario Kart",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/NA_GLN45_Mechakoopa.jpg"
     },
     {
@@ -131947,7 +131946,7 @@ export const RAW = [
         "color": "",
         "part": "GLX75",
         "hw": "Gold",
-        "cas": "Mario Kart",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/NA_GLX75_Star_Cup_Trophy.jpg"
     },
     {
@@ -131957,7 +131956,7 @@ export const RAW = [
         "color": "",
         "part": "GXY02",
         "hw": "Light Pink",
-        "cas": "Mario Kart",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/NA_GXY02_Standard_Kart.jpg"
     },
     {
@@ -131967,7 +131966,7 @@ export const RAW = [
         "color": "",
         "part": "GXY02",
         "hw": "Orange",
-        "cas": "Mario Kart",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/NA_GXY02_Standard_Kart.jpg"
     },
     {
@@ -131977,7 +131976,7 @@ export const RAW = [
         "color": "",
         "part": "GXY02",
         "hw": "White",
-        "cas": "Mario Kart",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/NA_GXY02_Standard_Kart.jpg"
     },
     {
@@ -131987,7 +131986,7 @@ export const RAW = [
         "color": "",
         "part": "GXY02",
         "hw": "Light Blue",
-        "cas": "Mario Kart",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/NA_GXY02_Standard_Kart.jpg"
     },
     {
@@ -131997,7 +131996,7 @@ export const RAW = [
         "color": "",
         "part": "GXY02",
         "hw": "Yellow",
-        "cas": "Mario Kart",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/NA_GXY02_Standard_Kart.jpg"
     },
     {
@@ -132007,7 +132006,7 @@ export const RAW = [
         "color": "",
         "part": "GXY02",
         "hw": "Light Green",
-        "cas": "Mario Kart",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/NA_GXY02_Standard_Kart.jpg"
     },
     {
@@ -132017,7 +132016,7 @@ export const RAW = [
         "color": "",
         "part": "GXY02",
         "hw": "Blue",
-        "cas": "Mario Kart",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/NA_GXY02_Standard_Kart.jpg"
     },
     {
@@ -132027,10 +132026,7 @@ export const RAW = [
         "color": "",
         "part": "GXY02",
         "hw": "Black",
-        "cas": "Mario Kart",
+        "cas": "",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/NA_GXY02_Standard_Kart.jpg"
     }
-]
-
-  
 ]
