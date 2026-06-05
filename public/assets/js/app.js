@@ -4,6 +4,14 @@ import { doc, getDoc, setDoc, collection, getDocs } from "https://www.gstatic.co
 import { RAW } from './data.js';
 import { KAIDO_DATA } from './data_kaido.js';
 
+if ('serviceWorker' in navigator) {
+  window.addEventListener('load', () => {
+    navigator.serviceWorker.register('./sw.js')
+      .then(reg => console.log('PWA Ativo na Garagem!', reg.scope))
+      .catch(err => console.log('Falha no PWA:', err));
+  });
+}
+
 const idsGerados = new Set();
 RAW.forEach((r) => {
   if (!r.id) {
@@ -42,7 +50,7 @@ let userMissions = {};
 let userRewards = [];
 
 let currentPage = 1;
-let itemsPerPage = 50;
+let itemsPerPage = 25;
 let lbIndex = 0;
 
 let userAccountType = 'standalone';
