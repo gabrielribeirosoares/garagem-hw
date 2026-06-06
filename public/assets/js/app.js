@@ -3116,69 +3116,85 @@ if (btnTrocas) {
   });
 }
 
-// --- LÓGICA DO SCANNER COM INTELIGÊNCIA ARTIFICIAL (SEGURO VIA BACKEND) ---
-const btnAiScan = document.getElementById('btn-ai-scan');
-const aiCameraInput = document.getElementById('ai-camera-input');
+const btnAiScan       = document.getElementById('btn-ai-scan');
+const modalCamera     = document.getElementById('modal-camera');
+const videoPreview    = document.getElementById('camera-preview');
+const canvasCamera    = document.getElementById('camera-canvas');
+const btnCapturar     = document.getElementById('btn-capturar');
+const btnFecharCamera = document.getElementById('btn-fechar-camera');
 
-if (btnAiScan && aiCameraInput) {
-  btnAiScan.addEventListener('click', () => {
-    aiCameraInput.click();
+let streamAtivo = null;
+
+async function enviarFrameParaIA(base64Image) {
+  const searchInputFast = document.getElementById('quick-search');
+  const originalPlaceholder = searchInputFast.placeholder;
+  searchInputFast.placeholder = "⏳ A IA está lendo a cartela...";
+  btnAiScan.innerHTML = "⏳";
+  btnAiScan.style.opacity = "0.7";
+
+  try {
+    const response = await fetch("https://servidor-pagamentos-hw.onrender.com/scan-hotwheels", {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ mimeType: 'image/jpeg', imageBase64: base64Image })
+    });
+
+    const data = await response.json();
+    if (data.error) throw new Error(data.error);
+
+    const carroIdentificado = data.result;
+    searchInputFast.value = carroIdentificado;
+    window.searchTerms = carroIdentificado.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "");
+    currentPage = 1;
+
+    if (typeof pageType !== 'undefined' && pageType.includes('kaido') && window.renderKaidoGrid) {
+      window.renderKaidoGrid();
+    } else {
+      render();
+    }
+
+  } catch (error) {
+    console.error(error);
+    alert("Erro na leitura visual. Tente novamente.");
+  } finally {
+    searchInputFast.placeholder = originalPlaceholder;
+    btnAiScan.innerHTML = "📸 IA";
+    btnAiScan.style.opacity = "1";
+  }
+}
+
+// Abre câmera ao vivo
+btnAiScan.addEventListener('click', async () => {
+  try {
+    streamAtivo = await navigator.mediaDevices.getUserMedia({
+      video: { facingMode: 'environment' } // câmera traseira
+    });
+    videoPreview.srcObject = streamAtivo;
+    modalCamera.style.display = 'flex';
+  } catch (err) {
+    alert("Não foi possível acessar a câmera. Verifique as permissões.");
+  }
 });
 
-  aiCameraInput.addEventListener('change', async (e) => {
-    const file = e.target.files[0];
-    if (!file) return;
+// Fecha câmera
+btnFecharCamera.addEventListener('click', () => {
+  streamAtivo?.getTracks().forEach(t => t.stop());
+  streamAtivo = null;
+  modalCamera.style.display = 'none';
+});
 
-    const searchInputFast = document.getElementById('quick-search');
-    const originalPlaceholder = searchInputFast.placeholder;
-    searchInputFast.value = '';
-    searchInputFast.placeholder = "⏳ A IA está lendo a cartela...";
-    btnAiScan.innerHTML = "⏳";
-    btnAiScan.style.opacity = "0.7";
+// Captura frame e envia para IA
+btnCapturar.addEventListener('click', async () => {
+  canvasCamera.width  = videoPreview.videoWidth;
+  canvasCamera.height = videoPreview.videoHeight;
+  canvasCamera.getContext('2d').drawImage(videoPreview, 0, 0);
 
-    try {
-      // 1. Converte a foto para texto (Base64)
-      const base64Image = await new Promise((resolve) => {
-        const reader = new FileReader();
-        reader.onloadend = () => resolve(reader.result.split(',')[1]);
-        reader.readAsDataURL(file);
-      });
+  const base64Image = canvasCamera.toDataURL('image/jpeg', 0.85).split(',')[1];
 
-      // 2. Manda a foto para o SEU servidor no Render (Seguro!)
-      const response = await fetch("https://servidor-pagamentos-hw.onrender.com/scan-hotwheels", {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ 
-          mimeType: file.type, 
-          imageBase64: base64Image 
-        })
-      });
+  // Fecha câmera antes de processar
+  streamAtivo?.getTracks().forEach(t => t.stop());
+  streamAtivo = null;
+  modalCamera.style.display = 'none';
 
-      const data = await response.json();
-      
-      if (data.error) throw new Error(data.error);
-
-      // 3. Recebe a resposta e aciona os filtros da garagem
-      const carroIdentificado = data.result;
-      
-      searchInputFast.value = carroIdentificado;
-      window.searchTerms = carroIdentificado.toLowerCase();
-      currentPage = 1;
-      
-      if (typeof pageType !== 'undefined' && pageType.includes('kaido') && window.renderKaidoGrid) {
-        window.renderKaidoGrid();
-      } else {
-        render();
-      }
-
-    } catch (error) {
-      console.error(error);
-      alert("Erro na leitura visual. Verifique sua conexão com o servidor.");
-    } finally {
-      searchInputFast.placeholder = originalPlaceholder;
-      btnAiScan.innerHTML = "📸 IA";
-      btnAiScan.style.opacity = "1";
-      aiCameraInput.value = '';
-    }
-  });
-}
+  await enviarFrameParaIA(base64Image);
+});
