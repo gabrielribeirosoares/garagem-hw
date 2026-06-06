@@ -396,6 +396,16 @@ function getFilteredData() {
   });
 
   filtered.sort((a, b) => {
+
+    if (sortCol === 'qty') {
+      return getQty(b) - getQty(a);
+    }
+    if (sortCol === 'price') {
+      const pA = userPrices[a.id] || 0;
+      const pB = userPrices[b.id] || 0;
+      return pB - pA;
+    }
+
     let vA = a[sortCol];
     let vB = b[sortCol];
 
@@ -3102,6 +3112,73 @@ if (btnTrocas) {
       window.renderKaidoGrid();
     } else {
       render();
+    }
+  });
+}
+
+// --- LÓGICA DO SCANNER COM INTELIGÊNCIA ARTIFICIAL (SEGURO VIA BACKEND) ---
+const btnAiScan = document.getElementById('btn-ai-scan');
+const aiCameraInput = document.getElementById('ai-camera-input');
+
+if (btnAiScan && aiCameraInput) {
+  btnAiScan.addEventListener('click', () => {
+    aiCameraInput.click();
+});
+
+  aiCameraInput.addEventListener('change', async (e) => {
+    const file = e.target.files[0];
+    if (!file) return;
+
+    const searchInputFast = document.getElementById('quick-search');
+    const originalPlaceholder = searchInputFast.placeholder;
+    searchInputFast.value = '';
+    searchInputFast.placeholder = "⏳ A IA está lendo a cartela...";
+    btnAiScan.innerHTML = "⏳";
+    btnAiScan.style.opacity = "0.7";
+
+    try {
+      // 1. Converte a foto para texto (Base64)
+      const base64Image = await new Promise((resolve) => {
+        const reader = new FileReader();
+        reader.onloadend = () => resolve(reader.result.split(',')[1]);
+        reader.readAsDataURL(file);
+      });
+
+      // 2. Manda a foto para o SEU servidor no Render (Seguro!)
+      const response = await fetch("https://servidor-pagamentos-hw.onrender.com/scan-hotwheels", {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ 
+          mimeType: file.type, 
+          imageBase64: base64Image 
+        })
+      });
+
+      const data = await response.json();
+      
+      if (data.error) throw new Error(data.error);
+
+      // 3. Recebe a resposta e aciona os filtros da garagem
+      const carroIdentificado = data.result;
+      
+      searchInputFast.value = carroIdentificado;
+      window.searchTerms = carroIdentificado.toLowerCase();
+      currentPage = 1;
+      
+      if (typeof pageType !== 'undefined' && pageType.includes('kaido') && window.renderKaidoGrid) {
+        window.renderKaidoGrid();
+      } else {
+        render();
+      }
+
+    } catch (error) {
+      console.error(error);
+      alert("Erro na leitura visual. Verifique sua conexão com o servidor.");
+    } finally {
+      searchInputFast.placeholder = originalPlaceholder;
+      btnAiScan.innerHTML = "📸 IA";
+      btnAiScan.style.opacity = "1";
+      aiCameraInput.value = '';
     }
   });
 }
