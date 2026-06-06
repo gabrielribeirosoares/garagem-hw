@@ -399,18 +399,14 @@ function getFilteredData() {
     let vA = a[sortCol];
     let vB = b[sortCol];
 
-
     if (sortCol === 'name' || sortCol === 'series' || sortCol === 'color' || sortCol === 'part' || sortCol === 'cas') {
       vA = String(vA || '').trim().toLowerCase();
       vB = String(vB || '').trim().toLowerCase();
     }
 
-
     if (sortCol === 'cas') {
-
       if (vA === '' && vB !== '') return 1;
       if (vA !== '' && vB === '') return -1;
-
 
       if (vA === vB) {
         let nA = String(a.name || '').trim().toLowerCase();
@@ -421,11 +417,24 @@ function getFilteredData() {
       }
     }
 
-
     if (vA < vB) return sortDesc ? 1 : -1;
     if (vA > vB) return sortDesc ? -1 : 1;
     return 0;
   });
+
+  // --- APLICAÇÃO DOS NOVOS FILTROS (Scanner e Trocas) ---
+
+  if (window.searchTerms) {
+    filtered = filtered.filter(r =>
+      (r.name && r.name.toLowerCase().includes(window.searchTerms)) ||
+      (r.part && r.part.toLowerCase().includes(window.searchTerms)) ||
+      (r.year && r.year.toString().includes(window.searchTerms))
+    );
+  }
+
+  if (window.showOnlyTrades) {
+    filtered = filtered.filter(r => getQty(r) > 1);
+  }
 
   return filtered;
 }
@@ -1062,7 +1071,7 @@ function openLb(index) {
   lbIndex = index;
   const listaAtual = window.currentFilteredData || PAGE_DATA;
   const r = listaAtual[lbIndex];
-  
+
   if (!r) return;
 
   const qty = (typeof userCollection !== 'undefined' ? userCollection[r.id] : 0) || 0;
@@ -1749,8 +1758,9 @@ window.renderKaido = function (currentPageType = 'kaido') {
               <label style="font-size: 14px; color: #cbd5e1; margin-right: 8px;">Mostrar: </label>
               <select id="kaido-per-page-select" style="padding: 6px 12px; border-radius: 4px; border: 1px solid #475569; background: #0f172a; color: white; outline: none; cursor: pointer;">
                   <option value="25" selected>25</option>
-                  <option value="50" >50</option>
+                  <option value="50">50</option>
                   <option value="100">100</option>
+                  <option value="500">500</option>
                   <option value="all">Todos</option>
               </select>
           </div>
@@ -1825,15 +1835,30 @@ window.renderKaido = function (currentPageType = 'kaido') {
         const query = inputBusca ? inputBusca.value.toLowerCase().trim() : '';
 
         const filteredData = KAIDO_DATA.filter(car => {
+
           const matchesSearch = !query ||
             (car.modelo && car.modelo.toLowerCase().includes(query)) ||
             (car.codigo && car.codigo.toLowerCase().includes(query)) ||
             (car.marca && car.marca.toLowerCase().includes(query));
 
-          const matchesOwned = !showingOnlyOwnedKaido || (userKaidoCollection[car.codigo] > 0);
-          const matchesWish = !showingOnlyWishlistKaido || userWishlist[car.codigo];
+          const matchesOwned = !isOwnedActive || (ownedKaidos[car.codigo] > 0);
+          const matchesWish = !isWishActive || wishKaidos[car.codigo];
 
-          return matchesSearch && matchesOwned && matchesWish;
+          let matchesGlobalSearch = true;
+          if (window.searchTerms) {
+            matchesGlobalSearch =
+              (car.modelo && car.modelo.toLowerCase().includes(window.searchTerms)) ||
+              (car.codigo && car.codigo.toLowerCase().includes(window.searchTerms)) ||
+              (car.fabricante && car.fabricante.toLowerCase().includes(window.searchTerms));
+          }
+
+          let matchesTrocas = true;
+          if (window.showOnlyTrades) {
+            const qtyRepetido = ownedKaidos[car.codigo] || 0;
+            matchesTrocas = qtyRepetido > 1;
+          }
+
+          return matchesSearch && matchesOwned && matchesWish && matchesGlobalSearch && matchesTrocas;
         });
 
         const maxPages = window.kaidoItemsPerPage === 'all' ? 1 : Math.ceil(filteredData.length / window.kaidoItemsPerPage);
@@ -2159,6 +2184,38 @@ window.renderStats = function () {
         </div>
     </div>
   `;
+
+  // --- TIMELINE DE ÚLTIMAS AQUISIÇÕES ---
+  const chavesCompradas = Object.keys(userCollection || {}).filter(k => userCollection[k] > 0);
+  const ultimas = chavesCompradas.slice(-5).reverse(); // Pega os últimos 5
+
+  let timelineHTML = `
+    <div style="margin-top: 30px; margin-bottom: 30px; background: var(--surface); border-radius: 12px; padding: 20px; border: 1px solid var(--border);">
+        <h3 style="font-family: 'Bebas Neue', sans-serif; color: #fff; font-size: 24px; margin-top: 0; margin-bottom: 15px;">⏱️ Últimas Aquisições (Hot Wheels)</h3>
+        <div style="display: flex; flex-direction: column; gap: 10px;">`;
+
+  if (ultimas.length === 0) {
+    timelineHTML += `<div style="color: var(--muted); font-size: 14px;">Nenhuma miniatura na garagem ainda.</div>`;
+  } else {
+    ultimas.forEach(id => {
+      const carro = typeof RAW !== 'undefined' ? RAW.find(c => c.id === id) : null;
+      if (carro) {
+        timelineHTML += `
+                <div style="display: flex; align-items: center; gap: 15px; background: #0f172a; padding: 10px; border-radius: 8px; border: 1px solid #475569;">
+                    <img src="${carro.image || 'assets/img/placeholder.png'}" loading="lazy" style="width: 50px; height: 50px; object-fit: cover; border-radius: 6px;">
+                    <div>
+                        <div style="font-weight: bold; color: #fff; font-size: 16px;">${carro.name}</div>
+                        <div style="font-size: 12px; color: #94a3b8;">${carro.series || 'Sem série'} | Ano: ${carro.year}</div>
+                    </div>
+                </div>`;
+      }
+    });
+  }
+  timelineHTML += `</div></div>`;
+
+  const timelineDiv = document.createElement('div');
+  timelineDiv.innerHTML = timelineHTML;
+  container.appendChild(timelineDiv);
 
   setTimeout(() => {
     Chart.defaults.color = '#94a3b8';
@@ -3013,14 +3070,38 @@ window.alterarPrecoItem = async function (id, isKaido) {
   }
 };
 
-document.addEventListener('DOMContentLoaded', () => {
-  const lb = document.getElementById('lightbox');
-  if (lb) {
-    lb.addEventListener('click', (e) => {
-      if (e.target === lb) {
-        lb.style.display = 'none';
-      }
-    });
-  }
-});
+// --- LÓGICA DO SCANNER RÁPIDO E GARAGEM DE TROCAS ---
+window.searchTerms = '';
+window.showOnlyTrades = false;
 
+// Como usamos type="module", o HTML já está pronto. 
+// Podemos anexar os eventos diretamente!
+const searchInputFast = document.getElementById('quick-search');
+const btnTrocas = document.getElementById('btn-trocas');
+
+if (searchInputFast) {
+  searchInputFast.addEventListener('input', (e) => {
+    window.searchTerms = e.target.value.toLowerCase().trim();
+    currentPage = 1;
+    if (typeof pageType !== 'undefined' && pageType.includes('kaido') && window.renderKaidoGrid) {
+      window.renderKaidoGrid();
+    } else {
+      render();
+    }
+  });
+}
+
+if (btnTrocas) {
+  btnTrocas.addEventListener('click', (e) => {
+    window.showOnlyTrades = !window.showOnlyTrades;
+    e.target.style.background = window.showOnlyTrades ? '#16a34a' : '#ea580c';
+    e.target.innerHTML = window.showOnlyTrades ? '✅ Mostrando Apenas Repetidos' : '🔄 Garagem de Trocas';
+    currentPage = 1;
+    
+    if (typeof pageType !== 'undefined' && pageType.includes('kaido') && window.renderKaidoGrid) {
+      window.renderKaidoGrid();
+    } else {
+      render();
+    }
+  });
+}
