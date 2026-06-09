@@ -1756,3 +1756,20 @@ td {
   text-align: center;
   margin-bottom: 40px;
 }
+
+/* =========================================
+   AJUSTES DA BARRA DE FILTROS SUPERIOR
+========================================= */
+.short-select {
+  max-width: 180px; /* Define o limite de largura para o filtro Coleção */
+  text-overflow: ellipsis; /* Coloca '...' se o nome da coleção for muito grande */
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+/* Garante que no celular o filtro volte a ocupar 100% da tela */
+@media (max-width: 768px) {
+  .short-select {
+    max-width: 100%;
+  }
+}

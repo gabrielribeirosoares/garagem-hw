@@ -152,7 +152,7 @@
       </div>
     </div>
   </header>
-  <div style="display: flex; gap: 10px; margin-bottom: 15px; padding: 0 10px; flex-wrap: wrap;">
+  <!-- <div style="display: flex; gap: 10px; margin-bottom: 15px; padding: 0 10px; flex-wrap: wrap;">
     <div
       style="display: flex; flex: 1; min-width: 200px; background: #1e293b; border-radius: 8px; border: 1px solid #475569; overflow: hidden;">
       <input type="text" id="quick-search" placeholder="🔍 Scanner Rápido (Nome, Lote ou Ano)..."
@@ -168,7 +168,7 @@
       style="padding: 12px 20px; background: #ea580c; color: white; border: none; border-radius: 8px; font-weight: bold; cursor: pointer; font-family: 'Bebas Neue', sans-serif; font-size: 18px; letter-spacing: 1px; box-shadow: 0 4px 6px rgba(234, 88, 12, 0.3); transition: 0.2s;">
       🔄 Garagem de Trocas
     </button>
-  </div>
+  </div> -->
 
   <div class="controls">
     <div class="filter-group">
@@ -188,12 +188,20 @@
     </div>
     <div class="filter-group">
       <span class="filter-label">Coleção</span>
-      <select id="filter-series">
+      <select id="filter-series" class="short-select">
         <option value="">Todas</option>
       </select>
     </div>
+    
     <div class="filter-group">
-      <input type="text" id="filter-search" placeholder="🔍 Buscar nome do carro…">
+      <span class="filter-label">Lote</span>
+      <select id="filter-cas" class="short-select">
+        <option value="">Todos</option>
+      </select>
+    </div>
+    
+    <div class="filter-group" style="flex-grow: 1;">
+      <input type="text" id="filter-search" placeholder="🔍 Buscar nome do carro ou coleção" style="width: 100%;">
     </div>
     <button class="btn-clear" id="btn-clear">Limpar filtros</button>
   </div>

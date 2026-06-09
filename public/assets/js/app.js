@@ -351,6 +351,17 @@ function populateFilters() {
       selSeries.appendChild(opt);
     });
   }
+
+  const cases = [...new Set(PAGE_DATA.map(r => r.cas))].filter(Boolean).sort();
+  const selCase = document.getElementById('filter-cas');
+  if (selCase) {
+    selCase.innerHTML = '<option value="">Todos</option>';
+    cases.forEach(c => {
+      const opt = document.createElement('option');
+      opt.value = c; opt.textContent = `Lote ${c}`;
+      selCase.appendChild(opt);
+    });
+  }
 }
 
 
@@ -369,12 +380,14 @@ function getFilteredData() {
   const yearInput = document.getElementById('filter-year');
   const eraInput = document.getElementById('filter-era');
   const seriesInput = document.getElementById('filter-series');
+  const caseInput = document.getElementById('filter-cas');
   const filterOwnedCheckbox = document.getElementById('filter-owned-only');
 
   const sq = searchInput ? searchInput.value.toLowerCase() : '';
   const sy = yearInput ? yearInput.value : '';
   const se = eraInput ? eraInput.value : '';
   const ss = seriesInput ? seriesInput.value : '';
+  const sc = caseInput ? caseInput.value : '';
 
   const isCheckboxChecked = filterOwnedCheckbox ? filterOwnedCheckbox.checked : false;
   const so = (pageType === 'owned') || isCheckboxChecked;
@@ -391,21 +404,12 @@ function getFilteredData() {
     if (sy) match = match && String(r.year) === sy;
     if (se) match = match && getEra(r.year) === se;
     if (ss) match = match && r.series === ss;
+    if (sc) match = match && r.cas === sc; // Validação do Lote
     if (so) match = match && isOwned(r);
     return match;
   });
 
   filtered.sort((a, b) => {
-
-    if (sortCol === 'qty') {
-      return getQty(b) - getQty(a);
-    }
-    if (sortCol === 'price') {
-      const pA = userPrices[a.id] || 0;
-      const pB = userPrices[b.id] || 0;
-      return pB - pA;
-    }
-
     let vA = a[sortCol];
     let vB = b[sortCol];
 
@@ -431,8 +435,6 @@ function getFilteredData() {
     if (vA > vB) return sortDesc ? -1 : 1;
     return 0;
   });
-
-  // --- APLICAÇÃO DOS NOVOS FILTROS (Scanner e Trocas) ---
 
   if (window.searchTerms) {
     filtered = filtered.filter(r =>
@@ -1235,12 +1237,14 @@ const searchInput = document.getElementById('filter-search');
 const yearInput = document.getElementById('filter-year');
 const eraInput = document.getElementById('filter-era');
 const seriesInput = document.getElementById('filter-series');
+const caseInput = document.getElementById('filter-cas');
 const filterOwnedCheckbox = document.getElementById('filter-owned-only');
 
 if (searchInput) searchInput.addEventListener('input', () => { currentPage = 1; render(); });
 if (yearInput) yearInput.addEventListener('change', () => { currentPage = 1; render(); });
 if (eraInput) eraInput.addEventListener('change', () => { currentPage = 1; render(); });
 if (seriesInput) seriesInput.addEventListener('change', () => { currentPage = 1; render(); });
+if (caseInput) caseInput.addEventListener('change', () => { currentPage = 1; render(); });
 if (filterOwnedCheckbox) filterOwnedCheckbox.addEventListener('change', () => { currentPage = 1; render(); });
 
 const btnClear = document.getElementById('btn-clear');
@@ -1251,6 +1255,7 @@ if (btnClear) {
     if (yearInput) yearInput.value = '';
     if (eraInput) eraInput.value = '';
     if (seriesInput) seriesInput.value = '';
+    if (caseInput) caseInput.value = '';
     if (filterOwnedCheckbox) filterOwnedCheckbox.checked = false;
     render();
   });
@@ -3080,121 +3085,121 @@ window.alterarPrecoItem = async function (id, isKaido) {
   }
 };
 
-// --- LÓGICA DO SCANNER RÁPIDO E GARAGEM DE TROCAS ---
-window.searchTerms = '';
-window.showOnlyTrades = false;
+// // --- LÓGICA DO SCANNER RÁPIDO E GARAGEM DE TROCAS ---
+// window.searchTerms = '';
+// window.showOnlyTrades = false;
 
-// Como usamos type="module", o HTML já está pronto. 
-// Podemos anexar os eventos diretamente!
-const searchInputFast = document.getElementById('quick-search');
-const btnTrocas = document.getElementById('btn-trocas');
+// // Como usamos type="module", o HTML já está pronto. 
+// // Podemos anexar os eventos diretamente!
+// const searchInputFast = document.getElementById('quick-search');
+// const btnTrocas = document.getElementById('btn-trocas');
 
-if (searchInputFast) {
-  searchInputFast.addEventListener('input', (e) => {
-    window.searchTerms = e.target.value.toLowerCase().trim();
-    currentPage = 1;
-    if (typeof pageType !== 'undefined' && pageType.includes('kaido') && window.renderKaidoGrid) {
-      window.renderKaidoGrid();
-    } else {
-      render();
-    }
-  });
-}
+// if (searchInputFast) {
+//   searchInputFast.addEventListener('input', (e) => {
+//     window.searchTerms = e.target.value.toLowerCase().trim();
+//     currentPage = 1;
+//     if (typeof pageType !== 'undefined' && pageType.includes('kaido') && window.renderKaidoGrid) {
+//       window.renderKaidoGrid();
+//     } else {
+//       render();
+//     }
+//   });
+// }
 
-if (btnTrocas) {
-  btnTrocas.addEventListener('click', (e) => {
-    window.showOnlyTrades = !window.showOnlyTrades;
-    e.target.style.background = window.showOnlyTrades ? '#16a34a' : '#ea580c';
-    e.target.innerHTML = window.showOnlyTrades ? '✅ Mostrando Apenas Repetidos' : '🔄 Garagem de Trocas';
-    currentPage = 1;
+// if (btnTrocas) {
+//   btnTrocas.addEventListener('click', (e) => {
+//     window.showOnlyTrades = !window.showOnlyTrades;
+//     e.target.style.background = window.showOnlyTrades ? '#16a34a' : '#ea580c';
+//     e.target.innerHTML = window.showOnlyTrades ? '✅ Mostrando Apenas Repetidos' : '🔄 Garagem de Trocas';
+//     currentPage = 1;
     
-    if (typeof pageType !== 'undefined' && pageType.includes('kaido') && window.renderKaidoGrid) {
-      window.renderKaidoGrid();
-    } else {
-      render();
-    }
-  });
-}
+//     if (typeof pageType !== 'undefined' && pageType.includes('kaido') && window.renderKaidoGrid) {
+//       window.renderKaidoGrid();
+//     } else {
+//       render();
+//     }
+//   });
+// }
 
-const btnAiScan       = document.getElementById('btn-ai-scan');
-const modalCamera     = document.getElementById('modal-camera');
-const videoPreview    = document.getElementById('camera-preview');
-const canvasCamera    = document.getElementById('camera-canvas');
-const btnCapturar     = document.getElementById('btn-capturar');
-const btnFecharCamera = document.getElementById('btn-fechar-camera');
+// const btnAiScan       = document.getElementById('btn-ai-scan');
+// const modalCamera     = document.getElementById('modal-camera');
+// const videoPreview    = document.getElementById('camera-preview');
+// const canvasCamera    = document.getElementById('camera-canvas');
+// const btnCapturar     = document.getElementById('btn-capturar');
+// const btnFecharCamera = document.getElementById('btn-fechar-camera');
 
-let streamAtivo = null;
+// let streamAtivo = null;
 
-async function enviarFrameParaIA(base64Image) {
-  const searchInputFast = document.getElementById('quick-search');
-  const originalPlaceholder = searchInputFast.placeholder;
-  searchInputFast.placeholder = "⏳ A IA está lendo a cartela...";
-  btnAiScan.innerHTML = "⏳";
-  btnAiScan.style.opacity = "0.7";
+// async function enviarFrameParaIA(base64Image) {
+//   const searchInputFast = document.getElementById('quick-search');
+//   const originalPlaceholder = searchInputFast.placeholder;
+//   searchInputFast.placeholder = "⏳ A IA está lendo a cartela...";
+//   btnAiScan.innerHTML = "⏳";
+//   btnAiScan.style.opacity = "0.7";
 
-  try {
-    const response = await fetch("https://servidor-pagamentos-hw.onrender.com/scan-hotwheels", {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ mimeType: 'image/jpeg', imageBase64: base64Image })
-    });
+//   try {
+//     const response = await fetch("https://servidor-pagamentos-hw.onrender.com/scan-hotwheels", {
+//       method: 'POST',
+//       headers: { 'Content-Type': 'application/json' },
+//       body: JSON.stringify({ mimeType: 'image/jpeg', imageBase64: base64Image })
+//     });
 
-    const data = await response.json();
-    if (data.error) throw new Error(data.error);
+//     const data = await response.json();
+//     if (data.error) throw new Error(data.error);
 
-    const carroIdentificado = data.result;
-    searchInputFast.value = carroIdentificado;
-    window.searchTerms = carroIdentificado.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "");
-    currentPage = 1;
+//     const carroIdentificado = data.result;
+//     searchInputFast.value = carroIdentificado;
+//     window.searchTerms = carroIdentificado.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "");
+//     currentPage = 1;
 
-    if (typeof pageType !== 'undefined' && pageType.includes('kaido') && window.renderKaidoGrid) {
-      window.renderKaidoGrid();
-    } else {
-      render();
-    }
+//     if (typeof pageType !== 'undefined' && pageType.includes('kaido') && window.renderKaidoGrid) {
+//       window.renderKaidoGrid();
+//     } else {
+//       render();
+//     }
 
-  } catch (error) {
-    console.error(error);
-    alert("Erro na leitura visual. Tente novamente.");
-  } finally {
-    searchInputFast.placeholder = originalPlaceholder;
-    btnAiScan.innerHTML = "📸 IA";
-    btnAiScan.style.opacity = "1";
-  }
-}
+//   } catch (error) {
+//     console.error(error);
+//     alert("Erro na leitura visual. Tente novamente.");
+//   } finally {
+//     searchInputFast.placeholder = originalPlaceholder;
+//     btnAiScan.innerHTML = "📸 IA";
+//     btnAiScan.style.opacity = "1";
+//   }
+// }
 
-// Abre câmera ao vivo
-btnAiScan.addEventListener('click', async () => {
-  try {
-    streamAtivo = await navigator.mediaDevices.getUserMedia({
-      video: { facingMode: 'environment' } // câmera traseira
-    });
-    videoPreview.srcObject = streamAtivo;
-    modalCamera.style.display = 'flex';
-  } catch (err) {
-    alert("Não foi possível acessar a câmera. Verifique as permissões.");
-  }
-});
+// // Abre câmera ao vivo
+// btnAiScan.addEventListener('click', async () => {
+//   try {
+//     streamAtivo = await navigator.mediaDevices.getUserMedia({
+//       video: { facingMode: 'environment' } // câmera traseira
+//     });
+//     videoPreview.srcObject = streamAtivo;
+//     modalCamera.style.display = 'flex';
+//   } catch (err) {
+//     alert("Não foi possível acessar a câmera. Verifique as permissões.");
+//   }
+// });
 
-// Fecha câmera
-btnFecharCamera.addEventListener('click', () => {
-  streamAtivo?.getTracks().forEach(t => t.stop());
-  streamAtivo = null;
-  modalCamera.style.display = 'none';
-});
+// // Fecha câmera
+// btnFecharCamera.addEventListener('click', () => {
+//   streamAtivo?.getTracks().forEach(t => t.stop());
+//   streamAtivo = null;
+//   modalCamera.style.display = 'none';
+// });
 
-// Captura frame e envia para IA
-btnCapturar.addEventListener('click', async () => {
-  canvasCamera.width  = videoPreview.videoWidth;
-  canvasCamera.height = videoPreview.videoHeight;
-  canvasCamera.getContext('2d').drawImage(videoPreview, 0, 0);
+// // Captura frame e envia para IA
+// btnCapturar.addEventListener('click', async () => {
+//   canvasCamera.width  = videoPreview.videoWidth;
+//   canvasCamera.height = videoPreview.videoHeight;
+//   canvasCamera.getContext('2d').drawImage(videoPreview, 0, 0);
 
-  const base64Image = canvasCamera.toDataURL('image/jpeg', 0.85).split(',')[1];
+//   const base64Image = canvasCamera.toDataURL('image/jpeg', 0.85).split(',')[1];
 
-  // Fecha câmera antes de processar
-  streamAtivo?.getTracks().forEach(t => t.stop());
-  streamAtivo = null;
-  modalCamera.style.display = 'none';
+//   // Fecha câmera antes de processar
+//   streamAtivo?.getTracks().forEach(t => t.stop());
+//   streamAtivo = null;
+//   modalCamera.style.display = 'none';
 
-  await enviarFrameParaIA(base64Image);
-});
+//   await enviarFrameParaIA(base64Image);
+// });
