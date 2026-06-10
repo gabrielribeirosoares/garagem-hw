@@ -1016,7 +1016,7 @@ export const RAW = [
         "color": "",
         "part": "",
         "hw": "050",
-        "cas": "",
+        "cas": "L",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJL22_Bugatti_Bolide_2nd_Color.jpg"
     },
     {
@@ -1036,7 +1036,7 @@ export const RAW = [
         "color": "",
         "part": "",
         "hw": "051",
-        "cas": "",
+        "cas": "L",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026__The_Dark_Knight_Batmobile_2nd_Color.jpg"
     },
     {
@@ -1168,6 +1168,16 @@ export const RAW = [
         "hw": "059",
         "cas": "C",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJJ28_Lucid_Air.jpg"
+    },
+    {
+        "year": 2026,
+        "name": "Lucid Air 2nd color",
+        "series": "HW EV (6/10)",
+        "color": "",
+        "part": "JJL14",
+        "hw": "059",
+        "cas": "L",
+        "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJL14_Lucid_Air_2nd_Color.jpg"
     },
     {
         "year": 2026,
@@ -1327,7 +1337,7 @@ export const RAW = [
         "part": "JJM47",
         "hw": "067",
         "cas": "L",
-        "image": "./assets/img/hw/2026-hot-wheels-dollar-exclusive-3.jpg"
+        "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJM47_Lotus_Cortina_2nd_Color.jpg"
     },
     {
         "year": 2026,
@@ -1364,10 +1374,10 @@ export const RAW = [
         "name": "Volvo 240 Drift Wagon (2nd Color)",
         "series": "HW Mods (2/5)",
         "color": "",
-        "part": "",
+        "part": "JJL20",
         "hw": "069",
-        "cas": "",
-        "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026__Volvo_240_Drift_Wagon_2nd_Color.jpg"
+        "cas": "L",
+        "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJL20_Volvo_240_Drift_Wagon_2nd_Color.jpg"
     },
     {
         "year": 2026,
@@ -1789,6 +1799,17 @@ export const RAW = [
         "cas": "D",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJJ57_El_Segundo_Coupe.jpg"
     },
+    ,
+    {
+        "year": 2026,
+        "name": "El Segundo Coupe (2nd Color)",
+        "series": "HW Fan Driven (4/5)",
+        "color": "Olive green",
+        "part": "JJL17",
+        "hw": "096",
+        "cas": "L",
+        "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJL17_El_Segundo_Coupe_2nd_Color.jpg"
+    },
     {
         "year": 2026,
         "name": "Corvette Grand Sport",
@@ -2126,7 +2147,7 @@ export const RAW = [
         "color": "",
         "part": "",
         "hw": "119",
-        "cas": "",
+        "cas": "L",
         "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026__33_Ford_Lo_Boy_2nd_Color.jpg"
     },
     {
@@ -2412,6 +2433,16 @@ export const RAW = [
     {
         "year": 2026,
         "name": "Screamliner",
+        "series": "Rod Squad (5/10)",
+        "color": "",
+        "part": "JJJ94",
+        "hw": "141",
+        "cas": "F",
+        "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJJ94_Screamliner.jpg"
+    },
+    {
+        "year": 2026,
+        "name": "Screamliner (2nd Color)",
         "series": "Rod Squad (5/10)",
         "color": "",
         "part": "JJJ94",
@@ -3307,7 +3338,7 @@ export const RAW = [
         "part": "JJK53",
         "hw": "225",
         "cas": "L",
-        "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJM26_Nissan_Maxima_Drift_Car.jpg"
+        "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJK53_Nissan_Maxima_Drift_Car.jpg"
     },
     {
         "year": 2026,
@@ -3377,7 +3408,7 @@ export const RAW = [
         "part": "JJH70",
         "hw": "",
         "cas": "L",
-        "image": "https://static.wikia.nocookie.net/hotwheels/images/b/b5/Image_Not_Available.jpg/revision/latest?cb=20151025125428"
+        "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJH70_UNCERTAIN-T.jpg"
     },
     {
         "year": 2026,
