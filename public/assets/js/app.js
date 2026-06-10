@@ -3045,10 +3045,37 @@ window.gerarInfografico = function () {
 
   setTimeout(() => {
     html2canvas(infoDiv, { scale: 1, useCORS: true, backgroundColor: '#0f172a' }).then(canvas => {
-      const link = document.createElement('a');
-      link.download = 'minha_colecao_hw.jpg';
-      link.href = canvas.toDataURL('image/jpeg', 0.9);
-      link.click();
+      canvas.toBlob(async (blob) => {
+        if (!blob) {
+          alert("Erro ao gerar a imagem do infográfico.");
+          document.body.removeChild(infoDiv);
+          return;
+        }
+        const file = new File([blob], 'minha_colecao_hw.jpg', { type: 'image/jpeg' });
+        if (navigator.canShare && navigator.canShare({ files: [file] })) {
+          try {
+            await navigator.share({
+              files: [file],
+              title: 'Minha Garagem Hot Wheels',
+              text: 'Olha o status atual do meu império diecast! 🚀'
+            });
+          } catch (err) {
+            console.log("Compartilhamento cancelado ou falhou:", err);
+          }
+        } 
+
+        else {
+          const link = document.createElement('a');
+          link.download = 'minha_colecao_hw.jpg';
+          link.href = canvas.toDataURL('image/jpeg', 0.9);
+          link.click();
+        }
+
+        document.body.removeChild(infoDiv);
+      }, 'image/jpeg', 0.9);
+
+    }).catch(err => {
+      console.error("Erro no html2canvas:", err);
       document.body.removeChild(infoDiv);
     });
   }, 500);
