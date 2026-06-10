@@ -3044,14 +3044,29 @@ window.gerarInfografico = function () {
   document.body.appendChild(infoDiv);
 
   setTimeout(() => {
+
+    const originalGetContext = HTMLCanvasElement.prototype.getContext;
+    HTMLCanvasElement.prototype.getContext = function (type, contextAttributes) {
+      if (type === '2d') {
+        contextAttributes = contextAttributes || {};
+        contextAttributes.willReadFrequently = true;
+      }
+      return originalGetContext.call(this, type, contextAttributes);
+    };
+
     html2canvas(infoDiv, { scale: 1, useCORS: true, backgroundColor: '#0f172a' }).then(canvas => {
+      
+      HTMLCanvasElement.prototype.getContext = originalGetContext;
+
       canvas.toBlob(async (blob) => {
         if (!blob) {
           alert("Erro ao gerar a imagem do infográfico.");
           document.body.removeChild(infoDiv);
           return;
         }
+
         const file = new File([blob], 'minha_colecao_hw.jpg', { type: 'image/jpeg' });
+
         if (navigator.canShare && navigator.canShare({ files: [file] })) {
           try {
             await navigator.share({
@@ -3062,9 +3077,7 @@ window.gerarInfografico = function () {
           } catch (err) {
             console.log("Compartilhamento cancelado ou falhou:", err);
           }
-        } 
-
-        else {
+        } else {
           const link = document.createElement('a');
           link.download = 'minha_colecao_hw.jpg';
           link.href = canvas.toDataURL('image/jpeg', 0.9);
@@ -3075,6 +3088,8 @@ window.gerarInfografico = function () {
       }, 'image/jpeg', 0.9);
 
     }).catch(err => {
+
+      HTMLCanvasElement.prototype.getContext = originalGetContext;
       console.error("Erro no html2canvas:", err);
       document.body.removeChild(infoDiv);
     });
