@@ -2096,7 +2096,7 @@ window.renderStats = function () {
     let qty = userCollection[carId];
     if (qty > 0) {
       totalHW += qty;
-      let car = RAW.find(r => r.id === carId);
+      let car = RAW.find(r => r && r.id === carId);
 
       let valorUnitario = userPrices[carId];
       if (typeof valorUnitario === 'undefined') {
@@ -2215,7 +2215,7 @@ window.renderStats = function () {
     timelineHTML += `<div style="color: var(--muted); font-size: 14px;">Nenhuma miniatura na garagem ainda.</div>`;
   } else {
     ultimas.forEach(id => {
-      const carro = typeof RAW !== 'undefined' ? RAW.find(c => c.id === id) : null;
+      const carro = typeof RAW !== 'undefined' ? RAW.find(c => c && c.id === id) : null;
       if (carro) {
         timelineHTML += `
                 <div style="display: flex; align-items: center; gap: 15px; background: #0f172a; padding: 10px; border-radius: 8px; border: 1px solid #475569;">
