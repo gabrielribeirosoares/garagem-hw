@@ -3067,7 +3067,9 @@ window.gerarInfografico = function () {
 
         const file = new File([blob], 'minha_colecao_hw.jpg', { type: 'image/jpeg' });
 
-        if (navigator.canShare && navigator.canShare({ files: [file] })) {
+        const isMobile = /Android|iPhone|iPad/i.test(navigator.userAgent);
+
+        if (isMobile && navigator.canShare && navigator.canShare({ files: [file] })) {
           try {
             await navigator.share({
               files: [file],
@@ -3077,7 +3079,9 @@ window.gerarInfografico = function () {
           } catch (err) {
             console.log("Compartilhamento cancelado ou falhou:", err);
           }
-        } else {
+        } 
+    
+        else {
           const link = document.createElement('a');
           link.download = 'minha_colecao_hw.jpg';
           link.href = canvas.toDataURL('image/jpeg', 0.9);
