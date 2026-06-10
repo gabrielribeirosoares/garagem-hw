@@ -2980,7 +2980,7 @@ window.gerarInfografico = function () {
       let valorUnitario = userPrices[carId];
       if (typeof valorUnitario === 'undefined') {
         valorUnitario = 25;
-        let car = RAW.find(r => r.id === carId);
+        let car = RAW.find(r => r && r.id === carId);
         if (car) {
           if (car.series && car.series.toLowerCase().includes('super')) valorUnitario = 150;
           if (car.price) valorUnitario = parseFloat(car.price);
