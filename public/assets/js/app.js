@@ -383,6 +383,7 @@ function getFilteredData() {
   const caseInput = document.getElementById('filter-cas');
   const filterOwnedCheckbox = document.getElementById('filter-owned-only');
 
+  // Adicionada proteção (Ternário) para evitar quebra quando os filtros somem da tela
   const sq = searchInput ? searchInput.value.toLowerCase() : '';
   const sy = yearInput ? yearInput.value : '';
   const se = eraInput ? eraInput.value : '';
@@ -404,7 +405,7 @@ function getFilteredData() {
     if (sy) match = match && String(r.year) === sy;
     if (se) match = match && getEra(r.year) === se;
     if (ss) match = match && r.series === ss;
-    if (sc) match = match && r.cas === sc; // Validação do Lote
+    if (sc) match = match && r.cas === sc; 
     if (so) match = match && isOwned(r);
     return match;
   });
@@ -436,6 +437,7 @@ function getFilteredData() {
     return 0;
   });
 
+  // --- APLICAÇÃO DOS NOVOS FILTROS (Scanner e Trocas) ---
   if (window.searchTerms) {
     filtered = filtered.filter(r =>
       (r.name && r.name.toLowerCase().includes(window.searchTerms)) ||
