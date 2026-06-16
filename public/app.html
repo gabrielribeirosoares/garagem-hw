@@ -18,6 +18,7 @@
   <meta name="mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="apple-mobile-web-app-title" content="Garagem HW">
+
 </head>
 
 <body>
@@ -192,14 +193,14 @@
         <option value="">Todas</option>
       </select>
     </div>
-    
+
     <div class="filter-group">
       <span class="filter-label">Lote</span>
       <select id="filter-cas" class="short-select">
         <option value="">Todos</option>
       </select>
     </div>
-    
+
     <div class="filter-group" style="flex-grow: 1;">
       <input type="text" id="filter-search" placeholder="🔍 Buscar nome do carro ou coleção" style="width: 100%;">
     </div>
@@ -333,9 +334,20 @@
           style="width: 100%; padding: 10px; background: #0f172a; border: 1px solid #475569; color: white; border-radius: 4px; box-sizing: border-box;">
       </div>
       <div class="form-group" style="margin-bottom: 15px;">
-        <label style="color: var(--muted); font-size: 13px; font-weight: bold;">URL da Imagem</label>
-        <input type="text" id="rifa-form-imagem" placeholder="https://link-da-foto.com/carro.jpg"
-          style="width: 100%; padding: 10px; background: #0f172a; border: 1px solid #475569; color: white; border-radius: 4px; box-sizing: border-box;">
+        <label style="color: var(--muted); font-size: 13px; font-weight: bold;">Imagem do Prêmio (Tirar Foto ou
+          Galeria)</label>
+
+        <div style="display: flex; gap: 10px; align-items: center; margin-top: 5px;">
+
+          <input type="file" id="rifa-form-imagem-file" accept="image/*"
+            style="flex-grow: 1; padding: 10px; background: #0f172a; border: 1px solid #475569; color: white; border-radius: 4px; box-sizing: border-box; cursor: pointer;">
+
+          <img id="rifa-form-imagem-preview" src=""
+            style="width: 42px; height: 42px; min-width: 42px; object-fit: cover; border-radius: 6px; border: 1px solid #475569; display: none;">
+
+        </div>
+
+        <input type="hidden" id="rifa-form-imagem-base64">
       </div>
       <div class="form-group" style="margin-bottom: 15px;">
         <label style="color: var(--muted); font-size: 13px; font-weight: bold;">Descrição/Regras</label>
@@ -437,7 +449,7 @@
   <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
   <script type="module" src="assets/js/firebase-config.js"></script>
-  <script type="module" src="assets/js/app.js?v=5"></script>
+  <script type="module" src="assets/js/app.js?v=12"></script>
 
 </body>
 

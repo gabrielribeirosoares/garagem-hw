@@ -383,6 +383,7 @@ function getFilteredData() {
   const caseInput = document.getElementById('filter-cas');
   const filterOwnedCheckbox = document.getElementById('filter-owned-only');
 
+  // Adicionada proteção (Ternário) para evitar quebra quando os filtros somem da tela
   const sq = searchInput ? searchInput.value.toLowerCase() : '';
   const sy = yearInput ? yearInput.value : '';
   const se = eraInput ? eraInput.value : '';
@@ -404,7 +405,7 @@ function getFilteredData() {
     if (sy) match = match && String(r.year) === sy;
     if (se) match = match && getEra(r.year) === se;
     if (ss) match = match && r.series === ss;
-    if (sc) match = match && r.cas === sc; // Validação do Lote
+    if (sc) match = match && r.cas === sc; 
     if (so) match = match && isOwned(r);
     return match;
   });
@@ -436,6 +437,7 @@ function getFilteredData() {
     return 0;
   });
 
+  // --- APLICAÇÃO DOS NOVOS FILTROS (Scanner e Trocas) ---
   if (window.searchTerms) {
     filtered = filtered.filter(r =>
       (r.name && r.name.toLowerCase().includes(window.searchTerms)) ||
@@ -2094,7 +2096,7 @@ window.renderStats = function () {
     let qty = userCollection[carId];
     if (qty > 0) {
       totalHW += qty;
-      let car = RAW.find(r => r.id === carId);
+      let car = RAW.find(r => r && r.id === carId);
 
       let valorUnitario = userPrices[carId];
       if (typeof valorUnitario === 'undefined') {
@@ -2213,7 +2215,7 @@ window.renderStats = function () {
     timelineHTML += `<div style="color: var(--muted); font-size: 14px;">Nenhuma miniatura na garagem ainda.</div>`;
   } else {
     ultimas.forEach(id => {
-      const carro = typeof RAW !== 'undefined' ? RAW.find(c => c.id === id) : null;
+      const carro = typeof RAW !== 'undefined' ? RAW.find(c => c && c.id === id) : null;
       if (carro) {
         timelineHTML += `
                 <div style="display: flex; align-items: center; gap: 15px; background: #0f172a; padding: 10px; border-radius: 8px; border: 1px solid #475569;">
@@ -2353,7 +2355,7 @@ window.renderSorteios = function () {
 
       html += `
         <div style="background: #1e293b; border: 1px solid ${isConcluida ? '#10b981' : '#334155'}; border-radius: 12px; overflow: hidden; position: relative; opacity: ${isConcluida ? '0.8' : '1'};">
-            <img src="${r.imagem}" style="width: 100%; height: 200px; object-fit: cover; border-bottom: 1px solid #334155; filter: ${isConcluida ? 'grayscale(100%)' : 'none'};" onerror="this.src='assets/img/placeholder.png'">
+            <img src="${r.imagem}" style="width: 100%; height: 220px; object-fit: contain; background-color: #0f172a; border-radius: 8px 8px 0 0;" filter: ${isConcluida ? 'grayscale(100%)' : 'none'};" onerror="this.src='assets/img/placeholder.png'">
             <span style="position: absolute; top: 10px; right: 10px; background: ${isConcluida ? '#10b981' : '#22c55e'}; color: #000; font-size: 11px; font-weight: bold; padding: 4px 8px; border-radius: 4px; text-transform: uppercase;">
                 ${isConcluida ? 'Concluída' : 'Ativo'}
             </span>
@@ -2449,10 +2451,17 @@ window.abrirSorteadorDaRifa = function (tituloDaRifa = 'Sorteio da Rifa') {
 window.abrirModalRifa = function () {
   document.getElementById('rifa-edit-index').value = -1;
   document.getElementById('rifa-form-titulo').value = '';
-  document.getElementById('rifa-form-imagem').value = '';
   document.getElementById('rifa-form-desc').value = '';
   document.getElementById('rifa-form-preco').value = '';
   document.getElementById('rifa-form-rpms').value = '';
+  
+  // Limpa o campo de foto e o preview
+  document.getElementById('rifa-form-imagem-file').value = '';
+  document.getElementById('rifa-form-imagem-base64').value = '';
+  const preview = document.getElementById('rifa-form-imagem-preview');
+  preview.src = '';
+  preview.style.display = 'none';
+
   document.getElementById('modal-rifa-title').innerText = 'Criar Nova Rifa';
   document.getElementById('modal-rifa-form').style.display = 'flex';
 }
@@ -2461,10 +2470,21 @@ window.editarRifa = function (index) {
   const r = window.LISTA_RIFAS[index];
   document.getElementById('rifa-edit-index').value = index;
   document.getElementById('rifa-form-titulo').value = r.titulo;
-  document.getElementById('rifa-form-imagem').value = r.imagem;
   document.getElementById('rifa-form-desc').value = r.desc;
   document.getElementById('rifa-form-preco').value = r.preco;
   document.getElementById('rifa-form-rpms').value = r.rpms;
+  
+  // Carrega a foto existente no modo edição
+  document.getElementById('rifa-form-imagem-file').value = '';
+  document.getElementById('rifa-form-imagem-base64').value = r.imagem || '';
+  const preview = document.getElementById('rifa-form-imagem-preview');
+  if (r.imagem) {
+    preview.src = r.imagem;
+    preview.style.display = 'block';
+  } else {
+    preview.style.display = 'none';
+  }
+
   document.getElementById('modal-rifa-title').innerText = 'Editar Rifa';
   document.getElementById('modal-rifa-form').style.display = 'flex';
 }
@@ -2472,10 +2492,12 @@ window.editarRifa = function (index) {
 window.salvarRifa = async function () {
   const index = parseInt(document.getElementById('rifa-edit-index').value);
   const titulo = document.getElementById('rifa-form-titulo').value.trim();
-  const imagem = document.getElementById('rifa-form-imagem').value.trim();
   const desc = document.getElementById('rifa-form-desc').value.trim();
   const preco = document.getElementById('rifa-form-preco').value.trim();
   const rpms = document.getElementById('rifa-form-rpms').value;
+  
+  // Pega a foto comprimida do campo invisível
+  const imagem = document.getElementById('rifa-form-imagem-base64').value;
 
   if (!titulo || !preco || !rpms) return alert('Por favor, preencha o Título, Preço e RPMs!');
 
@@ -2492,8 +2514,6 @@ window.salvarRifa = async function () {
 
   try {
     const { doc, setDoc } = await import("https://www.gstatic.com/firebasejs/12.13.0/firebase-firestore.js");
-
-
     await setDoc(doc(db, 'lojas', window.lojaIdAtual), { rifas: window.LISTA_RIFAS }, { merge: true });
 
     document.getElementById('modal-rifa-form').style.display = 'none';
@@ -2978,7 +2998,7 @@ window.gerarInfografico = function () {
       let valorUnitario = userPrices[carId];
       if (typeof valorUnitario === 'undefined') {
         valorUnitario = 25;
-        let car = RAW.find(r => r.id === carId);
+        let car = RAW.find(r => r && r.id === carId);
         if (car) {
           if (car.series && car.series.toLowerCase().includes('super')) valorUnitario = 150;
           if (car.price) valorUnitario = parseFloat(car.price);
@@ -3042,11 +3062,57 @@ window.gerarInfografico = function () {
   document.body.appendChild(infoDiv);
 
   setTimeout(() => {
+
+    const originalGetContext = HTMLCanvasElement.prototype.getContext;
+    HTMLCanvasElement.prototype.getContext = function (type, contextAttributes) {
+      if (type === '2d') {
+        contextAttributes = contextAttributes || {};
+        contextAttributes.willReadFrequently = true;
+      }
+      return originalGetContext.call(this, type, contextAttributes);
+    };
+
     html2canvas(infoDiv, { scale: 1, useCORS: true, backgroundColor: '#0f172a' }).then(canvas => {
-      const link = document.createElement('a');
-      link.download = 'minha_colecao_hw.jpg';
-      link.href = canvas.toDataURL('image/jpeg', 0.9);
-      link.click();
+      
+      HTMLCanvasElement.prototype.getContext = originalGetContext;
+
+      canvas.toBlob(async (blob) => {
+        if (!blob) {
+          alert("Erro ao gerar a imagem do infográfico.");
+          document.body.removeChild(infoDiv);
+          return;
+        }
+
+        const file = new File([blob], 'minha_colecao_hw.jpg', { type: 'image/jpeg' });
+
+        const isMobile = /Android|iPhone|iPad/i.test(navigator.userAgent);
+
+        if (isMobile && navigator.canShare && navigator.canShare({ files: [file] })) {
+          try {
+            await navigator.share({
+              files: [file],
+              title: 'Minha Garagem Hot Wheels',
+              text: 'Olha o status atual do meu império diecast! 🚀'
+            });
+          } catch (err) {
+            console.log("Compartilhamento cancelado ou falhou:", err);
+          }
+        } 
+    
+        else {
+          const link = document.createElement('a');
+          link.download = 'minha_colecao_hw.jpg';
+          link.href = canvas.toDataURL('image/jpeg', 0.9);
+          link.click();
+        }
+
+        document.body.removeChild(infoDiv);
+      }, 'image/jpeg', 0.9);
+
+    }).catch(err => {
+
+      HTMLCanvasElement.prototype.getContext = originalGetContext;
+      console.error("Erro no html2canvas:", err);
       document.body.removeChild(infoDiv);
     });
   }, 500);
@@ -3203,3 +3269,55 @@ window.alterarPrecoItem = async function (id, isKaido) {
 
 //   await enviarFrameParaIA(base64Image);
 // });
+
+// --- COMPRESSOR DE IMAGENS PARA A RIFA ---
+document.addEventListener('DOMContentLoaded', () => {
+  const fileInputRifa = document.getElementById('rifa-form-imagem-file');
+  
+  if (fileInputRifa) {
+    fileInputRifa.addEventListener('change', function(e) {
+      const file = e.target.files[0];
+      if (!file) return;
+
+      const reader = new FileReader();
+      reader.onload = function(event) {
+        const img = new Image();
+        img.onload = function() {
+          // Cria um canvas para comprimir a imagem (Máx 800px)
+          const canvas = document.createElement('canvas');
+          const MAX_WIDTH = 800;
+          const MAX_HEIGHT = 800;
+          let width = img.width;
+          let height = img.height;
+
+          if (width > height) {
+            if (width > MAX_WIDTH) {
+              height *= MAX_WIDTH / width;
+              width = MAX_WIDTH;
+            }
+          } else {
+            if (height > MAX_HEIGHT) {
+              width *= MAX_HEIGHT / height;
+              height = MAX_HEIGHT;
+            }
+          }
+
+          canvas.width = width;
+          canvas.height = height;
+          const ctx = canvas.getContext('2d');
+          ctx.drawImage(img, 0, 0, width, height);
+
+          // Converte para JPG com 70% de qualidade (Levíssimo pro Firebase)
+          const dataUrl = canvas.toDataURL('image/jpeg', 0.7);
+          
+          document.getElementById('rifa-form-imagem-base64').value = dataUrl;
+          const preview = document.getElementById('rifa-form-imagem-preview');
+          preview.src = dataUrl;
+          preview.style.display = 'block';
+        };
+        img.src = event.target.result;
+      };
+      reader.readAsDataURL(file);
+    });
+  }
+});
