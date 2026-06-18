@@ -1101,7 +1101,7 @@ window.saveKaidoData = async function (codigo, qty) {
   }, 1000);
 };
 
-window.openLb = function (index) {
+window.openLb = function(index) {
   lbIndex = index;
   const listaAtual = window.currentFilteredData || PAGE_DATA;
   const r = listaAtual[lbIndex];
@@ -1136,9 +1136,11 @@ window.openLb = function (index) {
 
   const lbInfo = document.querySelector('.lb-info');
   if (lbInfo) {
+    lbInfo.style.overflowY = 'visible';
+    lbInfo.style.maxHeight = 'none';
+    lbInfo.style.paddingBottom = '70px'; 
+
     lbInfo.innerHTML = `
-      <button onclick="document.getElementById('lightbox').style.display='none'" style="position: absolute; top: 15px; right: 15px; background: #ef4444; color: white; border: none; border-radius: 50%; width: 40px; height: 40px; font-size: 20px; font-weight: bold; cursor: pointer; display: flex; align-items: center; justify-content: center; z-index: 100; box-shadow: 0 4px 12px rgba(0,0,0,0.5);">✕</button>
-      
       <div class="lb-details-title">${nomeCarro}</div>
       <div class="lb-stat-row">
         <span class="lb-stat-label">Série / Marca</span>
@@ -1168,14 +1170,31 @@ window.openLb = function (index) {
       <button onclick="window.gerarArtePromocional('${itemId}', ${isKaido})" style="margin-top: ${hasItem ? '0' : '15px'}; background: linear-gradient(90deg, #a855f7, #3b82f6); color: #fff; border: none; padding: 12px; border-radius: 6px; font-family: 'Bebas Neue', sans-serif; font-size: 18px; cursor: pointer; transition: 0.2s; width: 100%; box-shadow: 0 4px 15px rgba(168, 85, 247, 0.4); letter-spacing: 1px;">
           📸 GERAR ARTE PARA STORY
       </button>
-      <div class="lb-status-badge" style="color: ${badgeColor}; background: ${badgeBg}; border: 1px solid ${badgeColor}; margin-top: 20px; margin-bottom: 20px;">
+      
+      <div class="lb-status-badge" style="color: ${badgeColor}; background: ${badgeBg}; border: 1px solid ${badgeColor}; margin-top: 20px; padding: 12px; border-radius: 6px; text-align: center; font-weight: bold; font-family: 'Barlow Condensed', sans-serif; font-size: 18px; text-transform: uppercase;">
         ${badgeText}
       </div>
     `;
   }
 
   document.getElementById('lb-counter').textContent = `${lbIndex + 1} de ${listaAtual.length}`;
-  document.getElementById('lightbox').style.display = 'flex';
+  
+  const lightbox = document.getElementById('lightbox');
+  if (lightbox) {
+    lightbox.style.display = 'flex';
+    lightbox.style.alignItems = 'flex-start'; 
+    lightbox.style.overflowY = 'auto'; 
+    lightbox.style.paddingTop = '20px';
+    lightbox.style.paddingBottom = '20px';
+    
+    const cardContent = lightbox.firstElementChild;
+    if (cardContent) {
+        cardContent.style.margin = 'auto';
+        cardContent.style.height = 'auto';
+        cardContent.style.maxHeight = 'none';
+        cardContent.style.overflow = 'visible';
+    }
+  }
 }
 
 function closeLb() {
@@ -2135,17 +2154,17 @@ window.renderStats = async function () {
       totalHW += qty;
       let car = typeof RAW !== 'undefined' ? RAW.find(r => r && r.id === carId) : null;
       let isSuper = car && car.series && car.series.toLowerCase().includes('super');
-      
+
       let custoUnitario = typeof userPrices !== 'undefined' && userPrices[carId] !== undefined ? parseFloat(userPrices[carId]) : (isSuper ? 150 : 25);
-      
+
       if (typeof userPrices === 'undefined' || typeof userPrices[carId] === 'undefined') {
         if (car && car.price) custoUnitario = parseFloat(car.price);
       }
-      
+
       if (car && car.year) anosCount[car.year] = (anosCount[car.year] || 0) + qty;
-      
-      let mercadoUnitario = (window.userMarketPrices && window.userMarketPrices[carId]) 
-        ? window.userMarketPrices[carId] 
+
+      let mercadoUnitario = (window.userMarketPrices && window.userMarketPrices[carId])
+        ? window.userMarketPrices[carId]
         : (isSuper ? 250 : 35);
 
       totalCusto += (custoUnitario * qty);
@@ -2159,11 +2178,11 @@ window.renderStats = async function () {
       if (qty > 0) {
         totalKaido += qty;
         let custoKaido = typeof userKaidoPrices !== 'undefined' && userKaidoPrices[codigo] !== undefined ? parseFloat(userKaidoPrices[codigo]) : 180;
-        
-        let mercadoKaido = (window.userMarketPrices && window.userMarketPrices[codigo]) 
-          ? window.userMarketPrices[codigo] 
+
+        let mercadoKaido = (window.userMarketPrices && window.userMarketPrices[codigo])
+          ? window.userMarketPrices[codigo]
           : 250;
-        
+
         totalCusto += (custoKaido * qty);
         totalMercado += (mercadoKaido * qty);
       }
@@ -2185,7 +2204,7 @@ window.renderStats = async function () {
 
   const custoFormatado = totalCusto.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
   const mercadoFormatado = totalMercado.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
-  
+
   let lucroLiquido = totalMercado - totalCusto;
   let rentabilidadePct = totalCusto > 0 ? ((lucroLiquido / totalCusto) * 100).toFixed(1) : 0;
   let corRentabilidade = lucroLiquido >= 0 ? '#10b981' : '#ef4444';
@@ -3544,30 +3563,25 @@ window.gravarHistoricoMensal = async function () {
 };
 
 window.gerarArtePromocional = async function (itemId, isKaido) {
-  const car = isKaido ? KAIDO_DATA.find(c => c.codigo === itemId) : typeof RAW !== 'undefined' ? RAW.find(c => c.id === itemId) : null;
+  const car = isKaido ? KAIDO_DATA.find(c => c && c.codigo === itemId) : typeof RAW !== 'undefined' ? RAW.find(c => c && c.id === itemId) : null;
   if (!car) return;
 
   const nomeCarro = isKaido ? car.modelo : car.name;
-  const imgOriginal = isKaido ? car.caminho_imagem : car.image;
+  let imgCarro = isKaido ? car.caminho_imagem : car.image;
   const seriesCarro = isKaido ? car.fabricante : (car.series || 'Exclusivo');
   const anoCarro = isKaido ? car.escala : (car.year || '');
 
-  let imgLimpa = imgOriginal;
-
   try {
-    const proxyUrl = 'https://wsrv.nl/?url=' + encodeURIComponent(imgOriginal) + '&output=png';
+    const proxyUrl = 'https://api.allorigins.win/raw?url=' + encodeURIComponent(imgCarro);
     const response = await fetch(proxyUrl);
-    if (response.ok) {
-      const blob = await response.blob();
-      imgLimpa = await new Promise((resolve, reject) => {
-        const reader = new FileReader();
-        reader.onloadend = () => resolve(reader.result);
-        reader.onerror = reject;
-        reader.readAsDataURL(blob);
-      });
-    }
+    const blob = await response.blob();
+    imgCarro = await new Promise((resolve) => {
+      const reader = new FileReader();
+      reader.onloadend = () => resolve(reader.result);
+      reader.readAsDataURL(blob);
+    });
   } catch (e) {
-    console.warn('Falha no proxy de imagem:', e);
+    console.warn(e);
   }
 
   const infoDiv = document.createElement('div');
@@ -3593,7 +3607,7 @@ window.gerarArtePromocional = async function (itemId, isKaido) {
                 DESTAQUE
             </div>
             <div style="width: 100%; height: 100%; display: flex; justify-content: center; align-items: center;">
-                <img id="promo-img-target" src="${imgLimpa}" style="max-width: 100%; max-height: 100%; display: block;">
+                <img id="promo-img-target" src="${imgCarro}" style="max-width: 100%; max-height: 100%; display: block;">
             </div>
         </div>
         
@@ -3617,17 +3631,20 @@ window.gerarArtePromocional = async function (itemId, isKaido) {
   document.body.appendChild(infoDiv);
 
   const dispararGeracao = () => {
-    const originalGetContext = HTMLCanvasElement.prototype.getContext;
-    HTMLCanvasElement.prototype.getContext = function (type, contextAttributes) {
-      if (type === '2d') {
-        contextAttributes = contextAttributes || {};
-        contextAttributes.willReadFrequently = true;
-      }
-      return originalGetContext.call(this, type, contextAttributes);
-    };
-
-    html2canvas(infoDiv, { scale: 1, useCORS: true, backgroundColor: '#0f172a' }).then(canvas => {
-      HTMLCanvasElement.prototype.getContext = originalGetContext;
+    // MODIFICAÇÃO: Usamos 'onclone' para esconder o elemento problemático
+    html2canvas(infoDiv, { 
+        scale: 1, 
+        useCORS: true, 
+        allowTaint: true, 
+        backgroundColor: '#0f172a',
+        onclone: (clonedDocument) => {
+            const clonedImgTarget = clonedDocument.getElementById('promo-img-target');
+            // Se a imagem estiver quebrada ou sem fonte, escondemos ela para evitar o quadrado azul
+            if (clonedImgTarget && clonedImgTarget.src === '') {
+                clonedImgTarget.style.display = 'none'; 
+            }
+        }
+    }).then(canvas => {
       canvas.toBlob(async (blob) => {
         if (!blob) {
           alert("Erro ao gerar a arte promocional.");
@@ -3656,7 +3673,6 @@ window.gerarArtePromocional = async function (itemId, isKaido) {
         document.body.removeChild(infoDiv);
       }, 'image/jpeg', 0.9);
     }).catch(err => {
-      HTMLCanvasElement.prototype.getContext = originalGetContext;
       console.error(err);
       document.body.removeChild(infoDiv);
     });
@@ -3668,6 +3684,6 @@ window.gerarArtePromocional = async function (itemId, isKaido) {
     setTimeout(dispararGeracao, 200);
   } else {
     imgTarget.onload = () => setTimeout(dispararGeracao, 200);
-    imgTarget.onerror = () => setTimeout(dispararGeracao, 200); 
+    imgTarget.onerror = () => setTimeout(dispararGeracao, 200); // Tenta gerar mesmo se a imagem falhar
   }
 };
