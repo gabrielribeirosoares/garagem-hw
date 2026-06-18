@@ -369,7 +369,7 @@ const mobileSort = document.getElementById('mobile-sort');
 if (mobileSort) {
   mobileSort.addEventListener('change', (e) => {
     sortCol = e.target.value;
-    sortDesc = (sortCol === 'year');
+    sortDesc = (sortCol === 'year' || sortCol === 'qty' || sortCol === 'price');
     currentPage = 1;
     render();
   });
@@ -383,7 +383,6 @@ function getFilteredData() {
   const caseInput = document.getElementById('filter-cas');
   const filterOwnedCheckbox = document.getElementById('filter-owned-only');
 
-  // Adicionada proteção (Ternário) para evitar quebra quando os filtros somem da tela
   const sq = searchInput ? searchInput.value.toLowerCase() : '';
   const sy = yearInput ? yearInput.value : '';
   const se = eraInput ? eraInput.value : '';
@@ -405,7 +404,7 @@ function getFilteredData() {
     if (sy) match = match && String(r.year) === sy;
     if (se) match = match && getEra(r.year) === se;
     if (ss) match = match && r.series === ss;
-    if (sc) match = match && r.cas === sc; 
+    if (sc) match = match && r.cas === sc;
     if (so) match = match && isOwned(r);
     return match;
   });
@@ -413,6 +412,17 @@ function getFilteredData() {
   filtered.sort((a, b) => {
     let vA = a[sortCol];
     let vB = b[sortCol];
+
+    if (sortCol === 'qty') {
+      vA = getQty(a);
+      vB = getQty(b);
+    } else if (sortCol === 'price') {
+      let baseA = (a.series && a.series.toLowerCase().includes('super')) ? 150 : (a.price ? parseFloat(a.price) : 25);
+      vA = typeof userPrices !== 'undefined' && userPrices[a.id] !== undefined ? parseFloat(userPrices[a.id]) : baseA;
+
+      let baseB = (b.series && b.series.toLowerCase().includes('super')) ? 150 : (b.price ? parseFloat(b.price) : 25);
+      vB = typeof userPrices !== 'undefined' && userPrices[b.id] !== undefined ? parseFloat(userPrices[b.id]) : baseB;
+    }
 
     if (sortCol === 'name' || sortCol === 'series' || sortCol === 'color' || sortCol === 'part' || sortCol === 'cas') {
       vA = String(vA || '').trim().toLowerCase();
@@ -437,7 +447,6 @@ function getFilteredData() {
     return 0;
   });
 
-  // --- APLICAÇÃO DOS NOVOS FILTROS (Scanner e Trocas) ---
   if (window.searchTerms) {
     filtered = filtered.filter(r =>
       (r.name && r.name.toLowerCase().includes(window.searchTerms)) ||
@@ -841,7 +850,6 @@ window.loadCollection = async function () {
   if (!uidToLoad) return;
 
   try {
-
     const dRef = doc(db, 'collections', uidToLoad);
     const snap = await getDoc(dRef);
     if (snap.exists()) {
@@ -854,6 +862,7 @@ window.loadCollection = async function () {
       userWishlist = snap.data().wishlist || {};
       userPrices = snap.data().prices || {};
       userKaidoPrices = snap.data().kaidoPrices || {};
+      window.userTimestamps = snap.data().timestamps || {};
     } else {
       userCollection = {};
       userKaidoCollection = {};
@@ -864,8 +873,8 @@ window.loadCollection = async function () {
       userWishlist = {};
       userPrices = {};
       userKaidoPrices = {};
+      window.userTimestamps = {};
     }
-
 
     const uRef = doc(db, 'users', uidToLoad);
     const uSnap = await getDoc(uRef);
@@ -914,15 +923,14 @@ window.loadCollection = async function () {
         LISTA_RECOMPENSAS = [];
         window.LISTA_RIFAS = [];
 
-        window.userPointsMap = snap.data().pointsMap || {};
-        if (typeof snap.data().points === 'number' && Object.keys(window.userPointsMap).length === 0) {
+        window.userPointsMap = snap.exists() ? snap.data().pointsMap || {} : {};
+        if (snap.exists() && typeof snap.data().points === 'number' && Object.keys(window.userPointsMap).length === 0) {
           window.userPointsMap[lojasArray[0] || 'default'] = snap.data().points;
         }
 
         if (!window.lojaAtiva || !lojasArray.includes(window.lojaAtiva)) {
           window.lojaAtiva = lojasArray[0] || "";
         }
-
 
         for (const lId of lojasArray) {
           const lojaRef = doc(db, 'lojas', lId);
@@ -937,7 +945,7 @@ window.loadCollection = async function () {
           }
         }
       } catch (e) {
-        console.error("Erro ao carregar dados das lojas:", e);
+        console.error(e);
         LISTA_RECOMPENSAS = [];
         window.LISTA_RIFAS = [];
       }
@@ -955,8 +963,12 @@ window.loadCollection = async function () {
       changePage(pageType || 'all');
     }
 
+    if (typeof window.gravarHistoricoMensal === 'function') {
+      await window.gravarHistoricoMensal();
+    }
+
   } catch (err) {
-    console.error("Erro load:", err);
+    console.error(err);
     changePage(isPublicView ? 'owned' : (pageType || 'all'));
   }
 }
@@ -972,6 +984,9 @@ async function saveData(carId, qty) {
   const isVendedorEditandoCliente = (isAdmin || isManager) && targetUid && targetUid !== sessionUid;
 
   if (qty > oldQty) {
+    if (typeof window.userTimestamps === 'undefined') window.userTimestamps = {};
+    window.userTimestamps[carId] = Date.now();
+
     const addedQty = qty - oldQty;
     const priceInput = prompt(`Adicionando ${addedQty} unidade(s).\nQual foi o valor pago POR UNIDADE? (Ex: 25.50)`, "25.00");
 
@@ -1017,7 +1032,8 @@ async function saveData(carId, qty) {
         items: userCollection,
         points: userPoints,
         wishlist: userWishlist,
-        prices: userPrices
+        prices: userPrices,
+        timestamps: window.userTimestamps || {}
       }, { merge: true });
     } catch (e) {
       console.error(e);
@@ -1031,6 +1047,9 @@ window.saveKaidoData = async function (codigo, qty) {
   const isVendedorEditandoCliente = (isAdmin || isManager) && targetUid && targetUid !== sessionUid;
 
   if (qty > oldQty) {
+    if (typeof window.userTimestamps === 'undefined') window.userTimestamps = {};
+    window.userTimestamps[codigo] = Date.now();
+
     const addedQty = qty - oldQty;
     const priceInput = prompt(`Adicionando ${addedQty} unidade(s) Kaido.\nQual foi o valor pago POR UNIDADE? (Ex: 180.00)`, "180.00");
 
@@ -1073,7 +1092,8 @@ window.saveKaidoData = async function (codigo, qty) {
         kaidoItems: userKaidoCollection,
         points: userPoints,
         wishlist: userWishlist,
-        kaidoPrices: userKaidoPrices
+        kaidoPrices: userKaidoPrices,
+        timestamps: window.userTimestamps || {}
       }, { merge: true });
     } catch (e) {
       console.error(e);
@@ -1081,7 +1101,7 @@ window.saveKaidoData = async function (codigo, qty) {
   }, 1000);
 };
 
-function openLb(index) {
+window.openLb = function (index) {
   lbIndex = index;
   const listaAtual = window.currentFilteredData || PAGE_DATA;
   const r = listaAtual[lbIndex];
@@ -1105,7 +1125,7 @@ function openLb(index) {
   const itemId = isKaido ? r.codigo : r.id;
   const colorVal = isKaido ? (r.cor || 'N/A') : (r.color || 'N/A');
 
-  let valorUnitario = isKaido ? userKaidoPrices[r.codigo] : userPrices[r.id];
+  let valorUnitario = isKaido ? (typeof userKaidoPrices !== 'undefined' ? userKaidoPrices[r.codigo] : undefined) : (typeof userPrices !== 'undefined' ? userPrices[r.id] : undefined);
   if (typeof valorUnitario === 'undefined') {
     valorUnitario = isKaido ? 180 : (r.series && r.series.toLowerCase().includes('super') ? 150 : 25);
   }
@@ -1141,10 +1161,13 @@ function openLb(index) {
         <span class="lb-stat-value" style="color: #10b981; font-weight: bold;">${valorFormatado}</span>
       </div>
       ${hasItem ? `
-        <button onclick="window.alterarPrecoItem('${itemId}', ${isKaido})" style="margin-top: 15px; background: #475569; color: #fff; border: 1px solid #64748b; padding: 8px 12px; border-radius: 6px; font-family: 'Barlow', sans-serif; font-size: 13px; cursor: pointer; transition: 0.2s; font-weight: 500;">
+        <button onclick="window.alterarPrecoItem('${itemId}', ${isKaido})" style="margin-top: 15px; background: #475569; color: #fff; border: 1px solid #64748b; padding: 8px 12px; border-radius: 6px; font-family: 'Barlow', sans-serif; font-size: 13px; cursor: pointer; transition: 0.2s; font-weight: 500; width: 100%; margin-bottom: 10px;">
           ✏️ Editar Preço Pago
         </button>
       ` : ''}
+      <button onclick="window.gerarArtePromocional('${itemId}', ${isKaido})" style="margin-top: ${hasItem ? '0' : '15px'}; background: linear-gradient(90deg, #a855f7, #3b82f6); color: #fff; border: none; padding: 12px; border-radius: 6px; font-family: 'Bebas Neue', sans-serif; font-size: 18px; cursor: pointer; transition: 0.2s; width: 100%; box-shadow: 0 4px 15px rgba(168, 85, 247, 0.4); letter-spacing: 1px;">
+          📸 GERAR ARTE PARA STORY
+      </button>
       <div class="lb-status-badge" style="color: ${badgeColor}; background: ${badgeBg}; border: 1px solid ${badgeColor}; margin-top: 20px; margin-bottom: 20px;">
         ${badgeText}
       </div>
@@ -2084,7 +2107,7 @@ window.copiarLinkPublico = function () {
   });
 };
 
-window.renderStats = function () {
+window.renderStats = async function () {
   const container = document.getElementById('stats-view');
   if (!container) return;
 
@@ -2096,11 +2119,10 @@ window.renderStats = function () {
     let qty = userCollection[carId];
     if (qty > 0) {
       totalHW += qty;
-      let car = RAW.find(r => r && r.id === carId);
+      let car = typeof RAW !== 'undefined' ? RAW.find(r => r && r.id === carId) : null;
+      let valorUnitario = typeof userPrices !== 'undefined' && userPrices[carId] !== undefined ? userPrices[carId] : 25;
 
-      let valorUnitario = userPrices[carId];
-      if (typeof valorUnitario === 'undefined') {
-        valorUnitario = 25;
+      if (typeof userPrices === 'undefined' || typeof userPrices[carId] === 'undefined') {
         if (car) {
           if (car.year) anosCount[car.year] = (anosCount[car.year] || 0) + qty;
           if (car.series && car.series.toLowerCase().includes('super')) valorUnitario = 150;
@@ -2113,25 +2135,70 @@ window.renderStats = function () {
     }
   });
 
-  Object.keys(userKaidoCollection).forEach(codigo => {
-    let qty = userKaidoCollection[codigo];
-    if (qty > 0) {
-      totalKaido += qty;
-      let valorKaido = userKaidoPrices[codigo];
-      if (typeof valorKaido === 'undefined') valorKaido = 180;
-      patrimonioEstimado += (valorKaido * qty);
-    }
-  });
+  if (typeof userKaidoCollection !== 'undefined') {
+    Object.keys(userKaidoCollection).forEach(codigo => {
+      let qty = userKaidoCollection[codigo];
+      if (qty > 0) {
+        totalKaido += qty;
+        let valorKaido = typeof userKaidoPrices !== 'undefined' && userKaidoPrices[codigo] !== undefined ? userKaidoPrices[codigo] : 180;
+        patrimonioEstimado += (valorKaido * qty);
+      }
+    });
+  }
 
-  Object.values(userWishlist).forEach(wished => { if (wished) totalWishlist++; });
+  if (typeof userWishlist !== 'undefined') {
+    Object.values(userWishlist).forEach(wished => { if (wished) totalWishlist++; });
+  }
 
-  const hwPossuidos = Object.keys(userCollection).filter(k => userCollection[k] > 0).length;
-  const pctHW = RAW.length > 0 ? ((hwPossuidos / RAW.length) * 100).toFixed(2) : 0;
+  let hwPossuidos = 0;
+  if (typeof userCollection !== 'undefined') {
+    hwPossuidos = Object.keys(userCollection).filter(k => userCollection[k] > 0).length;
+  }
+  const pctHW = typeof RAW !== 'undefined' && RAW.length > 0 ? ((hwPossuidos / RAW.length) * 100).toFixed(2) : 0;
 
   let anosOrdenados = Object.keys(anosCount).sort((a, b) => anosCount[b] - anosCount[a]).slice(0, 5);
   let valoresAnos = anosOrdenados.map(ano => anosCount[ano]);
 
   const valorFormatado = patrimonioEstimado.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
+
+  let historicoLabels = [];
+  let historicoData = [];
+
+  if (sessionUid) {
+    try {
+      const { doc, getDoc } = await import("https://www.gstatic.com/firebasejs/12.13.0/firebase-firestore.js");
+      const hRef = doc(db, 'history_patrimonio', sessionUid);
+      const snap = await getDoc(hRef);
+      if (snap.exists()) {
+        const dadosHistorico = snap.data();
+        const meses = Object.keys(dadosHistorico).sort();
+        meses.forEach(mes => {
+          const partes = mes.split('-');
+          historicoLabels.push(`${partes[1]}/${partes[0]}`);
+          historicoData.push(dadosHistorico[mes].valor);
+        });
+      }
+    } catch (e) {
+      console.error(e);
+    }
+  }
+
+  if (historicoLabels.length === 0) {
+    const dataAtual = new Date();
+    historicoLabels.push(`${String(dataAtual.getMonth() + 1).padStart(2, '0')}/${dataAtual.getFullYear()}`);
+    historicoData.push(patrimonioEstimado);
+  } else {
+    const dataAtual = new Date();
+    const labelAtual = `${String(dataAtual.getMonth() + 1).padStart(2, '0')}/${dataAtual.getFullYear()}`;
+
+    if (!historicoLabels.includes(labelAtual)) {
+      historicoLabels.push(labelAtual);
+      historicoData.push(patrimonioEstimado);
+    } else {
+      const idx = historicoLabels.indexOf(labelAtual);
+      historicoData[idx] = patrimonioEstimado;
+    }
+  }
 
   container.innerHTML = `
     <div style="display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 30px; flex-wrap: wrap; gap: 15px;">
@@ -2153,6 +2220,13 @@ window.renderStats = function () {
         </div>
         <div style="background: rgba(16, 185, 129, 0.15); padding: 10px 20px; border-radius: 8px; color: #10b981; font-weight: bold; font-size: 14px; border: 1px solid rgba(16, 185, 129, 0.3);">
             📈 Base de Cálculo: Preços Registrados
+        </div>
+    </div>
+
+    <div style="background: var(--surface); padding: 20px; border-radius: 12px; border: 1px solid var(--border); margin-bottom: 30px;">
+        <h3 style="color: #cbd5e1; margin-top: 0; margin-bottom: 20px; font-size: 16px; font-family: 'Barlow Condensed'; text-transform: uppercase;">Evolução do Patrimônio</h3>
+        <div style="position: relative; width: 100%; height: 250px;">
+            <canvas id="chartHistorico"></canvas>
         </div>
     </div>
 
@@ -2202,30 +2276,40 @@ window.renderStats = function () {
     </div>
   `;
 
-  // --- TIMELINE DE ÚLTIMAS AQUISIÇÕES ---
-  const chavesCompradas = Object.keys(userCollection || {}).filter(k => userCollection[k] > 0);
-  const ultimas = chavesCompradas.slice(-5).reverse(); // Pega os últimos 5
+  const carrosPossuidos = [];
+  if (typeof userCollection !== 'undefined') {
+    Object.keys(userCollection).forEach(id => {
+      if (userCollection[id] > 0) {
+        const car = typeof RAW !== 'undefined' ? RAW.find(c => c && c.id === id) : null;
+        if (car) carrosPossuidos.push(car);
+      }
+    });
+  }
+
+  carrosPossuidos.sort((a, b) => {
+    if (b.year !== a.year) return (b.year || 0) - (a.year || 0);
+    return (a.name || '').localeCompare(b.name || '');
+  });
+
+  const ultimas = carrosPossuidos.slice(0, 5);
 
   let timelineHTML = `
     <div style="margin-top: 30px; margin-bottom: 30px; background: var(--surface); border-radius: 12px; padding: 20px; border: 1px solid var(--border);">
-        <h3 style="font-family: 'Bebas Neue', sans-serif; color: #fff; font-size: 24px; margin-top: 0; margin-bottom: 15px;">⏱️ Últimas Aquisições (Hot Wheels)</h3>
+        <h3 style="font-family: 'Bebas Neue', sans-serif; color: #fff; font-size: 24px; margin-top: 0; margin-bottom: 15px;">🌟 Destaques (Compras recentes)</h3>
         <div style="display: flex; flex-direction: column; gap: 10px;">`;
 
   if (ultimas.length === 0) {
     timelineHTML += `<div style="color: var(--muted); font-size: 14px;">Nenhuma miniatura na garagem ainda.</div>`;
   } else {
-    ultimas.forEach(id => {
-      const carro = typeof RAW !== 'undefined' ? RAW.find(c => c && c.id === id) : null;
-      if (carro) {
-        timelineHTML += `
-                <div style="display: flex; align-items: center; gap: 15px; background: #0f172a; padding: 10px; border-radius: 8px; border: 1px solid #475569;">
-                    <img src="${carro.image || 'assets/img/placeholder.png'}" loading="lazy" style="width: 50px; height: 50px; object-fit: cover; border-radius: 6px;">
-                    <div>
-                        <div style="font-weight: bold; color: #fff; font-size: 16px;">${carro.name}</div>
-                        <div style="font-size: 12px; color: #94a3b8;">${carro.series || 'Sem série'} | Ano: ${carro.year}</div>
-                    </div>
-                </div>`;
-      }
+    ultimas.forEach(carro => {
+      timelineHTML += `
+              <div style="display: flex; align-items: center; gap: 15px; background: #0f172a; padding: 10px; border-radius: 8px; border: 1px solid #475569;">
+                  <img src="${carro.image || 'assets/img/placeholder.png'}" loading="lazy" style="width: 50px; height: 50px; object-fit: cover; border-radius: 6px;">
+                  <div>
+                      <div style="font-weight: bold; color: #fff; font-size: 16px;">${carro.name}</div>
+                      <div style="font-size: 12px; color: #94a3b8;">${carro.series || 'Sem série'} | Ano: ${carro.year}</div>
+                  </div>
+              </div>`;
     });
   }
   timelineHTML += `</div></div>`;
@@ -2237,6 +2321,54 @@ window.renderStats = function () {
   setTimeout(() => {
     Chart.defaults.color = '#94a3b8';
     Chart.defaults.font.family = "'Barlow', sans-serif";
+
+    new Chart(document.getElementById('chartHistorico'), {
+      type: 'line',
+      data: {
+        labels: historicoLabels,
+        datasets: [{
+          label: 'Patrimônio Estimado (R$)',
+          data: historicoData,
+          borderColor: '#10b981',
+          backgroundColor: 'rgba(16, 185, 129, 0.15)',
+          borderWidth: 2,
+          pointBackgroundColor: '#10b981',
+          pointRadius: 4,
+          pointHoverRadius: 6,
+          fill: true,
+          tension: 0.3
+        }]
+      },
+      options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        plugins: {
+          legend: { display: false },
+          tooltip: {
+            callbacks: {
+              label: function (context) {
+                let value = context.raw || 0;
+                return 'R$ ' + value.toFixed(2).replace('.', ',');
+              }
+            }
+          }
+        },
+        scales: {
+          y: {
+            beginAtZero: false,
+            grid: { color: 'rgba(255, 255, 255, 0.05)' },
+            ticks: {
+              callback: function (value) {
+                return 'R$ ' + value;
+              }
+            }
+          },
+          x: {
+            grid: { display: false }
+          }
+        }
+      }
+    });
 
     new Chart(document.getElementById('chartMarcas'), {
       type: 'doughnut',
@@ -2290,20 +2422,31 @@ window.renderStats = function () {
   }, 100);
 };
 
+if (typeof window.mostrarFinanceiro === 'undefined') {
+  window.mostrarFinanceiro = true;
+}
+
+window.toggleFinanceiro = function () {
+  window.mostrarFinanceiro = !window.mostrarFinanceiro;
+  window.renderSorteios();
+};
+
 window.renderSorteios = function () {
   const view = document.getElementById('sorteios-view');
   if (!view) return;
 
-
   const whatsappNumber = window.lojaWhatsapp;
-
 
   let adminButtons = '';
   if (targetRole === 'admin' || targetRole === 'gerente') {
+    const iconeVisibilidade = window.mostrarFinanceiro ? '👁️ Ocultar Financeiro' : '🙈 Mostrar Financeiro';
+    const corVisibilidade = window.mostrarFinanceiro ? '#475569' : '#3b82f6';
+
     adminButtons = `
-        <div style="display: flex; gap: 15px; justify-content: center; margin-bottom: 30px;">
+        <div style="display: flex; gap: 15px; justify-content: center; margin-bottom: 30px; flex-wrap: wrap;">
             <button onclick="abrirModalRifa()" style="background: #a855f7; color: #fff; font-family: 'Bebas Neue', sans-serif; font-size: 20px; padding: 10px 20px; border: none; border-radius: 6px; cursor: pointer; box-shadow: 0 4px 10px rgba(168, 85, 247, 0.3);">➕ Adicionar Nova Rifa</button>
             <button onclick="abrirSorteadorDaRifa()" style="background: #10b981; color: #000; font-family: 'Bebas Neue', sans-serif; font-size: 20px; padding: 10px 20px; border: none; border-radius: 6px; cursor: pointer; box-shadow: 0 4px 10px rgba(16, 185, 129, 0.3);">🎲 Sorteador Livre</button>
+            <button onclick="toggleFinanceiro()" style="background: ${corVisibilidade}; color: #fff; font-family: 'Bebas Neue', sans-serif; font-size: 20px; padding: 10px 20px; border: none; border-radius: 6px; cursor: pointer; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);">${iconeVisibilidade}</button>
         </div>
     `;
   }
@@ -2322,22 +2465,18 @@ window.renderSorteios = function () {
     html += `<div style="grid-column: 1 / -1; background: #1e293b; padding: 30px; text-align: center; border-radius: 12px; border: 1px dashed #475569; color: #94a3b8;">Nenhum sorteio ativo no momento. Fique de olho!</div>`;
   } else {
     window.LISTA_RIFAS.forEach((r, index) => {
-
       const isConcluida = r.status === 'Concluído';
-
 
       let adminControls = '';
       let btnSortearDireto = '';
+      let painelFinanceiro = '';
 
       if (targetRole === 'admin' || targetRole === 'gerente') {
-
         const safeTitle = r.titulo.replace(/'/g, "\\'");
-
 
         if (!isConcluida) {
           btnSortearDireto = `<button onclick="abrirSorteadorDaRifa('${safeTitle}')" style="background: #10b981; color: #000; border: none; padding: 10px 15px; border-radius: 6px; cursor: pointer; font-family: 'Bebas Neue', sans-serif; font-size: 18px; letter-spacing: 1px; transition: 0.2s; box-shadow: 0 4px 10px rgba(16,185,129,0.3);">🎲 Sortear</button>`;
         }
-
 
         adminControls = `
             <div style="display: flex; gap: 8px; margin-top: 15px;">
@@ -2346,8 +2485,27 @@ window.renderSorteios = function () {
                 ${!isConcluida ? `<button onclick="concluirRifa(${index})" style="flex: 1; background: #10b981; color: #000; border: none; padding: 8px; border-radius: 4px; cursor: pointer; font-size: 13px; font-weight: bold;">✅ Concluir</button>` : ''}
             </div>
         `;
-      }
 
+        if (r.custo > 0 && r.cotas > 0 && window.mostrarFinanceiro) {
+          const totalArrecadado = r.preco * r.cotas;
+          const lucroLiquido = totalArrecadado - r.custo;
+          const margem = totalArrecadado > 0 ? ((lucroLiquido / totalArrecadado) * 100).toFixed(1) : 0;
+          const corLucro = lucroLiquido >= 0 ? '#22c55e' : '#ef4444';
+
+          painelFinanceiro = `
+            <div style="margin-top: 15px; padding: 12px; background: rgba(0,0,0,0.25); border-radius: 8px; border: 1px dashed #334155;">
+              <div style="display: flex; justify-content: space-between; margin-bottom: 6px; font-family: 'Barlow', sans-serif; font-size: 13px;">
+                <span style="color: var(--muted);">Arrecadação Bruta:</span>
+                <strong style="color: #fff;">R$ ${totalArrecadado.toFixed(2)}</strong>
+              </div>
+              <div style="display: flex; justify-content: space-between; font-family: 'Barlow', sans-serif; font-size: 13px;">
+                <span style="color: var(--muted);">Lucro Líquido (Margem):</span>
+                <strong style="color: ${corLucro};">R$ ${lucroLiquido.toFixed(2)} (${margem}%)</strong>
+              </div>
+            </div>
+          `;
+        }
+      }
 
       const btnCompra = !isConcluida
         ? `<a href="https://wa.me/${whatsappNumber}?text=Olá! Gostaria de reservar números para a rifa: ${r.titulo}" target="_blank" style="background: #a855f7; color: #fff; text-decoration: none; padding: 10px 15px; border-radius: 6px; font-family: 'Bebas Neue', sans-serif; font-size: 16px; letter-spacing: 1px; transition: 0.2s; display: flex; align-items: center;">Comprar</a>`
@@ -2355,7 +2513,7 @@ window.renderSorteios = function () {
 
       html += `
         <div style="background: #1e293b; border: 1px solid ${isConcluida ? '#10b981' : '#334155'}; border-radius: 12px; overflow: hidden; position: relative; opacity: ${isConcluida ? '0.8' : '1'};">
-            <img src="${r.imagem}" style="width: 100%; height: 220px; object-fit: contain; background-color: #0f172a; border-radius: 8px 8px 0 0;" filter: ${isConcluida ? 'grayscale(100%)' : 'none'};" onerror="this.src='assets/img/placeholder.png'">
+            <img src="${r.imagem}" style="width: 100%; height: 220px; object-fit: contain; background-color: #0f172a; border-radius: 8px 8px 0 0; filter: ${isConcluida ? 'grayscale(100%)' : 'none'};" onerror="this.src='assets/img/placeholder.png'">
             <span style="position: absolute; top: 10px; right: 10px; background: ${isConcluida ? '#10b981' : '#22c55e'}; color: #000; font-size: 11px; font-weight: bold; padding: 4px 8px; border-radius: 4px; text-transform: uppercase;">
                 ${isConcluida ? 'Concluída' : 'Ativo'}
             </span>
@@ -2374,6 +2532,7 @@ window.renderSorteios = function () {
                         ${btnCompra}
                     </div>
                 </div>
+                ${painelFinanceiro}
                 ${adminControls}
             </div>
         </div>
@@ -2383,9 +2542,6 @@ window.renderSorteios = function () {
   html += `</div>`;
   view.innerHTML = html;
 };
-
-
-
 
 window.concluirRifa = async function (index) {
   if (!confirm('Deseja marcar esta rifa como CONCLUÍDA?\n\nEla não aceitará mais novas reservas e mudará visualmente para Encerrada.')) return;
@@ -2441,21 +2597,15 @@ window.abrirSorteadorDaRifa = function (tituloDaRifa = 'Sorteio da Rifa') {
   }
 }
 
-
-
-
-
-
-
-
 window.abrirModalRifa = function () {
   document.getElementById('rifa-edit-index').value = -1;
   document.getElementById('rifa-form-titulo').value = '';
   document.getElementById('rifa-form-desc').value = '';
   document.getElementById('rifa-form-preco').value = '';
   document.getElementById('rifa-form-rpms').value = '';
-  
-  // Limpa o campo de foto e o preview
+  document.getElementById('rifa-form-custo').value = '';
+  document.getElementById('rifa-form-cotas').value = '';
+
   document.getElementById('rifa-form-imagem-file').value = '';
   document.getElementById('rifa-form-imagem-base64').value = '';
   const preview = document.getElementById('rifa-form-imagem-preview');
@@ -2473,8 +2623,9 @@ window.editarRifa = function (index) {
   document.getElementById('rifa-form-desc').value = r.desc;
   document.getElementById('rifa-form-preco').value = r.preco;
   document.getElementById('rifa-form-rpms').value = r.rpms;
-  
-  // Carrega a foto existente no modo edição
+  document.getElementById('rifa-form-custo').value = r.custo || '';
+  document.getElementById('rifa-form-cotas').value = r.cotas || '';
+
   document.getElementById('rifa-form-imagem-file').value = '';
   document.getElementById('rifa-form-imagem-base64').value = r.imagem || '';
   const preview = document.getElementById('rifa-form-imagem-preview');
@@ -2493,15 +2644,15 @@ window.salvarRifa = async function () {
   const index = parseInt(document.getElementById('rifa-edit-index').value);
   const titulo = document.getElementById('rifa-form-titulo').value.trim();
   const desc = document.getElementById('rifa-form-desc').value.trim();
-  const preco = document.getElementById('rifa-form-preco').value.trim();
-  const rpms = document.getElementById('rifa-form-rpms').value;
-  
-  // Pega a foto comprimida do campo invisível
+  const preco = parseFloat(document.getElementById('rifa-form-preco').value.replace(',', '.'));
+  const rpms = parseInt(document.getElementById('rifa-form-rpms').value);
+  const custo = parseFloat(document.getElementById('rifa-form-custo').value.replace(',', '.')) || 0;
+  const cotas = parseInt(document.getElementById('rifa-form-cotas').value) || 0;
   const imagem = document.getElementById('rifa-form-imagem-base64').value;
 
-  if (!titulo || !preco || !rpms) return alert('Por favor, preencha o Título, Preço e RPMs!');
+  if (!titulo || !preco || !rpms || !imagem) return alert('Por favor, preencha o Título, Preço, RPMs e adicione a Imagem do prêmio!');
 
-  const rifaData = { titulo, imagem, desc, preco, rpms, status: 'Ativo' };
+  const rifaData = { titulo, imagem, desc, preco, rpms, custo, cotas, status: 'Ativo' };
 
   if (index >= 0) {
     rifaData.id = window.LISTA_RIFAS[index].id;
@@ -2513,13 +2664,14 @@ window.salvarRifa = async function () {
   }
 
   try {
-    const { doc, setDoc } = await import("https://www.gstatic.com/firebasejs/12.13.0/firebase-firestore.js");
-    await setDoc(doc(db, 'lojas', window.lojaIdAtual), { rifas: window.LISTA_RIFAS }, { merge: true });
+    const lojaDestino = window.lojaAtiva || window.lojaIdAtual.split(',')[0].trim();
+
+    await setDoc(doc(db, 'lojas', lojaDestino), { rifas: window.LISTA_RIFAS }, { merge: true });
 
     document.getElementById('modal-rifa-form').style.display = 'none';
     window.renderSorteios();
   } catch (e) {
-    console.error("Erro ao salvar a rifa:", e);
+    console.error("Erro ao salvar rifa:", e);
     alert('Erro ao comunicar com o servidor.');
   }
 }
@@ -2530,8 +2682,8 @@ window.excluirRifa = async function (index) {
   window.LISTA_RIFAS.splice(index, 1);
 
   try {
-    const { doc, setDoc } = await import("https://www.gstatic.com/firebasejs/12.13.0/firebase-firestore.js");
-    await setDoc(doc(db, 'lojas', window.lojaIdAtual), { rifas: window.LISTA_RIFAS }, { merge: true });
+    const lojaDestino = window.lojaAtiva || window.lojaIdAtual.split(',')[0].trim();
+    await setDoc(doc(db, 'lojas', lojaDestino), { rifas: window.LISTA_RIFAS }, { merge: true });
     window.renderSorteios();
   } catch (e) {
     console.error("Erro ao excluir rifa:", e);
@@ -2544,18 +2696,14 @@ window.concluirRifa = async function (index) {
 
   try {
     window.LISTA_RIFAS[index].status = 'Concluído';
-    const { doc, setDoc } = await import("https://www.gstatic.com/firebasejs/12.13.0/firebase-firestore.js");
-
-    await setDoc(doc(db, 'lojas', window.lojaIdAtual), { rifas: window.LISTA_RIFAS }, { merge: true });
+    const lojaDestino = window.lojaAtiva || window.lojaIdAtual.split(',')[0].trim();
+    await setDoc(doc(db, 'lojas', lojaDestino), { rifas: window.LISTA_RIFAS }, { merge: true });
     window.renderSorteios();
   } catch (e) {
     console.error("Erro ao concluir rifa:", e);
     alert('Erro ao atualizar o status da rifa.');
   }
 };
-
-
-
 
 window.realizarSorteioVirtual = function () {
   const minVal = parseInt(document.getElementById('sort-min').value);
@@ -3073,7 +3221,7 @@ window.gerarInfografico = function () {
     };
 
     html2canvas(infoDiv, { scale: 1, useCORS: true, backgroundColor: '#0f172a' }).then(canvas => {
-      
+
       HTMLCanvasElement.prototype.getContext = originalGetContext;
 
       canvas.toBlob(async (blob) => {
@@ -3097,8 +3245,8 @@ window.gerarInfografico = function () {
           } catch (err) {
             console.log("Compartilhamento cancelado ou falhou:", err);
           }
-        } 
-    
+        }
+
         else {
           const link = document.createElement('a');
           link.download = 'minha_colecao_hw.jpg';
@@ -3178,7 +3326,7 @@ window.alterarPrecoItem = async function (id, isKaido) {
 //     e.target.style.background = window.showOnlyTrades ? '#16a34a' : '#ea580c';
 //     e.target.innerHTML = window.showOnlyTrades ? '✅ Mostrando Apenas Repetidos' : '🔄 Garagem de Trocas';
 //     currentPage = 1;
-    
+
 //     if (typeof pageType !== 'undefined' && pageType.includes('kaido') && window.renderKaidoGrid) {
 //       window.renderKaidoGrid();
 //     } else {
@@ -3273,16 +3421,16 @@ window.alterarPrecoItem = async function (id, isKaido) {
 // --- COMPRESSOR DE IMAGENS PARA A RIFA ---
 document.addEventListener('DOMContentLoaded', () => {
   const fileInputRifa = document.getElementById('rifa-form-imagem-file');
-  
+
   if (fileInputRifa) {
-    fileInputRifa.addEventListener('change', function(e) {
+    fileInputRifa.addEventListener('change', function (e) {
       const file = e.target.files[0];
       if (!file) return;
 
       const reader = new FileReader();
-      reader.onload = function(event) {
+      reader.onload = function (event) {
         const img = new Image();
-        img.onload = function() {
+        img.onload = function () {
           // Cria um canvas para comprimir a imagem (Máx 800px)
           const canvas = document.createElement('canvas');
           const MAX_WIDTH = 800;
@@ -3309,7 +3457,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
           // Converte para JPG com 70% de qualidade (Levíssimo pro Firebase)
           const dataUrl = canvas.toDataURL('image/jpeg', 0.7);
-          
+
           document.getElementById('rifa-form-imagem-base64').value = dataUrl;
           const preview = document.getElementById('rifa-form-imagem-preview');
           preview.src = dataUrl;
@@ -3321,3 +3469,178 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 });
+
+window.gravarHistoricoMensal = async function () {
+  if (!sessionUid || isPublicView) return;
+
+  const dataAtual = new Date();
+  const anoMes = `${dataAtual.getFullYear()}-${String(dataAtual.getMonth() + 1).padStart(2, '0')}`;
+
+  try {
+    const hRef = doc(db, 'history_patrimonio', sessionUid);
+    const snap = await getDoc(hRef);
+    const dadosAtuais = snap.exists() ? snap.data() : {};
+
+    if (dadosAtuais[anoMes]) return;
+
+    let patrimonioTotal = 0;
+
+    Object.keys(userCollection).forEach(carId => {
+      let qty = userCollection[carId];
+      if (qty > 0) {
+        let car = RAW.find(r => r && r.id === carId);
+        let valorUnitario = userPrices[carId];
+        if (typeof valorUnitario === 'undefined') {
+          valorUnitario = 25;
+          if (car) {
+            if (car.series && car.series.toLowerCase().includes('super')) valorUnitario = 150;
+            if (car.price) valorUnitario = parseFloat(car.price);
+          }
+        }
+        patrimonioTotal += (valorUnitario * qty);
+      }
+    });
+
+    Object.keys(userKaidoCollection).forEach(codigo => {
+      let qty = userKaidoCollection[codigo];
+      if (qty > 0) {
+        let valorKaido = userKaidoPrices[codigo];
+        if (typeof valorKaido === 'undefined') valorKaido = 180;
+        patrimonioTotal += (valorKaido * qty);
+      }
+    });
+
+    dadosAtuais[anoMes] = {
+      valor: patrimonioTotal,
+      dataFormato: dataAtual.toLocaleDateString('pt-BR')
+    };
+
+    await setDoc(hRef, dadosAtuais, { merge: true });
+  } catch (e) {
+    console.error(e);
+  }
+};
+
+window.gerarArtePromocional = async function (itemId, isKaido) {
+  const car = isKaido ? KAIDO_DATA.find(c => c.codigo === itemId) : typeof RAW !== 'undefined' ? RAW.find(c => c.id === itemId) : null;
+  if (!car) return;
+
+  const nomeCarro = isKaido ? car.modelo : car.name;
+  let imgCarro = isKaido ? car.caminho_imagem : car.image;
+  const seriesCarro = isKaido ? car.fabricante : (car.series || 'Exclusivo');
+  const anoCarro = isKaido ? car.escala : (car.year || '');
+
+  try {
+    const proxyUrl = 'https://api.allorigins.win/raw?url=' + encodeURIComponent(imgCarro);
+    const response = await fetch(proxyUrl);
+    const blob = await response.blob();
+    imgCarro = await new Promise((resolve) => {
+      const reader = new FileReader();
+      reader.onloadend = () => resolve(reader.result);
+      reader.readAsDataURL(blob);
+    });
+  } catch (e) {
+    console.warn(e);
+  }
+
+  const infoDiv = document.createElement('div');
+  infoDiv.id = 'render-promo';
+  infoDiv.style.cssText = `
+    position: fixed; top: -9999px; left: -9999px;
+    width: 1080px; height: 1920px;
+    background: radial-gradient(circle at 50% 30%, #1e293b 0%, #0f172a 100%);
+    display: flex; flex-direction: column; align-items: center; justify-content: space-between;
+    font-family: 'Barlow', sans-serif; color: #fff; z-index: -1; padding: 120px 80px; box-sizing: border-box;
+  `;
+
+  infoDiv.innerHTML = `
+    <div style="text-align: center; width: 100%; position: relative;">
+        <div style="position: absolute; top: 0; left: 50%; transform: translateX(-50%); width: 300px; height: 300px; background: rgba(168, 85, 247, 0.4); filter: blur(100px); border-radius: 50%;"></div>
+        <div style="font-family: 'Bebas Neue', sans-serif; font-size: 80px; color: #cbd5e1; letter-spacing: 6px; position: relative; z-index: 2;">GARAGEM EXCLUSIVA</div>
+        <div style="width: 150px; height: 6px; background: #a855f7; margin: 20px auto 0; box-shadow: 0 0 20px #a855f7; position: relative; z-index: 2;"></div>
+    </div>
+
+    <div style="display: flex; flex-direction: column; align-items: center; width: 100%; z-index: 2;">
+        <div style="background: rgba(255,255,255,0.03); border: 2px solid rgba(255,255,255,0.1); border-radius: 30px; padding: 40px; box-shadow: 0 20px 50px rgba(0,0,0,0.5); margin-bottom: 70px; position: relative; width: 900px; height: 700px; display: flex; justify-content: center; align-items: center;">
+            <div style="position: absolute; top: -30px; right: -20px; background: #10b981; color: #000; font-family: 'Bebas Neue', sans-serif; font-size: 45px; padding: 15px 40px; border-radius: 15px; box-shadow: 0 0 40px rgba(16,185,129,0.8); transform: rotate(5deg); z-index: 10;">
+                DESTAQUE
+            </div>
+            <div style="width: 100%; height: 100%; display: flex; justify-content: center; align-items: center;">
+                <img id="promo-img-target" src="${imgCarro}" style="max-width: 100%; max-height: 100%; display: block;">
+            </div>
+        </div>
+        
+        <div style="font-family: 'Bebas Neue', sans-serif; font-size: 110px; color: #fff; text-align: center; line-height: 1.1; text-transform: uppercase; text-shadow: 0 4px 15px rgba(0,0,0,0.5);">
+            ${nomeCarro}
+        </div>
+        <div style="font-size: 45px; color: #3b82f6; font-weight: bold; margin-top: 25px; text-transform: uppercase; letter-spacing: 3px; text-shadow: 0 0 20px rgba(59,130,246,0.6);">
+            ${seriesCarro} ${anoCarro ? `• ${anoCarro}` : ''}
+        </div>
+    </div>
+
+    <div style="width: 100%; text-align: center; background: rgba(15, 23, 42, 0.8); padding: 50px; border-radius: 30px; border: 4px dashed #a855f7; position: relative; overflow: hidden;">
+        <div style="position: absolute; top: -50px; right: -50px; width: 200px; height: 200px; background: rgba(59,130,246,0.5); filter: blur(80px);"></div>
+        <div style="font-size: 40px; color: #cbd5e1; margin-bottom: 20px; font-weight: bold;">DISPONÍVEL AGORA NA GARAGEM!</div>
+        <div style="font-family: 'Bebas Neue', sans-serif; font-size: 85px; color: #a855f7; text-shadow: 0 0 30px rgba(168,85,247,0.8); letter-spacing: 2px;">
+            LINK NA BIO 📲
+        </div>
+    </div>
+  `;
+
+  document.body.appendChild(infoDiv);
+
+  const dispararGeracao = () => {
+    const originalGetContext = HTMLCanvasElement.prototype.getContext;
+    HTMLCanvasElement.prototype.getContext = function (type, contextAttributes) {
+      if (type === '2d') {
+        contextAttributes = contextAttributes || {};
+        contextAttributes.willReadFrequently = true;
+      }
+      return originalGetContext.call(this, type, contextAttributes);
+    };
+
+    html2canvas(infoDiv, { scale: 1, useCORS: true, allowTaint: true, backgroundColor: '#0f172a' }).then(canvas => {
+      HTMLCanvasElement.prototype.getContext = originalGetContext;
+      canvas.toBlob(async (blob) => {
+        if (!blob) {
+          alert("Erro ao gerar a arte promocional.");
+          document.body.removeChild(infoDiv);
+          return;
+        }
+        const file = new File([blob], `Promo_${nomeCarro.replace(/\s+/g, '_')}.jpg`, { type: 'image/jpeg' });
+        const isMobile = /Android|iPhone|iPad/i.test(navigator.userAgent);
+
+        if (isMobile && navigator.canShare && navigator.canShare({ files: [file] })) {
+          try {
+            await navigator.share({
+              files: [file],
+              title: 'Destaque na Garagem',
+              text: 'Dá uma olhada nessa miniatura disponível na garagem! 🔥'
+            });
+          } catch (err) {
+            console.log(err);
+          }
+        } else {
+          const link = document.createElement('a');
+          link.download = `Promo_${nomeCarro.replace(/\s+/g, '_')}.jpg`;
+          link.href = canvas.toDataURL('image/jpeg', 0.9);
+          link.click();
+        }
+        document.body.removeChild(infoDiv);
+      }, 'image/jpeg', 0.9);
+    }).catch(err => {
+      HTMLCanvasElement.prototype.getContext = originalGetContext;
+      console.error(err);
+      document.body.removeChild(infoDiv);
+    });
+  };
+
+  const imgTarget = document.getElementById('promo-img-target');
+
+  if (imgTarget.complete && imgTarget.naturalWidth !== 0) {
+    setTimeout(dispararGeracao, 200);
+  } else {
+    imgTarget.onload = () => setTimeout(dispararGeracao, 200);
+    imgTarget.onerror = () => setTimeout(dispararGeracao, 200);
+  }
+};
