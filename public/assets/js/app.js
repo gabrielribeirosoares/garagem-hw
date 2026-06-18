@@ -3526,21 +3526,26 @@ window.gerarArtePromocional = async function (itemId, isKaido) {
   if (!car) return;
 
   const nomeCarro = isKaido ? car.modelo : car.name;
-  let imgCarro = isKaido ? car.caminho_imagem : car.image;
+  const imgOriginal = isKaido ? car.caminho_imagem : car.image;
   const seriesCarro = isKaido ? car.fabricante : (car.series || 'Exclusivo');
   const anoCarro = isKaido ? car.escala : (car.year || '');
 
+  let imgLimpa = imgOriginal;
+
   try {
-    const proxyUrl = 'https://api.allorigins.win/raw?url=' + encodeURIComponent(imgCarro);
+    const proxyUrl = 'https://wsrv.nl/?url=' + encodeURIComponent(imgOriginal) + '&output=png';
     const response = await fetch(proxyUrl);
-    const blob = await response.blob();
-    imgCarro = await new Promise((resolve) => {
-      const reader = new FileReader();
-      reader.onloadend = () => resolve(reader.result);
-      reader.readAsDataURL(blob);
-    });
+    if (response.ok) {
+      const blob = await response.blob();
+      imgLimpa = await new Promise((resolve, reject) => {
+        const reader = new FileReader();
+        reader.onloadend = () => resolve(reader.result);
+        reader.onerror = reject;
+        reader.readAsDataURL(blob);
+      });
+    }
   } catch (e) {
-    console.warn(e);
+    console.warn('Falha no proxy de imagem:', e);
   }
 
   const infoDiv = document.createElement('div');
@@ -3566,7 +3571,7 @@ window.gerarArtePromocional = async function (itemId, isKaido) {
                 DESTAQUE
             </div>
             <div style="width: 100%; height: 100%; display: flex; justify-content: center; align-items: center;">
-                <img id="promo-img-target" src="${imgCarro}" style="max-width: 100%; max-height: 100%; display: block;">
+                <img id="promo-img-target" src="${imgLimpa}" style="max-width: 100%; max-height: 100%; display: block;">
             </div>
         </div>
         
@@ -3599,7 +3604,7 @@ window.gerarArtePromocional = async function (itemId, isKaido) {
       return originalGetContext.call(this, type, contextAttributes);
     };
 
-    html2canvas(infoDiv, { scale: 1, useCORS: true, allowTaint: true, backgroundColor: '#0f172a' }).then(canvas => {
+    html2canvas(infoDiv, { scale: 1, useCORS: true, backgroundColor: '#0f172a' }).then(canvas => {
       HTMLCanvasElement.prototype.getContext = originalGetContext;
       canvas.toBlob(async (blob) => {
         if (!blob) {
@@ -3609,7 +3614,7 @@ window.gerarArtePromocional = async function (itemId, isKaido) {
         }
         const file = new File([blob], `Promo_${nomeCarro.replace(/\s+/g, '_')}.jpg`, { type: 'image/jpeg' });
         const isMobile = /Android|iPhone|iPad/i.test(navigator.userAgent);
-
+        
         if (isMobile && navigator.canShare && navigator.canShare({ files: [file] })) {
           try {
             await navigator.share({
@@ -3636,11 +3641,11 @@ window.gerarArtePromocional = async function (itemId, isKaido) {
   };
 
   const imgTarget = document.getElementById('promo-img-target');
-
+  
   if (imgTarget.complete && imgTarget.naturalWidth !== 0) {
     setTimeout(dispararGeracao, 200);
   } else {
     imgTarget.onload = () => setTimeout(dispararGeracao, 200);
-    imgTarget.onerror = () => setTimeout(dispararGeracao, 200);
+    imgTarget.onerror = () => setTimeout(dispararGeracao, 200); 
   }
 };
