@@ -1948,7 +1948,7 @@ export const RAW = [
         "part": "JJJ82",
         "hw": "106",
         "cas": "E",
-        "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJJ95_Mazda_RX-3.jpg"
+        "image": "https://pub-0cdcb80ac9eb425cade74a8a804cef22.r2.dev/2026_JJJ82_Mazda_RX-3.jpg"
     },
     {
         "year": 2026,
