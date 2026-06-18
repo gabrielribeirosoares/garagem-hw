@@ -2111,27 +2111,45 @@ window.renderStats = async function () {
   const container = document.getElementById('stats-view');
   if (!container) return;
 
+  if (sessionUid && Object.keys(window.userMarketPrices || {}).length === 0) {
+    try {
+      const { doc, getDoc } = await import("https://www.gstatic.com/firebasejs/12.13.0/firebase-firestore.js");
+      const dRef = doc(db, 'collections', sessionUid);
+      const dSnap = await getDoc(dRef);
+      if (dSnap.exists()) {
+        window.userMarketPrices = dSnap.data().marketPrices || {};
+      }
+    } catch (e) {
+      console.error(e);
+    }
+  }
+
   let totalHW = 0, totalKaido = 0, totalWishlist = 0;
   let anosCount = {};
-  let patrimonioEstimado = 0;
+  let totalCusto = 0;
+  let totalMercado = 0;
 
   Object.keys(userCollection).forEach(carId => {
     let qty = userCollection[carId];
     if (qty > 0) {
       totalHW += qty;
       let car = typeof RAW !== 'undefined' ? RAW.find(r => r && r.id === carId) : null;
-      let valorUnitario = typeof userPrices !== 'undefined' && userPrices[carId] !== undefined ? userPrices[carId] : 25;
-
+      let isSuper = car && car.series && car.series.toLowerCase().includes('super');
+      
+      let custoUnitario = typeof userPrices !== 'undefined' && userPrices[carId] !== undefined ? parseFloat(userPrices[carId]) : (isSuper ? 150 : 25);
+      
       if (typeof userPrices === 'undefined' || typeof userPrices[carId] === 'undefined') {
-        if (car) {
-          if (car.year) anosCount[car.year] = (anosCount[car.year] || 0) + qty;
-          if (car.series && car.series.toLowerCase().includes('super')) valorUnitario = 150;
-          if (car.price) valorUnitario = parseFloat(car.price);
-        }
-      } else {
-        if (car && car.year) anosCount[car.year] = (anosCount[car.year] || 0) + qty;
+        if (car && car.price) custoUnitario = parseFloat(car.price);
       }
-      patrimonioEstimado += (valorUnitario * qty);
+      
+      if (car && car.year) anosCount[car.year] = (anosCount[car.year] || 0) + qty;
+      
+      let mercadoUnitario = (window.userMarketPrices && window.userMarketPrices[carId]) 
+        ? window.userMarketPrices[carId] 
+        : (isSuper ? 250 : 35);
+
+      totalCusto += (custoUnitario * qty);
+      totalMercado += (mercadoUnitario * qty);
     }
   });
 
@@ -2140,8 +2158,14 @@ window.renderStats = async function () {
       let qty = userKaidoCollection[codigo];
       if (qty > 0) {
         totalKaido += qty;
-        let valorKaido = typeof userKaidoPrices !== 'undefined' && userKaidoPrices[codigo] !== undefined ? userKaidoPrices[codigo] : 180;
-        patrimonioEstimado += (valorKaido * qty);
+        let custoKaido = typeof userKaidoPrices !== 'undefined' && userKaidoPrices[codigo] !== undefined ? parseFloat(userKaidoPrices[codigo]) : 180;
+        
+        let mercadoKaido = (window.userMarketPrices && window.userMarketPrices[codigo]) 
+          ? window.userMarketPrices[codigo] 
+          : 250;
+        
+        totalCusto += (custoKaido * qty);
+        totalMercado += (mercadoKaido * qty);
       }
     });
   }
@@ -2159,7 +2183,14 @@ window.renderStats = async function () {
   let anosOrdenados = Object.keys(anosCount).sort((a, b) => anosCount[b] - anosCount[a]).slice(0, 5);
   let valoresAnos = anosOrdenados.map(ano => anosCount[ano]);
 
-  const valorFormatado = patrimonioEstimado.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
+  const custoFormatado = totalCusto.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
+  const mercadoFormatado = totalMercado.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
+  
+  let lucroLiquido = totalMercado - totalCusto;
+  let rentabilidadePct = totalCusto > 0 ? ((lucroLiquido / totalCusto) * 100).toFixed(1) : 0;
+  let corRentabilidade = lucroLiquido >= 0 ? '#10b981' : '#ef4444';
+  let iconeRent = lucroLiquido >= 0 ? '🚀' : '📉';
+  let iconeSinal = lucroLiquido >= 0 ? '+' : '';
 
   let historicoLabels = [];
   let historicoData = [];
@@ -2186,17 +2217,17 @@ window.renderStats = async function () {
   if (historicoLabels.length === 0) {
     const dataAtual = new Date();
     historicoLabels.push(`${String(dataAtual.getMonth() + 1).padStart(2, '0')}/${dataAtual.getFullYear()}`);
-    historicoData.push(patrimonioEstimado);
+    historicoData.push(totalCusto);
   } else {
     const dataAtual = new Date();
     const labelAtual = `${String(dataAtual.getMonth() + 1).padStart(2, '0')}/${dataAtual.getFullYear()}`;
 
     if (!historicoLabels.includes(labelAtual)) {
       historicoLabels.push(labelAtual);
-      historicoData.push(patrimonioEstimado);
+      historicoData.push(totalCusto);
     } else {
       const idx = historicoLabels.indexOf(labelAtual);
-      historicoData[idx] = patrimonioEstimado;
+      historicoData[idx] = totalCusto;
     }
   }
 
@@ -2212,19 +2243,9 @@ window.renderStats = async function () {
             </button>
         </div>
     </div>
-    
-    <div style="background: linear-gradient(135deg, #1e293b, #0f172a); padding: 25px; border-radius: 12px; border: 1px solid #10b981; margin-bottom: 25px; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 15px;">
-        <div>
-            <div style="color: #10b981; font-family: 'Bebas Neue', sans-serif; font-size: 20px; letter-spacing: 1px;">Patrimônio Estimado</div>
-            <div style="color: #fff; font-size: 36px; font-weight: bold; font-family: 'Bebas Neue', sans-serif;">${valorFormatado}</div>
-        </div>
-        <div style="background: rgba(16, 185, 129, 0.15); padding: 10px 20px; border-radius: 8px; color: #10b981; font-weight: bold; font-size: 14px; border: 1px solid rgba(16, 185, 129, 0.3);">
-            📈 Base de Cálculo: Preços Registrados
-        </div>
-    </div>
-
+  
     <div style="background: var(--surface); padding: 20px; border-radius: 12px; border: 1px solid var(--border); margin-bottom: 30px;">
-        <h3 style="color: #cbd5e1; margin-top: 0; margin-bottom: 20px; font-size: 16px; font-family: 'Barlow Condensed'; text-transform: uppercase;">Evolução do Patrimônio</h3>
+        <h3 style="color: #cbd5e1; margin-top: 0; margin-bottom: 20px; font-size: 16px; font-family: 'Barlow Condensed'; text-transform: uppercase;">Evolução do Patrimônio (Custo Investido)</h3>
         <div style="position: relative; width: 100%; height: 250px;">
             <canvas id="chartHistorico"></canvas>
         </div>
@@ -2276,40 +2297,41 @@ window.renderStats = async function () {
     </div>
   `;
 
-  const carrosPossuidos = [];
+  const chavesCompradas = [];
   if (typeof userCollection !== 'undefined') {
     Object.keys(userCollection).forEach(id => {
-      if (userCollection[id] > 0) {
-        const car = typeof RAW !== 'undefined' ? RAW.find(c => c && c.id === id) : null;
-        if (car) carrosPossuidos.push(car);
-      }
+      if (userCollection[id] > 0) chavesCompradas.push(id);
     });
   }
 
-  carrosPossuidos.sort((a, b) => {
-    if (b.year !== a.year) return (b.year || 0) - (a.year || 0);
-    return (a.name || '').localeCompare(b.name || '');
+  chavesCompradas.sort((a, b) => {
+    const timeA = (typeof window.userTimestamps !== 'undefined' && window.userTimestamps[a]) ? window.userTimestamps[a] : 0;
+    const timeB = (typeof window.userTimestamps !== 'undefined' && window.userTimestamps[b]) ? window.userTimestamps[b] : 0;
+    return timeB - timeA;
   });
 
-  const ultimas = carrosPossuidos.slice(0, 5);
+  const ultimas = chavesCompradas.slice(0, 5);
 
   let timelineHTML = `
     <div style="margin-top: 30px; margin-bottom: 30px; background: var(--surface); border-radius: 12px; padding: 20px; border: 1px solid var(--border);">
-        <h3 style="font-family: 'Bebas Neue', sans-serif; color: #fff; font-size: 24px; margin-top: 0; margin-bottom: 15px;">🌟 Destaques (Compras recentes)</h3>
+        <h3 style="font-family: 'Bebas Neue', sans-serif; color: #fff; font-size: 24px; margin-top: 0; margin-bottom: 15px;">⏱️ Últimas Aquisições (Hot Wheels)</h3>
         <div style="display: flex; flex-direction: column; gap: 10px;">`;
 
   if (ultimas.length === 0) {
     timelineHTML += `<div style="color: var(--muted); font-size: 14px;">Nenhuma miniatura na garagem ainda.</div>`;
   } else {
-    ultimas.forEach(carro => {
-      timelineHTML += `
-              <div style="display: flex; align-items: center; gap: 15px; background: #0f172a; padding: 10px; border-radius: 8px; border: 1px solid #475569;">
-                  <img src="${carro.image || 'assets/img/placeholder.png'}" loading="lazy" style="width: 50px; height: 50px; object-fit: cover; border-radius: 6px;">
-                  <div>
-                      <div style="font-weight: bold; color: #fff; font-size: 16px;">${carro.name}</div>
-                      <div style="font-size: 12px; color: #94a3b8;">${carro.series || 'Sem série'} | Ano: ${carro.year}</div>
-                  </div>
-              </div>`;
+    ultimas.forEach(id => {
+      const carro = typeof RAW !== 'undefined' ? RAW.find(c => c && c.id === id) : null;
+      if (carro) {
+        timelineHTML += `
+                <div style="display: flex; align-items: center; gap: 15px; background: #0f172a; padding: 10px; border-radius: 8px; border: 1px solid #475569;">
+                    <img src="${carro.image || 'assets/img/placeholder.png'}" loading="lazy" style="width: 50px; height: 50px; object-fit: cover; border-radius: 6px;">
+                    <div>
+                        <div style="font-weight: bold; color: #fff; font-size: 16px;">${carro.name}</div>
+                        <div style="font-size: 12px; color: #94a3b8;">${carro.series || 'Sem série'} | Ano: ${carro.year}</div>
+                    </div>
+                </div>`;
+      }
     });
   }
   timelineHTML += `</div></div>`;
@@ -2327,12 +2349,12 @@ window.renderStats = async function () {
       data: {
         labels: historicoLabels,
         datasets: [{
-          label: 'Patrimônio Estimado (R$)',
+          label: 'Custo Investido (R$)',
           data: historicoData,
-          borderColor: '#10b981',
-          backgroundColor: 'rgba(16, 185, 129, 0.15)',
+          borderColor: '#3b82f6',
+          backgroundColor: 'rgba(59, 130, 246, 0.15)',
           borderWidth: 2,
-          pointBackgroundColor: '#10b981',
+          pointBackgroundColor: '#3b82f6',
           pointRadius: 4,
           pointHoverRadius: 6,
           fill: true,
