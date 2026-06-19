@@ -3571,24 +3571,8 @@ window.gerarArtePromocional = async function (itemId, isKaido) {
   const seriesCarro = isKaido ? car.fabricante : (car.series || 'Exclusivo');
   const anoCarro = isKaido ? car.escala : (car.year || '');
 
-  // ESTRATÉGIA DE IMAGEM: Conversão rápida para Base64 via proxy robusto.
-  try {
-    const proxyUrl = 'https://corsproxy.io/?' + encodeURIComponent(imgCarro);
-    const response = await fetch(proxyUrl);
-    if (!response.ok) throw new Error("CORS proxy failed.");
-    const blob = await response.blob();
-    imgCarro = await new Promise((resolve, reject) => {
-      const reader = new FileReader();
-      reader.onloadend = () => resolve(reader.result);
-      reader.onerror = reject;
-      reader.readAsDataURL(blob);
-    });
-  } catch (e) {
-    console.error("Falha ao carregar imagem via proxy. Gerando arte sem imagem.", e);
-  }
-
-  // Define se vamos renderizar com ou sem imagem (A imagem deve ser base64)
-  const imageLoaded = imgCarro && imgCarro.startsWith('data:image');
+  // O "PLANO C": Proxy focado em imagens, ideal para rodar localmente no VS Code.
+  const photoProxyUrl = `https://wsrv.nl/?url=${encodeURIComponent(imgCarro)}&output=jpeg&q=90&default=${encodeURIComponent('https://via.placeholder.com/600x400/0f172a/cbd5e1?text=Imagem+Indisponível')}`;
 
   const infoDiv = document.createElement('div');
   infoDiv.id = 'render-promo';
@@ -3600,129 +3584,91 @@ window.gerarArtePromocional = async function (itemId, isKaido) {
     font-family: 'Barlow', sans-serif; color: #fff; z-index: -1; padding: 120px 80px; box-sizing: border-box;
   `;
 
-  // Renderiza a arte completa com a imagem (Base64 puro)
-  if (imageLoaded) {
-      infoDiv.innerHTML = `
-        <div style="text-align: center; width: 100%; position: relative;">
-            <div style="position: absolute; top: 0; left: 50%; transform: translateX(-50%); width: 300px; height: 300px; background: rgba(168, 85, 247, 0.4); filter: blur(100px); border-radius: 50%;"></div>
-            <div style="font-family: 'Bebas Neue', sans-serif; font-size: 80px; color: #cbd5e1; letter-spacing: 6px; position: relative; z-index: 2;">GARAGEM EXCLUSIVA</div>
-            <div style="width: 150px; height: 6px; background: #a855f7; margin: 20px auto 0; box-shadow: 0 0 20px #a855f7; position: relative; z-index: 2;"></div>
-        </div>
+  infoDiv.innerHTML = `
+    <div style="text-align: center; width: 100%; position: relative;">
+        <div style="position: absolute; top: 0; left: 50%; transform: translateX(-50%); width: 300px; height: 300px; background: rgba(168, 85, 247, 0.4); filter: blur(100px); border-radius: 50%;"></div>
+        <div style="font-family: 'Bebas Neue', sans-serif; font-size: 80px; color: #cbd5e1; letter-spacing: 6px; position: relative; z-index: 2;">GARAGEM EXCLUSIVA</div>
+        <div style="width: 150px; height: 6px; background: #a855f7; margin: 20px auto 0; box-shadow: 0 0 20px #a855f7; position: relative; z-index: 2;"></div>
+    </div>
 
-        <div style="display: flex; flex-direction: column; align-items: center; width: 100%; z-index: 2;">
-            <div style="background: rgba(255,255,255,0.03); border: 2px solid rgba(255,255,255,0.1); border-radius: 30px; padding: 40px; box-shadow: 0 20px 50px rgba(0,0,0,0.5); margin-bottom: 70px; position: relative; width: 900px; height: 700px; display: flex; justify-content: center; align-items: center;">
-                <div style="position: absolute; top: -30px; right: -20px; background: #10b981; color: #000; font-family: 'Bebas Neue', sans-serif; font-size: 45px; padding: 15px 40px; border-radius: 15px; box-shadow: 0 0 40px rgba(16,185,129,0.8); transform: rotate(5deg); z-index: 10;">
-                    DESTAQUE
-                </div>
-                <div style="width: 100%; height: 100%; display: flex; justify-content: center; align-items: center;">
-                    <img id="promo-img-target" src="${imgCarro}" style="max-width: 100%; max-height: 100%; display: block;">
-                </div>
+    <div style="display: flex; flex-direction: column; align-items: center; width: 100%; z-index: 2;">
+        <div style="background: rgba(255,255,255,0.03); border: 2px solid rgba(255,255,255,0.1); border-radius: 30px; padding: 40px; box-shadow: 0 20px 50px rgba(0,0,0,0.5); margin-bottom: 70px; position: relative; width: 900px; height: 700px; display: flex; justify-content: center; align-items: center;">
+            <div style="position: absolute; top: -30px; right: -20px; background: #10b981; color: #000; font-family: 'Bebas Neue', sans-serif; font-size: 45px; padding: 15px 40px; border-radius: 15px; box-shadow: 0 0 40px rgba(16,185,129,0.8); transform: rotate(5deg); z-index: 10;">
+                DESTAQUE
             </div>
-            
-            <div style="font-family: 'Bebas Neue', sans-serif; font-size: 110px; color: #fff; text-align: center; line-height: 1.1; text-transform: uppercase; text-shadow: 0 4px 15px rgba(0,0,0,0.5);">
-                ${nomeCarro}
-            </div>
-            <div style="font-size: 45px; color: #3b82f6; font-weight: bold; margin-top: 25px; text-transform: uppercase; letter-spacing: 3px; text-shadow: 0 0 20px rgba(59,130,246,0.6);">
-                ${seriesCarro} ${anoCarro ? `• ${anoCarro}` : ''}
+            <div style="width: 100%; height: 100%; display: flex; justify-content: center; align-items: center;">
+                <img id="promo-img-target" crossorigin="anonymous" src="${photoProxyUrl}" style="max-width: 100%; max-height: 100%; display: block;">
             </div>
         </div>
+        
+        <div style="font-family: 'Bebas Neue', sans-serif; font-size: 110px; color: #fff; text-align: center; line-height: 1.1; text-transform: uppercase; text-shadow: 0 4px 15px rgba(0,0,0,0.5);">
+            ${nomeCarro}
+        </div>
+        <div style="font-size: 45px; color: #3b82f6; font-weight: bold; margin-top: 25px; text-transform: uppercase; letter-spacing: 3px; text-shadow: 0 0 20px rgba(59,130,246,0.6);">
+            ${seriesCarro} ${anoCarro ? `• ${anoCarro}` : ''}
+        </div>
+    </div>
 
-        <div style="width: 100%; text-align: center; background: rgba(15, 23, 42, 0.8); padding: 50px; border-radius: 30px; border: 4px dashed #a855f7; position: relative; overflow: hidden;">
-            <div style="position: absolute; top: -50px; right: -50px; width: 200px; height: 200px; background: rgba(59,130,246,0.5); filter: blur(80px);"></div>
-            <div style="font-size: 40px; color: #cbd5e1; margin-bottom: 20px; font-weight: bold;">DISPONÍVEL AGORA NA GARAGEM!</div>
-            <div style="font-family: 'Bebas Neue', sans-serif; font-size: 85px; color: #a855f7; text-shadow: 0 0 30px rgba(168,85,247,0.8); letter-spacing: 2px;">
-                LINK NA BIO 📲
-            </div>
+    <div style="width: 100%; text-align: center; background: rgba(15, 23, 42, 0.8); padding: 50px; border-radius: 30px; border: 4px dashed #a855f7; position: relative; overflow: hidden;">
+        <div style="position: absolute; top: -50px; right: -50px; width: 200px; height: 200px; background: rgba(59,130,246,0.5); filter: blur(80px);"></div>
+        <div style="font-size: 40px; color: #cbd5e1; margin-bottom: 20px; font-weight: bold;">DISPONÍVEL AGORA NA GARAGEM!</div>
+        <div style="font-family: 'Bebas Neue', sans-serif; font-size: 85px; color: #a855f7; text-shadow: 0 0 30px rgba(168,85,247,0.8); letter-spacing: 2px;">
+            LINK NA BIO 📲
         </div>
-      `;
-  } else {
-      // REGRA DE SEGURANÇA MÁXIMA: Se a foto falhar, gera uma arte exclusiva só de texto.
-      infoDiv.innerHTML = `
-        <div style="text-align: center; width: 100%; position: relative; margin-bottom: 200px;">
-            <div style="position: absolute; top: 0; left: 50%; transform: translateX(-50%); width: 300px; height: 300px; background: rgba(168, 85, 247, 0.4); filter: blur(100px); border-radius: 50%;"></div>
-            <div style="font-family: 'Bebas Neue', sans-serif; font-size: 80px; color: #cbd5e1; letter-spacing: 6px; position: relative; z-index: 2;">GARAGEM EXCLUSIVA</div>
-            <div style="width: 150px; height: 6px; background: #a855f7; margin: 20px auto 0; box-shadow: 0 0 20px #a855f7; position: relative; z-index: 2;"></div>
-        </div>
-
-        <div style="display: flex; flex-direction: column; align-items: center; width: 100%; z-index: 2; flex-grow: 1; justify-content: center;">
-            <div style="font-family: 'Bebas Neue', sans-serif; font-size: 110px; color: #fff; text-align: center; line-height: 1.1; text-transform: uppercase; text-shadow: 0 4px 15px rgba(0,0,0,0.5); margin-bottom: 50px;">
-                ${nomeCarro}
-            </div>
-            <div style="font-size: 45px; color: #3b82f6; font-weight: bold; text-transform: uppercase; letter-spacing: 3px; text-shadow: 0 0 20px rgba(59,130,246,0.6);">
-                ${seriesCarro} ${anoCarro ? `• ${anoCarro}` : ''}
-            </div>
-        </div>
-
-        <div style="width: 100%; text-align: center; background: rgba(15, 23, 42, 0.8); padding: 50px; border-radius: 30px; border: 4px dashed #a855f7; position: relative; overflow: hidden; margin-top: auto;">
-            <div style="position: absolute; top: -50px; right: -50px; width: 200px; height: 200px; background: rgba(59,130,246,0.5); filter: blur(80px);"></div>
-            <div style="font-size: 40px; color: #cbd5e1; margin-bottom: 20px; font-weight: bold;">DISPONÍVEL AGORA NA GARAGEM!</div>
-            <div style="font-family: 'Bebas Neue', sans-serif; font-size: 85px; color: #a855f7; text-shadow: 0 0 30px rgba(168,85,247,0.8); letter-spacing: 2px;">
-                LINK NA BIO 📲
-            </div>
-        </div>
-      `;
-  }
+    </div>
+  `;
 
   document.body.appendChild(infoDiv);
 
-  // GERAÇÃO RÁPIDA: Sem setTimeout para preservar o "User Gesture".
-  try {
+  const imgTarget = document.getElementById('promo-img-target');
+  if (!imgTarget) return;
+
+  const dispararGeracaoDefinitiva = () => {
     const originalGetContext = HTMLCanvasElement.prototype.getContext;
     HTMLCanvasElement.prototype.getContext = function (type, contextAttributes) {
       if (type === '2d') {
         contextAttributes = contextAttributes || {};
-        // MODIFICAÇÃO: Dá prioridade de desenho para renderizar a imagem antes que o tempo acabe.
-        contextAttributes.willReadFrequently = true; 
+        contextAttributes.willReadFrequently = true;
       }
       return originalGetContext.call(this, type, contextAttributes);
     };
 
-    // MODIFICAÇÃO: Força o html2canvas a ignorar travas de CORS externas (pois já convertemos para base64)
-    const canvas = await html2canvas(infoDiv, { 
+    html2canvas(infoDiv, { 
         scale: 1, 
         useCORS: true, 
-        allowTaint: true, // Libera o desenho mesmo que a imagem base64 seja pesada
-        backgroundColor: '#0f172a'
-    });
-    
-    HTMLCanvasElement.prototype.getContext = originalGetContext;
-
-    canvas.toBlob(async (blob) => {
+        allowTaint: true, 
+        backgroundColor: '#0f172a',
+    }).then(canvas => {
+      HTMLCanvasElement.prototype.getContext = originalGetContext;
       document.body.removeChild(infoDiv);
-      
-      if (!blob) return alert("Erro ao gerar a arte promocional.");
-      
-      const file = new File([blob], `Promo_${nomeCarro.replace(/\s+/g, '_')}.jpg`, { type: 'image/jpeg' });
-      const isMobile = /Android|iPhone|iPad/i.test(navigator.userAgent);
-      
-      const forcarDownload = () => {
-          const link = document.createElement('a');
-          link.download = `Promo_${nomeCarro.replace(/\s+/g, '_')}.jpg`;
-          link.href = canvas.toDataURL('image/jpeg', 0.9);
-          link.click();
-      };
 
-      if (isMobile && navigator.canShare && navigator.canShare({ files: [file] })) {
-        try {
-          await navigator.share({
-            files: [file],
-            title: 'Destaque na Garagem',
-            text: 'Dá uma olhada nessa miniatura disponível na garagem! 🔥'
-          });
-        } catch (err) {
-          console.log("Erro no Share (possível perda do gesto):", err);
-          if (err.name === 'NotAllowedError') {
-              forcarDownload();
-          }
-        }
-      } else {
-        forcarDownload();
+      canvas.toBlob((blob) => {
+        if (!blob) return alert("Erro fatal ao gerar a arte.");
+        
+        const fileName = `Destaque_${nomeCarro.replace(/\s+/g, '_')}.jpg`;
+        const downloadUrl = canvas.toDataURL('image/jpeg', 0.9);
+        const link = document.createElement('a');
+        link.download = fileName;
+        link.href = downloadUrl;
+        link.style.display = 'none';
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+        
+      }, 'image/jpeg', 0.9);
+    }).catch(err => {
+      HTMLCanvasElement.prototype.getContext = originalGetContext;
+      console.error(err);
+      if (document.getElementById('render-promo')) {
+          document.body.removeChild(document.getElementById('render-promo'));
       }
-    }, 'image/jpeg', 0.9);
-  } catch (err) {
-    console.error("Erro fatal no html2canvas:", err);
-    if (document.getElementById('render-promo')) {
-        document.body.removeChild(document.getElementById('render-promo'));
-    }
+    });
+  };
+
+  if (imgTarget.complete) {
+    dispararGeracaoDefinitiva();
+  } else {
+    imgTarget.onload = dispararGeracaoDefinitiva;
+    imgTarget.onerror = dispararGeracaoDefinitiva; 
   }
 };
