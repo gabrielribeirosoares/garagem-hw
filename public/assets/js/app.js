@@ -2364,52 +2364,72 @@ window.renderStats = async function () {
     Chart.defaults.font.family = "'Barlow', sans-serif";
 
     new Chart(document.getElementById('chartHistorico'), {
-      type: 'line',
-      data: {
-        labels: historicoLabels,
-        datasets: [{
-          label: 'Custo Investido (R$)',
-          data: historicoData,
-          borderColor: '#3b82f6',
-          backgroundColor: 'rgba(59, 130, 246, 0.15)',
-          borderWidth: 2,
-          pointBackgroundColor: '#3b82f6',
-          pointRadius: 4,
-          pointHoverRadius: 6,
-          fill: true,
-          tension: 0.3
-        }]
-      },
-      options: {
-        responsive: true,
-        maintainAspectRatio: false,
-        plugins: {
-          legend: { display: false },
-          tooltip: {
-            callbacks: {
-              label: function (context) {
-                let value = context.raw || 0;
-                return 'R$ ' + value.toFixed(2).replace('.', ',');
-              }
-            }
-          }
-        },
-        scales: {
-          y: {
-            beginAtZero: false,
-            grid: { color: 'rgba(255, 255, 255, 0.05)' },
-            ticks: {
-              callback: function (value) {
-                return 'R$ ' + value;
-              }
-            }
-          },
-          x: {
-            grid: { display: false }
+  type: 'line',
+  data: {
+    labels: historicoLabels,
+    datasets: [{
+      label: 'Patrimônio Estimado (R$)',
+      data: historicoData,
+      borderColor: '#10b981',
+      backgroundColor: 'rgba(16, 185, 129, 0.15)',
+      borderWidth: 2,
+      pointBackgroundColor: '#10b981',
+      pointRadius: 4,
+      pointHoverRadius: 6,
+      fill: true,
+      tension: 0.3
+    }]
+  },
+  options: {
+    responsive: true,
+    maintainAspectRatio: false,
+    layout: {
+      padding: { top: 30 }
+    },
+    plugins: {
+      legend: { display: false },
+      tooltip: {
+        callbacks: {
+          label: function (context) {
+            let value = context.raw || 0;
+            return 'R$ ' + value.toFixed(2).replace('.', ',');
           }
         }
       }
-    });
+    },
+    scales: {
+      y: {
+        beginAtZero: false,
+        grid: { color: 'rgba(255, 255, 255, 0.05)' },
+        ticks: {
+          callback: function (value) {
+            return 'R$ ' + value;
+          }
+        }
+      },
+      x: {
+        grid: { display: false }
+      }
+    }
+  },
+  plugins: [{
+    id: 'marcadoresFixos',
+    afterDatasetsDraw(chart) {
+      const { ctx, data } = chart;
+      ctx.save();
+      ctx.font = "bold 13px 'Barlow', sans-serif";
+      ctx.fillStyle = "#cbd5e1";
+      ctx.textAlign = 'center';
+
+      chart.getDatasetMeta(0).data.forEach((datapoint, index) => {
+        const value = data.datasets[0].data[index];
+        const text = 'R$ ' + value.toFixed(2).replace('.', ',');
+        ctx.fillText(text, datapoint.x, datapoint.y - 15);
+      });
+      ctx.restore();
+    }
+  }]
+});
 
     new Chart(document.getElementById('chartMarcas'), {
       type: 'doughnut',
